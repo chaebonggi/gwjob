@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<title>강원도 퍼블리싱</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div class="container">
+	<h1>
+		강원도 퍼블리싱 목록
+		<div class="git"><a href="https://github.com/chaebonggi/gwjob.git" target="_blank">GitHub 페이지 바로가기</a></div>
+	</h1>
+	<table class="tbl_list">
+	<thead>
+	<tr>
+		<th>NO</th>
+		<th>
+			<select>
+				<option value="all">구분</option>
+				<option value="renew">리뉴얼</option>
+				<option value="webzine">뉴스레터</option>
+				<option value="theme">테마</option>
+				<option value="event">이벤트</option>
+				<option value="page">페이지</option>
+				<option value="popup">팝업</option>
+				<option value="etc">기타</option>
+			</select>
+		</th>
+		<th>페이지명</th>
+	</tr>
+	</thead>
+        <tbody>
+			<tr class="webzine">
+				<td></td>
+				<td>뉴스레터</td>
+				<td><a href="html/wz/wz249.html" class="preview" target="_blank">뉴스레터 249호</a></td>
+			</tr>
+			<tr class="webzine">
+				<td></td>
+				<td>뉴스레터</td>
+				<td><a href="html/wz/wz250.html" class="preview" target="_blank">뉴스레터 250호</a></td>
+			</tr>			
+        </tbody>
+	</table>
+</div>
+
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" ></script>
+<script>
+	$(document).ready(function(){
+		$('.tbl_list tbody tr').each(function(){
+			var idx = $(this).index();
+			$(this).find('td:first-child').append(idx + 1);
+		});
+
+		$('.tbl_list thead select').change(function(){
+			var cate = $(this).val();
+			console.log(cate);
+			if(cate == 'all'){
+				$('.tbl_list tbody tr').show();
+			} else {
+				$('.tbl_list tbody tr').hide();
+				$('.tbl_list tbody tr.'+cate).show();
+			}
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body { max-width: 1440px; width: 100%; margin: auto; } 
+.mg70 { margin: 7rem 0 } 
+.pd70 { padding: 7rem 0 } 
+/* 메인 */
+.mod_visual { width: 100%; height: 700px; padding: 60px 0; background: url(../images/corp01/visual.png) no-repeat; background-size: cover; } 
+ .mod_visual img { display: block; margin: 0 0 19rem } 
+ .mod_visual .comName { color: #fff; font-size: 6.5rem; font-weight: bold; } 
+ .mod_visual .title { font-size: 3rem; color: #fff; } 
+ .sns_mod_info { background: url(../images/corp01/info.png) no-repeat !important; background-size: cover !important; } 
+/* 연혁 */
+.mod_history02 { overflow: hidden;}
+.mod_history02 .history .slick-slide { height: auto; } 
+.mod_history02 .history .slick-slide > span { color: #333; border-top: 1px solid #0067d0; } 
+.mod_history02 .history .slick-slide > span::before { background-color: #0067d0; } 
+.mod_history02 .history .slick-slide > ul li .month::after { content: none; } 
+.mod_history02 .history .slick-slide > ul li .month { margin-right: 0; color: #cccccc; font-size: 18px; } 
+.mod_history02 .history > div ul > li .event span { color: #666; font-size: 13px; word-break: keep-all; } 
+
+/* 비전 */
+.mod_info02 > div:nth-child(1) img, .mod_info02 > div:nth-child(5) img { width: 100%; height: 100%; object-fit: cover; } 
+.mod_info02 > div:nth-child(even) { background: #fff; padding: 7rem 0; } 
+.mod_info02 > div:nth-child(3) { background: #0067d0; } 
+
+/* 인재상 */
+.mod_talent01 { background: linear-gradient( 135deg, #7cf6c5 40%, #5ecfcb); } 
+
+/* 핵심가치 */
+.mod_coreValue01 { background: #f1f1f1; } 
+ .mod_coreValue01 .container { display: flex; width: 100%; } 
+ .mod_coreValue01 .slick-slide { height: auto; } 
+ .mod_coreValue01 .slick-dots { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; } 
+ .mod_coreValue01 .slick-dots li { display: inline-block; margin: 0 10px; } 
+ .mod_coreValue01 .slick-dots li button { width: 15px; height: 15px; background: #ccc; border-radius: 50%; text-indent: -9999px; } 
+ .mod_coreValue01 .slick-dots li.slick-active button { background: #888; } 
+ .mod_coreValue01 .box { width: 100%; max-width: 500px; padding: 6rem; position: relative; background: url(../images/corp01/coreValue01.png) no-repeat; } 
+ .mod_coreValue01 .box::after { content: ''; width: 0; height: 0; position: absolute; top: 0; right: 0; border-bottom: 480px solid transparent; border-right: 130px solid #f1f1f1; } 
+ .mod_coreValue01 .box h3 { margin-right: 8rem; color: #fff; font-size: 4rem; font-weight: bold; text-align: right; } 
+ .mod_coreValue01 .item { width: 600px; height: 480px; padding: 6rem 6rem 6rem 0; } 
+ .mod_coreValue01 .item .list { padding: 3rem 0; border-bottom: 1px solid #888; } 
+ .mod_coreValue01 .slick-slide > div { box-sizing: border-box; } 
+ .mod_coreValue01 .slick-current > div:nth-child(2) .list { margin-left: 5rem; }
+ .mod_coreValue01 .slick-current > div:nth-child(3) .list { margin-left: 10rem; border-bottom: none; } 
+ .mod_coreValue01 .item .tit { margin-bottom: 1rem; font-size: 2rem; font-weight: bold; } 
+
+/* 전략과제 */
+.mod_strategy01 { background: #fff; } 
+ .mod_strategy01 .container { display: flex; justify-content: space-between; width: 100%; padding: 0; } 
+ .mod_strategy01 .slick-slide { height: auto; } 
+ .mod_strategy01 .slick-dots { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; } 
+ .mod_strategy01 .slick-dots li { display: inline-block; margin: 0 10px; } 
+ .mod_strategy01 .slick-dots li button { width: 15px; height: 15px; background: #ccc; border-radius: 50%; text-indent: -9999px; } 
+ .mod_strategy01 .slick-dots li.slick-active button { background: #888; } 
+ .mod_strategy01 .box { width: 100%; max-width: 620px; padding: 6rem; position: relative; background: url(../images/corp01/strategy01.png) no-repeat; } 
+ .mod_strategy01 .box::after { content: ''; width: 0; height: 0; position: absolute; top: 0; left: 0; border-bottom: 480px solid #fff; border-right: 130px solid transparent; } 
+ .mod_strategy01 .box h3 { color: #fff; font-size: 4rem; font-weight: bold; } 
+ .mod_strategy01 .item { width: 650px; height: 480px; padding-left: 12rem; flex-shrink: 0; } 
+ .mod_strategy01 .list { padding: 6rem 0; position: relative; } 
+ .mod_strategy01 .list::before { content: ''; width: 40px; height: 8px; position: absolute; top: 0; left: 0; background: #0067d0; } 
+ .mod_strategy01 .item .tit { margin-bottom: 7rem; font-size: 2.4rem; font-weight: bold; } 
+
+/* 재무정보 */
+.mod_finance04 > div .tab_wrap .tab h2 em { color: #0067d0; } 
+
+/* 재무정보 규모 */
+.mod_finance09 { padding: 4rem 0; background: #f4f4f4; } 
+.mod_finance09 .percent_wrap { padding: 0 4rem; border: none; } 
+.mod_finance09 .percent_wrap > div { width: calc(100% / 4 - 40px); padding: 2.4rem 0; margin-right: 0; border-radius: 0 30px 0 30px; box-shadow: 5.162px 7.372px 16px 0px rgba(0, 0, 0, 0.05); } 
+.mod_finance09 .percent_wrap .ico { width: 80px; height: 80px; margin: 0 auto 1rem; } 
+.mod_finance09 .percent_wrap > div .fiPosition { color: #000; font-size: 1.8rem; font-weight: 500; } 
+.mod_finance09 .percent_wrap > div .fiPosition span { font-size: 4rem; font-weight: bold; } 
+.mod_finance09 .percent_wrap > div .fiPosition span em { font-size: 2.4rem; font-weight: bold; } 
+.mod_finance09 .percent_wrap > div .tit { font-size: 2.2rem; font-weight: bold; } 
+.mod_finance09 .percent_wrap .scale .ico { background: url(../images/corp01/mod_finance09_ico01.png) no-repeat center; } 
+.mod_finance09 .percent_wrap .growth .ico { background: url(../images/corp01/mod_finance09_ico02.png) no-repeat center; } 
+.mod_finance09 .percent_wrap .profit .ico { background: url(../images/corp01/mod_finance09_ico03.png) no-repeat center; } 
+.mod_finance09 .percent_wrap .stable .ico { background: url(../images/corp01/mod_finance09_ico04.png) no-repeat center; } 
+
+/* 사업영역 */
+.mod_business_area03 .bizDiv .slick-slide .info > h4 { min-height: 94px; } 
+
+/* 조직문화 */
+.mod_culture06 .culture_wrap .title { background: #2f99be; } 
+.mod_culture06 .welfare_wrap .title { background: #1cbfd7; } 
+.mod_culture06 .title { font-weight: bold; } 
+
+/* 인터뷰 */
+.mod_interview02 .photo p { margin-top: 10px; font-size: 21px; font-weight: bold; text-align: center; } 
+
+/* 회사전경 */
+.mod_media .container { width: 100%; } 
+ .mod_media .comPic { margin: 0 10rem; }
+ .mod_media .slick-disabled { opacity:.1; } 
+ .mod_media .slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); border: none; font-size: 0; width: 24px; height: 44px; background-image: url(../images/corp01/slide_arrow.png); background-repeat: no-repeat; z-index: 1; } 
+ .mod_media .slick-prev { left:0; background-position:0 0; } 
+ .mod_media .slick-next { right:0; background-position:-24px 0; } 
+ .mod_media .slick-list,
+ .mod_media .slick-slider,
+ .mod_media .slick-track { position: static; } 
+
+ .mod_media .slick-slide { height: 100%; max-height: 500px; margin: 0 20px; } 
+ .mod_media .slick-slide img { width: 100%; height: 100%; object-fit: cover; } 
+ .mod_media .slick-list { margin: 0 -20px; } 
+
+@media all and (max-width:1024px){
+ .mod_visual .container { width: calc(100% - 40px); } 
+
+ .mod_coreValue01 .container { flex-direction: column; } 
+ .mod_coreValue01 .box { max-width: 100%; background-size: cover; } 
+ .mod_coreValue01 .box::after { content: none; } 
+ .mod_coreValue01 .box h3 { margin-right: 0; text-align: center; } 
+ .mod_coreValue01 .item { width: calc(100% - 40px); height: auto; margin: 0 auto; padding: 2rem; } 
+ .mod_coreValue01 .slick-current > div:nth-child(2) .list,
+ .mod_coreValue01 .slick-current > div:nth-child(3) .list { margin-left: 0; } 
+
+ .mod_strategy01 .container { flex-direction: column; } 
+ .mod_strategy01 .box { max-width: 100%; background: url(../images/corp01/strategy01.png) no-repeat; background-size: cover; order: 1; } 
+ .mod_strategy01 .box h3 { text-align: center; } 
+ .mod_strategy01 .box::after { content: none; } 
+ .mod_strategy01 .item { width: calc(100% - 40px); height: auto; margin: 4rem auto 0; padding-left: 0; text-align: center; order: 2; } 
+ .mod_strategy01 .list::before { left: 50%; transform: translateX(-50%); } 
+}
+
+@media all and (max-width:768px) { html { font-size: 8px } 
+
+ .mod_visual { height: 250px; padding: 3rem 0; } 
+ .mod_visual img { max-width: 130px; margin: 0 0 2rem; } 
+ .mod_visual .title { font-size: 2rem; } 
+ .mod_visual .comName { font-size: 3rem; } 
+
+ .sns_mod_info.sty01 { padding: 5rem 0; } 
+ .sns_mod_info.sty01 .info_wrap { flex-wrap: wrap; } 
+ .sns_mod_info.sty01 .info_wrap > li { width: calc(50% - 10px); margin-right: 20px; } 
+ .sns_mod_info.sty01 .info_wrap > li:nth-child(-n + 2) { margin-bottom: 20px; } 
+ .sns_mod_info.sty01 .info_wrap > li:nth-child(2n) { margin-right: 0; } 
+ .sns_mod_info.sty01 .info_wrap > li > div.ico { background-size: 50px !important; height: 50px; } 
+
+ .mod_info02 > div:nth-child(1), .mod_info02 > div:nth-child(5) { height: 150px; } 
+
+ .mod_culture06 { margin: 40px 0; } 
+ .mod_culture06 .slick-slide { height: auto; } 
+
+ .mod_finance09 .percent_wrap { flex-wrap: wrap; padding: 0; } 
+ .mod_finance09 .percent_wrap > div { width: calc(100% / 2 - 10px); margin-top: 2rem; } 
+ .mod_finance09 .percent_wrap .scale .ico,
+ .mod_finance09 .percent_wrap .growth .ico,
+ .mod_finance09 .percent_wrap .profit .ico,
+ .mod_finance09 .percent_wrap .stable .ico { width: 40px !important; height: 40px !important; } 
+
+ .mod_business_area03 { padding: 20px 0; } 
+ .mod_business_area03 .container { padding: 20px; } 
+ .mod_business_area03 .bizDiv .slick-slide .info > h4 { min-height: auto; } 
+.mod_media .slick-slide { max-height: 250px; } 
+ 
+ 
+}
