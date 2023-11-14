@@ -120,8 +120,9 @@ body { max-width: 1440px; width: 100%; margin: auto; }
  .mod_strategy01 .list::before { left: 50%; transform: translateX(-50%); } 
 }
 
-@media all and (max-width:768px) { html { font-size: 8px } 
+@media all and (max-width:768px) { 
 
+ html { font-size: 8px } 
  .mod_visual { height: 250px; padding: 3rem 0; } 
  .mod_visual img { max-width: 130px; margin: 0 0 2rem; } 
  .mod_visual .title { font-size: 2rem; } 
