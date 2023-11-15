@@ -163,4 +163,8 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .sp_mod_product02 .slick-prev { left: 24px; } 
 .sp_mod_product02 .slick-next { right: 24px; } 
 .sp_mod_product02 .item .txt { margin-top: 2rem; margin-right: 0; } 
+
+.mod_swot05 .swot_wrap .diagram_area {
+    zoom: 0.8;
+}
 }
