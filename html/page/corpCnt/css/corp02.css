@@ -58,6 +58,56 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .mod_finance08 .conts_wrap > div { background: #002856; } 
 .mod_finance08 .conts_wrap > div:nth-child(even) { border: 1px solid #002856; background: rgba(255, 255, 255, 0.83); color: #002856; } 
 
+/* 인터뷰 */
+.mod_interview01 { background: #004c97; } 
+.mod_interview01 .slick-slide { height: auto; } 
+.mod_interview01 .interview_wrap .iv_cont > div .photo { border-radius: 50% 0 0 50%; } 
+.mod_interview01 .interview_wrap .iv_cont > div .interview .q { color: #004c97; } 
+.mod_interview01 .interview_wrap .slick-dots li.slick-active { background: #004c97; } 
+.mod_interview01 .interview_wrap .iv_cont > div .interview .a { margin-bottom: 24px; } 
+
+/* 조직문화 */
+.mod_culture11 h3 span { color: #fff; } 
+.mod_culture11 .culture_wrap .item.dvCulture_0:before { background-image: url(../images/corp02/culture01.png); } 
+.mod_culture11 .culture_wrap .item.dvCulture_1:before { background-image: url(../images/corp02/culture02.png); } 
+.mod_culture11 .culture_wrap .item.dvCulture_2:before { background-image: url(../images/corp02/culture03.png); } 
+.mod_culture11 .welfare_wrap .item.deduct:before { background-image: url(../images/corp02/welfare01.png); } 
+.mod_culture11 .welfare_wrap .item.insurance:before { background-color: initial; background-image: url(../images/corp02/welfare02.png); } 
+.mod_culture11 .welfare_wrap .item.education:before { background-image: url(../images/corp02/welfare03.png); } 
+.mod_culture11 .welfare_wrap .item.convenience:before { background-image: url(../images/corp02/welfare04.png); } 
+.mod_culture11 .welfare_wrap .item.leisure:before { background-image: url(../images/corp02/welfare05.png); } 
+.mod_culture11 .welfare_wrap .item.reward:before { background-image: url(../images/corp02/welfare06.png); } 
+.mod_culture11 .welfare_wrap .item.facilities:before { background-image: url(../images/corp02/welfare07.png); } 
+.mod_culture11 .welfare_wrap .item.holiday:before { background-image: url(../images/corp02/welfare08.png); } 
+.mod_culture11 .welfare_wrap .item.etc:before { background-image: url(../images/corp02/welfare09.png); } 
+
+/* 기업전경 */
+.mod_media { position: relative; } 
+.mod_media .slick-list, .mod_media .slick-slider, .mod_media .slick-track, .mod_media .container { position: static; } 
+.mod_media .slick-prev { left: 0; background-position: 0 0; } 
+.mod_media .slick-next { right: 0; background-position: -70px 0; } 
+.mod_media .slick-slide { height: auto; } 
+.mod_media .slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); border: none; font-size: 0; width: 70px; height: 100px; background-color: rgba(0,0,0,.5); background-image: url(../images/corp02/slider_arrow2.png); background-repeat: no-repeat; opacity: .7; z-index: 1; } 
+.mod_media li .tit { margin-bottom: 4rem; font-size: 4rem; font-weight: bold; text-align: center; } 
+
+/* 주요상품 */
+.sp_mod_product02 { position: relative; } 
+.sp_mod_product02 .slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); border: none; font-size: 0; width: 70px; height: 100px; background-color: rgba(0,0,0,.5); background-image: url(../images/corp02/slider_arrow2.png); background-repeat: no-repeat; opacity: .7; z-index: 1; } 
+.sp_mod_product02 .slick-prev { left: calc(40% - 10px); background-position: 0 0; } 
+.sp_mod_product02 .slick-next { right: -31px; background-position: -70px 0; } 
+.sp_mod_product02 .item { display: flex !important; justify-content: space-between; height: auto; } 
+.sp_mod_product02 .item .txt { width: 40%; margin-top: 10rem; word-break: keep-all; margin-right: 20px; } 
+.sp_mod_product02 .item h4 { font-size: 3.4rem; margin-bottom: 1rem; color: #002856; font-weight: bold; } 
+.sp_mod_product02 .item p { font-size: 2rem; color: #666; } 
+.sp_mod_product02 .item .img { width: calc(60% - 20px); } 
+.sp_mod_product02 .item .img img { width: 100%; object-fit: cover; max-height: 530px; } 
+.sp_mod_product02 .slider-container { position: absolute; left: 30%; bottom: 0; font-weight: 500; color: #898989; } 
+.sp_mod_product02 .active { font-size: 3rem; color: #f68a1e; font-weight: bold; } 
+
+
+
+
+
 @media all and (max-width:1024px){
  .mod_visual .container { width: calc(100% - 40px); } 
  .mod_history03 { overflow: hidden; } 
@@ -67,6 +117,15 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 
  .mod_strategy02 .container::after,
  .mod_strategy02 .container::before { content: none; } 
+
+ .sp_mod_product02 .product { padding: 4rem 3rem; } 
+ .sp_mod_product02 .slider-container { left: 3rem; } 
+ .sp_mod_product02 .item .img { width: calc(40% - 20px) } 
+ .sp_mod_product02 .item .txt { width: 60% } 
+ .sp_mod_product02 .slick-arrow { width: 35px; height: 50px; background-size: auto 100%; } 
+ .sp_mod_product02 .slick-prev { left: calc(60% - 5px); } 
+ .sp_mod_product02 .slick-next { right: 20px; background-position: -35px 0; } 
+ .sp_mod_product02 .item h4 { font-size: 2.6rem } 
  }
  
 @media all and (max-width:768px) { 
@@ -94,4 +153,14 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 
  .mod_strategy02 .container { padding: 40px 0; } 
 .mod_strategy02 .strategic_item { margin: 3rem 0; } 
- }
+
+.mod_media .slick-arrow { width: 35px; height: 50px; background-size: auto 100%; } 
+.mod_media .slick-next { background-position: -35px 0; } 
+
+.sp_mod_product02 .item { flex-direction: column-reverse; } 
+.sp_mod_product02 .item .img { width: 100%; margin-bottom: 2rem; } 
+.sp_mod_product02 .slick-arrow { top: 40%; } 
+.sp_mod_product02 .slick-prev { left: 24px; } 
+.sp_mod_product02 .slick-next { right: 24px; } 
+.sp_mod_product02 .item .txt { margin-top: 2rem; margin-right: 0; } 
+}
