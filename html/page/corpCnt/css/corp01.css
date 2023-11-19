@@ -27,7 +27,8 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 /* 핵심가치 */
 .mod_coreValue01 { background: #f1f1f1; } 
  .mod_coreValue01 .container { display: flex; width: 100%; } 
- .mod_coreValue01 .slick-slide { height: auto; } 
+ .mod_coreValue01 .slick-list { margin: 0 -20px;}
+ .mod_coreValue01 .slick-slide {height: auto; margin: 0 20px; } 
  .mod_coreValue01 .slick-dots { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; } 
  .mod_coreValue01 .slick-dots li { display: inline-block; margin: 0 10px; } 
  .mod_coreValue01 .slick-dots li button { width: 15px; height: 15px; background: #ccc; border-radius: 50%; text-indent: -9999px; } 
@@ -35,12 +36,9 @@ body { max-width: 1440px; width: 100%; margin: auto; }
  .mod_coreValue01 .box { width: 100%; max-width: 500px; padding: 6rem; position: relative; background: url(../images/corp01/coreValue01.png) no-repeat; } 
  .mod_coreValue01 .box::after { content: ''; width: 0; height: 0; position: absolute; top: 0; right: 0; border-bottom: 480px solid transparent; border-right: 130px solid #f1f1f1; } 
  .mod_coreValue01 .box h3 { margin-right: 8rem; color: #fff; font-size: 4rem; font-weight: bold; text-align: right; } 
- .mod_coreValue01 .item { width: 600px; height: 480px; padding: 6rem 6rem 6rem 0; } 
- .mod_coreValue01 .item .list { padding: 3rem 0; border-bottom: 1px solid #888; } 
- .mod_coreValue01 .slick-slide > div { box-sizing: border-box; } 
- .mod_coreValue01 .slick-current > div:nth-child(2) .list { margin-left: 5rem; }
- .mod_coreValue01 .slick-current > div:nth-child(3) .list { margin-left: 10rem; border-bottom: none; } 
- .mod_coreValue01 .item .tit { margin-bottom: 1rem; font-size: 2rem; font-weight: bold; } 
+ .mod_coreValue01 .item { width: 600px; height: 480px; padding: 2rem 0 6rem 6rem; } 
+ .mod_coreValue01 .item .list {height: 160px; padding: 40px 0 20px; margin: 20px 0; background: #fff; text-align: center; box-sizing: border-box; border-radius: 20px;}
+ .mod_coreValue01 .item .list img {margin: 0 auto 20px;}
 
 /* 전략과제 */
 .mod_strategy01 { background: #fff; } 
@@ -53,7 +51,7 @@ body { max-width: 1440px; width: 100%; margin: auto; }
  .mod_strategy01 .box { width: 100%; max-width: 620px; padding: 6rem; position: relative; background: url(../images/corp01/strategy01.png) no-repeat; } 
  .mod_strategy01 .box::after { content: ''; width: 0; height: 0; position: absolute; top: 0; left: 0; border-bottom: 480px solid #fff; border-right: 130px solid transparent; } 
  .mod_strategy01 .box h3 { color: #fff; font-size: 4rem; font-weight: bold; } 
- .mod_strategy01 .item { width: 650px; height: 480px; padding-left: 12rem; flex-shrink: 0; } 
+ .mod_strategy01 .item { width: 650px; height: 480px; padding-left: 12rem;flex-shrink: 0; } 
  .mod_strategy01 .list { padding: 6rem 0; position: relative; } 
  .mod_strategy01 .list::before { content: ''; width: 40px; height: 8px; position: absolute; top: 0; left: 0; background: #0067d0; } 
  .mod_strategy01 .item .tit { margin-bottom: 7rem; font-size: 2.4rem; font-weight: bold; } 
@@ -108,9 +106,8 @@ body { max-width: 1440px; width: 100%; margin: auto; }
  .mod_coreValue01 .box { max-width: 100%; background-size: cover; } 
  .mod_coreValue01 .box::after { content: none; } 
  .mod_coreValue01 .box h3 { margin-right: 0; text-align: center; } 
- .mod_coreValue01 .item { width: calc(100% - 40px); height: auto; margin: 0 auto; padding: 2rem; } 
- .mod_coreValue01 .slick-current > div:nth-child(2) .list,
- .mod_coreValue01 .slick-current > div:nth-child(3) .list { margin-left: 0; } 
+ .mod_coreValue01 .item { width: 100%; height: auto; margin: 0 auto; padding: 2rem; } 
+
 
  .mod_strategy01 .container { flex-direction: column; } 
  .mod_strategy01 .box { max-width: 100%; background: url(../images/corp01/strategy01.png) no-repeat; background-size: cover; order: 1; } 
@@ -151,6 +148,15 @@ body { max-width: 1440px; width: 100%; margin: auto; }
  .mod_business_area03 .container { padding: 20px; } 
  .mod_business_area03 .bizDiv .slick-slide .info > h4 { min-height: auto; } 
 .mod_media .slick-slide { max-height: 250px; } 
- 
+
+.mod_coreValue01 .slick-list {
+    margin: 0 -10px;
+}
+.mod_coreValue01 .slick-slide {
+    margin: 0 10px;
+}
+.mod_coreValue01 .item .list {
+    margin: 10px 0;
+}
  
 }
