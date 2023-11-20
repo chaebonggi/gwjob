@@ -640,6 +640,21 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- 기업전경 -->
+	<div class="mod_media mg70">
+        <div class="container">
+			<h3>기업전경</h3>
+            <ul class="img_wrap comPic">
+                <li>
+                    <img src="../images/corp03/media01.png" alt="">
+                </li>
+				<li>
+                    <img src="../images/corp03/media01.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
 	
 
 <script>
@@ -900,6 +915,15 @@
 			$("#" + tab_id).fadeIn();
 			interview05.slick('unslick');
 			interview05_slide();
+		});
+
+		// 기업전경
+		$('.comPic').slick({
+			slidesToShow: 1,
+			autoplay: false,
+			dots: false,
+			arrows: true,
+			adaptiveHeight: false,
 		});
 
 	});
