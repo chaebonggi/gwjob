@@ -118,10 +118,11 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .mod_business_area03 .container { padding: 0; } 
 .mod_business_area03 .sw_btn_wrap { bottom: 0; } 
 
-.mod_culture10 .item dl { padding: 0; text-align: center; } 
+.mod_culture10 .item dl { padding: 0;} 
 .mod_culture10 .item dt { width: 100%; height: auto; padding: 10px 0; position: static; } 
 .mod_culture10 .item dd br { display: none; } 
-.mod_culture10 .slick-track { gap: 0; } 
+.mod_culture10 .slick-track { gap: 0; }
+.mod_culture10 .item {display: block !important; gap: 0;}
 }
 
 @media (max-width: 480px) {
