@@ -86,7 +86,7 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 
 .mod_visual { height: 250px; padding: 3rem 0; text-align: center; } 
 .mod_visual .img_wrap { text-align: center; } 
-.mod_visual img { max-width: 130px; margin: 2rem auto 2rem } 
+.mod_visual img { max-width: 70px; margin: 2rem auto 2rem } 
 .mod_visual .title { font-size: 2rem; } 
 .mod_visual .comName { font-size: 3rem; } 
 
