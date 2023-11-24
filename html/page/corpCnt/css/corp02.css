@@ -6,8 +6,17 @@ body { max-width: 1440px; width: 100%; margin: auto; }
  .mod_visual img { display: block; margin: 20rem auto 2rem; } 
  .mod_visual .comName { color: #2b4d73; font-size: 6.5rem; font-weight: bold; } 
  .mod_visual .title { font-size: 2.6rem; color: #3e3a39; } 
- .sns_mod_info { background: url(../images/corp02/info.png) no-repeat !important; background-size: cover !important; } 
- .sns_mod_info.sty01 .info_wrap > li { color: #507edb; } 
+ .sns_mod_info.sty01 { background: url(../images/corp02/info.png) no-repeat !important; background-size: cover !important; } 
+ .sns_mod_info.sty01 .info_wrap{display: flex;}
+ .sns_mod_info.sty01 .info_wrap > li{width: calc(25% - 22.5px);margin-right: 30px;text-align: center;font-size: 2rem;color: #507edb;}
+ .sns_mod_info.sty01 .info_wrap > li > div{font-size: 1.8rem;color: #fff;}
+ .sns_mod_info.sty01 .ico{margin: 0 auto 2.0rem auto;}
+ .sns_mod_info.sty01 ul li:last-child{margin-right: 0}
+ .sns_mod_info.sty01 ul li:nth-child(1) .ico{background: url(../images/corp02/ico_finance01.png) no-repeat center;width: 111px;height: 101px;}
+ .sns_mod_info.sty01 ul li:nth-child(2) .ico{background: url(../images/corp02/ico_finance02.png) no-repeat center;width: 109px;height: 101px;}
+ .sns_mod_info.sty01 ul li:nth-child(3) .ico{background: url(../images/corp02/ico_finance03.png) no-repeat center;width: 111px;height: 101px;}
+ .sns_mod_info.sty01 ul li:nth-child(4) .ico{background: url(../images/corp02/ico_finance04.png) no-repeat center;width: 99px;height: 101px;}
+
 /* 연혁 */
 .mod_history03 .history > div > span { border-top: 1px solid #16388e; } 
 .mod_history03 .history > div > ul > li .event span::before { color: #507edb; } 
