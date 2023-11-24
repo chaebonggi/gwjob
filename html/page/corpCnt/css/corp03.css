@@ -59,6 +59,7 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .mod_talent .sw_btn_wrap .next_arrow { right: 0; background-position: -27px 0; } 
 .mod_talent .talent_list li { position: relative; padding: 20px 0; } 
 .mod_talent .talent_list li .item { display: flex; width: 250px; height: 250px; border-radius: 50%; box-shadow: 1.5px 2.598px 5.82px 0.18px rgba(0, 0, 0, 0.15); align-items: center; justify-content: center; flex-direction: column; margin: 0 auto; } 
+.mod_talent .talent_list li .item img { width: auto;}
 .mod_talent .talent_list li::before { content: ''; width: 1px; height: 120px; position: absolute; top: 50%; left: -20px; transform: translateY(-50%); background: #ddd; } 
 .mod_talent .talent_list li h3 { margin-top: 2rem; font-size: 2.4rem; font-weight: bold; } 
 
