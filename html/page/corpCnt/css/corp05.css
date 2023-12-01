@@ -1,6 +1,8 @@
 body { max-width: 1440px; width: 100%; margin: auto; } 
 .mg70 { margin: 7rem 0 } 
 .pd70 { padding: 7rem 0 } 
+.pro_tit { text-align: center; font-weight: 600; font-size: 40px; text-align: center; margin-bottom: 48px; } 
+.pro_tit span { display: block; color: #ccc; font-size: 21px; letter-spacing: 12px; font-weight: 400; margin-bottom: 8px; text-transform: uppercase; } 
 
 /* 메인 */
 .mod_visual { width: 100%; height: 700px; padding: 60px 0; background: url(../images/corp05/visual.png) no-repeat; background-size: cover; } 
@@ -59,26 +61,47 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .mod_finance10 .conts_wrap > div:nth-child(2):before { background: url(../images/corp05/mod_finance_icon02.png) no-repeat; } 
 .mod_finance10 .conts_wrap > div:nth-child(3):before { background: url(../images/corp05/mod_finance_icon03.png) no-repeat; } 
 .mod_finance10 .conts_wrap > div:nth-child(4):before { background: url(../images/corp05/mod_finance_icon04.png) no-repeat; } 
-.mod_percent05 .percent_wrap .stable { background: #b2d45f;} 
+.mod_percent05 .percent_wrap .stable { background: #b2d45f; } 
 .mod_percent05 .percent_wrap .scale { background: #748d40; } 
 .mod_percent05 .percent_wrap .growth { background: #304425; } 
 .mod_percent05 .percent_wrap .profit { background: #f7931d; } 
 
 /* 대표상품 */
-.mod_business_area03 .bizDiv .slick-slide{background:transparent }
-.mod_product02 .pro_tit{text-align: center;font-weight:600;font-size:40px;text-align:center;margin-bottom:48px}
-.mod_product02 .pro_tit span{display: block;color:#ccc;font-size:21px;letter-spacing:12px;font-weight:400;margin-bottom:8px;text-transform: uppercase;}
-.mod_product02 .slick-slide{height: auto;}
-.mod_product02 .item{display: flex;flex-direction: row-reverse;align-items: center;position: relative;justify-content: space-between}
-.mod_product02 h4{font-size: 4rem;font-weight: bold;margin-bottom: 2rem;color: #000;}
-.mod_product02 p{font-size: 1.8rem;color: #666666;word-break: keep-all}
-.mod_product02 .thumb{width: 55%}
-.mod_product02 .thumb img{width: 100%}
-.mod_product02 .info{width: 45%;padding-right: 4rem;box-sizing: border-box;}
-.mod_product02 .slides-numbers{display: flex;position: absolute;bottom: 0;left: calc(45% - 100px)}
-.mod_product02 .slides-numbers .active{font-size: 3rem;color: #333; font-weight: bold}
-.mod_product02 .slides-numbers .total{font-size: 1.6rem;color: #898989; font-weight: bold;}
-.mod_product02 .slides-numbers em{color: #898989}
-.mod_product02 .slick-arrow{width: 62px;height: 83px;text-indent: -9999px;position: absolute;top: 50%;transform: translateY(-50%);z-index: 5}
-.mod_product02 .slick-prev{background: url(../images/corp05/prve_btn.png) no-repeat rgba(0, 0, 0, 0.2) center;left: calc(45% - 35px)}
-.mod_product02 .slick-next{background: url(../images/corp05/next_btn.png) no-repeat rgba(0, 0, 0, 0.2) center;right: -35px;}
+.mod_business_area03 .bizDiv .slick-slide { background:transparent } 
+.mod_product02 .pro_tit { text-align: center; font-weight:600; font-size:40px; text-align:center; margin-bottom:48px } 
+.mod_product02 .pro_tit span { display: block; color:#ccc; font-size:21px; letter-spacing:12px; font-weight:400; margin-bottom:8px; text-transform: uppercase; } 
+.mod_product02 .slick-slide { height: auto; } 
+.mod_product02 .item { display: flex; flex-direction: row-reverse; align-items: center; position: relative; justify-content: space-between } 
+.mod_product02 h4 { font-size: 4rem; font-weight: bold; margin-bottom: 2rem; color: #000; } 
+.mod_product02 p { font-size: 1.8rem; color: #666666; word-break: keep-all } 
+.mod_product02 .thumb { width: 55% } 
+.mod_product02 .thumb img { width: 100% } 
+.mod_product02 .info { width: 45%; padding-right: 4rem; box-sizing: border-box; } 
+.mod_product02 .slides-numbers { display: flex; position: absolute; bottom: 0; left: calc(45% - 100px) } 
+.mod_product02 .slides-numbers .active { font-size: 3rem; color: #333; font-weight: bold } 
+.mod_product02 .slides-numbers .total { font-size: 1.6rem; color: #898989; font-weight: bold; } 
+.mod_product02 .slides-numbers em { color: #898989 } 
+.mod_product02 .slick-arrow { width: 62px; height: 83px; text-indent: -9999px; position: absolute; top: 50%; transform: translateY(-50%); z-index: 5 } 
+.mod_product02 .slick-prev { background: url(../images/corp05/prev_btn.png) no-repeat rgba(0, 0, 0, 0.2) center; left: calc(45% - 35px) } 
+.mod_product02 .slick-next { background: url(../images/corp05/next_btn.png) no-repeat rgba(0, 0, 0, 0.2) center; right: -35px; } 
+
+/* 주요상품 */
+.mod_business_cst02{background: #f4f4f4;position: relative}
+.mod_business_cst02 .pro_tit{position: absolute;left: 50%;top: 7rem;text-align: left;max-width: 1200px;width: calc(100% - 40px);transform: translateX(-50%)}
+.mod_business_cst02 .item{display: flex;max-height: 480px; flex-direction: row-reverse;position: relative;justify-content: space-between;}
+.mod_business_cst02 .thumb{width:50%;position: absolute;height: 100%}
+.mod_business_cst02 .thumb img{min-width: 100%;height: 100%;object-fit: cover}
+.mod_business_cst02 .thumb:before{content: '';display: block;width: 0px;height: 0px; border-bottom: 600px solid #f4f4f4;border-left: 180px solid transparent;border-right: 180px solid transparent;position: absolute;left: -180px;z-index: 1}
+.mod_business_cst02 .info{width: 1200px;margin: auto;}
+.mod_business_cst02 .item h4{font-size: 3rem;font-weight: bold;margin-bottom: 1.5rem;margin-top: 18rem}
+.mod_business_cst02 .item h4,
+.mod_business_cst02 .item p{width: 50%;padding-right: 4rem;position: relative;z-index: 5}
+.mod_business_cst02 .item p{font-size: 2.2rem;margin-bottom: 15rem}
+.mod_business_cst02 .slick-arrow{width: 50px;height: 70px;background: rgba(0, 0, 0, 0.3);text-indent: -9999px;position: absolute;top: 50%;transform: translateY(-50%)}
+.mod_business_cst02 .slick-prev{left: 0}
+.mod_business_cst02 .slick-next{right: 0}
+
+/* 복리후생 */
+.mod_culture07 {background: #f4f4f4;}
+.mod_culture07 .prev_arrow{background: url(../images/corp05/prev_icon.png) no-repeat center}
+.mod_culture07 .next_arrow{background: url(../images/corp05/next_icon.png) no-repeat center}
