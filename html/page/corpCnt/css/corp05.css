@@ -148,6 +148,18 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .mod_strategy01 .stg_bg:before { background: #d3e8c2; } 
 .mod_strategy01 .interview_tip { display: none; } 
 
+/* 채용절차 */
+.mod_process01 .recruitProcess { display: flex; max-width: 850px; margin: 0 auto; justify-content: space-between; } 
+.mod_process01 .recruitProcess dl { display: flex; width: 180px; height: 180px; position: relative; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px solid #dfdfdf; border-radius: 20px 0 20px 0; } 
+.mod_process01 .recruitProcess dl:not(:first-child)::before { content: ''; width: 19px; height: 44px; position: absolute; top: 50%; left: -90px; transform: translateY(-50%); background: url(../images/corp05/process_arrow.png) no-repeat; } 
+.mod_process01 .recruitProcess dt { font-size: 1.8rem; } 
+.mod_process01 .recruitProcess dd { font-size: 2rem; } 
+.mod_process01 .recruitProcess dt::before { content: ''; display: block; width: 56px; height: 54px; margin: 0 auto 10px } 
+.mod_process01 .recruitProcess dl:nth-child(1) dt::before { background: url(../images/corp05/process01.png) center no-repeat; } 
+.mod_process01 .recruitProcess dl:nth-child(2) dt::before { background: url(../images/corp05/process02.png) center no-repeat; } 
+.mod_process01 .recruitProcess dl:nth-child(3) dt::before { background: url(../images/corp05/process03.png) center no-repeat; } 
+.mod_process01 .recruitProcess dl:nth-child(3) { background: #748d40; color: #fff; } 
+
 @media all and (max-width:1024px){
  .container { width: calc(100% - 40px); } 
  .mod_history03 .history { width: calc(100% - 40px); } 
@@ -200,12 +212,10 @@ body { max-width: 1440px; width: 100%; margin: auto; }
 .mod_interview06 .interview_txt { flex-direction: initial; } 
 .mod_interview06 .container { padding: 0; } 
 
-.mod_media .slick-arrow {
-    width: 35px;
-    height: 40px;
-    background-size: 20px;
-}
-.mod_media .midea_wrap {
-    padding: 0 40px;
-}
+.mod_media .slick-arrow { width: 35px; height: 40px; background-size: 20px; } 
+.mod_media .midea_wrap { padding: 0 40px; } 
+
+.mod_process01 .recruitProcess { flex-direction: column; align-items: center; } 
+.mod_process01 .recruitProcess dl:not(:first-child) { margin-top: 40px; } 
+.mod_process01 .recruitProcess dl:not(:first-child)::before { top: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); } 
 }
