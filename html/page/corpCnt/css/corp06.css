@@ -1,5 +1,5 @@
 html { font-size: 10px; } 
-body { max-width: 1440px; width: 100%; margin: auto; font-size: 1.6rem; } 
+body { width: 100%; margin: auto; font-size: 1.6rem; } 
 
 .mg70 { margin: 7rem 0 } 
 .pd70 { padding: 7rem 0 } 
@@ -74,6 +74,26 @@ body { max-width: 1440px; width: 100%; margin: auto; font-size: 1.6rem; }
 .mod_finance10 .conts_wrap > div:nth-child(4):before { background: url(../images/corp06/mod_finance10_ico04.png) no-repeat; } 
 .mod_finance10 .container > h3 { background: url(../images/corp06/mod_finance10_bg.png) no-repeat 50% 0%; } 
 
+/* 주요상품 */
+.mod_business_area06 { background-color: #fff2ef; background-image: url(../images/corp06/bg_left.png), url(../images/corp06/bg_right.png); background-repeat: no-repeat; background-position: top left, bottom right; } 
+.mod_business_area06 h3 { margin-bottom: 48px; font-size: 40px; font-weight: 600; text-align: center; } 
+.mod_business_area06 h3 span { display: block; color: #ccc; font-size: 21px; letter-spacing: 12px; font-weight: 400; margin-bottom: 8px; text-transform: uppercase; } 
+.mod_business_area06 .pd_txt { margin: 3rem 0; color: #666666; font-size: 2rem; text-align: center; } 
+.mod_business_area06 .item .info { display: none; } 
+.mod_business_area06 .bizDiv .slick-list { margin: 0 -20px; } 
+.mod_business_area06 .item { height: auto; margin: 0 20px; } 
+.mod_business_area06 .slick-next, .mod_business_area06 .slick-prev { position:absolute; top:50%; transform:translateY(-50%); border:none; font-size:0; width:70px; height:100px; background-color:rgba(0,0,0,.5); background-image:url(../images/corp06/slider_arrow2.png); background-repeat:no-repeat; opacity:.7; z-index:1; } 
+.mod_business_area06 .slick-disabled { opacity:.3; } 
+.mod_business_area06 .slick-prev { left: -120px; background-position:0 0; } 
+.mod_business_area06 .slick-next { right: -120px; background-position:-70px 0; } 
+
+.mod_business_area06 .pd_cont > div { display: none; position: relative; } 
+.mod_business_area06 .pd_cont > div.active { display: block; } 
+.mod_business_area06 .pd_tab { display: flex; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid #fff; justify-content: center; } 
+.mod_business_area06 .pd_tab > div { display: flex; width: 190px; height: 65px; background: #eeeeee; color: #bbbbbb; font-size: 2.4rem; font-weight: bold; cursor: pointer; align-items: center; justify-content: center; } 
+.mod_business_area06 .pd_tab > div.active { background: #ef6622; color: #fff; } 
+.mod_business_area06 .pd_tit { margin: 3rem 0; color: #666666; font-size: 1.8rem; text-align: center; } 
+
 /* 인터뷰 */
 .mod_interview06 .ivCeoPhoto { max-width: 380px; margin-left: 50px; } 
 .mod_interview06 .bg { margin-top: -150px; } 
@@ -89,7 +109,7 @@ body { max-width: 1440px; width: 100%; margin: auto; font-size: 1.6rem; }
 .mod_imgCom img { width: 100% } 
 
 .mod_imgCom .img_area { position: relative; } 
-.mod_imgCom .sw_btn_wrap .slick-arrow { position:absolute; top:50%; transform:translateY(-50%); border:none; font-size:0; width:70px; height:100px; background-color:rgba(0,0,0,.5); background-image:url(https://www.gwjob.kr/page/ijcp/images/empmn/slider_arrow2.png); background-repeat:no-repeat; opacity:.7; z-index:1; } 
+.mod_imgCom .sw_btn_wrap .slick-arrow { position:absolute; top:50%; transform:translateY(-50%); border:none; font-size:0; width:70px; height:100px; background-color:rgba(0,0,0,.5); background-image:url(../images/corp06/slider_arrow2.png); background-repeat:no-repeat; opacity:.7; z-index:1; } 
 .mod_imgCom .sw_btn_wrap .slick-disabled { opacity:.3; } 
 .mod_imgCom .sw_btn_wrap .prev_arrow { left:0; background-position:0 0; } 
 .mod_imgCom .sw_btn_wrap .next_arrow { right:0; background-position:-70px 0; } 
@@ -98,6 +118,9 @@ body { max-width: 1440px; width: 100%; margin: auto; font-size: 1.6rem; }
  .container { width: calc(100% - 40px); } 
  .mod_info07 .info_wrap::before { content: none; } 
  .mod_info07 .vm_wrap { margin: 0 auto; } 
+
+ .mod_business_area06 .slick-next { right: -20px; } 
+ .mod_business_area06 .slick-prev { left: -20px; } 
  }
 
 @media all and (max-width:768px) { html { font-size: 8px; } 
@@ -132,4 +155,8 @@ body { max-width: 1440px; width: 100%; margin: auto; font-size: 1.6rem; }
 
 .mod_interview06 { padding: 40px 0; } 
 .mod_interview06 .item { height: auto; } 
- }
+
+
+
+
+}
