@@ -1,5 +1,124 @@
-@charset "utf-8";
-@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+@charset "utf-8"; @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css'); .event08 * { font-family: 'NanumSquareRound','Noto Sans KR'; font-weight: 700; } 
+.event08 .innerSection { max-width: 1400px; width: calc(100% - 20px); margin: 0 auto; padding: 0; } 
+.event08 .cont01 { background: url(../../images/ev08/cont01_bg.png) top 30px center #f6efdc no-repeat; } 
+.event08 .cont01 .innerSection { padding: 120px 0 90px 50px; position: relative; } 
+.event08 .cont01 h2 { margin-bottom: 50px; color: #38110e; font-size: 100px; font-weight: 800; letter-spacing: -1px; } 
+.event08 .cont01 h2 span { color: #bb3c35; font-weight: 800; } 
+.event08 .cont01 .txt { color: #38110e; font-size: 30px; line-height: 1.5; letter-spacing: -1px; } 
+.event08 .cont01 .txtBox { display: inline-block; padding: 16px 20px; margin-bottom: 30px; position: relative; background: #f6efdc; border: 1px solid #1f1f1e; } 
+.event08 .cont01 .txtBox p { color: #38110e; font-size: 30px; } 
+.event08 .cont01 .txtBox span { display: block; width: 10px; height: 10px; position: absolute; background: #fff; border: 1px solid #1f1f1e; } 
+.event08 .cont01 .txtBox span:nth-child(1) { top: -5px; left: -5px; } 
+.event08 .cont01 .txtBox span:nth-child(2) { top: -5px; right: -5px; } 
+.event08 .cont01 .txtBox span:nth-child(3) { bottom: -5px; right: -5px; } 
+.event08 .cont01 .txtBox span:nth-child(4) { bottom: -5px; left: -5px; } 
+.event08 .cont01 .tagWrap { margin-top: 70px; } 
+.event08 .cont01 .tagWrap ul { display: flex; max-width: 680px; gap: 20px; flex-wrap: wrap; } 
+.event08 .cont01 .tagWrap li { width: calc(100% / 3 - 14px); padding: 10px 0; background: #f6efdc; color: #000; font-size: 20px; border-radius: 30px; border: 1px solid #000; text-align: center; } 
+.event08 .cont01 .tagWrap li.bcBlack { background: #000; color: #fff; } 
+.event08 .cont01 .imgWrap { position: absolute; right: 0; bottom: 0; width: 601px; height: 790px; background: url(../../images/ev08/cont01_img01.png) no-repeat; background-size: contain; font-size: 0; overflow: hidden; } 
+.event08 .cont01 .imgWrap .moImg { display: none; } 
+.event08 .cont02 { background: #f8e6b7; } 
+.event08 .cont02 .innerSection { max-width: 1300px; padding: 90px 0 60px; } 
+.event08 .cont02 .exList { display: flex; margin-bottom: 80px; flex-wrap: wrap; gap: 80px 30px; } 
+.event08 .cont02 .exList li { width: calc(100% / 4 - 23px); box-sizing: border-box; } 
+.event08 .cont02 .exList li .imgWrap { margin-bottom: 20px; position: relative; border: 2px solid #000; border-radius: 30px; font-size: 0; overflow: hidden; } 
+.event08 .cont02 .exList li.active .imgWrap::before { content: '진단완료'; display: flex; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); color: #ffdb7a; font-size: 50px; font-weight: 800; align-items: center; justify-content: center; } 
+.event08 .cont02 .exList li .imgWrap img { width: 100%; object-fit: cover; } 
+.event08 .cont02 .linkWrap { text-align: center; } 
+.event08 .cont02 .linkWrap a { display: inline-block; max-width: 220px; width: 100%; padding: 12px 18px; background: url(../../images/ev08/arrow_btn.png) center right 12px #000 no-repeat; color: #fff; font-size: 16px; text-align: left; } 
+.event08 .cont02 .resultWrap { max-width: 720px; width: 100%; margin: 0 auto; padding: 40px 10px; background: #fcf5e3; border-radius: 30px; } 
+.event08 .cont02 .resultWrap .txt { margin-bottom: 30px; color: #e33227; font-size: 55px; font-weight: 800; text-align: center; text-decoration: underline; text-underline-offset: 15px; } 
+.event08 .cont02 .resultWrap .txt span { font-weight: 800; } 
+.event08 .cont02 .resultWrap li { margin-left: 70px; padding-left: 24px; position: relative; color: #333333; font-size: 23px; letter-spacing: -0.5px; } 
+.event08 .cont02 .resultWrap li::before { content: '\203B'; position: absolute; top: 0; left: 0; } 
+.event08 .cont02 .resultWrap li + li { margin-top: 10px; } 
+.event08 .cont03 { background: #333333; } 
+ .event08 .cont03 .innerSection { max-width: 1200px; padding: 60px 0 80px; } 
+ .event08 .cont03 .infoList { margin-bottom: 70px; } 
+ .event08 .cont03 .infoList li { display: flex; align-items: center; } 
+ .event08 .cont03 .infoList li + li { margin-top: 10px; } 
+ .event08 .cont03 .infoList .infoTit { width: 170px; margin-right: 26px; padding: 10px 0; background: #fff; color: #e33227; font-size: 16px; font-weight: 800; border-radius: 30px; flex-shrink: 0; text-align: center; } 
+ .event08 .cont03 .infoList .infoTxt { color: #fff; font-size: 16px; } 
+.event08 .cont03 .infoList .infoTxt span { margin-right: 10px; } 
+.event08 .cont03 .eventWarning { display: flex; padding: 25px 50px; background: #fff; border-radius: 30px; align-items: center; } 
+.event08 .cont03 .eventWarning .tit { display: inline-block; margin-right: 160px; position: relative; color: #e33227; font-size: 50px; font-weight: 500; flex-shrink: 0; } 
+.event08 .cont03 .eventWarning .tit::before { content: ''; width: 65px; height: 59px; position: absolute; top: 0; right: -50px; background: url(../../images/ev08/cont03_icon01.png) no-repeat; background-size: contain; } 
+.event08 .cont03 .eventWarning .tit span { font-weight: 800; } 
+.event08 .cont03 .warningList p { margin-bottom: 16px; color: #000; font-size: 14px; font-weight: 800; letter-spacing: -1px; } 
+.event08 .cont03 .warningList li { padding-left: 6px; position: relative; color: #333333; font-size: 13px; letter-spacing: -1px; } 
+.event08 .cont03 .warningList li::before { content: ''; width: 2px; height: 2px; position: absolute; top: 4px; left: 0; background: #333333; border-radius: 50%; } 
+.event08 .cont03 .warningList li + li { margin-top: 6px; } 
 
-.ev08_wrap * { font-family: 'NanumSquareRound','Noto Sans KR'; font-weight: 700;} 
-.ev08_wrap .innerSection { max-width: 1400px; width: calc(100% - 20px); margin: 0 auto; padding: 0; } 
+@media all and (max-width:1300px){
+ .event08 .cont01 .innerSection { padding: 120px 0 90px; } 
+ }
+
+@media all and (max-width:1200px){
+ .event08 .cont01 .imgWrap { width: auto; height: auto; bottom: 50px; background: none; } 
+ .event08 .cont01 .imgWrap .moImg { display: block; } 
+ }
+
+@media all and (max-width:1024px){
+ .event08 .cont01 .innerSection { padding: 60px 0 60px; text-align: center; } 
+ .event08 .cont01 .imgWrap { position: static; margin: 20px 0; } 
+ .event08 .cont01 .imgWrap img { margin: 0 auto; max-width: 350px; } 
+ .event08 .cont01 .tagWrap ul { margin: 0 auto; } 
+ .event08 .cont02 .exList li { width: calc(100% / 3 - 20px); } 
+.event08 .cont03 .eventWarning .tit { margin-right: 80px; } 
+ }
+
+@media all and (max-width:768px){
+ .event08 .cont01 .innerSection { padding: 30px 0 30px; } 
+ .event08 .cont01 .txtBox p { font-size: 20px; } 
+ .event08 .cont01 .txtBox { padding: 10px 15px; margin-bottom: 20px; } 
+ .event08 .cont01 h2 { margin-bottom: 20px; font-size: 70px; } 
+ .event08 .cont01 .txt { font-size: 24px; } 
+ .event08 .cont01 .imgWrap img { max-width: 300px; } 
+ .event08 .cont01 .tagWrap { margin-top: 0; } 
+ .event08 .cont01 .tagWrap li { font-size: 16px; } 
+ .event08 .cont02 .innerSection { padding: 30px 0 30px; } 
+.event08 .cont02 .exList { margin-bottom: 50px; gap: 30px 30px; } 
+.event08 .cont02 .exList li { width: calc(100% / 2 - 15px); } 
+.event08 .cont02 .exList li.active .imgWrap::before { font-size: 40px; } 
+.event08 .cont02 .resultWrap .txt { font-size: 40px; } 
+.event08 .cont02 .resultWrap li { font-size: 18px; } 
+.event08 .cont03 .infoList .infoTxt span { display: block; margin-bottom: 4px; } 
+.event08 .cont03 .eventWarning { padding: 25px 20px; border-radius: 20px; flex-direction: column; } 
+.event08 .cont03 .eventWarning .tit { margin-right: 0; margin-bottom: 20px; font-size: 40px; } 
+.event08 .cont03 .eventWarning .tit::before { width: 50px; height: 45px; right: -30px; } 
+}
+@media all and (max-width:640px){
+ .event08 .cont01 { background: #f6efdc; } 
+ .event08 .cont01 .txtBox p { font-size: 14px; } 
+ .event08 .cont01 .txtBox { padding: 10px 10px; margin-bottom: 15px; } 
+ .event08 .cont01 .txtBox span { width: 6px; height: 6px; } 
+ .event08 .cont01 .txtBox span:nth-child(1) { top: -3px; left: -3px; } 
+ .event08 .cont01 .txtBox span:nth-child(2) { top: -3px; right: -3px; } 
+ .event08 .cont01 .txtBox span:nth-child(3) { bottom: -3px; right: -3px; } 
+ .event08 .cont01 .txtBox span:nth-child(4) { bottom: -3px; left: -3px; } 
+ .event08 .cont01 h2 { margin-bottom: 10px; font-size: 40px; } 
+ .event08 .cont01 .txt { font-size: 16px; } 
+ .event08 .cont01 .imgWrap img { max-width: 180px; } 
+ .event08 .cont01 .imgWrap { margin: 10px 0 20px; } 
+ .event08 .cont01 .tagWrap li { width: calc(100% / 3 - 4px); padding: 6px 0; font-size: 10px; } 
+ .event08 .cont01 .tagWrap ul { gap: 5px; } 
+ .event08 .cont02 .exList li .imgWrap { margin-bottom: 10px; border: 1px solid #000; border-radius: 15px; } 
+.event08 .cont02 .exList { margin-bottom: 30px; gap: 20px 10px; } 
+.event08 .cont02 .exList li { width: calc(100% / 2 - 5px); } 
+.event08 .cont02 .linkWrap a { padding: 8px 6px; background: url(../../images/ev08/arrow_btn.png) center right 6px #000 no-repeat; background-size: 11px auto; font-size: 10px; } 
+.event08 .cont02 .exList li.active .imgWrap::before { font-size: 20px; } 
+.event08 .cont02 .resultWrap { padding: 25px 10px; border-radius: 20px; } 
+.event08 .cont02 .resultWrap .txt { margin-bottom: 20px; font-size: 26px; text-underline-offset: 8px; } 
+.event08 .cont02 .resultWrap li { margin-left: 0; padding-left: 16px; font-size: 14px; } 
+
+.event08 .cont03 .innerSection { padding: 30px 0; } 
+.event08 .cont03 .infoList li { display: block; text-align: center; } 
+.event08 .cont03 .infoList .infoTit { margin: 0 auto 10px; padding: 8px 0; } 
+.event08 .cont03 .infoList .infoTxt { font-size: 14px; } 
+.event08 .cont03 .infoList { margin-bottom: 30px; } 
+.event08 .cont03 .eventWarning .tit { font-size: 24px; } 
+.event08 .cont03 .eventWarning .tit::before { width: 30px; height: 27px; right: -20px; } 
+.event08 .cont03 .warningList p { margin-bottom: 10px; font-size: 13px; } 
+.event08 .cont03 .warningList li { font-size: 12px; } 
+}
