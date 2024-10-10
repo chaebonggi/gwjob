@@ -1,0 +1,167 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="wclassth=device-wclassth, initial-scale=1, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title class="comName">대연 C&I</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.kldp.org/fonts/Free/S-Core/css/scdream.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/3.1.2/billboard.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://aldo814.github.io/gwjobNew/proto/inc/pt-common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/corp07.css">
+	<style>
+	/* 기업별 스타일을 추가해주세요 */
+	
+
+	@media all and (max-width:1024px) { }
+
+	@media all and (max-width:768px) { }
+
+	@media all and (max-width:640px) { }
+
+	@media all and (max-width:480px) { }
+
+   </style>
+   <script src="//code.jquery.com/jquery-1.12.2.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/billboard.js@1.11.0-next.1/dist/billboard.pkgd.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+	<!-- 모듈 추가 및 수정 -->
+
+
+	<div class="mod_finance05">
+		<div class="container">
+			<h3>월 별 입/퇴사자 추이</h3>
+			<div class="tab_wrap clearfix">
+				<div class="conts">
+					<div class="unit"></div>
+						<div class="legend">
+							<ul>
+								<li class="lg_capital"><i></i> 퇴사자</li>
+								<li class="lg_sales"><i></i> 입사자</li>
+								<li class="lg_profit"><i></i> 총인원수</li>
+							</ul>
+						</div>
+						<div id="graph_three" class="bb" style="position: relative;"></div>
+
+						<ul class="totalList">
+							<li>
+								<p>최근 1년 퇴사자</p>
+								<p><span>1</span>명</p>
+							</li>
+							<li>
+								<p>최근 1년 입사자</p>
+								<p><span>1</span>명</p>
+							</li>
+							<li>
+								<p>총 인원</p>
+								<p><span>1</span>명</p>
+							</li>
+						</ul>
+				</div>
+			</div>
+
+			<div>
+				<div class="graph">
+					<ul class="graphline">
+						<li><p>4,300</p></li>
+						<li><p>4,100</p></li>
+						<li><p>3,900</p></li>
+						<li><p>3,700</p></li>
+						<li><p>3,500</p></li>
+						<li><p>3,300</p></li>
+					</ul>
+					<ul>
+						<li class="graph-bar bar1"><p><span>3,700</span> 동종산업군<br>평균연봉</p></li>
+						<li class="graph-bar bar2"><p><span>4,300</span> 올해 입사자 연봉</p></li>
+					</ul>
+				</div>
+				<div class="graphBanner">
+					<p>평균연봉 <span>3,950</span><em>만원</em></p>
+				</div>
+				
+					
+			</div>
+		</div>
+	</div>
+	
+
+<script>
+	$(document).ready(function(){
+		// 복사한 스크립트 추가영역
+		setTimeout(function() {
+			chart5_finance05.resize();
+		}, 300);
+		
+
+		var chart5_finance05 = bb.generate({
+			bindto: "#graph_three",
+			data: {
+				type: "bar", // Default type is bar for all data
+				columns: [
+					["퇴사자", 10, 30, 10],
+					["입사자", 20, 10, 40],
+					["총인원수", 50, 51, 52]
+				],
+				types: {
+					총인원수: "line" // Override to make "총인원수" a line chart
+				},
+				colors: {
+					퇴사자: "#d2d2d2",
+					입사자: "#293991",
+					총인원수: "#e95354"
+				},
+				labels: {
+					format: {
+						퇴사자: function (value) { return value / 10; }, // Display 1, 3, 1 instead of 10, 30, 10
+						입사자: function (value) { return value / 10; }, // Display 2, 1, 4 instead of 20, 10, 40
+						총인원수: function (value) { return value; } // Keep the original label for "총인원수"
+					}
+				}
+			},
+			padding: {
+				top: 40,
+				left: 0
+			},
+			grid: {
+				x: {
+					show: true
+				},
+				y: {
+					show: true
+				}
+			},
+			axis: {
+				x: {
+					type: "category",
+					categories: [2020, 2021, 2022],
+					padding: {
+						left: .2,
+						right: .2
+					}
+				},
+				y: {
+					show: false
+				}
+			},
+			bar: {
+				width: {
+					max: 40
+				},
+				padding: 3,				
+			},
+			point: {
+				r: 6
+			},
+			legend: {
+				show: false
+			},
+			interaction: {
+				enabled: false
+			}
+		});
+	});
+</script>
+</body>
+</html>
