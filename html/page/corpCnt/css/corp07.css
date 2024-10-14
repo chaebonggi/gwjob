@@ -1,51 +1,98 @@
 .mod_finance05 .bb-texts-퇴사자 text,
-.mod_finance05 .bb-texts-입사자 text {font-size: 14px;font-weight: bold;stroke: none; } 
-.mod_finance05 .bb-texts-입사자 text {fill: #293991 !important; } 
-.mod_finance05 .bb-texts-퇴사자 text {fill: #888888 !important; } 
-.mod_finance05 .bb-texts-총인원수 text {fill: #e95354 !important;font-size: 14px;font-weight: bold;stroke: none; } 
-.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(3) i {width: 12px;height: 12px;background-color: #e95354; } 
+.mod_finance05 .bb-texts-입사자 text { font-size: 14px; font-weight: bold; stroke: none; } 
+.mod_finance05 .bb-texts-입사자 text { fill: #293991 !important; } 
+.mod_finance05 .bb-texts-퇴사자 text { fill: #888888 !important; } 
+.mod_finance05 .bb-texts-총인원수 text { fill: #e95354 !important; font-size: 14px; font-weight: bold; stroke: none; } 
+.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(3) i { width: 12px; height: 12px; background-color: #e95354; } 
 .mod_finance05 .tab_wrap .conts .legend ul li:nth-child(1) i,
-.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(2) i {width: 40px;height: 10px;border-radius: 0; } 
-.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(2) i {background-color: #293991; } 
- .mod_finance05 >div { background: #f7f7f7; } 
- .mod_finance05 .totalList { display: flex; margin-top: 20px; gap: 20px; } 
- .mod_finance05 .totalList li { display: flex; padding: 20px 30px; background: #efefef; flex: 1; border-radius: 15px; justify-content: space-between; align-items: flex-end; } 
- .mod_finance05 .totalList li:nth-child(2) { background: #e4f3ff; } 
- .mod_finance05 .totalList li:nth-child(3) { min-width: 300px; background: #ffe9e9; } 
- .mod_finance05 .totalList li p { color: #000; font-size: 16px; font-weight: 500; } 
- .mod_finance05 .totalList li p span { font-size: 20px; font-weight: bold; } 
- .mod_finance05 > div .tab_wrap .conts { height: auto; } 
- .mod_finance05 > div .tab_wrap { padding: 0px 100px; } 
- .graph { max-width:520px; width: 100%; height: 280px; margin: 300px auto 0; position:relative; } 
- .graph-bar { display: inline-block; position: absolute; width: 60px; height: 100px; left: 0; bottom:0; perspective:200px; background: #d2d2d2; box-shadow: 2px -2px #a5a5a5,
+.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(2) i { width: 40px; height: 10px; border-radius: 0; } 
+.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(2) i { background-color: #293991; } 
+.mod_finance05 > div { background: #f7f7f7; } 
+.mod_finance05 .totalList { display: flex; margin-top: 20px; gap: 20px; } 
+.mod_finance05 .totalList li { display: flex; padding: 20px 30px; background: #efefef; flex: 1; border-radius: 15px; justify-content: space-between; align-items: flex-end; } 
+.mod_finance05 .totalList li:nth-child(2) { background: #e4f3ff; } 
+.mod_finance05 .totalList li:nth-child(3) { min-width: 300px; background: #ffe9e9; } 
+.mod_finance05 .totalList li p { color: #000; font-size: 16px; font-weight: 500; } 
+.mod_finance05 .totalList li p span { font-size: 20px; font-weight: bold; } 
+.mod_finance05 > div .tab_wrap .conts { height: auto; padding: 20px; max-width: 800px; margin: 0 auto; } 
+.mod_finance05 > div .tab_wrap { padding: 0px; } 
+
+.mod_salary01 .graph_wrap { position: relative; max-width: 530px; height: 300px; margin: 150px auto 0; } 
+.mod_salary01 .graph_wrap .graphline { position: absolute; width: 100%; height: 100%; z-index: 1; } 
+.mod_salary01 .graph_wrap .graphline li { position: relative; width:100%; height: calc(100% / 7); border-top: 1px solid #c3c9eb; text-align: left; } 
+.mod_salary01 .graph_wrap .graphline li span { position: absolute; top: -7px; left: -20px; font-size: 12px; line-height: 1; } 
+.mod_salary01 .graph_wrap .graph_bar { display: flex; justify-content: space-around; align-items: flex-end; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; text-align: center; z-index: 3; } 
+.mod_salary01 .graph_wrap .graph_bar li { flex-grow:1; margin: 0 10px; position: relative; } 
+.mod_salary01 .graph_wrap .graph_bar li .bar { display: inline-block; width: 100%; height: 100%; max-width: 60px; background: #d2d2d2; box-shadow: 2px -2px #a5a5a5,
+4px -4px #a5a5a5, 
+6px -6px #a5a5a5, 
+8px -8px #a5a5a5, 
+10px -10px #a5a5a5, 
+12px -12px #a5a5a5, 
+14px -14px #a5a5a5, 
+16px -16px #a5a5a5, 
+18px -18px #a5a5a5, 
+20px -20px #a5a5a5; } 
+.mod_salary01 .graph_wrap .graph_bar li:nth-child(2) .bar { background: #4458c9; box-shadow: 2px -2px #293991,
+4px -4px #293991, 
+6px -6px #293991, 
+8px -8px #293991, 
+10px -10px #293991, 
+12px -12px #293991, 
+14px -14px #293991, 
+16px -16px #293991, 
+18px -18px #293991, 
+20px -20px #293991; } 
+.mod_salary01 .graph_wrap .graph_bar li .graph_tag { position: absolute; display: flex; width: 140px; height: 140px; position: absolute; left: calc(50% + 15px); top: -170px; transform: translateX(-50%); background: #6e6e6e; border-radius: 50%; align-items: center; justify-content: center; flex-direction: column; color: #fff; font-size: 16px; text-align: center; } 
+.mod_salary01 .graph_wrap .graph_bar li .graph_tag span { font-weight: bold; font-size: 26px; } 
+.mod_salary01 .graph_wrap .graph_bar li:nth-child(2) .graph_tag { width: 180px; height: 180px; top: -210px; background: #293991; border: 10px solid #a7b5f6; } 
+.mod_salary01 .graph_wrap .graph_bar li:nth-child(2) .graph_tag span { font-size: 34px; } 
+.mod_salary01 .graphBanner { max-width: 720px; margin: 40px auto 0; position: relative; background: #fff; border: 5px solid #a5a5a5; border-radius: 100px; } 
+.mod_salary01 .graphBanner::before { content: ''; width: 175px; height: 160px; position: absolute; bottom: -9px; left: 30px; background: url(../images/corp07/corp_icon01.png) no-repeat; } 
+.mod_salary01 .graphBanner p { padding: 24px 0 24px 60px; color: #000; font-size: 24px; font-weight: bold; text-align: center; } 
+.mod_salary01 .graphBanner p span { color: #293991; font-size: 40px; font-weight: bold; } 
+.mod_salary01 .graphBanner p em { color: #010101; font-size: 16px; font-weight: 300; } 
+
+@media all and (max-width:1024px){
+ .mod_finance05 .totalList { flex-direction: column; } 
+ }
+@media all and (max-width:640px){
+ .mod_finance05 > div { padding: 30px 10px; } 
+ .mod_finance05 .tab_wrap .conts .legend ul li { font-size: 12px; } 
+ .mod_finance05 .tab_wrap .conts .legend i { width: 12px !important; height: 12px !important; } 
+ .mod_finance05 .totalList { gap: 10px; } 
+ .mod_finance05 .totalList li { padding: 15px; } 
+ .mod_finance05 .totalList li:nth-child(3) { min-width: 100%; } 
+ .mod_finance05 .totalList li p { font-size: 14px; } 
+ .mod_finance05 .totalList li p span { font-size: 16px; } 
+ .mod_salary01 .graph_wrap .graph_bar li .bar { max-width: 30px; box-shadow: 1px -1px #a5a5a5, 
+ 2px -2px #a5a5a5, 
+ 3px -3px #a5a5a5, 
  4px -4px #a5a5a5, 
+ 5px -5px #a5a5a5, 
  6px -6px #a5a5a5, 
+ 7px -7px #a5a5a5, 
  8px -8px #a5a5a5, 
- 10px -10px #a5a5a5, 
- 12px -12px #a5a5a5, 
- 14px -14px #a5a5a5, 
- 16px -16px #a5a5a5, 
- 18px -18px #a5a5a5, 
- 20px -20px #a5a5a5; } 
- .graph-bar.bar1 { height: 140px; left: 150px; } 
- .graph-bar.bar2 { left: 300px; height: 260px; background: #4458c9; box-shadow: 2px -2px #293991,
+ 9px -9px #a5a5a5, 
+ 10px -10px #a5a5a5; } 
+ .mod_salary01 .graph_wrap { height: 200px; margin: 100px auto 0; } 
+ .mod_salary01 .graph_wrap .graph_bar li:nth-child(2) .bar { box-shadow: 1px -1px #293991, 
+ 2px -2px #293991, 
+ 3px -3px #293991, 
  4px -4px #293991, 
+ 5px -5px #293991, 
  6px -6px #293991, 
+ 7px -7px #293991, 
  8px -8px #293991, 
- 10px -10px #293991, 
- 12px -12px #293991, 
- 14px -14px #293991, 
- 16px -16px #293991, 
- 18px -18px #293991, 
- 20px -20px #293991; } 
- .graph .graphline li { padding-bottom: 39px; position: relative; border-top: 1px solid #c3c9eb; } 
- .graph .graphline li p { position: absolute; top: -10px; left: -50px; color: #5f6dbc; font-size: 14px; } 
- .graph-bar p { display: flex; width: 140px; height: 140px; position: absolute; left: calc(50% + 10px); top: -170px; transform: translateX(-50%); background: #6e6e6e; border-radius: 50%; align-items: center; justify-content: center; flex-direction: column; color: #fff; font-size: 16px; text-align: center; } 
- .graph-bar p span { font-weight: bold; font-size: 26px; } 
- .graph-bar.bar2 p { width: 180px; height: 180px; top: -210px; background: #293991; border: 10px solid #a7b5f6; } 
- .graph-bar.bar2 p span { font-size: 34px; } 
- .graphBanner { max-width: 720px; margin: 40px auto 0; position: relative; background: #fff; border: 5px solid #a5a5a5; border-radius: 100px; } 
- .graphBanner::before { content: ''; width: 175px; height: 160px; position: absolute; bottom: -9px; left: 30px; background: url(../images/corp07/corp_icon01.png) no-repeat; } 
- .graphBanner p { padding: 24px 0 24px 40px; color: #000; font-size: 24px; font-weight: bold; text-align: center; } 
- .graphBanner p span { color: #293991; font-size: 40px; font-weight: bold; } 
- .graphBanner p em { color: #010101; font-size: 16px; font-weight: 300; } 
+ 9px -9px #293991, 
+ 10px -10px #293991; } 
+.mod_salary01 .graph_wrap .graph_bar li .graph_tag { width: 90px; height: 90px; top: -110px; left: calc(50% + 10px); font-size: 12px; } 
+.mod_salary01 .graph_wrap .graph_bar li .graph_tag span { font-size: 20px; } 
+.mod_salary01 .graph_wrap .graph_bar li:nth-child(2) .graph_tag { width: 110px; height: 110px; top: -130px; border: 2px solid #a7b5f6; } 
+.mod_salary01 .graph_wrap .graph_bar li:nth-child(2) .graph_tag span { font-size: 24px; } 
+.mod_salary01 .graphBanner { margin: 20px auto 0; border: 3px solid #a5a5a5; border-radius: 30px; } 
+.mod_salary01 .graphBanner::before { width: 80px; height: 73px; left: 50%; transform: translateX(-50%); background-size: contain; } 
+.mod_salary01 .graphBanner p { padding: 20px 0 70px; font-size: 16px; } 
+.mod_salary01 .graphBanner p span { font-size: 24px; } 
+.mod_salary01 .graphBanner p em { font-size: 14px; } 
+ }
