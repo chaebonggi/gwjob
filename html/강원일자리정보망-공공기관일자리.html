@@ -1502,7 +1502,8 @@
         $(document).ready(function() {
             // 선택저장 tooltip
             $('.btn-save').on("click", function(){
-                $(this).children('.tooltip').stop().show(1).delay(2000).hide(1);                
+                if (window.innerWidth <= 640) return;
+                $(this).children('.tooltip').stop().show(1).delay(2000).hide(1);
             });
 
              // 탭메뉴

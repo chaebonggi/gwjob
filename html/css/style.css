@@ -150,8 +150,9 @@
 .sub-page .keyword-btn-wrap .btn-area .gw-btn { margin-right: 10px; font-size: 12px; } 
 .sub-page .keyword-btn-wrap { flex-direction: column; gap: 20px; width: 100%; } 
 .sub-page .keyword-btn-wrap .btn-area { margin-left: auto; } 
-.sub-page .keyword-btn-wrap .btn-area .gw-btn .ico-icon { width: 16px; height: 16px; background-size: contain; } 
+.sub-page .keyword-btn-wrap .btn-area .gw-btn .ico-icon { width: 12px; height: 12px; background-size: contain; } 
 .sub-page .keyword-btn-wrap .btn-search { width: 100%; padding: 12px 10px; font-size: 14px; } 
+.sub-page .keyword-btn-wrap .btn-search br {display: none;}
 .sub-page.public-job .calender-banner { padding: 20px; background-image: none; } 
 .sub-page.public-job .calender-banner h3 { padding-left: 30px; font-size: 18px; } 
 .sub-page.public-job .calender-banner h3::before { width: 28px; height: 22px; } 
@@ -225,7 +226,7 @@
 .modal-calender .calendar-table .cal-schedule .link-item a { display: flex; padding: 5px 0; line-height: 1; } 
 .modal-calender .calendar-table .cal-schedule .link-item .cal-start { color: #5296fc; } 
 .modal-calender .calendar-table .cal-schedule .link-item .cal-end { color: #ff0000; } 
-.modal-calender .calendar-table .cal-schedule .link-item .link-tit { display: -webkit-box; padding-left: 10px; color: #777777; font-size: 12px; font-weight: 400; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; } 
+.modal-calender .calendar-table .cal-schedule .link-item .link-tit { display: -webkit-box; padding-left: 10px; color: #777777; font-size: 12px; font-weight: 400; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; line-height: 1.2; } 
 
 @media all and (max-width: 640px){
  .modal-calender .modal-dialog .modal-content { max-height: 100%; border-radius: 0; } 
