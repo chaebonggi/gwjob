@@ -8,34 +8,68 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        .tmp_wrap{font-family: 'Noto Sans KR', sans-serif;font-size:16px;font-weight:400;color:#232323;box-sizing:border-box;position:relative;padding:0;width:100%;max-width:890px;word-break:keep-all;line-height:1.6;}
-        .tmp_wrap p{margin:0;padding-left:20px;}
-        .tmp_wrap .tit{font-size:18px;font-weight:700;margin:24px 0 4px;padding-left:0;}
-        .tmp_wrap .desc{margin:24px 0 4px;padding-left:0;}
-        .tmp_wrap ul { padding: 0; margin: 0 0 0 20px;}
-        .tmp_wrap li { position: relative; padding-left: 8px; list-style-type: none; word-break: break-all;} 
-        .tmp_wrap ul.style_dot li::before{content: ''; display: block; width: 4px; height: 4px; position: absolute; top: 10px; left: 0; background: #232323; border-radius: 50%;}
-        .tmp_wrap ul.style_minus li::before{content: '\002D'; display: block; position: absolute; left: 0; top: 0;}
+        .tmp_wrap {font-family: 'Noto Sans KR', sans-serif;font-size:20px;font-weight:400;color:#232323;box-sizing:border-box; position:relative;padding:0;width:100%;max-width:890px;word-break:keep-all;line-height:1.6;                        }
+        .tmp_wrap p {margin:0;}
+        .tmp_wrap .tit {margin:20px 0 10px;font-size:24px;font-weight:700;}
+        .tmp_wrap .tit::before {
+            content: '';
+            display: inline-flex;
+            width: 5px;
+            height: 18px;
+            margin-right: 10px;
+            background: url('https://job.gwd.go.kr/page/gwjob/images/ico_title3.jpg') center no-repeat;
+            background-size: contain;
+        }
+        .tmp_wrap .desc {margin:24px 0 4px;padding-left:0;}
+        .tmp_wrap ul { display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0 0 0 20px;}
+        .tmp_wrap li { position: relative; padding-left: 15px; color: #888888; list-style-type: none; word-break: break-all;} 
+        .tmp_wrap ul.style_dot li::before {content: ''; display: block; width: 4px; height: 4px; position: absolute; top: 12px; left: 0; border: 2px solid #2397d4; border-radius: 50%;}
+
+        @media all and (max-width: 640px){
+            .tmp_wrap {font-size: 14px;}
+            .tmp_wrap .tit {font-size:18px;}
+            .tmp_wrap .tit::before {width: 4px; height: 14px; margin-right: 6px;}
+            .tmp_wrap ul {gap: 6px; margin: 0 0 0 15px;}
+            .tmp_wrap li {padding-left: 12px;}
+            .tmp_wrap ul.style_dot li::before {width: 3px; height: 3px; top: 8px;}
+            .tmp_wrap .desc {font-size: 12px;}
+        }
     </style>
 
 </head>
 <body>
 <div class="tmp_wrap">
-    <p class="tit">📂 사업정보</p>
-    <p>- 사업명 : 사업명을 기입한다.</p>
-    <p>- 사업기간 : 사업기간을 기입한다. </p>
-    <p>- 모집인원 : 00명 </p>
-    <p>- 지원내용 : 사업의 지원내용/혜택 등을 개조식으로 작성 </p>
-    <p>① 지원내용 중 상세 내용을 기입한다.</p>
-    <p>② 지원내용 중 상세 내용을 기입한다.</p>
-    <p>③ 지원내용 중 상세 내용을 기입한다.</p>
-    <p class="tit">📂 지원 대상</p>
-    <p>- 연령, 성별, 취업상태, 지역 등 1~2줄 이내 개조식 작성</p>
-    <p class="tit">📂 신청방법</p>
-    <p>- 방법(온라인, 이메일, 방문 등), 절차 등을 개조식 작성</p>
-    <p class="tit">📞 문의처</p>
-    <p>- 기관명 및 담당자, 연락처 정보 작성</p>
-    <p class="desc">💡 기타 자세한 모집요강 및 세부 내용은 첨부된 공고문을 참고하시기 바랍니다.</p>
+    <p class="tit">사업정보</p>
+    <ul class="style_dot">
+        <li>사업명 :</li>
+        <li>사업기간 :</li>
+        <li>지원내용 :</li>
+        <li>모집인원 :</li>
+        <li>지원혜택 :</li>
+    </ul>
+
+    <p class="tit">지원대상</p>
+
+    <ul class="style_dot">
+        <li>연령, 성별, 취업상태, 지역 등 1~2줄 이내 개조식 작성</li>
+    </ul>
+
+    <p class="tit">신청방법</p>
+
+    <ul class="style_dot">
+        <li>접수방법 (abc@def.com)</li>
+    </ul>
+
+    <p class="tit">문의처</p>
+
+    <ul class="style_dot">
+        <li>기관명 (012-3456-7890)</li>
+    </ul>
+
+    <p class="desc">
+        ℹ️ 기타 자세한 모집요강 및 세부 내용은 첨부된 공고문을 참고하시기 바랍니다.<br />
+        ℹ️ 기타 자세한 모집요강 및 세부 내용은 상세페이지에서 내용을 참고하시기 바랍니다.
+    </p>
 </div>
 </body>
 </html>
