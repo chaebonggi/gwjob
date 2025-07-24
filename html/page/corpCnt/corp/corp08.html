@@ -1,0 +1,511 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="wclassth=device-wclassth, initial-scale=1, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title class="comName">토다머티리얼즈</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.kldp.org/fonts/Free/S-Core/css/scdream.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/3.1.2/billboard.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="https://job.gwd.go.kr/page/ijcp/css/common.css" >
+	<link rel="stylesheet" href="https://job.gwd.go.kr/page/gwjob/css/newSub.css" >
+    <link rel="stylesheet" href="https://aldo814.github.io/gwjobNew/proto/inc/pt-common.css" >
+	
+	<link rel="stylesheet" href="../css/corp08.css">
+
+   <script src="//code.jquery.com/jquery-1.12.2.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/billboard.js@1.11.0-next.1/dist/billboard.pkgd.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+	<style>
+		html{font-size: 10px}
+		.mg70{margin: 7rem 0}
+		.pd70{padding: 7rem 0}
+
+		/* 메인 */
+		.mod_visual { width: 100%; height: 600px; padding: 60px 0; background: url(../images/corp08/visual.png) no-repeat; background-size: cover; }
+		.mod_visual .txt_wrap { margin-top: 120px; text-align: left; } 
+		.mod_visual .comName { color: #fff; font-size: 3.2rem; }
+		.mod_visual .comName b {font-size: 3.2rem;}
+		.mod_visual .title { margin-top: 6rem; font-size: 6rem; color: #fff; font-weight: bold; } 
+		.sns_mod_info.sty01 { background: url(../images/corp08/info.png) no-repeat !important; background-size: cover !important; }
+		.sns_mod_info.sty01 .info_wrap > li { font-size: 1.8rem; color: #fff; } 
+		.sns_mod_info.sty01 .info_wrap > li .cnt span {font-size: 2rem; color: #fff;}
+		.sns_mod_info.sty01 ul li:nth-child(1) .ico { background: url(../images/corp08/ico_finance01.png) no-repeat center;} 
+		.sns_mod_info.sty01 ul li:nth-child(2) .ico { background: url(../images/corp08/ico_finance02.png) no-repeat center;} 
+		.sns_mod_info.sty01 ul li:nth-child(3) .ico { background: url(../images/corp08/ico_finance03.png) no-repeat center;} 
+		.sns_mod_info.sty01 ul li:nth-child(4) .ico { background: url(../images/corp08/ico_finance04.png) no-repeat center;} 
+
+		/* 기업소개 */
+		.mod_introduce h3 {
+			margin-bottom: 40px;
+			font-weight: 600;
+			font-size: 40px;
+			text-align: center;
+		}
+		.mod_introduce .txt {
+			font-size: 18px;
+			line-height: 1.6;
+			text-align: center;
+		}
+		.mod_introduce .introduce_item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			margin-top: 40px;
+		}
+		.mod_introduce .introduce_txt {
+			max-width: 830px;
+		}
+		.mod_introduce .introduce_txt p {
+			font-size: 18px;
+			line-height: 1.6;
+			word-break: keep-all;
+		}
+
+		.mod_vision {padding: 70px 60px; background-color: #fbf6f5;}
+		.mod_vision h3 {
+			margin-bottom: 40px;
+			font-weight: 600;
+			font-size: 40px;
+			text-align: center;
+		}
+		.mod_vision .txt {
+			color: #333;
+			font-size: 20px;
+			text-align: center;
+		}
+		.mod_vision .txt::before, .mod_vision .txt::after {
+			display: inline-block;
+			content: '';
+			width: 16px;
+			height: 13px;
+			margin-right: 10px;
+			background: url(../images/corp08/vision_img01.png) no-repeat center;
+			vertical-align: top;
+		}
+		.mod_vision .txt::after {
+			margin-left: 10px;
+			background: url(../images/corp08/vision_img02.png) no-repeat center;
+		}
+
+		/* 연혁 */
+		.mod_history02 .slick-slide {height: auto;}
+	</style>
+	<main>
+		<div class="inner">
+			<!-- 비쥬얼 -->
+			<div class="mod_visual">
+				<div class="container">
+					<div class="txt_wrap">
+						<div class="comName">끊임없는 변화와 혁신으로<br> <b>소재, 부품의 발전을 선도하는 기업</b></div>
+						<p class="title">토다머티리얼즈</p>
+					</div>		
+				</div>
+			</div>
+			<div class="module-wrap sns_mod_info sty01">
+				<div class="container">
+					<ul class="info_wrap">
+						<li>
+							<div class="ico"></div>
+							설립일
+							<div class="cnt"><span class="comBuildDate">2017년 04월 10일</span></div>
+						</li>
+						<li>
+							<div class="ico"></div>
+							매출액(백만원)
+							<div class="cnt"><span class="fiSales">00 억원</span></div>
+						</li>
+						<li>
+							<div class="ico"></div>
+							사원수
+							<div class="cnt lastEmployeeState"><span class="lastTotal">00 명</span></div>
+						</li>
+						<li>
+							<div class="ico"></div>
+							자본금(백만원)
+							<div class="cnt"><span class="fiCapital">00 억원</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 기업소개 -->
+			<div class="mod_introduce pd70">
+				<h3>기업소개</h3>
+				<p class="txt">고객과 사회, 환경에 공헌하는 기업!<br> 전자소재분야와 IT부품산업에서 세계 최고의 가치를 창출하는 기업!</p>
+				<div class="introduce_item">
+					<div class="introduce_txt">
+						<p>1987년 창업이래 소프트 페라이트 코어 생산을 시작으로 전자기기, 자동차 전자부품, 친환경 산업 등
+						다양한 산업 분야에서 요구되는 소재와 부품을 생산하고 있으며 높은 기술력과 품질로
+						현재 그 사업 영역을 더욱더 확대해 가고 있습니다.<br>
+						<br>
+						앞으로도 토다머티리얼즈는 그동안 축적한 소재기술 노하우와 부품생산 경험 등을 기반으로
+						기존사업을 공고히 함과 더불어 지속적인 기술개발을 통해 4차산업의 중심인 자율주행, 5G, AI 등
+						빠르게 변화하는 시장의 니즈에 맞춘 소재와 부품을 개발하고 사회와 환경에 솔루션을 제공해 나갈 것입니다.<br>
+						<br>
+						고객과 사회, 환경에 공헌하는 기업! 전자소재분야와 IT부품산업에서 세계 최고의 가치를 창출하는 기업!<br>
+						<br>
+						기술혁신, 고객만족, 지속가능한 발전을 기반으로 더 나은 미래를 만들어 나가겠습니다.</p>
+					</div>
+					<div>
+						<img src="../images/corp08/introduce_img01.png" alt="기업소개">
+					</div>
+				</div>
+			</div>
+
+			<!-- 핵심가치 -->
+			<div class="mod_vision">
+				<h3>핵심가치</h3>
+				<p class="txt">소재와 부품생산을 통하여 국가경제와 세계인류 발전에 공헌하는 기업이 되겠습니다.</p>
+				<ul class="vision_list">
+					<li>
+						<div class="vision_list__tit">
+							<strong>인간존중</strong>
+							<p>Respect for Humanity</p>
+						</div>
+						<p class="vision_list__txt">
+							각 구성원간의<br>
+							신뢰와 존중을 바탕으로<br>
+							사람이 모든것에<br>
+							우선하는 기업
+						</p>
+					</li>
+					<li>
+						<div class="vision_list__tit">
+							<strong>변화와 혁신</strong>
+							<p>Change and Innovation</p>
+						</div>
+						<p class="vision_list__txt">
+							끊임없는 변화와<br>
+							혁신을 통해<br>
+							미래를 준비하고<br>
+							창조하는 기업
+						</p>
+					</li>
+					<li>
+						<div class="vision_list__tit">
+							<strong>고객만족</strong>
+							<p>Customer Satisfaction</p>
+						</div>
+						<p class="vision_list__txt">
+							신기술, 고품질의 제품을<br>
+							고객에  제공하여<br> 
+							회사와 고객이<br> 
+							함께 성장하는 기업
+						</p>
+					</li>
+					<li>
+						<div class="vision_list__tit">
+							<strong>사회공헌</strong>
+							<p>Social Contribution</p>
+						</div>
+						<p class="vision_list__txt">
+							윤리경영의<br>
+							실천을 통한<br> 
+							건전한 기업문화 조성
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 연혁 -->
+			<div class="mod_history02 pd70">
+				<h3><span>HISTORY</span>연혁</h3>
+				<div class="history">
+					<!-- 데이터 연동에 따른 영역 자동 출력 : 아래 영역은 자동 치환 - 레이아웃 잡을 경우 활용용 데이터 -->
+					<div>
+						<span>2025</span>
+						<ul>
+							<li>
+								<div class="month">04</div>
+								<div class="event">
+									<span>제7회 강원특별자치도 일자리대상 (특별상)</span>
+								</div>
+							</li>
+							<li>
+								<div class="month">01</div>
+								<div class="event">
+									<span>토다머티리얼즈(주)로 사명변경</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2024</span>
+						<ul>
+							<li>
+								<div class="month">11</div>
+								<div class="event">
+									<span>강원특별자치도 백년기업 선정</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2021</span>
+						<ul>
+							<li>
+								<div class="month">10</div>
+								<div class="event">
+									<span>자동차용 무선충전 모듈(WPC) 생산라인 증설</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2020</span>
+						<ul>
+							<li>
+								<div class="month">07</div>
+								<div class="event">
+									<span>ISO/TS 16949에서 IATF 16949 규격전환 인증 획득</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2017</span>
+						<ul>
+							<li>
+								<div class="month">06</div>
+								<div class="event">
+									<span>기업부설연구소 재설립</span>
+								</div>
+							</li>
+							<li>
+								<div class="month">01</div>
+								<div class="event">
+									<span>무선충전 및 NFC용 Amorphus/Nano Crystal 시트 상업 생산 및 영업개시 </span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2013</span>
+						<ul>
+							<li>
+								<div class="month">08</div>
+								<div class="event">
+									<span>ISO/TS 16949 품질경영시스템 인증 획득</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2012</span>
+						<ul>
+							<li>
+								<div class="month">10</div>
+								<div class="event">
+									<span>MOBILE NFC용 페라이트 시트 상업생산 및 영업개시</span>
+								</div>
+							</li>
+							<li>
+								<div class="month">01</div>
+								<div class="event">
+									<span>무선충전용 WPC Ass’y 상업생산 및 영업개시</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2011</span>
+						<ul>
+							<li>
+								<div class="month">01</div>
+								<div class="event">
+									<span>신재생 에너지 발전용 EMC Filter 상업생산 및 영업개시</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2010</span>
+						<ul>
+							<li>
+								<div class="month">05</div>
+								<div class="event">
+									<span>이산화탄소 흡수용 CCS Powder 상업생산 및 영업개시</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2009</span>
+						<ul>
+							<li>
+								<div class="month">09</div>
+								<div class="event">
+									<span>전파 흡수용 페라이트 타일 상업생산 및 영업개시</span>
+								</div>
+							</li>
+							<li>
+								<div class="month">01</div>
+								<div class="event">
+									<span>메탈 원료 상업 생산 및 영업 개시</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2008</span>
+						<ul>
+							<li>
+								<div class="month">02</div>
+								<div class="event">
+									<span>토다이수㈜로 사명 변경</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2006</span>
+						<ul>
+							<li>
+								<div class="month">01</div>
+								<div class="event">
+									<span>SMD인덕터 상업 생산 및 영업 개시</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2004</span>
+						<ul>
+							<li>
+								<div class="month">10</div>
+								<div class="event">
+									<span>ISO 14001 환경경영시스템 인증 획득</span>
+								</div>
+							</li>
+							<li>
+								<div class="month">02</div>
+								<div class="event">
+									<span>중국 동관이수 법인 설립</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>2000</span>
+						<ul>
+							<li>
+								<div class="month">11</div>
+								<div class="event">
+									<span>무역의 날 5천만불 수출의 탑 수상</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>1999</span>
+						<ul>
+							<li>
+								<div class="month">11</div>
+								<div class="event">
+									<span>무역의 날 수출 포상</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>1998</span>
+						<ul>
+							<li>
+								<div class="month">07</div>
+								<div class="event">
+									<span>벤처기업 선정</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>1996</span>
+						<ul>
+							<li>
+								<div class="month">12</div>
+								<div class="event">
+									<span>ISO 9001 품질경영시스템 인증 획득</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>1989</span>
+						<ul>
+							<li>
+								<div class="month">08</div>
+								<div class="event">
+									<span>기업 부설 연구소 설립</span>
+								</div>
+							</li>
+							<li>
+								<div class="month">04</div>
+								<div class="event">
+									<span>페라이트 코아 상업 생산 및 영업 개시</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<span>1987</span>
+						<ul>
+							<li>
+								<div class="month">05</div>
+								<div class="event">
+									<span> 이수 세라믹㈜ 창립</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</div>
+	</main>
+	
+
+	
+
+<script>
+	$(document).ready(function(){
+		// 복사한 스크립트 추가영역
+
+		//연혁
+		$('.mod_history02 .history').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			infinite: false,
+			adaptiveHeight: true,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						arrows: false,
+						}
+				},
+				{
+					breakpoint: 821,
+					settings: {
+						slidesToShow: 2,
+						arrows: false,
+						}
+				},
+				{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					}
+				}
+			]
+		});
+		
+
+	});
+</script>
+</body>
+</html>
