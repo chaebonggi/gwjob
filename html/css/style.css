@@ -295,8 +295,9 @@
  .public-job-detail .view-info__detail { margin-top: 20px; } 
  .public-job-detail .view-info__spec { gap: 10px; } 
  .public-job-detail .view-info__spec-item { gap: 10px; } 
- .public-job-detail .view-info__spec-term { height: 34px; font-size: 14px; } 
- .public-job-detail .view-info__spec-desc { font-size: 14px; } 
+ .public-job-detail .view-info__spec-term { height: 30px; font-size: 14px; } 
+ .public-job-detail .view-info__spec-desc { position: relative; padding-left: 10px; font-size: 14px; } 
+ .public-job-detail .view-info__spec-desc::before { content: '-'; position: absolute; left: 0; } 
  .public-job-detail .view-info__spec-item { flex-direction: column; line-height: 1.6; } 
  .public-job-detail .view-info__btn .btn-homepage { padding: 10px; font-size: 16px; } 
  .public-job-detail .view-file__title { font-size: 18px; } 
