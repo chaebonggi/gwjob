@@ -257,7 +257,7 @@
  .public-job-detail .view-item { padding: 40px 20px;; border: 1px solid #d5d5dd; } 
  .public-job-detail .view-etc { background-color: #f5f5f5; color: #888888; font-size: 18px; word-break: keep-all; } 
  .public-job-detail .view-info__meta { display: flex; align-items: center; gap: 10px; } 
- .public-job-detail .view-info__day { display: inline-flex; flex-shrink: 0; padding: 5px 10px; background-color: #f19149; color: #fff; font-weight: 400; font-size: 16px; } 
+ .public-job-detail .view-info__day { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-width: 60px; padding: 5px 10px; background-color: #f19149; color: #fff; font-weight: 400; font-size: 16px; } 
  .public-job-detail .view-info__period { font-size: 16px; font-weight: 400; } 
  .public-job-detail .view-info__header { margin-top: 40px; } 
  .public-job-detail .view-info__company { color: #004897; font-size: 16px; font-weight: 500; } 
