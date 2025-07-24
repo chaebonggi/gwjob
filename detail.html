@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<title>강원도일자리정보망 에디터</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div class="container">
+	<h1>강원도일자리정보망 에디터</h1>
+	<table class="tbl_list">
+    <colgroup>
+        <col width="7%">
+        <col>
+    </colgroup>
+	<thead>
+	<tr>
+		<th>NO</th>
+		<th>페이지명</th>
+	</tr>
+	</thead>
+        <tbody>
+			<tr>
+				<td></td>
+				<td><a href="ckeditor/" class="preview" target="_blank">에디터 템플릿</a></td>
+			</tr>
+        </tbody>
+	</table>
+</div>
+
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" ></script>
+<script>
+	$(document).ready(function(){
+		$('.tbl_list tbody tr').each(function(){
+			var idx = $(this).index();
+			$(this).find('td:first-child').append(idx + 1);
+		});
+	});
+</script>
+</body>
+</html>
