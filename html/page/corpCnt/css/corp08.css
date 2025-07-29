@@ -140,13 +140,13 @@ html { font-size: 10px }
 .mod_strategy01 .ps_wrap .add_point h4,
 .mod_strategy01 .ps_wrap .spec h4 { max-width: 300px; width: 100%; } 
 .mod_strategy01 .interview_tip .btn_wrap { max-width: 370px; width: 100%; } 
+.mod_strategy01 .qm_btn_wrap { text-align: center; } 
 
 @media all and (max-width:1024px){
  .mod_talent .talent_list { grid-template-columns: repeat(2, 1fr); gap: 20px; } 
  }
 
-@media all and (max-width:768px) { 
-html { font-size: 8px; } 
+@media all and (max-width:768px) { html { font-size: 8px; } 
 .mod_visual { height: 250px; } 
 .mod_visual .txt_wrap { margin-top: 0; text-align: center; } 
 .mod_visual .comName { font-size: 1.8rem; } 
@@ -176,6 +176,9 @@ html { font-size: 8px; }
 
 @media all and (max-width:640px){
  .inner { padding: 0 10px; } 
+ .mod_visual .cert_wrap .cert_img img { max-width: 1.8rem; } 
+ .mod_visual .cert_wrap .cert_img { margin-bottom: 5px; } 
+ .mod_visual .cert_wrap { right: 0.5rem; padding: 0.5rem 1rem; } 
  .mod_vision { padding: 20px 10px; } 
  .mod_vision .vision_list { grid-template-columns: repeat(1, 1fr); } 
  .mod_talent .talent_list { grid-template-columns: repeat(1, 1fr); gap: 10px; } 
@@ -183,4 +186,6 @@ html { font-size: 8px; }
  .mod_culture09 .container .slick-dots li.slick-active { width: 23px; } 
  .mod_imgCom .slick-dots li button { width: 10px; height: 10px; } 
  .mod_imgCom .slick-dots li.slick-active button { width: 23px; } 
+ .mod_business_area04 .slick-dots li.slick-active button { width: 23px; } 
+ .mod_business_area04 .slick-dots li button { width: 10px; height: 10px; } 
  }
