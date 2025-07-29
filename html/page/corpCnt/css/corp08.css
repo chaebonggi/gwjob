@@ -188,4 +188,11 @@ html { font-size: 10px }
  .mod_imgCom .slick-dots li.slick-active button { width: 23px; } 
  .mod_business_area04 .slick-dots li.slick-active button { width: 23px; } 
  .mod_business_area04 .slick-dots li button { width: 10px; height: 10px; } 
+ .mod_finance03 { padding: 30px 0; } 
+ .mod_business_area04 { padding: 30px 0; } 
+ .mod_culture09 { padding: 30px 10px; } 
+ .mod_interview02 { padding: 30px 0; } 
+ .mod_strategy01 { padding: 40px 0 0 0; } 
+ .mod_strategy01 .stg_tit { padding: 10px; } 
+ .mod_strategy01 .interview_tip { padding: 0; } 
  }
