@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="wclassth=device-wclassth, initial-scale=1, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-	<title class="comName">(합)동양아이텍</title>
+	<title class="comName">㈜지원바이오</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.kldp.org/fonts/Free/S-Core/css/scdream.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/3.1.2/billboard.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -343,10 +343,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="sw_btn_wrap">
-				<button class="slide_arrow prev_arrow"><i class="fa-solid fa-angle-left"></i></button>
-				<button class="slide_arrow next_arrow"><i class="fa-solid fa-angle-right"></i></button>
-			</div>
 		</div>
 
 		<!-- 미디어 -->
@@ -650,7 +646,21 @@
 				{
 					breakpoint: 1024,
 					settings: {
+						slidesToShow: 3,
+						rows: 1,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
 						slidesToShow: 2,
+						rows: 1,
+					}
+				},
+				{
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 1,
 						rows: 1,
 					}
 				},
@@ -664,7 +674,7 @@
 			slidesToScroll: 3,
 			autoplay: false,
 			dots: false,
-			arrows: true,
+			arrows: false,
 			infinite: false,
 			adaptiveHeight: false,
 			prevArrow: $('.mod_culture09 .prev_arrow'),
@@ -673,9 +683,8 @@
 				{
 					breakpoint: 1024,
 					settings: {
-						rows: 1,
-						slidesToShow: 3,
-						slidesToScroll: 3,
+						slidesToShow: 2,
+						slidesToScroll: 1,
 					}
 				},
 				{
@@ -687,8 +696,9 @@
 					}
 				},
 				{
-					breakpoint: 480,
+					breakpoint: 640,
 					settings: {
+						rows: 2,
 						slidesToShow: 1,
 						slidesToScroll: 1,
 						dots: true,

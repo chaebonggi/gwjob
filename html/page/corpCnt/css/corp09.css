@@ -38,7 +38,7 @@ html { font-size: 10px }
 .mod_introduce02 .introduce_item:nth-child(3) { background-image: url(../images/corp09/introduce_bg03.png); } 
 .mod_introduce02 .introduce_item:nth-child(4) { background-image: url(../images/corp09/introduce_bg04.png); } 
 .mod_introduce02 .introduce_item:nth-child(5) { background-image: url(../images/corp09/introduce_bg05.png); } 
-.mod_introduce02 .introduce_tit { display: flex; align-items: center; gap: 18px; width: 400px; height: 90px; padding: 0 40px; background-color: rgba(255, 255, 255, 0.75); border-radius: 50px; } 
+.mod_introduce02 .introduce_tit { display: flex; align-items: center; gap: 18px; max-width: 400px; width: 100%; height: 90px; padding: 0 40px; background-color: rgba(255, 255, 255, 0.75); border-radius: 50px; } 
 .mod_introduce02 .introduce_tit p { color: #333333; font-size: 3rem; font-weight: 600; flex-shrink: 0; } 
 .mod_introduce02 .introduce_tit::after { content: ''; width: 100%; height: 2px; background-color: #333; } 
 .mod_introduce02 .introduce_list { display: flex; flex-direction: column; gap: 5px; } 
@@ -87,18 +87,19 @@ html { font-size: 10px }
 
 /* 인터뷰 */
 .mod_interview06 .title { margin-bottom: 40px; font-weight: 600; font-size: 4rem; text-align: center; } 
-.mod_interview06 .bg {padding: 0;margin: 0; } 
-.mod_interview06 .slide_arrow {background-color: #666;background-image: url(../images/corp09/arrow_next.png);background-position: center;background-repeat: no-repeat; } 
-.mod_interview06 .slide_arrow.prev_arrow {background-image: url(../images/corp09/arrow_prev.png); } 
-.mod_interview06 .slick-slide {height: auto; } 
-.mod_interview06 .interview_txt strong {color: #51327a;font-size: 2.4rem; } 
-.mod_interview06 .interview_txt p {color: #333;font-size: 1.8rem; } 
-.mod_interview06 .q.active {background-color: #51327a; } 
-.mod_interview06 .q:after {background-image: url(../images/corp09/arrow_down.png); } 
-.mod_interview06 .interview_txt p {margin-bottom: 20px; } 
-.mod_interview06 .photo {display: flex;align-items: flex-end;margin-left: 50px; } 
+.mod_interview06 .bg { padding: 0; margin: 0; } 
+.mod_interview06 .slide_arrow { background-color: #666; background-image: url(../images/corp09/arrow_next.png); background-position: center; background-repeat: no-repeat; } 
+.mod_interview06 .slide_arrow.prev_arrow { background-image: url(../images/corp09/arrow_prev.png); } 
+.mod_interview06 .slick-slide { height: auto; } 
+.mod_interview06 .interview_txt strong { color: #51327a; font-size: 2.4rem; } 
+.mod_interview06 .interview_txt p { color: #333; font-size: 1.8rem; } 
+.mod_interview06 .q.active { background-color: #51327a; } 
+.mod_interview06 .q:after { background-image: url(../images/corp09/arrow_down.png); } 
+.mod_interview06 .interview_txt p { margin-bottom: 20px; } 
+.mod_interview06 .photo { display: flex; align-items: flex-end; margin-left: 50px; } 
 
 /* 자소서 */
+.mod_strategy01 .round_wrap { border-color: #51327a; } 
 .mod_strategy01 .stg_tit { background-color: #51327a; } 
 .mod_strategy01 .guide_wrap .item .q:before { color: #51327a; font-weight: 700; } 
 .mod_strategy01 .guide_wrap .item .q { font-weight: 600; } 
@@ -113,13 +114,10 @@ html { font-size: 10px }
 .mod_strategy01 .qm_btn_wrap { text-align: center; } 
 
 @media all and (max-width:1024px){
-    .mod_introduce02 .introduce_item {
-        flex-direction: column;
-    }
-}
+ .mod_introduce02 .introduce_item { flex-direction: column; } 
+ }
 
 @media all and (max-width:768px) { 
-    
 html { font-size: 8px; } 
 .mod_visual { height: 250px; } 
 .mod_visual .txt_wrap { margin-top: 0; text-align: center; } 
@@ -136,13 +134,33 @@ html { font-size: 8px; }
 .sns_mod_info.sty01 .info_wrap > li:nth-child(-n + 2) { margin-bottom: 20px } 
 .sns_mod_info.sty01 .info_wrap > li > div.ico { background-size: contain; height: 50px; } 
 .mod_introduce .introduce_item { flex-direction: column; } 
+ .mod_business_area02 .slick-track { gap: 20px; } 
+ .mod_business_area02 .slick-slide img { margin: 0 auto; } 
+ .mod_introduce02 .introduce_item { gap: 10px; padding: 15px; border-radius: 20px; } 
 
 }
 
 @media all and (max-width:640px){
  .inner { padding: 0 10px; } 
+ .pd70 { padding: 3rem 0; } 
+ .mg70 { margin: 3rem 0; } 
  .mod_visual .cert_wrap .cert_img img { max-width: 1.8rem; } 
  .mod_visual .cert_wrap .cert_img { margin-bottom: 5px; } 
  .mod_visual .cert_wrap { right: 0.5rem; padding: 0.5rem 1rem; } 
-
- }
+.mod_business_area02 .slick-track { gap: 10px; } 
+ .mod_introduce02 .introduce_tit { height: 40px; padding: 0 20px; } 
+.mod_introduce02 .introduce_tit p { font-size: 2rem; } 
+.mod_introduce02 .introduce_list li { font-size: 1.6rem; } 
+.mod_business_area02 { padding: 30px 0; } 
+.mod_business_area02 .container { padding: 20px; } 
+.mod_business_area02 h3 + .s_txt { padding: 0; } 
+.mod_talent01 { padding: 20px 0; } 
+.mod_talent01 .title_area h2 { padding: 0 0 0 20px; font-size: 3rem; } 
+.mod_talent01 .text_area { padding: 20px 0 0 0; } 
+ .mod_talent01 .text_area .txt li { font-size: 1.6rem; } 
+ .mod_culture09 .slick-slide > div { min-height: auto; margin-bottom: 20px; } 
+ .mod_culture09 .item dl { display: flex; flex-wrap: wrap; } 
+ .mod_culture09 .item dl dt { width: 100%; } 
+ .mod_media .container { flex-direction: column; } 
+ .mod_strategy01 { padding: 30px 0 0 0; } 
+}
