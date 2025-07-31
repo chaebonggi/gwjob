@@ -295,10 +295,10 @@
 
  .public-job-detail .view-recruit { padding: 0 !important; border-top: 3px solid #222; } 
  .public-job-detail .view-recruit__list { display: flex; flex-wrap: wrap; } 
- .public-job-detail .view-recruit__list > li { flex: 1 1 40%; min-width: 0; padding: 24px 24px; border-top: 1px solid #ccc; } 
+ .public-job-detail .view-recruit__list > li { flex: 1 1 40%; min-width: 0; position: relative; padding: 24px 24px; border-top: 1px solid #ccc; } 
  .public-job-detail .view-recruit__list > li:nth-child(1),
  .public-job-detail .view-recruit__list > li:nth-child(2) { border-top: 0; } 
- .public-job-detail .view-recruit__list > li:nth-child(even):not(.full) { border-left: 1px solid #ccc; } 
+ .public-job-detail .view-recruit__list > li::before {content: ''; width: 1px; height: 100%; position: absolute; top: 0; left: -1px; background-color: #ccc;}
  .public-job-detail .view-recruit__list > li.full { flex-basis: 100%; } 
  .public-job-detail .view-recruit__list-tit { margin-bottom: 20px; } 
  .public-job-detail .view-recruit__list-tit p { position: relative; padding-left: 24px; color: #222; font-size: 16px; font-weight: 500; line-height: 1; } 
