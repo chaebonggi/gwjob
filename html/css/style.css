@@ -362,4 +362,5 @@
 .public-job-detail .view-recruit__list-table table th, .public-job-detail .view-recruit__list-table table td { font-size: 14px; } 
 .public-job-detail .view-recruit__list-file a { font-size: 13px; } 
 .public-job-detail .view-recruit__list-link a { font-size: 13px; } 
+.public-job-detail .view-recruit__list-file .view-btn img {max-width: 70px;}
  }
