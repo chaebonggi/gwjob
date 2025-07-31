@@ -108,6 +108,7 @@
 .sub-page .job-service-list .item .tit { color: #222; font-size: 18px; font-weight: 500; text-align: center; } 
 .sub-page .job-service-list .swiper-wrapper { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; } 
 .sub-page .job-service-list .swiper-pagination { display: none; } 
+.sub-page .public-list-wrap .none-data {padding: 2rem 1rem; color: #333; font-size: 1.2rem; text-align: center;}
 
 .sub-page .end-list-wrap {background-color: #f3f3f3;}
 .sub-page .end-list-wrap .public-list { display: flex; gap: initial; } 
