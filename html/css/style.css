@@ -75,7 +75,8 @@
 .sub-page.public-job .tabs-menu li:nth-child(3) .ico-menu { background-image: url(../images/subpage/ico_menu_03.png); } 
 .sub-page .public-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; } 
 .sub-page .public-list li:hover a { border-color: #256ef4; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; } 
-.sub-page .public-list a { display: flex; flex-direction: column; padding: 20px; border: 1px solid #d5d5dd; border-radius: 10px; transition: all 0.35s ease-in; } 
+.sub-page .public-list a { display: flex; flex-direction: column; padding: 20px; background-color: #fff; border: 1px solid #d5d5dd; border-radius: 10px; box-sizing: border-box; transition: all 0.35s ease-in; } 
+.sub-page .public-list a:hover { text-decoration: none; } 
 .sub-page .public-list .public-logo { display: flex; align-items: center; justify-content: center; height: 56px; margin-bottom: 20px; } 
 .sub-page .public-list .public-logo img { max-width: 100%; max-height: 100%; object-fit: contain; } 
 .sub-page .public-list .public-tit { margin-bottom: 24px; } 
@@ -107,6 +108,15 @@
 .sub-page .job-service-list .item .tit { color: #222; font-size: 18px; font-weight: 500; text-align: center; } 
 .sub-page .job-service-list .swiper-wrapper { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; } 
 .sub-page .job-service-list .swiper-pagination { display: none; } 
+
+.sub-page .end-list-wrap {background-color: #f3f3f3;}
+.sub-page .end-list-wrap .public-list { display: flex; gap: initial; } 
+.sub-page .end-list-wrap .job-tit { display: flex; align-items: center; flex-wrap: wrap; } 
+.sub-page .list-btn-wrap { display: flex; gap: 0.5rem; margin-left: auto; } 
+.sub-page .list-btn-wrap .list-btn { width: 30px; height: 30px; position: static; transform: none; margin: 0; padding: 0; background-image: url(../images/subpage/arrow_next.png); background-repeat: no-repeat; background-position: center; background-size: contain; } 
+.sub-page .list-btn-wrap .list-btn.swiper-button-prev { background-image: url(../images/subpage/arrow_prev.png); } 
+.sub-page .list-btn-wrap .list-btn::after { content: none; } 
+
 @media all and (max-width: 1024px){
  .sub-page.public-job .visual-wrap .visual { background-size: 300px auto; } 
  .sub-page .detail-keyword-wrap { flex-direction: column; } 
@@ -179,6 +189,8 @@
 .sub-page .job-service-list .item a::before { height: 60px; margin-bottom: 10px; background-size: contain; } 
 .sub-page .job-service-list .item .tit { font-size: 12px; } 
 .sub-page .job-service-list .item a { padding: 15px 0 10px; } 
+
+.sub-page .list-btn-wrap .list-btn {width: 24px; height: 24px;}
  }
 
 
@@ -187,7 +199,7 @@
 .modal-calender { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; visibility: hidden; width: 100%; height: 100%; opacity: 0; transition: all 0.35s ease-in-out; font-size: 16px; font-style: normal; text-align: left; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; white-space: normal; word-spacing: normal; line-break: auto; } 
 .modal-calender.in { display: block; z-index: 1010; transition-delay: 0s; opacity: 1; visibility: visible; } 
 .modal-calender .modal-dialog { display: flex; align-items: center; justify-content: flex-start; flex-direction: row; max-width: 1000px; height: 100%; position: relative; margin: 0 auto; z-index: 1020; } 
-.modal-calender .modal-dialog .modal-content { display: flex; align-items: center; justify-content: flex-start; flex-direction: column; position: relative; width: 100%; max-height: 90%; background-color: #fff; border-radius: 10px; outline-color: transparent; } 
+.modal-calender .modal-dialog .modal-content { display: flex; align-items: center; justify-content: flex-start; flex-direction: column; position: relative; width: 100%; max-height: 90%; background-color: #fff; border-radius: 10px; outline-color: transparent; top: 5%; } 
 .modal-calender .modal-dialog .modal-header { width: 100%; } 
 .modal-calender .modal-dialog .modal-header-top { position: relative; padding: 20px 30px; background-color: #004897; border-top-left-radius: 8px; border-top-right-radius: 8px; } 
 .modal-calender .modal-dialog .modal-header-top .close-calender { width: 17px; height: 17px; position: absolute; top: 50%; right: 30px; transform: translateY(-50%); background: url(../images/subpage/ico_modal_close.png) center no-repeat; background-size: contain; } 
