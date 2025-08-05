@@ -85,11 +85,11 @@
 .sub-page .public-list .public-tag { display: flex; gap: 4px; } 
 .sub-page .public-list .public-tag span { padding: 2px 10px; background-color: #fff; color: #656565; font-size: 12px; border: 1px solid #d5d5dd; border-radius: 20px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; } 
 .sub-page .public-list .public-tag span:nth-child(n+4) { display: none; } 
-.sub-page .public-list .public-info { display: flex; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid #d5d5dd; } 
+.sub-page .public-list .public-info { display: flex; align-items: center; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid #d5d5dd; } 
 .sub-page .public-list .public-info span { display: inline-flex; } 
 .sub-page .public-list .public-info .btn-box { display: flex; align-items: center; margin-left: auto; } 
-.sub-page .public-list .public-info .info-date { color: #ee2144; font-size: 14px; } 
-.sub-page .public-list .public-info .info-area { color: #656565; font-size: 15px; line-height: 1.2; } 
+.sub-page .public-list .public-info .info-date { flex-shrink: 0; color: #ee2144; font-size: 14px; } 
+.sub-page .public-list .public-info .info-area { display: -webkit-box; max-width: 120px; color: #656565; font-size: 15px; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical;     -webkit-line-clamp: 1;} 
 .sub-page .public-list .public-info .info-icon { width: 30px; height: 30px; margin-left: 20px; } 
 .sub-page .public-list .public-info .info-icon img { min-width: 100%; max-height: 100%; object-fit: none; } 
 .sub-page .public-list .public-info .ico-map { display: inline-flex; width: 16px; height: 16px; margin-right: 2px; background: url(../images/subpage/ico_map.png) center no-repeat; background-size: contain; } 
@@ -195,13 +195,13 @@
 .sub-page .list-btn-wrap .list-btn { width: 24px; height: 24px; } 
  }
 
-
+#sub .contsArea {z-index: initial;}
 .modal-calender .modal-back { position: fixed; top: 0; right: 0; bottom: 0; left: 0; visibility: hidden; z-index: -1; background-color: #000000bf; } 
 .modal-calender .modal-back.in { display: block; z-index: 1000; visibility: visible; } 
 .modal-calender { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; visibility: hidden; width: 100%; height: 100%; opacity: 0; transition: all 0.35s ease-in-out; font-size: 16px; font-style: normal; text-align: left; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; white-space: normal; word-spacing: normal; line-break: auto; } 
-.modal-calender.in { display: block; z-index: 1010; transition-delay: 0s; opacity: 1; visibility: visible; } 
+.modal-calender.in { display: block; z-index: 3010; transition-delay: 0s; opacity: 1; visibility: visible; } 
 .modal-calender .modal-dialog { display: flex; align-items: center; justify-content: flex-start; flex-direction: row; max-width: 1000px; height: 100%; position: relative; margin: 0 auto; z-index: 1020; } 
-.modal-calender .modal-dialog .modal-content { display: flex; align-items: center; justify-content: flex-start; flex-direction: column; position: relative; width: 100%; max-height: 90%; background-color: #fff; border-radius: 10px; outline-color: transparent; top: 5%; } 
+.modal-calender .modal-dialog .modal-content { display: flex; align-items: center; justify-content: flex-start; flex-direction: column; position: relative; width: 100%; max-height: 90%; background-color: #fff; border-radius: 10px; outline-color: transparent;} 
 .modal-calender .modal-dialog .modal-header { width: 100%; } 
 .modal-calender .modal-dialog .modal-header-top { position: relative; padding: 20px 30px; background-color: #004897; border-top-left-radius: 8px; border-top-right-radius: 8px; } 
 .modal-calender .modal-dialog .modal-header-top .close-calender { width: 17px; height: 17px; position: absolute; top: 50%; right: 30px; transform: translateY(-50%); background: url(../images/subpage/ico_modal_close.png) center no-repeat; background-size: contain; } 
