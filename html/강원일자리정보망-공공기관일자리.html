@@ -390,7 +390,7 @@
                 </a>                
             </div>
         </article>
-        <article class="section-space job-list-wrap">
+        <article class="section-space job-list-wrap scroll-target">
             <div class="inner">
                 <div class="job-tit">
                     <h3><span class="fw-bold">홍길동님</span>을 위한 <span class="fw-bold">공공일자리 맞춤공고</span> <span class="fc-blue fw-bold">1,173건</span>이 조회되었습니다.</h3>
@@ -1650,6 +1650,13 @@
     <!-- //modal -->
     <script>
         $(document).ready(function() {
+            $('.pager a').click(function(e){
+                var targetClass = '.scroll-target';
+                var targetElement = $(targetClass);
+                if (targetElement.length) {
+                    $("html, body").animate({ scrollTop: targetElement.offset().top }, 500);
+                }
+            });
             // 선택저장 tooltip
             $('.btn-save').on("click", function(){
                 if (window.innerWidth <= 640) return;
