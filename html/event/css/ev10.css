@@ -35,7 +35,7 @@
  .event10 .cont04 { background-image: url(../images/ev10/cont04_bg.png); background-color: rgba(198, 223, 234, 0.6); } 
  .event10 .cont04 .innerSection { padding: 60px 0; } 
  .event10 .cont04 .item { text-align: center; } 
- .event10 .cont04 .item:nth-child(2) { margin-top: 30px; } 
+ .event10 .cont04 .item + .item { margin-top: 30px; } 
  .event10 .cont04 .tit { display: inline-flex; align-items: center; justify-content: center; width: 130px; height: 52px; background-color: #ea5615; color: #fff; font-size: 24px; font-weight: bold; line-height: 1; border-radius: 30px; } 
  .event10 .cont04 .item_txt { display: inline-flex; padding: 5px 10px; margin-top: 10px; background-color: #152f82; color: #fff; font-size: 18px; line-height: 1; letter-spacing: -1px; word-break: keep-all; } 
  .event10 .cont04 .item ul { display: flex; justify-content: space-between; gap: 36px; margin-top: 30px; } 
