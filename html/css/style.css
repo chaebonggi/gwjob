@@ -195,6 +195,7 @@
 .sub-page .list-btn-wrap .list-btn { width: 24px; height: 24px; } 
  }
 
+#sub_container > .inner {max-width: 100%; padding: 0;}
 #sub .contsArea {z-index: initial;}
 .modal-calender .modal-back { position: fixed; top: 0; right: 0; bottom: 0; left: 0; visibility: hidden; z-index: -1; background-color: #000000bf; } 
 .modal-calender .modal-back.in { display: block; z-index: 1000; visibility: visible; } 
