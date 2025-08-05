@@ -10,6 +10,8 @@
 .scrollbar::-webkit-scrollbar-thumb { background-color: #ccd1db; border-radius: 3px; } 
 .scrollbar::-webkit-scrollbar-track { background-color: #e8e8e8; border-radius: 3px; } 
 
+#sub .pager-link {cursor: pointer;}
+.sub-page .inner {width: calc(100% - 20px);}
 .sub-page.public-job { font-family: 'S-CoreDream'; font-weight: 400; } 
 .sub-page.public-job .visual-wrap { background-color: #6bb2ef; } 
 .sub-page.public-job .visual-wrap .visual { height: 365px; background: url(../images/subpage/main_visual.png) bottom right 20px no-repeat; } 
