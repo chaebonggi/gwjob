@@ -141,6 +141,7 @@ html { font-size: 10px }
 .mod_strategy01 .ps_wrap .spec h4 { max-width: 300px; width: 100%; } 
 .mod_strategy01 .interview_tip .btn_wrap { max-width: 370px; width: 100%; } 
 .mod_strategy01 .qm_btn_wrap { text-align: center; } 
+.mod_strategy01 .round_wrap {border-color: #c31f2f;}
 
 @media all and (max-width:1024px){
  .mod_talent .talent_list { grid-template-columns: repeat(2, 1fr); gap: 20px; } 
