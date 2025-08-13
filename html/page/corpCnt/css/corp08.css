@@ -9,12 +9,19 @@ html { font-size: 10px }
 .mod_visual .cert_wrap .cert_img { margin-bottom: 10px; text-align: center; } 
 .mod_visual .cert_wrap p { color: #fff; font-size: 1.4rem; font-weight: 600; text-align: center; } 
 .mod_visual .txt_wrap { margin-top: 120px; text-align: left; } 
-.mod_visual .comName { color: #fff; font-size: 3.2rem; } 
-.mod_visual .comName b { font-size: 3.2rem; } 
-.mod_visual .title { margin-top: 6rem; font-size: 6rem; color: #fff; font-weight: bold; } 
+.mod_visual .entReptCmmt { color: #fff; font-size: 3.2rem; } 
+.mod_visual .entReptCmmt b { font-size: 3.2rem; } 
+.mod_visual .comName { margin-top: 6rem; font-size: 6rem; color: #fff; font-weight: bold; } 
 .mod_visual .imgCi { position: absolute; bottom: 0; right: 0; } 
-.sns_mod_info.sty01 { background: url(../images/corp08/info.png) no-repeat !important; background-size: cover !important; } 
+
+.sns_mod_info.sty01 { padding: 10rem 0; background: url(../images/corp08/info.png) no-repeat !important; background-size: cover !important; } 
+.sns_mod_info.sty01 .info_wrap { display: flex; } 
+.sns_mod_info.sty01 .info_wrap > li { width: calc(25% - 22.5px); margin-right: 30px; text-align: center; font-size: 2rem; color: #5a6af4 } 
+.sns_mod_info.sty01 .info_wrap > li > div { font-size: 1.8rem; color: #fff; } 
+.sns_mod_info.sty01 .ico { margin: 0 auto 2.0rem auto; } 
+.sns_mod_info.sty01 ul li:last-child { margin-right: 0 } 
 .sns_mod_info.sty01 .info_wrap > li { font-size: 1.8rem; color: #fff; } 
+.sns_mod_info.sty01 ul li .ico { width: 64px; height: 84px; background-size: contain !important; } 
 .sns_mod_info.sty01 ul li:nth-child(1) .ico { background: url(../images/corp08/ico_finance01.png) no-repeat center; } 
 .sns_mod_info.sty01 ul li:nth-child(2) .ico { background: url(../images/corp08/ico_finance02.png) no-repeat center; } 
 .sns_mod_info.sty01 ul li:nth-child(3) .ico { background: url(../images/corp08/ico_finance03.png) no-repeat center; } 
@@ -55,12 +62,13 @@ html { font-size: 10px }
 .mod_finance03 > div .tab_wrap .tab > div.on { background-color: #c31f2f; } 
 
 /* 제품소개 */
-.mod_business_area04 .bizDiv .slick-slide .info > h4 { color: #333333; font-size: 2.4rem; text-align: center; } 
-.mod_business_area04 .bizDiv .slick-slide .info > p { color: #333333; font-size: 1.8rem; text-align: center; } 
+.mod_business_area04 .bizDiv_slide {padding-bottom: 30px;}
+.mod_business_area04 .bizDiv_slide .slick-track {display: flex; gap: 10px;}
+.mod_business_area04 .slick-slide {height: auto; border: 1px solid red;}
+.mod_business_area04 .slick-slide .info > h4 {margin-top: 1rem; color: #333333; font-size: 2.4rem; text-align: center; font-weight: 500; } 
+.mod_business_area04 .slick-slide .info > p {margin-top: 1rem; color: #333333; font-size: 1.8rem; text-align: center; } 
 .mod_business_area04 .slick-dots { position: absolute; bottom: -18px; display: block; width: 100%; padding: 0; list-style: none; text-align: center } 
-
 .mod_business_area04 .slick-dots li { position: relative; display: inline-block; margin: 0 5px; padding: 0; } 
-
 .mod_business_area04 .slick-dots li button { display: block; width: 18px; height: 18px; background-color: #dadada; font-size: 0; border: 0; outline: 0; cursor: pointer; border-radius: 50%; } 
 .mod_business_area04 .slick-dots li.slick-active button { width: 36px; background-color: #c31f2f; border-radius: 20px; } 
 
@@ -80,6 +88,7 @@ html { font-size: 10px }
 .mod_culture09 .item.holiday:before { background-image: url(../images/corp08/welfare_icon06.png); } 
 .mod_culture09 .item.leisure:before { background-image: url(../images/corp08/welfare_icon07.png); } 
 .mod_culture09 .item.deduct:before { background-image: url(../images/corp08/welfare_icon01.png); } 
+.mod_culture09 .item.handicap:before { background-image: url(../images/corp08/welfare_icon08.png); } 
 .mod_culture09 .item dl { display: flex; flex-wrap: wrap; gap: 4px; } 
 .mod_culture09 .item dt { width: 100%; padding: 0; font-size: 1.6rem; font-weight: 600; } 
 .mod_culture09 .item dd { color: #a8a8a8; font-size: 1.4rem; } 
@@ -96,7 +105,7 @@ html { font-size: 10px }
 /* 인재상 */
 .mod_talent { background-color: #fff; } 
 .mod_talent h3 { margin-bottom: 40px; font-weight: 600; font-size: 4rem; text-align: center; } 
-.mod_talent .txt { color: #333; font-size: 2.4rem; text-align: center; } 
+.mod_talent .txt { color: #333; font-size: 2.4rem; text-align: center; word-break: keep-all; } 
 .mod_talent .txt::before, .mod_talent .txt::after { display: inline-block; content: ''; width: 16px; height: 13px; margin-right: 10px; background: url(../images/corp08/vision_img01.png) no-repeat center; vertical-align: top; } 
 .mod_talent .txt::after { margin-left: 10px; background: url(../images/corp08/vision_img02.png) no-repeat center; } 
 .mod_talent .talent_list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 60px; } 
@@ -141,7 +150,7 @@ html { font-size: 10px }
 .mod_strategy01 .ps_wrap .spec h4 { max-width: 300px; width: 100%; } 
 .mod_strategy01 .interview_tip .btn_wrap { max-width: 370px; width: 100%; } 
 .mod_strategy01 .qm_btn_wrap { text-align: center; } 
-.mod_strategy01 .round_wrap {border-color: #c31f2f;}
+.mod_strategy01 .round_wrap { border-color: #c31f2f; } 
 
 @media all and (max-width:1024px){
  .mod_talent .talent_list { grid-template-columns: repeat(2, 1fr); gap: 20px; } 
@@ -150,9 +159,9 @@ html { font-size: 10px }
 @media all and (max-width:768px) { html { font-size: 8px; } 
 .mod_visual { height: 250px; } 
 .mod_visual .txt_wrap { margin-top: 0; text-align: center; } 
-.mod_visual .comName { font-size: 1.8rem; } 
-.mod_visual .comName b { font-size: 1.8rem; } 
-.mod_visual .title { margin-top: 1rem; font-size: 3rem; } 
+.mod_visual .entReptCmmt { font-size: 1.8rem; } 
+.mod_visual .entReptCmmt b { font-size: 1.8rem; } 
+.mod_visual .comName { margin-top: 1rem; font-size: 3rem; } 
 .mod_visual .cert_wrap { right: 1rem; padding: 1rem; } 
 .mod_visual .imgCi { position: static; margin-top: 1rem; text-align: center; } 
 .mod_visual .imgCi img { max-width: 3.2rem; } 
@@ -177,6 +186,7 @@ html { font-size: 10px }
 
 @media all and (max-width:640px){
  .inner { padding: 0 10px; } 
+ 
  .mod_visual .cert_wrap .cert_img img { max-width: 1.8rem; } 
  .mod_visual .cert_wrap .cert_img { margin-bottom: 5px; } 
  .mod_visual .cert_wrap { right: 0.5rem; padding: 0.5rem 1rem; } 
@@ -194,6 +204,8 @@ html { font-size: 10px }
  .mod_culture09 { padding: 30px 10px; } 
  .mod_interview02 { padding: 30px 0; } 
  .mod_strategy01 { padding: 40px 0 0 0; } 
+ .mod_strategy01 .container { padding: 30px; } 
  .mod_strategy01 .stg_tit { padding: 10px; } 
  .mod_strategy01 .interview_tip { padding: 0; } 
+ .mod_finance03 > div .tab_wrap .conts { padding: 10px; } 
  }

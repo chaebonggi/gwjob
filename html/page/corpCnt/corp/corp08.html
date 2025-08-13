@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://job.gwd.go.kr/page/ijcp/css/common.css" >
 	<link rel="stylesheet" href="https://job.gwd.go.kr/page/gwjob/css/newSub.css" >
-    <link rel="stylesheet" href="https://aldo814.github.io/gwjobNew/proto/inc/pt-common.css" >
+    <link rel="stylesheet" href="https://job.gwd.go.kr/page/ijcp/css/pt-common.css" >
 	
 	<link rel="stylesheet" href="../css/corp08.css">
 
@@ -24,8 +24,8 @@
 		<div class="mod_visual">
 			<div class="container">
 				<div class="txt_wrap">
-					<div class="comName">끊임없는 변화와 혁신으로<br> <b>소재, 부품의 발전을 선도하는 기업</b></div>
-					<p class="title">토다머티리얼즈</p>
+					<p class="entReptCmmt">끊임없는 변화와 혁신으로<br> <b>소재, 부품의 발전을 선도하는 기업</b></p>
+					<p class="comName">토다머티리얼즈</p>
 				</div>
 				<div class="imgCi">
 					<img src="../images/corp08/logo.png" alt="토다머티리얼즈">
@@ -54,7 +54,7 @@
 					<li>
 						<div class="ico"></div>
 						사원수
-						<div class="cnt lastEmployeeState"><span class="lastTotal">00 명</span></div>
+						<div class="cnt"><span class="employeeState">00 명</span></div>
 					</li>
 					<li>
 						<div class="ico"></div>
@@ -249,7 +249,7 @@
 		<div class="mod_business_area04">
 			<h3>제품소개</h3>
 			<div>
-				<div class="bizDiv bizDiv_slide">
+				<div class="product bizDiv_slide">
 					<div class='item'>
 						<div class='thumb'><img src='../images/corp08/business_01.png' alt='powder'></div>
 						<div class='info'>
@@ -664,168 +664,168 @@
 		});
 
 		// 재무정보
-		$(".mod_finance03 .tab > div").click(function() {
-			var item = $(this).attr("data-tab");
-			$(".mod_finance03 .tab > div").removeClass("on");
-			$(this).addClass("on");
-			$(".mod_finance03 .conts > div").hide();
-			$(".mod_finance03 .conts > ." + item).show();
-			setTimeout(function() {
-				finance03_chart1.resize();
-				finance03_chart2.resize();
-				finance03_chart3.resize();
-			}, 100);	
-		});
-		var finance03_chart1 = bb.generate({
-			bindto: ".mod_finance03 #graph_fiCapital",
-			data: {
-				type: "bar",
-				columns: [
-					["자본금", 50, 50, 50]
-				],
-				colors: {
-					자본금: "#f7873e",
-				},
-				labels: {
-					colors: "white",
-					centered: true
-				},
-			},
-			padding: {
-				top: 20,
-				left: 40
-			},
-			grid: {
-				x: {
-					show: true
-				},
-				y: {
-					show: true
-				}
-			},
-			axis: {
-				x: {
-					type: "category",
-					categories: [2021, 2020, 2019],
-					padding: {
-						left: .2,
-						right: .2
-					}
-				},
-				rotated: true
-			},
-			bar: {
-				width: {
-					max: 60
-				},
-				radius: {
-					ratio: 0.5
-				}
-			},
-			legend: {
-				show: false
-			}
-		});
-		var finance03_chart2 = bb.generate({
-			bindto: ".mod_finance03 #graph_fiSales",
-			data: {
-				type: "bar",
-				columns: [
-					["매출액", 3103, 2920, 2767]
-				],
-				colors: {
-					매출액: "#b4622d"
-				},
-				labels: {
-					colors: "white",
-					centered: true
-				},
-			},
-			padding: {
-				top: 20,
-				left: 40
-			},
-			grid: {
-				x: {
-					show: true
-				},
-				y: {
-					show: true
-				}
-			},
-			axis: {
-				x: {
-					type: "category",
-					categories: [2021, 2020, 2019],
-					padding: {
-						left: .2,
-						right: .2
-					}
-				},
-				rotated: true
-			},
-			bar: {
-				width: {
-					max: 60
-				},
-				radius: {
-					ratio: 0.5
-				}
-			},
-			legend: {
-				show: false
-			}
-		});
-		var finance03_chart3 = bb.generate({
-			bindto: ".mod_finance03 #graph_fiProfit",
-			data: {
-				type: "bar",
-				columns: [
-					["당기순이익", 208, 48, 50]
-				],
-				colors: {
-					당기순이익: "#666"
-				},
-				labels: {
-					colors: "white",
-					centered: true
-				},
-			},
-			padding: {
-				top: 20,
-				left: 40
-			},
-			grid: {
-				x: {
-					show: true
-				},
-				y: {
-					show: true
-				}
-			},
-			axis: {
-				x: {
-					type: "category",
-					categories: [2021, 2020, 2019],
-					padding: {
-						left: .2,
-						right: .2
-					}
-				},
-				rotated: true
-			},
-			bar: {
-				width: {
-					max: 60
-				},
-				radius: {
-					ratio: 0.5
-				}
-			},
-			legend: {
-				show: false
-			}
-		});
+		// $(".mod_finance03 .tab > div").click(function() {
+		// 	var item = $(this).attr("data-tab");
+		// 	$(".mod_finance03 .tab > div").removeClass("on");
+		// 	$(this).addClass("on");
+		// 	$(".mod_finance03 .conts > div").hide();
+		// 	$(".mod_finance03 .conts > ." + item).show();
+		// 	setTimeout(function() {
+		// 		finance03_chart1.resize();
+		// 		finance03_chart2.resize();
+		// 		finance03_chart3.resize();
+		// 	}, 100);	
+		// });
+		// var finance03_chart1 = bb.generate({
+		// 	bindto: ".mod_finance03 #graph_fiCapital",
+		// 	data: {
+		// 		type: "bar",
+		// 		columns: [
+		// 			capitalList
+		// 		],
+		// 		colors: {
+		// 			자본금: "#f7873e",
+		// 		},
+		// 		labels: {
+		// 			colors: "white",
+		// 			centered: true
+		// 		},
+		// 	},
+		// 	padding: {
+		// 		top: 20,
+		// 		left: 40
+		// 	},
+		// 	grid: {
+		// 		x: {
+		// 			show: true
+		// 		},
+		// 		y: {
+		// 			show: true
+		// 		}
+		// 	},
+		// 	axis: {
+		// 		x: {
+		// 			type: "category",
+		// 			categories: yearDataList,
+		// 			padding: {
+		// 				left: .2,
+		// 				right: .2
+		// 			}
+		// 		},
+		// 		rotated: true
+		// 	},
+		// 	bar: {
+		// 		width: {
+		// 			max: 60
+		// 		},
+		// 		radius: {
+		// 			ratio: 0.5
+		// 		}
+		// 	},
+		// 	legend: {
+		// 		show: false
+		// 	}
+		// });
+		// var finance03_chart2 = bb.generate({
+		// 	bindto: ".mod_finance03 #graph_fiSales",
+		// 	data: {
+		// 		type: "bar",
+		// 		columns: [
+		// 			salamtList
+		// 		],
+		// 		colors: {
+		// 			매출액: "#b4622d"
+		// 		},
+		// 		labels: {
+		// 			colors: "white",
+		// 			centered: true
+		// 		},
+		// 	},
+		// 	padding: {
+		// 		top: 20,
+		// 		left: 40
+		// 	},
+		// 	grid: {
+		// 		x: {
+		// 			show: true
+		// 		},
+		// 		y: {
+		// 			show: true
+		// 		}
+		// 	},
+		// 	axis: {
+		// 		x: {
+		// 			type: "category",
+		// 			categories: yearDataList,
+		// 			padding: {
+		// 				left: .2,
+		// 				right: .2
+		// 			}
+		// 		},
+		// 		rotated: true
+		// 	},
+		// 	bar: {
+		// 		width: {
+		// 			max: 60
+		// 		},
+		// 		radius: {
+		// 			ratio: 0.5
+		// 		}
+		// 	},
+		// 	legend: {
+		// 		show: false
+		// 	}
+		// });
+		// var finance03_chart3 = bb.generate({
+		// 	bindto: ".mod_finance03 #graph_fiProfit",
+		// 	data: {
+		// 		type: "bar",
+		// 		columns: [
+		// 			netincmList
+		// 		],
+		// 		colors: {
+		// 			당기순이익: "#666"
+		// 		},
+		// 		labels: {
+		// 			colors: "white",
+		// 			centered: true
+		// 		},
+		// 	},
+		// 	padding: {
+		// 		top: 20,
+		// 		left: 40
+		// 	},
+		// 	grid: {
+		// 		x: {
+		// 			show: true
+		// 		},
+		// 		y: {
+		// 			show: true
+		// 		}
+		// 	},
+		// 	axis: {
+		// 		x: {
+		// 			type: "category",
+		// 			categories: yearDataList,
+		// 			padding: {
+		// 				left: .2,
+		// 				right: .2
+		// 			}
+		// 		},
+		// 		rotated: true
+		// 	},
+		// 	bar: {
+		// 		width: {
+		// 			max: 60
+		// 		},
+		// 		radius: {
+		// 			ratio: 0.5
+		// 		}
+		// 	},
+		// 	legend: {
+		// 		show: false
+		// 	}
+		// });
 
 		// 주요상품
 		const $slider = $('.mod_business_area04 .bizDiv_slide');

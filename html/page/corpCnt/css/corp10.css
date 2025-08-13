@@ -2,6 +2,7 @@ html { font-size: 10px }
 .mg70 { margin: 7rem 0 } 
 .pd70 { padding: 7rem 0 } 
 .container { max-width: 1200px; width: 100%; } 
+.mod_finance05, .mod_salary01 {display: none;}
 /* 메인 */
 .mod_visual { width: 100%; height: 600px; position: relative; background: url(../images/corp10/visual.png) no-repeat; background-size: cover; } 
 .mod_visual .container { display: flex; height: inherit; padding: 80px 0; position: initial; } 
@@ -9,10 +10,16 @@ html { font-size: 10px }
 .mod_visual .cert_wrap .cert_img { margin-bottom: 10px; text-align: center; } 
 .mod_visual .cert_wrap p { color: #fff; font-size: 1.4rem; font-weight: 600; text-align: center; } 
 .mod_visual .txt_wrap { margin-top: auto; text-align: left; } 
-.mod_visual .title { font-size: 3.2rem; color: #fff; font-weight: 500; } 
+.mod_visual .entReptCmmt { font-size: 3.2rem; color: #fff; font-weight: 500; } 
 .mod_visual .comName { margin-top: 1rem; color: #fff; font-size: 6rem; font-weight: bold; } 
-.sns_mod_info.sty01 { background: url(../images/corp10/info.png) no-repeat !important; background-size: cover !important; } 
+.sns_mod_info.sty01 { padding: 10rem 0; background: url(../images/corp10/info.png) no-repeat !important; background-size: cover !important; } 
+.sns_mod_info.sty01 .info_wrap { display: flex; } 
+.sns_mod_info.sty01 .info_wrap > li { width: calc(25% - 22.5px); margin-right: 30px; text-align: center; font-size: 2rem; color: #5a6af4 } 
+.sns_mod_info.sty01 .info_wrap > li > div { font-size: 1.8rem; color: #fff; } 
+.sns_mod_info.sty01 .ico { margin: 0 auto 2.0rem auto; } 
+.sns_mod_info.sty01 ul li:last-child { margin-right: 0 } 
 .sns_mod_info.sty01 .info_wrap > li { font-size: 1.8rem; color: #fff; } 
+.sns_mod_info.sty01 ul li .ico { width: 64px; height: 84px; background-size: contain !important; } 
 .sns_mod_info.sty01 ul li:nth-child(1) .ico { background: url(../images/corp10/ico_finance01.png) no-repeat center; } 
 .sns_mod_info.sty01 ul li:nth-child(2) .ico { background: url(../images/corp10/ico_finance02.png) no-repeat center; } 
 .sns_mod_info.sty01 ul li:nth-child(3) .ico { background: url(../images/corp10/ico_finance03.png) no-repeat center; } 
@@ -72,6 +79,7 @@ html { font-size: 10px }
 .mod_finance05 .tab_wrap .conts .legend ul li { display: none; } 
 .mod_finance05 .tab_wrap .conts .legend ul li.lg_sales { display: block; } 
 .mod_finance05 .tab_wrap .conts .legend .lg_sales i { background-color: #43b02a; } 
+.mod_finance05 .tab_wrap .conts .legend ul li:nth-child(2) i { background-color: #43b02a; } 
  
 /* 기업전경 */
 .mod_imgCom h3 { margin-bottom: 40px; font-weight: 600; font-size: 4rem; text-align: center; } 
@@ -99,12 +107,40 @@ html { font-size: 10px }
 .mod_strategy01 .qm_btn_wrap { text-align: center; } 
 .qm_btn { max-width: 375px; width: 100%; } 
 
+/* 제품소개 */
+.mod_business_area04 .business_wrap { display: flex; gap: 10px; } 
+.mod_business_area04 .business_info { display: flex; align-items: center; justify-content: center; width: 100%; position: relative; background: url(../images/corp10/biz_bg.png) center no-repeat; background-size: cover; border-radius: 20px; overflow: hidden; } 
+.mod_business_area04 .business_info::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.7); z-index: 1; } 
+.mod_business_area04 .business_info p { max-width: 500px; padding: 20px 10px;; position: relative; color: #fff; font-size: 2.2rem; font-weight: 400; line-height: 1.6; text-align: center; word-break: keep-all; z-index: 2; } 
+.mod_business_area04 .bizDiv_slide { max-width: calc(100% - 680px); width: 100%; padding-bottom: 30px; } 
+.mod_business_area04 .bizDiv_slide .slick-track { display: flex; gap: 10px; } 
+.mod_business_area04 .slick-slide { display: flex; flex-direction: column; gap: 10px; height: auto; } 
+.mod_business_area04 .item { position: relative; } 
+.mod_business_area04 .thumb { height: 380px; } 
+.mod_business_area04 .thumb img { width: 100%; height: 100%; } 
+.mod_business_area04 .info { width: 100%; position: absolute !important; left: 0; bottom: 0; padding: 2rem !important; } 
+.mod_business_area04 .slick-slide .info h4 { padding: 4px 0; background-color: #f3d8d8; color: #000000; font-size: 1.8rem; text-align: center; font-weight: 500; border-radius: 20px; } 
+.mod_business_area04 .slick-slide:nth-child(even) > div .item h4 { background-color: #fbf2d2; } 
+.mod_business_area04 .slick-slide:nth-child(even) > div:nth-child(even) .item h4 { background-color: #e8e1ff; } 
+.mod_business_area04 .slick-slide:nth-child(odd) > div:nth-child(even) .item h4 { background-color: #d1ebeb; } 
+.mod_business_area04 .slick-list { margin: 0; } 
+.mod_business_area04 .slick-slide { margin: 0; } 
+.mod_business_area04 .slick-slide .info > p { display: none; } 
+.mod_business_area04 .slick-dots { position: absolute; bottom: -18px; display: block; width: 100%; padding: 0; list-style: none; text-align: center } 
+.mod_business_area04 .slick-dots li { position: relative; display: inline-block; margin: 0 5px; padding: 0; } 
+.mod_business_area04 .slick-dots li button { display: block; width: 18px; height: 18px; background-color: #dadada; font-size: 0; border: 0; outline: 0; cursor: pointer; border-radius: 50%; } 
+.mod_business_area04 .slick-dots li.slick-active button { width: 36px; background-color: #43b02a; border-radius: 20px; } 
+.mod_business_area04 .slick-dots { bottom: 0; } 
+
 @media all and (max-width:1024px){
  .mod_talent .talent_list { flex-wrap: wrap; gap: 10px; } 
  .mod_talent .talent_list li { flex: 1 1 40%; border-radius: 20px; } 
+
+ .mod_business_area04 .business_wrap { flex-direction: column; } 
+ .mod_business_area04 .bizDiv_slide { max-width: 100%; } 
  }
 
-@media all and (max-width:768px) {html { font-size: 8px; } 
+@media all and (max-width:768px) { html { font-size: 8px; } 
 .mod_visual { height: 250px; } 
 .mod_visual .txt_wrap { width: 100%; text-align: center; } 
 
@@ -125,10 +161,10 @@ html { font-size: 10px }
 .mod_info03 .info_wrap { flex-direction: column; padding: 30px 10px; } 
 .mod_info03 .info_item { margin: 0 auto; text-align: center; } 
 .mod_info03 .info_item:nth-child(2) { margin-top: 0; } 
-}
+ }
 @media all and (max-width:640px){
  .pd70 { padding: 3rem 0; } 
- .mod_visual .title { margin-top: 1rem; font-size: 2.4rem; } 
+ .mod_visual .entReptCmmt { margin-top: 1rem; font-size: 2.4rem; } 
  .mod_visual .comName { font-size: 3.4rem; } 
  .mod_introduce .txt { font-size: 2rem; } 
  .mod_history04 h3 { font-size: 3.4rem; margin-bottom: 2rem; } 
@@ -143,5 +179,18 @@ html { font-size: 10px }
 .mod_strategy01 { padding: 40px 0 0 0; } 
 .mod_strategy01 .container { padding: 0; } 
 .mod_strategy01 .interview_tip { padding: 30px 10px; } 
- 
+.mod_business_area04 { padding: 30px 0; } 
+.mod_business_area04 .business_info p { font-size: 1.6rem; } 
+.mod_business_area04 .thumb { height: 250px; } 
+.mod_culture10 .item dl { display: flex; flex-wrap: wrap; gap: 5px; width: 100%; padding: 10px; text-align: center; } 
+.mod_culture10 .item dt { width: 100%; height: auto; padding: 10px; margin: 0 auto; position: static; font-size: 1.8rem; } 
+.mod_culture10 .slick-track { gap: 0; } 
+.mod_culture10 .slick-track .slick-slide > div { min-height: auto; } 
+.mod_business_area04 h3 {margin-bottom: 20px;}
+.mod_culture10 {padding: 40px 0;}
+.mod_strategy01 .stg_tit {margin-bottom: 20px; padding: 10px;}
+.mod_strategy01 .rq_text li {font-size: 1.6rem;}
+.mod_strategy01 .ps_wrap li .desc {font-size: 1.6rem;}
+.mod_strategy01 .stg_bg {padding-bottom: 0;}
+.mod_strategy01 .interview_tip .stg_tit02 {padding: 0;}
  }
