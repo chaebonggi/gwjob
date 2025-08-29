@@ -292,7 +292,7 @@ function afterAjax(){
 	                    for(var i=0; i<rtnEntCntntsAditDtail1.length; i++){
 	                    	coreValueStr += "<li class=\"list\">";
 	                    		if(rtnEntCntntsAditDtail1[i].addTitle != null && rtnEntCntntsAditDtail1[i].addTitle != ""){
-	                    			coreValueStr += "<span class=\"tit\">"+rtnEntCntntsAditDtail1[i].addTitle+"</span>"
+	                    			coreValueStr += "<p class=\"tit\">"+rtnEntCntntsAditDtail1[i].addTitle+"</p>"
 	                    		}
 	                    		if(rtnEntCntntsAditDtail1[i].addCntnt != null && rtnEntCntntsAditDtail1[i].addCntnt != ""){
 	                    			coreValueStr += "<span class=\"desc\">"+rtnEntCntntsAditDtail1[i].addCntnt+"</span>"
@@ -309,7 +309,7 @@ function afterAjax(){
 	                    for(var i=0; i<rtnEntCntntsAditDtail2.length; i++){
 	                    	keyTaskStr += "<li class=\"list\">";
 	                    		if(rtnEntCntntsAditDtail2[i].addTitle != null && rtnEntCntntsAditDtail2[i].addTitle != ""){
-	                    			keyTaskStr += "<span class=\"tit\">"+rtnEntCntntsAditDtail2[i].addTitle+"</span>"
+	                    			keyTaskStr += "<p class=\"tit\">"+rtnEntCntntsAditDtail2[i].addTitle+"</p>"
 	                    		}
 	                    		if(rtnEntCntntsAditDtail2[i].addCntnt != null && rtnEntCntntsAditDtail2[i].addCntnt != ""){
 	                    			keyTaskStr += "<span class=\"desc\">"+rtnEntCntntsAditDtail2[i].addCntnt+"</span>"
