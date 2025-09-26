@@ -198,22 +198,24 @@
 		<!-- 전략과제 -->
 		<div class="mod_task pd70">
 			<h3>전략과제</h3>
-			<ul class="keyTask task_list">
-				<li>
-					<p class="tit">착한 경영(Kindness)</p>
-					<span class="desc">- 투명경영<br> - 공익사업 안정화<br> - ESG 체계화<br> - 기업문화 정착</span>
-				</li>
-				<li>
-					<p class="tit">바른 사업(Righteousness)</p>
-					<span class="desc">- 선진 GMP 운영<br> - 생산성 향상<br> - CRMO사업 확대<br> - Glocaliztion</span>
-				</li>
-				<li>
-					<p class="tit">담대한 도전(Boldness)</p>
-					<span class="desc">- 연구개발 효율 향상<br> - 신규 플랫폼 확보<br> - 연계 파이프라인 확대<br> - 선진 RA시스템 구축</span>
-				</li>
-			</ul>
-			<div class="task_img">
-				<img src="../images/corp14/task_bg.png" alt="">
+			<div class="container">
+				<ul class="keyTask task_list">
+					<li>
+						<p class="tit">착한 경영(Kindness)</p>
+						<span class="desc">- 투명경영<br> - 공익사업 안정화<br> - ESG 체계화<br> - 기업문화 정착</span>
+					</li>
+					<li>
+						<p class="tit">바른 사업(Righteousness)</p>
+						<span class="desc">- 선진 GMP 운영<br> - 생산성 향상<br> - CRMO사업 확대<br> - Glocaliztion</span>
+					</li>
+					<li>
+						<p class="tit">담대한 도전(Boldness)</p>
+						<span class="desc">- 연구개발 효율 향상<br> - 신규 플랫폼 확보<br> - 연계 파이프라인 확대<br> - 선진 RA시스템 구축</span>
+					</li>
+				</ul>
+				<div class="task_img">
+					<img src="../images/corp14/task_bg.png" alt="">
+				</div>
 			</div>
 		</div>
 
@@ -341,8 +343,8 @@
 				</li>
 				<li>
 					<div class="talent_item">
-						<p class="talent_tit">자부심</p>
-						<p class="talent_txt">자신이 하는 일이 인류 전체에 기여하고 있다는<br> 긍지를 갖는 마음가짐 </p>
+						<p class="talent_tit">커뮤니케이션</p>
+						<p class="talent_txt">기업 문화에 자긍심을 가지고<br> 긍정적인 태도로 소통하려는 자세</p>
 					</div>
 				</li>
 			</ul>
@@ -481,7 +483,7 @@
 						유바이오로직스가 춘천에 뿌리를 둔 기업으로써 출산장려에 대한 경조확대와 지원혜택 조금더 강화된다면 
 						우리 강원도 지역사회와 동반성장을 도모할수 있지 않을까생각합니다.
 						</p>
-						<p class="incmbNm">- 안홍삼 주임 -</p>
+						<p class="incmbNm">- 안흥삼 주임 -</p>
 					</div>
 				</div>
 			</div>
@@ -609,9 +611,6 @@
 			</div>
 		
 		</div>
-
-
-
 
 		<!-- 홍보영상 -->
 		<div class="mod_comMov">
@@ -772,7 +771,7 @@
 		// 주요사업
 		$('.mod_business .bizDiv_slide').slick({
 			slidesToShow: 3,
-			slidesToScroll: 3,
+			slidesToScroll: 1,
 			autoplay: false,
 			dots: false,
 			arrows: false,
@@ -784,14 +783,14 @@
 					breakpoint: 768,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 2,
+						dots: true,
 					}
 				},
 				{
 				breakpoint: 560,
 					settings: {
 						slidesToShow: 1,
-						slidesToScroll: 1,
+						dots: true,
 					}
 				}
 			]
@@ -1022,6 +1021,12 @@
 				{
 					breakpoint: 768,
 					settings: {
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 640,
+					settings: {
 						slidesToShow: 1,
 					}
 				}
@@ -1052,29 +1057,13 @@
 			nextArrow: $('.mod_media .next_arrow'),
 			responsive: [
 				{
-					breakpoint: 1024,
+					breakpoint: 1200,
 					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
+						dots: true,
+						arrows: false,
 					}
 				},
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2,
-						dots: true,
-					}
-				},
-				{
-					breakpoint: 640,
-					settings: {
-						rows: 1,
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						dots: true,
-					}
-				}
+				
 			]
 		});
 

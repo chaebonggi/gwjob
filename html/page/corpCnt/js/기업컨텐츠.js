@@ -733,17 +733,33 @@ function afterAjax(){
 	                if(rtnEntCntntsAditDtail3 != null){
 	                	
 	                    for(var i=0; i<rtnEntCntntsAditDtail3.length; i++){
+	                    // 	bizDivStr += "<div class='item'>";
+	                    // 	 	if(rtnEntCntntsAditDtail3[i].imageSave != null && rtnEntCntntsAditDtail3[i].imageSave != ""){
+	                    // 			bizDivStr += "<img src='"+imagePath+rtnEntCntntsAditDtail3[i].imageSave+"' alt='"+rtnEntCntntsAditDtail3[i].addTitle+"'>";
+	                    // 	 	}
+		                //         if(rtnEntCntntsAditDtail3[i].addTitle != null && rtnEntCntntsAditDtail3[i].addTitle != ""){
+		                //         	bizDivStr += "<h4>"+rtnEntCntntsAditDtail3[i].addTitle+"</h4>";
+		                //         }
+		                //         if(rtnEntCntntsAditDtail3[i].addCntnt != null && rtnEntCntntsAditDtail3[i].addCntnt != ""){
+		                //         	bizDivStr += "<p>"+rtnEntCntntsAditDtail3[i].addCntnt+"</p>"
+		                //         }
+	                    //    bizDivStr += "</div>";
+						   for(var i=0; i<rtnEntCntntsAditDtail3.length; i++){
 	                    	bizDivStr += "<div class='item'>";
 	                    	 	if(rtnEntCntntsAditDtail3[i].imageSave != null && rtnEntCntntsAditDtail3[i].imageSave != ""){
-	                    			bizDivStr += "<img src='"+imagePath+rtnEntCntntsAditDtail3[i].imageSave+"' alt='"+rtnEntCntntsAditDtail3[i].addTitle+"'>";
+	                    	 		bizDivStr += "<div class='thumb'><img src='"+imagePath+rtnEntCntntsAditDtail3[i].imageSave+"' alt='"+rtnEntCntntsAditDtail3[i].addTitle+"'></div>";
 	                    	 	}
+	                    			bizDivStr += "<div class='info'>";
 		                        if(rtnEntCntntsAditDtail3[i].addTitle != null && rtnEntCntntsAditDtail3[i].addTitle != ""){
 		                        	bizDivStr += "<h4>"+rtnEntCntntsAditDtail3[i].addTitle+"</h4>";
 		                        }
 		                        if(rtnEntCntntsAditDtail3[i].addCntnt != null && rtnEntCntntsAditDtail3[i].addCntnt != ""){
 		                        	bizDivStr += "<p>"+rtnEntCntntsAditDtail3[i].addCntnt+"</p>"
 		                        }
-	                       bizDivStr += "</div>";
+		                        bizDivStr += "</div>";
+		                        bizDivStr += "</div>";
+	                    	}
+						   
 	                    }
 	                    
 	                }   

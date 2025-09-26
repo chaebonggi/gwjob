@@ -1,0 +1,18 @@
+html {font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400;}
+.event11 .innerSection { max-width: 1400px; width: calc(100% - 20px); margin: 0 auto; padding: 0; } 
+
+.event11 .cont03 { background: #1b0c05; } 
+.event11 .cont03 .innerSection { max-width: 1200px; padding: 60px 0 80px; } 
+.event11 .cont03 .infoList { margin-bottom: 70px; } 
+.event11 .cont03 .infoList li { display: flex; align-items: center; } 
+.event11 .cont03 .infoList li + li { margin-top: 10px; } 
+.event11 .cont03 .infoList .infoTit { width: 170px; margin-right: 26px; padding: 10px 0; background: #fff; color: #dd7420; font-size: 16px; font-weight: 500; border-radius: 30px; flex-shrink: 0; text-align: center; } 
+.event11 .cont03 .infoList .infoTxt { color: #fff; font-size: 16px; } 
+.event11 .cont03 .infoList .infoTxt span { margin-right: 10px; } 
+.event11 .cont03 .eventWarning { display: flex; padding: 25px 50px; background: #fff; border-radius: 30px; align-items: center; } 
+.event11 .cont03 .eventWarning .tit { display: inline-block; margin-right: 120px; position: relative; color: #dd7420; font-size: 50px; font-weight: 500; flex-shrink: 0; } 
+.event11 .cont03 .eventWarning .tit::before { content: ''; width: 65px; height: 59px; position: absolute; top: 0; right: -50px; background: url(../images/ev11/cont03_icon01.png) no-repeat; background-size: contain; } 
+.event11 .cont03 .eventWarning .tit span { font-weight: 600; } 
+.event11 .cont03 .warningList p { margin-bottom: 16px; color: #000; font-size: 1.6rem; font-weight: 600; letter-spacing: -1px; } 
+.event11 .cont03 .warningList li { padding-left: 6px; position: relative; color: #333333; font-size: 1.6rem; letter-spacing: -2px; } 
+.event11 .cont03 .warningList li::before { content: ''; width: 2px; height: 2px; position: absolute; top: 12px; left: 0; background: #333333; border-radius: 50%; } 
