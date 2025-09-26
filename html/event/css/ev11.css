@@ -117,4 +117,6 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event11 .cont03 .infoList { margin-bottom: 30px; } 
 .event11 .cont03 .eventWarning .tit { font-size: 4rem; } 
 .event11 .cont03 .eventWarning .tit::before { width: 40px; height: 36px; right: -20px; } 
-}
+.event11 .cont03 .warningList li::before { top: 9px; } 
+.event11 .cont02 .resultWrap li + li { margin-top: 2px; } 
+ }
