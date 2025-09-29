@@ -107,7 +107,8 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
  .event11 .cont02 .exList li { width: 140px; } 
  .event11 .cont02 .exList li::before { width: 120px; height: 121px; margin: 0 auto 10px; } 
  .event11 .cont02 .exList .txtWrap { padding: 10px; background-color: #0d5632; border-radius: 15px; } 
- .event11 .cont02 .exList .txtWrap p { flex-direction: column; } 
+ .event11 .cont02 .exList .txtWrap p { display: block; text-align: center;} 
+ .event11 .cont02 .exList .txtWrap p span { display: block; }
  .event11 .cont02 .exList .txtWrap p i { width: 12px; height: 9px; margin: 0 auto; background-size: contain; } 
 
  .event11 .cont03 .innerSection { padding: 30px 0; } 
@@ -119,4 +120,11 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event11 .cont03 .eventWarning .tit::before { width: 40px; height: 36px; right: -20px; } 
 .event11 .cont03 .warningList li::before { top: 9px; } 
 .event11 .cont02 .resultWrap li + li { margin-top: 2px; } 
+ }
+
+ @media all and (max-width:420px){
+    .event11 .cont02 .exList li {
+        flex: 1 1 40%;
+        width: 100%;
+    }
  }
