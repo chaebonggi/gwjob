@@ -78,6 +78,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
  .event12 .cont01 .innerSection { padding: 30px 10px 0; } 
  .event12 .cont01 .cont .img-pc { display: none; } 
  .event12 .cont01 .cont .img-mo { display: block; margin: 0 auto; } 
+ .event12 .cont01 .cont img {max-width: 300px; width: 100%;}
  .event12 .cont02 .title h3 { font-size: 2rem; } 
 
  .event12 .cont02 .tableType colgroup { display: none; } 
