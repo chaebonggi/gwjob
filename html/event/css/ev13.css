@@ -69,7 +69,7 @@
 .summary-icon img { max-width: 42px; max-height: 42px; } 
 .summary-label { margin: 0 0 5px; font-size: 17px; font-weight: 800; color: #111; } 
 .summary-value { margin: 0; font-size: 25px; font-weight: 700; color: #4f3c99; word-break: keep-all; line-height: 1.5; } 
-.summary-value span { display: inline-flex; align-items: center; justify-content: center; height: 31px; padding: 0 14px; margin-left: 15px; border-radius: 15px; background: #efedff; font-size: 15px; color: #6e54dd; font-weight: 700; } 
+.summary-value span { display: inline-flex; align-items: center; justify-content: center; height: 36px; padding: 0 14px; margin-left: 05px; border-radius: 15px; background: #efedff; font-size: 15px; color: #6e54dd; font-weight: 700; } 
 .summary-note { margin: 8px 0 0; font-size: 14px; color: #717784; } 
 
 @media (max-width: 900px) {
@@ -82,7 +82,7 @@
  .summary-text { text-align: center; } 
  .summary-icon { margin: 0 0 15px 0; width: 62px; height: 62px; } 
  .summary-value { font-size: 20px; } 
- .summary-value span { margin-left: 0; } 
+ .summary-value span { margin-left: 0; height: 28px;} 
  .summary-icon img { max-width: 25px; max-height: 25px; } 
  }
 
