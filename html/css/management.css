@@ -1,0 +1,1176 @@
+/* 1. 공통 레이아웃 */
+.inner-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 2. 공지사항 섹션 */
+.gw-notice-section {
+    background-color: #f4f6f8;
+    padding: 40px 0 20px 0;
+}
+
+.gw-notice-section .inner-section {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.gw-notice-section .inner-section::before {
+    content: '\e85d'; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #f6f3f4;
+    font-family: 'Material Symbols Outlined';
+    text-transform: none;
+    word-wrap: normal;
+    white-space: nowrap;
+    font-feature-settings: 'liga';
+    font-size: 40px;
+    font-variation-settings: 'wght' 500;
+    border-radius: 50%;
+}
+
+.gw-notice-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gw-notice-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>' );
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gw-notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+
+.gw-notice-item {
+    padding: 4px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b5563;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.gw-notice-item:last-child { border-bottom: none; }
+.gw-notice-item strong { color: #111827; font-weight: 600; flex-shrink: 0; }
+
+.gw-notice-button-wrapper { display: flex; justify-content: flex-end; }
+.gw-notice-button {
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.gw-notice-button:hover { background-color: #111827; transform: translateY(-1px); }
+
+/* 3. 대시보드 및 추천 섹션 */
+.gw-dashboard-section {
+    background-color: #f4f6f8;
+    padding: 20px 0 40px 0;
+}
+
+.gw-dashboard-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.gw-dashboard-col {
+    flex: 1;
+    min-width: 0; /* Swiper 레이아웃 깨짐 방지 */
+}
+
+/* 인재 관리 현황 박스 */
+.gw-status-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.gw-status-box h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gw-status-icon-img {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%23f59e0b"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>' );
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gw-status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.gw-status-card {
+    background-color: #fcfdfe;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.gw-status-count {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.gw-status-label {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* 인재 추천 박스 (Swiper) */
+.gw-recommend-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.gw-recommend-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.gw-recommend-header h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gw-recommend-icon-img {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%23f59e0b"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>' );
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gw-header-right { display: flex; align-items: center; gap: 16px; }
+.gw-more-link { font-size: 13px; color: #6b7280; text-decoration: none; font-weight: 500; }
+.gw-swiper-nav { display: flex; gap: 4px; }
+.gw-nav-btn {
+    width: 24px; height: 24px; border: 1px solid #e5e7eb; border-radius: 4px;
+    background-color: #ffffff; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.gw-nav-btn svg { width: 14px; height: 14px; color: #6b7280; }
+
+.gw-recommend-card {
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.gw-badge-recommend {
+    display: inline-block;
+    font-size: 12px;
+    color: #3b82f6;
+    background-color: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.gw-recommend-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.gw-avatar-placeholder {
+    width: 56px; height: 56px; background-color: #f3f4f6; border-radius: 50%;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23d1d5db" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>' );
+    background-size: 32px; background-repeat: no-repeat; background-position: center;
+}
+
+.gw-user-name { font-size: 16px; font-weight: 700; color: #111827; }
+.gw-user-gender { font-size: 14px; color: #6b7280; margin-left: 4px; }
+.gw-user-exp { font-size: 14px; color: #4b5563; margin-top: 4px; font-weight: 500; }
+
+.gw-recommend-msg {
+    font-size: 15px; color: #374151; margin-bottom: 24px; line-height: 1.6;
+    font-weight: 500; height: 48px; overflow: hidden;
+}
+
+.gw-card-actions { display: flex; gap: 12px; }
+.gw-btn-outline {
+    flex: 1; background-color: #ffffff; border: 1px solid #e5e7eb; color: #374151;
+    padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.gw-btn-primary {
+    flex: 1; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff;
+    padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+
+/* 4. 팝업 스타일 */
+.gw-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; justify-content: center; align-items: center;
+    z-index: 9999;
+}
+
+.gw-modal-content {
+    background-color: #ffffff; border-radius: 16px; padding: 32px;
+    width: 400px; max-width: 90%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.gw-modal-title { font-size: 18px; font-weight: 700; color: #111827; margin-bottom: 16px; }
+.gw-modal-text { font-size: 15px; color: #4b5563; line-height: 1.6; margin-bottom: 32px; }
+.gw-modal-btns { display: flex; gap: 12px; }
+.gw-modal-btn { flex: 1; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; }
+.gw-btn-cancel { background-color: #f3f4f6; color: #4b5563; }
+.gw-btn-confirm { background-color: #2563eb; color: #ffffff; }
+
+/* 섹션 3: 인재 상세검색 */
+
+.gw-search-section {
+    background-color: #f4f6f8;
+    padding: 40px 0;
+}
+
+.gw-search-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 32px 0;
+}
+
+.gw-search-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* 검색 필터 그룹 */
+.gw-search-filters {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.gw-filter-group {
+    position: relative;
+}
+
+
+/* 셀렉트 박스 */
+.gw-select-box {
+    position: relative;
+}
+
+.gw-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 40px;
+}
+
+.gw-select-trigger:hover {
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+}
+
+.gw-select-trigger.active {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+}
+
+.gw-select-text {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.gw-select-trigger.active .gw-select-text {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.gw-select-icon {
+    width: 16px;
+    height: 16px;
+    color: #9ca3af;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.gw-select-trigger.active .gw-select-icon {
+    transform: rotate(180deg);
+    color: #2563eb;
+}
+
+/* 셀렉트 드롭다운 */
+.gw-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.gw-select-dropdown.active {
+    display: block;
+}
+
+/* 체크박스 아이템 */
+.gw-checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 12px;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    color: #374151;
+    user-select: none;
+}
+
+.gw-checkbox-item:last-child {
+    border-bottom: none;
+}
+
+.gw-checkbox-item:hover {
+    background-color: #f9fafb;
+}
+
+.gw-checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.gw-checkbox-item span {
+    flex: 1;
+}
+
+/* 선택된 키워드 영역 */
+.gw-selected-keywords {
+    margin-bottom: 24px;
+}
+
+.gw-keywords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.gw-keyword-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.gw-keyword-tag-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.gw-keyword-tag-close:hover {
+    background-color: rgba(30, 64, 175, 0.1);
+}
+
+.gw-keyword-tag-close::before {
+    content: '×';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* 검색 액션 버튼 */
+.gw-search-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.gw-search-btn,
+.gw-search-save-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-search-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.gw-search-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.gw-search-save-btn {
+    background-color: #ffffff;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.gw-search-save-btn:hover {
+    background-color: #eff6ff;
+}
+
+/* 스크롤바 스타일 */
+.gw-select-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.gw-select-dropdown::-webkit-scrollbar-track {
+    background-color: #f3f4f6;
+}
+
+.gw-select-dropdown::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 3px;
+}
+
+.gw-select-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af;
+}
+
+/* 반응형 */
+@media (max-width: 1240px) {
+    .gw-search-filters {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .gw-search-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gw-search-section {
+        padding: 24px 0;
+    }
+
+    .gw-search-container {
+        padding: 24px;
+    }
+
+    .gw-search-filters {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .gw-search-actions {
+        flex-direction: column;
+    }
+
+    .gw-search-btn,
+    .gw-search-save-btn {
+        width: 100%;
+    }
+
+    .gw-keywords-list {
+        gap: 6px;
+    }
+
+    .gw-keyword-tag {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gw-search-section h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .gw-search-container {
+        padding: 16px;
+    }
+
+    .gw-select-trigger {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .gw-checkbox-item {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .gw-search-btn,
+    .gw-search-save-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* 섹션 4: 강원일자리 인재풀 */
+
+.gw-talent-pool-section {
+    background-color: #f4f6f8;
+    padding: 40px 0;
+}
+
+/* 인재풀 헤더 */
+.gw-pool-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gw-pool-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gw-pool-icon {
+    width: 28px;
+    height: 28px;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.gw-pool-title h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.gw-pool-count {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.gw-pool-controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* 정렬 드롭다운 */
+.gw-sort-dropdown {
+    position: relative;
+    width: 120px;
+}
+
+.gw-sort-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    appearance: none;
+    padding-right: 32px;
+    font-weight: 500;
+}
+
+.gw-sort-select:hover {
+    border-color: #d1d5db;
+}
+
+.gw-sort-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.gw-sort-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+/* 검색 입력 */
+.gw-search-input-wrapper {
+    position: relative;
+    width: 300px;
+}
+
+.gw-search-input {
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #374151;
+}
+
+.gw-search-input::placeholder {
+    color: #9ca3af;
+}
+
+.gw-search-input:hover {
+    border-color: #d1d5db;
+}
+
+.gw-search-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.gw-search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+/* 인재 카드 그리드 */
+.gw-talent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.gw-talent-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.gw-talent-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+}
+
+/* 카드 헤더 */
+.gw-card-header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.gw-talent-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: #f3f4f6;
+}
+
+.gw-card-title {
+    flex: 1;
+}
+
+.gw-badge {
+    display: inline-block;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.gw-card-title h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.gw-talent-meta {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 카드 내용 */
+.gw-talent-description {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 스킬 태그 */
+.gw-talent-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.gw-skill-tag {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+}
+
+/* 관심사 태그 */
+.gw-talent-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.gw-interest-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.interest-star {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+.interest-building {
+    background-color: #f0f9ff;
+    color: #0284c7;
+}
+
+.interest-popular {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+
+/* 카드 푸터 */
+.gw-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.gw-update-date {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.gw-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.gw-scrap-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-scrap-btn:hover {
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+}
+
+.gw-scrap-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.gw-scrap-btn.scraped {
+    border-color: #dc2626;
+    color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.gw-offer-btn {
+    background-color: #2563eb;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-offer-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* 페이지네이션 */
+.gw-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 0;
+}
+
+.gw-paging-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-paging-btn:hover:not(:disabled) {
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+    color: #374151;
+}
+
+.gw-paging-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.gw-paging-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.gw-paging-numbers {
+    display: flex;
+    gap: 4px;
+}
+
+.gw-paging-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-paging-number:hover {
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+}
+
+.gw-paging-number.active {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+/* 반응형 */
+@media (max-width: 1240px) {
+    .gw-talent-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gw-pool-controls {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .gw-search-input-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .gw-talent-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .gw-talent-card {
+        padding: 16px;
+    }
+
+    .gw-pool-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gw-pool-controls {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .gw-sort-dropdown {
+        width: 100px;
+    }
+
+    .gw-search-input-wrapper {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gw-talent-pool-section {
+        padding: 24px 0;
+    }
+
+    .gw-talent-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .gw-card-header {
+        gap: 12px;
+    }
+
+    .gw-talent-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .gw-card-title h3 {
+        font-size: 15px;
+    }
+
+    .gw-talent-meta {
+        font-size: 12px;
+    }
+
+    .gw-talent-description {
+        font-size: 13px;
+    }
+
+    .gw-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .gw-card-actions {
+        width: 100%;
+    }
+
+    .gw-scrap-btn,
+    .gw-offer-btn {
+        flex: 1;
+    }
+
+    .gw-pool-header {
+        margin-bottom: 20px;
+    }
+
+    .gw-pool-controls {
+        flex-direction: column;
+    }
+
+    .gw-sort-dropdown,
+    .gw-search-input-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gw-talent-pool-section {
+        padding: 16px 0;
+    }
+
+    .gw-pool-title h2 {
+        font-size: 18px;
+    }
+
+    .gw-pool-count {
+        font-size: 16px;
+    }
+
+    .gw-talent-grid {
+        gap: 12px;
+    }
+
+    .gw-talent-card {
+        padding: 12px;
+    }
+
+    .gw-card-header {
+        gap: 10px;
+    }
+
+    .gw-talent-avatar {
+        width: 56px;
+        height: 56px;
+    }
+
+    .gw-card-title h3 {
+        font-size: 14px;
+    }
+
+    .gw-talent-meta {
+        font-size: 11px;
+    }
+
+    .gw-talent-description {
+        font-size: 12px;
+        -webkit-line-clamp: 1;
+    }
+
+    .gw-skill-tag,
+    .gw-interest-tag {
+        font-size: 11px;
+    }
+
+    .gw-scrap-btn,
+    .gw-offer-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .gw-paging-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .gw-paging-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* 5. 반응형 */
+@media (max-width: 1240px) { .inner-section { max-width: 95%; } }
+@media (max-width: 1024px) { .gw-dashboard-row { flex-direction: column; } }
