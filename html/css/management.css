@@ -468,11 +468,73 @@
     line-height: 1;
 }
 
+/* 추가 옵션 태그 */
+.gw-search-additional-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gw-option-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.gw-option-checkbox:hover {
+    border-color: #d1d5db;
+    background-color: #ececf1;
+}
+
+.gw-option-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.gw-option-checkbox input[type="checkbox"]:checked + .gw-tag-icon + .gw-tag-text,
+.gw-option-checkbox input[type="checkbox"]:checked {
+    color: #0284c7;
+}
+
+.gw-option-checkbox input[type="checkbox"]:checked {
+    accent-color: #0ea5e9;
+}
+
+.gw-option-checkbox:has(input[type="checkbox"]:checked) {
+    background-color: #dbeafe;
+    border-color: #0ea5e9;
+    color: #0284c7;
+}
+
+.gw-tag-icon {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gw-tag-text {
+    font-weight: 500;
+}
+
 /* 검색 액션 버튼 */
 .gw-search-actions {
     display: flex;
     gap: 12px;
     justify-content: flex-end;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 24px;
 }
 
 .gw-search-btn,
@@ -569,6 +631,24 @@
         font-size: 12px;
         padding: 4px 10px;
     }
+
+    .gw-search-additional-tags {
+        gap: 8px;
+    }
+
+    .gw-option-checkbox {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .gw-option-checkbox input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .gw-tag-icon {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -579,6 +659,10 @@
 
     .gw-search-container {
         padding: 16px;
+    }
+
+    .gw-filter-label {
+        font-size: 12px;
     }
 
     .gw-select-trigger {
@@ -598,6 +682,7 @@
     }
 }
 
+
 /* 섹션 4: 강원일자리 인재풀 */
 
 .gw-talent-pool-section {
@@ -605,7 +690,7 @@
     padding: 40px 0;
 }
 
-/* 인재풀 헤더 */
+/* ===== 인재풀 헤더 ===== */
 .gw-pool-header {
     display: flex;
     justify-content: space-between;
@@ -647,37 +732,51 @@
     align-items: center;
 }
 
-/* 정렬 드롭다운 */
-.gw-sort-dropdown {
+/* ===== 정렬 드롭다운 ===== */
+.gw-talent-sort-wrapper {
     position: relative;
     width: 120px;
+    display: flex;
+    align-items: center;
 }
 
-.gw-sort-select {
+.gw-talent-sort-select {
     width: 100%;
-    padding: 10px 12px;
+    height: 40px;
+    padding: 8px 32px 8px 12px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     background-color: #ffffff;
     font-size: 14px;
+    font-weight: 500;
     color: #374151;
     cursor: pointer;
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
     padding-right: 32px;
-    font-weight: 500;
 }
 
-.gw-sort-select:hover {
+.gw-talent-sort-select:hover {
     border-color: #d1d5db;
+    background-color: #f9fafb;
 }
 
-.gw-sort-select:focus {
+.gw-talent-sort-select:focus {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-.gw-sort-icon {
+.gw-talent-sort-select:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* 드롭다운 화살표 아이콘 */
+.gw-talent-sort-arrow {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -686,39 +785,46 @@
     height: 16px;
     color: #9ca3af;
     pointer-events: none;
+    flex-shrink: 0;
 }
 
-/* 검색 입력 */
-.gw-search-input-wrapper {
+/* ===== 검색 입력 ===== */
+.gw-talent-search-wrapper {
     position: relative;
     width: 300px;
+    display: flex;
+    align-items: center;
 }
 
-.gw-search-input {
+.gw-talent-search-input {
     width: 100%;
-    padding: 10px 12px 10px 40px;
+    height: 40px;
+    padding: 8px 40px 8px 12px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     background-color: #ffffff;
     font-size: 14px;
     color: #374151;
+    box-sizing: border-box;
 }
 
-.gw-search-input::placeholder {
+.gw-talent-search-input::placeholder {
     color: #9ca3af;
 }
 
-.gw-search-input:hover {
+.gw-talent-search-input:hover {
     border-color: #d1d5db;
+    background-color: #f9fafb;
 }
 
-.gw-search-input:focus {
+.gw-talent-search-input:focus {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-.gw-search-icon {
+/* 검색 아이콘 */
+.gw-talent-search-icon {
     position: absolute;
     right: 12px;
     top: 50%;
@@ -727,9 +833,10 @@
     height: 18px;
     color: #9ca3af;
     pointer-events: none;
+    flex-shrink: 0;
 }
 
-/* 인재 카드 그리드 */
+/* ===== 인재 카드 그리드 ===== */
 .gw-talent-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -748,7 +855,6 @@
 
 .gw-talent-card:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: #d1d5db;
 }
 
 /* 카드 헤더 */
@@ -773,13 +879,13 @@
 
 .gw-badge {
     display: inline-block;
-    background-color: #0ea5e9;
+    background-color: #0284c7;
     color: #ffffff;
-    padding: 4px 10px;
+    padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .gw-card-title h3 {
@@ -793,14 +899,13 @@
     font-size: 13px;
     color: #6b7280;
     margin: 0;
-    line-height: 1.5;
 }
 
-/* 카드 내용 */
+/* 자기소개 */
 .gw-talent-description {
     font-size: 14px;
     color: #374151;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -836,28 +941,30 @@
 }
 
 .gw-interest-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 6px 10px;
-    border-radius: 4px;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
 }
 
-.interest-star {
-    background-color: #fef2f2;
-    color: #dc2626;
+.gw-interest-tag.interest-star {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-color: #fcd34d;
 }
 
-.interest-building {
-    background-color: #f0f9ff;
-    color: #0284c7;
+.gw-interest-tag.interest-building {
+    background-color: #dbeafe;
+    color: #0c4a6e;
+    border-color: #bfdbfe;
 }
 
-.interest-popular {
-    background-color: #f0fdf4;
-    color: #16a34a;
+.gw-interest-tag.interest-popular {
+    background-color: #fecaca;
+    color: #7f1d1d;
+    border-color: #fca5a5;
 }
 
 /* 카드 푸터 */
@@ -926,7 +1033,7 @@
     background-color: #1d4ed8;
 }
 
-/* 페이지네이션 */
+/* ===== 페이지네이션 ===== */
 .gw-pagination {
     display: flex;
     justify-content: center;
@@ -998,7 +1105,7 @@
     color: #ffffff;
 }
 
-/* 반응형 */
+/* ===== 반응형 ===== */
 @media (max-width: 1240px) {
     .gw-talent-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1009,7 +1116,7 @@
         justify-content: flex-start;
     }
 
-    .gw-search-input-wrapper {
+    .gw-talent-search-wrapper {
         width: 100%;
     }
 }
@@ -1032,13 +1139,15 @@
     .gw-pool-controls {
         width: 100%;
         gap: 12px;
+        flex-direction: row;
     }
 
-    .gw-sort-dropdown {
+    .gw-talent-sort-wrapper {
+        flex: 0 0 auto;
         width: 100px;
     }
 
-    .gw-search-input-wrapper {
+    .gw-talent-search-wrapper {
         flex: 1;
         min-width: 200px;
     }
@@ -1093,14 +1202,18 @@
 
     .gw-pool-header {
         margin-bottom: 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .gw-pool-controls {
+        width: 100%;
         flex-direction: column;
+        gap: 12px;
     }
 
-    .gw-sort-dropdown,
-    .gw-search-input-wrapper {
+    .gw-talent-sort-wrapper,
+    .gw-talent-search-wrapper {
         width: 100%;
     }
 }
@@ -1169,7 +1282,14 @@
         font-size: 12px;
         padding: 6px 10px;
     }
+
+    .gw-talent-sort-select,
+    .gw-talent-search-input {
+        font-size: 13px;
+        height: 36px;
+    }
 }
+
 
 /* 5. 반응형 */
 @media (max-width: 1240px) { .inner-section { max-width: 95%; } }
