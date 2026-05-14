@@ -673,6 +673,13 @@
     .gw-status-box {
         padding: 15px;
     }
+
+    .gw-notice-section .inner-section::before {
+        margin: 0 auto;
+    }
+    .gw-notice-button-wrapper {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -703,6 +710,9 @@
     .gw-search-save-btn {
         padding: 10px 16px;
         font-size: 13px;
+    }
+    .gw-notice-section .inner-section {
+        padding: 15px;
     }
 }
 
