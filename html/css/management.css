@@ -153,10 +153,9 @@
 
 .gw-status-count {
     display: block;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 800;
     color: #111827;
-    margin-bottom: 6px;
 }
 
 .gw-status-label {
@@ -685,7 +684,7 @@
 }
 
 
-/* 섹션 4: 강원일자리 인재풀 */
+/* 섹션 4: 강원일자리 인재풀 - 전체 CSS */
 
 .gw-talent-pool-section {
     background-color: #f4f6f8;
@@ -988,6 +987,7 @@
     gap: 8px;
 }
 
+/* ===== 스크랩 버튼 ===== */
 .gw-scrap-btn {
     display: flex;
     align-items: center;
@@ -1011,14 +1011,30 @@
 .gw-scrap-btn svg {
     width: 16px;
     height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: all 0.2s ease;
 }
 
-.gw-scrap-btn.scraped {
+/* 스크랩 활성화 상태 */
+.gw-scrap-btn.on {
     border-color: #dc2626;
     color: #dc2626;
     background-color: #fef2f2;
 }
 
+.gw-scrap-btn.on svg {
+    fill: #dc2626;
+    stroke: #dc2626;
+}
+
+.gw-scrap-btn.on:hover {
+    border-color: #b91c1c;
+    background-color: #fee2e2;
+}
+
+/* ===== 입사제안 버튼 ===== */
 .gw-offer-btn {
     background-color: #2563eb;
     border: none;
@@ -1033,6 +1049,153 @@
 
 .gw-offer-btn:hover {
     background-color: #1d4ed8;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.gw-offer-btn:active {
+    background-color: #1e40af;
+}
+
+/* ===== 입사제안 모달 ===== */
+.gw-offer-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.gw-offer-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gw-offer-modal {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 0;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 모달 헤더 */
+.gw-offer-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.gw-offer-modal-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.gw-offer-modal-close {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: color 0.2s ease;
+}
+
+.gw-offer-modal-close:hover {
+    color: #374151;
+}
+
+.gw-offer-modal-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* 모달 바디 */
+.gw-offer-modal-body {
+    padding: 20px;
+}
+
+.gw-offer-modal-content {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 모달 푸터 */
+.gw-offer-modal-footer {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.gw-offer-modal-confirm {
+    flex: 1;
+    background-color: #2563eb;
+    border: none;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-offer-modal-confirm:hover {
+    background-color: #1d4ed8;
+}
+
+.gw-offer-modal-confirm:active {
+    background-color: #1e40af;
+}
+
+.gw-offer-modal-cancel {
+    flex: 1;
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gw-offer-modal-cancel:hover {
+    background-color: #e5e7eb;
+    border-color: #d1d5db;
 }
 
 /* ===== 페이지네이션 ===== */
@@ -1218,6 +1381,31 @@
     .gw-talent-search-wrapper {
         width: 100%;
     }
+
+    .gw-offer-modal {
+        width: 95%;
+        max-width: none;
+    }
+
+    .gw-offer-modal-header,
+    .gw-offer-modal-body,
+    .gw-offer-modal-footer {
+        padding: 16px;
+    }
+
+    .gw-offer-modal-title {
+        font-size: 15px;
+    }
+
+    .gw-offer-modal-content {
+        font-size: 13px;
+    }
+
+    .gw-offer-modal-confirm,
+    .gw-offer-modal-cancel {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1274,6 +1462,11 @@
         padding: 6px 10px;
     }
 
+    .gw-scrap-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
     .gw-paging-number {
         width: 28px;
         height: 28px;
@@ -1289,6 +1482,33 @@
     .gw-talent-search-input {
         font-size: 13px;
         height: 36px;
+    }
+
+    .gw-offer-modal {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+    }
+
+    .gw-offer-modal-header,
+    .gw-offer-modal-body,
+    .gw-offer-modal-footer {
+        padding: 12px;
+    }
+
+    .gw-offer-modal-title {
+        font-size: 14px;
+    }
+
+    .gw-offer-modal-content {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .gw-offer-modal-confirm,
+    .gw-offer-modal-cancel {
+        padding: 8px 12px;
+        font-size: 12px;
     }
 }
 
