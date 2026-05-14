@@ -95,7 +95,7 @@
 /* 3. 대시보드 및 추천 섹션 */
 .gw-dashboard-section {
     background-color: #f4f6f8;
-    padding: 20px 0 40px 0;
+    padding: 20px 0;
 }
 
 .gw-dashboard-row {
@@ -286,14 +286,21 @@
 
 .gw-search-section {
     background-color: #f4f6f8;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .gw-search-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 18px;
     font-weight: 700;
     color: #111827;
-    margin: 0 0 32px 0;
+    margin: 0 0 20px 0;
+}
+.gw-search-section h2 span {
+    display: flex;
+    color: #155dfc;
 }
 
 .gw-search-container {
@@ -688,7 +695,7 @@
 
 .gw-talent-pool-section {
     background-color: #f4f6f8;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 /* ===== 인재풀 헤더 ===== */
@@ -696,16 +703,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.gw-pool-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
 
 .gw-pool-icon {
     width: 28px;
@@ -718,13 +720,13 @@
     font-size: 20px;
     font-weight: 700;
     color: #111827;
-    margin: 0;
 }
 
 .gw-pool-count {
+    margin-left: 10px;
     font-size: 18px;
-    font-weight: 700;
-    color: #111827;
+    font-weight: 500;
+    color: #6a7282;
 }
 
 .gw-pool-controls {
@@ -855,6 +857,7 @@
 }
 
 .gw-talent-card:hover {
+    border-color: #008cc6;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -875,7 +878,11 @@
 }
 
 .gw-card-title {
-    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 
 .gw-badge {
@@ -886,20 +893,18 @@
     border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 4px;
 }
 
 .gw-card-title h3 {
     font-size: 16px;
     font-weight: 700;
     color: #111827;
-    margin: 0 0 8px 0;
 }
 
 .gw-talent-meta {
+    width: 100%;
     font-size: 13px;
     color: #6b7280;
-    margin: 0;
 }
 
 /* 자기소개 */
