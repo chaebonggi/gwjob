@@ -637,27 +637,24 @@
             </div>
 
             <!-- 페이지네이션 -->
-            <div class="gw-pagination">
-                <button type="button" class="gw-paging-btn gw-paging-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                    이전
-                </button>
-                <div class="gw-paging-numbers">
-                    <button type="button" class="gw-paging-number active">1</button>
-                    <button type="button" class="gw-paging-number">2</button>
-                    <button type="button" class="gw-paging-number">3</button>
-                    <button type="button" class="gw-paging-number">4</button>
-                    <button type="button" class="gw-paging-number">5</button>
-                </div>
-                <button type="button" class="gw-paging-btn gw-paging-next">
-                    다음
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+            <div class="pager clearfix">
+                <a href="#nolink" class="pager-link pager-link-data-first" onclick="custom_pageing(1);return false; ">10페이지 앞으로
+                    이동</a> <a href="#nolink" class="pager-link pager-link-data-prev" onclick="custom_pageing(1);return false; ">1페이지
+                    앞으로 이동</a> <span class="pager-num">1/123</span><a onclick="return false;" class="pager-link active">1</a> <a
+                    href="#nolink" class="pager-link" onclick="custom_pageing(2);return false; ">2</a> <a href="#nolink"
+                    class="pager-link" onclick="custom_pageing(3);return false; ">3</a> <a href="#nolink"
+                    class="pager-link pager-link-data-ellipsis" onclick="custom_pageing(4);return false; ">4</a> <a href="#nolink"
+                    class="pager-link pager-link-data-ellipsis" onclick="custom_pageing(5);return false; ">5</a> <a href="#nolink"
+                    class="pager-link pager-link-data-ellipsis" onclick="custom_pageing(6);return false; ">6</a> <a href="#nolink"
+                    class="pager-link pager-link-data-ellipsis" onclick="custom_pageing(7);return false; ">7</a> <a href="#nolink"
+                    class="pager-link pager-link-data-ellipsis" onclick="custom_pageing(8);return false; ">8</a> <a href="#nolink"
+                    class="pager-link pager-link-data-ellipsis" onclick="custom_pageing(9);return false; ">9</a> <a href="#nolink"
+                    class="pager-link" onclick="custom_pageing(10);return false; ">10</a> <a href="#nolink"
+                    onclick="custom_pageing(2);return false; " class="pager-link pager-link-data-next">1페이지 뒤로 이동</a> <a
+                    href="#nolink" onclick="custom_pageing(11);return false; " class="pager-link pager-link-data-last">10페이지 뒤로
+                    이동</a>
             </div>
+
         </div>
     </section>
 
