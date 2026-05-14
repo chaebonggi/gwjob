@@ -14,6 +14,9 @@
 
 .gw-notice-section .inner-section {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 40px;
@@ -59,7 +62,6 @@
 .gw-notice-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 32px 0;
 }
 
 
@@ -76,7 +78,7 @@
 .gw-notice-item:last-child { border-bottom: none; }
 .gw-notice-item strong { color: #111827; font-weight: 600; flex-shrink: 0; }
 
-.gw-notice-button-wrapper { display: flex; justify-content: flex-end; }
+.gw-notice-button-wrapper { display: flex; justify-content: flex-end; width: 100%; }
 .gw-notice-button {
     background-color: #1f2937;
     color: #ffffff;
