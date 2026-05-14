@@ -92,9 +92,11 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="gw-recommend-card">
-                                        <span class="gw-badge-recommend">적합공고 2024년 사무원 신입 및 경력사원 모집</span>
+                                        <p class="gw-recommend-txt"><span class="gw-badge-recommend">적합공고</span> 2024년 사무원 신입 및 경력사원 모집</p>
                                         <div class="gw-recommend-info">
-                                            <div class="gw-avatar-placeholder"></div>
+                                            <div class="gw-avatar-placeholder">
+                                                <img src="./images/management/default_profile.png" alt="프로필">
+                                            </div>
                                             <div><span class="gw-user-name">김OO</span><span class="gw-user-gender">(여 / 만 28세 )</span><div class="gw-user-exp">3년 8개월</div></div>
                                         </div>
                                         <p class="gw-recommend-msg">더 높은 곳으로 도약할 지원자 김OO 입니다.</p>
@@ -672,7 +674,7 @@
             const recommendSwiper = new Swiper('.gw-recommend-swiper', {
                 loop: true, slidesPerView: 1, spaceBetween: 20,
                 navigation: { nextEl: '.gw-next', prevEl: '.gw-prev' },
-                autoplay: { delay: 5000, disableOnInteraction: false },
+                // autoplay: { delay: 5000, disableOnInteraction: false },
                 observer: true, observeParents: true,
             });
         });

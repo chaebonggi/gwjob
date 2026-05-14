@@ -180,6 +180,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 24px;
 }
 
@@ -201,7 +202,7 @@
     background-position: center;
 }
 
-.gw-header-right { display: flex; align-items: center; gap: 16px; }
+.gw-header-right { display: flex; align-items: center; gap: 16px; margin-left: auto; }
 .gw-more-link { font-size: 13px; color: #6b7280; text-decoration: none; font-weight: 500; }
 .gw-swiper-nav { display: flex; gap: 4px; }
 .gw-nav-btn {
@@ -217,7 +218,13 @@
     background-color: #ffffff;
     box-sizing: border-box;
 }
-
+.gw-recommend-txt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
 .gw-badge-recommend {
     display: inline-block;
     font-size: 12px;
@@ -225,7 +232,6 @@
     background-color: #eff6ff;
     padding: 4px 10px;
     border-radius: 6px;
-    margin-bottom: 16px;
     font-weight: 600;
 }
 
@@ -237,14 +243,15 @@
 }
 
 .gw-avatar-placeholder {
-    width: 56px; height: 56px; background-color: #f3f4f6; border-radius: 50%;
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23d1d5db" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>' );
-    background-size: 32px; background-repeat: no-repeat; background-position: center;
+    width: 56px; height: 56px; background-color: #f3f4f6; border-radius: 50%; overflow: hidden;
+}
+.gw-avatar-placeholder img {
+    width: 100%;
 }
 
 .gw-user-name { font-size: 16px; font-weight: 700; color: #111827; }
 .gw-user-gender { font-size: 14px; color: #6b7280; margin-left: 4px; }
-.gw-user-exp { font-size: 14px; color: #4b5563; margin-top: 4px; font-weight: 500; }
+.gw-user-exp { font-size: 14px; color: #155dfc; margin-top: 4px; font-weight: 500; }
 
 .gw-recommend-msg {
     font-size: 15px; color: #374151; margin-bottom: 24px; line-height: 1.6;
@@ -656,6 +663,15 @@
 
     .gw-tag-icon {
         font-size: 13px;
+    }
+    .gw-swiper-nav {
+        display: none;
+    }
+    .gw-recommend-box {
+        padding: 15px;
+    }
+    .gw-status-box {
+        padding: 15px;
     }
 }
 
