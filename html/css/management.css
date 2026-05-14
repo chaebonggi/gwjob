@@ -615,9 +615,6 @@
 }
 
 @media (max-width: 768px) {
-    .gw-search-section {
-        padding: 24px 0;
-    }
 
     .gw-search-container {
         padding: 24px;
@@ -683,6 +680,15 @@
 }
 
 @media (max-width: 480px) {
+    .gw-search-section {
+        padding: 10px 0;
+    }
+    .gw-dashboard-section {
+        padding: 10px 0;
+    }
+    .gw-notice-section {
+        padding: 10px 0;
+    }
     .gw-search-section h2 {
         font-size: 16px;
         margin-bottom: 20px;
@@ -1350,9 +1356,6 @@
 }
 
 @media (max-width: 768px) {
-    .gw-talent-pool-section {
-        padding: 24px 0;
-    }
 
     .gw-talent-grid {
         grid-template-columns: 1fr;
@@ -1441,7 +1444,7 @@
 
 @media (max-width: 480px) {
     .gw-talent-pool-section {
-        padding: 16px 0;
+        padding: 10px 0;
     }
 
     .gw-pool-title h2 {
