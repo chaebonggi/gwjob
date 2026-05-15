@@ -101,7 +101,7 @@
                                         </div>
                                         <p class="gw-recommend-msg">더 높은 곳으로 도약할 지원자 김OO 입니다.</p>
                                         <div class="gw-card-actions">
-                                            <button type="button" class="gw-btn-outline">스크랩</button>
+                                            <button type="button" class="gw-btn-outline" onclick="toggleScrap(this)">스크랩</button>
                                             <button type="button" class="gw-btn-primary" onclick="openOfferModal()">입사 제안</button>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@
                                         </div>
                                         <p class="gw-recommend-msg">더 높은 곳으로 도약할 지원자 김OO 입니다.</p>
                                         <div class="gw-card-actions">
-                                            <button type="button" class="gw-btn-outline">스크랩</button>
+                                            <button type="button" class="gw-btn-outline" onclick="toggleScrap(this)">스크랩</button>
                                             <button type="button" class="gw-btn-primary" onclick="openOfferModal()">입사 제안</button>
                                         </div>
                                     </div>
@@ -425,7 +425,7 @@
                         <div class="gw-card-title">
                             <span class="gw-badge">경력</span>
                             <h3>시니어 프론트엔드 엔지니어</h3>
-                            <p class="gw-talent-meta"><span class="gw-talent-name">이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
+                            <p class="gw-talent-meta"><span>이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
                         </div>
                     </div>
                     <p class="gw-talent-description">성능 최적화와 사용자 경험 개선에 관심이 많은 엔지니어 프론트엔드는 개발자입니다. 대규모 커머스 플랫폼 아키텍처 설계 경험이 있습니다.</p>
@@ -443,25 +443,25 @@
                     <div class="gw-card-footer">
                         <span class="gw-update-date">24. 07. 25 업데이트</span>
                         <div class="gw-card-actions">
-                            <button type="button" class="gw-scrap-btn">
+                            <button type="button" class="gw-scrap-btn" onclick="toggleScrap(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                 </svg>
                                 스크랩
                             </button>
-                            <button type="button" class="gw-offer-btn">입사 제안</button>
+                            <button type="button" class="gw-offer-btn" onclick="openOfferModal()">입사 제안</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 인재 카드 1 -->
+                <!-- 인재 카드 2 -->
                 <div class="gw-talent-card">
                     <div class="gw-card-header">
                         <img src="./images/management/default_profile.png" alt="프로필" class="gw-talent-avatar">
                         <div class="gw-card-title">
                             <span class="gw-badge">경력</span>
                             <h3>시니어 프론트엔드 엔지니어</h3>
-                            <p class="gw-talent-meta"><span class="gw-talent-name">이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
+                            <p class="gw-talent-meta"><span>이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
                         </div>
                     </div>
                     <p class="gw-talent-description">성능 최적화와 사용자 경험 개선에 관심이 많은 엔지니어 프론트엔드는 개발자입니다. 대규모 커머스 플랫폼 아키텍처 설계 경험이 있습니다.</p>
@@ -479,61 +479,25 @@
                     <div class="gw-card-footer">
                         <span class="gw-update-date">24. 07. 25 업데이트</span>
                         <div class="gw-card-actions">
-                            <button type="button" class="gw-scrap-btn">
+                            <button type="button" class="gw-scrap-btn" onclick="toggleScrap(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                 </svg>
                                 스크랩
                             </button>
-                            <button type="button" class="gw-offer-btn">입사 제안</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 인재 카드 1 -->
-                <div class="gw-talent-card">
-                    <div class="gw-card-header">
-                        <img src="./images/management/default_profile.png" alt="프로필" class="gw-talent-avatar">
-                        <div class="gw-card-title">
-                            <span class="gw-badge">경력</span>
-                            <h3>시니어 프론트엔드 엔지니어</h3>
-                            <p class="gw-talent-meta"><span class="gw-talent-name">이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
-                        </div>
-                    </div>
-                    <p class="gw-talent-description">성능 최적화와 사용자 경험 개선에 관심이 많은 엔지니어 프론트엔드는 개발자입니다. 대규모 커머스 플랫폼 아키텍처 설계 경험이 있습니다.</p>
-                    <div class="gw-talent-skills">
-                        <span class="gw-skill-tag">React</span>
-                        <span class="gw-skill-tag">TypeScript</span>
-                        <span class="gw-skill-tag">Next.js</span>
-                        <span class="gw-skill-tag">Zustand</span>
-                    </div>
-                    <div class="gw-talent-interests">
-                        <span class="gw-interest-tag interest-star">⭐ 강원 인재</span>
-                        <span class="gw-interest-tag interest-building">📋 대기업</span>
-                        <span class="gw-interest-tag interest-popular">🔥 인기 인재</span>
-                    </div>
-                    <div class="gw-card-footer">
-                        <span class="gw-update-date">24. 07. 25 업데이트</span>
-                        <div class="gw-card-actions">
-                            <button type="button" class="gw-scrap-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                                스크랩
-                            </button>
-                            <button type="button" class="gw-offer-btn">입사 제안</button>
+                            <button type="button" class="gw-offer-btn" onclick="openOfferModal()">입사 제안</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 인재 카드 1 -->
+                <!-- 인재 카드 3 -->
                 <div class="gw-talent-card">
                     <div class="gw-card-header">
                         <img src="./images/management/default_profile.png" alt="프로필" class="gw-talent-avatar">
                         <div class="gw-card-title">
                             <span class="gw-badge">경력</span>
                             <h3>시니어 프론트엔드 엔지니어</h3>
-                            <p class="gw-talent-meta"><span class="gw-talent-name">이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
+                            <p class="gw-talent-meta"><span>이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
                         </div>
                     </div>
                     <p class="gw-talent-description">성능 최적화와 사용자 경험 개선에 관심이 많은 엔지니어 프론트엔드는 개발자입니다. 대규모 커머스 플랫폼 아키텍처 설계 경험이 있습니다.</p>
@@ -551,22 +515,61 @@
                     <div class="gw-card-footer">
                         <span class="gw-update-date">24. 07. 25 업데이트</span>
                         <div class="gw-card-actions">
-                            <button type="button" class="gw-scrap-btn">
+                            <button type="button" class="gw-scrap-btn" onclick="toggleScrap(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                 </svg>
                                 스크랩
                             </button>
-                            <button type="button" class="gw-offer-btn">입사 제안</button>
+                            <button type="button" class="gw-offer-btn" onclick="openOfferModal()">입사 제안</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- 인재 카드 4 -->
+                <div class="gw-talent-card">
+                    <div class="gw-card-header">
+                        <img src="./images/management/default_profile.png" alt="프로필" class="gw-talent-avatar">
+                        <div class="gw-card-title">
+                            <span class="gw-badge">경력</span>
+                            <h3>시니어 프론트엔드 엔지니어</h3>
+                            <p class="gw-talent-meta"><span>이OO</span> (남 / 만 30대) · 경력 6년 · 강원도 춘천시</p>
+                        </div>
+                    </div>
+                    <p class="gw-talent-description">성능 최적화와 사용자 경험 개선에 관심이 많은 엔지니어 프론트엔드는 개발자입니다. 대규모 커머스 플랫폼 아키텍처 설계 경험이 있습니다.</p>
+                    <div class="gw-talent-skills">
+                        <span class="gw-skill-tag">React</span>
+                        <span class="gw-skill-tag">TypeScript</span>
+                        <span class="gw-skill-tag">Next.js</span>
+                        <span class="gw-skill-tag">Zustand</span>
+                    </div>
+                    <div class="gw-talent-interests">
+                        <span class="gw-interest-tag interest-star">⭐ 강원 인재</span>
+                        <span class="gw-interest-tag interest-building">📋 대기업</span>
+                        <span class="gw-interest-tag interest-popular">🔥 인기 인재</span>
+                    </div>
+                    <div class="gw-card-footer">
+                        <span class="gw-update-date">24. 07. 25 업데이트</span>
+                        <div class="gw-card-actions">
+                            <button type="button" class="gw-scrap-btn" onclick="toggleScrap(this)">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                                스크랩
+                            </button>
+                            <button type="button" class="gw-offer-btn" onclick="openOfferModal()">입사 제안</button>
+                        </div>
+                    </div>
+                </div>
+               
 
                 
 
                 
 
             </div>
+
+            
 
             <!-- 페이지네이션 -->
             <div class="pager">
@@ -590,106 +593,65 @@
         </div>
     </section>
 
-    <!-- 입사제안 모달 (페이지 하단에 추가) -->
-    <div class="gw-offer-modal-overlay">
-        <div class="gw-offer-modal">
-            <!-- 모달 헤더 -->
-            <div class="gw-offer-modal-header">
-                <h2 class="gw-offer-modal-title">입사 제안</h2>
-                <button type="button" class="gw-offer-modal-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- 모달 바디 -->
-            <div class="gw-offer-modal-body">
-                <div class="gw-offer-modal-content">
-                    인재명에게 제안하기
-                </div>
-            </div>
-
-            <!-- 모달 푸터 -->
-            <div class="gw-offer-modal-footer">
-                <button type="button" class="gw-offer-modal-confirm">제안 보내기</button>
-                <button type="button" class="gw-offer-modal-cancel">취소</button>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- 팝업 -->
+    <!-- 모달 1: 인재정보 조회 요청 -->
     <div id="noticeModal" class="gw-modal-overlay" onclick="closeModal('noticeModal')">
         <div class="gw-modal-content" onclick="event.stopPropagation()">
             <h3 class="gw-modal-title">인재정보 조회 요청</h3>
             <p class="gw-modal-text">인재정보 상세조회를 위해 사업자등록증 및 재직증명서 등록이 필요합니다. 요청 페이지로 이동하시겠습니까?</p>
             <div class="gw-modal-btns">
                 <button type="button" class="gw-modal-btn gw-btn-cancel" onclick="closeModal('noticeModal')">취소</button>
-                <button type="button" class="gw-modal-btn gw-btn-confirm" onclick="handleNoticeConfirm()">확인</button>
+                <button type="button" class="gw-modal-btn gw-btn-confirm">확인</button>
             </div>
         </div>
     </div>
 
+    <!-- 모달 2: 입사 제안 -->
     <div id="offerModal" class="gw-modal-overlay" onclick="closeModal('offerModal')">
         <div class="gw-modal-content" onclick="event.stopPropagation()">
             <h3 class="gw-modal-title">입사 제안</h3>
-            <p class="gw-modal-text">입사제안을 하시겠습니까?</p>
+            <p class="gw-modal-text"><span>홍길동</span>님에게 제안하기</p>
             <div class="gw-modal-btns">
                 <button type="button" class="gw-modal-btn gw-btn-cancel" onclick="closeModal('offerModal')">취소</button>
-                <button type="button" class="gw-modal-btn gw-btn-confirm" onclick="handleOfferConfirm()">확인</button>
+                <button type="button" class="gw-modal-btn gw-btn-confirm">확인</button>
             </div>
         </div>
     </div>
 
-    <!-- 입사제안 모달 (페이지 하단에 추가) -->
-    <div class="gw-offer-modal-overlay">
-        <div class="gw-offer-modal">
-            <!-- 모달 헤더 -->
-            <div class="gw-offer-modal-header">
-                <h2 class="gw-offer-modal-title">입사 제안</h2>
-                <button type="button" class="gw-offer-modal-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
 
-            <!-- 모달 바디 -->
-            <div class="gw-offer-modal-body">
-                <div class="gw-offer-modal-content">
-                    해당 인재에게 입사 제안을 보내시겠습니까?
-                </div>
-            </div>
-
-            <!-- 모달 푸터 -->
-            <div class="gw-offer-modal-footer">
-                <button type="button" class="gw-offer-modal-confirm">제안 보내기</button>
-                <button type="button" class="gw-offer-modal-cancel">취소</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Swiper JS (필수) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function( ) {
+        // 모달 열기
+        function openNoticeModal() { 
+            document.getElementById('noticeModal').style.display = 'flex'; 
+        }
+        
+        function openOfferModal() { 
+            document.getElementById('offerModal').style.display = 'flex'; 
+        }
+        
+        // 모달 닫기
+        function closeModal(id) { 
+            document.getElementById(id).style.display = 'none'; 
+        }
+        
+        // 스크랩 버튼 토글
+        function toggleScrap(btn) {
+            btn.classList.toggle('on');
+        }
+        
+        // Swiper 초기화
+        document.addEventListener('DOMContentLoaded', function() {
             const recommendSwiper = new Swiper('.gw-recommend-swiper', {
-                loop: true, slidesPerView: 1, spaceBetween: 20,
+                loop: true, 
+                slidesPerView: 1, 
+                spaceBetween: 20,
                 navigation: { nextEl: '.gw-next', prevEl: '.gw-prev' },
                 autoplay: { delay: 5000, disableOnInteraction: false },
-                observer: true, observeParents: true,
+                observer: true, 
+                observeParents: true,
             });
         });
 
-        function openNoticeModal() { document.getElementById('noticeModal').style.display = 'flex'; }
-        function openOfferModal() { document.getElementById('offerModal').style.display = 'flex'; }
-        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-        function handleNoticeConfirm() { alert('인재정보 조회 요청 페이지로 이동합니다.'); closeModal('noticeModal'); }
-        function handleOfferConfirm() { alert('입사 제안이 성공적으로 전송되었습니다.'); closeModal('offerModal'); }
-        window.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeModal('noticeModal'); closeModal('offerModal'); } });
-
-        /* 섹션 3: 인재 상세검색 기능 */
-
+        // ========== 섹션 3: 인재 상세검색 기능 ==========
         class SearchFilter {
             constructor() {
                 this.selectedFilters = {
@@ -707,26 +669,22 @@
             }
 
             attachEventListeners() {
-                // 셀렉트 박스 트리거 클릭
                 const selectTriggers = document.querySelectorAll('.gw-select-trigger');
                 selectTriggers.forEach(trigger => {
                     trigger.addEventListener('click', (e) => this.toggleDropdown(e));
                 });
 
-                // 체크박스 변경
                 const checkboxes = document.querySelectorAll('.gw-checkbox-item input[type="checkbox"]');
                 checkboxes.forEach(checkbox => {
                     checkbox.addEventListener('change', (e) => this.handleCheckboxChange(e));
                 });
 
-                // 키워드 태그 X 버튼 클릭
                 document.addEventListener('click', (e) => {
                     if (e.target.closest('.gw-keyword-tag-close')) {
                         this.removeKeywordTag(e);
                     }
                 });
 
-                // 드롭다운 외부 클릭 시 닫기
                 document.addEventListener('click', (e) => {
                     if (!e.target.closest('.gw-select-box')) {
                         this.closeAllDropdowns();
@@ -739,10 +697,7 @@
                 const dropdown = selectBox.querySelector('.gw-select-dropdown');
                 const trigger = selectBox.querySelector('.gw-select-trigger');
                 
-                // 다른 드롭다운 닫기
                 this.closeAllDropdowns();
-
-                // 현재 드롭다운 토글
                 dropdown.classList.add('active');
                 trigger.classList.add('active');
             }
@@ -759,39 +714,24 @@
                 const checkbox = e.target;
                 const filterType = checkbox.getAttribute('data-filter');
                 const value = checkbox.value;
-                const label = checkbox.closest('.gw-checkbox-item').querySelector('span').textContent;
 
                 if (checkbox.checked) {
-                    // 체크박스 체크됨
                     if (!this.selectedFilters[filterType].includes(value)) {
                         this.selectedFilters[filterType].push(value);
                     }
                 } else {
-                    // 체크박스 해제됨
                     this.selectedFilters[filterType] = this.selectedFilters[filterType].filter(item => item !== value);
                 }
 
-                // 키워드 업데이트
                 this.updateKeywords();
             }
-
 
             updateKeywords() {
                 const keywordsList = document.getElementById('keywordsList');
                 keywordsList.innerHTML = '';
 
-                const filterLabels = {
-                    job: '직종',
-                    location: '근무지',
-                    salary: '연봉',
-                    education: '학력',
-                    experience: '경력'
-                };
-
-                // 모든 필터 타입 순회
                 Object.keys(this.selectedFilters).forEach(filterType => {
                     this.selectedFilters[filterType].forEach(value => {
-                        // 해당 체크박스 찾기
                         const checkbox = document.querySelector(
                             `input[type="checkbox"][value="${value}"][data-filter="${filterType}"]`
                         );
@@ -822,7 +762,6 @@
                 const filterType = tag.getAttribute('data-filter');
                 const value = tag.getAttribute('data-value');
 
-                // 해당 체크박스 찾아서 해제
                 const checkbox = document.querySelector(
                     `input[type="checkbox"][value="${value}"][data-filter="${filterType}"]`
                 );
@@ -832,209 +771,14 @@
                     checkbox.dispatchEvent(new Event('change'));
                 }
             }
-
-            getSelectedFilters() {
-                return this.selectedFilters;
-            }
-
-            resetFilters() {
-                // 모든 체크박스 해제
-                const checkboxes = document.querySelectorAll('.gw-checkbox-item input[type="checkbox"]');
-                checkboxes.forEach(checkbox => {
-                    checkbox.checked = false;
-                });
-
-                // 필터 초기화
-                this.selectedFilters = {
-                    job: [],
-                    location: [],
-                    salary: [],
-                    education: [],
-                    experience: []
-                };
-
-                // UI 업데이트
-                this.updateKeywords();
-                
-                // 셀렉트 박스 텍스트 초기화
-                Object.keys(this.selectedFilters).forEach(filterType => {
-                    this.updateSelectBoxText(filterType);
-                });
-
-                this.closeAllDropdowns();
-            }
         }
-       /**
- * 섹션 4: 강원일자리 인재풀 - 스크랩 및 입사제안 기능
- */
-
-class TalentActions {
-    constructor() {
-        this.scraped = new Set();
-        this.init();
-    }
-
-    init() {
-        this.attachScrapListeners();
-        this.attachOfferListeners();
-        this.setupModal();
-        this.loadScrapedState();
-    }
-
-    /**
-     * 스크랩 버튼 이벤트 리스너
-     */
-    attachScrapListeners() {
-        const scrapBtns = document.querySelectorAll('.gw-scrap-btn');
-        scrapBtns.forEach((btn, index) => {
-            btn.addEventListener('click', (e) => this.toggleScrap(e, index));
-        });
-    }
-
-    /**
-     * 스크랩 토글 기능 (팝업 없음)
-     */
-    toggleScrap(e, index) {
-        e.preventDefault();
-        const btn = e.currentTarget;
-
-        if (btn.classList.contains('on')) {
-            // 스크랩 해제
-            btn.classList.remove('on');
-            this.scraped.delete(index);
-        } else {
-            // 스크랩 추가
-            btn.classList.add('on');
-            this.scraped.add(index);
-        }
-
-        // 로컬스토리지에 저장
-        this.saveScrapedState();
-    }
-
-    /**
-     * 스크랩 상태 저장
-     */
-    saveScrapedState() {
-        const scrapedArray = Array.from(this.scraped);
-        localStorage.setItem('scrapedTalents', JSON.stringify(scrapedArray));
-    }
-
-    /**
-     * 스크랩 상태 로드
-     */
-    loadScrapedState() {
-        const saved = localStorage.getItem('scrapedTalents');
-        if (saved) {
-            this.scraped = new Set(JSON.parse(saved));
-            const scrapBtns = document.querySelectorAll('.gw-scrap-btn');
-            scrapBtns.forEach((btn, index) => {
-                if (this.scraped.has(index)) {
-                    btn.classList.add('on');
-                }
-            });
-        }
-    }
-
-    /**
-     * 입사제안 버튼 이벤트 리스너
-     */
-    attachOfferListeners() {
-        const offerBtns = document.querySelectorAll('.gw-offer-btn');
-        offerBtns.forEach((btn) => {
-            btn.addEventListener('click', (e) => this.showOfferModal(e));
-        });
-    }
-
-    /**
-     * 입사제안 모달 표시
-     */
-    showOfferModal(e) {
-        e.preventDefault();
-        const card = e.currentTarget.closest('.gw-talent-card');
-        const talentName = card.querySelector('.gw-talent-name').textContent;
-
-        // 모달에 인재 정보 설정
-        const modalContent = document.querySelector('.gw-offer-modal-content');
-        modalContent.textContent = `${talentName}님 에게 제안하기`;
-
-        // 모달 표시
-        const modal = document.querySelector('.gw-offer-modal-overlay');
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    /**
-     * 모달 설정
-     */
-    setupModal() {
-        const modal = document.querySelector('.gw-offer-modal-overlay');
-        const closeBtn = document.querySelector('.gw-offer-modal-close');
-        const cancelBtn = document.querySelector('.gw-offer-modal-cancel');
-        const confirmBtn = document.querySelector('.gw-offer-modal-confirm');
-
-        // 닫기 버튼
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => this.closeModal());
-        }
-
-        // 취소 버튼
-        if (cancelBtn) {
-            cancelBtn.addEventListener('click', () => this.closeModal());
-        }
-
-        // 제안 보내기 버튼
-        if (confirmBtn) {
-            confirmBtn.addEventListener('click', () => this.sendOffer());
-        }
-
-        // 모달 배경 클릭
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    this.closeModal();
-                }
-            });
-        }
-    }
-
-    /**
-     * 모달 닫기
-     */
-    closeModal() {
-        const modal = document.querySelector('.gw-offer-modal-overlay');
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-
-    /**
-     * 제안 보내기
-     */
-    sendOffer() {
-        const modalContent = document.querySelector('.gw-offer-modal-content');
-        const talentName = modalContent.textContent.replace('님에게 제안하기', '');
-
-        console.log(`${talentName}님에게 제안을 보냈습니다.`);
-        alert(`${talentName}님에게 제안을 보냈습니다.`);
-
-        this.closeModal();
-    }
-}
-
-// DOM 로드 완료 후 초기화
-document.addEventListener('DOMContentLoaded', function() {
-    new TalentActions();
-});
 
         // 페이지 로드 시 초기화
         document.addEventListener('DOMContentLoaded', function() {
             const searchFilter = new SearchFilter();
-
-            // 전역 객체에 searchFilter 저장 (테스트용)
             window.searchFilter = searchFilter;
         });
 
-        
     </script>
 
 </body>
