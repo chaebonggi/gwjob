@@ -229,6 +229,66 @@
     font-size: 15px;
 }
 
+.gw-save-condition-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+.gw-save-form-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.gw-save-input-wrap {
+    margin-bottom: 15px;
+}
+
+.gw-save-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+.gw-save-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.gw-save-cancel-btn {
+    height: 36px;
+    padding: 0 20px;
+    background-color: #f3f4f6;
+    color: #666;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.gw-save-submit-btn {
+    height: 36px;
+    padding: 0 25px;
+    background-color: #0a59ee;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
 .gw-filter-btn {
     height: 40px;
     background-color: #fff;
@@ -418,14 +478,14 @@
 }
 
 .gw-list-item-logo {
-    width: 90px;
-    height: 90px;
-    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     align-self: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6b7280;
 }
 
 .gw-list-item-content {
@@ -445,22 +505,7 @@
     gap: 5px;
 }
 
-.gw-company-name {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #6b7280;
 
-}
-.gw-company-name::after {
-    content: '';
-    display: flex;
-    width: 16px;
-    height: 16px;
-    background: url(../images/recruitment/ico_company.png) no-repeat;
-}
 .gw-company-tit {
     font-size: 20px;
     font-weight: 700;
@@ -574,30 +619,39 @@
 /* 카드형 그리드 스타일 */
 .gw-list-container.card-mode {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
 .gw-list-container.card-mode .gw-list-item {
     flex-direction: column;
     padding: 25px;
-    gap: 20px;
+    gap: 0;
 }
 
 .gw-list-container.card-mode .gw-list-item-logo {
     width: 100%;
-    height: 160px;
+    justify-content: left;
 }
 
 .gw-list-container.card-mode .gw-list-item-right {
     text-align: left;
     margin-top: 10px;
-    padding-top: 20px;
+    padding: 20px 0 0;
     border-left: none;
     border-top: 1px solid #f3f4f6;
     flex-direction: row;
     align-items: center;
     min-width: auto;
+}
+.gw-list-container.card-mode .gw-tags {
+    display: block;          
+    white-space: nowrap;     
+    overflow: hidden;
+    width: 100%;
+}
+.gw-list-container.card-mode .gw-tag {
+    display: inline-block;
 }
 
 .gw-list-container.card-mode .gw-badge {
@@ -607,7 +661,7 @@
 
 .gw-list-container.card-mode .gw-meta {
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
 }
 
 /* 페이지네이션 */
@@ -647,7 +701,7 @@
 /* 반응형 */
 @media (max-width: 1024px) {
     .gw-list-container.card-mode {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -691,7 +745,7 @@
         padding: 6px 25px;
     }
     .gw-list-container.card-mode {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
     .gw-search-row {
         flex-wrap: wrap;

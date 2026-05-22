@@ -112,19 +112,31 @@
                 <div class="gw-search-row">
                     <input type="text" class="gw-search-input" placeholder="검색어를 입력하세요 (회사명, 공고명, 직무 등)">
                     <button class="gw-search-btn">검색</button>
-                    <button class="gw-filter-btn">상세검색 <span class="gw-ico-detail"></span></button>
+                    <!-- <button class="gw-filter-btn">상세검색 <span class="gw-ico-detail"></span></button> -->
                     <button class="gw-filter-btn">초기화 <span class="gw-ico-reset"></span></button>
-                    <button class="gw-filter-btn">검색조건 저장 <span class="gw-ico-save"></span></button>
+                    <button class="gw-filter-btn" id="btn-save-condition">검색조건 저장 <span class="gw-ico-save"></span></button>
+                </div>
+
+                <!-- 검색조건 저장 폼 -->
+                <div class="gw-save-condition-form" id="save-condition-form">
+                    <p class="gw-save-form-title">저장할 검색조건 이름</p>
+                    <div class="gw-save-input-wrap">
+                        <input type="text" class="gw-save-input" placeholder="검색조건 이름을 입력하세요 (최대 30자)">
+                    </div>
+                    <div class="gw-save-btn-wrap">
+                        <button class="gw-save-cancel-btn" id="btn-save-cancel">취소</button>
+                        <button class="gw-save-submit-btn">저장하기</button>
+                    </div>
                 </div>
             </div>
 
             <!-- 탭 영역 -->
             <div class="gw-tabs-section">
                 <div class="gw-tabs-container">
-                    <button class="gw-tab-btn active"><span class="ico gw-ico-ai"></span> AI추천(20)</button>
-                    <button class="gw-tab-btn">신규 (20) <span class="gw-tab-badge">NEW</span></button>
-                    <button class="gw-tab-btn">인기 (20)</button>
-                    <button class="gw-tab-btn">일반 (20)</button>
+                    <button class="gw-tab-btn active"><span class="ico gw-ico-ai"></span> AI추천(<span>20</span>)</button>
+                    <button class="gw-tab-btn">인기 조회수(<span>20</span>)</button>
+                    <button class="gw-tab-btn">외국인(<span>20</span>)</button>
+                    <button class="gw-tab-btn">장애인(<span>20</span>)</button>
                 </div>
             </div>
 
@@ -149,12 +161,11 @@
             <div class="gw-list-container" id="list-container">
                 <!-- 리스트 아이템 1 -->
                 <div class="gw-list-item">
-                    <div class="gw-list-item-logo"><img src="./images/recruitment/logo01.png" alt=""></div>
+                    <div class="gw-list-item-logo">강원관광재단</div>
                     <div class="gw-list-item-content">
                         <div class="gw-list-item-header">
                             <div class="gw-title-area">
                                 <a href="#" class="gw-company-info">
-                                    <span class="gw-company-name">강원관광재단</span>
                                     <p class="gw-company-tit">관광 콘텐츠 기획자</p>
                                 </a>
                             </div>
@@ -164,6 +175,7 @@
                             <span class="gw-tag">#관광기획</span>
                             <span class="gw-tag">#콘텐츠기획</span>
                             <span class="gw-tag">#마케팅</span>
+                            <span class="gw-tag">#기획력우대</span>
                             <span class="gw-tag">#기획력우대</span>
                         </div>
                         <div class="gw-meta">
@@ -181,12 +193,11 @@
 
                 <!-- 리스트 아이템 2 -->
                 <div class="gw-list-item">
-                    <div class="gw-list-item-logo"><img src="./images/recruitment/logo02.png" alt=""></div>
+                    <div class="gw-list-item-logo">강원바이오</div>
                     <div class="gw-list-item-content">
                         <div class="gw-list-item-header">
                             <div class="gw-title-area">
                                 <a href="#" class="gw-company-info">
-                                    <span class="gw-company-name">강원관광재단</span>
                                     <p class="gw-company-tit">관광 콘텐츠 기획자</p>
                                 </a>
                             </div>
@@ -213,12 +224,11 @@
 
                 <!-- 리스트 아이템 3 -->
                 <div class="gw-list-item">
-                    <div class="gw-list-item-logo"><img src="./images/recruitment/logo03.png" alt=""></div>
+                    <div class="gw-list-item-logo">WONJU</div>
                     <div class="gw-list-item-content">
                         <div class="gw-list-item-header">
                             <div class="gw-title-area">
                                 <a href="#" class="gw-company-info">
-                                    <span class="gw-company-name">강원관광재단</span>
                                     <p class="gw-company-tit">관광 콘텐츠 기획자</p>
                                 </a>
                             </div>
@@ -245,12 +255,11 @@
                 
                 <!-- 리스트 아이템 4 -->
                 <div class="gw-list-item">
-                    <div class="gw-list-item-logo"><img src="./images/recruitment/logo04.png" alt=""></div>
+                    <div class="gw-list-item-logo">춘천문화재단</div>
                     <div class="gw-list-item-content">
                         <div class="gw-list-item-header">
                             <div class="gw-title-area">
                                 <a href="#" class="gw-company-info">
-                                    <span class="gw-company-name">강원관광재단</span>
                                     <p class="gw-company-tit">관광 콘텐츠 기획자</p>
                                 </a>
                             </div>
@@ -326,6 +335,16 @@
                 $('.gw-view-btn').removeClass('active');
                 $(this).addClass('active');
                 $('#list-container').addClass('card-mode');
+            });
+
+            // 검색조건 저장 폼 토글
+            $('#btn-save-condition').on('click', function() {
+                $('#save-condition-form').slideToggle(200);
+            });
+
+            // 검색조건 저장 취소 버튼
+            $('#btn-save-cancel').on('click', function() {
+                $('#save-condition-form').slideUp(200);
             });
         });
     </script>
