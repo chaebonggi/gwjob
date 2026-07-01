@@ -1,262 +1,163 @@
 @charset "UTF-8";
 
-/* ==========================================================================
-   1. 기본 베이스 레이아웃 및 초기화 보정
-   ========================================================================== */
+.youthservice-wrap {
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
 .inner-section {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-}
-.youthservice-wrap * { 
-    box-sizing: border-box; 
-    font-family: 'Pretendard', sans-serif; 
+    position: relative;
 }
 
-/* ==========================================================================
-   2. 상단 비주얼 영역 (배너 박스)
-   ========================================================================== */
-.ys-top-section { position: relative; margin-bottom: 30px; padding-top: 20px; }
-.ys-banner-box { display: none; justify-content: space-between; align-items: center; padding: 50px 70px; border-radius: 24px; min-height: 220px; }
-.ys-banner-box.active { display: flex; }
-.ys-banner-box.ys-theme-youth { background-color: #e8f2ff; }
-.ys-banner-box.ys-theme-middle { background-color: #e2f1f6; }
-.ys-banner-box.ys-theme-women { background-color: #ffebee; }
+.ys-banner {
+    width: 100%;
+    margin-bottom: 30px;
+}
 
-.ys-banner-text .ys-badge { display: inline-block; padding: 6px 16px; font-size: 14px; font-weight: 600; border-radius: 30px; margin-bottom: 16px; color: #fff; }
-.ys-theme-youth .ys-badge { background-color: #0066ff; }
-.ys-theme-middle .ys-badge { background-color: #004ba0; }
-.ys-theme-women .ys-badge { background-color: #ff4081; }
-
-.ys-banner-text h2 { font-size: 38px; color: #222; margin: 0 0 12px 0; font-weight: 400; line-height: 1.3; }
-.ys-banner-text h2 strong { font-weight: 700; }
-.ys-theme-youth h2 strong { color: #0066ff; }
-.ys-theme-middle h2 strong { color: #004ba0; }
-.ys-theme-women h2 strong { color: #ff4081; }
-.ys-banner-text p { font-size: 16px; color: #555; margin: 0; }
-.ys-banner-img img { max-height: 150px; display: block; }
-
-/* 대분류 GNB형 메뉴 탭 */
-.ys-main-tab { display: flex; margin-top: -28px; padding-left: 50px; position: relative; z-index: 10; }
-.ys-tab-btn { border: none; background: #fff; padding: 14px 45px; font-size: 16px; font-weight: 600; color: #666; border-radius: 30px 30px 0 0; box-shadow: 0 -4px 12px rgba(0,0,0,0.06); cursor: pointer; margin-right: 6px; transition: all 0.25s ease; }
-.ys-tab-btn.active { color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.ys-tab-btn[data-tab="youth"].active { background-color: #0066ff; }
-.ys-tab-btn[data-tab="middle"].active { background-color: #004ba0; }
-.ys-tab-btn[data-tab="women"].active { background-color: #ff4081; }
-
-
-/* ==========================================================================
-   3. 중단 콘텐츠 영역 (반반 Flex 정렬 시스템)
-   ========================================================================== */
-.ys-content-container { display: none; gap: 24px; width: 100%; margin-bottom: 45px; }
-.ys-content-container.active { display: flex; }
-.ys-col-left, .ys-col-right { flex: 1; width: 50%; display: flex; flex-direction: column; gap: 24px; }
-
-.ys-card-box { background: #ffffff; border: 1px solid #eef2f8; border-radius: 20px; padding: 30px; box-shadow: 0 10px 25px rgba(135,150,180,0.06); position: relative; }
-.ys-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.ys-card-title { display: flex; gap: 12px; align-items: center; }
-.ys-card-title .ys-icon { font-size: 20px; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.ys-card-title h3 { font-size: 20px; color: #111; margin: 0; font-weight: 700; }
-.ys-card-title h3 p { font-size: 14px; color: #777; margin: 4px 0 0 0; font-weight: 400; }
-
-.ys-filter-tags { display: flex; gap: 6px; margin-bottom: 20px; }
-.ys-filter-tags button { border: 1px solid #e2e8f0; background: #ffffff; padding: 6px 16px; font-size: 14px; border-radius: 20px; color: #666; cursor: pointer; transition: all 0.2s ease; }
-
-
-/* ==========================================================================
-   🎨 중단 컨텐츠 가변/고정 컬러스펙 명세
-   ========================================================================== */
-.ys-content-youth .ys-style-job .ys-icon { background: #e8f2ff; }
-.ys-content-youth .ys-style-job .ys-filter-tags button.active { background: #0066ff; border-color: #0066ff; color: #fff; font-weight: 600; }
-.ys-content-youth .ys-style-job .ys-wide-action-btn { background: #e8f2ff; color: #0066ff; border-color: #cbdfff; }
-.ys-content-youth .ys-style-job .ys-wide-action-btn:hover { background: #d2e4ff; }
-.ys-content-youth .ys-style-job .target-main-color { background: #e8f2ff; color: #0066ff; }
-.ys-content-youth .ys-style-job .btn-bookmark.on::before { color: #0066ff; } /* 청년 활성화 하트 */
-
-.ys-content-middle .ys-style-job .ys-icon { background: #e2f1f6; }
-.ys-content-middle .ys-style-job .ys-filter-tags button.active { background: #004ba0; border-color: #004ba0; color: #fff; font-weight: 600; }
-.ys-content-middle .ys-style-job .ys-wide-action-btn { background: #e2f1f6; color: #004ba0; border-color: #bce1ec; }
-.ys-content-middle .ys-style-job .ys-wide-action-btn:hover { background: #caebf4; }
-.ys-content-middle .ys-style-job .target-main-color { background: #e2f1f6; color: #004ba0; }
-.ys-content-middle .ys-style-job .btn-bookmark.on::before { color: #004ba0; } /* 중장년 활성화 하트 */
-
-.ys-content-women .ys-style-job .ys-icon { background: #ffebee; }
-.ys-content-women .ys-style-job .ys-filter-tags button.active { background: #ff4081; border-color: #ff4081; color: #fff; font-weight: 600; }
-.ys-content-women .ys-style-job .ys-wide-action-btn { background: #ffebee; color: #ff4081; border-color: #ffcdd2; }
-.ys-content-women .ys-style-job .ys-wide-action-btn:hover { background: #ffcdd2; }
-.ys-content-women .ys-style-job .target-main-color { background: #ffebee; color: #ff4081; }
-.ys-content-women .ys-style-job .btn-bookmark.on::before { color: #ff4081; } /* 여성 활성화 하트 */
-
-.ys-style-policy .ys-icon { background: #e8f5e9; }
-.ys-style-policy .ys-filter-tags button.active { background: #2e7d32; border-color: #2e7d32; color: #fff; font-weight: 600; }
-.ys-style-policy .ys-wide-action-btn { background: #e8f5e9; color: #2e7d32; border-color: #c8e6c9; }
-.ys-style-policy .ys-wide-action-btn:hover { background: #c8e6c9; }
-.ys-style-policy .btn-bookmark.on::before { color: #2e7d32; } /* 정책 활성화 하트 */
-
-.ys-style-edu .ys-icon { background: #f3e5f5; }
-.ys-style-edu .ys-filter-tags button.active { background: #7b1fa2; border-color: #7b1fa2; color: #fff; font-weight: 600; }
-.ys-style-edu .ys-wide-action-btn { background: #f3e5f5; color: #7b1fa2; border-color: #e1bee7; }
-.ys-style-edu .ys-wide-action-btn:hover { background: #e1bee7; }
-.ys-style-edu .btn-bookmark.on::before { color: #7b1fa2; } /* 교육 활성화 하트 */
-.ys-style-edu .status-badge { border-color: #7b1fa2; color: #7b1fa2; }
-
-
-/* ==========================================================================
-   4. Swiper 내부 슬라이드 레이아웃 규격
-   ========================================================================== */
-.ys-slider-container { width: 100%; overflow: hidden; margin-bottom: 15px; }
-.ys-slider-container .swiper-wrapper { display: flex; }
-.ys-slider-container .swiper-slide { height: auto; display: flex; }
-
-.ys-slide-item { border: 1px solid #f0f4f9; background: #fafbfe; border-radius: 14px; padding: 20px 16px; position: relative; min-height: 202px; width: 100%; display: flex; flex-direction: column; }
-.tag-label { font-size: 12px; padding: 3px 8px; border-radius: 4px; font-weight: 600; align-self: flex-start; margin-bottom: 10px; }
-.tag-label.edu-purple { background: #f3e5f5; color: #7b1fa2; }
-.tag-sub { background: #eef2f8; color: #666; font-size: 12px; padding: 3px 8px; border-radius: 4px; margin-right: 5px; font-weight: 600; }
-
-.ys-slide-item .job-title { font-size: 16px; font-weight: 700; color: #222; margin: 0 0 10px 0; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ys-slide-item .job-title a { color: #222; text-decoration: none; }
-.ys-slide-item .job-title a:hover { text-decoration: underline; }
-.ys-slide-item .meta-desc { font-size: 13px; color: #666; margin-bottom: 10px; }
-.ys-slide-item .policy-desc { font-size: 13px; color: #666; line-height: 1.4; margin-bottom: 12px; height: 38px; overflow: hidden; }
-.job-info-tags { display: flex; gap: 4px; margin-bottom: 10px; }
-.job-info-tags span { font-size: 12px; color: #666; background: #eef2f8; padding: 2px 6px; border-radius: 4px; }
-.status-badge { position: absolute; top: 15px; right: 15px; font-size: 11px; background: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
-.job-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f3f7; padding-top: 10px; margin-top: auto; }
-.job-footer .date { font-size: 12px; color: #999; }
-
-/* -------------------------------------------------------------
-   ✨ [수정 반영] 북마크 버튼 별(★) -> 하트(♥) 캐릭터셋 오버라이딩
-   ------------------------------------------------------------- */
-.btn-bookmark { 
-    width: 22px; 
-    height: 22px; 
-    background: none; /* 오프 상태 이미지 해제 백업 */
-    border: none; 
-    cursor: pointer; 
-    display: inline-flex;
+.ys-banner-cont {
+    display: none;
+    width: 100%;
+    height: 260px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 0;
+    padding: 0 60px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border-radius: 16px;
 }
-/* 비활성화 상태 하트 캐릭터 명세 */
-.btn-bookmark::before { 
-    content: '♡'; 
-    color: #cbd5e1; 
-    font-size: 20px; 
+
+.ys-banner-cont.youth { 
+    background-color: #eff6fe;
+    background-image: url(../images/youthservice/banner-youth.png); 
+    background-position: bottom right;
+}
+
+.ys-banner-cont.middle { 
+    background-color: #e2f3fa; 
+    background-image: url(../images/youthservice/banner-middle.png); 
+    background-position: bottom right;
+}
+
+.ys-banner-cont.woman { 
+    background-color: #fef2f4; 
+    background-image: url(../images/youthservice/banner-woman.png); 
+    background-position: bottom right;
+}
+
+.ys-banner-txt {
+    text-align: left;
+}
+
+.ys-badge {
+    display: inline-block;
+    padding: 4px 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ys-banner-tit {
+    font-size: 56px;
+    color: #484848;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+
+.ys-banner-tit strong {
+    font-weight: 700;
+}
+
+.ys-banner-desc {
+    margin-top: 12px;
+    color: #484848;
+    font-size: 16px;
+}
+
+.bg-blue { background-color: #0a5fd2; }
+.c-blue { color: #0a5fd2; }
+
+.bg-navy { background-color: #06658d; }
+.c-navy { color: #06658d; }
+
+.bg-pink { background-color: #f64764; }
+.c-pink { color: #f64764; }
+
+.ys-tab-menu {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.ys-tab-list {
+    display: inline-flex;
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ececec;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.ys-tab-list li {
+   position: relative;
+}
+.ys-tab-list li button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   min-width: 200px;
+   padding: 10px 26px;
+   font-size: 18px;
+   border-radius: 30px;
+   cursor: pointer;
+}
+.ys-tab-list li button::before {
+   display: block;
+   content: '';
+   width: 20px;
+   height: 21px;
+   background: url(../images/youthservice/ico-button_off.png) center no-repeat;
+   background-size: contain;
+}
+.ys-tab-list li.active button::before {
+   background: url(../images/youthservice/ico-button_on.png) center no-repeat;
+}
+.ys-tab-list li.active button {
+    color: #ffffff;
     font-weight: bold;
 }
-/* 활성화 상태 (클래스 .on 상태) 하트 캐릭터 명세 */
-.btn-bookmark.on::before { 
-    content: '♥'; 
-    font-size: 20px;
+.ys-tab-list li.youth.active button {
+   background-color: #0a5fd2;
+}
+.ys-tab-list li.middle.active button {
+   background-color: #06658d;
+}
+.ys-tab-list li.woman.active button {
+   background-color: #f64764;
+}
+.ys-tab-list li:not(:first-child)::before {
+   content: '';
+   width: 1px;
+   height: 50%;
+   position: absolute;
+   left: -1px;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: #ececec;
 }
 
+.ys-content {
 
-/* ==========================================================================
-   5. 슬라이더 제어 및 상담 영역
-   ========================================================================== */
-.swiper-button-lock, .swiper-pagination-lock { display: none !important; } 
-.ys-slider-controls { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; min-height: 26px; }
-.ys-slider-controls button { border: none; background: none; font-size: 16px; color: #aaa; cursor: pointer; font-weight: bold; padding: 5px; }
-.ys-slider-controls button:hover { color: #333; }
-.ys-slider-controls .dots { display: flex; gap: 6px; }
-.ys-slider-controls .dots .swiper-pagination-bullet { width: 6px; height: 6px; background: #ddd; opacity: 1; border-radius: 50%; margin: 0 !important; }
-.ys-slider-controls .dots .swiper-pagination-bullet-active { background: #333; width: 14px; border-radius: 4px; }
-
-.ys-wide-action-btn { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none; border: 1px solid transparent; transition: background 0.2s ease; }
-
-.ys-consult-box { border-radius: 20px; padding: 35px; display: flex; justify-content: space-between; align-items: center; min-height: 232px; }
-.ys-consult-box.theme-youth { background-color: #ebf3ff; }
-.ys-consult-box.theme-middle { background-color: #e2f1f6; }
-.ys-consult-box.theme-women { background-color: #ffebee; }
-.consult-left h3 { font-size: 22px; color: #222; margin: 0 0 10px 0; font-weight: 700; line-height: 1.4; }
-.consult-left p { font-size: 14px; color: #555; margin: 0 0 20px 0; line-height: 1.5; }
-
-.theme-youth .btn-consult-link { background: #0066ff; }
-.theme-middle .btn-consult-link { background: #004ba0; }
-.theme-women .btn-consult-link { background: #ff4081; }
-.btn-consult-link { display: inline-block; color: #fff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; transition: filter 0.2s ease; }
-.btn-consult-link:hover { filter: brightness(0.92); }
-
-.consult-right-menu { display: flex; gap: 10px; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-.consult-right-menu .menu-item { display: flex; flex-direction: column; align-items: center; width: 85px; }
-.consult-right-menu .menu-item .ico { width: 32px; height: 32px; background: #f1f5fd no-repeat center / contain; margin-bottom: 8px; }
-.consult-right-menu .menu-item .ico::before { content: '🔔'; font-size: 20px; display: block; text-align: center; }
-.consult-right-menu .menu-item .txt { font-size: 13px; color: #333; font-weight: 600; text-align: center; }
-
-.ys-bottom-banner-link { border-radius: 20px; padding: 22px 40px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; cursor: pointer; }
-.ys-bottom-banner-link.theme-youth { background: #cbdfff; }
-.ys-bottom-banner-link.theme-middle { background: #caebf4; }
-.ys-bottom-banner-link.theme-women { background: #ffcdff; }
-.ys-bottom-banner-link h4 { font-size: 18px; color: #111; margin: 0 0 6px 0; font-weight: 700; }
-.ys-bottom-banner-link p { font-size: 13px; color: #555; margin: 0; }
-.ys-bottom-banner-link .banner-img-mock img { max-height: 70px; display: block; }
-
-
-/* ==========================================================================
-   6. 최하단 100% 가로 와이드 풀 스크린 배경 및 카드 명세
-   ========================================================================== */
-.ys-bottom-full-bg { display: none; width: 100%; background-color: #f6f6f6; padding: 20px 0 60px 0; margin-top: 10px; }
-.ys-bottom-full-bg.active { display: flex; }
-
-.ys-bottom-section { display: flex; flex-direction: column; width: 100%; }
-.ys-section-title { font-size: 24px; color: #111; font-weight: 700; margin: 20px 0 20px 0; display: flex; align-items: flex-end; gap: 15px; }
-.ys-section-title span { font-size: 14px; color: #666; font-weight: 400; margin-bottom: 3px; }
-
-.ys-bottom-grid { display: flex; gap: 24px; width: 100%; margin-bottom: 24px; }
-.ys-b-card { flex: 1; width: 50%; background: #ffffff; border: 1px solid #eef2f8; border-radius: 20px; padding: 30px; box-shadow: 0 10px 25px rgba(135,150,180,0.03); display: flex; flex-direction: column; min-height: 280px; }
-
-.ys-b-header { margin-bottom: 25px; }
-.ys-b-title { display: flex; gap: 12px; align-items: center; }
-.ys-b-title .ys-b-icon { font-size: 20px; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.ys-b-title h3 { font-size: 20px; color: #111; margin: 0; font-weight: 700; }
-.ys-b-title h3 p { font-size: 14px; color: #777; margin: 4px 0 0 0; font-weight: 400; }
-
-.ys-b-body { display: flex; flex-direction: column; gap: 16px; margin-bottom: 25px; flex-grow: 1; }
-.ys-row-item { display: flex; align-items: center; width: 100%; }
-
-.ys-badge-label, .ys-badge-dday { display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; width: 100px; text-align: center; white-space: nowrap; margin-right: 15px; }
-.ys-row-txt { margin: 0; font-size: 15px; color: #333; font-weight: 500; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ys-row-txt a { color: #333; text-decoration: none; }
-.ys-row-txt a:hover { text-decoration: underline; }
-
-.ys-bottom-bg-youth .ys-b-style-main .ys-b-icon { background: #e8f2ff; }
-.ys-bottom-bg-youth .ys-b-style-main .ys-badge-label { background: #e8f2ff; color: #0066ff; }
-.ys-bottom-bg-youth .ys-b-style-main .ys-b-action-btn { border: 1px solid #cbdfff; background: #ffffff; color: #0066ff; }
-.ys-bottom-bg-youth .ys-b-style-main .ys-b-action-btn:hover { background: #f4f8ff; }
-
-.ys-bottom-bg-middle .ys-b-style-main .ys-b-icon { background: #e2f1f6; }
-.ys-bottom-bg-middle .ys-b-style-main .ys-badge-label { background: #e2f1f6; color: #004ba0; }
-.ys-bottom-bg-middle .ys-b-style-main .ys-b-action-btn { border: 1px solid #bce1ec; background: #ffffff; color: #004ba0; }
-.ys-bottom-bg-middle .ys-b-style-main .ys-b-action-btn:hover { background: #f2f9f6; }
-
-.ys-bottom-bg-women .ys-b-style-main .ys-b-icon { background: #ffebee; }
-.ys-bottom-bg-women .ys-b-style-main .ys-badge-label { background: #ffebee; color: #ff4081; }
-.ys-bottom-bg-women .ys-b-style-main .ys-b-action-btn { border: 1px solid #ffcdd2; background: #ffffff; color: #ff4081; }
-.ys-bottom-bg-women .ys-b-style-main .ys-b-action-btn:hover { background: #fff5f6; }
-
-.ys-b-style-fixed .ys-b-icon { background: #e8f5e9; }
-.ys-b-style-fixed .ys-badge-dday { background: #e8f5e9; color: #2e7d32; }
-.ys-b-action-btn-green { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; padding: 13px; font-size: 14px; font-weight: 600; border-radius: 10px; text-align: center; text-decoration: none; transition: background 0.2s ease; border: 1px solid #c8e6c9; background: #ffffff; color: #2e7d32; }
-.ys-b-action-btn-green:hover { background: #f4fbf5; }
-
-.ys-b-action-btn { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; padding: 13px; font-size: 14px; font-weight: 600; border-radius: 10px; text-align: center; text-decoration: none; transition: background 0.2s ease; }
-
-.ys-bottom-flow-bar { border-radius: 16px; padding: 24px 35px; display: flex; flex-direction: column; gap: 16px; }
-.ys-bottom-bg-youth .ys-bottom-flow-bar { background-color: #ebf3ff; }
-.ys-bottom-bg-middle .ys-bottom-flow-bar { background-color: #e2f1f6; }
-.ys-bottom-bg-women .ys-bottom-flow-bar { background-color: #ffebee; }
-
-.ys-bottom-flow-bar .flow-main-title { font-size: 18px; font-weight: 700; color: #222; }
-.flow-steps-grid { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 10px; }
-.flow-step-box { display: flex; align-items: center; gap: 12px; flex: 1; }
-
-.ys-bottom-bg-youth .flow-step-box .flow-num { background: #0066ff; color: #ffffff; }
-.ys-bottom-bg-middle .flow-step-box .flow-num { background: #004ba0; color: #ffffff; }
-.ys-bottom-bg-women .flow-step-box .flow-num { background: #ff4081; color: #ffffff; }
-
-.flow-step-box .flow-num { font-size: 14px; font-weight: 700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.flow-txt-box strong { display: block; font-size: 15px; color: #111; margin-bottom: 4px; font-weight: 700; }
-.flow-txt-box p { margin: 0; font-size: 13px; color: #666; line-height: 1.3; }
+}
+.ys-content-item {
+   background-color: #fefefe;
+   border: 1px solid #ececec;
+   border-radius: 20px;
+}
