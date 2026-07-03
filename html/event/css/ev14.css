@@ -79,7 +79,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
  .event14 #gameContainer .board_start a { zoom:0.8 } 
  }
 @media (max-width: 640px){
- .event14 .innerSection { padding: 0 10px; } 
+ .event14 .innerSection { padding: 0 5px; } 
  .event14 .ev-top__title { justify-content: center; } 
  .event14 .ev-top__date { display: none; } 
  .event14 .ev-visual__txt { font-size: 2rem; } 
@@ -97,8 +97,8 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event14 .ev-prize__list .badge { width: 40px; height: 40px; top: -20px; left: 4px; } 
 .event14 .ev_ticket p { font-size: 3rem; } 
 .event14 .ev_ticket p strong { font-size: 3.6rem; } 
-.event14 #gameContainer { margin: 15rem auto 0; zoom:0.4 } 
-.event14 #gameContainer .board_start a { zoom:0.8 } 
+.event14 #gameContainer { zoom:0.52; } 
+.event14 #gameContainer .board_start a { zoom: 0.9; } 
 .event14 .popup_wrap { width: 95%; } 
 .event14 .result_img_box { min-height: initial; } 
 .event14 .result_img_box img {max-width: 100px; max-height: initial; } 
