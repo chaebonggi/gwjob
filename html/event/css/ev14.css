@@ -101,7 +101,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event14 #gameContainer .board_start a { zoom:0.8 } 
 .event14 .popup_wrap { width: 95%; } 
 .event14 .result_img_box { min-height: initial; } 
-.event14 .result_img_box img { max-height: initial; } 
+.event14 .result_img_box img {max-width: 100px; max-height: initial; } 
  }
 
  
