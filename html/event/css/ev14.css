@@ -72,7 +72,8 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
  .event14 .popup_confirm_btn { width: 12rem; padding: 1.2rem 0; background: #353a3f; color: #ffffff; border: none; border-radius: 6px; font-size: 1.6rem; font-weight: 500; cursor: pointer; transition: background 0.2s; } 
  .event14 .popup_confirm_btn:hover { background: #222528; } 
 
- @media (max-width: 768px) { html { font-size: 8px; } 
+ @media (max-width: 768px) { 
+ html { font-size: 8px; } 
  .event14 .ev-visual__img img { max-width: 60rem; } 
  .event14 #gameContainer { zoom:0.75 } 
  .event14 #gameContainer .board_start a { zoom:0.8 } 
@@ -98,10 +99,9 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event14 .ev_ticket p strong { font-size: 3.6rem; } 
 .event14 #gameContainer { margin: 15rem auto 0; zoom:0.4 } 
 .event14 #gameContainer .board_start a { zoom:0.8 } 
-
 .event14 .popup_wrap { width: 95%; } 
 .event14 .result_img_box { min-height: initial; } 
 .event14 .result_img_box img { max-height: initial; } 
-}
+ }
 
  
