@@ -67,7 +67,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
  .event14 .result_img_box { display: flex; justify-content: center; align-items: center; min-height: 140px; margin-bottom: 15px; } 
  .event14 .result_img_box img { max-width: 150px; max-height: 150px; object-fit: contain; } 
  .event14 .result_msg_title { font-size: 2.2rem; font-weight: 700; color: #ef7b1c; margin: 0 0 8px 0; } 
- .event14 .result_msg_content { font-size: 1.8rem; color: #333333; margin: 0; font-weight: 500; word-break: keep-all;} 
+ .event14 .result_msg_content { font-size: 1.8rem; color: #333333; margin: 0; font-weight: 500; word-break: keep-all; } 
  .event14 .popup_btn_wrap { display: flex; justify-content: center; } 
  .event14 .popup_confirm_btn { width: 12rem; padding: 1.2rem 0; background: #353a3f; color: #ffffff; border: none; border-radius: 6px; font-size: 1.6rem; font-weight: 500; cursor: pointer; transition: background 0.2s; } 
  .event14 .popup_confirm_btn:hover { background: #222528; } 
@@ -79,7 +79,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
  }
 @media (max-width: 640px){
  .event14 .innerSection { padding: 0 10px; } 
- .event14 .ev-top__title {justify-content: center;}
+ .event14 .ev-top__title { justify-content: center; } 
  .event14 .ev-top__date { display: none; } 
  .event14 .ev-visual__txt { font-size: 2rem; } 
  .event14 .ev-visual__txt p em { display: block; } 
@@ -99,17 +99,9 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event14 #gameContainer { margin: 15rem auto 0; zoom:0.4 } 
 .event14 #gameContainer .board_start a { zoom:0.8 } 
 
-.event14 .popup_wrap {
-    width: 95%;
+.event14 .popup_wrap { width: 95%; } 
+.event14 .result_img_box { min-height: initial; } 
+.event14 .result_img_box img { max-height: initial; } 
 }
-.event14 .result_img_box {
-    min-height: 120px;
-}
-.event14 .result_img_box img {
-    max-width: 120px;
-    max-height: 120px;
-}
-
- }
 
  
