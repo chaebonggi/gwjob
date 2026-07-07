@@ -166,17 +166,23 @@
     margin: 0 auto;
     position: relative;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
 }
 
 .tl-content-wrap.active {
     display: grid;
 }
 .tl-content-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     padding: 24px;
     background-color: #ffffff;
     border: 1px solid #ececec;
     border-radius: 20px;
+}
+.tl-slider-container {
+    width: 100%;
 }
 .tl-content-title {
     display: flex;
@@ -241,15 +247,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 200px;
     margin-top: 20px;
-    padding: 20px;
+    padding: 14px;
     background-color: #ffffff;
     border: 1px solid #ececec;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 .tl-labels {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 .tl-label {
     padding: 3px 10px;
@@ -267,12 +274,11 @@
 }
 .tl-info {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 .tl-info-corp {
     color: #8c8c8c;
     font-size: 14px;
-    margin-bottom: 4px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -295,6 +301,11 @@
     display: -webkit-box;    
     -webkit-line-clamp: 2;   
     -webkit-box-orient: vertical;
+}
+.tl-info-time {
+    color: #8c8c8c;
+    font-size: 14px;
+    line-height: 1.5;
 }
 .tl-tags {
     display: block !important;
@@ -335,8 +346,8 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 14px;
-    padding-top: 12px;
+    margin-top: 10px;
+    padding-top: 10px;
     border-top: 1px solid #f4f4f4;
 }
 .tl-util-date {
@@ -365,7 +376,7 @@
 }
 .tailored-wrap .tl-more-btn {
     display: block;
-    margin-top: 20px;
+    margin-top: auto;
     padding: 12px;
     background-color: #f2f7ff;
     color: #316cd5;
@@ -385,60 +396,119 @@
     color: #744fc8;
     border-color: #744fc8;
 }
+.tl-slider-controls {
+    display: flex;
+    width: 100px;
+    margin: 10px auto;
+    color: #ddd;
+    text-align: center;
+}
+.s-green .swiper-pagination-bullet-active { background-color: #45a97d; }
+.s-purple .swiper-pagination-bullet-active { background-color: #744fc8; }
 
-/* ===================================================
-   [추가] 4번 아이템 복합 배너 랩 영역 전용 스타일링
-   =================================================== */
 .tl-banner-item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
+    gap: 20px;
+    padding: 0;
+    border: none;
 }
 .tl-consult-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-    padding: 30px;
-    background-color: #ffffff;
-    border: 1px solid #ececec;
-    border-radius: 20px;
-}
-.tl-consult-box h4 {
-    color: #484848;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-.tl-consult-box .btn-consult {
-    display: inline-block;
-    padding: 10px 24px;
-    background-color: #484848;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 30px;
-}
-.tl-mini-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
     padding: 30px;
     background-color: #eff6fe;
     border-radius: 20px;
 }
-.tl-mini-banner h4 {
-    color: #0a5fd2;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
+.tl-consult-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.tl-mini-banner p {
-    color: #666666;
-    font-size: 15px;
+.tl-consult-tit {
+    margin-bottom: 26px;
+    color: #484848;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.tl-consult-txt {
+    color: #484848;
+    font-size: 18px;
+    font-weight: 400;
+}
+.tl-consult-box ul {
+    display: flex;
+    padding: 26px 0;
+    background-color: #fff;
+    border: 2px solid #ececec;
+    border-radius: 15px;
+}
+.tl-consult-box li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    padding: 20px 30px;
+    color: #484848;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+    border-left: 1px solid #ececec;
+}
+.tl-consult-box li:first-child {
+    border-left: none;
+}
+.tl-consult-box li::before {
+    content: '';
+    width: 57px;
+    height: 47px;
+    background: url(../images/tailored/ico_banner_01.png) center / contain no-repeat;
+}
+.tl-consult-box li:nth-child(2)::before {
+    background-image: url(../images/tailored/ico_banner_02.png);
+}
+.tl-consult-box li:nth-child(3)::before {
+    background-image: url(../images/tailored/ico_banner_03.png);
+}
+
+.tl-banner-item .tl-consult-btn {
+    max-width: 162px;
+    width: 100%;
+    margin-top: auto;
+    padding: 8px;
+    background-color: #0a5fd2;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center
+}
+.tl-consult-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: 230px;
+    padding: 30px;
+    background-image: url(../images/tailored/banner_01.png);
+    background-color: #d1f2fe;
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    border-radius: 20px;
+}
+.tl-cbanner-tit {
+    color: #484848;
+    font-size: 26px;
+    font-weight: 700;
+}
+.tl-cbanner-txt {
+    color: #484848;
+    font-size: 16px;
+    font-weight: 400;
 }
