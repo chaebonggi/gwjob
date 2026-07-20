@@ -385,6 +385,7 @@ html {
     font-size: 1.4rem;
 }
 .tl-util-bookmark { 
+    flex-shrink: 0;
     margin-left: auto;
     width: 2.0rem; 
     height: 2.0rem; 
@@ -404,8 +405,6 @@ html {
 .tl-util-bookmark.on::before { 
     content: '♥';
 }
-
-/* [보정 및 호버 구현] 더보기 버튼 공통 디자인 인터페이스 속도 선언 */
 .tl-more-btn {
     display: block;
     margin-top: auto;
@@ -415,10 +414,9 @@ html {
     border: 1px solid transparent;
     border-radius: 1.0rem;
     text-align: center;
-    transition: all 0.25s ease; /* 마우스 오버 시 부드러운 전환 효과 */
+    transition: all 0.25s ease;
 }
 
-/* 각 서브 테마별 Hover 효과 명세 (텍스트 및 테두리 색상이 완전 반전) */
 .tl-more-btn.m-blue {
     background-color: #f2f7ff;
     color: #316cd5;
@@ -805,6 +803,13 @@ html {
     .tl-content-item {
         border-radius: 1rem;
     }
+    .tl-content-title .tl-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    .tl-content-title .tl-icon img {
+        max-width: 40%;
+    }
     .tl-notice-cont {
         flex-direction: column;
         gap: 2rem;
@@ -855,5 +860,9 @@ html {
         width: 4.6rem;
         height: 4.6rem;
         font-size: 1.8rem;
+    }
+    .tl-flow-list {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
