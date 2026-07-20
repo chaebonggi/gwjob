@@ -1,35 +1,43 @@
 @charset "UTF-8";
+html {
+    font-size: 10px; /* 10px = 1rem 공식 수립 */
+}
 
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+}
 .tailored-wrap {
     width: 100%;
-    padding: 40px 0;
+    padding: 4.0rem 0;
     box-sizing: border-box;
 }
 
 .inner-section {
-    max-width: 1440px;
+    max-width: 144.0rem;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2.0rem;
     box-sizing: border-box;
     position: relative;
 }
 
 .tl-banner {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 3.0rem;
 }
 
 .tl-banner-cont {
     display: none;
     width: 100%;
-    height: 260px;
+    height: 26.0rem;
     justify-content: space-between;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 6.0rem;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    border-radius: 16px;
+    border-radius: 1.6rem;
 }
 
 .tl-banner-cont.youth { 
@@ -56,17 +64,17 @@
 
 .tl-badge {
     display: inline-block;
-    padding: 4px 30px;
-    border-radius: 30px;
+    padding: 0.4rem 3.0rem;
+    border-radius: 3.0rem;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
 }
 
 .tl-banner-tit {
-    font-size: 56px;
+    font-size: 5.6rem;
     color: #484848;
-    letter-spacing: -2px;
+    letter-spacing: -0.2rem;
     font-weight: 700;
 }
 
@@ -75,9 +83,9 @@
 }
 
 .tl-banner-desc {
-    margin-top: 12px;
+    margin-top: 1.2rem;
     color: #484848;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .bg-blue { background-color: #0a5fd2; }
@@ -100,7 +108,7 @@
 
 .tl-tab-menu {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 4.0rem;
 }
 
 .tl-tab-list {
@@ -110,7 +118,7 @@
     padding: 0;
     list-style: none;
     border: 1px solid #ececec;
-    border-radius: 30px;
+    border-radius: 3.0rem;
     overflow: hidden;
 }
 .tl-tab-list li {
@@ -120,11 +128,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 1.0rem;
     min-width: 200px;
-    padding: 10px 26px;
-    font-size: 18px;
-    border-radius: 30px;
+    padding: 1.0rem 2.6rem;
+    font-size: 1.8rem;
+    border-radius: 3.0rem;
     cursor: pointer;
     background: none;
     border: none;
@@ -132,13 +140,12 @@
 .tl-tab-list li button::before {
     display: block;
     content: '';
-    width: 20px;
-    height: 21px;
-    background: url(../images/tailored/ico-button_off.png) center no-repeat;
-    background-size: contain;
+    width: 2.0rem;
+    height: 2.1rem;
+    background: url(../images/tailored/ico-button_off.png) center / contain no-repeat;
 }
 .tl-tab-list li.active button::before {
-    background: url(../images/tailored/ico-button_on.png) center no-repeat;
+    background: url(../images/tailored/ico-button_on.png) center / contain no-repeat;
 }
 .tl-tab-list li.active button {
     color: #ffffff;
@@ -164,13 +171,16 @@
     background-color: #ececec;
 }
 
+/* ==========================================================================
+   3. 중단 콘텐츠 영역 (반반 Flex/Grid 정렬 시스템)
+   ========================================================================== */
 .tl-content-wrap {
     display: none;
     width: 100%;
     margin: 0 auto;
     position: relative;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 2.0rem;
 }
 
 .tl-content-wrap.active {
@@ -180,10 +190,10 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    padding: 24px;
+    padding: 2.4rem;
     background-color: #ffffff;
     border: 1px solid #ececec;
-    border-radius: 20px;
+    border-radius: 2.0rem;
 }
 .tl-slider-container {
     width: 100%;
@@ -191,15 +201,15 @@
 .tl-content-title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 1.2rem;
 }
 .tl-content-title .tl-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 50px;
-    height: 50px;
+    width: 5.0rem;
+    height: 5.0rem;
     background-image: url(../images/tailored/tl-ico-bg.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -207,29 +217,29 @@
 }
 .tl-content-title h3 {
     color: #484848;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.4;
 }
 .tl-content-title h3 p {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #8c8c8c;
-    margin-top: 2px;
+    margin-top: 0.2rem;
 }
 .tl-filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 20px;
+    gap: 0.6rem;
+    margin-top: 2.0rem;
 }
 .tl-filters button {
-    padding: 6px 20px;
+    padding: 0.6rem 2.0rem;
     background-color: #f4f4f4;
     color: #8c8c8c;
-    font-size: 14px;
+    font-size: 1.4rem;
     border: 1px solid #ececec;
-    border-radius: 30px;
+    border-radius: 3.0rem;
     cursor: pointer;
 }
 .tl-filters button.active {
@@ -259,22 +269,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 200px;
-    margin-top: 20px;
-    padding: 14px;
+    height: 20.0rem;
+    margin-top: 2.0rem;
+    padding: 1.4rem;
     background-color: #ffffff;
     border: 1px solid #ececec;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    border-radius: 1.4rem;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.02);
 }
 .tl-labels {
-    margin-bottom: 10px;
+    margin-bottom: 1.0rem;
 }
 .tl-label {
-    padding: 3px 10px;
-    font-size: 13px;
+    padding: 0.3rem 1.0rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 0.4rem;
 }
 .tl-label.label-blue {
     color: #316cd5;
@@ -294,11 +304,11 @@
 }
 .tl-info {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 1.0rem;
 }
 .tl-info-corp {
     color: #8c8c8c;
-    font-size: 14px;
+    font-size: 1.4rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -306,7 +316,7 @@
 .tl-info-title a {
     display: block;
     color: #484848;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -314,7 +324,7 @@
 }
 .tl-info-txt {
     color: #8c8c8c;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5;
     overflow: hidden;        
     text-overflow: ellipsis; 
@@ -324,7 +334,7 @@
 }
 .tl-info-time {
     color: #8c8c8c;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5;
 }
 .tl-tags {
@@ -341,12 +351,12 @@
     vertical-align: middle;
     flex-shrink: 0 !important;
     width: auto !important;
-    padding: 3px 10px;
-    margin-right: 4px;
+    padding: 0.3rem 1.0rem;
+    margin-right: 0.4rem;
     background-color: #f4f4f4;
     color: #8c8c8c;
-    font-size: 12px;
-    border-radius: 4px;    
+    font-size: 1.2rem;
+    border-radius: 0.4rem;    
     text-overflow: clip;
     overflow: visible;
 }
@@ -366,18 +376,18 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 1.0rem;
+    padding-top: 1.0rem;
     border-top: 1px solid #f4f4f4;
 }
 .tl-util-date {
     color: #8c8c8c;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .tl-util-bookmark { 
     margin-left: auto;
-    width: 20px; 
-    height: 20px; 
+    width: 2.0rem; 
+    height: 2.0rem; 
     background: none;
     border: none; 
     cursor: pointer; 
@@ -389,52 +399,80 @@
 .tl-util-bookmark::before { 
     content: '♡'; 
     color: #cbd5e1; 
-    font-size: 22px; 
+    font-size: 2.2rem; 
 }
 .tl-util-bookmark.on::before { 
     content: '♥';
 }
+
+/* [보정 및 호버 구현] 더보기 버튼 공통 디자인 인터페이스 속도 선언 */
 .tl-more-btn {
     display: block;
     margin-top: auto;
-    padding: 12px;
-    background-color: #f2f7ff;
-    color: #316cd5;
-    font-size: 16px;
+    padding: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    border: 1px solid #316cd5;
-    border-radius: 10px;
+    border: 1px solid transparent;
+    border-radius: 1.0rem;
     text-align: center;
+    transition: all 0.25s ease; /* 마우스 오버 시 부드러운 전환 효과 */
 }
+
+/* 각 서브 테마별 Hover 효과 명세 (텍스트 및 테두리 색상이 완전 반전) */
 .tl-more-btn.m-blue {
     background-color: #f2f7ff;
     color: #316cd5;
     border-color: #316cd5;
 }
+.tl-more-btn.m-blue:hover {
+    background-color: #316cd5 !important;
+    color: #ffffff !important;
+}
+
 .tl-more-btn.m-green {
     background-color: #eafdf5;
     color: #45a97d;
     border-color: #45a97d;
 }
+.tl-more-btn.m-green:hover {
+    background-color: #45a97d !important;
+    color: #ffffff !important;
+}
+
 .tl-more-btn.m-purple {
     background-color: #f4f0fc;
     color: #744fc8;
     border-color: #744fc8;
 }
+.tl-more-btn.m-purple:hover {
+    background-color: #744fc8 !important;
+    color: #ffffff !important;
+}
+
 .tl-more-btn.m-navy {
     background-color: #ebf6fa;
     color: #06658d;
     border-color: #06658d;
 }
+.tl-more-btn.m-navy:hover {
+    background-color: #06658d !important;
+    color: #ffffff !important;
+}
+
 .tl-more-btn.m-pink {
     background-color: #fef2f4;
     color: #f64764;
     border-color: #f64764;
 }
+.tl-more-btn.m-pink:hover {
+    background-color: #f64764 !important;
+    color: #ffffff !important;
+}
+
 .tl-slider-controls {
     display: flex;
     width: 100px;
-    margin: 10px auto;
+    margin: 1.0rem auto;
     color: #ddd;
     text-align: center;
 }
@@ -446,7 +484,7 @@
 .tl-banner-item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2.0rem;
     padding: 0;
     border: none;
 }
@@ -454,11 +492,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 1.0rem;
     height: 100%;
-    padding: 30px;
+    padding: 3.0rem;
     background-color: #eff6fe;
-    border-radius: 20px;
+    border-radius: 2.0rem;
 }
 .middle .tl-consult-box {
     background-color: #edf3f5;
@@ -472,33 +510,33 @@
     height: 100%;
 }
 .tl-consult-tit {
-    margin-bottom: 26px;
+    margin-bottom: 2.6rem;
     color: #484848;
-    font-size: 30px;
+    font-size: 3.0rem;
     font-weight: 700;
     line-height: 1.3;
 }
 .tl-consult-txt {
     color: #484848;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 .tl-consult-box ul {
     display: flex;
-    padding: 26px 0;
+    padding: 2.6rem 0;
     background-color: #fff;
     border: 2px solid #ececec;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 .tl-consult-box li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 1.6rem;
     flex: 1;
-    padding: 20px 30px;
+    padding: 2.0rem 3.0rem;
     color: #484848;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 500;
     text-align: center;
     line-height: 1.3;
@@ -509,8 +547,8 @@
 }
 .tl-consult-box li::before {
     content: '';
-    width: 57px;
-    height: 47px;
+    width: 5.7rem;
+    height: 4.7rem;
     background: url(../images/tailored/ico_banner_01.png) center / contain no-repeat;
 }
 .tl-consult-box li:nth-child(2)::before {
@@ -521,15 +559,15 @@
 }
 
 .tl-banner-item .tl-consult-btn {
-    max-width: 162px;
+    max-width: 16.2rem;
     width: 100%;
     margin-top: auto;
-    padding: 8px;
+    padding: 0.8rem;
     background-color: #0a5fd2;
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 1.0rem;
     text-align: center
 }
 .middle .tl-banner-item .tl-consult-btn {
@@ -542,19 +580,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
-    height: 230px;
-    padding: 30px;
+    gap: 1.0rem;
+    height: 23.0rem;
+    padding: 3.0rem;
     background-image: url(../images/tailored/banner_01.png);
     background-color: #d1f2fe;
     background-repeat: no-repeat;
-    background-position: center right 20px;
-    border-radius: 20px;
+    background-position: center right 2.0rem;
+    border-radius: 2.0rem;
 }
 .middle .tl-consult-banner {
     background-color: #d1e5ec;
     background-image: url(../images/tailored/banner_02.png);
-    background-position: bottom right 10px;
+    background-position: bottom right 1.0rem;
 }
 .woman .tl-consult-banner {
     background-color: #ffdbe1;
@@ -562,20 +600,19 @@
 }
 .tl-cbanner-tit {
     color: #484848;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
 }
 .tl-cbanner-txt {
     color: #484848;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
 }
-
 
 .tailored-notice {
     width: 100%;
     background-color: #f4f4f4;
-    padding: 60px 0;
+    padding: 6.0rem 0;
     box-sizing: border-box;
     border-top: 1px solid #eef1f5;
 }
@@ -586,11 +623,12 @@
 .tl-notice-cont {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2.0rem;
 }
 .tl-notice-cont .tl-content-item {
     flex: 1;
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 3.0rem;
 }
 .tl-notice-header {
     width: 100%;
@@ -599,37 +637,38 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px 30px;
+    gap: 1.0rem 3.0rem;
     color: #2b2b2b;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 700;
 }
 
 .tl-notice-header h2 span {
     color: #8c8c8c;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
+    word-break: keep-all;
 }
 .tl-notice-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 30px 0;
+    gap: 1.0rem;
+    margin: 3.0rem 0;
 }
 .tl-notice-list li {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
 }
 .tl-notice-label {
     flex-shrink: 0;
     display: inline-block;
-    width: 110px;
-    padding: 5px;
+    width: 11.0rem;
+    padding: 0.5rem;
     background-color: #f4f4f4;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: 5.0rem;
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -642,21 +681,21 @@
 .tl-notice-list li a {
     width: 100%;
     color: #333;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.tl-notice-list li a:hover {
+.tl-notice-list li a:navigate {
     text-decoration-line: underline;
 }
 
 /* 추천 흐름도 전체 감싸는 박스 */
 .tl-notice-flow {
     width: 100%;
-    padding: 30px;
-    border-radius: 20px;
+    padding: 3.0rem;
+    border-radius: 2.0rem;
     box-sizing: border-box;
 }
 .tl-notice-flow.f-blue {
@@ -679,7 +718,7 @@
 }
 .tl-flow-tit {
     color: #484848;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
 }
 .tl-flow-list {
@@ -687,14 +726,14 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px 10px;
+    gap: 1.5rem 1.0rem;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 2.0rem;
 }
 .tl-flow-list li {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
     flex: 1;
     white-space: nowrap;
 }
@@ -702,19 +741,119 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 5.6rem;
+    height: 5.6rem;
     color: #fff;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
     border-radius: 50%;
 }
 .tl-flow-txt h4 {
     color: #484848;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 .tl-flow-txt p {
     color: #8c8c8c;
-    font-size: 13px;
+    font-size: 1.3rem;
+}
+@media screen and (max-width: 1200px) {
+    .tl-content-wrap {
+        grid-template-columns: 1fr;
+    }
+    .tl-slide-item {
+        height: auto;
+    }
+    .tl-banner-tit {
+        font-size: 4.2rem;
+    }
+    .tl-banner-cont {
+        padding: 0 4.0rem;
+        background-size: contain;
+        background-size: 45%;
+        background-position: right 2.0rem bottom;
+    }
+}
+@media screen and (max-width: 640px) {
+    .tl-banner {
+        margin-bottom: 2rem;
+    }
+    .tl-banner-tit {
+        font-size: 3.2rem;
+        word-break: keep-all;
+    }
+    .tl-banner-txt {
+        word-break: keep-all;
+    }
+    .tl-tab-menu {
+        margin-bottom: 2rem;
+    }
+    .tl-tab-list {
+        width: 100%;
+        border-radius: 1rem;
+    }
+    .tl-tab-list li {
+        flex: 1;
+    }
+    .tl-tab-list li button {
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: initial;
+        width: 100%;
+        border-radius: 1rem;
+    }
+    .tl-content-item {
+        border-radius: 1rem;
+    }
+    .tl-notice-cont {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }    
+    .tl-notice-cont .tl-content-item {
+        margin-top: 0;
+    }
+    .tl-slider-controls button {
+        display: none !important;
+    }
+    
+    .tl-slider-controls {
+        width: 100% !important;
+    }
+
+    .tl-slider-controls .swiper-pagination-fraction {
+        font-size: 1.4rem;
+        color: #484848;
+        font-weight: 600;
+    }
+    .tl-consult-box {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+    }
+    .tl-consult-info {
+        width: 100%;
+    }
+    .tl-banner-item .tl-consult-btn {
+        margin: 2rem auto;
+    }
+    .tl-consult-box ul {
+        width: 100%;
+    }
+    .tl-consult-box li {
+        padding: 1rem;
+    }
+    .tl-consult-banner {
+        display: none;
+    }
+    .tailored-notice {
+        padding: 3rem 0;
+    }
+    .tl-flow-num {
+        width: 4.6rem;
+        height: 4.6rem;
+        font-size: 1.8rem;
+    }
 }

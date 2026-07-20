@@ -1449,9 +1449,36 @@
                             slidesPerView: 3,
                             slidesPerGroup: 3,
                             spaceBetween: 10,
+                            breakpoints: {
+                                0: {
+                                    slidesPerView: 1,
+                                    slidesPerGroup: 1,
+                                    spaceBetween: 10,
+                                    pagination: {
+                                        type: 'fraction'
+                                    }
+                                },
+                                421: {
+                                    slidesPerView: 2,
+                                    slidesPerGroup: 2,
+                                    spaceBetween: 10,
+                                    pagination: {
+                                        type: 'fraction'
+                                    }
+                                },
+                                641: {
+                                    slidesPerView: 3,
+                                    slidesPerGroup: 3,
+                                    spaceBetween: 10,
+                                    pagination: {
+                                        type: 'bullets'
+                                    }
+                                }
+                            },
                             pagination: { 
                                 el: '.pagination-' + tabName + '-' + cat, 
-                                clickable: true
+                                clickable: true,
+                                type: 'bullets'
                             },
                             navigation: { 
                                 nextEl: '.next-' + tabName + '-' + cat, 
