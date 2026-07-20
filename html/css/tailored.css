@@ -778,9 +778,10 @@ html {
     }
     .tl-banner-cont {
         height: auto;
-        padding: 3em 2rem;
+        padding: 2em 2rem;
     }
     .tl-banner-tit {
+        margin-top: 1rem;
         font-size: 3.2rem;
         word-break: keep-all;
     }
