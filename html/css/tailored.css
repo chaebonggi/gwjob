@@ -387,8 +387,8 @@ html {
 .tl-util-bookmark { 
     flex-shrink: 0;
     margin-left: auto;
-    width: 2.0rem; 
-    height: 2.0rem; 
+    width: 20px; 
+    height: 20px; 
     background: none;
     border: none; 
     cursor: pointer; 
@@ -400,7 +400,7 @@ html {
 .tl-util-bookmark::before { 
     content: '♡'; 
     color: #cbd5e1; 
-    font-size: 2.2rem; 
+    font-size: 20px 
 }
 .tl-util-bookmark.on::before { 
     content: '♥';
@@ -778,7 +778,7 @@ html {
     }
     .tl-banner-cont {
         height: auto;
-        padding: 2em 2rem;
+        padding: 2em 2rem 3rem;
     }
     .tl-banner-tit {
         margin-top: 1rem;
@@ -873,8 +873,5 @@ html {
     .tl-flow-list {
         flex-direction: column;
         align-items: flex-start;
-    }
-    .tl-util-bookmark::before {
-        font-size: 2rem;
     }
 }
