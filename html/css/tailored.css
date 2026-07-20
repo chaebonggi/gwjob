@@ -800,6 +800,10 @@ html {
         width: 100%;
         border-radius: 1rem;
     }
+    .tl-tab-list li button::before {
+        width: 1.5rem;
+        height: 1.6rem;
+    }
     .tl-content-item {
         border-radius: 1rem;
     }
@@ -808,7 +812,7 @@ html {
         height: 4rem;
     }
     .tl-content-title .tl-icon img {
-        max-width: 40%;
+        max-width: 50%;
     }
     .tl-notice-cont {
         flex-direction: column;
@@ -864,5 +868,8 @@ html {
     .tl-flow-list {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .tl-util-bookmark::before {
+        font-size: 2rem;
     }
 }
