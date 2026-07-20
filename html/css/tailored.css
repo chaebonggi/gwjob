@@ -399,11 +399,14 @@ html {
 }
 .tl-util-bookmark::before { 
     content: '♡'; 
+    display: block;
     color: #cbd5e1; 
-    font-size: 20px 
+    font-size: 20px;
+    font-weight: 900 !important;
 }
 .tl-util-bookmark.on::before { 
     content: '♥';
+    font-weight: 900 !important;
 }
 .tl-more-btn {
     display: block;
