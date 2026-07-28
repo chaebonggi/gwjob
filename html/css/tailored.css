@@ -582,8 +582,8 @@ html {
     flex-direction: column;
     justify-content: center;
     gap: 1.0rem;
-    height: 23.0rem;
-    padding: 3.0rem;
+    height: 18rem;
+    padding: 1.5rem 3rem;
     background-image: url(../images/tailored/banner_01.png);
     background-color: #d1f2fe;
     background-repeat: no-repeat;
@@ -781,7 +781,7 @@ html {
     }
     .tl-banner-cont {
         height: auto;
-        padding: 2em 2rem 3rem;
+        padding: 2em 2rem 6rem;
     }
     .tl-banner-tit {
         margin-top: 1rem;
@@ -836,6 +836,7 @@ html {
     
     .tl-slider-controls {
         width: 100% !important;
+        font-size: 1.6rem;
     }
 
     .tl-slider-controls .swiper-pagination-fraction {
