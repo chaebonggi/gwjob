@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경기도외국인일자리포털 - 도움이 되는 정보</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/외국인일자리.css">
+</head>
+<body class="bg-gray-page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="inner-section">
+      <a href="main.html" class="header-logo">
+        <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
+      </a>
+
+      <!-- PC 메뉴 -->
+      <nav class="header-nav">
+        <a href="intro.html" class="nav-item">INTRO</a>
+        <a href="about.html" class="nav-item">사업소개</a>
+        <a href="jobs.html" class="nav-item">채용정보</a>
+        
+        <div class="nav-dropdown">
+          <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
+          <div class="dropdown-menu">
+            <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
+            <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
+            <a href="visa-score.html">내 비자점수 알아보기</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
+          <div class="dropdown-menu">
+            <a href="forms.html">양식함</a>
+            <a href="forms-info.html">도움이 되는 정보</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- PC 버튼 그룹 -->
+      <div class="header-actions">
+        <div class="btn-group">
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
+        </div>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn">
+            <span id="current-lang-text">한국어</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div id="lang-menu" class="lang-dropdown hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">中文</button>
+            <button type="button">Tiếng Việt</button>
+            <button type="button">日本語</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모바일 햄버거 버튼 -->
+      <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
+        <i data-lucide="menu"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- 모바일 사이드 메뉴 오버레이 -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+
+  <!-- 모바일 슬라이드 드로어 메뉴 -->
+  <aside class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
+      <button type="button" class="btn-close-drawer" id="btn-close-drawer" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- 모바일 구인/구직 버튼 -->
+    <div class="drawer-actions">
+      <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
+      <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
+    </div>
+
+    <!-- 모바일 네비게이션 리스트 -->
+    <nav class="drawer-nav">
+      <a href="intro.html" class="drawer-nav-item">INTRO</a>
+      <a href="about.html" class="drawer-nav-item">사업소개</a>
+      <a href="jobs.html" class="drawer-nav-item">채용정보</a>
+      
+      <div class="drawer-accordion">
+        <button type="button" class="drawer-nav-item accordion-btn">
+          <span>역량강화</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
+          <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
+          <a href="visa-score.html">내 비자점수 알아보기</a>
+        </div>
+      </div>
+
+      <div class="drawer-accordion">
+        <button type="button" class="drawer-nav-item accordion-btn">
+          <span>자료실</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <a href="forms.html">양식함</a>
+          <a href="forms-info.html">도움이 되는 정보</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="drawer-lang">
+      <span class="lang-title">언어선택 (Language)</span>
+      <div class="lang-selector m-lang-selector">
+        <button type="button" class="lang-btn">
+          <span>한국어</span>
+          <i data-lucide="chevron-up"></i>
+        </button>
+        <div class="lang-dropdown hidden">
+          <button type="button">한국어</button>
+          <button type="button">English</button>
+          <button type="button">中文</button>
+          <button type="button">Tiếng Việt</button>
+          <button type="button">日本語</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="site-main">
+    <section class="sub-hero indigo">
+      <div class="inner-section">
+        <div class="breadcrumb">
+          <span>홈</span>
+          <i data-lucide="chevron-right"></i>
+          <span>자료실</span>
+          <i data-lucide="chevron-right"></i>
+          <span class="curr">도움이 되는 정보</span>
+        </div>
+        <h1>도움이 되는 정보</h1>
+      </div>
+    </section>
+
+    <section class="info-wrap">
+      <div class="inner-section">
+        
+        <!-- 원본과 동일한 9개 카드 리스트 -->
+        <div class="info-grid-2">
+          
+          <!-- 1. 다국어 통역지원 -->
+          <div class="info-box-card">
+            <div class="card-ico-box blue">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">다국어 통역지원</h3>
+            <p class="card-meta">2026.07.20</p>
+            <a href="forms-info-detail.html?id=multilingual" class="btn-card-action">자세히 보기</a>
+          </div>
+
+          <!-- 2. 도내 외국인 복지센터 정보 -->
+          <div class="info-box-card">
+            <div class="card-ico-box purple">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">도내 외국인 복지센터 정보</h3>
+            <p class="card-meta">2026.07.15 <span class="divider">|</span> PDF <span class="divider">|</span> 3.4MB</p>
+            <a href="#" class="btn-card-action" download>
+              <i data-lucide="download"></i>
+              <span>자료 다운로드</span>
+            </a>
+          </div>
+
+          <!-- 3. 외국인 인력상담센터 -->
+          <div class="info-box-card">
+            <div class="card-ico-box green">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">외국인 인력상담센터</h3>
+            <p class="card-sub-desc">외국인 근로자의 권익보호 및 고충상담 서비스 제공</p>
+            <p class="card-meta">2026.07.10 <span class="divider">|</span> PDF <span class="divider">|</span> 2.1MB</p>
+            <a href="#" class="btn-card-action" download>
+              <i data-lucide="download"></i>
+              <span>자료 다운로드</span>
+            </a>
+          </div>
+
+          <!-- 4. E-9 비자 -->
+          <div class="info-box-card">
+            <div class="card-ico-box yellow">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">E-9 비자</h3>
+            <p class="card-sub-desc">비전문취업 비자 관련 안내</p>
+            <p class="card-meta">2026.07.22</p>
+            <a href="forms-info-detail.html?id=visa-e9" class="btn-card-action">자세히 보기</a>
+          </div>
+
+          <!-- 5. E-7 비자 -->
+          <div class="info-box-card">
+            <div class="card-ico-box blue">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">E-7 비자</h3>
+            <p class="card-sub-desc">특정활동 비자 관련 안내</p>
+            <p class="card-meta">2026.07.22</p>
+            <a href="forms-info-detail.html?id=visa-e7" class="btn-card-action">자세히 보기</a>
+          </div>
+
+          <!-- 6. F-2 비자 -->
+          <div class="info-box-card">
+            <div class="card-ico-box purple">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">F-2 비자</h3>
+            <p class="card-sub-desc">거주 비자 관련 안내</p>
+            <p class="card-meta">2026.07.22</p>
+            <a href="forms-info-detail.html?id=visa-f2" class="btn-card-action">자세히 보기</a>
+          </div>
+
+          <!-- 7. F-4 비자 -->
+          <div class="info-box-card">
+            <div class="card-ico-box pink">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">F-4 비자</h3>
+            <p class="card-sub-desc">재외동포 비자 관련 안내</p>
+            <p class="card-meta">2026.07.22</p>
+            <a href="forms-info-detail.html?id=visa-f4" class="btn-card-action">자세히 보기</a>
+          </div>
+
+          <!-- 8. F-6 비자 -->
+          <div class="info-box-card">
+            <div class="card-ico-box green">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">F-6 비자</h3>
+            <p class="card-sub-desc">결혼이민 비자 관련 안내</p>
+            <p class="card-meta">2026.07.22</p>
+            <a href="forms-info-detail.html?id=visa-f6" class="btn-card-action">자세히 보기</a>
+          </div>
+
+          <!-- 9. F-10 비자 -->
+          <div class="info-box-card">
+            <div class="card-ico-box orange">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="card-tit">F-10 비자</h3>
+            <p class="card-sub-desc">우수인재 비자 관련 안내</p>
+            <p class="card-meta">2026.07.22</p>
+            <a href="forms-info-detail.html?id=visa-f10" class="btn-card-action">자세히 보기</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner-section">
+      <div class="footer-top">
+        <div class="footer-lbl">
+          <span class="bar"></span>
+          <span>유관기관 바로가기</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.gg.go.kr/" target="_blank" rel="noopener noreferrer">경기도청</a>
+          <a href="https://www.gjf.or.kr/" target="_blank" rel="noopener noreferrer">경기도일자리재단</a>
+          <a href="https://www.jobaba.net/" target="_blank" rel="noopener noreferrer">잡아바 (Jobaba)</a>
+          <a href="https://www.immigration.go.kr/" target="_blank" rel="noopener noreferrer">출입국·외국인정책본부</a>
+          <a href="https://www.moel.go.kr/" target="_blank" rel="noopener noreferrer">고용노동부</a>
+        </div>
+      </div>
+      <div class="footer-bot">
+        Copyright © 2026 Gyeonggi-do. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div class="kakao-floating">
+    <button class="btn-kakao">
+      <i data-lucide="message-circle"></i>
+      카카오톡 상담
+    </button>
+  </div>
+
+  <script src="./js/외국인일자리.js"></script>
+</body>
+</html>

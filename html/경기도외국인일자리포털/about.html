@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경기도외국인일자리포털 - 사업소개</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/외국인일자리.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="inner-section">
+      <a href="main.html" class="header-logo">
+        <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
+      </a>
+
+      <!-- PC 메뉴 -->
+      <nav class="header-nav">
+        <a href="intro.html" class="nav-item">INTRO</a>
+        <a href="about.html" class="nav-item">사업소개</a>
+        <a href="jobs.html" class="nav-item">채용정보</a>
+        
+        <div class="nav-dropdown">
+          <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
+          <div class="dropdown-menu">
+            <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
+            <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
+            <a href="visa-score.html">내 비자점수 알아보기</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
+          <div class="dropdown-menu">
+            <a href="forms.html">양식함</a>
+            <a href="forms-info.html">도움이 되는 정보</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- PC 버튼 그룹 -->
+      <div class="header-actions">
+        <div class="btn-group">
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
+        </div>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn">
+            <span id="current-lang-text">한국어</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div id="lang-menu" class="lang-dropdown hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">中文</button>
+            <button type="button">Tiếng Việt</button>
+            <button type="button">日本語</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모바일 햄버거 버튼 -->
+      <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
+        <i data-lucide="menu"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- 모바일 사이드 메뉴 오버레이 -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+
+  <!-- 모바일 슬라이드 드로어 메뉴 -->
+  <aside class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
+      <button type="button" class="btn-close-drawer" id="btn-close-drawer" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- 모바일 구인/구직 버튼 -->
+    <div class="drawer-actions">
+      <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
+      <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
+    </div>
+
+    <!-- 모바일 네비게이션 리스트 -->
+    <nav class="drawer-nav">
+      <a href="intro.html" class="drawer-nav-item">INTRO</a>
+      <a href="about.html" class="drawer-nav-item">사업소개</a>
+      <a href="jobs.html" class="drawer-nav-item">채용정보</a>
+      
+      <div class="drawer-accordion">
+        <button type="button" class="drawer-nav-item accordion-btn">
+          <span>역량강화</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
+          <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
+          <a href="visa-score.html">내 비자점수 알아보기</a>
+        </div>
+      </div>
+
+      <div class="drawer-accordion">
+        <button type="button" class="drawer-nav-item accordion-btn">
+          <span>자료실</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <a href="forms.html">양식함</a>
+          <a href="forms-info.html">도움이 되는 정보</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="drawer-lang">
+      <span class="lang-title">언어선택 (Language)</span>
+      <div class="lang-selector m-lang-selector">
+        <button type="button" class="lang-btn">
+          <span>한국어</span>
+          <i data-lucide="chevron-up"></i>
+        </button>
+        <div class="lang-dropdown hidden">
+          <button type="button">한국어</button>
+          <button type="button">English</button>
+          <button type="button">中文</button>
+          <button type="button">Tiếng Việt</button>
+          <button type="button">日本語</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="site-main">
+    
+    <!-- 1. 서브 히어로 배너 (패턴 및 반투명 모서리 박스) -->
+    <section class="sub-hero about-hero">
+      <div class="hero-bg-pattern"></div>
+      <div class="inner-section relative-z">
+        <div class="hero-tag">
+          <i data-lucide="user"></i>
+          <span>외국인 인재와 우수 기업을 잇다</span>
+        </div>
+        <h1 class="hero-tit-lg">외국인 고용지원 서비스</h1>
+        <p class="hero-eng-lg">Employment Support Services for Foreign Residents</p>
+        
+        <div class="glass-card">
+          <p class="desc-ko">
+            경기도 내 취업을 희망하는 외국인 및 외국인 인력을 채용하려는 기업을 대상으로<br>
+            맞춤형 일자리 알선 및 채용 프로그램을 제공합니다.
+          </p>
+          <p class="desc-eng">
+            Looking for a job in Gyeonggi-do? We offer customized job matching and career services for foreign residents.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 본문 컨텐츠 -->
+    <section class="sub-content">
+      <div class="inner-section">
+        
+        <!-- 참여대상 섹션 -->
+        <div class="about-sec">
+          <div class="sec-head center">
+            <h2 class="sec-tit">참여대상</h2>
+            <p class="sec-sub-blue">Who can apply</p>
+            <div class="tit-bar"></div>
+          </div>
+
+          <div class="about-grid">
+            <!-- 구직자 카드 -->
+            <div class="target-card">
+              <div class="card-head blue">
+                <div class="head-txt">
+                  <div class="ico-circle blue"><i data-lucide="user"></i></div>
+                  <h3>구직자</h3>
+                  <span class="eng-lbl blue">Job Seekers</span>
+                </div>
+                <div class="graphic-wrap">
+                  <div class="bg-shape shape-1"></div>
+                  <div class="bg-shape shape-2"></div>
+                  <i data-lucide="users" class="main-ico blue"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="body-ko">경기도 내 기업에 취업을 희망하는 결혼이민자, 외국인 유학생, 다문화가정 등 외국인 구직자</p>
+                <p class="body-eng">Foreign residents living in Gyeonggi-do, including marriage migrants, international students, and migrant workers who wish to work at companies in Gyeonggi-do.</p>
+              </div>
+            </div>
+
+            <!-- 구인기업 카드 -->
+            <div class="target-card">
+              <div class="card-head green">
+                <div class="head-txt">
+                  <div class="ico-circle green"><i data-lucide="building-2"></i></div>
+                  <h3>구인기업</h3>
+                  <span class="eng-lbl green">Recruiting Companies</span>
+                </div>
+                <div class="graphic-wrap">
+                  <div class="bg-shape shape-3"></div>
+                  <div class="bg-shape shape-4"></div>
+                  <i data-lucide="building-2" class="sub-ico green"></i>
+                  <i data-lucide="user" class="main-ico green"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="body-ko">외국인 인재 채용을 희망하는 경기도 내 중소 기업</p>
+                <p class="body-eng">Employers located in Gyeonggi-do that are looking to hire qualified foreign talents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 지원 프로그램 섹션 -->
+        <div class="about-sec">
+          <div class="sec-head center">
+            <h2 class="sec-tit">지원 프로그램</h2>
+            <p class="sec-sub-blue">Our programs</p>
+            <div class="tit-bar"></div>
+          </div>
+
+          <div class="program-list">
+            <!-- 1. 구직자 지원 카드 (왼쪽: 일러스트 / 오른쪽: 텍스트) -->
+            <div class="program-box">
+              <div class="prog-graphic-left">
+                <div class="circle-bg blue">
+                  <i data-lucide="file-text" class="ico-main blue"></i>
+                  <div class="sub-badge"><i data-lucide="search" class="ico-sub blue"></i></div>
+                </div>
+              </div>
+              
+              <div class="prog-info">
+                <div class="prog-header">
+                  <div class="badge-ico blue"><i data-lucide="user"></i></div>
+                  <h3>구직자 지원 <span class="c-blue">Job Seekers</span></h3>
+                </div>
+                <ul class="prog-steps">
+                  <li>
+                    <span class="step-num blue">1</span>
+                    <div>
+                      <p class="step-ko">1:1 맞춤 취업상담 : 전담 상담사의 밀착 케어 및 진로 설계</p>
+                      <p class="step-eng">1:1 Personalized Job Counseling: Dedicated Consultant Care & Career Design</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-num blue">2</span>
+                    <div>
+                      <p class="step-ko">구직신청 및 알선 : 나에게 꼭 맞는 채용 정보 제공 및 기업 매칭</p>
+                      <p class="step-eng">Job Seeker Registration and personalized job matching</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-num blue">3</span>
+                    <div>
+                      <p class="step-ko">취업역량 강화 프로그램 : 외국인 취업을 위한 교육, 이력서 · 면접 코칭 등</p>
+                      <p class="step-eng">Career Empowerment: Seminars, Resume & Interview Coaching</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2. 구인기업 지원 카드 (왼쪽: 텍스트 / 오른쪽: 일러스트) -->
+            <div class="program-box reverse">
+              <div class="prog-info">
+                <div class="prog-header">
+                  <div class="badge-ico green"><i data-lucide="building-2"></i></div>
+                  <h3>구인기업 지원 <span class="c-green">Recruiting Companies</span></h3>
+                </div>
+                <ul class="prog-steps green">
+                  <li>
+                    <span class="step-num green">1</span>
+                    <div>
+                      <p class="step-ko">우수 외국인 인재 매칭 지원</p>
+                      <p class="step-eng">Connecting you with qualified and verified foreign talents</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-num green">2</span>
+                    <div>
+                      <p class="step-ko">전문 행정사 연계형 서비스 제공 (비자 등)</p>
+                      <p class="step-eng">Providing professional administrative consulting services (Visas, etc.)</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="prog-graphic-right">
+                <div class="circle-bg green">
+                  <i data-lucide="briefcase" class="ico-main green"></i>
+                  <div class="sub-badge"><i data-lucide="message-circle" class="ico-sub green"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 취업지원 프로세스 -->
+        <div class="about-sec">
+          <h2 class="sec-tit center">취업지원 프로세스</h2>
+          <div class="proc-box">
+            <div class="proc-item">
+              <div class="p-ico"><i data-lucide="file-text"></i></div>
+              <h4>1. 구직 등록</h4>
+              <p>이력서 작성 및 등록</p>
+            </div>
+            <i data-lucide="chevron-right" class="proc-arrow"></i>
+
+            <div class="proc-item">
+              <div class="p-ico"><i data-lucide="message-circle"></i></div>
+              <h4>2. 맞춤 상담</h4>
+              <p>전문 직업상담사 심층 상담</p>
+            </div>
+            <i data-lucide="chevron-right" class="proc-arrow"></i>
+
+            <div class="proc-item">
+              <div class="p-ico"><i data-lucide="search"></i></div>
+              <h4>3. 기업 매칭</h4>
+              <p>적합한 기업 추천 및 알선</p>
+            </div>
+            <i data-lucide="chevron-right" class="proc-arrow"></i>
+
+            <div class="proc-item">
+              <div class="p-ico"><i data-lucide="briefcase"></i></div>
+              <h4>4. 면접 및 취업</h4>
+              <p>취업자 사후관리</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 문의 섹션 -->
+        <div class="about-sec">
+          <div class="inquiry-head">
+            <h2 class="sec-tit">문의</h2>
+            <span class="sub-lbl">Inquiry</span>
+          </div>
+          <div class="inquiry-box">
+            <i data-lucide="headphones" class="inq-ico"></i>
+            <div class="inq-phones">
+              <div class="phone-item">
+                <i data-lucide="phone"></i>
+                <span class="num">031-270-9934</span>
+                <span class="tag">(상담)</span>
+              </div>
+              <div class="phone-item">
+                <i data-lucide="phone"></i>
+                <span class="num">031-270-6628</span>
+                <span class="tag">(사업문의)</span>
+              </div>
+            </div>
+            <div class="inq-mail">
+              <i data-lucide="mail"></i>
+              <span>globaljob@gjf.or.kr</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="inner-section">
+      <div class="footer-top">
+        <div class="footer-lbl">
+          <span class="bar"></span>
+          <span>유관기관 바로가기</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.gg.go.kr/" target="_blank" rel="noopener noreferrer">경기도청</a>
+          <a href="https://www.gjf.or.kr/" target="_blank" rel="noopener noreferrer">경기도일자리재단</a>
+          <a href="https://www.jobaba.net/" target="_blank" rel="noopener noreferrer">잡아바 (Jobaba)</a>
+          <a href="https://www.immigration.go.kr/" target="_blank" rel="noopener noreferrer">출입국·외국인정책본부</a>
+          <a href="https://www.moel.go.kr/" target="_blank" rel="noopener noreferrer">고용노동부</a>
+        </div>
+      </div>
+      <div class="footer-bot">
+        Copyright © 2026 Gyeonggi-do. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Kakao Button -->
+  <div class="kakao-floating">
+    <button class="btn-kakao">
+      <i data-lucide="message-circle"></i>
+      카카오톡 상담
+    </button>
+  </div>
+
+  <script src="./js/외국인일자리.js"></script>
+</body>
+</html>
