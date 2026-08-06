@@ -577,25 +577,26 @@ html {
 .woman .tl-banner-item .tl-consult-btn {
     background-color: #f64764;
 }
-.tl-consult-banner {
+.tl-consult-banner a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.0rem;
-    height: 18rem;
+    height: 13rem;
     padding: 1.5rem 3rem;
     background-image: url(../images/tailored/banner_01.png);
     background-color: #d1f2fe;
     background-repeat: no-repeat;
     background-position: center right 2.0rem;
     border-radius: 2.0rem;
+    box-sizing: border-box;
 }
-.middle .tl-consult-banner {
+.middle .tl-consult-banner a {
     background-color: #d1e5ec;
     background-image: url(../images/tailored/banner_02.png);
     background-position: bottom right 1.0rem;
 }
-.woman .tl-consult-banner {
+.woman .tl-consult-banner a {
     background-color: #ffdbe1;
     background-image: url(../images/tailored/banner_03.png);
 }
@@ -679,6 +680,15 @@ html {
 .tl-notice-label.label-green {background-color: #e8f5e9; color: #2e7d32;}
 .tl-notice-label.label-navy {background-color: #ebf6fa; color: #06658d;}
 .tl-notice-label.label-pink {background-color: #fef2f4; color: #f64764;}
+.tl-notice-list li p {
+    width: 100%;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .tl-notice-list li a {
     width: 100%;
     color: #333;
@@ -688,8 +698,8 @@ html {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.tl-notice-list li a:navigate {
-    text-decoration-line: underline;
+.tl-notice-list li a:hover {
+    text-decoration: underline;
 }
 
 /* 추천 흐름도 전체 감싸는 박스 */

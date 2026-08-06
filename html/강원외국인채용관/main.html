@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강원일자리정보망 - 채용공고 검색</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+</head>
+<body>
+    <!-- SITE HEADER -->
+    <header class="site-header">
+    <div class="header-inner">
+        
+        <!-- Left: Logo & GNB Navigation -->
+        <div class="header-left">
+        <!-- Logo -->
+        <a href="index.html" class="header-logo">
+            <div class="logo-title">
+            강원<span class="highlight">일자리</span>정보망
+            </div>
+            <div class="logo-sub">
+            <span class="dash">-</span>
+            <span>외국인 채용관</span>
+            </div>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav class="header-nav">
+            <a href="jobs.html" class="nav-item">채용공고</a>
+            <a href="companies.html" class="nav-item">기업정보</a>
+            <a href="talent.html" class="nav-item">인재검색</a>
+            <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
+        </nav>
+        </div>
+
+        <!-- Right: Header Utilities -->
+        <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">
+            로그인
+        </a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">
+            회원가입
+        </a>
+        
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector">
+            <button type="button" id="btn-lang" class="lang-btn">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+            </button>
+            <div id="lang-menu" class="lang-dropdown hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </header>
+
+  <!-- MAIN -->
+  <main class="site-main">
+    <div class="inner-section">
+      <!-- Jobs Page Content Area -->
+      <section class="section-block">
+        <h2 class="section-tit" style="margin-bottom: 24px;">채용공고 검색</h2>
+        <!-- 상세 검색 필터 및 채용 목록이 들어갈 영역 -->
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top"><i data-lucide="arrow-up"></i></button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="index.html" class="header-logo" style="margin-bottom:12px;">
+            <span class="logo-main">강원<span>일자리</span>정보망</span>
+            <span class="logo-sub"><span class="dash">-</span>외국인 채용관</span>
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
