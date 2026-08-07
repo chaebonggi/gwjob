@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비자 점수 진단 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="header-logo">
+          <div class="logo-title">
+            강원<span class="highlight">일자리</span>정보망
+          </div>
+          <div class="logo-sub">
+            <span class="dash">-</span>
+            <span>외국인 채용관</span>
+          </div>
+        </a>
+
+        <nav class="header-nav">
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          <a href="visa-score.html" class="nav-item active">비자 점수 진단</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">
+          로그인
+        </a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">
+          회원가입
+        </a>
+        
+        <div class="lang-selector">
+          <button type="button" id="btn-lang" class="lang-btn">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div id="lang-menu" class="lang-dropdown hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+
+      <!-- 서브페이지 타이틀 헤더 -->
+      <section class="sub-page-head">
+        <h1 class="sub-tit">비자 점수 진단</h1>
+        <p class="sub-desc">나의 비자 발급 가능 점수를 쉽게 진단하고 필요한 요건을 확인해보세요.</p>
+      </section>
+
+      <!-- 비자 카드 그리드 섹션 -->
+      <section class="section-block">
+        <div class="visa-card-grid">
+          
+          <!-- D-10 (구직) -->
+          <a href="https://www.cnfgc.or.kr/visa-score-d10" target="_blank" rel="noopener noreferrer" class="visa-card blue">
+            <div class="visa-card-ico blue">
+              <i data-lucide="id-card"></i>
+            </div>
+            <h3 class="visa-card-tit">D-10 (구직)</h3>
+            <p class="visa-card-desc">한국에서 구직활동을 하고자 하는 인재를 위한 비자 점수 진단</p>
+            <div class="visa-card-link blue">
+              <span>진단 시작하기</span>
+              <i data-lucide="chevron-right"></i>
+            </div>
+          </a>
+
+          <!-- F-2-R (지역특화형 우수인재) -->
+          <a href="https://www.cnfgc.or.kr/visa-score-f2r" target="_blank" rel="noopener noreferrer" class="visa-card green">
+            <div class="visa-card-ico green">
+              <i data-lucide="id-card"></i>
+            </div>
+            <h3 class="visa-card-tit">F-2-R (지역특화형 우수인재)</h3>
+            <p class="visa-card-desc">인구감소지역에 거주 및 취업하는 우수인재를 위한 비자 점수 진단</p>
+            <div class="visa-card-link green">
+              <span>진단 시작하기</span>
+              <i data-lucide="chevron-right"></i>
+            </div>
+          </a>
+
+          <!-- F-2-7 (우수인재) -->
+          <a href="https://www.cnfgc.or.kr/visa-score-f27" target="_blank" rel="noopener noreferrer" class="visa-card purple">
+            <div class="visa-card-ico purple">
+              <i data-lucide="id-card"></i>
+            </div>
+            <h3 class="visa-card-tit">F-2-7 (우수인재)</h3>
+            <p class="visa-card-desc">나이, 학력, 소득 등 우수인재 점수제 기반 거주비자 점수 진단</p>
+            <div class="visa-card-link purple">
+              <span>진단 시작하기</span>
+              <i data-lucide="chevron-right"></i>
+            </div>
+          </a>
+
+          <!-- E-7-4 (숙련기능인력) -->
+          <a href="https://www.cnfgc.or.kr/visa-score-e74" target="_blank" rel="noopener noreferrer" class="visa-card orange">
+            <div class="visa-card-ico orange">
+              <i data-lucide="id-card"></i>
+            </div>
+            <h3 class="visa-card-tit">E-7-4 (숙련기능인력)</h3>
+            <p class="visa-card-desc">제조업, 농축산업 등에서 근무하는 숙련기능인력 대상 점수 진단</p>
+            <div class="visa-card-link orange">
+              <span>진단 시작하기</span>
+              <i data-lucide="chevron-right"></i>
+            </div>
+          </a>
+
+          <!-- E-7-4R (지역특화 숙련기능인력) -->
+          <a href="https://www.cnfgc.or.kr/visa-score-e74r" target="_blank" rel="noopener noreferrer" class="visa-card pink">
+            <div class="visa-card-ico pink">
+              <i data-lucide="id-card"></i>
+            </div>
+            <h3 class="visa-card-tit">E-7-4R (지역특화 숙련기능인력)</h3>
+            <p class="visa-card-desc">지역특화형 숙련기능인력(E-7-4R) 제도 기반 점수 진단</p>
+            <div class="visa-card-link pink">
+              <span>진단 시작하기</span>
+              <i data-lucide="chevron-right"></i>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="index.html" class="header-logo" style="margin-bottom:12px;">
+            <div class="logo-title">
+              강원<span class="highlight">일자리</span>정보망
+            </div>
+            <div class="logo-sub">
+              <span class="dash">-</span>
+              <span>외국인 채용관</span>
+            </div>
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+</body>
+</html>

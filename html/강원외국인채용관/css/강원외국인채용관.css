@@ -1,5 +1,3 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-
 /* common */
 html {
   font-size: 10px !important;
@@ -54,6 +52,8 @@ button {
   background-color: #0f172a;
   color: #ffffff;
   width: 100%;
+  position: relative;
+  z-index: 90;
 }
 
 .header-inner {
@@ -69,60 +69,28 @@ button {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 40px;
 }
 
-.site-header a.header-logo,
-.site-header a.header-logo:link,
-.site-header a.header-logo:visited {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.logo-title {
-  font-size: 1.9rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  color: #ffffff;
-}
-
-.logo-title .highlight {
-  color: #60a5fa;
-}
-
-.logo-sub {
+.site-header .header-logo-img-wrap,
+.site-header a.header-logo-img-wrap:link,
+.site-header a.header-logo-img-wrap:visited {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #f1f5f9;
-  letter-spacing: -0.3px;
-  margin-top: 1px;
+  height: 100%;
 }
 
-.logo-sub .dash {
-  color: #60a5fa;
-  margin-right: 3px;
-  font-weight: 900;
+.site-header .site-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
   gap: 32px;
-}
-
-.site-header .nav-item,
-.site-header a.nav-item:link,
-.site-header a.nav-item:visited {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #e2e8f0;
-  transition: color 0.2s ease;
-  white-space: nowrap;
 }
 
 .site-header .nav-item,
@@ -144,6 +112,7 @@ button {
   color: #60a5fa !important;
   font-weight: 700;
 }
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -158,14 +127,14 @@ button {
   border: 1px solid #475569;
   border-radius: 4px;
   background-color: #1e293b;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
 .site-header a.btn-login:hover {
   background-color: #334155;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .site-header a.btn-signup,
@@ -173,7 +142,7 @@ button {
 .site-header a.btn-signup:visited {
   padding: 6px 14px;
   background-color: #ffffff;
-  color: #0f172a;
+  color: #0f172a !important;
   border-radius: 4px;
   font-weight: 700;
   transition: background-color 0.2s ease;
@@ -181,7 +150,7 @@ button {
 
 .site-header a.btn-signup:hover {
   background-color: #f1f5f9;
-  color: #0f172a;
+  color: #0f172a !important;
 }
 
 .lang-selector {
@@ -239,16 +208,243 @@ button {
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .header-nav {
-    display: none;
-  }
+.btn-mobile-menu {
+  display: none;
+  color: #ffffff;
+  padding: 4px;
 }
 
-@media (max-width: 480px) {
-  .site-header a.btn-login,
-  .site-header a.btn-signup {
-    padding: 4px 8px;
+.btn-mobile-menu svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  background: #ffffff;
+  z-index: 999;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu-drawer.active {
+  right: 0;
+}
+
+.m-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.m-drawer-head .header-logo-img-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.m-drawer-head .site-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.btn-m-close {
+  color: #64748b;
+  padding: 4px;
+}
+
+.btn-m-close svg {
+  width: 24px;
+  height: 24px;
+}
+
+.m-drawer-auth {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.m-drawer-auth a,
+.m-drawer-auth a:link,
+.m-drawer-auth a:visited {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.m-drawer-auth a.btn-m-login,
+.m-drawer-auth a.btn-m-login:link,
+.m-drawer-auth a.btn-m-login:visited {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+.m-drawer-auth a.btn-m-login:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.m-drawer-auth a.btn-m-signup,
+.m-drawer-auth a.btn-m-signup:link,
+.m-drawer-auth a.btn-m-signup:visited {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+.m-drawer-auth a.btn-m-signup:hover {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+.m-drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m-drawer-nav a.m-nav-item,
+.m-drawer-nav a.m-nav-item:link,
+.m-drawer-nav a.m-nav-item:visited {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #334155 !important;
+  transition: background 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+}
+
+.m-drawer-nav a.m-nav-item:hover,
+.m-drawer-nav a.m-nav-item.active,
+.m-drawer-nav a.m-nav-item.active:link,
+.m-drawer-nav a.m-nav-item.active:visited {
+  background: #eff6ff !important;
+  color: #2563eb !important;
+}
+
+.m-drawer-lang {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.m-lang-title {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.m-lang-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.m-lang-select-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 1.4rem;
+  color: #334155;
+  font-weight: 500;
+  transition: border-color 0.2s ease;
+}
+
+.m-lang-select-wrap.active .m-lang-select-btn {
+  border-color: #2563eb;
+}
+
+.m-lang-arrow {
+  width: 18px;
+  height: 18px;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.m-lang-select-wrap.active .m-lang-arrow {
+  transform: rotate(180deg);
+}
+
+.m-lang-options {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  list-style: none;
+  padding: 6px 0;
+}
+
+.m-lang-options.hidden {
+  display: none !important;
+}
+
+.m-lang-options li {
+  padding: 10px 16px;
+  font-size: 1.4rem;
+  color: #475569;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.m-lang-options li:hover,
+.m-lang-options li.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .header-nav,
+  .site-header .btn-login,
+  .site-header .btn-signup,
+  .site-header .lang-selector {
+    display: none !important;
+  }
+
+  .btn-mobile-menu {
+    display: block !important;
   }
 }
 /* //header */
@@ -256,8 +452,6 @@ button {
 /* main */
 .site-main {
   flex: 1;
-  padding-top: 24px;
-  padding-bottom: 48px;
 }
 
 .font-serif {
@@ -718,13 +912,22 @@ div.guide-card:hover {
 }
 
 .company-logo-area {
-  height: 48px;
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  font-size: 2rem;
-  font-weight: 900;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.company-logo-area .company-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .company-logo-area.green { color: #059669; }
@@ -958,13 +1161,16 @@ div.guide-card:hover {
   font-size: 1.2rem;
   color: #64748b;
   margin-top: 4px;
+  text-align: center;
 }
 
 .job-item-info {
   flex: 1;
   padding: 0 24px;
+  min-width: 0;
 }
 
+/* 제목 2줄 넘어가면 말줄임(...) 처리 */
 .job-item-title {
   font-size: 1.7rem;
   font-weight: 700;
@@ -977,6 +1183,13 @@ div.guide-card:hover {
 .job-item-title a:visited {
   color: #0f172a;
   transition: color 0.2s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  max-height: 2.8em;
 }
 
 .job-item-title a:hover {
@@ -1036,6 +1249,46 @@ div.guide-card:hover {
   font-size: 1.4rem;
 }
 
+/* 채용공고 리스트 브랜드 로고 고정 규격 */
+.brand-logo-box {
+  max-width: 100%;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand-logo-box .brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* 이미지가 없는 경우 기본 베이스 아이콘 (Placeholder) */
+.company-logo-area.default-base,
+.brand-logo-box.default-base {
+  background-color: #fbfdff;
+  border-color: #efefef;
+}
+
+.base-logo-ico {
+  width: 24px;
+  height: 24px;
+  color: #94a3b8;
+}
+
+.company-logo-area.default-base .base-logo-ico {
+  width: 28px;
+  height: 28px;
+}
+
+/* 768px 이하 반응형: 공고 리스트 2개(2열) 카드 스타일 및 북마크 위치 조정 */
 @media (max-width: 768px) {
   .hero-slider {
     height: 240px;
@@ -1061,26 +1314,43 @@ div.guide-card:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* 채용공고 2열 그리드 배치 */
+  .job-list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
   .job-item-card {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 20px;
     padding-top: 20px;
-    padding-right: 48px;
   }
 
   .job-item-brand-area {
-    text-align: left;
-    width: auto;
+    margin: 0 auto;
+  }
+
+  .brand-logo-box {
+    margin: 0;
   }
 
   .job-item-info {
     padding: 0;
+    width: 100%;
   }
 
   .job-item-meta {
     width: 100%;
     justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed #f1f5f9;
+    gap: 0;
   }
 
   .job-item-meta .btn-bookmark {
@@ -1091,6 +1361,14 @@ div.guide-card:hover {
 
   .job-deadline-wrap {
     text-align: left;
+  }
+}
+
+/* 640px 이하 반응형: 공고 리스트 1개(1열) 모바일 스타일 */
+@media (max-width: 640px) {
+  .job-list-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
   }
 }
 
@@ -1401,10 +1679,130 @@ div.guide-card:hover {
 }
 /* //talent */
 
-/* footer */
-.site-footer {
-  margin-top: 80px;
+/* visa-score */
+.visa-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
+
+.site-main a.visa-card,
+.site-main a.visa-card:link,
+.site-main a.visa-card:visited {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 24px 24px;
+  text-decoration: none;
+  color: inherit;
+  /* 부드러운 위치/그림자 애니메이션 (cubic-bezier) */
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.35s ease, 
+              border-color 0.25s ease;
+  position: relative;
+  min-height: 240px;
+  will-change: transform;
+}
+
+.site-main a.visa-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px -6px rgba(0, 0, 0, 0.08);
+}
+
+/* 카드 호버 시 각각 테두리 포인트 컬러 */
+.site-main a.visa-card.blue:hover { border-color: #3b82f6; }
+.site-main a.visa-card.green:hover { border-color: #22c55e; }
+.site-main a.visa-card.purple:hover { border-color: #8b5cf6; }
+.site-main a.visa-card.orange:hover { border-color: #f97316; }
+.site-main a.visa-card.pink:hover { border-color: #ec4899; }
+
+/* 비자 아이콘 영역 */
+.visa-card-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* 아이콘 크기 확대 트랜지션 추가 */
+  transition: transform 0.3s ease;
+}
+
+/* 카드 호버 시 아이콘 스케일 1.1 적용 */
+.site-main a.visa-card:hover .visa-card-ico {
+  transform: scale(1.1);
+}
+
+.visa-card-ico svg {
+  width: 24px;
+  height: 24px;
+}
+
+.visa-card-ico.blue { background-color: #eff6ff; color: #2563eb; }
+.visa-card-ico.green { background-color: #f0fdf4; color: #16a34a; }
+.visa-card-ico.purple { background-color: #f5f3ff; color: #7c3aed; }
+.visa-card-ico.orange { background-color: #fff7ed; color: #ea580c; }
+.visa-card-ico.pink { background-color: #fdf2f8; color: #db2777; }
+
+/* 텍스트 내용 */
+.visa-card-tit {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.visa-card-desc {
+  font-size: 1.3rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* 하단 진단 시작하기 버튼 */
+.visa-card-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.visa-card-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.site-main a.visa-card:hover .visa-card-link svg {
+  transform: translateX(4px);
+}
+
+.visa-card-link.blue { color: #2563eb; }
+.visa-card-link.green { color: #16a34a; }
+.visa-card-link.purple { color: #7c3aed; }
+.visa-card-link.orange { color: #ea580c; }
+.visa-card-link.pink { color: #db2777; }
+
+@media (max-width: 1024px) {
+  .visa-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .visa-card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* //visa-score */
+
+/* footer */
 
 .footer-top {
   background: #1e293b;

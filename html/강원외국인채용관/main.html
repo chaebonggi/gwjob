@@ -19,16 +19,11 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
-        <a href="index.html" class="header-logo">
-          <div class="logo-title">
-            강원<span class="highlight">일자리</span>정보망
-          </div>
-          <div class="logo-sub">
-            <span class="dash">-</span>
-            <span>외국인 채용관</span>
-          </div>
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
         </a>
 
+        <!-- 데스크톱 네비게이션 (1200px 이상) -->
         <nav class="header-nav">
           <a href="jobs.html" class="nav-item">채용공고</a>
           <a href="companies.html" class="nav-item">기업정보</a>
@@ -45,22 +40,72 @@
           회원가입
         </a>
         
+        <!-- 언어 선택 드롭다운 (데스크톱) -->
         <div class="lang-selector">
-          <button type="button" id="btn-lang" class="lang-btn">
+          <button type="button" class="lang-btn btn-lang-toggle">
             <span>한국어</span>
             <i data-lucide="chevron-down" class="ico-arrow"></i>
           </button>
-          <div id="lang-menu" class="lang-dropdown hidden">
+          <div class="lang-dropdown lang-menu hidden">
             <button type="button">한국어</button>
             <button type="button">English</button>
             <button type="button">日本語</button>
             <button type="button">Tiếng Việt</button>
           </div>
         </div>
+
+        <!-- 모바일 햄버거 버튼 (1200px 미만) -->
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
       </div>
     </div>
   </header>
   <!-- //header -->
+
+  <!-- 모바일 전용 드로어 메뉴 (1200px 미만) -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      <a href="visa-score.html" class="m-nav-item">비자 점수 진단</a>
+    </nav>
+
+    <!-- 하단 언어선택 (위로 열리는 드롭업 형태) -->
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
 
   <!-- main -->
   <main class="site-main">
@@ -268,6 +313,7 @@
         </div>
       </section>
 
+      <!-- 강원 대표기업 섹션 (로고 이미지 박스 적용) -->
       <section class="section-block">
         <div class="section-head">
           <h2 class="section-tit">강원 대표기업</h2>
@@ -285,7 +331,9 @@
 
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
-                <div class="company-logo-area green font-serif">KANGWON LAND</div>
+                <div class="company-logo-area">
+                  <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=200" alt="강원랜드" class="company-logo-img">
+                </div>
                 <h3 class="company-name">강원랜드</h3>
                 <p class="company-desc">복합리조트·관광서비스 기업</p>
                 <div class="company-loc-tag">정선</div>
@@ -294,7 +342,9 @@
 
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
-                <div class="company-logo-area blue">HiCar</div>
+                <div class="company-logo-area default-base">
+                  <i data-lucide="building-2" class="base-logo-ico"></i>
+                </div>
                 <h3 class="company-name">현대해상화재보험(주)</h3>
                 <p class="company-desc">자동차 보험 선도 기업</p>
                 <div class="company-loc-tag">춘천</div>
@@ -303,7 +353,9 @@
 
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
-                <div class="company-logo-area green">Dongwon</div>
+                <div class="company-logo-area default-base">
+                  <i data-lucide="building-2" class="base-logo-ico"></i>
+                </div>
                 <h3 class="company-name">동원산업(주)</h3>
                 <p class="company-desc">식품·수산·물류 선도 기업</p>
                 <div class="company-loc-tag">횡성</div>
@@ -312,7 +364,9 @@
 
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
-                <div class="company-logo-area blue">nepes</div>
+                <div class="company-logo-area default-base">
+                  <i data-lucide="building-2" class="base-logo-ico"></i>
+                </div>
                 <h3 class="company-name">네패스</h3>
                 <p class="company-desc">전자·전기 부품 제조</p>
                 <div class="company-loc-tag">춘천</div>
@@ -321,7 +375,9 @@
 
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
-                <div class="company-logo-area blue">동해포텐주</div>
+                <div class="company-logo-area default-base">
+                  <i data-lucide="building-2" class="base-logo-ico"></i>
+                </div>
                 <h3 class="company-name">동해포텐(주)</h3>
                 <p class="company-desc">전기차 부품 선도 기업</p>
                 <div class="company-loc-tag">동해</div>
@@ -332,6 +388,7 @@
         </div>
       </section>
 
+      <!-- 채용공고 검색 섹션 -->
       <section class="section-block">
         <h2 class="section-tit" style="margin-bottom: 16px;">채용공고 검색</h2>
         
@@ -457,7 +514,9 @@
         <div class="job-list-container">
           <div class="job-item-card">
             <div class="job-item-brand-area">
-              <div class="brand-logo blue">Dongwon</div>
+              <div class="brand-logo-box">
+                <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=200" alt="동원산업(주) 로고" class="brand-logo-img">
+              </div>
               <div class="brand-name">동원산업(주)</div>
             </div>
             <div class="job-item-info">
@@ -479,7 +538,9 @@
 
           <div class="job-item-card">
             <div class="job-item-brand-area">
-              <div class="brand-logo dark-blue">HiCar</div>
+              <div class="brand-logo-box default-base">
+                <i data-lucide="building-2" class="base-logo-ico"></i>
+              </div>
               <div class="brand-name">현대해상화재보험(주)</div>
             </div>
             <div class="job-item-info">
@@ -530,14 +591,8 @@
     <div class="footer-bot">
       <div class="inner-section footer-bot-inner">
         <div>
-          <a href="index.html" class="header-logo" style="margin-bottom:12px;">
-            <div class="logo-title">
-              강원<span class="highlight">일자리</span>정보망
-            </div>
-            <div class="logo-sub">
-              <span class="dash">-</span>
-              <span>외국인 채용관</span>
-            </div>
+          <a href="main.html" class="header-logo-img-wrap" style="margin-bottom:12px;">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
           </a>
           <div class="footer-info">
             <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
