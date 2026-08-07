@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인재검색 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="header-logo">
+          <div class="logo-title">
+            강원<span class="highlight">일자리</span>정보망
+          </div>
+          <div class="logo-sub">
+            <span class="dash">-</span>
+            <span>외국인 채용관</span>
+          </div>
+        </a>
+
+        <nav class="header-nav">
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item active">인재검색</a>
+          <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">
+          로그인
+        </a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">
+          회원가입
+        </a>
+        
+        <div class="lang-selector">
+          <button type="button" id="btn-lang" class="lang-btn">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div id="lang-menu" class="lang-dropdown hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+
+      <!-- 서브페이지 타이틀 헤더 -->
+      <section class="sub-page-head">
+        <h1 class="sub-tit">인재검색</h1>
+        <p class="sub-desc">강원특별자치도에서 정착을 희망하는 우수한 외국인 인재를 찾아보세요.</p>
+      </section>
+
+      <!-- 인재 검색 및 필터 -->
+      <section class="section-block">
+        <div class="job-filter-box">
+          <div class="filter-search-wrap">
+            <input type="text" placeholder="이름, 국적, 보유 자격증, 키워드로 검색하세요">
+            <button type="button" class="btn-filter-search"><i data-lucide="search"></i></button>
+          </div>
+
+          <div class="filter-select-group">
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>희망 지역</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">희망 지역</li>
+                <li data-value="chuncheon">춘천시</li>
+                <li data-value="wonju">원주시</li>
+                <li data-value="gangneung">강릉시</li>
+                <li data-value="donghae">동해시</li>
+                <li data-value="taebaek">태백시</li>
+                <li data-value="sokcho">속초시</li>
+                <li data-value="samcheok">삼척시</li>
+                <li data-value="hongcheon">홍천군</li>
+                <li data-value="hoengseong">횡성군</li>
+                <li data-value="yeongwol">영월군</li>
+                <li data-value="pyeongchang">평창군</li>
+                <li data-value="jeongseon">정선군</li>
+                <li data-value="cheorwon">철원군</li>
+                <li data-value="hwacheon">화천군</li>
+                <li data-value="yanggu">양구군</li>
+                <li data-value="inje">인제군</li>
+                <li data-value="goseong">고성군</li>
+                <li data-value="yangyang">양양군</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>희망 직무</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">희망 직무</li>
+                <li data-value="tech">IT/개발</li>
+                <li data-value="manufacture">제조/생산</li>
+                <li data-value="service">서비스/관광</li>
+                <li data-value="sales">영업/마케팅</li>
+                <li data-value="admin">경영/사무</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>한국어 능력</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">한국어 능력</li>
+                <li data-value="topik1">TOPIK 1~2급 (초급)</li>
+                <li data-value="topik2">TOPIK 3~4급 (중급)</li>
+                <li data-value="topik3">TOPIK 5~6급 (고급)</li>
+                <li data-value="native">원어민 수준</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>보유 비자</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">보유 비자</li>
+                <li data-value="e7">E-7 (전문인력)</li>
+                <li data-value="e9">E-9 (비전문취업)</li>
+                <li data-value="f2">F-2 (거주)</li>
+                <li data-value="f4">F-4 (재외동포)</li>
+                <li data-value="f5">F-5 (영주)</li>
+                <li data-value="f6">F-6 (결혼이민)</li>
+                <li data-value="d10">D-10 (구직)</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>경력 사항</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">경력 사항</li>
+                <li data-value="new">신입</li>
+                <li data-value="exp1">1~3년</li>
+                <li data-value="exp2">3~5년</li>
+                <li data-value="exp3">5년 이상</li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn-reset"><i data-lucide="rotate-ccw"></i><span>초기화</span></button>
+          </div>
+
+          <div class="filter-check-group">
+            <label class="check-item"><input type="checkbox"><span>즉시 출근 가능자</span></label>
+            <label class="check-item"><input type="checkbox"><span>강원지역 체류 인재</span></label>
+            <label class="check-item"><input type="checkbox"><span>한국어 소통 원활</span></label>
+            <label class="check-item"><input type="checkbox"><span>이력서 검토 완료</span></label>
+          </div>
+        </div>
+
+        <!-- 리스트 상단 제어 바 -->
+        <div class="list-head-bar">
+          <div class="list-count-info">
+            전체 <strong class="count-num">82</strong>명의 인재
+          </div>
+          <div class="sort-options">
+            <button type="button" class="btn-sort active">최신등록순</button>
+            <span class="sep">|</span>
+            <button type="button" class="btn-sort">경력순</button>
+            <span class="sep">|</span>
+            <button type="button" class="btn-sort">한국어수준순</button>
+          </div>
+        </div>
+
+        <!-- 인재 리스트 컨테이너 -->
+        <div class="talent-list-container">
+          
+          <!-- 기본 사람 아이콘 예시 -->
+          <a href="#" class="talent-card">
+            <div class="talent-profile-img">
+              <i data-lucide="user"></i>
+            </div>
+            <div class="talent-info-main">
+              <div class="talent-header-row">
+                <h3 class="talent-name-title">리옌 (Li Yan)</h3>
+                <span class="talent-badge">TOPIK 5급</span>
+              </div>
+              <div class="talent-sub-tags">
+                <span>중국</span>
+                <span class="sep">|</span>
+                <span class="visa-text">E-7 (전문인력)</span>
+                <span class="sep">|</span>
+                <span>경력 3년</span>
+              </div>
+              <div class="talent-detail-tags">
+                <span class="tag-item">해외영업·마케팅</span>
+                <span class="tag-item">영어 가능</span>
+                <span class="tag-item">즉시 출근 가능</span>
+              </div>
+            </div>
+
+            <div class="talent-action-side">
+              <div class="resume-view-btn">
+                <span>이력서 열람</span>
+                <i data-lucide="file-text"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- 사진 이미지 교체 적용 예시 -->
+          <a href="#" class="talent-card">
+            <div class="talent-profile-img">
+              <!-- 실제 이미지가 있을 때는 img 태그 사용 -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="프로필">
+            </div>
+            <div class="talent-info-main">
+              <div class="talent-header-row">
+                <h3 class="talent-name-title">아웅 민 (Aung Min)</h3>
+                <span class="talent-badge">TOPIK 4급</span>
+              </div>
+              <div class="talent-sub-tags">
+                <span>미얀마</span>
+                <span class="sep">|</span>
+                <span class="visa-text">D-10 (구직)</span>
+                <span class="sep">|</span>
+                <span>신입</span>
+              </div>
+              <div class="talent-detail-tags">
+                <span class="tag-item">IT·웹 개발</span>
+                <span class="tag-item">원주시 희망</span>
+                <span class="tag-item">정보처리기사</span>
+              </div>
+            </div>
+
+            <div class="talent-action-side">
+              <div class="resume-view-btn">
+                <span>이력서 열람</span>
+                <i data-lucide="file-text"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="talent-card">
+            <div class="talent-profile-img">
+              <i data-lucide="user"></i>
+            </div>
+            <div class="talent-info-main">
+              <div class="talent-header-row">
+                <h3 class="talent-name-title">바트바타르 (Batbaatar)</h3>
+                <span class="talent-badge">TOPIK 6급</span>
+              </div>
+              <div class="talent-sub-tags">
+                <span>몽골</span>
+                <span class="sep">|</span>
+                <span class="visa-text">F-4 (재외동포)</span>
+                <span class="sep">|</span>
+                <span>경력 5년</span>
+              </div>
+              <div class="talent-detail-tags">
+                <span class="tag-item">생산·품질관리</span>
+                <span class="tag-item">운전면허 소지</span>
+                <span class="tag-item">기숙사 희망</span>
+              </div>
+            </div>
+
+            <div class="talent-action-side">
+              <div class="resume-view-btn">
+                <span>이력서 열람</span>
+                <i data-lucide="file-text"></i>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- 페이지네이션 (운영 사이트 표준 공통 마크업) -->
+        <div class="pager">
+            <a href="#" class="pager-link pager-link-data-first">10페이지 앞으로 이동</a> 
+            <a href="#" class="pager-link pager-link-data-prev">1페이지  앞으로 이동</a> 
+            <span class="pager-num">1/9</span>
+            <a class="pager-link active">1</a> 
+            <a href="#" class="pager-link">2</a> 
+            <a href="#" class="pager-link">3</a>
+            <a href="#" class="pager-link">4</a>
+            <a href="#" class="pager-link">5</a>
+            <a href="#" class="pager-link pager-link-data-next">1페이지 뒤로 이동</a> 
+            <a href="#" class="pager-link pager-link-data-last">10페이지 뒤로 이동</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="index.html" class="header-logo" style="margin-bottom:12px;">
+            <div class="logo-title">
+              강원<span class="highlight">일자리</span>정보망
+            </div>
+            <div class="logo-sub">
+              <span class="dash">-</span>
+              <span>외국인 채용관</span>
+            </div>
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sortBtns = document.querySelectorAll('.btn-sort');
+      sortBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          sortBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

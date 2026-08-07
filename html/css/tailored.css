@@ -8,6 +8,23 @@ html {
         font-size: 8px;
     }
 }
+/* 2026.08.07 공고 없을때 */
+.empty-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 20rem;
+    margin: 2rem 0;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+}
+.empty-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    word-break: keep-all;
+}
+/* //2026.08.07 공고 없을때 */
 .tailored-wrap {
     width: 100%;
     padding: 4.0rem 0;

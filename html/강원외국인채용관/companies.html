@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기업정보 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="header-logo">
+          <div class="logo-title">
+            강원<span class="highlight">일자리</span>정보망
+          </div>
+          <div class="logo-sub">
+            <span class="dash">-</span>
+            <span>외국인 채용관</span>
+          </div>
+        </a>
+
+        <nav class="header-nav">
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item active">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">
+          로그인
+        </a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">
+          회원가입
+        </a>
+        
+        <div class="lang-selector">
+          <button type="button" id="btn-lang" class="lang-btn">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div id="lang-menu" class="lang-dropdown hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+
+      <!-- 서브페이지 타이틀 헤더 -->
+      <section class="sub-page-head">
+        <h1 class="sub-tit">기업정보</h1>
+        <p class="sub-desc">강원특별자치도와 함께 성장하는 우수 대표기업 정보를 탐색해 보세요.</p>
+      </section>
+
+      <!-- 기업 검색 및 필터 -->
+      <section class="section-block">
+        <div class="job-filter-box">
+          <div class="filter-search-wrap">
+            <input type="text" placeholder="기업명, 산업군, 주요 업종으로 검색하세요">
+            <button type="button" class="btn-filter-search"><i data-lucide="search"></i></button>
+          </div>
+
+          <div class="filter-select-group">
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>지역 선택</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">지역 선택</li>
+                <li data-value="chuncheon">춘천시</li>
+                <li data-value="wonju">원주시</li>
+                <li data-value="gangneung">강릉시</li>
+                <li data-value="donghae">동해시</li>
+                <li data-value="taebaek">태백시</li>
+                <li data-value="sokcho">속초시</li>
+                <li data-value="samcheok">삼척시</li>
+                <li data-value="hongcheon">홍천군</li>
+                <li data-value="hoengseong">횡성군</li>
+                <li data-value="yeongwol">영월군</li>
+                <li data-value="pyeongchang">평창군</li>
+                <li data-value="jeongseon">정선군</li>
+                <li data-value="cheorwon">철원군</li>
+                <li data-value="hwacheon">화천군</li>
+                <li data-value="yanggu">양구군</li>
+                <li data-value="inje">인제군</li>
+                <li data-value="goseong">고성군</li>
+                <li data-value="yangyang">양양군</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>업종/산업 선택</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">업종/산업 선택</li>
+                <li data-value="it">IT·정보통신</li>
+                <li data-value="manufacture">제조·화학</li>
+                <li data-value="service">관광·서비스</li>
+                <li data-value="food">식품·바이오</li>
+                <li data-value="construction">건설·토목</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>기업구분</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">기업구분</li>
+                <li data-value="major">대기업/공기업</li>
+                <li data-value="medium">중견기업</li>
+                <li data-value="small">중소기업</li>
+                <li data-value="foreign">외투기업</li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn-reset"><i data-lucide="rotate-ccw"></i><span>초기화</span></button>
+          </div>
+
+          <div class="filter-check-group">
+            <label class="check-item"><input type="checkbox"><span>외국인 채용 진행중 기업</span></label>
+            <label class="check-item"><input type="checkbox"><span>기숙사/주거 지원 기업</span></label>
+            <label class="check-item"><input type="checkbox"><span>비자 발급 지원 기업</span></label>
+            <label class="check-item"><input type="checkbox"><span>강원 우수 인증 기업</span></label>
+          </div>
+        </div>
+
+        <!-- 리스트 상단 제어 바 (건수 & 정렬) -->
+        <div class="list-head-bar">
+          <div class="list-count-info">
+            전체 <strong class="count-num">45</strong>개 기업
+          </div>
+          <div class="sort-options">
+            <button type="button" class="btn-sort active">등록순</button>
+            <span class="sep">|</span>
+            <button type="button" class="btn-sort">공고많은순</button>
+            <span class="sep">|</span>
+            <button type="button" class="btn-sort">가나다순</button>
+          </div>
+        </div>
+
+        <!-- 기업 그리드 리스트 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px;">
+          
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area green font-serif">KANGWON LAND</div>
+            <h3 class="company-name">강원랜드</h3>
+            <p class="company-desc">복합리조트·관광서비스 기업</p>
+            <div class="company-loc-tag">정선군</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area blue">HiCar</div>
+            <h3 class="company-name">현대해상화재보험(주)</h3>
+            <p class="company-desc">자동차 보험 선도 기업</p>
+            <div class="company-loc-tag">춘천시</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area green">Dongwon</div>
+            <h3 class="company-name">동원산업(주)</h3>
+            <p class="company-desc">식품·수산·물류 선도 기업</p>
+            <div class="company-loc-tag">횡성군</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area blue">nepes</div>
+            <h3 class="company-name">네패스</h3>
+            <p class="company-desc">전자·전기 부품 제조</p>
+            <div class="company-loc-tag">춘천시</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area blue">동해포텐주</div>
+            <h3 class="company-name">동해포텐(주)</h3>
+            <p class="company-desc">전기차 부품 선도 기업</p>
+            <div class="company-loc-tag">동해시</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area green">Pharmic</div>
+            <h3 class="company-name">(주)파마리서치</h3>
+            <p class="company-desc">바이오·의약품 제조</p>
+            <div class="company-loc-tag">강릉시</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area blue">MediTech</div>
+            <h3 class="company-name">(주)원주메디컬</h3>
+            <p class="company-desc">의료기기 제조 및 연구개발</p>
+            <div class="company-loc-tag">원주시</div>
+          </a>
+
+          <a href="companies.html" class="company-card">
+            <div class="company-logo-area green">GW-Tech</div>
+            <h3 class="company-name">(주)강원테크</h3>
+            <p class="company-desc">정밀기계 부품 제작</p>
+            <div class="company-loc-tag">춘천시</div>
+          </a>
+
+        </div>
+
+        <!-- 페이지네이션 (운영 사이트 표준 공통 마크업) -->
+        <div class="pager">
+            <a href="#" class="pager-link pager-link-data-first">10페이지 앞으로 이동</a> 
+            <a href="#" class="pager-link pager-link-data-prev">1페이지  앞으로 이동</a> 
+            <span class="pager-num">1/5</span>
+            <a class="pager-link active">1</a> 
+            <a href="#" class="pager-link">2</a> 
+            <a href="#" class="pager-link">3</a>
+            <a href="#" class="pager-link">4</a>
+            <a href="#" class="pager-link">5</a>
+            <a href="#" class="pager-link pager-link-data-next">1페이지 뒤로 이동</a> 
+            <a href="#" class="pager-link pager-link-data-last">10페이지 뒤로 이동</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="index.html" class="header-logo" style="margin-bottom:12px;">
+            <div class="logo-title">
+              강원<span class="highlight">일자리</span>정보망
+            </div>
+            <div class="logo-sub">
+              <span class="dash">-</span>
+              <span>외국인 채용관</span>
+            </div>
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sortBtns = document.querySelectorAll('.btn-sort');
+      sortBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          sortBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -3,76 +3,516 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강원일자리정보망 - 채용공고 검색</title>
+  <title>강원일자리정보망 - 외국인 채용관</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  
   <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
 </head>
 <body>
-    <!-- SITE HEADER -->
-    <header class="site-header">
+
+  <!-- header -->
+  <header class="site-header">
     <div class="header-inner">
-        
-        <!-- Left: Logo & GNB Navigation -->
-        <div class="header-left">
-        <!-- Logo -->
+      <div class="header-left">
         <a href="index.html" class="header-logo">
-            <div class="logo-title">
+          <div class="logo-title">
             강원<span class="highlight">일자리</span>정보망
-            </div>
-            <div class="logo-sub">
+          </div>
+          <div class="logo-sub">
             <span class="dash">-</span>
             <span>외국인 채용관</span>
-            </div>
+          </div>
         </a>
 
-        <!-- Navigation Menu -->
         <nav class="header-nav">
-            <a href="jobs.html" class="nav-item">채용공고</a>
-            <a href="companies.html" class="nav-item">기업정보</a>
-            <a href="talent.html" class="nav-item">인재검색</a>
-            <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
         </nav>
-        </div>
+      </div>
 
-        <!-- Right: Header Utilities -->
-        <div class="header-actions">
+      <div class="header-actions">
         <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">
-            로그인
+          로그인
         </a>
         <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">
-            회원가입
+          회원가입
         </a>
         
-        <!-- Language Selector Dropdown -->
         <div class="lang-selector">
-            <button type="button" id="btn-lang" class="lang-btn">
+          <button type="button" id="btn-lang" class="lang-btn">
             <span>한국어</span>
             <i data-lucide="chevron-down" class="ico-arrow"></i>
-            </button>
-            <div id="lang-menu" class="lang-dropdown hidden">
+          </button>
+          <div id="lang-menu" class="lang-dropdown hidden">
             <button type="button">한국어</button>
             <button type="button">English</button>
             <button type="button">日本語</button>
             <button type="button">Tiếng Việt</button>
-            </div>
+          </div>
         </div>
-        </div>
-
+      </div>
     </div>
-    </header>
+  </header>
+  <!-- //header -->
 
-  <!-- MAIN -->
+  <!-- main -->
   <main class="site-main">
     <div class="inner-section">
-      <!-- Jobs Page Content Area -->
-      <section class="section-block">
-        <h2 class="section-tit" style="margin-bottom: 24px;">채용공고 검색</h2>
-        <!-- 상세 검색 필터 및 채용 목록이 들어갈 영역 -->
+
+      <section class="hero-slider">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?auto=format&fit=crop&q=80&w=2000" alt="메인 배너 1" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                  <p class="hero-subtit">강원에서 꿈을 펼치는</p>
+                  <h2 class="hero-tit">외국인 인재를 환영합니다!</h2>
+                  <p class="hero-desc">강원 기업과 인재를 연결하여, 행복한 미래를 만들겠습니다.</p>
+                  <a href="jobs.html" class="btn-hero">
+                    <span>자세히 보기</span>
+                    <i data-lucide="chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&q=80&w=2000" alt="메인 배너 2" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                  <p class="hero-subtit">외국인 우수인재의</p>
+                  <h2 class="hero-tit">성공적인 정착 파트너</h2>
+                  <p class="hero-desc">다양한 맞춤형 일자리와 함께 새로운 시작을 응원합니다.</p>
+                  <a href="jobs.html" class="btn-hero">
+                    <span>자세히 보기</span>
+                    <i data-lucide="chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=2000" alt="메인 배너 3" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                  <p class="hero-subtit">강원특별자치도</p>
+                  <h2 class="hero-tit">글로벌 인재 풀</h2>
+                  <p class="hero-desc">우수한 외국인 인재와 함께 도약할 기업을 찾습니다.</p>
+                  <a href="companies.html" class="btn-hero">
+                    <span>기업 정보 보기</span>
+                    <i data-lucide="chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="hero-pagination swiper-pagination"></div>
+        </div>
       </section>
+
+      <section class="process-section">
+        <div class="process-glow"></div>
+        
+        <div class="sec-head-center">
+          <h2 class="sec-tit-center">외국인 취업 & 정착 프로세스</h2>
+          <p class="sec-desc-center">강원특별자치도가 성공적인 취업과 안정적인 정착을 함께합니다</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-line"></div>
+          
+          <div class="process-card">
+            <div class="process-ico blue"><i data-lucide="search"></i></div>
+            <h3 class="process-tit">1. 맞춤형 일자리 탐색</h3>
+            <p class="process-desc">보유 비자와 한국어 수준에 맞는 최적의 채용 공고를 매칭받습니다.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-ico indigo"><i data-lucide="id-card"></i></div>
+            <h3 class="process-tit">2. 비자 점수 진단</h3>
+            <p class="process-desc">안정적인 체류를 위한 비자 발급 점수를 확인하고 안내받습니다.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-ico emerald"><i data-lucide="briefcase"></i></div>
+            <h3 class="process-tit">3. 입사 지원 & 계약</h3>
+            <p class="process-desc">투명한 근로 조건 확인과 전문적인 이력서 컨설팅을 제공합니다.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-ico orange"><i data-lucide="home"></i></div>
+            <h3 class="process-tit">4. 지역 정착 지원</h3>
+            <p class="process-desc">근로 및 체류와 관련된 다양한 정책 지원으로 정착을 돕습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-guides-grid">
+        <a href="https://job.gwd.go.kr/gwjob/empymn_sprt/interview_ai" target="_blank" rel="noopener noreferrer" class="guide-card">
+          <div class="guide-ico"><i data-lucide="brain"></i></div>
+          <h3 class="guide-tit">AI역량</h3>
+          <p class="guide-desc">인공지능 기반 역량 검사</p>
+        </a>
+        <a href="https://job.gwd.go.kr/gwjob/empymn_sprt/coverletter_consulting" target="_blank" rel="noopener noreferrer" class="guide-card">
+          <div class="guide-ico"><i data-lucide="edit-3"></i></div>
+          <h3 class="guide-tit">자기소개서 컨설팅</h3>
+          <p class="guide-desc">전문가의 자소서 첨삭</p>
+        </a>
+        <a href="visa-score.html" class="guide-card">
+          <div class="guide-ico"><i data-lucide="clipboard-check"></i></div>
+          <h3 class="guide-tit">비자 점수 진단</h3>
+          <p class="guide-desc">나의 비자 발급 점수 확인</p>
+        </a>
+        <div class="guide-card">
+          <div class="guide-ico"><i data-lucide="headset"></i></div>
+          <h3 class="guide-tit">온라인 상담센터</h3>
+          <p class="guide-desc">전문상담 및 문의 안내</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-ico"><i data-lucide="message-circle-question"></i></div>
+          <h3 class="guide-tit">자주 묻는 질문</h3>
+          <p class="guide-desc">FAQ 확인하기</p>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <div class="section-tit-wrap">
+            <div class="ai-title-icon"><i data-lucide="sparkles"></i></div>
+            <h2 class="section-tit ai-tit">추천 채용공고</h2>
+          </div>
+          <div class="slider-ctrl-btns">
+            <button type="button" class="btn-ctrl btn-rec-prev"><i data-lucide="chevron-left"></i></button>
+            <button type="button" class="btn-ctrl btn-rec-next"><i data-lucide="chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper rec-swiper">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">글로벌 마케팅 담당자</h3>
+                  <p class="job-company">(주)강원글로벌</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>춘천시</span></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">웹 프론트엔드 개발자</h3>
+                  <p class="job-company">테크원</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>원주시</span></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">해외 영업(동남아)</h3>
+                  <p class="job-company">글로벌무역상사</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>강릉시</span></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">생산 관리 및 품질 보증</h3>
+                  <p class="job-company">네패스기술</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>춘천시</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <h2 class="section-tit">강원 대표기업</h2>
+          <div class="ctrl-group">
+            <a href="companies.html" class="btn-view-all">전체보기</a>
+            <div class="slider-ctrl-btns">
+              <button type="button" class="btn-ctrl btn-co-prev"><i data-lucide="chevron-left"></i></button>
+              <button type="button" class="btn-ctrl btn-co-next"><i data-lucide="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper co-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <a href="companies.html" class="company-card">
+                <div class="company-logo-area green font-serif">KANGWON LAND</div>
+                <h3 class="company-name">강원랜드</h3>
+                <p class="company-desc">복합리조트·관광서비스 기업</p>
+                <div class="company-loc-tag">정선</div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="companies.html" class="company-card">
+                <div class="company-logo-area blue">HiCar</div>
+                <h3 class="company-name">현대해상화재보험(주)</h3>
+                <p class="company-desc">자동차 보험 선도 기업</p>
+                <div class="company-loc-tag">춘천</div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="companies.html" class="company-card">
+                <div class="company-logo-area green">Dongwon</div>
+                <h3 class="company-name">동원산업(주)</h3>
+                <p class="company-desc">식품·수산·물류 선도 기업</p>
+                <div class="company-loc-tag">횡성</div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="companies.html" class="company-card">
+                <div class="company-logo-area blue">nepes</div>
+                <h3 class="company-name">네패스</h3>
+                <p class="company-desc">전자·전기 부품 제조</p>
+                <div class="company-loc-tag">춘천</div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="companies.html" class="company-card">
+                <div class="company-logo-area blue">동해포텐주</div>
+                <h3 class="company-name">동해포텐(주)</h3>
+                <p class="company-desc">전기차 부품 선도 기업</p>
+                <div class="company-loc-tag">동해</div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-tit" style="margin-bottom: 16px;">채용공고 검색</h2>
+        
+        <div class="job-filter-box">
+          <div class="filter-search-wrap">
+            <input type="text" placeholder="직무, 회사명, 키워드로 검색하세요">
+            <button type="button" class="btn-filter-search"><i data-lucide="search"></i></button>
+          </div>
+
+          <div class="filter-select-group">
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>지역 선택</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">지역 선택</li>
+                <li data-value="chuncheon">춘천시</li>
+                <li data-value="wonju">원주시</li>
+                <li data-value="gangneung">강릉시</li>
+                <li data-value="donghae">동해시</li>
+                <li data-value="taebaek">태백시</li>
+                <li data-value="sokcho">속초시</li>
+                <li data-value="samcheok">삼척시</li>
+                <li data-value="hongcheon">홍천군</li>
+                <li data-value="hoengseong">횡성군</li>
+                <li data-value="yeongwol">영월군</li>
+                <li data-value="pyeongchang">평창군</li>
+                <li data-value="jeongseon">정선군</li>
+                <li data-value="cheorwon">철원군</li>
+                <li data-value="hwacheon">화천군</li>
+                <li data-value="yanggu">양구군</li>
+                <li data-value="inje">인제군</li>
+                <li data-value="goseong">고성군</li>
+                <li data-value="yangyang">양양군</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>직무 선택</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">직무 선택</li>
+                <li data-value="tech">IT/개발</li>
+                <li data-value="manufacture">제조/생산</li>
+                <li data-value="service">서비스/관광</li>
+                <li data-value="sales">영업/마케팅</li>
+                <li data-value="admin">경영/사무</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>경력 선택</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">경력 선택</li>
+                <li data-value="new">신입</li>
+                <li data-value="exp">경력</li>
+                <li data-value="irrelevant">경력무관</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>고용형태</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">고용형태</li>
+                <li data-value="full">정규직</li>
+                <li data-value="contract">계약직</li>
+                <li data-value="part">파트타임</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>비자유형</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">비자유형</li>
+                <li data-value="e7">E-7 (전문인력)</li>
+                <li data-value="e9">E-9 (비전문취업)</li>
+                <li data-value="f2">F-2 (거주)</li>
+                <li data-value="f4">F-4 (재외동포)</li>
+                <li data-value="f5">F-5 (영주)</li>
+                <li data-value="f6">F-6 (결혼이민)</li>
+                <li data-value="d10">D-10 (구직)</li>
+              </ul>
+            </div>
+
+            <div class="field-select-wrap custom-select">
+              <button type="button" class="select-btn">
+                <span>한국어 가능 수준</span>
+                <i data-lucide="chevron-down" class="select-arrow"></i>
+              </button>
+              <ul class="select-options">
+                <li data-value="">한국어 가능 수준</li>
+                <li data-value="topik1">TOPIK 1~2급 (초급)</li>
+                <li data-value="topik2">TOPIK 3~4급 (중급)</li>
+                <li data-value="topik3">TOPIK 5~6급 (고급)</li>
+                <li data-value="none">무관</li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn-reset"><i data-lucide="rotate-ccw"></i><span>초기화</span></button>
+          </div>
+
+          <div class="filter-check-group">
+            <label class="check-item"><input type="checkbox"><span>마감 임박 공고</span></label>
+            <label class="check-item"><input type="checkbox"><span>신규 등록 공고</span></label>
+            <label class="check-item"><input type="checkbox"><span>비자 소지자 지원</span></label>
+            <label class="check-item"><input type="checkbox"><span>기숙사 제공</span></label>
+            <label class="check-item"><input type="checkbox"><span>한국어 교육 지원</span></label>
+          </div>
+        </div>
+
+        <div class="job-list-container">
+          <div class="job-item-card">
+            <div class="job-item-brand-area">
+              <div class="brand-logo blue">Dongwon</div>
+              <div class="brand-name">동원산업(주)</div>
+            </div>
+            <div class="job-item-info">
+              <h3 class="job-item-title"><a href="jobs.html">생산관리 사원 (신입/경력)</a></h3>
+              <div class="job-item-tags">
+                <span>횡성군</span><span class="sep">|</span><span>정규직</span><span class="sep">|</span><span>협의</span>
+              </div>
+            </div>
+            <div class="job-item-meta">
+              <div class="job-deadline-wrap">
+                <p class="job-deadline">2025-05-29까지 (D-14)</p>
+                <p class="job-cond">신입/경력 · 한국어가능(중급이상)</p>
+              </div>
+              <button type="button" class="btn-bookmark" aria-label="북마크">
+                <i data-lucide="bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="job-item-card">
+            <div class="job-item-brand-area">
+              <div class="brand-logo dark-blue">HiCar</div>
+              <div class="brand-name">현대해상화재보험(주)</div>
+            </div>
+            <div class="job-item-info">
+              <h3 class="job-item-title"><a href="jobs.html">보험심사 담당자 (신입/경력)</a></h3>
+              <div class="job-item-tags">
+                <span>춘천시</span><span class="sep">|</span><span>정규직</span><span class="sep">|</span><span>협의</span>
+              </div>
+            </div>
+            <div class="job-item-meta">
+              <div class="job-deadline-wrap">
+                <p class="job-deadline">2025-06-05까지 (D-21)</p>
+                <p class="job-cond">경력 3년 이상 · 한국어가능(고급)</p>
+              </div>
+              <button type="button" class="btn-bookmark" aria-label="북마크">
+                <i data-lucide="bookmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-btn-wrap">
+          <button type="button" class="btn-more-jobs">
+            <span>더 많은 공고 보기</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
     </div>
   </main>
+  <!-- //main -->
 
-  <!-- FOOTER -->
+  <!-- footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="inner-section">
@@ -82,15 +522,22 @@
           <a href="#">이메일무단수집거부</a>
           <a href="#">사이트 맵</a>
         </div>
-        <button type="button" id="btn-top" class="btn-top"><i data-lucide="arrow-up"></i></button>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
       </div>
     </div>
     <div class="footer-bot">
       <div class="inner-section footer-bot-inner">
         <div>
           <a href="index.html" class="header-logo" style="margin-bottom:12px;">
-            <span class="logo-main">강원<span>일자리</span>정보망</span>
-            <span class="logo-sub"><span class="dash">-</span>외국인 채용관</span>
+            <div class="logo-title">
+              강원<span class="highlight">일자리</span>정보망
+            </div>
+            <div class="logo-sub">
+              <span class="dash">-</span>
+              <span>외국인 채용관</span>
+            </div>
           </a>
           <div class="footer-info">
             <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
@@ -101,6 +548,48 @@
       </div>
     </div>
   </footer>
-  <script>lucide.createIcons();</script>
+  <!-- //footer -->
+
+  <!-- 메인 전용 슬라이더 자바스크립트 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.hero-swiper', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        pagination: {
+          el: '.hero-pagination',
+          clickable: true
+        }
+      });
+
+      new Swiper('.rec-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        navigation: {
+          nextEl: '.btn-rec-next',
+          prevEl: '.btn-rec-prev',
+        },
+        breakpoints: {
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 }
+        }
+      });
+
+      new Swiper('.co-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        navigation: {
+          nextEl: '.btn-co-next',
+          prevEl: '.btn-co-prev',
+        },
+        breakpoints: {
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
