@@ -561,7 +561,7 @@ button {
   border-radius: 12px;
   border: 1px solid #e2e8f0;
   padding: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 4rem;
   text-align: center;
   overflow: hidden;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -665,7 +665,7 @@ button {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 4rem;
 }
 
 .site-main a.guide-card,
@@ -718,7 +718,7 @@ div.guide-card:hover {
 }
 
 .section-block {
-  margin-bottom: 48px;
+  margin-bottom: 4rem;
 }
 
 .section-head {
@@ -1348,6 +1348,11 @@ div.guide-card:hover {
   .job-list-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 12px;
+  }
+  .process-section,
+  .section-block,
+  .quick-guides-grid {
+    margin-bottom: 3rem;
   }
 }
 
