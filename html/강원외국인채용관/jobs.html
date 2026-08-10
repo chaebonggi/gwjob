@@ -16,18 +16,13 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
-        <a href="index.html" class="header-logo">
-          <div class="logo-title">
-            강원<span class="highlight">일자리</span>정보망
-          </div>
-          <div class="logo-sub">
-            <span class="dash">-</span>
-            <span>외국인 채용관</span>
-          </div>
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
         </a>
 
+        <!-- 데스크톱 네비게이션 (1200px 이상) -->
         <nav class="header-nav">
-          <a href="jobs.html" class="nav-item active">채용공고</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
           <a href="companies.html" class="nav-item">기업정보</a>
           <a href="talent.html" class="nav-item">인재검색</a>
           <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
@@ -42,22 +37,72 @@
           회원가입
         </a>
         
+        <!-- 언어 선택 드롭다운 (데스크톱) -->
         <div class="lang-selector">
-          <button type="button" id="btn-lang" class="lang-btn">
+          <button type="button" class="lang-btn btn-lang-toggle">
             <span>한국어</span>
             <i data-lucide="chevron-down" class="ico-arrow"></i>
           </button>
-          <div id="lang-menu" class="lang-dropdown hidden">
+          <div class="lang-dropdown lang-menu hidden">
             <button type="button">한국어</button>
             <button type="button">English</button>
             <button type="button">日本語</button>
             <button type="button">Tiếng Việt</button>
           </div>
         </div>
+
+        <!-- 모바일 햄버거 버튼 (1200px 미만) -->
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
       </div>
     </div>
   </header>
   <!-- //header -->
+
+  <!-- 모바일 전용 드로어 메뉴 (1200px 미만) -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      <a href="visa-score.html" class="m-nav-item">비자 점수 진단</a>
+    </nav>
+
+    <!-- 하단 언어선택 (위로 열리는 드롭업 형태) -->
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
 
   <!-- main -->
   <main class="site-main">
@@ -196,16 +241,17 @@
             <button type="button" class="btn-sort active">최신순</button>
             <span class="sep">|</span>
             <button type="button" class="btn-sort">마감임박순</button>
-            <span class="sep">|</span>
-            <button type="button" class="btn-sort">조회순</button>
           </div>
         </div>
 
         <div class="job-list-container">
           
           <div class="job-item-card">
+            
             <div class="job-item-brand-area">
-              <div class="brand-logo blue">Dongwon</div>
+              <div class="brand-logo-box">
+                <img src="./images/c_logo01.jpg" alt="동원산업(주) 로고" class="brand-logo-img">
+              </div>
               <div class="brand-name">동원산업(주)</div>
             </div>
             <div class="job-item-info">
@@ -227,8 +273,10 @@
 
           <div class="job-item-card">
             <div class="job-item-brand-area">
-              <div class="brand-logo dark-blue">HiCar</div>
-              <div class="brand-name">현대해상화재보험(주)</div>
+              <div class="brand-logo-box">
+                <img src="./images/c_logo02.jpg" alt="hicar 로고" class="brand-logo-img">
+              </div>
+              <div class="brand-name">하이카</div>
             </div>
             <div class="job-item-info">
               <h3 class="job-item-title"><a href="jobs.html">보험심사 담당자 (신입/경력)</a></h3>
@@ -249,8 +297,10 @@
 
           <div class="job-item-card">
             <div class="job-item-brand-area">
-              <div class="brand-logo blue">nepes</div>
-              <div class="brand-name">네패스</div>
+              <div class="brand-logo-box">
+                <img src="./images/c_logo03.jpg" alt="dongwon 로고" class="brand-logo-img">
+              </div>
+              <div class="brand-name">동원샘물</div>
             </div>
             <div class="job-item-info">
               <h3 class="job-item-title"><a href="jobs.html">반도체 공정 기술자</a></h3>
@@ -271,8 +321,10 @@
 
           <div class="job-item-card">
             <div class="job-item-brand-area">
-              <div class="brand-logo green">KANGWON</div>
-              <div class="brand-name">강원랜드</div>
+              <div class="brand-logo-box">
+                <img src="./images/c_logo04.jpg" alt="nepes 로고" class="brand-logo-img">
+              </div>
+              <div class="brand-name">네페스</div>
             </div>
             <div class="job-item-info">
               <h3 class="job-item-title"><a href="jobs.html">글로벌 고객 응대 및 통역 담당자</a></h3>
@@ -293,8 +345,10 @@
 
           <div class="job-item-card">
             <div class="job-item-brand-area">
-              <div class="brand-logo blue">GlobalTrade</div>
-              <div class="brand-name">글로벌무역상사</div>
+              <div class="brand-logo-box">
+                <img src="./images/c_none.jpg" alt="기본이미지 로고" class="brand-logo-img">
+              </div>
+              <div class="brand-name">강원랜드</div>
             </div>
             <div class="job-item-info">
               <h3 class="job-item-title"><a href="jobs.html">동남아 해외 영업 및 마케팅</a></h3>
@@ -376,17 +430,5 @@
     </div>
   </footer>
   <!-- //footer -->
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sortBtns = document.querySelectorAll('.btn-sort');
-      sortBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          sortBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
