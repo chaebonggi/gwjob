@@ -43,7 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMClose) btnMClose.addEventListener('click', closeMobileMenu);
   if (mOverlay) mOverlay.addEventListener('click', closeMobileMenu);
 
-  // 4. 모바일 언어 선택 (위로 열리는 드롭업 토글)
+  // 4. 모바일 서브메뉴 아코디언 토글
+  document.querySelectorAll('.btn-m-acc').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const group = btn.closest('.m-nav-group');
+      const subNav = group ? group.querySelector('.m-sub-nav') : null;
+
+      btn.classList.toggle('active');
+      if (subNav) {
+        subNav.classList.toggle('hidden');
+      }
+    });
+  });
+
+  // 5. 모바일 언어 선택 (위로 열리는 드롭업 토글)
   const mLangSelect = document.getElementById('m-lang-select');
   if (mLangSelect) {
     const btn = mLangSelect.querySelector('.m-lang-select-btn');
@@ -51,11 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const label = document.getElementById('m-lang-label');
     const options = mLangSelect.querySelectorAll('.m-lang-options li');
 
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      mLangSelect.classList.toggle('active');
-      optionsWrap.classList.toggle('hidden');
-    });
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mLangSelect.classList.toggle('active');
+        if (optionsWrap) optionsWrap.classList.toggle('hidden');
+      });
+    }
 
     options.forEach(opt => {
       opt.addEventListener('click', () => {
@@ -63,12 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
         opt.classList.add('active');
         if (label) label.textContent = opt.textContent;
         mLangSelect.classList.remove('active');
-        optionsWrap.classList.add('hidden');
+        if (optionsWrap) optionsWrap.classList.add('hidden');
       });
     });
   }
 
-  // 5. 푸터 상단 이동 버튼
+  // 6. 푸터 상단 이동 버튼
   const btnTop = document.getElementById('btn-top');
   if (btnTop) {
     btnTop.addEventListener('click', () => {
@@ -76,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. 북마크(좋아요) 토글 이벤트
+  // 7. 북마크(좋아요) 토글 이벤트
   document.addEventListener('click', (e) => {
     const btnBookmark = e.target.closest('.btn-bookmark');
     if (btnBookmark) {
@@ -86,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 7. 커스텀 드롭다운 (필터 공통)
+  // 8. 커스텀 드롭다운 (필터 공통)
   document.querySelectorAll('.custom-select').forEach(select => {
     const btn = select.querySelector('.select-btn');
     const options = select.querySelectorAll('.select-options li');
@@ -94,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btn) {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        
+
         document.querySelectorAll('.custom-select').forEach(s => {
           if (s !== select) s.classList.remove('active');
         });
@@ -113,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. 외부 영역 클릭 시 모든 드롭다운 및 팝업 닫기
+  // 9. 외부 영역 클릭 시 모든 드롭다운 및 팝업 닫기
   document.addEventListener('click', (e) => {
     document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('active'));
 

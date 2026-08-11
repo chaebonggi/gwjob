@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강원일자리정보망 외국인 채용관 - 소개</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item active">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-score.html" class="nav-item">
+              <span>비자 점수 진단</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- 모바일 드로어 메뉴 -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 점수 진단</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav hidden">
+          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+      <div class="about-container">
+
+        <!-- 1. Hero Section -->
+        <section class="about-hero">
+          <div class="about-hero-content">
+            <h2 class="about-hero-title">강원외국인채용관 소개</h2>
+            <p class="about-hero-sub">강원도 기업과 외국인 인재가 함께 성장하는<br>글로벌 인재 플랫폼</p>
+            <p class="about-hero-desc">
+              강원외국인채용관은 우수한 외국인 인재와 강원도 기업을 연결하여<br>
+              지역 산업의 경쟁력 강화와 외국인 근로자의 안정적인 정착을 지원합니다.
+            </p>
+            
+            <div class="about-hero-features">
+              <div class="feature-item">
+                <div class="ico-wrap blue"><i data-lucide="globe"></i></div>
+                <h4>글로벌 인재 연결</h4>
+                <p>국내외 우수 인재와의<br>만남의 장</p>
+              </div>
+              <div class="feature-item">
+                <div class="ico-wrap green"><i data-lucide="building-2"></i></div>
+                <h4>기업 경쟁력 강화</h4>
+                <p>맞춤형 인재 채용으로<br>기업 성장 지원</p>
+              </div>
+              <div class="feature-item">
+                <div class="ico-wrap orange"><i data-lucide="users"></i></div>
+                <h4>안정적 정착 지원</h4>
+                <p>외국인 근로자의 지역사회<br>안착을 위한 지원</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-hero-img-wrap">
+            <img src="images/hero_global.jpg" alt="글로벌 인재" class="about-hero-img">
+          </div>
+        </section>
+
+        <!-- 2. Service Flow -->
+        <section class="about-section text-center">
+          <div class="sec-title-wrap">
+            <div class="dot-deco left"><span></span><span></span></div>
+            <h3 class="about-sec-title">서비스 이용 절차</h3>
+            <div class="dot-deco right"><span></span><span></span></div>
+          </div>
+
+          <div class="about-flow-grid">
+            <div class="flow-card">
+              <div class="flow-ico-box">
+                <i data-lucide="search" class="ico-blue"></i>
+                <span class="flow-step-num bg-blue">1</span>
+              </div>
+              <h4>맞춤형 일자리 탐색</h4>
+              <p>보유 비자와 한국어 수준에 맞는 최적의 채용 공고를 검색합니다.</p>
+            </div>
+
+            <i data-lucide="arrow-right" class="flow-arrow"></i>
+
+            <div class="flow-card">
+              <div class="flow-ico-box">
+                <i data-lucide="id-card" class="ico-green"></i>
+                <span class="flow-step-num bg-green">2</span>
+              </div>
+              <h4>비자 점수 진단</h4>
+              <p>안정적인 체류를 위한 비자 발급 점수를 확인하고 안내받습니다.</p>
+            </div>
+
+            <i data-lucide="arrow-right" class="flow-arrow"></i>
+
+            <div class="flow-card">
+              <div class="flow-ico-box">
+                <i data-lucide="briefcase" class="ico-orange"></i>
+                <span class="flow-step-num bg-orange">3</span>
+              </div>
+              <h4>입사 지원 & 계약</h4>
+              <p>투명한 근로 조건 확인과 전문적인 이력서 컨설팅을 제공합니다.</p>
+            </div>
+
+            <i data-lucide="arrow-right" class="flow-arrow"></i>
+
+            <div class="flow-card">
+              <div class="flow-ico-box">
+                <i data-lucide="home" class="ico-purple"></i>
+                <span class="flow-step-num bg-purple">4</span>
+              </div>
+              <h4>지역 정착 지원</h4>
+              <p>근로 및 체류와 관련된 다양한 정착 지원으로 생활을 돕습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Main Services -->
+        <section class="about-section">
+          <div class="sec-title-wrap text-center">
+            <div class="dot-deco left"><span></span><span></span></div>
+            <h3 class="about-sec-title">주요 서비스</h3>
+            <div class="dot-deco right"><span></span><span></span></div>
+          </div>
+
+          <div class="about-service-grid">
+            <div class="service-card">
+              <div class="service-thumb">
+                <img src="images/service_matching.jpg" alt="맞춤형 일자리 매칭">
+                <div class="service-ico-badge blue"><i data-lucide="search"></i></div>
+              </div>
+              <div class="service-body">
+                <h4>맞춤형 일자리 매칭</h4>
+                <p>외국인 인재의 비자, 학력, 경력, 한국어 능력을 종합적으로 분석하여 최적의 강원도 내 우수 기업을 AI 기반으로 추천합니다.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-thumb">
+                <img src="images/service_visa.jpg" alt="비자 점수 진단">
+                <div class="service-ico-badge green"><i data-lucide="id-card"></i></div>
+              </div>
+              <div class="service-body">
+                <h4>비자 점수 진단</h4>
+                <p>복잡한 비자 제도를 쉽게 이해하고, 현재 자신의 점수등을 진단할 수 있는 시뮬레이션 시스템을 제공하여 체류 자격 취득을 돕습니다.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-thumb">
+                <img src="images/service_edu.jpg" alt="취업 역량 강화">
+                <div class="service-ico-badge orange"><i data-lucide="graduation-cap"></i></div>
+              </div>
+              <div class="service-body">
+                <h4>취업 역량 강화</h4>
+                <p>이력서 및 자기소개서 컨설팅, AI 모의 면접, 한국어 능력 향상 교육 등 취업에 필요한 실질적인 교육 프로그램을 지원합니다.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-thumb">
+                <img src="images/service_settle.jpg" alt="지역 정착 지원">
+                <div class="service-ico-badge red"><i data-lucide="map-pin"></i></div>
+              </div>
+              <div class="service-body">
+                <h4>지역 정착 지원</h4>
+                <p>취업 후에도 안정적으로 정착할 수 있도록 주거, 의료, 노무 등 다양한 생활 정보와 전문가 상담 서비스를 연계합니다.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-thumb">
+                <img src="images/service_counseling.jpg" alt="온라인 상담센터">
+                <div class="service-ico-badge purple"><i data-lucide="headset"></i></div>
+              </div>
+              <div class="service-body">
+                <h4>온라인 상담센터</h4>
+                <p>전문 상담원이 비자, 취업, 생활 정보 등 외국인 근로자의 궁금증을 실시간으로 해결해 드립니다.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Vision Section -->
+        <section class="about-vision">
+          <div class="vision-head">
+            <h3 class="vision-title">우리의 비전</h3>
+            <p class="vision-main-txt">"글로벌 인재와 함께 성장하는 특별 자치 시대, 활력 넘치는 강원"</p>
+            <p class="vision-sub-txt">강원외국인채용관은 강원도의 미래를 이끌어갈 글로벌 인재를 환영합니다.</p>
+          </div>
+          <div class="vision-img-wrap">
+            <img src="images/vision_illustration.jpg" alt="비전 일러스트" class="vision-img">
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+</body>
+</html>
