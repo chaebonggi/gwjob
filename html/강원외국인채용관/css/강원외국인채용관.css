@@ -2635,7 +2635,7 @@ div.guide-card:hover {
   background: #ffffff;
   border: 1px solid #cbd5e1;
   border-radius: 20px;
-  padding: 32px;
+  padding: 3rem;
   margin-bottom: 2.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
@@ -3038,6 +3038,7 @@ div.guide-card:hover {
   align-items: center;
   gap: 8px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .e74-sec-title small {

@@ -20,24 +20,29 @@
           <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
         </a>
 
-        <!-- 데스크톱 네비게이션 (1200px 이상) -->
         <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
           <a href="jobs.html" class="nav-item">채용공고</a>
-          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="companies.html" class="nav-item active">기업정보</a>
           <a href="talent.html" class="nav-item">인재검색</a>
-          <a href="visa-score.html" class="nav-item">비자 점수 진단</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-score.html" class="nav-item">
+              <span>비자 점수 진단</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+            </div>
+          </div>
         </nav>
       </div>
 
       <div class="header-actions">
-        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">
-          로그인
-        </a>
-        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">
-          회원가입
-        </a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
         
-        <!-- 언어 선택 드롭다운 (데스크톱) -->
         <div class="lang-selector">
           <button type="button" class="lang-btn btn-lang-toggle">
             <span>한국어</span>
@@ -51,7 +56,6 @@
           </div>
         </div>
 
-        <!-- 모바일 햄버거 버튼 (1200px 미만) -->
         <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
           <i data-lucide="menu"></i>
         </button>
@@ -60,7 +64,7 @@
   </header>
   <!-- //header -->
 
-  <!-- 모바일 전용 드로어 메뉴 (1200px 미만) -->
+  <!-- 모바일 드로어 메뉴 -->
   <div class="mobile-menu-overlay" id="m-overlay"></div>
   <aside class="mobile-menu-drawer" id="m-drawer">
     <div class="m-drawer-head">
@@ -78,13 +82,23 @@
     </div>
 
     <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
       <a href="jobs.html" class="m-nav-item">채용공고</a>
       <a href="companies.html" class="m-nav-item">기업정보</a>
       <a href="talent.html" class="m-nav-item">인재검색</a>
-      <a href="visa-score.html" class="m-nav-item">비자 점수 진단</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 점수 진단</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav hidden">
+          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        </div>
+      </div>
     </nav>
 
-    <!-- 하단 언어선택 (위로 열리는 드롭업 형태) -->
     <div class="m-drawer-lang">
       <div class="m-lang-title">언어선택 (Language)</div>
       <div class="m-lang-select-wrap" id="m-lang-select">
