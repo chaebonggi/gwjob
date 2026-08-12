@@ -2427,7 +2427,7 @@ div.guide-card:hover {
 .talent-notice-box__text li {
   position: relative;
   padding-left: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #475569;
   line-height: 1.6;
 }
@@ -2437,7 +2437,7 @@ div.guide-card:hover {
   height: 0.3rem;
   position: absolute;
   left: 0;
-  top: 7px;
+  top: 8px;
   background-color: #475569;
   border-radius: 50%;
 }
