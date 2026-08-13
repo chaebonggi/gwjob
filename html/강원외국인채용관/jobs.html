@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>채용공고 - 강원일자리정보망 외국인 채용관</title>
   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
   <link rel="stylesheet" href="css/강원외국인채용관.css">
@@ -22,7 +24,7 @@
 
         <nav class="header-nav">
           <a href="about.html" class="nav-item">소개</a>
-          <a href="jobs.html" class="nav-item acitve">채용공고</a>
+          <a href="jobs.html" class="nav-item active">채용공고</a>
           <a href="companies.html" class="nav-item">기업정보</a>
           <a href="talent.html" class="nav-item">인재검색</a>
           
@@ -53,6 +55,8 @@
             <button type="button">English</button>
             <button type="button">日本語</button>
             <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
           </div>
         </div>
 
@@ -83,7 +87,7 @@
 
     <nav class="m-drawer-nav">
       <a href="about.html" class="m-nav-item">소개</a>
-      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="jobs.html" class="m-nav-item active">채용공고</a>
       <a href="companies.html" class="m-nav-item">기업정보</a>
       <a href="talent.html" class="m-nav-item">인재검색</a>
       
@@ -127,7 +131,94 @@
         <p class="sub-desc">강원특별자치도 내 우수한 외국인 맞춤형 채용공고를 확인해 보세요.</p>
       </section>
 
+      <!-- 추천 채용공고 섹션 -->
       <section class="section-block">
+        <div class="section-head">
+          <div class="section-tit-wrap">
+            <div class="ai-title-icon"><i data-lucide="sparkles"></i></div>
+            <h2 class="section-tit ai-tit">추천 채용공고</h2>
+          </div>
+          <div class="slider-ctrl-btns">
+            <button type="button" class="btn-ctrl btn-rec-prev" aria-label="이전"><i data-lucide="chevron-left"></i></button>
+            <button type="button" class="btn-ctrl btn-rec-next" aria-label="다음"><i data-lucide="chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper rec-swiper">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">글로벌 마케팅 담당자</h3>
+                  <p class="job-company">(주)강원글로벌</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>춘천시</span></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">웹 프론트엔드 개발자</h3>
+                  <p class="job-company">테크원</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>원주시</span></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">해외 영업(동남아)</h3>
+                  <p class="job-company">글로벌무역상사</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>강릉시</span></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="job-card">
+                <div class="job-card-top-bar"></div>
+                <div class="job-bookmark-area">
+                  <button type="button" class="btn-bookmark" aria-label="북마크">
+                    <i data-lucide="bookmark"></i>
+                  </button>
+                </div>
+                <a href="jobs.html" class="job-card-link">
+                  <h3 class="job-tit">생산 관리 및 품질 보증</h3>
+                  <p class="job-company">네패스기술</p>
+                </a>
+                <div class="job-loc"><i data-lucide="map-pin"></i><span>춘천시</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 채용공고 상세검색 필터 섹션 -->
+      <section class="section-block">
+        <h2 class="section-tit section-tit--mb-16">채용공고 검색</h2>
+        
         <div class="job-filter-box">
           <div class="filter-search-wrap">
             <input type="text" placeholder="직무, 회사명, 키워드로 검색하세요">
@@ -261,7 +352,6 @@
         <div class="job-list-container">
           
           <div class="job-item-card">
-            
             <div class="job-item-brand-area">
               <div class="brand-logo-box">
                 <img src="./images/c_logo01.jpg" alt="동원산업(주) 로고" class="brand-logo-img">
@@ -383,23 +473,23 @@
 
         </div>
 
-        <!-- 페이지네이션 (운영 사이트 표준 공통 마크업) -->
+        <!-- 페이지네이션 -->
         <div class="pager">
-            <a href="#" class="pager-link pager-link-data-first">10페이지 앞으로 이동</a> 
-            <a href="#" class="pager-link pager-link-data-prev">1페이지  앞으로 이동</a> 
-            <span class="pager-num">1/156</span>
-            <a class="pager-link active">1</a> 
-            <a href="#" class="pager-link">2</a> 
-            <a href="#" class="pager-link">3</a>
-            <a href="#" class="pager-link">4</a>
-            <a href="#" class="pager-link">5</a>
-            <a href="#" class="pager-link">6</a>
-            <a href="#" class="pager-link">7</a>
-            <a href="#" class="pager-link">8</a>
-            <a href="#" class="pager-link">9</a>
-            <a href="#" class="pager-link">10</a>
-            <a href="#" class="pager-link pager-link-data-next">1페이지 뒤로 이동</a> 
-            <a href="#" class="pager-link pager-link-data-last">10페이지 뒤로 이동</a>
+          <a href="#" class="pager-link pager-link-data-first">10페이지 앞으로 이동</a> 
+          <a href="#" class="pager-link pager-link-data-prev">1페이지 앞으로 이동</a> 
+          <span class="pager-num">1/156</span>
+          <a class="pager-link active">1</a> 
+          <a href="#" class="pager-link">2</a> 
+          <a href="#" class="pager-link">3</a>
+          <a href="#" class="pager-link">4</a>
+          <a href="#" class="pager-link">5</a>
+          <a href="#" class="pager-link">6</a>
+          <a href="#" class="pager-link">7</a>
+          <a href="#" class="pager-link">8</a>
+          <a href="#" class="pager-link">9</a>
+          <a href="#" class="pager-link">10</a>
+          <a href="#" class="pager-link pager-link-data-next">1페이지 뒤로 이동</a> 
+          <a href="#" class="pager-link pager-link-data-last">10페이지 뒤로 이동</a>
         </div>
       </section>
 
@@ -425,14 +515,8 @@
     <div class="footer-bot">
       <div class="inner-section footer-bot-inner">
         <div>
-          <a href="index.html" class="header-logo" style="margin-bottom:12px;">
-            <div class="logo-title">
-              강원<span class="highlight">일자리</span>정보망
-            </div>
-            <div class="logo-sub">
-              <span class="dash">-</span>
-              <span>외국인 채용관</span>
-            </div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
           </a>
           <div class="footer-info">
             <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
@@ -444,5 +528,27 @@
     </div>
   </footer>
   <!-- //footer -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      new Swiper('.rec-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        navigation: {
+          nextEl: '.btn-rec-next',
+          prevEl: '.btn-rec-prev',
+        },
+        breakpoints: {
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 }
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비자로드맵 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-score.html" class="nav-item active">
+              <span>비자 점수 진단</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- 모바일 드로어 메뉴 -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 점수 진단</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav hidden">
+          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+
+      <section class="roadmap-section">
+        <!-- 상단 헤더 영역 -->
+        <div class="roadmap-head">
+          <div class="roadmap-sub-badge">
+            <i data-lucide="map" class="ico-blue"></i>
+            <span>강원외국인채용관 비자 가이드</span>
+          </div>
+          <h1 class="roadmap-title">비자 취득 로드맵</h1>
+          <p class="roadmap-desc">외국인 인재의 입국부터 영주까지, 단계별 비자 체계를 확인하세요.</p>
+        </div>
+
+        <!-- 로드맵 4단계 그리드 영역 -->
+        <div class="roadmap-grid">
+          <div class="roadmap-connect-line"></div>
+
+          <!-- Phase 1: 유치 -->
+          <div class="roadmap-phase-col">
+            <div class="phase-header phase-header--navy">
+              <i data-lucide="users"></i>
+              <h3>1단계: 유치</h3>
+            </div>
+
+            <div class="phase-body">
+              <div class="visa-item-card" onclick="alert('일반연수 (D-4) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="graduation-cap"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">일반연수</h4>
+                      <span class="visa-code-badge visa-code-badge--navy">D-4</span>
+                    </div>
+                    <p class="visa-desc">한국어 연수 및 직무 교육</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visa-item-card" onclick="alert('비전문인력/선원 (E-9 / E-10) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="ship"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">비전문인력/선원</h4>
+                      <span class="visa-code-badge visa-code-badge--navy">E-9 / E-10</span>
+                    </div>
+                    <p class="visa-desc">비전문 인력 또는 선원으로 취업 활동</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visa-item-card" onclick="alert('유학 (D-2) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="book-open"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">유학</h4>
+                      <span class="visa-code-badge visa-code-badge--navy">D-2</span>
+                    </div>
+                    <p class="visa-desc">학위 취득을 위한 유학 활동</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visa-item-card" onclick="alert('(예정) 전문인력 (직도입) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="user"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">(예정) 전문인력</h4>
+                      <span class="visa-code-badge visa-code-badge--navy">직도입</span>
+                    </div>
+                    <p class="visa-desc">전문 인력으로 직접 채용</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2: 취업 -->
+          <div class="roadmap-phase-col">
+            <div class="phase-header phase-header--emerald">
+              <i data-lucide="briefcase"></i>
+              <h3>2단계: 취업</h3>
+            </div>
+
+            <div class="phase-body">
+              <div class="visa-item-card-group">
+                <div class="visa-item-card" onclick="alert('숙련기능인력 (E-7-4) 안내 페이지로 이동합니다.')">
+                  <div class="visa-item-card__inner">
+                    <div class="visa-ico-box visa-ico-box--emerald"><i data-lucide="settings"></i></div>
+                    <div class="visa-info-wrap">
+                      <div class="visa-info-head">
+                        <h4 class="visa-title">숙련기능인력</h4>
+                        <span class="visa-code-badge visa-code-badge--emerald">E-7-4</span>
+                      </div>
+                      <p class="visa-desc">기능 및 경력 보유 인력 취업</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="visa-sub-items-box">
+                  <div class="visa-sub-item" onclick="alert('특정활동 (E-7) 안내 페이지로 이동합니다.')">
+                    <div class="visa-sub-title">특정활동</div>
+                    <div class="visa-sub-desc">E-7-1 전문직 / E-7-2 준전문직 / E-7-3 일반기능</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visa-item-card-group">
+                <div class="visa-item-card" onclick="alert('구직 (D-10) 안내 페이지로 이동합니다.')">
+                  <div class="visa-item-card__inner">
+                    <div class="visa-ico-box visa-ico-box--emerald"><i data-lucide="building-2"></i></div>
+                    <div class="visa-info-wrap">
+                      <div class="visa-info-head">
+                        <h4 class="visa-title">구직</h4>
+                        <span class="visa-code-badge visa-code-badge--emerald">D-10</span>
+                      </div>
+                      <p class="visa-desc">취업을 위한 구직 활동</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="visa-sub-items-box">
+                  <div class="visa-sub-item" onclick="alert('기업투자 (D-8) 안내 페이지로 이동합니다.')">
+                    <div class="visa-sub-title">기업투자</div>
+                    <div class="visa-sub-code">D-8</div>
+                  </div>
+                  <div class="visa-sub-item" onclick="alert('무역경영(창업) (D-9) 안내 페이지로 이동합니다.')">
+                    <div class="visa-sub-title">무역경영(창업)</div>
+                    <div class="visa-sub-code">D-9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3: 거주 -->
+          <div class="roadmap-phase-col">
+            <div class="phase-header phase-header--blue">
+              <i data-lucide="home"></i>
+              <h3>3단계: 거주</h3>
+            </div>
+
+            <div class="phase-body">
+              <div class="visa-item-card" onclick="alert('기타 장기 거주 (F-2-99) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--blue"><i data-lucide="home"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">기타 장기 거주</h4>
+                      <span class="visa-code-badge visa-code-badge--blue">F-2-99</span>
+                    </div>
+                    <p class="visa-desc">장기 체류가 필요한 경우</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visa-item-card" onclick="alert('지역특화형 (F-2-R) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--blue"><i data-lucide="users"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">지역특화형</h4>
+                      <span class="visa-code-badge visa-code-badge--blue">F-2-R</span>
+                    </div>
+                    <p class="visa-desc">지역 맞춤형 우수 인재</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visa-item-card" onclick="alert('우수인재 (F-2-7) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--blue"><i data-lucide="award"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">우수인재</h4>
+                      <span class="visa-code-badge visa-code-badge--blue">F-2-7</span>
+                    </div>
+                    <p class="visa-desc">전문성 및 우수 인재</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4: 영주 -->
+          <div class="roadmap-phase-col">
+            <div class="phase-header phase-header--purple">
+              <i data-lucide="globe"></i>
+              <h3>4단계: 영주</h3>
+            </div>
+
+            <div class="phase-body">
+              <div class="visa-item-card" onclick="alert('영주 (F-5) 안내 페이지로 이동합니다.')">
+                <div class="visa-item-card__inner">
+                  <div class="visa-ico-box visa-ico-box--purple"><i data-lucide="file-check"></i></div>
+                  <div class="visa-info-wrap">
+                    <div class="visa-info-head">
+                      <h4 class="visa-title">영주</h4>
+                      <span class="visa-code-badge visa-code-badge--purple">F-5</span>
+                    </div>
+                    <p class="visa-desc">장기 거주 후 영주 자격 취득</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
