@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공지사항 상세 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-roadmap.html" class="nav-item">
+              <span>비자 가이드</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+            </div>
+          </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item active">공지게시판</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- 모바일 드로어 메뉴 -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 가이드</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav hidden">
+          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        </div>
+      </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item active">공지게시판</a>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+      <div class="notices-container">
+
+        <!-- 타이틀 헤더 -->
+        <section class="sub-page-head">
+          <div class="notice-top-tag">
+            <i data-lucide="bell" class="ico-blue"></i>
+            <span>강원외국인채용관 소식 & 알림</span>
+          </div>
+          <h1 class="sub-tit">공지게시판</h1>
+          <p class="sub-desc">강원특별자치도의 최신 외국인 채용, 비자 정책, 교육 및 정주 지원 공지사항을 확인하세요.</p>
+        </section>
+
+        <!-- 공지 상세 뷰 박스 -->
+        <section class="notice-view-block">
+          <div class="notice-detail-box">
+            
+            <div class="detail-top-nav">
+              <span class="detail-cat-badge">채용/행사</span>
+              <a href="notices.html" class="btn-back-list">
+                <i data-lucide="arrow-left"></i>
+                <span>목록으로 돌아가기</span>
+              </a>
+            </div>
+
+            <h2 class="detail-title">[공지] 2026 강원 글로벌 인재 일자리 박람회(Gangwon Global Job Fair) 개최 및 사전신청 안내</h2>
+
+            <div class="detail-meta-bar">
+              <span><strong>작성자:</strong> 강원특별자치도 일자리과</span>
+              <span class="sep">|</span>
+              <span><strong>등록일:</strong> 2026-08-15</span>
+              <span class="sep">|</span>
+              <span><strong>조회수:</strong> 1,420</span>
+            </div>
+
+            <!-- 본문 내용 -->
+            <div class="detail-body-content">
+              강원특별자치도와 강원일자리정보망에서는 도내 우수 제조·IT·바이오 기업과 외국인 유학생 및 전문인력을 연결하는 '2026 강원 글로벌 인재 일자리 박람회'를 개최합니다.
+
+              <strong>1. 행사 개요</strong>
+              - 일시: 2026년 9월 18일(금) 10:00 ~ 17:00
+              - 장소: 춘천 호반체육관 메인 컨벤션홀 (온·오프라인 동시 진행)
+              - 대상: 도내 거주 외국인 유학생, F-2-R, F-4, E-7 비자 소지자 및 구직 희망 외국인
+              - 참가기업: 네패스, 동원산업, 현대해상, 강원랜드 등 도내 대표기업 45개사
+
+              <strong>2. 주요 프로그램</strong>
+              - 1:1 현장 채용 면접 및 비자 상담관 운영 (출입국 전문 행정사 부스)
+              - AI 역량검사 현장 무료 체험 및 이력서/자기소개서 전문 컨설팅
+              - 강원도 정주 지원 프로그램 안내 및 무료 통역 지원 (베트남어, 중국어, 영어, 러시아어 등)
+
+              <strong>3. 신청 방법</strong>
+              - 강원외국인채용관 홈페이지 내 사전 참가등록 또는 행사 당일 현장 접수 가능
+            </div>
+
+            <!-- 첨부파일 박스 -->
+            <div class="detail-attach-box">
+              <span class="attach-tit">첨부파일 (2)</span>
+              <div class="attach-list">
+                <div class="attach-file-item">
+                  <div class="file-info"><i data-lucide="file-text"></i><span>2026_강원글로벌일자리박람회_안내문.pdf</span></div>
+                  <a href="#" class="btn-down-file" download onclick="alert('파일 다운로드를 시작합니다.')">
+                    <i data-lucide="download"></i> 다운로드
+                  </a>
+                </div>
+                <div class="attach-file-item">
+                  <div class="file-info"><i data-lucide="file-text"></i><span>기업별_채용직무_목록.xlsx</span></div>
+                  <a href="#" class="btn-down-file" download onclick="alert('파일 다운로드를 시작합니다.')">
+                    <i data-lucide="download"></i> 다운로드
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 하단 버튼 -->
+            <div class="detail-bottom-actions">
+              <a href="notices.html" class="btn-detail-back">목록보기</a>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+</body>
+</html>

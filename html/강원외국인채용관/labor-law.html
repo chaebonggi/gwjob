@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기초 노동법 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-roadmap.html" class="nav-item">
+              <span>비자 가이드</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+            </div>
+          </div>
+
+          <a href="labor-law.html" class="nav-item active">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- 모바일 드로어 메뉴 -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 가이드</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav hidden">
+          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        </div>
+      </div>
+
+      <a href="labor-law.html" class="m-nav-item active">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+      <div class="labor-law-container">
+
+        <!-- 1. Hero Banner -->
+        <section class="labor-hero-banner">
+          <div class="labor-hero-content">
+            <div class="labor-hero-badge">
+              <i data-lucide="shield-check"></i>
+              <span>대한민국 근로기준법 및 외국인고용법령 기준 준수</span>
+            </div>
+            <h1 class="labor-hero-title">
+              외국인 근로자를 위한<br>
+              <span class="text-blue-accent">기초 노동법 & 권익보호</span> 가이드
+            </h1>
+            <p class="labor-hero-desc">
+              대한민국에서 근무하는 모든 외국인 근로자는 내국인과 동등하게 근로기준법, 최저임금법, 산업재해보상보험법의 법적 보호를 받습니다. 꼭 알아야 할 핵심 법률과 권리를 안내해 드립니다.
+            </p>
+            <div class="labor-hero-btns">
+              <button type="button" class="btn-labor-primary" onclick="switchLaborTab('calc')">
+                <i data-lucide="calculator"></i>
+                <span>급여 & 주휴수당 모의 계산기</span>
+              </button>
+              <button type="button" class="btn-labor-secondary" onclick="switchLaborTab('remedy')">
+                <i data-lucide="phone-call"></i>
+                <span>다국어 상담 핫라인 안내</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Core 4 Summary Cards -->
+        <section class="labor-summary-grid">
+          <div class="labor-sum-card blue">
+            <div class="sum-icon-box bg-blue"><i data-lucide="file-text"></i></div>
+            <span class="sum-tag text-blue">서면 작성 필수</span>
+            <h3 class="sum-tit">표준근로계약서 교부</h3>
+            <p class="sum-desc">모국어 번역본 제공 의무</p>
+          </div>
+
+          <div class="labor-sum-card green">
+            <div class="sum-icon-box bg-green"><i data-lucide="award"></i></div>
+            <span class="sum-tag text-green">2025/2026 기준</span>
+            <h3 class="sum-tit">최저시급 10,030원</h3>
+            <p class="sum-desc">월 2,096,270원 (주40시간)</p>
+          </div>
+
+          <div class="labor-sum-card purple">
+            <div class="sum-icon-box bg-purple"><i data-lucide="clock"></i></div>
+            <span class="sum-tag text-purple">법정 근로시간</span>
+            <h3 class="sum-tit">1일 8시간·주 40시간</h3>
+            <p class="sum-desc">연장근로 50% 가산수당</p>
+          </div>
+
+          <div class="labor-sum-card orange">
+            <div class="sum-icon-box bg-orange"><i data-lucide="shield-check"></i></div>
+            <span class="sum-tag text-orange">외국인 보호제도</span>
+            <h3 class="sum-tit">출국만기·전용보험</h3>
+            <p class="sum-desc">퇴직금 대체 및 산재보장</p>
+          </div>
+        </section>
+
+        <!-- 3. Tabs Navigation -->
+        <div class="labor-tabs-nav">
+          <button type="button" class="labor-tab-btn active" data-tab="contract" onclick="switchLaborTab('contract')">
+            <i data-lucide="file-text"></i>
+            <span>1. 근로계약서 작성</span>
+          </button>
+          <button type="button" class="labor-tab-btn" data-tab="wage" onclick="switchLaborTab('wage')">
+            <i data-lucide="award"></i>
+            <span>2. 최저임금 & 주휴수당</span>
+          </button>
+          <button type="button" class="labor-tab-btn" data-tab="hours" onclick="switchLaborTab('hours')">
+            <i data-lucide="clock"></i>
+            <span>3. 근로시간 & 가산수당</span>
+          </button>
+          <button type="button" class="labor-tab-btn" data-tab="insurance" onclick="switchLaborTab('insurance')">
+            <i data-lucide="shield-check"></i>
+            <span>4. 4대보험 & 전용보험</span>
+          </button>
+          <button type="button" class="labor-tab-btn" data-tab="remedy" onclick="switchLaborTab('remedy')">
+            <i data-lucide="help-circle"></i>
+            <span>5. 부당해고 & 권리구제</span>
+          </button>
+          <button type="button" class="labor-tab-btn tab-btn-calc" data-tab="calc" onclick="switchLaborTab('calc')">
+            <i data-lucide="calculator"></i>
+            <span>🧮 급여 모의 계산기</span>
+          </button>
+        </div>
+
+        <!-- 4. Tab Panes -->
+        <div class="labor-panes-container">
+
+          <!-- Tab 1: 근로계약서 작성 -->
+          <div class="labor-pane active" id="pane-contract">
+            <div class="labor-content-box">
+              <div class="box-head-row">
+                <i data-lucide="file-check" class="ico-blue"></i>
+                <h2>표준근로계약서 작성 의무 및 중요성</h2>
+              </div>
+              <p class="box-lead-desc">
+                대한민국 근로기준법 제17조에 따라 고용주는 근로를 시작하기 전 반드시 근로조건이 명시된 서면 근로계약서를 작성하고, 근로자에게 1부를 교부해야 합니다. 서면 교부 의무를 위반할 경우 사업주에게 500만원 이하의 벌금이 부과됩니다.
+              </p>
+
+              <div class="two-card-grid">
+                <div class="info-card border-blue">
+                  <h3 class="card-title text-blue">
+                    <i data-lucide="check-circle"></i>
+                    <span>근로계약서 필수 기재 7대 항목</span>
+                  </h3>
+                  <ul class="bullet-list blue">
+                    <li><strong>계약 기간:</strong> 근무 시작일 및 종료일 (기간제인 경우)</li>
+                    <li><strong>근무 장소 및 담당 업무:</strong> 실제 일하는 위치와 직무 내용</li>
+                    <li><strong>근로시간 및 휴게시간:</strong> 출퇴근 시간 및 휴식 시간</li>
+                    <li><strong>임금:</strong> 기본급, 수당, 상여금 산정방법 및 지급일</li>
+                    <li><strong>휴일 및 연차유급휴가:</strong> 주휴일 및 1년 단위 연차 일수</li>
+                    <li><strong>숙식 제공 여부:</strong> 숙소 제공 여부 및 공제 비용 합의</li>
+                  </ul>
+                </div>
+
+                <div class="info-card border-orange">
+                  <h3 class="card-title text-orange">
+                    <i data-lucide="alert-circle"></i>
+                    <span>외국인 근로자 특별 주의사항</span>
+                  </h3>
+                  <ul class="bullet-list orange">
+                    <li><strong>모국어 번역본 확인:</strong> 고용허가제 표준계약서는 한국어와 모국어가 병기되어야 합니다.</li>
+                    <li><strong>이면 계약 금지:</strong> 비자 신청 시 제출한 계약서와 실제 조건이 다를 경우 불이익이 발생할 수 있습니다.</li>
+                    <li><strong>여권·통장 압류 절대 금지:</strong> 사업주가 외국인의 여권, 외국인등록증, 통장을 보관하는 것은 불법입니다.</li>
+                    <li><strong>서명 전 내용 확인:</strong> 내용을 이해하지 못한 상태에서 절대 서명하지 마세요.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="download-banner-bar">
+                <div class="banner-txt">
+                  <h4>고용노동부 표준근로계약서 양식 다운로드</h4>
+                  <p>한국어-영어-중국어-베트남어 다국어 표준 서식을 제공합니다.</p>
+                </div>
+                <a href="https://www.moel.go.kr" target="_blank" rel="noopener noreferrer" class="btn-down-white">
+                  <i data-lucide="download"></i>
+                  <span>표준 양식 다운로드 (고용노동부)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: 최저임금 & 주휴수당 -->
+          <div class="labor-pane hidden" id="pane-wage">
+            <div class="labor-content-box">
+              <div class="box-head-row">
+                <i data-lucide="award" class="ico-green"></i>
+                <h2>2025/2026 최저임금 및 주휴수당 기준</h2>
+              </div>
+
+              <div class="two-card-grid mb-24">
+                <div class="info-card border-green">
+                  <span class="badge-pill bg-green-light text-green">법정 최저임금</span>
+                  <div class="wage-highlight-wrap">
+                    <span class="wage-num">10,030</span>
+                    <span class="wage-unit">원 / 시간</span>
+                  </div>
+                  <div class="wage-calc-summary-box">
+                    <div class="sum-row">
+                      <span>주 40시간(월 209시간) 기준:</span>
+                      <strong>2,096,270원</strong>
+                    </div>
+                    <div class="sum-row">
+                      <span>1일 8시간 기준 일급:</span>
+                      <strong>80,240원</strong>
+                    </div>
+                  </div>
+                  <p class="foot-note-txt">※ 수습기간(3개월 이내)이라 하더라도 1년 미만 계약이거나 단순 노무직종은 최저임금의 100%를 지급해야 합니다.</p>
+                </div>
+
+                <div class="info-card border-blue">
+                  <span class="badge-pill bg-blue-light text-blue">주휴수당 제도</span>
+                  <h3 class="card-title text-slate mt-8">1주일 개근 시 1일분 유급휴일 부여</h3>
+                  <p class="card-desc-txt">
+                    1주일에 15시간 이상 근무하기로 약정한 근로자가 소정근로일을 모두 개근한 경우, 일하지 않아도 하루치 급여(주휴수당)가 유급으로 지급됩니다.
+                  </p>
+                  <div class="blue-formula-box">
+                    <strong>주휴수당 계산식:</strong>
+                    <div class="formula-code">주휴수당 = (1주일 총 소정근로시간 ÷ 40시간) × 8시간 × 시급</div>
+                    <p class="formula-desc">• 주 40시간 근무자: 하루치 8시간분(80,240원) 매주 추가 지급</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wage-rules-card">
+                <h3 class="rules-tit">
+                  <i data-lucide="shield-check" class="ico-green"></i>
+                  <span>임금 지급의 4대 기본 원칙 (근로기준법 제43조)</span>
+                </h3>
+                <div class="rules-grid-4">
+                  <div class="rule-box">
+                    <strong>1. 통화불의 원칙</strong>
+                    <p>반드시 통용되는 화폐(현금 또는 본인 계좌)로 지급</p>
+                  </div>
+                  <div class="rule-box">
+                    <strong>2. 직접불의 원칙</strong>
+                    <p>근로자 본인에게 직접 지급 (타인 수령 불가)</p>
+                  </div>
+                  <div class="rule-box">
+                    <strong>3. 전액불의 원칙</strong>
+                    <p>법률/협약 외 임의 공제 금지, 전액 지급</p>
+                  </div>
+                  <div class="rule-box">
+                    <strong>4. 정기불의 원칙</strong>
+                    <p>매월 1회 이상 정해진 날짜에 정기 지급</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: 근로시간 & 가산수당 -->
+          <div class="labor-pane hidden" id="pane-hours">
+            <div class="labor-content-box">
+              <div class="box-head-row">
+                <i data-lucide="clock" class="ico-purple"></i>
+                <h2>근로시간, 휴게시간 및 가산수당 기준</h2>
+              </div>
+
+              <div class="three-card-grid mb-24">
+                <div class="step-rule-card">
+                  <span class="rule-num-badge">1</span>
+                  <h4>법정 근로시간</h4>
+                  <p>• 1일 8시간, 1주 40시간 이내<br>• 당사자 합의 시 1주 12시간 한도로 연장근로 가능 (최대 주 52시간)</p>
+                </div>
+
+                <div class="step-rule-card">
+                  <span class="rule-num-badge">2</span>
+                  <h4>법정 휴게시간</h4>
+                  <p>• 4시간 근무 시 30분 이상 휴식<br>• 8시간 근무 시 1시간 이상 휴식<br>• 휴게시간은 근로자가 자유롭게 이용</p>
+                </div>
+
+                <div class="step-rule-card">
+                  <span class="rule-num-badge">3</span>
+                  <h4>연차 유급휴가</h4>
+                  <p>• 1년간 80% 이상 출근 시 15일 부여<br>• 1년 미만 근무 시 매월 개근 시 1일 부여 (최대 11일)</p>
+                </div>
+              </div>
+
+              <div class="overtime-table-card">
+                <div class="table-card-head">
+                  ⚡ 가산수당 지급 기준 (통상임금의 50% 이상 가산)
+                </div>
+                <div class="table-card-body">
+                  <div class="overtime-row">
+                    <div>
+                      <strong>연장 근로 (Overtime Work)</strong>
+                      <p>1일 8시간 또는 1주 40시간을 초과하여 일한 시간</p>
+                    </div>
+                    <span class="rate-badge purple">통상시급 × 1.5배 (150%)</span>
+                  </div>
+
+                  <div class="overtime-row">
+                    <div>
+                      <strong>야간 근로 (Night Work)</strong>
+                      <p>오후 10시(22:00)부터 다음 날 오전 6시(06:00) 사이에 일한 시간</p>
+                    </div>
+                    <span class="rate-badge indigo">통상시급 × 1.5배 (150%)</span>
+                  </div>
+
+                  <div class="overtime-row">
+                    <div>
+                      <strong>휴일 근로 (Holiday Work)</strong>
+                      <p>주휴일 또는 근로자의 날, 공휴일에 일한 시간</p>
+                    </div>
+                    <span class="rate-badge blue">8시간 이내 1.5배 / 8시간 초과 2.0배</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: 4대보험 & 전용보험 -->
+          <div class="labor-pane hidden" id="pane-insurance">
+            <div class="labor-content-box">
+              <div class="box-head-row">
+                <i data-lucide="shield-check" class="ico-blue"></i>
+                <h2>외국인 4대 사회보험 및 전용 보험 제도</h2>
+              </div>
+
+              <div class="two-card-grid">
+                <div class="insurance-section-card">
+                  <h3 class="ins-title text-blue">
+                    <i data-lucide="building-2"></i>
+                    <span>4대 사회보험 적용 기준</span>
+                  </h3>
+                  <div class="ins-list">
+                    <div class="ins-item">
+                      <strong>1. 산업재해보상보험 (100% 의무 적용)</strong>
+                      <p>업무상 부상·질병 시 전액 치료비 및 휴업급여 지원 (불법체류자도 보장)</p>
+                    </div>
+                    <div class="ins-item">
+                      <strong>2. 국민건강보험 (당연 적용)</strong>
+                      <p>병원 진료 및 약제비 건강보험 혜택 (사업주 50%, 근로자 50% 부담)</p>
+                    </div>
+                    <div class="ins-item">
+                      <strong>3. 국민연금 (상호주의 원칙)</strong>
+                      <p>국가 간 사회보장협정에 따라 적용 여부 결정 (귀국 시 반환일시금 수령 가능)</p>
+                    </div>
+                    <div class="ins-item">
+                      <strong>4. 고용보험 (체류자격별 임의/의무)</strong>
+                      <p>E-9/E-7/F 계열 비자에 따라 실업급여 및 직무훈련 지원</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="insurance-section-card border-blue-highlight">
+                  <h3 class="ins-title text-blue">
+                    <i data-lucide="award"></i>
+                    <span>외국인 전용 4대 보험 (EPS 전용 등)</span>
+                  </h3>
+                  <div class="ins-list">
+                    <div class="ins-item blue-bg">
+                      <div class="item-head">
+                        <strong>1. 출국만기보험 (사업주 납부)</strong>
+                        <span class="mini-pill">퇴직금 대체</span>
+                      </div>
+                      <p>1년 이상 근무 후 출국 시 적립된 퇴직급여 수령</p>
+                    </div>
+
+                    <div class="ins-item blue-bg">
+                      <div class="item-head">
+                        <strong>2. 귀국비용보험 (근로자 본인)</strong>
+                        <span class="mini-pill">귀국 항공료</span>
+                      </div>
+                      <p>입국 후 80일 이내 가입, 출국 시 원금+이자 환급</p>
+                    </div>
+
+                    <div class="ins-item blue-bg">
+                      <div class="item-head">
+                        <strong>3. 상해보험 (근로자 본인)</strong>
+                        <span class="mini-pill">일상 상해</span>
+                      </div>
+                      <p>업무 외 질병이나 사망 시 유족 및 본인 보상</p>
+                    </div>
+
+                    <div class="ins-item blue-bg">
+                      <div class="item-head">
+                        <strong>4. 임금체불보증보험 (사업주)</strong>
+                        <span class="mini-pill">체불 보호</span>
+                      </div>
+                      <p>사업주의 임금체불 발생 시 보증보험사에서 우선 지급</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5: 부당해고 & 권리구제 -->
+          <div class="labor-pane hidden" id="pane-remedy">
+            <div class="labor-content-box">
+              <div class="box-head-row">
+                <i data-lucide="help-circle" class="ico-orange"></i>
+                <h2>부당해고 대처 및 임금체불 권리구제 절차</h2>
+              </div>
+
+              <div class="two-card-grid mb-24">
+                <div class="info-card border-red">
+                  <h3 class="card-title text-red">
+                    <i data-lucide="alert-circle"></i>
+                    <span>해고 제한 및 해고예고제도</span>
+                  </h3>
+                  <div class="remedy-text-list">
+                    <p><strong>• 정당한 사유 없는 해고 금지:</strong> 회사는 정당한 이유 없이 근로자를 일방적으로 해고할 수 없습니다.</p>
+                    <p><strong>• 30일 전 해고예고 의무:</strong> 해고 최소 30일 전에 서면으로 예고해야 하며, 그렇지 않을 경우 <strong>30일분의 통상임금(해고예고수당)</strong>을 즉시 지급해야 합니다.</p>
+                    <p><strong>• 부당해고 구제신청:</strong> 5인 이상 사업장에서 부당해고를 당한 경우, 해고일로부터 3개월 이내에 관할 <strong>지방노동위원회</strong>에 구제신청을 할 수 있습니다.</p>
+                  </div>
+                </div>
+
+                <div class="info-card border-blue">
+                  <h3 class="card-title text-blue">
+                    <i data-lucide="check-circle-2"></i>
+                    <span>임금체불 발생 시 구제 절차</span>
+                  </h3>
+                  <ol class="remedy-step-ol">
+                    <li><strong>증빙자료 수집:</strong> 근로계약서, 급여통장 내역, 출퇴근 기록, 문자/카톡 내역 보관</li>
+                    <li><strong>노동청 진정 접수:</strong> 회사 소재지 관할 고용노동청에 진정서 제출 (무료 접수)</li>
+                    <li><strong>사실관계 조사:</strong> 근로감독관 입석 하에 사업주와 대면 또는 출석 조사 진행</li>
+                    <li><strong>시정지시 및 지급:</strong> 체불 임금 확정 후 사업주에게 지급 지시</li>
+                    <li><strong>대지급금(소액체당금) 신청:</strong> 사업주가 미지급 시 정부에서 우선 지급 지원</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="hotline-banner-card">
+                <h3 class="hotline-tit">
+                  <i data-lucide="phone-call" class="ico-yellow"></i>
+                  <span>외국인 근로자 권익보호 & 다국어 무료 상담 핫라인</span>
+                </h3>
+                <div class="hotline-grid-3">
+                  <div class="hotline-item">
+                    <span class="hl-lbl">외국인력상담센터 (16개국어 지원)</span>
+                    <strong class="hl-tel">☎ 1577-0071</strong>
+                    <p class="hl-desc">평일 09:00 ~ 18:00 (모국어 실시간 통역)</p>
+                  </div>
+
+                  <div class="hotline-item">
+                    <span class="hl-lbl">고용노동부 고객상담센터</span>
+                    <strong class="hl-tel">☎ 1350</strong>
+                    <p class="hl-desc">임금체불, 해고, 근로기준법 상담 (국번없이)</p>
+                  </div>
+
+                  <div class="hotline-item">
+                    <span class="hl-lbl">출입국 외국인종합안내센터</span>
+                    <strong class="hl-tel">☎ 1345</strong>
+                    <p class="hl-desc">비자, 체류자격 변경, 사업장 변경 안내 (20개국어)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 6: 급여 모의 계산기 -->
+          <div class="labor-pane hidden" id="pane-calc">
+            <div class="labor-content-box">
+              <div class="calc-header-row">
+                <div>
+                  <h2 class="box-head-row-tit">
+                    <i data-lucide="calculator" class="ico-blue"></i>
+                    <span>외국인 근로자 급여 & 주휴수당 모의 계산기</span>
+                  </h2>
+                  <p class="box-lead-desc mt-4">근로시간과 시급을 입력하시면 예상 주급, 주휴수당, 예상 월급여를 실시간으로 계산해 드립니다.</p>
+                </div>
+                <span class="calc-top-pill">2025/2026 최저시급(10,030원) 반영</span>
+              </div>
+
+              <div class="calc-grid-layout">
+                <!-- 입력 영역 -->
+                <div class="calc-input-panel">
+                  <div class="calc-field-row">
+                    <label>적용 시급 (KRW)</label>
+                    <div class="input-with-unit">
+                      <input type="number" id="calc-hourly-wage" value="10030" step="10">
+                      <span class="unit-txt">원</span>
+                    </div>
+                    <div class="quick-preset-btns">
+                      <button type="button" onclick="setWagePreset(10030)">2025/2026 최저 (10,030원)</button>
+                      <button type="button" onclick="setWagePreset(11000)">11,000원</button>
+                      <button type="button" onclick="setWagePreset(12000)">12,000원</button>
+                    </div>
+                  </div>
+
+                  <div class="calc-field-row">
+                    <div class="field-title-flex">
+                      <label>1주일 기본 소정 근로시간</label>
+                      <span class="highlight-val blue" id="lbl-weekly-hours">40 시간 / 주</span>
+                    </div>
+                    <input type="range" id="calc-weekly-hours" min="5" max="40" value="40" step="1" class="slider-range blue">
+                    <div class="range-scale-labels">
+                      <span>파트타임 (15시간 미만)</span>
+                      <span>법정 표준 (주 40시간)</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-field-row">
+                    <div class="field-title-flex">
+                      <label>1주일 연장 근로시간 (1.5배 가산)</label>
+                      <span class="highlight-val purple" id="lbl-overtime-hours">0 시간 / 주</span>
+                    </div>
+                    <input type="range" id="calc-overtime-hours" min="0" max="12" value="0" step="1" class="slider-range purple">
+                    <span class="range-hint">주 최대 12시간 한도</span>
+                  </div>
+
+                  <div class="calc-field-row">
+                    <div class="field-title-flex">
+                      <label>1주일 휴일 근로시간 (1.5배 가산)</label>
+                      <span class="highlight-val indigo" id="lbl-holiday-hours">0 시간 / 주</span>
+                    </div>
+                    <input type="range" id="calc-holiday-hours" min="0" max="16" value="0" step="1" class="slider-range indigo">
+                  </div>
+                </div>
+
+                <!-- 결과 영역 -->
+                <div class="calc-result-panel">
+                  <div class="result-panel-top">
+                    <span class="res-sub-lbl">예상 급여 산출 내역</span>
+                    <div class="main-monthly-res">
+                      <p>예상 세전 총 월급 (월 평균 약 4.345주 기준)</p>
+                      <div class="monthly-num-wrap">
+                        <strong id="res-monthly-wage">2,096,270</strong>
+                        <span class="unit">원</span>
+                      </div>
+                    </div>
+
+                    <div class="itemized-breakdown-box">
+                      <div class="break-row">
+                        <span>• 기본 주급 (<span id="txt-base-hours">40</span>시간):</span>
+                        <strong id="res-base-wage">401,200 원</strong>
+                      </div>
+                      <div class="break-row">
+                        <span>• 주휴수당 (<span id="txt-holiday-hours-desc">8.0시간분</span>):</span>
+                        <strong class="text-emerald" id="res-weekly-holiday-pay">+80,240 원</strong>
+                      </div>
+                      <div class="break-row" id="row-overtime" style="display: none;">
+                        <span>• 연장근로수당 (<span id="txt-overtime-desc">0</span>시간 × 1.5배):</span>
+                        <strong class="text-purple" id="res-overtime-pay">+0 원</strong>
+                      </div>
+                      <div class="break-row" id="row-holiday" style="display: none;">
+                        <span>• 휴일근로수당 (<span id="txt-holiday-desc">0</span>시간 × 1.5배):</span>
+                        <strong class="text-indigo" id="res-holiday-pay">+0 원</strong>
+                      </div>
+                      <div class="total-weekly-row">
+                        <span>예상 1주 총급여:</span>
+                        <span class="val" id="res-weekly-total">481,440 원</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="result-panel-bottom">
+                    <div class="net-salary-row">
+                      <span>4대보험 공제 후 예상 실수령액:</span>
+                      <strong class="net-val" id="res-net-salary">약 1,899,221 원</strong>
+                    </div>
+                    <p class="net-desc">※ 근로소득세 및 체류비자별 4대 보험 적용 여부에 따라 실제 수령액과 약간의 차이가 있을 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <!-- 기초노동법 탭 & 실시간 계산기 스크립트 -->
+  <script>
+    function switchLaborTab(tabId) {
+      document.querySelectorAll('.labor-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.tab === tabId) btn.classList.add('active');
+      });
+
+      document.querySelectorAll('.labor-pane').forEach(pane => {
+        pane.classList.add('hidden');
+        pane.classList.remove('active');
+      });
+
+      const activePane = document.getElementById('pane-' + tabId);
+      if (activePane) {
+        activePane.classList.remove('hidden');
+        activePane.classList.add('active');
+      }
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function setWagePreset(val) {
+      const input = document.getElementById('calc-hourly-wage');
+      if (input) {
+        input.value = val;
+        runLaborCalculator();
+      }
+    }
+
+    function runLaborCalculator() {
+      const hourlyWage = Number(document.getElementById('calc-hourly-wage')?.value) || 10030;
+      const weeklyHours = Number(document.getElementById('calc-weekly-hours')?.value) || 40;
+      const overtimeHours = Number(document.getElementById('calc-overtime-hours')?.value) || 0;
+      const holidayHours = Number(document.getElementById('calc-holiday-hours')?.value) || 0;
+
+      // 레이블 업데이트
+      document.getElementById('lbl-weekly-hours').textContent = `${weeklyHours} 시간 / 주`;
+      document.getElementById('lbl-overtime-hours').textContent = `${overtimeHours} 시간 / 주`;
+      document.getElementById('lbl-holiday-hours').textContent = `${holidayHours} 시간 / 주`;
+
+      document.getElementById('txt-base-hours').textContent = weeklyHours;
+      document.getElementById('txt-overtime-desc').textContent = overtimeHours;
+      document.getElementById('txt-holiday-desc').textContent = holidayHours;
+
+      // 주휴수당 계산
+      const isEligible = weeklyHours >= 15;
+      const weeklyHolidayHours = isEligible ? Math.min(8, (weeklyHours / 40) * 8) : 0;
+      
+      const txtHolidayDesc = document.getElementById('txt-holiday-hours-desc');
+      if (txtHolidayDesc) {
+        txtHolidayDesc.textContent = isEligible ? `${weeklyHolidayHours.toFixed(1)}시간분` : '대상 아님(15시간 미만)';
+      }
+
+      const baseWeeklyWage = weeklyHours * hourlyWage;
+      const weeklyHolidayPay = weeklyHolidayHours * hourlyWage;
+      const overtimePay = overtimeHours * hourlyWage * 1.5;
+      const holidayPay = holidayHours * hourlyWage * 1.5;
+
+      const totalWeeklyWage = baseWeeklyWage + weeklyHolidayPay + overtimePay + holidayPay;
+      const totalMonthlyWage = Math.round(totalWeeklyWage * 4.345);
+      const approxNetSalary = Math.round(totalMonthlyWage * 0.906);
+
+      // DOM 출력
+      document.getElementById('res-base-wage').textContent = `${baseWeeklyWage.toLocaleString()} 원`;
+      document.getElementById('res-weekly-holiday-pay').textContent = `+${weeklyHolidayPay.toLocaleString()} 원`;
+      document.getElementById('res-weekly-total').textContent = `${totalWeeklyWage.toLocaleString()} 원`;
+      document.getElementById('res-monthly-wage').textContent = totalMonthlyWage.toLocaleString();
+      document.getElementById('res-net-salary').textContent = `약 ${approxNetSalary.toLocaleString()} 원`;
+
+      // 연장/휴일 수당 행 토글
+      const rowOvertime = document.getElementById('row-overtime');
+      if (rowOvertime) {
+        if (overtimeHours > 0) {
+          rowOvertime.style.display = 'flex';
+          document.getElementById('res-overtime-pay').textContent = `+${overtimePay.toLocaleString()} 원`;
+        } else {
+          rowOvertime.style.display = 'none';
+        }
+      }
+
+      const rowHoliday = document.getElementById('row-holiday');
+      if (rowHoliday) {
+        if (holidayHours > 0) {
+          rowHoliday.style.display = 'flex';
+          document.getElementById('res-holiday-pay').textContent = `+${holidayPay.toLocaleString()} 원`;
+        } else {
+          rowHoliday.style.display = 'none';
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      ['calc-hourly-wage', 'calc-weekly-hours', 'calc-overtime-hours', 'calc-holiday-hours'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', runLaborCalculator);
+        }
+      });
+
+      runLaborCalculator();
+    });
+  </script>
+</body>
+</html>

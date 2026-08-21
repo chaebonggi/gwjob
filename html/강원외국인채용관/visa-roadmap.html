@@ -27,15 +27,18 @@
           <a href="talent.html" class="nav-item">인재검색</a>
           
           <div class="nav-item-dropdown">
-            <a href="visa-score.html" class="nav-item active">
-              <span>비자 점수 진단</span>
+            <a href="visa-roadmap.html" class="nav-item active">
+              <span>비자 가이드</span>
               <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
             </a>
             <div class="sub-menu-box">
-              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
+              <a href="visa-roadmap.html" class="sub-menu-item active">비자로드맵</a>
               <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
             </div>
           </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
         </nav>
       </div>
 
@@ -53,6 +56,8 @@
             <button type="button">English</button>
             <button type="button">日本語</button>
             <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
           </div>
         </div>
 
@@ -88,15 +93,18 @@
       <a href="talent.html" class="m-nav-item">인재검색</a>
       
       <div class="m-nav-group">
-        <button type="button" class="m-nav-group-tit btn-m-acc">
-          <span>비자 점수 진단</span>
+        <button type="button" class="m-nav-group-tit btn-m-acc active">
+          <span>비자 가이드</span>
           <i data-lucide="chevron-down" class="m-acc-arrow"></i>
         </button>
-        <div class="m-sub-nav hidden">
-          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item active">비자로드맵</a>
           <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
         </div>
       </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
     </nav>
 
     <div class="m-drawer-lang">
@@ -121,206 +129,435 @@
   <!-- main -->
   <main class="site-main">
     <div class="inner-section">
+      <div class="roadmap-redesign-container">
 
-      <section class="roadmap-section">
-        <!-- 상단 헤더 영역 -->
-        <div class="roadmap-head">
-          <div class="roadmap-sub-badge">
-            <i data-lucide="map" class="ico-blue"></i>
-            <span>강원외국인채용관 비자 가이드</span>
+        <!-- 1. Header Banner -->
+        <section class="roadmap-head-center">
+          <div class="roadmap-badge-pill">
+            <i data-lucide="map"></i>
+            <span>강원특별자치도 비자 정착 체계도</span>
           </div>
-          <h1 class="roadmap-title">비자 취득 로드맵</h1>
-          <p class="roadmap-desc">외국인 인재의 입국부터 영주까지, 단계별 비자 체계를 확인하세요.</p>
+          <h1 class="roadmap-main-title">외국인 인재 정착 & 비자 로드맵</h1>
+          <p class="roadmap-sub-desc">
+            유학생, 숙련근로자, 재외동포의 단계별 비자 승급부터 강원 지역특화(F-2-R), 영주(F-5), 국적 취득까지 연결되는 맞춤형 정주 경로입니다.
+          </p>
+        </section>
+
+        <!-- 2. Step Progress Bar (반응형 5단계 프로세스 바) -->
+        <section class="roadmap-step-bar-card">
+          <!-- Desktop View (>= 1024px) -->
+          <div class="step-bar-desktop">
+            <div class="step-col">
+              <span class="st-num">STEP 1</span>
+              <strong class="st-lbl">초기 진입</strong>
+              <span class="st-sub">유학 / 취업 / 동포입국</span>
+              <span class="st-tag">D-2, D-4, E-9, H-2</span>
+            </div>
+            <div class="step-arrow-divider"><i data-lucide="chevron-right"></i></div>
+
+            <div class="step-col">
+              <span class="st-num">STEP 2</span>
+              <strong class="st-lbl">구직·숙련</strong>
+              <span class="st-sub">취업 및 자격전환</span>
+              <span class="st-tag">D-10, E-7, E-7-4</span>
+            </div>
+            <div class="step-arrow-divider"><i data-lucide="chevron-right"></i></div>
+
+            <div class="step-col">
+              <span class="st-num">STEP 3</span>
+              <strong class="st-lbl">지역특화</strong>
+              <span class="st-sub">도지사 추천 정착</span>
+              <span class="st-tag">F-2-R, F-2-7</span>
+            </div>
+            <div class="step-arrow-divider"><i data-lucide="chevron-right"></i></div>
+
+            <div class="step-col">
+              <span class="st-num">STEP 4</span>
+              <strong class="st-lbl">영주 (PR)</strong>
+              <span class="st-sub">영구 체류자격</span>
+              <span class="st-tag">F-5 영주권</span>
+            </div>
+            <div class="step-arrow-divider"><i data-lucide="chevron-right"></i></div>
+
+            <div class="step-col">
+              <span class="st-num">STEP 5</span>
+              <strong class="st-lbl">국적 취득</strong>
+              <span class="st-sub">대한민국 국적</span>
+              <span class="st-tag">귀화·국적회복</span>
+            </div>
+          </div>
+
+          <!-- Mobile & Tablet View (< 1024px) -->
+          <div class="step-bar-mobile-grid">
+            <div class="m-step-item">
+              <span class="m-st-num">STEP 1</span>
+              <strong class="m-st-lbl">초기 진입</strong>
+              <span class="m-st-sub">유학/취업/동포</span>
+              <span class="m-st-tag">D-2, E-9, H-2</span>
+            </div>
+            <div class="m-step-item">
+              <span class="m-st-num">STEP 2</span>
+              <strong class="m-st-lbl">구직·숙련</strong>
+              <span class="m-st-sub">취업 및 자격전환</span>
+              <span class="m-st-tag">D-10, E-7-4</span>
+            </div>
+            <div class="m-step-item highlight">
+              <div class="m-st-badge-row">
+                <span class="m-st-num">STEP 3</span>
+                <span class="m-st-tag-special">강원특화</span>
+              </div>
+              <strong class="m-st-lbl">지역특화</strong>
+              <span class="m-st-sub">도지사 추천</span>
+              <span class="m-st-tag">F-2-R, F-2-7</span>
+            </div>
+            <div class="m-step-item">
+              <span class="m-st-num">STEP 4</span>
+              <strong class="m-st-lbl">영주 (PR)</strong>
+              <span class="m-st-sub">영구 체류</span>
+              <span class="m-st-tag">F-5 영주권</span>
+            </div>
+            <div class="m-step-item col-span-2">
+              <span class="m-st-num">STEP 5</span>
+              <strong class="m-st-lbl">국적 취득</strong>
+              <span class="m-st-sub">대한민국 국적</span>
+              <span class="m-st-tag">귀화·국적회복</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Category Filter Tabs -->
+        <div class="roadmap-track-tabs">
+          <button type="button" class="track-tab-btn active" data-track="master" onclick="switchRoadmapTrack('master', this)">
+            <i data-lucide="layers"></i>
+            <span>전체 종합 체계도</span>
+          </button>
+          <button type="button" class="track-tab-btn" data-track="student" onclick="switchRoadmapTrack('student', this)">
+            <i data-lucide="graduation-cap"></i>
+            <span>1. 유학생 비자 경로</span>
+          </button>
+          <button type="button" class="track-tab-btn" data-track="labor" onclick="switchRoadmapTrack('labor', this)">
+            <i data-lucide="briefcase"></i>
+            <span>2. 외국인근로자 경로</span>
+          </button>
+          <button type="button" class="track-tab-btn" data-track="diaspora" onclick="switchRoadmapTrack('diaspora', this)">
+            <i data-lucide="users"></i>
+            <span>3. 재외동포 비자 경로</span>
+          </button>
         </div>
 
-        <!-- 로드맵 4단계 그리드 영역 -->
-        <div class="roadmap-grid">
-          <div class="roadmap-connect-line"></div>
+        <!-- 4. Diagrams Container -->
+        <div class="roadmap-diagrams-wrap">
 
-          <!-- Phase 1: 유치 -->
-          <div class="roadmap-phase-col">
-            <div class="phase-header phase-header--navy">
-              <i data-lucide="users"></i>
-              <h3>1단계: 유치</h3>
-            </div>
-
-            <div class="phase-body">
-              <div class="visa-item-card" onclick="alert('일반연수 (D-4) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="graduation-cap"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">일반연수</h4>
-                      <span class="visa-code-badge visa-code-badge--navy">D-4</span>
-                    </div>
-                    <p class="visa-desc">한국어 연수 및 직무 교육</p>
+          <!-- Track 0: Master Flow Diagram (종합 체계도) -->
+          <div class="track-pane active" id="track-master">
+            <div class="diagram-card-box master-box">
+              <div class="master-layout-flow">
+                
+                <!-- START NODE (Left/Top) -->
+                <div class="master-node start-node">
+                  <div class="round-orb blue">
+                    <div class="orb-icon"><i data-lucide="globe"></i></div>
+                    <h3 class="orb-tit">강원외국인<br>인재 유입</h3>
+                    <span class="orb-sub">유학 · 취업 · 동포</span>
+                    <span class="pulse-dot"></span>
                   </div>
+                  <span class="node-stage-lbl">START STAGE</span>
+                  <div class="mobile-down-arrow"><i data-lucide="chevron-down"></i></div>
                 </div>
-              </div>
 
-              <div class="visa-item-card" onclick="alert('비전문인력/선원 (E-9 / E-10) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="ship"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">비전문인력/선원</h4>
-                      <span class="visa-code-badge visa-code-badge--navy">E-9 / E-10</span>
+                <!-- MIDDLE CORRIDOR (Branches) -->
+                <div class="master-corridor">
+                  <!-- Branch 1: 유학생 -->
+                  <div class="corridor-row student-branch">
+                    <div class="branch-label-tag">
+                      <span class="badge-track blue">유학생 트랙</span>
+                      <strong class="branch-title">D-2 / D-4 유학</strong>
                     </div>
-                    <p class="visa-desc">비전문 인력 또는 선원으로 취업 활동</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="visa-item-card" onclick="alert('유학 (D-2) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="book-open"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">유학</h4>
-                      <span class="visa-code-badge visa-code-badge--navy">D-2</span>
+                    <div class="branch-buttons">
+                      <span class="arrow-seq">&gt;&gt;</span>
+                      <button type="button" class="btn-visa-link" onclick="openVisaModal('D-10')">D-10 구직활동</button>
+                      <span class="arrow-seq">&gt;&gt;</span>
+                      <button type="button" class="btn-visa-link indigo-bg" onclick="openVisaModal('E-7')">E-7 특정활동</button>
                     </div>
-                    <p class="visa-desc">학위 취득을 위한 유학 활동</p>
                   </div>
-                </div>
-              </div>
 
-              <div class="visa-item-card" onclick="alert('(예정) 전문인력 (직도입) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--navy"><i data-lucide="user"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">(예정) 전문인력</h4>
-                      <span class="visa-code-badge visa-code-badge--navy">직도입</span>
-                    </div>
-                    <p class="visa-desc">전문 인력으로 직접 채용</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Phase 2: 취업 -->
-          <div class="roadmap-phase-col">
-            <div class="phase-header phase-header--emerald">
-              <i data-lucide="briefcase"></i>
-              <h3>2단계: 취업</h3>
-            </div>
-
-            <div class="phase-body">
-              <div class="visa-item-card-group">
-                <div class="visa-item-card" onclick="alert('숙련기능인력 (E-7-4) 안내 페이지로 이동합니다.')">
-                  <div class="visa-item-card__inner">
-                    <div class="visa-ico-box visa-ico-box--emerald"><i data-lucide="settings"></i></div>
-                    <div class="visa-info-wrap">
-                      <div class="visa-info-head">
-                        <h4 class="visa-title">숙련기능인력</h4>
-                        <span class="visa-code-badge visa-code-badge--emerald">E-7-4</span>
+                  <!-- Branch 2: Fast-Track Highway (강원특화) -->
+                  <div class="corridor-row highway-branch">
+                    <div class="highway-left">
+                      <div class="highway-pill">
+                        <i data-lucide="zap"></i>
+                        <span>강원특별자치도 핵심 직행 트랙</span>
                       </div>
-                      <p class="visa-desc">기능 및 경력 보유 인력 취업</p>
+                      <h3 class="highway-tit">F-2-R 지역특화형 인재 & F-2-7 우수인재</h3>
+                      <p class="highway-desc">도지사 추천서 발급 시 소득·학력 기준 완화 및 거주 5년 영주권 직행</p>
+                    </div>
+                    <button type="button" class="btn-highway-action" onclick="openVisaModal('F-2-R')">
+                      F-2-R 상세정보 &gt;
+                    </button>
+                  </div>
+
+                  <!-- Branch 3: 근로자/동포 -->
+                  <div class="corridor-row labor-branch">
+                    <div class="branch-label-tag">
+                      <span class="badge-track green">근로자/동포</span>
+                      <strong class="branch-title">E-9 / E-10 / H-2</strong>
+                    </div>
+                    <div class="branch-buttons">
+                      <span class="arrow-seq">&gt;&gt;</span>
+                      <button type="button" class="btn-visa-link teal-bg" onclick="openVisaModal('E-7-4')">E-7-4 숙련기능</button>
+                      <span class="arrow-seq">&gt;&gt;</span>
+                      <button type="button" class="btn-visa-link indigo-bg" onclick="openVisaModal('F-4')">F-4/F-4-R 동포특화</button>
                     </div>
                   </div>
                 </div>
-                <div class="visa-sub-items-box">
-                  <div class="visa-sub-item" onclick="alert('특정활동 (E-7) 안내 페이지로 이동합니다.')">
-                    <div class="visa-sub-title">특정활동</div>
-                    <div class="visa-sub-desc">E-7-1 전문직 / E-7-2 준전문직 / E-7-3 일반기능</div>
+
+                <!-- FINAL DESTINATION (Right/Bottom) -->
+                <div class="master-node dest-node">
+                  <div class="mobile-down-arrow"><i data-lucide="chevron-down"></i></div>
+                  <div class="round-orb purple">
+                    <div class="orb-icon"><i data-lucide="award"></i></div>
+                    <span class="orb-sup">SUSTAINABLE GOAL</span>
+                    <h3 class="orb-tit">영주 (F-5) &<br>국적 취득</h3>
+                    <span class="orb-sub">완전한 정주 실현</span>
                   </div>
+                  <span class="node-stage-lbl">FINAL DESTINATION</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Track 1: Student Track (유학생 비자 경로) -->
+          <div class="track-pane hidden" id="track-student">
+            <div class="diagram-card-box">
+              <div class="track-header-bar">
+                <div>
+                  <span class="track-no blue">Track 01</span>
+                  <h3 class="track-tit">유학생(D-2/D-4) 맞춤형 영주·정주 로드맵</h3>
+                </div>
+                <div class="track-status-badge">
+                  <span class="status-dot blue"></span>
+                  <span>우수인재 패스트트랙 적용</span>
                 </div>
               </div>
 
-              <div class="visa-item-card-group">
-                <div class="visa-item-card" onclick="alert('구직 (D-10) 안내 페이지로 이동합니다.')">
-                  <div class="visa-item-card__inner">
-                    <div class="visa-ico-box visa-ico-box--emerald"><i data-lucide="building-2"></i></div>
-                    <div class="visa-info-wrap">
-                      <div class="visa-info-head">
-                        <h4 class="visa-title">구직</h4>
-                        <span class="visa-code-badge visa-code-badge--emerald">D-10</span>
-                      </div>
-                      <p class="visa-desc">취업을 위한 구직 활동</p>
+              <div class="steps-4col-grid">
+                <!-- Step 1 -->
+                <div class="step-track-card">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill blue">STEP 01</span>
+                      <i data-lucide="graduation-cap" class="ico-blue"></i>
                     </div>
+                    <h4 class="st-card-title">유학 및 어학연수</h4>
+                    <p class="st-card-desc">강원도 내 대학 입학 및 한국어 습득</p>
+                    <button type="button" class="btn-diagram-visa" onclick="openVisaModal('D-2')">D-2 / D-4 유학비자</button>
+                  </div>
+                  <div class="card-inner-bot">
+                    • TOPIK 3~4급 취득 권장<br>• 도내 인재 양성 프로그램 참여
                   </div>
                 </div>
-                <div class="visa-sub-items-box">
-                  <div class="visa-sub-item" onclick="alert('기업투자 (D-8) 안내 페이지로 이동합니다.')">
-                    <div class="visa-sub-title">기업투자</div>
-                    <div class="visa-sub-code">D-8</div>
+
+                <!-- Step 2 -->
+                <div class="step-track-card">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill blue">STEP 02</span>
+                      <i data-lucide="search" class="ico-sky"></i>
+                    </div>
+                    <h4 class="st-card-title">구직 및 취업 매칭</h4>
+                    <p class="st-card-desc">도내 우수기업 인턴십 및 취업 확정</p>
+                    <div class="btn-stack-pair">
+                      <button type="button" class="btn-diagram-visa" onclick="openVisaModal('D-10')">D-10 구직비자</button>
+                      <button type="button" class="btn-diagram-visa indigo" onclick="openVisaModal('E-7')">E-7 전문활동비자</button>
+                    </div>
                   </div>
-                  <div class="visa-sub-item" onclick="alert('무역경영(창업) (D-9) 안내 페이지로 이동합니다.')">
-                    <div class="visa-sub-title">무역경영(창업)</div>
-                    <div class="visa-sub-code">D-9</div>
+                  <div class="card-inner-bot">
+                    • 강원외국인채용관 1:1 매칭<br>• 취업 비자 서류 일괄 지원
+                  </div>
+                </div>
+
+                <!-- Step 3 (Fast Track) -->
+                <div class="step-track-card highlight-border">
+                  <span class="card-badge-top">Fast Track</span>
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill blue-dark">STEP 03</span>
+                      <i data-lucide="home" class="ico-blue"></i>
+                    </div>
+                    <h4 class="st-card-title">지역특화 거주(F-2)</h4>
+                    <p class="st-card-desc">도지사 추천 및 가족동반 취업</p>
+                    <div class="btn-stack-pair">
+                      <button type="button" class="btn-diagram-visa primary" onclick="openVisaModal('F-2-R')">F-2-R 지역특화비자 ★</button>
+                      <button type="button" class="btn-diagram-visa" onclick="openVisaModal('E-7')">F-2-7 우수인재 점수제</button>
+                    </div>
+                  </div>
+                  <div class="card-inner-bot highlight">
+                    • 5년 이상 도내 취업/거주<br>• 배우자 자유 취업 전면 허용
+                  </div>
+                </div>
+
+                <!-- Step 4 (Final) -->
+                <div class="step-track-card dark-final">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill amber">STEP 04</span>
+                      <i data-lucide="award" class="ico-amber"></i>
+                    </div>
+                    <h4 class="st-card-title text-white">영주(F-5) & 국적</h4>
+                    <p class="st-card-desc text-slate-400">체류 제한 해제 및 영구 정주</p>
+                    <button type="button" class="btn-diagram-visa amber-grad" onclick="openVisaModal('F-5')">F-5 영주권 & 국적취득</button>
+                  </div>
+                  <div class="card-inner-bot dark">
+                    • 국민과 동등한 복지 혜택<br>• 무제한 거주 및 지방선거권
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Phase 3: 거주 -->
-          <div class="roadmap-phase-col">
-            <div class="phase-header phase-header--blue">
-              <i data-lucide="home"></i>
-              <h3>3단계: 거주</h3>
-            </div>
-
-            <div class="phase-body">
-              <div class="visa-item-card" onclick="alert('기타 장기 거주 (F-2-99) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--blue"><i data-lucide="home"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">기타 장기 거주</h4>
-                      <span class="visa-code-badge visa-code-badge--blue">F-2-99</span>
-                    </div>
-                    <p class="visa-desc">장기 체류가 필요한 경우</p>
-                  </div>
+          <!-- Track 2: Labor Track (외국인근로자 경로) -->
+          <div class="track-pane hidden" id="track-labor">
+            <div class="diagram-card-box">
+              <div class="track-header-bar">
+                <div>
+                  <span class="track-no green">Track 02</span>
+                  <h3 class="track-tit">외국인 근로자(E-9/E-10) 숙련기능 전환 로드맵</h3>
+                </div>
+                <div class="track-status-badge">
+                  <span class="status-dot green"></span>
+                  <span>K-point E-7-4 도지사 가점</span>
                 </div>
               </div>
 
-              <div class="visa-item-card" onclick="alert('지역특화형 (F-2-R) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--blue"><i data-lucide="users"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">지역특화형</h4>
-                      <span class="visa-code-badge visa-code-badge--blue">F-2-R</span>
+              <div class="steps-4col-grid">
+                <!-- Step 1 -->
+                <div class="step-track-card">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill green">STEP 01</span>
+                      <i data-lucide="briefcase" class="ico-green"></i>
                     </div>
-                    <p class="visa-desc">지역 맞춤형 우수 인재</p>
+                    <h4 class="st-card-title">비전문 취업 활동</h4>
+                    <p class="st-card-desc">제조, 건설, 농축산 합법 근무</p>
+                    <button type="button" class="btn-diagram-visa" onclick="openVisaModal('E-9')">E-9 / E-10 / H-2</button>
+                  </div>
+                  <div class="card-inner-bot">
+                    • 4년 이상 성실 근무<br>• 한국어 사회통합 이수
                   </div>
                 </div>
-              </div>
 
-              <div class="visa-item-card" onclick="alert('우수인재 (F-2-7) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--blue"><i data-lucide="award"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">우수인재</h4>
-                      <span class="visa-code-badge visa-code-badge--blue">F-2-7</span>
+                <!-- Step 2 (Highlight) -->
+                <div class="step-track-card highlight-border teal">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill teal">STEP 02</span>
+                      <i data-lucide="award" class="ico-teal"></i>
                     </div>
-                    <p class="visa-desc">전문성 및 우수 인재</p>
+                    <h4 class="st-card-title">숙련기능인력 전환</h4>
+                    <p class="st-card-desc">K-point 점수제 가점 적용</p>
+                    <button type="button" class="btn-diagram-visa teal-solid" onclick="openVisaModal('E-7-4')">E-7-4 / E-7-4R 전환 ★</button>
+                  </div>
+                  <div class="card-inner-bot highlight teal">
+                    • 강원도지사 추천 30점 가점<br>• 체류기간 제한 없이 연장
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-track-card">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill blue">STEP 03</span>
+                      <i data-lucide="home" class="ico-blue"></i>
+                    </div>
+                    <h4 class="st-card-title">지역특화 인재 정주</h4>
+                    <p class="st-card-desc">가족 초청 및 거주권 취득</p>
+                    <button type="button" class="btn-diagram-visa" onclick="openVisaModal('F-2-R')">F-2-R 지역특화 거주</button>
+                  </div>
+                  <div class="card-inner-bot">
+                    • 배우자 및 직계가족 초청<br>• 가족 구성원 취업 활동 지원
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-track-card dark-final">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill amber">STEP 04</span>
+                      <i data-lucide="globe" class="ico-amber"></i>
+                    </div>
+                    <h4 class="st-card-title text-white">영주 및 국적 취득</h4>
+                    <p class="st-card-desc text-slate-400">완전한 정주 및 시민권 취득</p>
+                    <button type="button" class="btn-diagram-visa amber-grad" onclick="openVisaModal('F-5')">F-5 영주권 신청</button>
+                  </div>
+                  <div class="card-inner-bot dark">
+                    • 5년 거주 요건 충족<br>• 영주권 및 일반 귀화
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Phase 4: 영주 -->
-          <div class="roadmap-phase-col">
-            <div class="phase-header phase-header--purple">
-              <i data-lucide="globe"></i>
-              <h3>4단계: 영주</h3>
-            </div>
+          <!-- Track 3: Diaspora Track (재외동포 비자 경로) -->
+          <div class="track-pane hidden" id="track-diaspora">
+            <div class="diagram-card-box">
+              <div class="track-header-bar">
+                <div>
+                  <span class="track-no indigo">Track 03</span>
+                  <h3 class="track-tit">재외동포(H-2/F-4) 지역특화 취업 및 정착 로드맵</h3>
+                </div>
+                <div class="track-status-badge">
+                  <span class="status-dot indigo"></span>
+                  <span>단순노무 취업제한 완화</span>
+                </div>
+              </div>
 
-            <div class="phase-body">
-              <div class="visa-item-card" onclick="alert('영주 (F-5) 안내 페이지로 이동합니다.')">
-                <div class="visa-item-card__inner">
-                  <div class="visa-ico-box visa-ico-box--purple"><i data-lucide="file-check"></i></div>
-                  <div class="visa-info-wrap">
-                    <div class="visa-info-head">
-                      <h4 class="visa-title">영주</h4>
-                      <span class="visa-code-badge visa-code-badge--purple">F-5</span>
+              <div class="steps-3col-grid">
+                <!-- Step 1 -->
+                <div class="step-track-card">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill indigo">STEP 01</span>
+                      <i data-lucide="users" class="ico-indigo"></i>
                     </div>
-                    <p class="visa-desc">장기 거주 후 영주 자격 취득</p>
+                    <h4 class="st-card-title">동포 입국 및 취업</h4>
+                    <p class="st-card-desc">방문취업 및 재외동포 자격 입국</p>
+                    <button type="button" class="btn-diagram-visa" onclick="openVisaModal('F-4')">H-2 방문취업 / F-4 재외동포</button>
+                  </div>
+                  <div class="card-inner-bot">
+                    • 조기적응 프로그램 이수<br>• 도내 전략산업 기업 우선 취업
+                  </div>
+                </div>
+
+                <!-- Step 2 (Highlight) -->
+                <div class="step-track-card highlight-border indigo">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill indigo-solid">STEP 02</span>
+                      <i data-lucide="sparkles" class="ico-indigo"></i>
+                    </div>
+                    <h4 class="st-card-title">지역특화 동포 (F-4-R)</h4>
+                    <p class="st-card-desc">취업제한 해제 및 인구감소지역 우대</p>
+                    <button type="button" class="btn-diagram-visa indigo-solid" onclick="openVisaModal('F-4')">F-4-R 지역특화 동포 자격 ★</button>
+                  </div>
+                  <div class="card-inner-bot highlight indigo">
+                    • 서비스/단순노무 취업제한 전면 완화<br>• 강원도 정착 지원금 연계
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-track-card dark-final">
+                  <div class="card-inner-top">
+                    <div class="step-head-row">
+                      <span class="step-pill amber">STEP 03</span>
+                      <i data-lucide="award" class="ico-amber"></i>
+                    </div>
+                    <h4 class="st-card-title text-white">영주 (F-5) 및 국적 회복</h4>
+                    <p class="st-card-desc text-slate-400">안정적 영구 체류 및 국적 회복</p>
+                    <button type="button" class="btn-diagram-visa amber-grad" onclick="openVisaModal('F-5')">F-5 영주권 & 국적회복</button>
+                  </div>
+                  <div class="card-inner-bot dark">
+                    • 소득/기본소양 요건 충족 시 신청<br>• 완전한 대한민국 정주
                   </div>
                 </div>
               </div>
@@ -328,10 +565,94 @@
           </div>
 
         </div>
-      </section>
 
+        <!-- 5. Gangwon Regional Advantage Cards (4대 우대 혜택) -->
+        <section class="gangwon-advantage-sec">
+          <div class="sec-head-flex">
+            <div class="ico-round-box"><i data-lucide="sparkles"></i></div>
+            <div>
+              <h2 class="sec-main-tit">강원특별자치도 특화 비자 4대 우대 혜택</h2>
+              <p class="sec-sub-tit">도내 기업 취업 및 인구감소지역 거주 시 주어지는 강력한 정주 인센티브</p>
+            </div>
+          </div>
+
+          <div class="advantage-grid-4">
+            <div class="adv-card">
+              <div class="adv-ico-box blue"><i data-lucide="compass"></i></div>
+              <h3>지역특화비자(F-2-R) 우선 배정</h3>
+              <p>도내 인구감소지역(태백, 삼척, 평창, 정선 등) 취업 시 비자 발급 요건(소득·학력)을 대폭 완화하고 도지사 추천서를 발급합니다.</p>
+            </div>
+
+            <div class="adv-card">
+              <div class="adv-ico-box green"><i data-lucide="heart"></i></div>
+              <h3>동반가족(F-1-R) 전면 취업 허용</h3>
+              <p>배우자의 국내 취업 활동이 전면 허용되며, 자녀 보육료 및 다문화가정 한국어 교육 패키지를 원스톱 지원합니다.</p>
+            </div>
+
+            <div class="adv-card">
+              <div class="adv-ico-box indigo"><i data-lucide="award"></i></div>
+              <h3>K-point E-7-4 도지사 추천 가점</h3>
+              <p>도내 제조업 및 뿌리산업 숙련기능인력 전환 시, 도지사 추천으로 최대 30점의 가점을 부여하여 선발 확률을 극대화합니다.</p>
+            </div>
+
+            <div class="adv-card">
+              <div class="adv-ico-box amber"><i data-lucide="headset"></i></div>
+              <h3>원스톱 행정·비자 통합 컨설팅</h3>
+              <p>점수제 사전 모의진단, 법무부 출입국 행정서류 검토, 채용 연계 매칭까지 전문 행정사가 무료로 1:1 밀착 지원합니다.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </div>
   </main>
+  <!-- //main -->
+
+  <!-- 6. 비자 상세 정보 팝업 모달 (Visa Database Modal) -->
+  <div class="visa-modal-overlay hidden" id="visaDetailModal" onclick="closeVisaModal(event)">
+    <div class="visa-modal-card" onclick="event.stopPropagation()">
+      <button type="button" class="btn-modal-close" onclick="closeVisaModal()" aria-label="닫기">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-top-header">
+        <span class="modal-code-badge" id="modal-visa-code">D-2</span>
+        <div>
+          <span class="modal-cat-txt" id="modal-visa-category">유학/연수</span>
+          <h3 class="modal-title" id="modal-visa-name">유학 비자</h3>
+        </div>
+      </div>
+
+      <p class="modal-desc-box" id="modal-visa-desc">
+        비자 상세 설명이 로딩됩니다.
+      </p>
+
+      <div class="modal-spec-list">
+        <div class="spec-row">
+          <strong class="spec-label"><i data-lucide="clock"></i> 기본 체류기간 & 대상</strong>
+          <p class="spec-val" id="modal-visa-period-target">최대 2년 / 전문학사, 학사 유학생</p>
+        </div>
+
+        <div class="spec-row">
+          <strong class="spec-label"><i data-lucide="check-circle-2"></i> 주요 신청 요건</strong>
+          <ul class="spec-bullets" id="modal-visa-conditions">
+            <!-- 요건 목록 -->
+          </ul>
+        </div>
+
+        <div class="spec-row">
+          <strong class="spec-label"><i data-lucide="arrow-right"></i> 다음 단계 추천 전환 경로</strong>
+          <div class="spec-tags-flex" id="modal-visa-next-steps">
+            <!-- 다음 단계 뱃지 -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-bottom-btn-wrap">
+        <button type="button" class="btn-modal-confirm" onclick="closeVisaModal()">확인 완료</button>
+      </div>
+    </div>
+  </div>
 
   <!-- footer -->
   <footer class="site-footer">
@@ -363,13 +684,148 @@
       </div>
     </div>
   </footer>
+  <!-- //footer -->
 
+  <!-- 비자 로드맵 트랙 전환 및 팝업 모달 스크립트 -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+    // 비자 상세 데이터베이스
+    const VISA_DATABASE = {
+      'D-2': {
+        code: 'D-2',
+        name: '유학 비자',
+        category: '유학/연수',
+        desc: '전문대학 이상의 정규 교육과정(학사, 석사, 박사)에 재학 중인 유학생을 위한 체류자격입니다.',
+        period: '최대 2년 (학업 기간 내 연장 가능)',
+        target: '전문학사, 학사, 석·박사 학위과정 유학생',
+        conditions: ['강원도 내 대학 입학허가서 및 등록금 납부 증명', '재정 능력 입증 (잔고증명서)', '한국어능력시험(TOPIK) 또는 어학 성적'],
+        nextSteps: ['D-10 (구직 비자 전환)', 'E-7 (전문인력 취업)', 'F-2-R (지역특화 우수인재)']
+      },
+      'D-10': {
+        code: 'D-10',
+        name: '구직 비자',
+        category: '구직/인턴',
+        desc: '국내 대학 졸업 후 전문직종(E-1~E-7) 취업 또는 창업을 준비하는 인재를 위한 비자입니다.',
+        period: '최대 2년 (6개월 단위 연장)',
+        target: '국내 전문학사 이상 졸업 외국인 인재',
+        conditions: ['구직 점수제 60점 이상 충족 (기본 20점 포함)', '구직활동계획서 및 학위 증명서 제출', '강원도 내 대학 졸업 시 우대 점수 부여'],
+        nextSteps: ['E-7 (특정활동 전문인력)', 'D-8/D-9 (창업·무역투자)', 'F-2-7 (우수인재 거주)']
+      },
+      'E-7': {
+        code: 'E-7',
+        name: '특정활동 비자 (전문인력)',
+        category: '전문취업',
+        desc: '법무부 장관이 지정한 87개 전문직종 분야에서 취업 활동을 하는 외국인 전문인력을 위한 비자입니다.',
+        period: '최대 3년 (계약기간에 따라 연장)',
+        target: 'IT, 마케팅, 설계, 제조관리, 해외영업 등 전문인력',
+        conditions: ['관련 분야 학위 또는 경력 보유', '국민 고용인력의 일정 비율 이내 고용', '전년도 GNI 80% 이상의 급여 요건'],
+        nextSteps: ['F-2-7 (우수인재 점수제 거주)', 'F-2-R (강원 지역특화 거주)', 'F-5 (영주권)']
+      },
+      'E-9': {
+        code: 'E-9',
+        name: '비전문취업 비자',
+        category: '제조·농축산',
+        desc: '고용허가제(EPS)를 통해 제조업, 건설업, 농축산업 등 단순 노무 분야에 종사하는 비자입니다.',
+        period: '최장 4년 10개월 (재입국 취업 시 연장)',
+        target: '고용허가제 송출국 출신 근로자',
+        conditions: ['고용노동부 근로계약 체결 및 취업교육 이수', '사업장 변경 제한 준수', '체류기간 내 성실근로'],
+        nextSteps: ['E-7-4 (숙련기능인력 전환)', 'E-7-4R (강원 지역특화 숙련전환)']
+      },
+      'E-7-4': {
+        code: 'E-7-4',
+        name: '숙련기능인력 비자 (K-point E-7-4)',
+        category: '숙련전환',
+        desc: 'E-9, E-10, H-2 근로자가 소득, 한국어능력, 근무경력 점수를 바탕으로 전환하는 숙련비자입니다.',
+        period: '최대 2년 (계약 갱신 시 계속 연장)',
+        target: '최근 10년간 4년 이상 E-9, E-10, H-2 합법 체류자',
+        conditions: ['K-point 점수제 200점 이상 획득 (가점 포함)', '평균 연봉 2,600만원 이상 및 한국어 능력 TOPIK 2급 이상', '강원특별자치도지사 추천 시 최대 가점 획득'],
+        nextSteps: ['F-2-R (지역특화 인재 전환)', 'F-2-99 (장기체류 거주)', 'F-5 (영주권)']
+      },
+      'F-2-R': {
+        code: 'F-2-R',
+        name: '지역특화형 거주 비자',
+        category: '지역특화정주',
+        desc: '강원도 내 인구감소지역에 5년 이상 실거주 및 취업을 조건으로 발급되는 핵심 우대 거주 비자입니다.',
+        period: '최대 5년 (1~3년 단위 연장)',
+        target: '강원도 내 유학생 졸업자 또는 E-7-4/E-9 전환 인재',
+        conditions: ['강원특별자치도지사 추천서 발급', '사회통합프로그램 3단계 이상 또는 TOPIK 3급 이상', '도내 지정 시·군(태백, 삼척, 평창, 정선 등) 실거주 및 취업'],
+        nextSteps: ['F-5-R (지역특화 영주권)', '대한민국 국적 취득']
+      },
+      'F-4': {
+        code: 'F-4',
+        name: '재외동포 비자',
+        category: '동포체류',
+        desc: '대한민국 국적을 가졌던 외국국적 동포 및 그 직계비속에게 부여되는 자유로운 체류 및 취업 비자입니다.',
+        period: '최대 3년 (국내 체류 시 계속 연장)',
+        target: '외국국적 동포 (조선족, 고려인 등)',
+        conditions: ['동포 자격 증명 (출생증명, 호구부 등)', '단순노무를 제외한 광범위 취업 허용', 'F-4-R 지정 시 단순노무 취업제한 전면 완화'],
+        nextSteps: ['F-5 (영주 비자)', '대한민국 국적 회복/귀화']
+      },
+      'F-5': {
+        code: 'F-5',
+        name: '영주권 (Permanent Residency)',
+        category: '영구정주',
+        desc: '체류기간 제한 없이 국내에서 자유롭게 거주하고 취업할 수 있는 최고 단계의 영주 체류자격입니다.',
+        period: '영구 (외국인등록증 10년 갱신)',
+        target: 'F-2 거주 5년 이상 또는 우수인재 요건 충족자',
+        conditions: ['전년도 GNI(1인당 국민총소득) 1배~2배 이상 충족', '사회통합프로그램 5단계 이수 (기본소양 요건)', '품행 단정 및 범죄경력 무흠결'],
+        nextSteps: ['대한민국 국적 취득 (일반 귀화 시험)']
       }
-    });
+    };
+
+    // 1. 트랙 탭 전환
+    function switchRoadmapTrack(trackId, btn) {
+      document.querySelectorAll('.roadmap-track-tabs .track-tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      document.querySelectorAll('.roadmap-diagrams-wrap .track-pane').forEach(p => {
+        p.classList.add('hidden');
+        p.classList.remove('active');
+      });
+
+      const activePane = document.getElementById('track-' + trackId);
+      if (activePane) {
+        activePane.classList.remove('hidden');
+        activePane.classList.add('active');
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // 2. 비자 상세 팝업 모달 제어
+    function openVisaModal(code) {
+      const data = VISA_DATABASE[code];
+      if (!data) return;
+
+      document.getElementById('modal-visa-code').textContent = data.code;
+      document.getElementById('modal-visa-category').textContent = data.category;
+      document.getElementById('modal-visa-name').textContent = data.name;
+      document.getElementById('modal-visa-desc').textContent = data.desc;
+      document.getElementById('modal-visa-period-target').textContent = `${data.period} / ${data.target}`;
+
+      // 요건 목록 렌더링
+      const condList = document.getElementById('modal-visa-conditions');
+      condList.innerHTML = data.conditions.map(c => `<li>${c}</li>`).join('');
+
+      // 다음 단계 뱃지 렌더링
+      const nextWrap = document.getElementById('modal-visa-next-steps');
+      nextWrap.innerHTML = data.nextSteps.map(n => `<span class="tag-next-step">${n}</span>`).join('');
+
+      const modal = document.getElementById('visaDetailModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeVisaModal() {
+      const modal = document.getElementById('visaDetailModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
   </script>
 </body>
 </html>
