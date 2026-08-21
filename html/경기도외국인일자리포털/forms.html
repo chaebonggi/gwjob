@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/외국인일자리.css">
 </head>
 <body class="bg-gray-page">
@@ -21,9 +22,7 @@
         <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
-      <!-- PC 메뉴 -->
       <nav class="header-nav">
-        <a href="intro.html" class="nav-item">INTRO</a>
         <a href="about.html" class="nav-item">사업소개</a>
         <a href="jobs.html" class="nav-item">채용정보</a>
         
@@ -36,16 +35,17 @@
           </div>
         </div>
 
+        <a href="visa-info.html" class="nav-item">비자안내</a>
+
         <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
+          <button type="button" class="nav-item has-depth active">자료실 <i data-lucide="chevron-down"></i></button>
           <div class="dropdown-menu">
-            <a href="forms.html">양식함</a>
+            <a href="forms.html" class="active">양식함</a>
             <a href="forms-info.html">도움이 되는 정보</a>
           </div>
         </div>
       </nav>
 
-      <!-- PC 버튼 그룹 -->
       <div class="header-actions">
         <div class="btn-group">
           <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
@@ -67,18 +67,14 @@
         </div>
       </div>
 
-      <!-- 모바일 햄버거 버튼 -->
       <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
         <i data-lucide="menu"></i>
       </button>
-
     </div>
   </header>
 
-  <!-- 모바일 사이드 메뉴 오버레이 -->
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
-  <!-- 모바일 슬라이드 드로어 메뉴 -->
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
       <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
@@ -87,15 +83,12 @@
       </button>
     </div>
 
-    <!-- 모바일 구인/구직 버튼 -->
     <div class="drawer-actions">
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
     </div>
 
-    <!-- 모바일 네비게이션 리스트 -->
     <nav class="drawer-nav">
-      <a href="intro.html" class="drawer-nav-item">INTRO</a>
       <a href="about.html" class="drawer-nav-item">사업소개</a>
       <a href="jobs.html" class="drawer-nav-item">채용정보</a>
       
@@ -111,13 +104,15 @@
         </div>
       </div>
 
-      <div class="drawer-accordion">
+      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
+
+      <div class="drawer-accordion open">
         <button type="button" class="drawer-nav-item accordion-btn">
           <span>자료실</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="accordion-content">
-          <a href="forms.html">양식함</a>
+          <a href="forms.html" class="active">양식함</a>
           <a href="forms-info.html">도움이 되는 정보</a>
         </div>
       </div>
@@ -140,80 +135,65 @@
       </div>
     </div>
   </aside>
+  <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
   <main class="site-main">
     <section class="sub-hero indigo">
       <div class="inner-section">
-        <div class="breadcrumb">
-          <span>홈</span>
-          <i data-lucide="chevron-right"></i>
-          <span>자료실</span>
-          <i data-lucide="chevron-right"></i>
-          <span class="curr">양식함</span>
-        </div>
-        <h1>양식함</h1>
-        <p>외국인 구직 및 채용에 필요한 각종 공식 서식 및 양식을 다운로드하세요.</p>
+        <h1>자료실</h1>
+        <p>외국인 취업 및 체류와 관련된 유용한 자료를 제공합니다.</p>
       </div>
     </section>
 
-    <section class="forms-wrap">
+    <section class="forms-board-wrap">
       <div class="inner-section">
-
-        <!-- 서식 양식 리스트 -->
-        <div class="form-list">
-          <div class="form-item">
-            <div class="form-info">
-              <span class="form-cate">구직 서식</span>
-              <h3>표준 이력서 및 자기소개서 양식 (다국어 지원)</h3>
-              <p>외국인 구직자를 위한 다국어(한국어, 영어, 중국어, 베트남어) 이력서 기본 양식입니다.</p>
-            </div>
-            <a href="#" class="btn-down" download>
-              <i data-lucide="download"></i>
-              <span>다운로드</span>
-            </a>
+        
+        <div class="forms-header-bar">
+          <div class="forms-title-area">
+            <h2 class="forms-sub-tit">양식함</h2>
+            <p class="forms-sub-desc">각종 신청서 및 근로계약서 등 필요한 양식을 다운로드 하세요.</p>
           </div>
-
-          <div class="form-item">
-            <div class="form-info">
-              <span class="form-cate">구인 서식</span>
-              <h3>외국인 근로자 구인신청서 양식</h3>
-              <p>기업체용 외국인 근로자 채용 신청 기본 양식 문서입니다.</p>
+          
+          <div class="forms-search-area">
+            <select id="forms-search-type" class="forms-select-box">
+              <option value="title">제목</option>
+            </select>
+            <div class="forms-input-box">
+              <input type="text" id="forms-search-input" placeholder="검색어를 입력하세요">
+              <button type="button" id="forms-search-btn" aria-label="검색">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </div>
-            <a href="#" class="btn-down" download>
-              <i data-lucide="download"></i>
-              <span>다운로드</span>
-            </a>
-          </div>
-
-          <div class="form-item">
-            <div class="form-info">
-              <span class="form-cate">비자/행정</span>
-              <h3>체류자격 변경 및 연장 신청서 표준 서식</h3>
-              <p>법무부 출입국·외국인관서 제출용 체류자격 관련 신청서 서식입니다.</p>
-            </div>
-            <a href="#" class="btn-down" download>
-              <i data-lucide="download"></i>
-              <span>다운로드</span>
-            </a>
-          </div>
-
-          <div class="form-item">
-            <div class="form-info">
-              <span class="form-cate">근로계약</span>
-              <h3>표준 근로계약서 양식 (외국인 근로자용)</h3>
-              <p>고용노동부 표준 외국인 근로자 근로계약서 서식 문서입니다.</p>
-            </div>
-            <a href="#" class="btn-down" download>
-              <i data-lucide="download"></i>
-              <span>다운로드</span>
-            </a>
           </div>
         </div>
+
+        <div class="forms-table-container">
+          <table class="forms-table">
+            <thead>
+              <tr>
+                <th class="th-num">번호</th>
+                <th class="th-title">제목</th>
+                <th class="th-file">첨부</th>
+                <th class="th-date">작성일</th>
+                <th class="th-views">조회</th>
+              </tr>
+            </thead>
+            <tbody id="forms-board-body">
+              <!-- JS Rendered -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="forms-pagination" id="forms-pagination">
+          <!-- JS Rendered -->
+        </div>
+
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="inner-section">
       <div class="footer-top">
@@ -235,13 +215,115 @@
     </div>
   </footer>
 
+  <!-- Floating Kakao Button -->
   <div class="kakao-floating">
-    <button class="btn-kakao">
+    <button class="btn-kakao" type="button">
       <i data-lucide="message-circle"></i>
       카카오톡 상담
     </button>
   </div>
 
   <script src="./js/외국인일자리.js"></script>
+
+  <script>
+    const formsData = [
+      { id: 1, title: "표준 근로계약서 양식 (다국어 지원)", type: "doc", date: "2026.06.15", views: 892 },
+      { id: 2, title: "구직신청서 양식", type: "doc", date: "2026.05.10", views: 1024 },
+      { id: 3, title: "외국인근로자 고용허가서 발급 신청서", type: "pdf", date: "2026.04.22", views: 531 },
+      { id: 4, title: "체류자격 변경 허가 신청서", type: "pdf", date: "2026.03.15", views: 2310 },
+      { id: 5, title: "사업장 변경 신청서", type: "doc", date: "2026.02.10", views: 1140 },
+      { id: 6, title: "통합신청서 (신고서)", type: "pdf", date: "2026.01.05", views: 420 },
+      { id: 7, title: "외국인등록증 재발급 신청서", type: "doc", date: "2025.12.11", views: 652 },
+      { id: 8, title: "고용변동 등 신고서", type: "doc", date: "2025.11.20", views: 320 },
+      { id: 9, title: "외국인 유학생 시간제취업 확인서", type: "pdf", date: "2025.10.15", views: 890 },
+      { id: 10, title: "근로소득 원천징수영수증 발급 신청서", type: "doc", date: "2025.09.12", views: 760 },
+      { id: 11, title: "체류지 변경 신고서", type: "pdf", date: "2025.08.05", views: 980 },
+      { id: 12, title: "외국국적동포 업무관련 양식 모음", type: "zip", date: "2025.07.21", views: 1540 }
+    ];
+
+    let formsState = {
+      page: 1,
+      limit: 5,
+      totalPages: 1,
+      keyword: ''
+    };
+
+    function getFileIcon(type) {
+      if (type === 'pdf') return '<i class="fa-regular fa-file-pdf icon-pdf"></i>';
+      if (type === 'doc') return '<i class="fa-regular fa-file-word icon-doc"></i>';
+      if (type === 'zip') return '<i class="fa-regular fa-file-zipper icon-zip"></i>';
+      return '<i class="fa-regular fa-file icon-etc"></i>';
+    }
+
+    function renderFormsBoard(page) {
+      if (typeof page === 'number') {
+        formsState.page = page;
+      } else {
+        const input = document.getElementById('forms-search-input');
+        if (input) {
+          formsState.keyword = input.value.trim();
+          formsState.page = 1;
+        }
+      }
+
+      const body = document.getElementById('forms-board-body');
+      const pagination = document.getElementById('forms-pagination');
+      if (!body || !pagination) return;
+
+      let filtered = formsData;
+      if (formsState.keyword) {
+        filtered = formsData.filter(item => item.title.toLowerCase().includes(formsState.keyword.toLowerCase()));
+      }
+
+      formsState.totalPages = Math.ceil(filtered.length / formsState.limit) || 1;
+      if (formsState.page > formsState.totalPages) formsState.page = formsState.totalPages;
+
+      const start = (formsState.page - 1) * formsState.limit;
+      const currentItems = filtered.slice(start, start + formsState.limit);
+
+      if (currentItems.length === 0) {
+        body.innerHTML = '<tr><td colspan="5" class="empty-row">검색 결과가 없습니다.</td></tr>';
+      } else {
+        let html = '';
+        currentItems.forEach((item, index) => {
+          const displayNo = filtered.length - start - index;
+          html += `
+            <tr>
+              <td class="td-num">${displayNo}</td>
+              <td class="td-title"><a href="#" class="forms-row-link" onclick="event.preventDefault();">${item.title}</a></td>
+              <td class="td-file">${getFileIcon(item.type)}</td>
+              <td class="td-date">${item.date}</td>
+              <td class="td-views">${item.views.toLocaleString()}</td>
+            </tr>
+          `;
+        });
+        body.innerHTML = html;
+      }
+
+      let pageHtml = '';
+      if (formsState.totalPages > 1) {
+        pageHtml += `<button type="button" class="page-box-btn" onclick="renderFormsBoard(${Math.max(1, formsState.page - 1)})" aria-label="이전 페이지"><i class="fa-solid fa-chevron-left"></i></button>`;
+        for (let i = 1; i <= formsState.totalPages; i++) {
+          pageHtml += `<button type="button" class="page-box-btn ${i === formsState.page ? 'active' : ''}" onclick="renderFormsBoard(${i})">${i}</button>`;
+        }
+        pageHtml += `<button type="button" class="page-box-btn" onclick="renderFormsBoard(${Math.min(formsState.totalPages, formsState.page + 1)})" aria-label="다음 페이지"><i class="fa-solid fa-chevron-right"></i></button>`;
+      }
+      pagination.innerHTML = pageHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFormsBoard(1);
+
+      const searchBtn = document.getElementById('forms-search-btn');
+      const searchInput = document.getElementById('forms-search-input');
+
+      if (searchBtn) searchBtn.addEventListener('click', () => renderFormsBoard());
+      if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') renderFormsBoard();
+        });
+      }
+    });
+  </script>
 </body>
 </html>

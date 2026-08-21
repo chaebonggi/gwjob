@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/외국인일자리.css">
 </head>
 <body class="bg-gray-page">
@@ -21,20 +22,20 @@
         <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
-      <!-- PC 메뉴 -->
       <nav class="header-nav">
-        <a href="intro.html" class="nav-item">INTRO</a>
         <a href="about.html" class="nav-item">사업소개</a>
         <a href="jobs.html" class="nav-item">채용정보</a>
         
         <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
+          <button type="button" class="nav-item has-depth active">역량강화 <i data-lucide="chevron-down"></i></button>
           <div class="dropdown-menu">
             <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
             <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
             <a href="visa-score.html">내 비자점수 알아보기</a>
           </div>
         </div>
+
+        <a href="visa-info.html" class="nav-item">비자안내</a>
 
         <div class="nav-dropdown">
           <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
@@ -45,7 +46,6 @@
         </div>
       </nav>
 
-      <!-- PC 버튼 그룹 -->
       <div class="header-actions">
         <div class="btn-group">
           <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
@@ -67,18 +67,14 @@
         </div>
       </div>
 
-      <!-- 모바일 햄버거 버튼 -->
       <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
         <i data-lucide="menu"></i>
       </button>
-
     </div>
   </header>
 
-  <!-- 모바일 사이드 메뉴 오버레이 -->
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
-  <!-- 모바일 슬라이드 드로어 메뉴 -->
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
       <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
@@ -87,15 +83,12 @@
       </button>
     </div>
 
-    <!-- 모바일 구인/구직 버튼 -->
     <div class="drawer-actions">
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
     </div>
 
-    <!-- 모바일 네비게이션 리스트 -->
     <nav class="drawer-nav">
-      <a href="intro.html" class="drawer-nav-item">INTRO</a>
       <a href="about.html" class="drawer-nav-item">사업소개</a>
       <a href="jobs.html" class="drawer-nav-item">채용정보</a>
       
@@ -110,6 +103,8 @@
           <a href="visa-score.html">내 비자점수 알아보기</a>
         </div>
       </div>
+
+      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
 
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
@@ -140,61 +135,969 @@
       </div>
     </div>
   </aside>
+  <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
   <main class="site-main">
-    <section class="sub-hero purple">
+    <section class="sub-hero indigo">
       <div class="inner-section">
-        <div class="breadcrumb">
-          <span>홈</span>
-          <i data-lucide="chevron-right"></i>
-          <span>역량강화</span>
-          <i data-lucide="chevron-right"></i>
-          <span class="curr">내 비자점수 알아보기</span>
-        </div>
-        <h1>내 비자점수 알아보기</h1>
+        <h1 class="sub-hero-title">역량강화</h1>
+        <div class="sub-hero-subtitle">(비자 전환 가능성 진단)</div>
+        <p class="sub-hero-desc">원하시는 비자 유형을 선택하고 나의 점수를 실시간으로 확인해 보세요.</p>
       </div>
     </section>
 
-    <section class="visa-score-wrap">
+    <section class="score-calc-section">
       <div class="inner-section">
-        <div class="visa-tabs">
-          <button class="visa-tab-btn active" data-visa="D-10">D-10</button>
-          <button class="visa-tab-btn" data-visa="F-2-R">F-2-R</button>
-          <button class="visa-tab-btn" data-visa="F-2-7">F-2-7</button>
-          <button class="visa-tab-btn" data-visa="E-7-4">E-7-4</button>
-          <button class="visa-tab-btn" data-visa="E-7-4R">E-7-4R</button>
-        </div>
-
-        <div class="visa-card-box">
-          <div class="visa-test-head">
-            <h2 id="visa-test-title" class="test-tit">D-10 TEST</h2>
-            <p id="visa-test-desc" class="test-desc">총 190점 중 기본항목 20점 이상 총 득점이 60점인 자</p>
-            <p class="test-update">Update 2025.07.18</p>
-            <div class="test-divider"></div>
+        
+        <div class="score-calc-card">
+          <!-- 탭 네비게이션 -->
+          <div class="visa-calc-tabs">
+            <button type="button" id="tab-btn-d10" class="visa-calc-tab-btn active" onclick="switchVisaTab('d10')">D-10 (구직)</button>
+            <button type="button" id="tab-btn-f2r" class="visa-calc-tab-btn" onclick="switchVisaTab('f2r')">F-2-R (지역특화)</button>
+            <button type="button" id="tab-btn-f27" class="visa-calc-tab-btn" onclick="switchVisaTab('f27')">F-2-7 (우수인재)</button>
+            <button type="button" id="tab-btn-e74" class="visa-calc-tab-btn" onclick="switchVisaTab('e74')">E-7-4 (숙련기능)</button>
+            <button type="button" id="tab-btn-e74r" class="visa-calc-tab-btn" onclick="switchVisaTab('e74r')">E-7-4R (지역특화)</button>
           </div>
 
-          <div class="test-questions"></div>
+          <!-- 탭 콘텐츠 영역 -->
+          <div id="visa-panes-container">
+
+            <!-- 1. D-10 탭 -->
+            <div id="visa-pane-d10" class="visa-pane active">
+              <div class="pane-header-center">
+                <h2 class="pane-title text-red">D-10 TEST</h2>
+                <p class="pane-sub">총 190점 중 <strong class="text-indigo">기본항목 20점 이상</strong> & <strong class="text-red">총 득점이 60점 이상</strong>인 자</p>
+              </div>
+
+              <div class="calc-layout-flex">
+                <div class="calc-form-box">
+                  <!-- 1. 기본항목 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag indigo">기본항목</span>
+                        <h4>연령 및 학력</h4>
+                      </div>
+                      <span class="limit-pill indigo">최대 50점 중 최소 20점 이상</span>
+                    </div>
+
+                    <div class="sec-field-list border-indigo">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-cake-candles text-yellow"></i> 나이 (최대 20점)</label>
+                        <select class="calc-input-d10-basic field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="10">20~24세 (10점)</option>
+                          <option value="15">25~29세 (15점)</option>
+                          <option value="20">30~34세 (20점)</option>
+                          <option value="15">35~39세 (15점)</option>
+                          <option value="5">40~49세 (5점)</option>
+                        </select>
+                        <p class="field-hint">* 연령은 만 나이로 계산</p>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-graduation-cap text-blue"></i> 최종학력 (최대 30점)</label>
+                        <select class="calc-input-d10-basic field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="15">국내 전문학사 (15점)</option>
+                          <option value="15">국내외 학사 (15점)</option>
+                          <option value="20">국내외 석사 (20점)</option>
+                          <option value="30">국내외 박사 (30점)</option>
+                        </select>
+                        <ul class="field-info-bullets">
+                          <li>* 학위증만 인정 (졸업증, 수료증 불인정)</li>
+                          <li>* 국외 전문학사는 대상에서 제외</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 2. 선택항목 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag green">선택항목</span>
+                        <h4>경력, 유학, 연수 및 한국어</h4>
+                      </div>
+                      <span class="limit-pill green">최대 70점</span>
+                    </div>
+
+                    <div class="sec-field-list border-green">
+                      <div class="calc-inner-box">
+                        <label><i class="fa-solid fa-briefcase text-green"></i> 취업경력 (국내/국외 합산)</label>
+                        <div class="inner-two-fields">
+                          <div>
+                            <span class="mini-label">국내 경력</span>
+                            <select class="calc-input-d10-career field-select-box">
+                              <option value="0">해당없음 (0점)</option>
+                              <option value="5">국내 1~2년 (5점)</option>
+                              <option value="10">국내 3~4년 (10점)</option>
+                              <option value="15">국내 5년이상 (15점)</option>
+                            </select>
+                          </div>
+                          <div>
+                            <span class="mini-label">국외 경력</span>
+                            <select class="calc-input-d10-career field-select-box">
+                              <option value="0">해당없음 (0점)</option>
+                              <option value="5">국외 3~4년 (5점)</option>
+                              <option value="10">국외 5~6년 (10점)</option>
+                              <option value="15">국외 7년이상 (15점)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-school text-indigo"></i> 국내유학 (2년 이상 / 최대 30점)</label>
+                        <select class="calc-input-d10-study field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="30">전문학사(졸업후 3년이내) (30점)</option>
+                          <option value="5">전문학사(졸업후 3년이후) (5점)</option>
+                          <option value="30">학사(졸업후 3년이내) (30점)</option>
+                          <option value="10">학사(졸업후 3년이후) (10점)</option>
+                          <option value="30">석사(졸업후 3년이내) (30점)</option>
+                          <option value="15">석사(졸업후 3년이후) (15점)</option>
+                          <option value="30">박사(졸업후 3년이내) (30점)</option>
+                          <option value="20">박사(졸업후 3년이후) (20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-language text-pink"></i> 토픽 TOPIK / 사회통합프로그램 KIIP (최대 20점)</label>
+                        <select class="calc-input-d10-korean field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="5">2급 / 2단계 (5점)</option>
+                          <option value="10">3급 / 3단계 (10점)</option>
+                          <option value="15">4급 / 4단계 (15점)</option>
+                          <option value="20">5급 이상 / 5단계 (20점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 3. 가점 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag yellow">가점</span>
+                        <h4>가산점 항목 <small>(중복 가능)</small></h4>
+                      </div>
+                      <span class="limit-pill yellow">최대 70점</span>
+                    </div>
+
+                    <div class="sec-field-list border-yellow">
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-d10-bonus" value="20">
+                        <span>관계 중앙행정기관장 및 재외공관장 구직비자 발급 추천 (+20점)</span>
+                      </label>
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-d10-bonus" value="20">
+                        <span>세계 우수대학 졸업자 (타임지 200대, QS 500대) (+20점)</span>
+                      </label>
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-d10-bonus" value="20">
+                        <span>글로벌 기업 근무 경력자 (포춘지 500대) (+20점)</span>
+                      </label>
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-d10-bonus" value="5">
+                        <span>이공계 학사 (국내 전문학사 포함) 학위 소지자 (+5점)</span>
+                      </label>
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-d10-bonus" value="5">
+                        <span>고소득 (5만 달러) 전문직 종사 경력자 (+5점)</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 4. 감점 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag red">감점</span>
+                        <h4>위반 및 처벌 전력</h4>
+                      </div>
+                      <span class="limit-pill red">최대 -60점</span>
+                    </div>
+
+                    <div class="sec-field-list border-red">
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-triangle-exclamation text-red"></i> A. 출입국관리법 위반</label>
+                        <select class="calc-input-d10-penalty field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-5">범칙금 50 ~ 100만원 미만 (-5점)</option>
+                          <option value="-10">범칙금 100 ~ 300만원 미만 (-10점)</option>
+                          <option value="-30">범칙금 300만원 이상 (-30점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-gavel text-red"></i> B. 형사처벌 전력</label>
+                        <select class="calc-input-d10-penalty field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-5">벌금형 200만원 미만 (-5점)</option>
+                          <option value="-10">벌금형 200 ~ 300만원 미만 (-10점)</option>
+                          <option value="-30">벌금형 300만원 이상 (-30점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn-calc-submit" onclick="calculateVisa('d10', 190, 60)">
+                    내 점수 확인하기
+                  </button>
+                </div>
+
+                <!-- 우측 점수 결과 Sticky 카드 -->
+                <div class="calc-result-box">
+                  <div class="gauge-circle-wrap">
+                    <svg class="gauge-svg" viewBox="0 0 200 200">
+                      <circle cx="100" cy="100" r="88" class="gauge-bg-circle"></circle>
+                      <circle id="calc-ring-d10" cx="100" cy="100" r="88" class="gauge-ring-bar"></circle>
+                    </svg>
+                    <span class="gauge-lbl">현재점수</span>
+                    <div class="gauge-score-wrap">
+                      <span id="calc-score-d10" class="score-num">0</span>
+                      <span class="score-unit">점</span>
+                    </div>
+                  </div>
+
+                  <h3 id="calc-title-d10" class="result-status-tit">항목을 선택해주세요</h3>
+                  <p id="calc-msg-d10" class="result-status-desc">좌측 항목을 모두 입력하신 후<br>버튼을 눌러 결과를 확인하세요.</p>
+
+                  <div class="result-rule-callout">
+                    * 기본점수 20점 이상, 합계점수 60점 이상부터 비자를 발급받을 수 있어요!
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. F-2-R 탭 (복원된 상단 안내 박스 및 지자체 표) -->
+            <div id="visa-pane-f2r" class="visa-pane">
+              <div class="pane-header-center">
+                <h2 class="pane-title text-red">F-2-R TEST</h2>
+                <p class="pane-sub"><strong class="text-indigo">국내 학위(전문학사 이상) 또는 소득(3,497만원 이상)</strong> & <strong class="text-red">한국어능력(3급/3단계 이상)</strong> 필수</p>
+              </div>
+
+              <!-- F-2-R 전용 상단 안내 및 지자체 요건 박스 -->
+              <div class="f2r-top-info-wrap">
+                <div class="f2r-card-box">
+                  <h4 class="f2r-box-tit text-red"><i class="fa-solid fa-ban"></i> F-2-R로 변경 불가능한 비자</h4>
+                  <p class="f2r-desc-txt">기술연수(D-3), 일반연수(D-4), 호텔유흥(E-6-2), 계절근로(E-8), 비전문취업(E-9), 선원취업(E-10), 기타(G-1), 관광취업(H-1)</p>
+                  
+                  <div class="f2r-inner-alert">
+                    <h5 class="f2r-alert-head"><i class="fa-solid fa-triangle-exclamation text-yellow"></i> 신청 제외 대상</h5>
+                    <ul class="f2r-alert-list">
+                      <li>벌금 100만원 이상의 형을 받은 자 / 조세 체납자 (완납 시 신청 가능)</li>
+                      <li>출입국관리법 4회 이상 위반자 / 불법체류 경력 3개월 이상인 자</li>
+                      <li>대한민국의 이익이나 공공의 안전, 사회질서를 해치는 행동을 할 염려가 있는 자</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="f2r-card-box">
+                  <h4 class="f2r-box-tit text-blue-dark"><i class="fa-solid fa-map-pin text-blue"></i> 경기도 지정 지역특화 대상 지자체 및 개별요건</h4>
+                  <div class="f2r-table-frame">
+                    <table class="f2r-info-table">
+                      <thead>
+                        <tr>
+                          <th>광역</th>
+                          <th>시·군</th>
+                          <th>개별요건 및 허용 업종</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3" class="col-head">경기도</td>
+                          <td class="col-center">가평군</td>
+                          <td>
+                            <strong>학력/취업</strong> : 경기 내 대학 전문학사 이상 또는 타 시·도 대학 졸업자 중 가평군 취업(예정)자<br>
+                            <strong>허용업종</strong> : 제조업, 농림축산업, 식품가공, 관광·레저 및 서비스업 등 (5년 실거주·근무)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-center">연천군</td>
+                          <td>
+                            <strong>학력/소득</strong> : 경기 내 대학 전문학사 이상 또는 전년도 GNI 70% 이상 소득자 (약 3,497만원 이상)<br>
+                            <strong>허용업종</strong> : 뿌리산업, 스마트팜 농업, 식품제조업, 바이오 및 친환경 제조업 등 (5년 실거주·근무)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-center">포천·동두천<br><small class="text-gray">(관심지역)</small></td>
+                          <td>
+                            <strong>학력/취업</strong> : 경기북부 뿌리산업, 섬유·가구·염색 제조업, 물류 및 가공업 취업자<br>
+                            <strong>한국어</strong> : TOPIK 3급 이상 / KIIP 3단계 이상 이수자
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-layout-flex">
+                <div class="calc-form-box">
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag indigo">기본요건</span>
+                        <h4>학위 또는 소득 요건</h4>
+                      </div>
+                      <span class="limit-pill indigo">둘 중 1개 필수</span>
+                    </div>
+
+                    <div class="sec-field-list border-indigo">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-graduation-cap text-blue"></i> 국내 학위 취득 여부</label>
+                        <div class="f2r-btn-grid f2r-grid-4">
+                          <button type="button" class="f2r-opt-btn f2r-btn-degree active" data-group="degree" data-val="none" onclick="selectF2ROption('degree', 'none', this)">해당없음</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-degree" data-group="degree" data-val="associate" onclick="selectF2ROption('degree', 'associate', this)">전문학사</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-degree" data-group="degree" data-val="bachelor" onclick="selectF2ROption('degree', 'bachelor', this)">학사</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-degree" data-group="degree" data-val="master" onclick="selectF2ROption('degree', 'master', this)">석사</button>
+                        </div>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-won-sign text-green"></i> 전년도 소득 (학위 미보유 시)</label>
+                        <div class="f2r-btn-grid f2r-grid-3">
+                          <button type="button" class="f2r-opt-btn f2r-btn-income active" data-group="income" data-val="none" onclick="selectF2ROption('income', 'none', this)">해당없음</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-income" data-group="income" data-val="under" onclick="selectF2ROption('income', 'under', this)">3,497만원 미만</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-income" data-group="income" data-val="over" onclick="selectF2ROption('income', 'over', this)">3,497만원 이상</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag green">필수항목</span>
+                        <h4>한국어 능력</h4>
+                      </div>
+                      <span class="limit-pill green">3급 / 3단계 이상 필수</span>
+                    </div>
+
+                    <div class="sec-field-list border-green">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-language text-green"></i> TOPIK 또는 사회통합프로그램(KIIP)</label>
+                        <div class="f2r-btn-grid f2r-grid-3">
+                          <button type="button" class="f2r-opt-btn f2r-btn-korean active" data-group="korean" data-val="none" onclick="selectF2ROption('korean', 'none', this)">해당없음</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-korean" data-group="korean" data-val="lvl1" onclick="selectF2ROption('korean', 'lvl1', this)">1급 / 1단계</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-korean" data-group="korean" data-val="lvl2" onclick="selectF2ROption('korean', 'lvl2', this)">2급 / 2단계</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-korean" data-group="korean" data-val="lvl3" onclick="selectF2ROption('korean', 'lvl3', this)">3급 / 3단계 (충족)</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-korean" data-group="korean" data-val="lvl4" onclick="selectF2ROption('korean', 'lvl4', this)">4급 / 4단계 (충족)</button>
+                          <button type="button" class="f2r-opt-btn f2r-btn-korean" data-group="korean" data-val="lvl5" onclick="selectF2ROption('korean', 'lvl5', this)">5급 이상 (충족)</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <input type="hidden" id="f2r-val-degree" value="none">
+                  <input type="hidden" id="f2r-val-income" value="none">
+                  <input type="hidden" id="f2r-val-korean" value="none">
+
+                  <button type="button" class="btn-calc-submit" onclick="calculateVisa('f2r', 100, 100)">
+                    내 적합도 확인하기
+                  </button>
+                </div>
+
+                <div class="calc-result-box">
+                  <div class="gauge-circle-wrap">
+                    <svg class="gauge-svg" viewBox="0 0 200 200">
+                      <circle cx="100" cy="100" r="88" class="gauge-bg-circle"></circle>
+                      <circle id="calc-ring-f2r" cx="100" cy="100" r="88" class="gauge-ring-bar"></circle>
+                    </svg>
+                    <span class="gauge-lbl">적합도</span>
+                    <div class="gauge-score-wrap">
+                      <span id="calc-score-f2r" class="score-num">0</span>
+                      <span id="calc-score-suffix-f2r" class="score-unit">%</span>
+                    </div>
+                  </div>
+
+                  <h3 id="calc-title-f2r" class="result-status-tit">항목을 선택해주세요</h3>
+                  <p id="calc-msg-f2r" class="result-status-desc">좌측 항목을 모두 입력하신 후<br>버튼을 눌러 결과를 확인하세요.</p>
+
+                  <div class="result-rule-callout">
+                    * 학위(또는 소득) + 한국어능력(3급/3단계↑) 모두 충족 시 100%
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. F-2-7 탭 -->
+            <div id="visa-pane-f27" class="visa-pane">
+              <div class="pane-header-center">
+                <h2 class="pane-title text-red">F-2-7 TEST</h2>
+                <p class="pane-sub">총 170점 중 <strong class="text-red">총 득점이 80점 이상</strong>인 자</p>
+              </div>
+
+              <div class="calc-layout-flex">
+                <div class="calc-form-box">
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag indigo">기본항목</span>
+                        <h4>나이, 학력, 한국어 및 연간소득</h4>
+                      </div>
+                      <span class="limit-pill indigo">최대 130점</span>
+                    </div>
+
+                    <div class="sec-field-list border-indigo">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-cake-candles text-yellow"></i> 나이 (최대 25점)</label>
+                        <select id="f27-val-age" class="calc-input-f27 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="23">18~24세 (23점)</option>
+                          <option value="25">25~29세 (25점)</option>
+                          <option value="23">30~34세 (23점)</option>
+                          <option value="20">35~39세 (20점)</option>
+                          <option value="12">40~44세 (12점)</option>
+                          <option value="8">45~50세 (8점)</option>
+                          <option value="3">51세 이상 (3점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-graduation-cap text-blue"></i> 최종학력 (최대 25점)</label>
+                        <select id="f27-val-education" class="calc-input-f27 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="10">전문학사 (이공계 외) (10점)</option>
+                          <option value="15">전문학사 (이공계) (15점)</option>
+                          <option value="15">학사 (이공계 외) (15점)</option>
+                          <option value="17">학사 (이공계 / 학위 2개 이상) (17점)</option>
+                          <option value="17">석사 (이공계 외) (17점)</option>
+                          <option value="20">석사 (이공계 / 학위 2개 이상) (20점)</option>
+                          <option value="20">박사 (이공계 외) (20점)</option>
+                          <option value="25">박사 (이공계 / 학위 2개 이상) (25점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-language text-pink"></i> 한국어 능력 (최대 20점)</label>
+                        <select id="f27-val-korean" class="calc-input-f27 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="3">1급 / 1단계 (3점)</option>
+                          <option value="5">2급 / 2단계 (5점)</option>
+                          <option value="10">3급 / 3단계 (10점)</option>
+                          <option value="15">4급 / 4단계 (15점)</option>
+                          <option value="20">5급 이상 / 5단계 (20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-won-sign text-green"></i> 연간 소득 (최대 60점)</label>
+                        <select id="f27-val-income" class="calc-input-f27 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="10">최저임금 ~ 3천만원 미만 (10점)</option>
+                          <option value="30">3천만원 ~ 4천만원 미만 (30점)</option>
+                          <option value="40">4천만원 ~ 5천만원 미만 (40점)</option>
+                          <option value="45">5천만원 ~ 6천만원 미만 (45점)</option>
+                          <option value="50">6천만원 ~ 7천만원 미만 (50점)</option>
+                          <option value="60">1억원 이상 (60점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag yellow">가점</span>
+                        <h4>가산점 항목</h4>
+                      </div>
+                      <span class="limit-pill yellow">최대 40점</span>
+                    </div>
+
+                    <div class="sec-field-list border-yellow">
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-f27-bonus" value="20">
+                        <span>한국전 참전국 우수인재 (+20점)</span>
+                      </label>
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-f27-bonus" value="20">
+                        <span>중앙행정기관 추천 (+20점)</span>
+                      </label>
+                      <label class="check-select-card yellow">
+                        <input type="checkbox" class="calc-input-f27-bonus" value="10">
+                        <span>사회통합프로그램 5단계 이수자 (+10점)</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag red">감점</span>
+                        <h4>위반 및 처벌 전력</h4>
+                      </div>
+                      <span class="limit-pill red">최대 -70점</span>
+                    </div>
+
+                    <div class="sec-field-list border-red">
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-triangle-exclamation text-red"></i> 출입국관리법 위반</label>
+                        <select id="f27-val-penaltyImmigration" class="calc-input-f27 field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-10">범칙금 50 ~ 100만원 미만 (-10점)</option>
+                          <option value="-20">범칙금 100 ~ 300만원 미만 (-20점)</option>
+                          <option value="-30">범칙금 300만원 이상 또는 출국명령 (-30점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-gavel text-red"></i> 기타 국내법령 위반</label>
+                        <select id="f27-val-penaltyOther" class="calc-input-f27 field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-10">벌금형 200만원 미만 (-10점)</option>
+                          <option value="-20">벌금형 200 ~ 300만원 미만 (-20점)</option>
+                          <option value="-40">벌금형 300만원 이상 형사처벌 (-40점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn-calc-submit" onclick="calculateVisa('f27', 170, 80)">
+                    내 점수 확인하기
+                  </button>
+                </div>
+
+                <div class="calc-result-box">
+                  <div class="gauge-circle-wrap">
+                    <svg class="gauge-svg" viewBox="0 0 200 200">
+                      <circle cx="100" cy="100" r="88" class="gauge-bg-circle"></circle>
+                      <circle id="calc-ring-f27" cx="100" cy="100" r="88" class="gauge-ring-bar"></circle>
+                    </svg>
+                    <span class="gauge-lbl">총점</span>
+                    <div class="gauge-score-wrap">
+                      <span id="calc-score-f27" class="score-num">0</span>
+                      <span class="score-unit">점</span>
+                    </div>
+                  </div>
+
+                  <h3 id="calc-title-f27" class="result-status-tit">항목을 선택해주세요</h3>
+                  <p id="calc-msg-f27" class="result-status-desc">좌측 항목을 모두 입력하신 후<br>버튼을 눌러 결과를 확인하세요.</p>
+
+                  <div class="result-rule-callout">
+                    * 총 170점 중 80점 이상 충족 시 F-2-7 신청 가능
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. E-7-4 탭 (복원된 점수 외 필수 진단 및 가/감점 전체) -->
+            <div id="visa-pane-e74" class="visa-pane">
+              <div class="pane-header-center">
+                <h2 class="pane-title text-red">E-7-4 TEST</h2>
+                <p class="pane-sub">기본항목 중 <strong class="text-indigo">소득·한국어 각 50점 이상</strong> & <strong class="text-red">총 득점 200점 이상</strong>인 자</p>
+              </div>
+
+              <div class="calc-layout-flex">
+                <div class="calc-form-box">
+                  <!-- 점수 외 필수 진단 -->
+                  <div class="e74-req-check-box">
+                    <h5 class="req-check-tit"><i class="fa-solid fa-list-check text-blue"></i> 점수 외 필수 진단항목</h5>
+                    <div class="req-check-list">
+                      <label><input type="checkbox" checked disabled> <span>최근 10년간 E-9 / E-10 / H-2 비자로 4년 이상 체류</span></label>
+                      <label><input type="checkbox" checked disabled> <span>현재 근무처에서 향후 2년 이상 E-7-4 계약</span></label>
+                      <label><input type="checkbox" checked disabled> <span>현재 1년 이상 근무한 기업의 추천</span></label>
+                      <label><input type="checkbox" checked disabled> <span>총점 200점 이상 (소득 최소 50점, 한국어 최소 50점 필수)</span></label>
+                    </div>
+                  </div>
+
+                  <!-- 1. 기본점수 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag indigo">기본점수</span>
+                        <h4>소득, 한국어 및 나이</h4>
+                      </div>
+                      <span class="limit-pill indigo">최대 300점</span>
+                    </div>
+
+                    <div class="sec-field-list border-indigo">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-won-sign text-green"></i> 최근 2년 평균소득 (최대 120점)</label>
+                        <select id="e74-val-income" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">2,500만 ~ 3,000만원 미만 (50점)</option>
+                          <option value="65">3,000만 ~ 3,500만원 미만 (65점)</option>
+                          <option value="80">3,500만 ~ 4,000만원 미만 (80점)</option>
+                          <option value="95">4,000만 ~ 4,500만원 미만 (95점)</option>
+                          <option value="110">4,500만 ~ 5,000만원 미만 (110점)</option>
+                          <option value="120">5,000만원 이상 (120점)</option>
+                        </select>
+                        <p class="field-hint text-red">* 최근 2년 평균소득 최소 50점(2,500만원 이상) 필수</p>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-language text-pink"></i> 한국어 능력 (최대 120점)</label>
+                        <select id="e74-val-korean" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">TOPIK 2급 / KIIP 2단계 / 사전평가 41~60점 (50점)</option>
+                          <option value="80">TOPIK 3급 / KIIP 3단계 / 사전평가 61~80점 (80점)</option>
+                          <option value="120">TOPIK 4급 이상 / KIIP 4단계 이상 / 사전평가 81점 이상 (120점)</option>
+                        </select>
+                        <p class="field-hint text-red">* 한국어 능력 최소 50점(2급/2단계/사전평가 41점 이상) 필수</p>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-cake-candles text-yellow"></i> 나이 (최대 60점)</label>
+                        <select id="e74-val-age" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="40">19~26세 (40점)</option>
+                          <option value="60">27~33세 (60점)</option>
+                          <option value="30">34~40세 (30점)</option>
+                          <option value="10">41세 이상 (10점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 2. 가점 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag green">가점</span>
+                        <h4>가산점 항목</h4>
+                      </div>
+                      <span class="limit-pill green">중복 산정 가능</span>
+                    </div>
+
+                    <div class="sec-field-list border-green">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-award text-green"></i> 중앙부처 또는 광역지자체 추천 (택 1, +30점)</label>
+                        <select id="e74-val-recRecommendation" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="30">중앙부처 추천 (+30점)</option>
+                          <option value="30">광역지자체 추천 (+30점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-building-user text-green"></i> 고용기업체 추천 (+50점)</label>
+                        <select id="e74-val-recCompany" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">현재 1년 이상 근무한 고용기업체 추천 (+50점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-briefcase text-green"></i> 현 근무처 근속 (+20점)</label>
+                        <select id="e74-val-bonusTenure" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="20">현 근무처 3년 이상 근속 (+20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-graduation-cap text-green"></i> 자격증 또는 국내 학위 (+20점)</label>
+                        <select id="e74-val-bonusDegreeCert" class="calc-input-e74 field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="20">기사·산업기사·기능사 자격증 또는 국내 전문학사 이상 (+20점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 3. 감점 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag red">감점</span>
+                        <h4>위반 및 감점 항목</h4>
+                      </div>
+                      <span class="limit-pill red">횟수별 차등 적용</span>
+                    </div>
+
+                    <div class="sec-field-list border-red">
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-gavel text-red"></i> 100만원 미만 벌금형</label>
+                        <select id="e74-val-penaltyFine" class="calc-input-e74 field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-5">1회 (-5점)</option>
+                          <option value="-10">2회 (-10점)</option>
+                          <option value="-20">3회 이상 (-20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-triangle-exclamation text-red"></i> 체납으로 체류허가 제한</label>
+                        <select id="e74-val-penaltyTax" class="calc-input-e74 field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-5">1회 (-5점)</option>
+                          <option value="-10">2회 (-10점)</option>
+                          <option value="-15">3회 이상 (-15점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn-calc-submit" onclick="calculateVisa('e74', 300, 200)">
+                    내 점수 확인하기
+                  </button>
+                </div>
+
+                <div class="calc-result-box">
+                  <div class="gauge-circle-wrap">
+                    <svg class="gauge-svg" viewBox="0 0 200 200">
+                      <circle cx="100" cy="100" r="88" class="gauge-bg-circle"></circle>
+                      <circle id="calc-ring-e74" cx="100" cy="100" r="88" class="gauge-ring-bar"></circle>
+                    </svg>
+                    <span class="gauge-lbl">총점</span>
+                    <div class="gauge-score-wrap">
+                      <span id="calc-score-e74" class="score-num">0</span>
+                      <span class="score-unit">점</span>
+                    </div>
+                  </div>
+
+                  <h3 id="calc-title-e74" class="result-status-tit">항목을 선택해주세요</h3>
+                  <p id="calc-msg-e74" class="result-status-desc">좌측 항목을 선택하시면<br>점수가 실시간으로 계산됩니다.</p>
+
+                  <div class="result-rule-callout">
+                    * 소득(50점↑), 한국어(50점↑), 총점 200점 이상부터 신청 가능
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. E-7-4R 탭 (복원된 대상지역 및 전체 항목) -->
+            <div id="visa-pane-e74r" class="visa-pane">
+              <div class="pane-header-center">
+                <h2 class="pane-title text-red">E-7-4R TEST (지역특화)</h2>
+                <p class="pane-sub">기본항목 중 <strong class="text-indigo">소득·한국어 각 50점 이상</strong> & <strong class="text-red">총 득점 200점 이상</strong>인 자 (체류 2년 완화)</p>
+              </div>
+
+              <div class="calc-layout-flex">
+                <div class="calc-form-box">
+                  <!-- 점수 외 필수 진단 & 대상지역 -->
+                  <div class="e74-req-check-box">
+                    <h5 class="req-check-tit"><i class="fa-solid fa-list-check text-blue"></i> 점수 외 필수 진단 및 경기도 대상지역</h5>
+                    
+                    <div class="calc-field mb-14">
+                      <label><i class="fa-solid fa-map-location-dot text-blue"></i> 경기도 대상지역 (인구감소/관심지역)</label>
+                      <select id="e74r-val-region" class="calc-input-e74r field-select-box">
+                        <option value="gapyeong">가평군 (인구감소지역)</option>
+                        <option value="yeoncheon">연천군 (인구감소지역)</option>
+                        <option value="dongducheon">동두천시 (관심지역)</option>
+                        <option value="pocheon">포천시 (관심지역)</option>
+                      </select>
+                    </div>
+
+                    <div class="req-check-list">
+                      <label><input type="checkbox" id="e74r-chk-stay" checked> <span>E-9 · E-10 · H-2 자격으로 <strong>체류경력 2년 이상</strong> 충족 (완화요건)</span></label>
+                      <label><input type="checkbox" id="e74r-chk-contract" checked> <span>현재 근무처에서 1년 이상 근무 및 1년 이상 E-7-4R 고용계약</span></label>
+                      <label><input type="checkbox" checked disabled> <span>총점 200점 이상 (소득 최소 50점, 한국어 최소 50점 필수)</span></label>
+                    </div>
+                  </div>
+
+                  <!-- 1. 기본점수 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag indigo">기본점수</span>
+                        <h4>소득, 한국어 및 나이</h4>
+                      </div>
+                      <span class="limit-pill indigo">최대 300점</span>
+                    </div>
+
+                    <div class="sec-field-list border-indigo">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-won-sign text-green"></i> 최근 2년 평균소득 (최대 120점)</label>
+                        <select id="e74r-val-income" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">2,500만 ~ 3,000만원 미만 (50점)</option>
+                          <option value="65">3,000만 ~ 3,500만원 미만 (65점)</option>
+                          <option value="80">3,500만 ~ 4,000만원 미만 (80점)</option>
+                          <option value="95">4,000만 ~ 4,500만원 미만 (95점)</option>
+                          <option value="110">4,500만 ~ 5,000만원 미만 (110점)</option>
+                          <option value="120">5,000만원 이상 (120점)</option>
+                        </select>
+                        <p class="field-hint text-red">* 최근 2년 평균소득 최소 50점(2,500만원 이상) 필수</p>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-language text-pink"></i> 한국어 능력 (최대 120점)</label>
+                        <select id="e74r-val-korean" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">TOPIK 2급 / KIIP 2단계 / 사전평가 41~60점 (50점)</option>
+                          <option value="80">TOPIK 3급 / KIIP 3단계 / 사전평가 61~80점 (80점)</option>
+                          <option value="120">TOPIK 4급 이상 / KIIP 4단계 이상 / 사전평가 81점 이상 (120점)</option>
+                        </select>
+                        <p class="field-hint text-red">* 한국어 능력 최소 50점(2급/2단계/사전평가 41점 이상) 필수</p>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-cake-candles text-yellow"></i> 나이 (최대 60점)</label>
+                        <select id="e74r-val-age" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="40">19~26세 (40점)</option>
+                          <option value="60">27~33세 (60점)</option>
+                          <option value="30">34~40세 (30점)</option>
+                          <option value="10">41세 이상 (10점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 2. 가점 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag green">가점</span>
+                        <h4>가산점 항목</h4>
+                      </div>
+                      <span class="limit-pill green">중복 산정 가능</span>
+                    </div>
+
+                    <div class="sec-field-list border-green">
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-building-columns text-blue"></i> 경기도 추천 (+50점)</label>
+                        <select id="e74r-val-bonusGyeonggi" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">경기도 추천 대상 (+50점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-building text-yellow"></i> 고용기업 추천 (+50점)</label>
+                        <select id="e74r-val-bonusCompany" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="50">현재 고용기업 추천 (+50점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-briefcase text-purple"></i> 현 근무처 근속기간 (+20점)</label>
+                        <select id="e74r-val-bonusTenure" class="calc-input-e74r field-select-box">
+                          <option value="0">3년 미만 (0점)</option>
+                          <option value="20">현 근무처 3년 이상 근무 (+20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-location-dot text-red"></i> 인구감소지역·읍면 근무경력 (+20점)</label>
+                        <select id="e74r-val-bonusRegion" class="calc-input-e74r field-select-box">
+                          <option value="0">3년 미만 (0점)</option>
+                          <option value="20">인구감소지역·읍면 3년 이상 근무 (+20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-graduation-cap text-blue"></i> 국내 학위 또는 자격증 (+20점)</label>
+                        <select id="e74r-val-bonusDegreeCert" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="20">국내 전문학사 이상 또는 국가기술자격증 (+20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label><i class="fa-solid fa-id-card text-green"></i> 국내 운전면허 (+10점)</label>
+                        <select id="e74r-val-bonusLicense" class="calc-input-e74r field-select-box">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="10">국내 운전면허증 소지 (+10점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="calc-divider">
+
+                  <!-- 3. 감점 -->
+                  <div class="calc-sec-group">
+                    <div class="sec-group-head">
+                      <div class="head-tit-wrap">
+                        <span class="badge-tag red">감점</span>
+                        <h4>감점 항목</h4>
+                      </div>
+                      <span class="limit-pill red">최대 -50점 감점</span>
+                    </div>
+
+                    <div class="sec-field-list border-red">
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-gavel text-red"></i> 벌금형 처분 이력</label>
+                        <select id="e74r-val-penaltyFine" class="calc-input-e74r field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-50">100만원 이상 벌금형 처분 (-50점)</option>
+                          <option value="-20">100만원 미만 벌금형 처분 (-20점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-file-invoice-dollar text-red"></i> 조세체납 처분</label>
+                        <select id="e74r-val-penaltyTax" class="calc-input-e74r field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-50">200만원 이상 체납 (-50점)</option>
+                          <option value="-20">100만 ~ 200만원 미만 체납 (-20점)</option>
+                          <option value="-5">100만원 미만 체납 (-5점)</option>
+                        </select>
+                      </div>
+
+                      <div class="calc-field">
+                        <label class="text-red-dark"><i class="fa-solid fa-passport text-red"></i> 출입국관리법 위반</label>
+                        <select id="e74r-val-penaltyImmigration" class="calc-input-e74r field-select-box bg-red-light">
+                          <option value="0">해당없음 (0점)</option>
+                          <option value="-50">3회 이상 위반 (-50점)</option>
+                          <option value="-20">2회 위반 (-20점)</option>
+                          <option value="-5">1회 위반 (-5점)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn-calc-submit" onclick="calculateVisa('e74r', 300, 200)">
+                    내 점수 확인하기
+                  </button>
+                </div>
+
+                <div class="calc-result-box">
+                  <div class="gauge-circle-wrap">
+                    <svg class="gauge-svg" viewBox="0 0 200 200">
+                      <circle cx="100" cy="100" r="88" class="gauge-bg-circle"></circle>
+                      <circle id="calc-ring-e74r" cx="100" cy="100" r="88" class="gauge-ring-bar"></circle>
+                    </svg>
+                    <span class="gauge-lbl">총점</span>
+                    <div class="gauge-score-wrap">
+                      <span id="calc-score-e74r" class="score-num">0</span>
+                      <span class="score-unit">점</span>
+                    </div>
+                  </div>
+
+                  <h3 id="calc-title-e74r" class="result-status-tit">항목을 선택해주세요</h3>
+                  <p id="calc-msg-e74r" class="result-status-desc">좌측 항목을 선택하시면<br>점수가 실시간으로 계산됩니다.</p>
+
+                  <div class="result-rule-callout">
+                    * 소득(50점↑), 한국어(50점↑), 체류 2년 충족, 총점 200점 이상 신청 가능
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+
       </div>
     </section>
-
-    <!-- 하단 스티키 바 -->
-    <div class="score-sticky-bar">
-      <div class="inner-section">
-        <div class="score-left">
-          <span class="lbl">현재점수</span>
-          <span id="total-score-num" class="num-circle">0</span>
-          <span class="unit">점</span>
-        </div>
-        <div class="score-right-msg">
-          <p class="msg-bold">*기본점수 20점 이상, 합계점수 60점 이상부터 비자를 발급받을 수 있어요!</p>
-          <p id="score-sub-status" class="msg-sub">기본항목이 20점 부족합니다.</p>
-        </div>
-      </div>
-    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="inner-section">
       <div class="footer-top">
@@ -216,8 +1119,9 @@
     </div>
   </footer>
 
+  <!-- Floating Kakao Button -->
   <div class="kakao-floating">
-    <button class="btn-kakao">
+    <button class="btn-kakao" type="button">
       <i data-lucide="message-circle"></i>
       카카오톡 상담
     </button>
@@ -226,456 +1130,242 @@
   <script src="./js/외국인일자리.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const visaData = {
-        'D-10': {
-          title: 'D-10 TEST',
-          desc: '총 190점 중 기본항목 20점 이상 총 득점이 60점인 자',
-          minBasic: 20,
-          minTotal: 60,
-          sections: [
-            {
-              catTitle: '기본항목',
-              catLimit: '최대 50점 중 최소 <strong class="c-blue">20점</strong> 이상',
-              questions: [
-                {
-                  label: '나이',
-                  infoList: ['• 연령은 만 나이로 계산(ex. 49세 12월 30일까지는 점수 5점을 부여함)'],
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '20~24세', score: 10 },
-                    { txt: '25~29세', score: 15 },
-                    { txt: '30~34세', score: 20 },
-                    { txt: '35~39세', score: 15 },
-                    { txt: '40~49세', score: 5 }
-                  ]
-                },
-                {
-                  label: '최종학력',
-                  infoList: [
-                    '• 학위증만 인정(졸업증, 수료증, 자격증 등 불인정)',
-                    '• 국외 전문학사의 경우 국가마다 상이한 학제를 운영하고 있으며, 학위 취득 여부 확인이 불명확하여 해외 전문학사는 대상에서 제외',
-                    '• 한국예술종합학교 예술전문사과정 이수자는 석사학위에 준하여 인정'
-                  ],
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '국내 전문학사', score: 15 },
-                    { txt: '국내외 학사', score: 15 },
-                    { txt: '국내외 석사', score: 20 },
-                    { txt: '국내외 박사', score: 30 }
-                  ]
-                }
-              ]
-            },
-            {
-              catTitle: '선택항목',
-              catLimit: '최대 <strong class="c-blue">70점</strong>',
-              questions: [
-                {
-                  label: '취업경력',
-                  subTag: '(최대 점수 15점)',
-                  subQuestions: [
-                    {
-                      subLabel: '국내',
-                      options: [
-                        { txt: '해당없음', score: 0 },
-                        { txt: '국내 1~2년', score: 5 },
-                        { txt: '국내 3~4년', score: 10 },
-                        { txt: '국내 5년이상', score: 15 }
-                      ]
-                    },
-                    {
-                      subLabel: '국외',
-                      options: [
-                        { txt: '해당없음', score: 0 },
-                        { txt: '국외 3~4년', score: 5 },
-                        { txt: '국외 5~6년', score: 10 },
-                        { txt: '국외 7년이상', score: 15 }
-                      ]
-                    }
-                  ],
-                  infoList: [
-                    '• 최근 10년 이내의 국내 + 국외 경력 중복 산정 가능하며, 학위취득 후 전공 관련 유사 분야의 경력에 한정',
-                    '• 유사경력 여부는 신청자가 관련 증빙서류를 제출하여 입증하여야 하며, 인턴 등 구직과정에서의 경력은 제외'
-                  ]
-                },
-                {
-                  label: '국내유학',
-                  subTag: '(2년 이상 / 최대 점수 30점)',
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '전문학사(졸업후 3년이내)', score: 30 },
-                    { txt: '전문학사(졸업후 3년이후)', score: 5 },
-                    { txt: '학사(졸업후 3년이내)', score: 30 },
-                    { txt: '학사(졸업후 3년이후)', score: 10 },
-                    { txt: '석사(졸업후 3년이내)', score: 30 },
-                    { txt: '석사(졸업후 3년이후)', score: 15 },
-                    { txt: '박사(졸업후 3년이내)', score: 30 },
-                    { txt: '박사(졸업후 3년이후)', score: 20 }
-                  ],
-                  infoList: [
-                    '• 외국대학과 복수학위제 등을 통해 2년 미만의 수업을 받고 국내 학위를 취득한 경우 / 사이버대학 졸업 및 학점은행제도를 통해 국내 학위를 취득한 경우는 불인정',
-                    '• 단, 기본항목의 학력 점수에서 취득 학위별 점수 인정 가능',
-                    '• 한국예술종합학교 예술전문사과정 이수자는 석사학위에 준하여 인정'
-                  ]
-                },
-                {
-                  label: '국내연수',
-                  subTag: '(1년 이상 / 최대 점수 5점)',
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '대학 연구생 (D-2-5)', score: 5 }
-                  ]
-                }
-              ]
-            },
-            {
-              catTitle: '가점 <span class="sub-txt">중복 가능</span>',
-              catLimit: '최대 <strong class="c-blue">70점</strong>',
-              questions: [
-                {
-                  label: '',
-                  fullWidthBtn: true,
-                  options: [
-                    { txt: '관계 중앙행정기관장 및 재외공관장 구직비자 발급 추천', score: 20 }
-                  ]
-                },
-                {
-                  label: '',
-                  fullWidthBtn: true,
-                  options: [
-                    { txt: '세계 우수대학 졸업자(타임지 200대, QS 500대)', score: 20 }
-                  ]
-                },
-                {
-                  label: '',
-                  fullWidthBtn: true,
-                  options: [
-                    { txt: '글로벌 기업 근무경력자(포춘지 500대)', score: 20 }
-                  ]
-                },
-                {
-                  label: '',
-                  fullWidthBtn: true,
-                  options: [
-                    { txt: '이공계 학사(국내 전문학사 포함) 학위 소지자', score: 5 }
-                  ]
-                },
-                {
-                  label: '',
-                  fullWidthBtn: true,
-                  options: [
-                    { txt: '고소득(5만 달러) 전문직 종사 경력자', score: 5 }
-                  ],
-                  infoList: [
-                    '• 중앙행정기관장 또는 재외공관장이 전문인력임을 확인하여 비자발급 관련 추천을 하는 경우 : 최대 20점 이내에서 점수를 차등 부여가 가능함',
-                    '• 글로벌기업 : 최근 3년 이내 선정 포춘지 500대 기업, 최근 10년 이내 1년 이상 근무 경력자',
-                    '• 세계 우수대학 : 최근 3년 이내 타임지(Times Higher Education 순) 선정 200대 대학, QS 순에서 선정한 상위 500위 대학',
-                    '• 이공계 분야 국외 전문학사 등은 학력검증이 불가능하므로 대상에서 제외'
-                  ]
-                }
-              ]
-            },
-            {
-              catTitle: '감점',
-              catLimit: '최대 <strong class="c-red">-60점</strong>',
-              noticeBox: {
-                refList: [
-                  '신청일로부터 5년 이내 처분금액의 합산에 기준(과태료 미포함)',
-                  'A와 B항목 간 합산 점수 적용(중복 산정)'
-                ],
-                warnList: [
-                  '신청일로부터 3년 이내에 범칙금을 받아 「체류허가 제한 통합기준」에 따라 체류허가가 제한되거나 3년 이내에 300만원 이상의 벌금형을 받은 사람은 자격 제한 대상임'
-                ]
-              },
-              questions: [
-                {
-                  label: 'A. 출입국관리법 위반',
-                  unit: '(단위 : 만원)',
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '범칙금 50 ~ 100 미만', score: -5 },
-                    { txt: '범칙금 100 ~ 300 미만', score: -10 },
-                    { txt: '범칙금 300 이상', score: -30 }
-                  ]
-                },
-                {
-                  label: 'B. 형사처벌 전력',
-                  unit: '(단위 : 만원)',
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '벌금형 200 미만', score: -5 },
-                    { txt: '벌금형 200 ~ 300 미만', score: -10 },
-                    { txt: '벌금형 300 이상', score: -30 }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        'F-2-R': {
-          title: 'F-2-R TEST',
-          desc: '지역특화형 비자 점수 요건 진단',
-          minBasic: 20,
-          minTotal: 60,
-          sections: [
-            {
-              catTitle: '기본항목',
-              catLimit: '최대 50점 중 최소 <strong class="c-blue">20점</strong> 이상',
-              questions: [
-                {
-                  label: '나이',
-                  infoList: ['• 연령은 만 나이로 계산(ex. 49세 12월 30일까지는 점수 5점을 부여함)'],
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '20~24세', score: 10 },
-                    { txt: '25~29세', score: 15 },
-                    { txt: '30~34세', score: 20 },
-                    { txt: '35~39세', score: 15 },
-                    { txt: '40~49세', score: 5 }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        'F-2-7': {
-          title: 'F-2-7 TEST',
-          desc: '우수 인재 점수제 거주 비자 진단',
-          minBasic: 20,
-          minTotal: 80,
-          sections: [
-            {
-              catTitle: '기본항목',
-              catLimit: '최대 50점 중 최소 <strong class="c-blue">20점</strong> 이상',
-              questions: [
-                {
-                  label: '나이',
-                  infoList: ['• 연령은 만 나이로 계산(ex. 49세 12월 30일까지는 점수 5점을 부여함)'],
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '20~24세', score: 10 },
-                    { txt: '25~29세', score: 15 },
-                    { txt: '30~34세', score: 20 },
-                    { txt: '35~39세', score: 15 },
-                    { txt: '40~49세', score: 5 }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        'E-7-4': {
-          title: 'E-7-4 TEST',
-          desc: '숙련기능인력 점수제 비자 진단',
-          minBasic: 20,
-          minTotal: 52,
-          sections: [
-            {
-              catTitle: '기본항목',
-              catLimit: '최대 50점 중 최소 <strong class="c-blue">20점</strong> 이상',
-              questions: [
-                {
-                  label: '나이',
-                  infoList: ['• 연령은 만 나이로 계산(ex. 49세 12월 30일까지는 점수 5점을 부여함)'],
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '20~24세', score: 10 },
-                    { txt: '25~29세', score: 15 },
-                    { txt: '30~34세', score: 20 },
-                    { txt: '35~39세', score: 15 },
-                    { txt: '40~49세', score: 5 }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        'E-7-4R': {
-          title: 'E-7-4R TEST',
-          desc: '지역 추천 숙련기능인력 점수제 비자 진단',
-          minBasic: 20,
-          minTotal: 50,
-          sections: [
-            {
-              catTitle: '기본항목',
-              catLimit: '최대 50점 중 최소 <strong class="c-blue">20점</strong> 이상',
-              questions: [
-                {
-                  label: '나이',
-                  infoList: ['• 연령은 만 나이로 계산(ex. 49세 12월 30일까지는 점수 5점을 부여함)'],
-                  options: [
-                    { txt: '해당없음', score: 0 },
-                    { txt: '20~24세', score: 10 },
-                    { txt: '25~29세', score: 15 },
-                    { txt: '30~34세', score: 20 },
-                    { txt: '35~39세', score: 15 },
-                    { txt: '40~49세', score: 5 }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      };
+    // 탭 전환
+    function switchVisaTab(tabId) {
+      document.querySelectorAll('.visa-calc-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.visa-pane').forEach(pane => pane.classList.remove('active'));
 
-      const tabBtns = document.querySelectorAll('.visa-tab-btn');
-      const testTitleEl = document.getElementById('visa-test-title');
-      const testDescEl = document.getElementById('visa-test-desc');
-      const questionsContainer = document.querySelector('.test-questions');
-      const totalScoreNumEl = document.getElementById('total-score-num');
-      const scoreSubStatusEl = document.getElementById('score-sub-status');
+      const activeBtn = document.getElementById('tab-btn-' + tabId);
+      const activePane = document.getElementById('visa-pane-' + tabId);
 
-      let currentVisa = 'D-10';
-      let selectedScores = {};
+      if (activeBtn) activeBtn.classList.add('active');
+      if (activePane) activePane.classList.add('active');
+    }
 
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          tabBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+    // F-2-R 옵션 버튼 선택
+    function selectF2ROption(groupName, value, el) {
+      const hiddenInput = document.getElementById(`f2r-val-${groupName}`);
+      if (hiddenInput) hiddenInput.value = value;
 
-          currentVisa = btn.getAttribute('data-visa');
-          renderQuestions(currentVisa);
-        });
-      });
+      document.querySelectorAll(`.f2r-btn-${groupName}`).forEach(btn => btn.classList.remove('active'));
+      if (el) el.classList.add('active');
 
-      function renderQuestions(visaKey) {
-        const data = visaData[visaKey];
-        if (!data) return;
+      calculateVisa('f2r', 100, 100);
+    }
 
-        testTitleEl.textContent = data.title;
-        testDescEl.textContent = data.desc;
-        selectedScores = {};
-
-        let html = '';
-        let globalQIndex = 0;
-
-        data.sections.forEach(sec => {
-          html += `
-            <div class="category-sub-head">
-              <span class="cat-title">${sec.catTitle}</span>
-              <span class="cat-limit">${sec.catLimit}</span>
-            </div>
-          `;
-
-          sec.questions.forEach(q => {
-            selectedScores[globalQIndex] = 0;
-
-            html += `
-              <div class="question-row ${!q.label ? 'is-nolabel' : ''}" data-qindex="${globalQIndex}">
-                ${q.label ? `
-                  <label class="q-label">
-                    ${q.label}
-                    ${q.subTag ? `<span class="q-sub-tag">${q.subTag}</span>` : ''}
-                    ${q.unit ? `<span class="q-unit">${q.unit}</span>` : ''}
-                  </label>
-                ` : ''}
-                
-                ${q.subQuestions ? `
-                  <div class="sub-q-wrap">
-                    ${q.subQuestions.map(subQ => `
-                      <div class="sub-q-row">
-                        <span class="sub-q-lbl">${subQ.subLabel}</span>
-                        <div class="q-btn-group">
-                          ${subQ.options.map((opt, oIdx) => `
-                            <button type="button" class="q-score-btn ${oIdx === 0 ? 'selected' : ''}" data-score="${opt.score}">
-                              <span class="txt">${opt.txt}</span>
-                              <span class="pts">${opt.score > 0 ? opt.score + '점' : '0점'}</span>
-                            </button>
-                          `).join('')}
-                        </div>
-                      </div>
-                    `).join('')}
-                  </div>
-                ` : `
-                  <div class="q-btn-group ${q.fullWidthBtn ? 'full-width' : ''}">
-                    ${q.options.map((opt, oIdx) => `
-                      <button type="button" class="q-score-btn ${oIdx === 0 && !q.fullWidthBtn ? 'selected' : ''} ${opt.score < 0 ? 'is-minus' : ''}" data-score="${opt.score}">
-                        <span class="txt">${opt.txt}</span>
-                        <span class="pts">${opt.score > 0 ? opt.score + '점' : (opt.score < 0 ? opt.score + '점' : '0점')}</span>
-                      </button>
-                    `).join('')}
-                  </div>
-                `}
-
-                ${q.infoList && q.infoList.length > 0 ? `
-                  <ul class="q-info-bullets">
-                    ${q.infoList.map(info => `<li>${info}</li>`).join('')}
-                  </ul>
-                ` : ''}
-              </div>
-            `;
-            globalQIndex++;
-          });
-
-          if (sec.noticeBox) {
-            html += `
-              <div class="notice-info-box">
-                <div class="notice-sec">
-                  <p class="notice-tit">참고사항</p>
-                  <ul>
-                    ${sec.noticeBox.refList.map(item => `<li>${item}</li>`).join('')}
-                  </ul>
-                </div>
-                ${sec.noticeBox.warnList && sec.noticeBox.warnList.length > 0 ? `
-                  <div class="notice-sec warn">
-                    <p class="notice-tit red">주의사항</p>
-                    <ul>
-                      ${sec.noticeBox.warnList.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                  </div>
-                ` : ''}
-              </div>
-            `;
-          }
-        });
-
-        questionsContainer.innerHTML = html;
-        bindOptionEvents();
-        updateTotalScore();
+    // 0부터 목표 점수까지 부드러운 숫자 카운팅 애니메이션
+    const animationFrameTracker = {};
+    function animateValue(tabId, start, end, duration) {
+      if (animationFrameTracker[tabId]) {
+        cancelAnimationFrame(animationFrameTracker[tabId]);
       }
 
-      function bindOptionEvents() {
-        const rows = questionsContainer.querySelectorAll('.question-row');
-        rows.forEach(row => {
-          const qIdx = row.getAttribute('data-qindex');
-          const btns = row.querySelectorAll('.q-score-btn');
+      const scoreEl = document.getElementById(`calc-score-${tabId}`);
+      if (!scoreEl) return;
 
-          btns.forEach(btn => {
-            btn.addEventListener('click', () => {
-              if (btn.classList.contains('selected')) {
-                btn.classList.remove('selected');
-                selectedScores[qIdx] = 0;
-              } else {
-                btns.forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
-                const score = parseInt(btn.getAttribute('data-score'), 10) || 0;
-                selectedScores[qIdx] = score;
-              }
+      const startTime = performance.now();
 
-              updateTotalScore();
-            });
-          });
-        });
-      }
+      function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3); // 3차 감속 곡선
+        const current = Math.floor(start + (end - start) * easeOut);
 
-      function updateTotalScore() {
-        let sum = 0;
-        Object.values(selectedScores).forEach(val => sum += val);
-        totalScoreNumEl.textContent = sum;
+        scoreEl.textContent = current;
 
-        const currentData = visaData[currentVisa];
-        if (sum >= currentData.minTotal) {
-          scoreSubStatusEl.textContent = '🎉 요구되는 기준 점수를 만족하였습니다!';
-          scoreSubStatusEl.style.color = '#10B981';
+        if (progress < 1) {
+          animationFrameTracker[tabId] = requestAnimationFrame(step);
         } else {
-          const diff = currentData.minTotal - sum;
-          scoreSubStatusEl.textContent = `기본항목이 ${diff}점 부족합니다.`;
-          scoreSubStatusEl.style.color = '#E53E3E';
+          scoreEl.textContent = end;
         }
       }
 
-      renderQuestions('D-10');
+      animationFrameTracker[tabId] = requestAnimationFrame(step);
+    }
+
+    // 점수 계산 및 링 게이지 / 애니메이션 반영
+    function calculateVisa(tabId, maxScore, passScore) {
+      let total = 0;
+      let d10BasicScore = 0;
+
+      if (tabId === 'd10') {
+        document.querySelectorAll('.calc-input-d10-basic').forEach(sel => {
+          d10BasicScore += parseInt(sel.value, 10) || 0;
+        });
+        
+        let careerTotal = 0;
+        document.querySelectorAll('.calc-input-d10-career').forEach(sel => {
+          careerTotal += parseInt(sel.value, 10) || 0;
+        });
+
+        let study = 0;
+        document.querySelectorAll('.calc-input-d10-study').forEach(sel => {
+          study += parseInt(sel.value, 10) || 0;
+        });
+
+        let korean = 0;
+        document.querySelectorAll('.calc-input-d10-korean').forEach(sel => {
+          korean += parseInt(sel.value, 10) || 0;
+        });
+
+        const elective = Math.min(70, careerTotal + study + korean);
+
+        let bonus = 0;
+        document.querySelectorAll('.calc-input-d10-bonus:checked').forEach(cb => {
+          bonus += parseInt(cb.value, 10) || 0;
+        });
+        bonus = Math.min(70, bonus);
+
+        let penalty = 0;
+        document.querySelectorAll('.calc-input-d10-penalty').forEach(sel => {
+          penalty += parseInt(sel.value, 10) || 0;
+        });
+
+        total = Math.max(0, d10BasicScore + elective + bonus + penalty);
+      } else if (tabId === 'f2r') {
+        const degree = document.getElementById('f2r-val-degree')?.value || 'none';
+        const income = document.getElementById('f2r-val-income')?.value || 'none';
+        const korean = document.getElementById('f2r-val-korean')?.value || 'none';
+
+        const isEduIncome = ['associate', 'bachelor', 'master', 'doctor'].includes(degree) || income === 'over';
+        const isKorean = ['lvl3', 'lvl4', 'lvl5'].includes(korean);
+
+        if (isEduIncome && isKorean) total = 100;
+        else if (isEduIncome || isKorean) total = 50;
+        else total = 0;
+      } else if (tabId === 'f27') {
+        const age = parseInt(document.getElementById('f27-val-age')?.value, 10) || 0;
+        const edu = parseInt(document.getElementById('f27-val-education')?.value, 10) || 0;
+        const kor = parseInt(document.getElementById('f27-val-korean')?.value, 10) || 0;
+        const inc = parseInt(document.getElementById('f27-val-income')?.value, 10) || 0;
+        const basic = Math.min(130, age + edu + kor + inc);
+
+        let bonus = 0;
+        document.querySelectorAll('.calc-input-f27-bonus:checked').forEach(cb => {
+          bonus += parseInt(cb.value, 10) || 0;
+        });
+        bonus = Math.min(40, bonus);
+
+        const p1 = parseInt(document.getElementById('f27-val-penaltyImmigration')?.value, 10) || 0;
+        const p2 = parseInt(document.getElementById('f27-val-penaltyOther')?.value, 10) || 0;
+        const penalty = Math.max(-70, p1 + p2);
+
+        total = Math.max(0, basic + bonus + penalty);
+      } else if (tabId === 'e74') {
+        const inc = parseInt(document.getElementById('e74-val-income')?.value, 10) || 0;
+        const kor = parseInt(document.getElementById('e74-val-korean')?.value, 10) || 0;
+        const age = parseInt(document.getElementById('e74-val-age')?.value, 10) || 0;
+        const basic = Math.min(300, inc + kor + age);
+
+        const rec = parseInt(document.getElementById('e74-val-recRecommendation')?.value, 10) || 0;
+        const comp = parseInt(document.getElementById('e74-val-recCompany')?.value, 10) || 0;
+        const tenure = parseInt(document.getElementById('e74-val-bonusTenure')?.value, 10) || 0;
+        const deg = parseInt(document.getElementById('e74-val-bonusDegreeCert')?.value, 10) || 0;
+        const bonus = rec + comp + tenure + deg;
+
+        const pFine = parseInt(document.getElementById('e74-val-penaltyFine')?.value, 10) || 0;
+        const pTax = parseInt(document.getElementById('e74-val-penaltyTax')?.value, 10) || 0;
+        const penalty = pFine + pTax;
+
+        total = Math.max(0, basic + bonus + penalty);
+      } else if (tabId === 'e74r') {
+        const inc = parseInt(document.getElementById('e74r-val-income')?.value, 10) || 0;
+        const kor = parseInt(document.getElementById('e74r-val-korean')?.value, 10) || 0;
+        const age = parseInt(document.getElementById('e74r-val-age')?.value, 10) || 0;
+        const basic = Math.min(300, inc + kor + age);
+
+        const gg = parseInt(document.getElementById('e74r-val-bonusGyeonggi')?.value, 10) || 0;
+        const comp = parseInt(document.getElementById('e74r-val-bonusCompany')?.value, 10) || 0;
+        const tenure = parseInt(document.getElementById('e74r-val-bonusTenure')?.value, 10) || 0;
+        const reg = parseInt(document.getElementById('e74r-val-bonusRegion')?.value, 10) || 0;
+        const deg = parseInt(document.getElementById('e74r-val-bonusDegreeCert')?.value, 10) || 0;
+        const lic = parseInt(document.getElementById('e74r-val-bonusLicense')?.value, 10) || 0;
+        const bonus = gg + comp + tenure + reg + deg + lic;
+
+        const pFine = parseInt(document.getElementById('e74r-val-penaltyFine')?.value, 10) || 0;
+        const pTax = parseInt(document.getElementById('e74r-val-penaltyTax')?.value, 10) || 0;
+        const pImm = parseInt(document.getElementById('e74r-val-penaltyImmigration')?.value, 10) || 0;
+        const penalty = pFine + pTax + pImm;
+
+        total = Math.max(0, basic + bonus + penalty);
+      }
+
+      // 숫자 카운팅 롤링 애니메이션
+      animateValue(tabId, 0, total, 600);
+
+      const ringEl = document.getElementById(`calc-ring-${tabId}`);
+      const titleEl = document.getElementById(`calc-title-${tabId}`);
+      const msgEl = document.getElementById(`calc-msg-${tabId}`);
+
+      if (ringEl) {
+        const percentage = Math.min(total / maxScore, 1);
+        const circumference = 552.92;
+        ringEl.style.strokeDashoffset = circumference - (percentage * circumference);
+      }
+
+      if (titleEl && msgEl) {
+        if (tabId === 'f2r') {
+          if (total === 100) {
+            titleEl.textContent = "필수 요건 100% 충족";
+            titleEl.className = "result-status-tit text-green";
+            msgEl.textContent = "학위/소득 요건 및 한국어 능력(3급/3단계 이상) 요건을 모두 충족하셨습니다.";
+          } else if (total === 50) {
+            titleEl.textContent = "필수 요건 50% 충족";
+            titleEl.className = "result-status-tit text-yellow";
+            msgEl.textContent = "학위/소득 또는 한국어능력 중 일부 요건 보완이 필요합니다.";
+          } else {
+            titleEl.textContent = "필수 요건 미충족";
+            titleEl.className = "result-status-tit text-red";
+            msgEl.textContent = "학위/소득 및 한국어능력 기준을 모두 충족해야 합니다.";
+          }
+        } else if (tabId === 'e74' || tabId === 'e74r') {
+          const inc = parseInt(document.getElementById(`${tabId}-val-income`)?.value, 10) || 0;
+          const kor = parseInt(document.getElementById(`${tabId}-val-korean`)?.value, 10) || 0;
+          const isIncomePassed = inc >= 50;
+          const isKoreanPassed = kor >= 50;
+          const isTotalPassed = total >= passScore;
+
+          if (isIncomePassed && isKoreanPassed && isTotalPassed) {
+            titleEl.textContent = "비자 신청 가능 대상입니다!";
+            titleEl.className = "result-status-tit text-green";
+            msgEl.textContent = `소득·한국어 필수 기준(각 50점 이상) 및 총점(${passScore}점 이상)을 달성하여 전환 신청 요건을 충족합니다.`;
+          } else if (isTotalPassed && (!isIncomePassed || !isKoreanPassed)) {
+            titleEl.textContent = "기본항목 필수점수 미달";
+            titleEl.className = "result-status-tit text-yellow";
+            msgEl.textContent = "총점은 충족하나 소득 또는 한국어 점수가 최소 요건(각 50점)에 미달합니다.";
+          } else {
+            titleEl.textContent = "조금 더 준비가 필요해요";
+            titleEl.className = "result-status-tit text-red";
+            msgEl.textContent = `현재 ${total}점입니다. 소득·한국어 각 50점 이상 및 총 득점 ${passScore}점 이상 달성이 필요합니다.`;
+          }
+        } else {
+          const isPassed = (tabId === 'd10') ? (d10BasicScore >= 20 && total >= passScore) : (total >= passScore);
+          if (isPassed) {
+            titleEl.textContent = "비자 신청 가능 대상입니다!";
+            titleEl.className = "result-status-tit text-green";
+            msgEl.textContent = `기준 점수(${passScore}점)를 달성하여 비자 신청 요건을 충족합니다.`;
+          } else {
+            titleEl.textContent = "조금 더 준비가 필요해요";
+            titleEl.className = "result-status-tit text-red";
+            msgEl.textContent = `현재 ${total}점입니다. 기준 점수(${passScore}점 이상) 달성이 필요합니다.`;
+          }
+        }
+      }
+    }
+
+    // 초기 이벤트 바인딩
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.calc-input-d10-basic, .calc-input-d10-career, .calc-input-d10-study, .calc-input-d10-korean, .calc-input-d10-bonus, .calc-input-d10-penalty')
+        .forEach(el => el.addEventListener('change', () => calculateVisa('d10', 190, 60)));
+
+      document.querySelectorAll('.calc-input-f27, .calc-input-f27-bonus')
+        .forEach(el => el.addEventListener('change', () => calculateVisa('f27', 170, 80)));
+
+      document.querySelectorAll('.calc-input-e74')
+        .forEach(el => el.addEventListener('change', () => calculateVisa('e74', 300, 200)));
+
+      document.querySelectorAll('.calc-input-e74r')
+        .forEach(el => el.addEventListener('change', () => calculateVisa('e74r', 300, 200)));
     });
   </script>
 </body>

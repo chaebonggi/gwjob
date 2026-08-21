@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/외국인일자리.css">
 </head>
 <body class="bg-gray-page">
@@ -21,9 +22,7 @@
         <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
-      <!-- PC 메뉴 -->
       <nav class="header-nav">
-        <a href="intro.html" class="nav-item">INTRO</a>
         <a href="about.html" class="nav-item">사업소개</a>
         <a href="jobs.html" class="nav-item">채용정보</a>
         
@@ -36,16 +35,17 @@
           </div>
         </div>
 
+        <a href="visa-info.html" class="nav-item">비자안내</a>
+
         <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
+          <button type="button" class="nav-item has-depth active">자료실 <i data-lucide="chevron-down"></i></button>
           <div class="dropdown-menu">
             <a href="forms.html">양식함</a>
-            <a href="forms-info.html">도움이 되는 정보</a>
+            <a href="forms-info.html" class="active">도움이 되는 정보</a>
           </div>
         </div>
       </nav>
 
-      <!-- PC 버튼 그룹 -->
       <div class="header-actions">
         <div class="btn-group">
           <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
@@ -67,18 +67,14 @@
         </div>
       </div>
 
-      <!-- 모바일 햄버거 버튼 -->
       <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
         <i data-lucide="menu"></i>
       </button>
-
     </div>
   </header>
 
-  <!-- 모바일 사이드 메뉴 오버레이 -->
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
-  <!-- 모바일 슬라이드 드로어 메뉴 -->
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
       <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
@@ -87,15 +83,12 @@
       </button>
     </div>
 
-    <!-- 모바일 구인/구직 버튼 -->
     <div class="drawer-actions">
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
     </div>
 
-    <!-- 모바일 네비게이션 리스트 -->
     <nav class="drawer-nav">
-      <a href="intro.html" class="drawer-nav-item">INTRO</a>
       <a href="about.html" class="drawer-nav-item">사업소개</a>
       <a href="jobs.html" class="drawer-nav-item">채용정보</a>
       
@@ -111,14 +104,16 @@
         </div>
       </div>
 
-      <div class="drawer-accordion">
+      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
+
+      <div class="drawer-accordion open">
         <button type="button" class="drawer-nav-item accordion-btn">
           <span>자료실</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="accordion-content">
           <a href="forms.html">양식함</a>
-          <a href="forms-info.html">도움이 되는 정보</a>
+          <a href="forms-info.html" class="active">도움이 되는 정보</a>
         </div>
       </div>
     </nav>
@@ -140,137 +135,65 @@
       </div>
     </div>
   </aside>
+  <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
   <main class="site-main">
     <section class="sub-hero indigo">
       <div class="inner-section">
-        <div class="breadcrumb">
-          <span>홈</span>
-          <i data-lucide="chevron-right"></i>
-          <span>자료실</span>
-          <i data-lucide="chevron-right"></i>
-          <span class="curr">도움이 되는 정보</span>
-        </div>
-        <h1>도움이 되는 정보</h1>
+        <h1>자료실</h1>
+        <p>외국인 취업 및 체류와 관련된 유용한 자료를 제공합니다.</p>
       </div>
     </section>
 
-    <section class="info-wrap">
+    <section class="forms-board-wrap">
       <div class="inner-section">
         
-        <!-- 원본과 동일한 9개 카드 리스트 -->
-        <div class="info-grid-2">
+        <div class="forms-header-bar">
+          <div class="forms-title-area">
+            <h2 class="forms-sub-tit">도움이 되는 정보</h2>
+            <p class="forms-sub-desc">가이드북, 매뉴얼 등 취업과 체류에 유용한 정보를 확인하세요.</p>
+          </div>
           
-          <!-- 1. 다국어 통역지원 -->
-          <div class="info-box-card">
-            <div class="card-ico-box blue">
-              <i data-lucide="smartphone"></i>
+          <div class="forms-search-area">
+            <select id="info-search-type" class="forms-select-box">
+              <option value="title">제목</option>
+            </select>
+            <div class="forms-input-box">
+              <input type="text" id="info-search-input" placeholder="검색어를 입력하세요">
+              <button type="button" id="info-search-btn" aria-label="검색">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </div>
-            <h3 class="card-tit">다국어 통역지원</h3>
-            <p class="card-meta">2026.07.20</p>
-            <a href="forms-info-detail.html?id=multilingual" class="btn-card-action">자세히 보기</a>
           </div>
+        </div>
 
-          <!-- 2. 도내 외국인 복지센터 정보 -->
-          <div class="info-box-card">
-            <div class="card-ico-box purple">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">도내 외국인 복지센터 정보</h3>
-            <p class="card-meta">2026.07.15 <span class="divider">|</span> PDF <span class="divider">|</span> 3.4MB</p>
-            <a href="#" class="btn-card-action" download>
-              <i data-lucide="download"></i>
-              <span>자료 다운로드</span>
-            </a>
-          </div>
+        <div class="forms-table-container">
+          <table class="forms-table">
+            <thead>
+              <tr>
+                <th class="th-num">번호</th>
+                <th class="th-title">제목</th>
+                <th class="th-file">첨부</th>
+                <th class="th-date">작성일</th>
+                <th class="th-views">조회</th>
+              </tr>
+            </thead>
+            <tbody id="info-board-body">
+              <!-- JS 렌더링 -->
+            </tbody>
+          </table>
+        </div>
 
-          <!-- 3. 외국인 인력상담센터 -->
-          <div class="info-box-card">
-            <div class="card-ico-box green">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">외국인 인력상담센터</h3>
-            <p class="card-sub-desc">외국인 근로자의 권익보호 및 고충상담 서비스 제공</p>
-            <p class="card-meta">2026.07.10 <span class="divider">|</span> PDF <span class="divider">|</span> 2.1MB</p>
-            <a href="#" class="btn-card-action" download>
-              <i data-lucide="download"></i>
-              <span>자료 다운로드</span>
-            </a>
-          </div>
-
-          <!-- 4. E-9 비자 -->
-          <div class="info-box-card">
-            <div class="card-ico-box yellow">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">E-9 비자</h3>
-            <p class="card-sub-desc">비전문취업 비자 관련 안내</p>
-            <p class="card-meta">2026.07.22</p>
-            <a href="forms-info-detail.html?id=visa-e9" class="btn-card-action">자세히 보기</a>
-          </div>
-
-          <!-- 5. E-7 비자 -->
-          <div class="info-box-card">
-            <div class="card-ico-box blue">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">E-7 비자</h3>
-            <p class="card-sub-desc">특정활동 비자 관련 안내</p>
-            <p class="card-meta">2026.07.22</p>
-            <a href="forms-info-detail.html?id=visa-e7" class="btn-card-action">자세히 보기</a>
-          </div>
-
-          <!-- 6. F-2 비자 -->
-          <div class="info-box-card">
-            <div class="card-ico-box purple">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">F-2 비자</h3>
-            <p class="card-sub-desc">거주 비자 관련 안내</p>
-            <p class="card-meta">2026.07.22</p>
-            <a href="forms-info-detail.html?id=visa-f2" class="btn-card-action">자세히 보기</a>
-          </div>
-
-          <!-- 7. F-4 비자 -->
-          <div class="info-box-card">
-            <div class="card-ico-box pink">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">F-4 비자</h3>
-            <p class="card-sub-desc">재외동포 비자 관련 안내</p>
-            <p class="card-meta">2026.07.22</p>
-            <a href="forms-info-detail.html?id=visa-f4" class="btn-card-action">자세히 보기</a>
-          </div>
-
-          <!-- 8. F-6 비자 -->
-          <div class="info-box-card">
-            <div class="card-ico-box green">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">F-6 비자</h3>
-            <p class="card-sub-desc">결혼이민 비자 관련 안내</p>
-            <p class="card-meta">2026.07.22</p>
-            <a href="forms-info-detail.html?id=visa-f6" class="btn-card-action">자세히 보기</a>
-          </div>
-
-          <!-- 9. F-10 비자 -->
-          <div class="info-box-card">
-            <div class="card-ico-box orange">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="card-tit">F-10 비자</h3>
-            <p class="card-sub-desc">우수인재 비자 관련 안내</p>
-            <p class="card-meta">2026.07.22</p>
-            <a href="forms-info-detail.html?id=visa-f10" class="btn-card-action">자세히 보기</a>
-          </div>
-
+        <div class="forms-pagination" id="info-pagination">
+          <!-- JS 렌더링 -->
         </div>
 
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="inner-section">
       <div class="footer-top">
@@ -292,13 +215,115 @@
     </div>
   </footer>
 
+  <!-- Floating Kakao Button -->
   <div class="kakao-floating">
-    <button class="btn-kakao">
+    <button class="btn-kakao" type="button">
       <i data-lucide="message-circle"></i>
       카카오톡 상담
     </button>
   </div>
 
   <script src="./js/외국인일자리.js"></script>
+
+  <script>
+    const infoData = [
+      { id: 1, title: "2026년 외국인 근로자 고용 가이드북", type: "pdf", date: "2026.07.01", views: 1234 },
+      { id: 2, title: "E-7-4 비자 변경 신청 안내 매뉴얼", type: "pdf", date: "2026.05.20", views: 2150 },
+      { id: 3, title: "외국인 유학생(D-2, D-4) 취업 가이드", type: "pdf", date: "2026.04.10", views: 1840 },
+      { id: 4, title: "2026 최저임금 및 노동법 핵심 요약 안내서", type: "doc", date: "2026.03.05", views: 3210 },
+      { id: 5, title: "경기도 외국인복지센터 이용 안내 리플릿", type: "pdf", date: "2026.02.15", views: 890 },
+      { id: 6, title: "외국인 건강보험 의무가입 제도 안내", type: "pdf", date: "2026.01.20", views: 1560 },
+      { id: 7, title: "한국 생활 가이드북 (다국어)", type: "pdf", date: "2025.12.10", views: 4200 },
+      { id: 8, title: "산재보험 처리 절차 및 보상 안내", type: "doc", date: "2025.11.05", views: 780 },
+      { id: 9, title: "외국인 범죄예방 및 피해구제 매뉴얼", type: "pdf", date: "2025.10.12", views: 650 },
+      { id: 10, title: "임금체불 구제 신청 방법 안내", type: "pdf", date: "2025.09.25", views: 1120 },
+      { id: 11, title: "외국인 주민을 위한 금융사기 예방 안내서", type: "pdf", date: "2025.08.30", views: 940 },
+      { id: 12, title: "출입국 및 체류 관련 자주 묻는 질문(FAQ)", type: "doc", date: "2025.07.15", views: 2890 }
+    ];
+
+    let infoState = {
+      page: 1,
+      limit: 5,
+      totalPages: 1,
+      keyword: ''
+    };
+
+    function getFileIcon(type) {
+      if (type === 'pdf') return '<i class="fa-regular fa-file-pdf icon-pdf"></i>';
+      if (type === 'doc') return '<i class="fa-regular fa-file-word icon-doc"></i>';
+      if (type === 'zip') return '<i class="fa-regular fa-file-zipper icon-zip"></i>';
+      return '<i class="fa-regular fa-file icon-etc"></i>';
+    }
+
+    function renderInfoBoard(page) {
+      if (typeof page === 'number') {
+        infoState.page = page;
+      } else {
+        const input = document.getElementById('info-search-input');
+        if (input) {
+          infoState.keyword = input.value.trim();
+          infoState.page = 1;
+        }
+      }
+
+      const body = document.getElementById('info-board-body');
+      const pagination = document.getElementById('info-pagination');
+      if (!body || !pagination) return;
+
+      let filtered = infoData;
+      if (infoState.keyword) {
+        filtered = infoData.filter(item => item.title.toLowerCase().includes(infoState.keyword.toLowerCase()));
+      }
+
+      infoState.totalPages = Math.ceil(filtered.length / infoState.limit) || 1;
+      if (infoState.page > infoState.totalPages) infoState.page = infoState.totalPages;
+
+      const start = (infoState.page - 1) * infoState.limit;
+      const currentItems = filtered.slice(start, start + infoState.limit);
+
+      if (currentItems.length === 0) {
+        body.innerHTML = '<tr><td colspan="5" class="empty-row">검색 결과가 없습니다.</td></tr>';
+      } else {
+        let html = '';
+        currentItems.forEach((item, index) => {
+          const displayNo = filtered.length - start - index;
+          html += `
+            <tr>
+              <td class="td-num">${displayNo}</td>
+              <td class="td-title"><a href="#" class="forms-row-link" onclick="event.preventDefault();">${item.title}</a></td>
+              <td class="td-file">${getFileIcon(item.type)}</td>
+              <td class="td-date">${item.date}</td>
+              <td class="td-views">${item.views.toLocaleString()}</td>
+            </tr>
+          `;
+        });
+        body.innerHTML = html;
+      }
+
+      let pageHtml = '';
+      if (infoState.totalPages > 1) {
+        pageHtml += `<button type="button" class="page-box-btn" onclick="renderInfoBoard(${Math.max(1, infoState.page - 1)})" aria-label="이전 페이지"><i class="fa-solid fa-chevron-left"></i></button>`;
+        for (let i = 1; i <= infoState.totalPages; i++) {
+          pageHtml += `<button type="button" class="page-box-btn ${i === infoState.page ? 'active' : ''}" onclick="renderInfoBoard(${i})">${i}</button>`;
+        }
+        pageHtml += `<button type="button" class="page-box-btn" onclick="renderInfoBoard(${Math.min(infoState.totalPages, infoState.page + 1)})" aria-label="다음 페이지"><i class="fa-solid fa-chevron-right"></i></button>`;
+      }
+      pagination.innerHTML = pageHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderInfoBoard(1);
+
+      const searchBtn = document.getElementById('info-search-btn');
+      const searchInput = document.getElementById('info-search-input');
+
+      if (searchBtn) searchBtn.addEventListener('click', () => renderInfoBoard());
+      if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') renderInfoBoard();
+        });
+      }
+    });
+  </script>
 </body>
 </html>

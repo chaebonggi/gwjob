@@ -25,11 +25,9 @@
         <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
-      <!-- PC 메뉴 -->
       <nav class="header-nav">
-        <a href="intro.html" class="nav-item">INTRO</a>
         <a href="about.html" class="nav-item">사업소개</a>
-        <a href="jobs.html" class="nav-item">채용정보</a>
+        <a href="jobs.html" class="nav-item active">채용정보</a>
         
         <div class="nav-dropdown">
           <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
@@ -40,6 +38,8 @@
           </div>
         </div>
 
+        <a href="visa-info.html" class="nav-item">비자안내</a>
+
         <div class="nav-dropdown">
           <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
           <div class="dropdown-menu">
@@ -49,7 +49,6 @@
         </div>
       </nav>
 
-      <!-- PC 버튼 그룹 -->
       <div class="header-actions">
         <div class="btn-group">
           <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
@@ -71,18 +70,14 @@
         </div>
       </div>
 
-      <!-- 모바일 햄버거 버튼 -->
       <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
         <i data-lucide="menu"></i>
       </button>
-
     </div>
   </header>
 
-  <!-- 모바일 사이드 메뉴 오버레이 -->
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
-  <!-- 모바일 슬라이드 드로어 메뉴 -->
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
       <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
@@ -91,15 +86,12 @@
       </button>
     </div>
 
-    <!-- 모바일 구인/구직 버튼 -->
     <div class="drawer-actions">
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
     </div>
 
-    <!-- 모바일 네비게이션 리스트 -->
     <nav class="drawer-nav">
-      <a href="intro.html" class="drawer-nav-item">INTRO</a>
       <a href="about.html" class="drawer-nav-item">사업소개</a>
       <a href="jobs.html" class="drawer-nav-item">채용정보</a>
       
@@ -114,6 +106,8 @@
           <a href="visa-score.html">내 비자점수 알아보기</a>
         </div>
       </div>
+
+      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
 
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
@@ -144,6 +138,7 @@
       </div>
     </div>
   </aside>
+  <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
   <main class="site-main">
@@ -159,49 +154,6 @@
     <!-- 본문 컨텐츠 -->
     <section class="jobs-main">
       <div class="inner-section">
-        
-        <!-- 1. 메인 검색 필터 박스 -->
-        <div class="jobs-search-card">
-          <div class="search-fields-grid">
-            <div class="field-input-wrap">
-              <i data-lucide="search" class="field-ico"></i>
-              <input type="text" placeholder="검색어를 입력하세요" class="field-input">
-            </div>
-            <div class="field-select-wrap">
-              <select class="field-select">
-                <option value="seongnam">성남시</option>
-                <option value="suwon">수원시</option>
-                <option value="hwaseong">화성시</option>
-                <option value="pyeongtaek">평택시</option>
-              </select>
-              <i data-lucide="chevron-down" class="select-arrow"></i>
-            </div>
-            <div class="field-select-wrap">
-              <select class="field-select">
-                <option value="E-7">E-7 (특정활동)</option>
-                <option value="E-9">E-9 (비전문취업)</option>
-                <option value="F-2">F-2 (거주)</option>
-                <option value="F-4">F-4 (재외동포)</option>
-              </select>
-              <i data-lucide="chevron-down" class="select-arrow"></i>
-            </div>
-            <div class="field-select-wrap">
-              <select class="field-select">
-                <option value="contract">계약직</option>
-                <option value="full">정규직</option>
-                <option value="part">알바</option>
-              </select>
-              <i data-lucide="chevron-down" class="select-arrow"></i>
-            </div>
-          </div>
-
-          <div class="search-btn-center">
-            <button class="btn-dark-search">
-              <i data-lucide="search"></i>
-              <span>검색하기</span>
-            </button>
-          </div>
-        </div>
 
         <!-- 2. 플랫폼 구분 탭 필터 (data-target 지정) -->
         <div class="jobs-tab-bar">
