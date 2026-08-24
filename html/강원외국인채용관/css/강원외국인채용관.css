@@ -111,7 +111,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .process-section__glow { position: absolute; width: 450px; height: 450px; border-radius: 50%; filter: blur(90px); pointer-events: none; opacity: 0.3; }
 .process-section__glow--top-left { top: 0; left: 0; background-color: #3b82f6; transform: translate(-40%, -40%); }
 .process-section__glow--bottom-right { bottom: 0; right: 0; background-color: #6366f1; transform: translate(30%, 30%); }
-.process-section__header { position: relative; z-index: 10; max-width: 640px; margin: 0 auto 48px auto; display: flex; flex-direction: column; align-items: center; }
+.process-section__header { position: relative; z-index: 10; max-width: 640px; margin: 0 auto 4rem auto; display: flex; flex-direction: column; align-items: center; }
 .process-section__badge { display: inline-flex; align-items: center; gap: 6px; background-color: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); padding: 6px 16px; border-radius: 20px; font-size: 1.3rem; font-weight: 700; color: #dbeafe; margin-bottom: 16px; backdrop-filter: blur(4px); }
 .process-section__badge-icon { width: 16px; height: 16px; color: #bfdbfe; }
 .process-section__title { font-size: 3.2rem; font-weight: 900; color: #ffffff; letter-spacing: -0.5px; line-height: 1.25; margin-bottom: 16px; }
@@ -230,8 +230,8 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .brand-logo-box .brand-logo-img { width: 100%; height: 100%; object-fit: fill; }
 @media (max-width: 1024px) { .process-section__grid { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; } .process-section__connect-line, .process-card__arrow { display: none; } .quick-guides-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 768px) { .hero-slider { height: 240px; } .hero-content { padding-left: 24px; } .hero-tit { font-size: 2.8rem; } .process-section { padding: 40px 20px; border-radius: 24px; } .process-section__title { font-size: 2.6rem; } .process-section__grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; } .quick-guides-grid { grid-template-columns: repeat(2, 1fr); } .job-list-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; } .job-item-card { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px; padding: 20px; } .job-item-brand-area { margin: 0 auto; } .brand-logo-box { margin: 0; } .job-item-info { padding: 0; width: 100%; } .job-item-meta { width: 100%; justify-content: space-between; align-items: flex-end; margin-top: auto; padding-top: 12px; border-top: 1px dashed #f1f5f9; gap: 0; } .job-item-meta .btn-bookmark { position: absolute; top: 20px; right: 20px; } .job-deadline-wrap { text-align: left; } }
-@media (max-width: 640px) { .job-list-container { grid-template-columns: repeat(1, 1fr); gap: 12px; } .process-section, .section-block, .quick-guides-grid { margin-bottom: 3rem; } }
-@media (max-width: 480px) { .hero-slider { height: 200px; } .hero-tit { font-size: 2.2rem; } .hero-desc { display: none; } .process-section__grid, .quick-guides-grid { grid-template-columns: repeat(1, 1fr); } .filter-select-group { flex-direction: column; align-items: stretch; } .field-select-wrap.custom-select { width: 100%; } .select-btn { width: 100%; } .btn-reset { margin-left: 0; justify-content: center; } }
+@media (max-width: 640px) { .job-list-container { grid-template-columns: repeat(1, 1fr); gap: 12px; } .process-section, .section-block, .quick-guides-grid { margin-bottom: 3rem; } .process-card__icon-wrap {display: none !important;} .site-main a.guide-card, .site-main a.guide-card:link, .site-main a.guide-card:visited {height: 150px;}}
+@media (max-width: 480px) { .hero-slider { height: 200px; } .hero-tit { font-size: 2.2rem; } .hero-desc { display: none; } .process-section__grid, .quick-guides-grid { grid-template-columns: repeat(1, 1fr); } .filter-select-group { flex-direction: column; align-items: stretch; } .field-select-wrap.custom-select { width: 100%; } .select-btn { width: 100%; } .btn-reset { margin-left: 0; justify-content: center; } .process-section__grid {gap: 0;}}
 /* //main */
 
 /* about */
@@ -1030,7 +1030,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .btn-back-list:hover { background-color: #f1f5f9; color: #0f172a; }
 .btn-back-list svg { width: 1.6rem; height: 1.6rem; }
 .detail-title { font-size: 2.4rem; font-weight: 900; color: #0f172a; line-height: 1.35; margin-bottom: 1.2rem; }
-.detail-meta-bar { display: flex; align-items: center; gap: 1.2rem; font-size: 1.3rem; color: #64748b; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 2.8rem; }
+.detail-meta-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; font-size: 1.3rem; color: #64748b; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 2.8rem; }
 .detail-meta-bar .sep { color: #cbd5e1; }
 .detail-body-content { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 3.2rem; font-size: 1.45rem; color: #1e293b; line-height: 1.8; white-space: pre-line; margin-bottom: 2.4rem; }
 .detail-attach-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2rem; margin-bottom: 2.8rem; }
