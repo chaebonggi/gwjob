@@ -13,6 +13,7 @@
 </head>
 <body>
 
+  <!-- header -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
@@ -28,14 +29,18 @@
           
           <div class="nav-item-dropdown">
             <a href="visa-score.html" class="nav-item">
-              <span>비자 점수 진단</span>
+              <span>비자 가이드</span>
               <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
             </a>
             <div class="sub-menu-box">
-              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
-              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+              <a href="visa-roadmap.html" class="sub-menu-item">비자 로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자 점수 진단</a>
+              <a href="visa-regional.html" class="sub-menu-item">지역특화 비자 가이드</a>
             </div>
           </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
         </nav>
       </div>
 
@@ -53,6 +58,8 @@
             <button type="button">English</button>
             <button type="button">日本語</button>
             <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
           </div>
         </div>
 
@@ -87,14 +94,18 @@
       
       <div class="m-nav-group">
         <button type="button" class="m-nav-group-tit btn-m-acc">
-          <span>비자 점수 진단</span>
+          <span>비자 가이드</span>
           <i data-lucide="chevron-down" class="m-acc-arrow"></i>
         </button>
-        <div class="m-sub-nav hidden">
-          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
-          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item">비자 로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자 점수 진단</a>
+          <a href="visa-regional.html" class="m-sub-item">지역특화 비자 가이드</a>
         </div>
       </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
     </nav>
 
     <div class="m-drawer-lang">
@@ -109,6 +120,8 @@
           <li data-lang="en">English</li>
           <li data-lang="ja">日本語</li>
           <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
         </ul>
       </div>
     </div>
@@ -129,7 +142,7 @@
             <li>강원일자리정보망에서는 개인정보 보호를 위하여 인재정보 상세조회 시 소정의 지위 확인 절차를 두고 있습니다.</li>
             <li>인재정보 상세조회를 원하시는 기업회원은 로그인 후 아래의 버튼을 통해 사업자등록증 및 재직증명서등을 등록해 인재정보 조회 요청을 진행해 주시기 바랍니다.</li>
             <li>인재정보 조회 시 임시제안 기능이 활성화 됩니다. 서비스 관련 궁금한 사항은 아래 번호로 문의해 주시기 바랍니다.</li>
-            <li>문의: (강원특별자치도일자리센터) 033-256-9602</li>
+            <li>문의(강원특별자치도일자리센터) 033-256-9602</li>
           </ul>
         </div>
         <button type="button" class="talent-notice-box__button">인재정보 조회 요청</button>
@@ -155,106 +168,115 @@
           <div class="swiper-wrapper">
             
             <div class="swiper-slide">
-              <a href="#" class="talent-recommend-card">
+              <div class="talent-recommend-card">
                 <div class="talent-recommend-card__top">
                   <div class="talent-recommend-card__avatar">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="프로필">
                   </div>
                   <div class="talent-recommend-card__info">
-                    <h3 class="talent-recommend-card__name">
-                      리옌 (Li Yan)
+                    <div class="talent-recommend-card__name">
+                      <p>리옌 (Li Yan)</p>
                       <span class="talent-badge talent-badge--career">경력</span>
-                    </h3>
+                    </div>
                     <div class="talent-recommend-card__job">해외영업 및 마케팅 스페셜리스트</div>
-                    <div class="talent-recommend-card__meta">중국 / E-7 / 경력 3년 / 강원도 원주시</div>
+                    <div class="talent-recommend-card__meta">중국 · E-7 · 경력 3년<br>강원도 원주시</div>
                   </div>
                 </div>
                 <div class="talent-recommend-card__tags">
-                  <span class="talent-tag">마케팅기획</span>
-                  <span class="talent-tag">중국어</span>
-                  <span class="talent-tag">해외영업</span>
+                  <span class="talent-tag talent-tag--korean">한국어 상</span>
                 </div>
                 <div class="talent-recommend-card__footer">
-                  <span class="talent-recommend-card__link">프로필 보기 &gt;</span>
+                  <span class="talent-recommend-card__date">24. 07. 25 업데이트</span>
+                  <div class="talent-recommend-card__btns">
+                    <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
+                    <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="talent-recommend-card">
+              <div class="talent-recommend-card">
                 <div class="talent-recommend-card__top">
                   <div class="talent-recommend-card__avatar">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="프로필">
                   </div>
                   <div class="talent-recommend-card__info">
-                    <h3 class="talent-recommend-card__name">
-                      아웅 (Aung)
+                    <div class="talent-recommend-card__name">
+                      <p>아웅 (Aung)</p>
                       <span class="talent-badge talent-badge--new">신입</span>
-                    </h3>
+                    </div>
                     <div class="talent-recommend-card__job">스마트팩토리 제어 엔지니어</div>
-                    <div class="talent-recommend-card__meta">미얀마 / E-9 / 강원도 춘천시</div>
+                    <div class="talent-recommend-card__meta">미얀마 · E-9 · 신입<br>강원도 춘천시</div>
                   </div>
                 </div>
                 <div class="talent-recommend-card__tags">
-                  <span class="talent-tag">제조/생산</span>
-                  <span class="talent-tag">기계조작</span>
-                  <span class="talent-tag">품질검사</span>
+                  <span class="talent-tag talent-tag--korean">한국어 중</span>
                 </div>
                 <div class="talent-recommend-card__footer">
-                  <span class="talent-recommend-card__link">프로필 보기 &gt;</span>
+                  <span class="talent-recommend-card__date">24. 07. 24 업데이트</span>
+                  <div class="talent-recommend-card__btns">
+                    <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
+                    <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="talent-recommend-card">
+              <div class="talent-recommend-card">
                 <div class="talent-recommend-card__top">
                   <div class="talent-recommend-card__avatar">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=300" alt="프로필">
+                    <i data-lucide="user"></i>
                   </div>
                   <div class="talent-recommend-card__info">
-                    <h3 class="talent-recommend-card__name">
-                      응우옌 투하
+                    <div class="talent-recommend-card__name">
+                      <p>응우옌 투하</p>
                       <span class="talent-badge talent-badge--career">경력</span>
-                    </h3>
+                    </div>
                     <div class="talent-recommend-card__job">무역 및 사무행정 지원</div>
-                    <div class="talent-recommend-card__meta">베트남 / F-2 / 강원도 춘천시</div>
+                    <div class="talent-recommend-card__meta">베트남 · F-2 · 경력 5년<br>강원도 춘천시</div>
                   </div>
                 </div>
                 <div class="talent-recommend-card__tags">
-                  <span class="talent-tag">무역실무</span>
-                  <span class="talent-tag">베트남어</span>
-                  <span class="talent-tag">사무행정</span>
+                  <span class="talent-tag talent-tag--korean">한국어 상</span>
                 </div>
                 <div class="talent-recommend-card__footer">
-                  <span class="talent-recommend-card__link">프로필 보기 &gt;</span>
+                  <span class="talent-recommend-card__date">24. 07. 22 업데이트</span>
+                  <div class="talent-recommend-card__btns">
+                    <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
+                    <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="talent-recommend-card">
+              <div class="talent-recommend-card">
                 <div class="talent-recommend-card__top">
                   <div class="talent-recommend-card__avatar">
                     <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=300" alt="프로필">
                   </div>
                   <div class="talent-recommend-card__info">
-                    <h3 class="talent-recommend-card__name">
-                      바트바타르
+                    <div class="talent-recommend-card__name">
+                      <p>바트바타르</p>
                       <span class="talent-badge talent-badge--career">경력</span>
-                    </h3>
+                    </div>
                     <div class="talent-recommend-card__job">생산 품질 관리 전문가</div>
-                    <div class="talent-recommend-card__meta">몽골 / F-4 / 강원도 원주시</div>
+                    <div class="talent-recommend-card__meta">몽골 · F-4 · 경력 4년<br>강원도 원주시</div>
                   </div>
                 </div>
                 <div class="talent-recommend-card__tags">
-                  <span class="talent-tag">품질관리</span>
-                  <span class="talent-tag">공정개선</span>
+                  <span class="talent-tag talent-tag--korean">한국어 하</span>
                 </div>
                 <div class="talent-recommend-card__footer">
-                  <span class="talent-recommend-card__link">프로필 보기 &gt;</span>
+                  <span class="talent-recommend-card__date">24. 07. 20 업데이트</span>
+                  <div class="talent-recommend-card__btns">
+                    <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
+                    <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
 
           </div>
@@ -317,7 +339,6 @@
           </div>
         </div>
 
-        <!-- 아이콘 및 텍스트 강조 적용된 인재풀 헤더 -->
         <div class="talent-pool-header">
           <div class="talent-pool-header__count">
             <i data-lucide="users" class="talent-pool-header__icon"></i>
@@ -340,27 +361,22 @@
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="프로필">
               </div>
               <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">리옌 (Li Yan)</a>
+                <div class="talent-card__name">
+                  <p>리옌 (Li Yan)</p>
                   <span class="talent-badge talent-badge--career">경력</span>
-                </h3>
+                </div>
                 <div class="talent-card__job">글로벌 마케팅 기획자</div>
                 <div class="talent-card__sub">중국 · E-7 · 경력 3년<br>강원도 춘천시</div>
               </div>
             </div>
-            <div class="talent-card__summary">
-              한국어와 중국어의 능통자로서 중화권 시장 진출을 위한 마케팅 전략 수립 및 바이어 발굴 경험이 있습니다.
-            </div>
             <div class="talent-card__tags">
-              <span class="talent-tag">마케팅기획</span>
-              <span class="talent-tag">중국어</span>
-              <span class="talent-tag">해외영업</span>
+              <span class="talent-tag talent-tag--korean">한국어 상</span>
             </div>
             <div class="talent-card__footer">
               <span class="talent-card__date">24. 07. 25 업데이트</span>
               <div class="talent-card__btns">
                 <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
+                <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
               </div>
             </div>
           </div>
@@ -371,27 +387,22 @@
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="프로필">
               </div>
               <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">아웅 (Aung)</a>
+                <div class="talent-card__name">
+                  <p>아웅 (Aung)</p>
                   <span class="talent-badge talent-badge--new">신입</span>
-                </h3>
+                </div>
                 <div class="talent-card__job">제조 생산직</div>
                 <div class="talent-card__sub">미얀마 · E-9 · 신입<br>강원도 원주시</div>
               </div>
             </div>
-            <div class="talent-card__summary">
-              성실함과 빠른 습득력을 바탕으로 제조업 생산 설비 운영 및 업무 보조 업무를 희망합니다.
-            </div>
             <div class="talent-card__tags">
-              <span class="talent-tag">제조/생산</span>
-              <span class="talent-tag">기계조작</span>
-              <span class="talent-tag">조립검사</span>
+              <span class="talent-tag talent-tag--korean">한국어 중</span>
             </div>
             <div class="talent-card__footer">
               <span class="talent-card__date">24. 07. 24 업데이트</span>
               <div class="talent-card__btns">
                 <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
+                <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
               </div>
             </div>
           </div>
@@ -399,30 +410,25 @@
           <div class="talent-card">
             <div class="talent-card__head">
               <div class="talent-card__avatar">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=300" alt="프로필">
+                <i data-lucide="user"></i>
               </div>
               <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">응우옌 투하</a>
+                <div class="talent-card__name">
+                  <p>응우옌 투하</p>
                   <span class="talent-badge talent-badge--career">경력</span>
-                </h3>
+                </div>
                 <div class="talent-card__job">무역 수출입 담당자</div>
                 <div class="talent-card__sub">베트남 · F-2 · 경력 5년<br>강원도 강릉시</div>
               </div>
             </div>
-            <div class="talent-card__summary">
-              한국인과 베트남 간의 수출입 서류 작성, 통관 업무 및 바이어 커뮤니케이션을 전문으로 담당했습니다.
-            </div>
             <div class="talent-card__tags">
-              <span class="talent-tag">무역실무</span>
-              <span class="talent-tag">베트남어</span>
-              <span class="talent-tag">사무행정</span>
+              <span class="talent-tag talent-tag--korean">한국어 상</span>
             </div>
             <div class="talent-card__footer">
               <span class="talent-card__date">24. 07. 22 업데이트</span>
               <div class="talent-card__btns">
                 <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
+                <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
               </div>
             </div>
           </div>
@@ -433,27 +439,22 @@
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="프로필">
               </div>
               <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">리옌 (Li Yan)</a>
+                <div class="talent-card__name">
+                  <p>리옌 (Li Yan)</p>
                   <span class="talent-badge talent-badge--career">경력</span>
-                </h3>
+                </div>
                 <div class="talent-card__job">글로벌 마케팅 기획자</div>
                 <div class="talent-card__sub">중국 · E-7 · 경력 3년<br>강원도 춘천시</div>
               </div>
             </div>
-            <div class="talent-card__summary">
-              한국어와 중국어의 능통자로서 중화권 시장 진출을 위한 마케팅 전략 수립 및 바이어 발굴 경험이 있습니다.
-            </div>
             <div class="talent-card__tags">
-              <span class="talent-tag">마케팅기획</span>
-              <span class="talent-tag">중국어</span>
-              <span class="talent-tag">해외영업</span>
+              <span class="talent-tag talent-tag--korean">한국어 상</span>
             </div>
             <div class="talent-card__footer">
               <span class="talent-card__date">24. 07. 25 업데이트</span>
               <div class="talent-card__btns">
                 <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
+                <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
               </div>
             </div>
           </div>
@@ -464,27 +465,22 @@
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="프로필">
               </div>
               <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">아웅 (Aung)</a>
+                <div class="talent-card__name">
+                  <p>아웅 (Aung)</p>
                   <span class="talent-badge talent-badge--new">신입</span>
-                </h3>
+                </div>
                 <div class="talent-card__job">제조 생산직</div>
                 <div class="talent-card__sub">미얀마 · E-9 · 신입<br>강원도 원주시</div>
               </div>
             </div>
-            <div class="talent-card__summary">
-              성실함과 빠른 습득력을 바탕으로 제조업 생산 설비 운영 및 업무 보조 업무를 희망합니다.
-            </div>
             <div class="talent-card__tags">
-              <span class="talent-tag">제조/생산</span>
-              <span class="talent-tag">기계조작</span>
-              <span class="talent-tag">조립검사</span>
+              <span class="talent-tag talent-tag--korean">한국어 중</span>
             </div>
             <div class="talent-card__footer">
               <span class="talent-card__date">24. 07. 24 업데이트</span>
               <div class="talent-card__btns">
                 <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
+                <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
               </div>
             </div>
           </div>
@@ -492,128 +488,36 @@
           <div class="talent-card">
             <div class="talent-card__head">
               <div class="talent-card__avatar">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=300" alt="프로필">
+                <i data-lucide="user"></i>
               </div>
               <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">응우옌 투하</a>
+                <div class="talent-card__name">
+                  <p>응우옌 투하</p>
                   <span class="talent-badge talent-badge--career">경력</span>
-                </h3>
+                </div>
                 <div class="talent-card__job">무역 수출입 담당자</div>
                 <div class="talent-card__sub">베트남 · F-2 · 경력 5년<br>강원도 강릉시</div>
               </div>
             </div>
-            <div class="talent-card__summary">
-              한국인과 베트남 간의 수출입 서류 작성, 통관 업무 및 바이어 커뮤니케이션을 전문으로 담당했습니다.
-            </div>
             <div class="talent-card__tags">
-              <span class="talent-tag">무역실무</span>
-              <span class="talent-tag">베트남어</span>
-              <span class="talent-tag">사무행정</span>
+              <span class="talent-tag talent-tag--korean">한국어 하</span>
             </div>
             <div class="talent-card__footer">
               <span class="talent-card__date">24. 07. 22 업데이트</span>
               <div class="talent-card__btns">
                 <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="talent-card">
-            <div class="talent-card__head">
-              <div class="talent-card__avatar">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="프로필">
-              </div>
-              <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">리옌 (Li Yan)</a>
-                  <span class="talent-badge talent-badge--career">경력</span>
-                </h3>
-                <div class="talent-card__job">글로벌 마케팅 기획자</div>
-                <div class="talent-card__sub">중국 · E-7 · 경력 3년<br>강원도 춘천시</div>
-              </div>
-            </div>
-            <div class="talent-card__summary">
-              한국어와 중국어의 능통자로서 중화권 시장 진출을 위한 마케팅 전략 수립 및 바이어 발굴 경험이 있습니다.
-            </div>
-            <div class="talent-card__tags">
-              <span class="talent-tag">마케팅기획</span>
-              <span class="talent-tag">중국어</span>
-              <span class="talent-tag">해외영업</span>
-            </div>
-            <div class="talent-card__footer">
-              <span class="talent-card__date">24. 07. 25 업데이트</span>
-              <div class="talent-card__btns">
-                <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="talent-card">
-            <div class="talent-card__head">
-              <div class="talent-card__avatar">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="프로필">
-              </div>
-              <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">아웅 (Aung)</a>
-                  <span class="talent-badge talent-badge--new">신입</span>
-                </h3>
-                <div class="talent-card__job">제조 생산직</div>
-                <div class="talent-card__sub">미얀마 · E-9 · 신입<br>강원도 원주시</div>
-              </div>
-            </div>
-            <div class="talent-card__summary">
-              성실함과 빠른 습득력을 바탕으로 제조업 생산 설비 운영 및 업무 보조 업무를 희망합니다.
-            </div>
-            <div class="talent-card__tags">
-              <span class="talent-tag">제조/생산</span>
-              <span class="talent-tag">기계조작</span>
-              <span class="talent-tag">조립검사</span>
-            </div>
-            <div class="talent-card__footer">
-              <span class="talent-card__date">24. 07. 24 업데이트</span>
-              <div class="talent-card__btns">
-                <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="talent-card">
-            <div class="talent-card__head">
-              <div class="talent-card__avatar">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=300" alt="프로필">
-              </div>
-              <div class="talent-card__info">
-                <h3 class="talent-card__name">
-                  <a href="#" class="talent-card__name-link">응우옌 투하</a>
-                  <span class="talent-badge talent-badge--career">경력</span>
-                </h3>
-                <div class="talent-card__job">무역 수출입 담당자</div>
-                <div class="talent-card__sub">베트남 · F-2 · 경력 5년<br>강원도 강릉시</div>
-              </div>
-            </div>
-            <div class="talent-card__summary">
-              한국인과 베트남 간의 수출입 서류 작성, 통관 업무 및 바이어 커뮤니케이션을 전문으로 담당했습니다.
-            </div>
-            <div class="talent-card__tags">
-              <span class="talent-tag">무역실무</span>
-              <span class="talent-tag">베트남어</span>
-              <span class="talent-tag">사무행정</span>
-            </div>
-            <div class="talent-card__footer">
-              <span class="talent-card__date">24. 07. 22 업데이트</span>
-              <div class="talent-card__btns">
-                <button type="button" class="btn-scrap"><i data-lucide="heart"></i><span>스크랩</span></button>
-                <button type="button" class="btn-proposal btn-open-proposal">입사 제안</button>
+                <a href="talent-detail.html" class="btn-profile-view">프로필보기</a>
               </div>
             </div>
           </div>
 
         </div>
+        <!-- 인재 풀 없을 경우
+        <div class="talent-empty-box" id="talentEmptyBox">
+          <i data-lucide="user-x"></i>
+          <h4>조건에 맞는 인재가 없습니다.</h4>
+          <p>검색 필터를 재설정하거나 다른 조건으로 다시 검색해보세요.</p>
+        </div> -->
 
         <div class="pager">
           <a href="#" class="pager-link pager-link-data-first">첫 페이지</a> 
@@ -631,27 +535,6 @@
 
     </div>
   </main>
-
-  <div class="talent-modal-overlay hidden" id="proposalModal">
-    <div class="talent-modal">
-      <div class="talent-modal__header">
-        <h3 class="talent-modal__title">입사 제안</h3>
-        <button type="button" class="talent-modal__close" id="btnModalClose" aria-label="팝업 닫기">
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <div class="talent-modal__body">
-        <p class="talent-modal__desc">
-          해당 인재에게 입사 제안을 보내시겠습니까?<br>
-          제안을 보내하시면 인재에게 안내 알림 및 메일이 발송됩니다.
-        </p>
-      </div>
-      <div class="talent-modal__footer">
-        <button type="button" class="talent-modal__btn talent-modal__btn--cancel" id="btnModalCancel">취소</button>
-        <button type="button" class="talent-modal__btn talent-modal__btn--submit" id="btnModalSubmit">제안</button>
-      </div>
-    </div>
-  </div>
 
   <footer class="site-footer">
     <div class="footer-top">
@@ -739,31 +622,11 @@
       });
 
       document.querySelectorAll('.btn-scrap').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
           btn.classList.toggle('on');
         });
       });
-
-      const proposalModal = document.getElementById('proposalModal');
-      const btnModalClose = document.getElementById('btnModalClose');
-      const btnModalCancel = document.getElementById('btnModalCancel');
-      const btnModalSubmit = document.getElementById('btnModalSubmit');
-
-      const openModal = () => proposalModal && proposalModal.classList.remove('hidden');
-      const closeModal = () => proposalModal && proposalModal.classList.add('hidden');
-
-      document.querySelectorAll('.btn-open-proposal').forEach(btn => {
-        btn.addEventListener('click', openModal);
-      });
-
-      if (btnModalClose) btnModalClose.addEventListener('click', closeModal);
-      if (btnModalCancel) btnModalCancel.addEventListener('click', closeModal);
-      if (btnModalSubmit) {
-        btnModalSubmit.addEventListener('click', () => {
-          alert('입사 제안이 전송되었습니다.');
-          closeModal();
-        });
-      }
     });
   </script>
 </body>

@@ -27,13 +27,14 @@
           <a href="talent.html" class="nav-item">인재검색</a>
           
           <div class="nav-item-dropdown">
-            <a href="visa-roadmap.html" class="nav-item">
+            <a href="visa-score.html" class="nav-item">
               <span>비자 가이드</span>
               <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
             </a>
             <div class="sub-menu-box">
-              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
-              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+              <a href="visa-roadmap.html" class="sub-menu-item">비자 로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자 점수 진단</a>
+              <a href="visa-regional.html" class="sub-menu-item">지역특화 비자 가이드</a>
             </div>
           </div>
 
@@ -67,9 +68,7 @@
       </div>
     </div>
   </header>
-  <!-- //header -->
 
-  <!-- 모바일 드로어 메뉴 -->
   <div class="mobile-menu-overlay" id="m-overlay"></div>
   <aside class="mobile-menu-drawer" id="m-drawer">
     <div class="m-drawer-head">
@@ -97,9 +96,10 @@
           <span>비자 가이드</span>
           <i data-lucide="chevron-down" class="m-acc-arrow"></i>
         </button>
-        <div class="m-sub-nav hidden">
-          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
-          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item">비자 로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자 점수 진단</a>
+          <a href="visa-regional.html" class="m-sub-item">지역특화 비자 가이드</a>
         </div>
       </div>
 
@@ -167,7 +167,7 @@
             <span>총 <strong class="count-num">12</strong>건의 공지사항</span>
           </div>
 
-          <!-- 공지 리스트 -->
+          <!-- [1] 공지 리스트 (데이터가 있을 때) -->
           <div class="notice-card-list">
             
             <!-- 중요공지 1 -->
@@ -189,8 +189,6 @@
               </div>
               <i data-lucide="chevron-right" class="row-arrow"></i>
             </a>
-
-            <!-- 중요공지 2 -->
             <a href="notices-detail.html" class="notice-card-row pinned">
               <div class="row-left">
                 <span class="row-tag tag-pinned">★ 중요공지</span>
@@ -229,8 +227,6 @@
               </div>
               <i data-lucide="chevron-right" class="row-arrow"></i>
             </a>
-
-            <!-- 일반공지 2 -->
             <a href="notices-detail.html" class="notice-card-row">
               <div class="row-left">
                 <span class="row-tag tag-normal">지원사업</span>
@@ -249,8 +245,6 @@
               </div>
               <i data-lucide="chevron-right" class="row-arrow"></i>
             </a>
-
-            <!-- 일반공지 3 -->
             <a href="notices-detail.html" class="notice-card-row">
               <div class="row-left">
                 <span class="row-tag tag-normal">교육/정주</span>
@@ -269,8 +263,6 @@
               </div>
               <i data-lucide="chevron-right" class="row-arrow"></i>
             </a>
-
-            <!-- 일반공지 4 -->
             <a href="notices-detail.html" class="notice-card-row">
               <div class="row-left">
                 <span class="row-tag tag-normal">채용/행사</span>
@@ -291,6 +283,17 @@
             </a>
 
           </div>
+
+          <!-- [2] 게시글이 없을 때 노출할 빈 상태 영역 (개발 연동용) -->
+          
+          <div class="notice-card-list empty-state">
+            <div class="empty-notice-box">
+              <i data-lucide="clipboard-list"></i>
+              <h4>등록된 공지사항이 없습니다.</h4>
+              <p>새로운 소식이 등록되면 이곳에 표시됩니다.</p>
+            </div>
+          </div>
+         
 
           <!-- 공통 표준 페이지네이션 마크업 -->
           <div class="pager">

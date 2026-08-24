@@ -7,10 +7,10 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <link rel="stylesheet" href="css/강원외국인채용관.css">
   <script src="js/강원외국인채용관.js" defer></script>
 </head>
 <body>
@@ -31,14 +31,18 @@
           
           <div class="nav-item-dropdown">
             <a href="visa-score.html" class="nav-item">
-              <span>비자 점수 진단</span>
+              <span>비자 가이드</span>
               <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
             </a>
             <div class="sub-menu-box">
-              <a href="visa-roadmap.html" class="sub-menu-item">비자로드맵</a>
-              <a href="visa-score.html" class="sub-menu-item">비자점수진단하기</a>
+              <a href="visa-roadmap.html" class="sub-menu-item">비자 로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자 점수 진단</a>
+              <a href="visa-regional.html" class="sub-menu-item">지역특화 비자 가이드</a>
             </div>
           </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
         </nav>
       </div>
 
@@ -67,9 +71,7 @@
       </div>
     </div>
   </header>
-  <!-- //header -->
 
-  <!-- 모바일 드로어 메뉴 -->
   <div class="mobile-menu-overlay" id="m-overlay"></div>
   <aside class="mobile-menu-drawer" id="m-drawer">
     <div class="m-drawer-head">
@@ -94,14 +96,18 @@
       
       <div class="m-nav-group">
         <button type="button" class="m-nav-group-tit btn-m-acc">
-          <span>비자 점수 진단</span>
+          <span>비자 가이드</span>
           <i data-lucide="chevron-down" class="m-acc-arrow"></i>
         </button>
-        <div class="m-sub-nav hidden">
-          <a href="visa-roadmap.html" class="m-sub-item">비자로드맵</a>
-          <a href="visa-score.html" class="m-sub-item">비자점수진단하기</a>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item">비자 로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자 점수 진단</a>
+          <a href="visa-regional.html" class="m-sub-item">지역특화 비자 가이드</a>
         </div>
       </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
     </nav>
 
     <div class="m-drawer-lang">
@@ -127,6 +133,7 @@
   <main class="site-main">
     <div class="inner-section">
 
+      <!-- Hero Slider Section -->
       <section class="hero-slider">
         <div class="swiper hero-swiper">
           <div class="swiper-wrapper">
@@ -194,7 +201,7 @@
             <i data-lucide="sparkles" class="process-section__badge-icon"></i>
             <span>One-Stop Support</span>
           </div>
-          <h2 class="process-section__title">외국인 취업 & 정착 프로세스</h2>
+          <h2 class="process-section__title">외국인 취업 &amp; 정착 프로세스</h2>
           <p class="process-section__desc">
             강원특별자치도가 우수한 외국인 인재의 입국부터 취업, 그리고 안정적인 지역 정착까지의 모든 과정을 함께합니다.
           </p>
@@ -305,7 +312,7 @@
           <i data-lucide="arrow-right" class="guide-card__arrow"></i>
         </a>
 
-        <a href="#" class="guide-card guide-card--skyblue">
+        <a href="https://job.gwd.go.kr/gwjob/online_consulting/consulting_job_counselor" target="_blank" rel="noopener noreferrer" class="guide-card guide-card--skyblue">
           <div class="guide-card__icon-wrap">
             <i data-lucide="headset"></i>
           </div>
@@ -316,7 +323,7 @@
           <i data-lucide="arrow-right" class="guide-card__arrow"></i>
         </a>
 
-        <a href="#" class="guide-card guide-card--orange">
+        <a href="notices.html" class="guide-card guide-card--orange">
           <div class="guide-card__icon-wrap">
             <i data-lucide="message-circle-question"></i>
           </div>
@@ -335,8 +342,8 @@
           <div class="ctrl-group">
             <a href="companies.html" class="btn-view-all">전체보기</a>
             <div class="slider-ctrl-btns">
-              <button type="button" class="btn-ctrl btn-co-prev"><i data-lucide="chevron-left"></i></button>
-              <button type="button" class="btn-ctrl btn-co-next"><i data-lucide="chevron-right"></i></button>
+              <button type="button" class="btn-ctrl btn-co-prev" aria-label="이전 기업"><i data-lucide="chevron-left"></i></button>
+              <button type="button" class="btn-ctrl btn-co-next" aria-label="다음 기업"><i data-lucide="chevron-right"></i></button>
             </div>
           </div>
         </div>
@@ -380,7 +387,7 @@
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
                 <div class="company-logo-area">
-                  <img src="./images/c_logo05.jpg" alt="동해포텐주" class="company-logo-img">
+                  <img src="./images/c_logo05.jpg" alt="네패스" class="company-logo-img">
                 </div>
                 <h3 class="company-name">네패스</h3>
                 <p class="company-desc">전자·전기 부품 제조</p>
@@ -391,7 +398,7 @@
             <div class="swiper-slide">
               <a href="companies.html" class="company-card">
                 <div class="company-logo-area">
-                  <img src="./images/c_none.jpg" alt="기본이미지" class="company-logo-img">
+                  <img src="./images/c_none.jpg" alt="동해포텐(주)" class="company-logo-img">
                 </div>
                 <h3 class="company-name">동해포텐(주)</h3>
                 <p class="company-desc">전기차 부품 선도 기업</p>
@@ -410,7 +417,7 @@
         <div class="job-filter-box">
           <div class="filter-search-wrap">
             <input type="text" placeholder="직무, 회사명, 키워드로 검색하세요">
-            <button type="button" class="btn-filter-search"><i data-lucide="search"></i></button>
+            <button type="button" class="btn-filter-search" aria-label="검색"><i data-lucide="search"></i></button>
           </div>
 
           <div class="filter-select-group">
@@ -524,6 +531,7 @@
         </div>
 
         <div class="job-list-container">
+          
           <div class="job-item-card">
             <div class="job-item-brand-area">
               <div class="brand-logo-box">
@@ -539,7 +547,7 @@
             </div>
             <div class="job-item-meta">
               <div class="job-deadline-wrap">
-                <p class="job-deadline">2025-05-29까지 (D-14)</p>
+                <p class="job-deadline">2026-05-29까지 (D-14)</p>
                 <p class="job-cond">신입/경력 · 한국어가능(중급이상)</p>
               </div>
               <button type="button" class="btn-bookmark" aria-label="북마크">
@@ -563,7 +571,7 @@
             </div>
             <div class="job-item-meta">
               <div class="job-deadline-wrap">
-                <p class="job-deadline">2025-06-05까지 (D-21)</p>
+                <p class="job-deadline">2026-06-05까지 (D-21)</p>
                 <p class="job-cond">경력 3년 이상 · 한국어가능(고급)</p>
               </div>
               <button type="button" class="btn-bookmark" aria-label="북마크">
@@ -587,7 +595,7 @@
             </div>
             <div class="job-item-meta">
               <div class="job-deadline-wrap">
-                <p class="job-deadline">2025-06-05까지 (D-21)</p>
+                <p class="job-deadline">2026-06-05까지 (D-21)</p>
                 <p class="job-cond">경력 3년 이상 · 한국어가능(고급)</p>
               </div>
               <button type="button" class="btn-bookmark" aria-label="북마크">
@@ -611,7 +619,7 @@
             </div>
             <div class="job-item-meta">
               <div class="job-deadline-wrap">
-                <p class="job-deadline">2025-06-05까지 (D-21)</p>
+                <p class="job-deadline">2026-06-05까지 (D-21)</p>
                 <p class="job-cond">경력 3년 이상 · 한국어가능(고급)</p>
               </div>
               <button type="button" class="btn-bookmark" aria-label="북마크">
@@ -635,7 +643,7 @@
             </div>
             <div class="job-item-meta">
               <div class="job-deadline-wrap">
-                <p class="job-deadline">2025-06-05까지 (D-21)</p>
+                <p class="job-deadline">2026-06-05까지 (D-21)</p>
                 <p class="job-cond">경력 3년 이상 · 한국어가능(고급)</p>
               </div>
               <button type="button" class="btn-bookmark" aria-label="북마크">
@@ -643,13 +651,14 @@
               </button>
             </div>
           </div>
+
         </div>
 
         <div class="more-btn-wrap">
-          <button type="button" class="btn-more-jobs">
+          <a href="jobs.html" class="btn-more-jobs">
             <span>더 많은 공고 보기</span>
             <i data-lucide="chevron-down"></i>
-          </button>
+          </a>
         </div>
       </section>
 
@@ -689,7 +698,7 @@
   </footer>
   <!-- //footer -->
 
-  <!-- 메인 전용 슬라이더 자바스크립트 -->
+  <!-- 메인 전용 슬라이더 및 인터랙션 자바스크립트 -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       new Swiper('.hero-swiper', {

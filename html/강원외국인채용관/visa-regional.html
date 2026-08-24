@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지역특화 비자 가이드 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-regional.html" class="nav-item active">
+              <span>비자 가이드</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자 로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자 점수 진단</a>
+              <a href="visa-regional.html" class="sub-menu-item active">지역특화 비자 가이드</a>
+            </div>
+          </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- 모바일 드로어 메뉴 -->
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc active">
+          <span>비자 가이드</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item">비자 로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자 점수 진단</a>
+          <a href="visa-regional.html" class="m-sub-item active">지역특화 비자 가이드</a>
+        </div>
+      </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- main -->
+  <main class="site-main">
+    <div class="inner-section">
+      <div class="regional-guide-container">
+
+        <!-- 1. Hero Banner -->
+        <section class="score-hero-banner bg-gradient-blue-dark">
+          <div class="score-hero-content">
+            <div class="score-hero-badge">
+              <i data-lucide="map-pin"></i>
+              <span>강원특별자치도 지역특화 비자 안내</span>
+            </div>
+            <h1 class="score-hero-title">강원특별자치도 지역특화 비자 가이드</h1>
+            <p class="score-hero-desc">
+              도내 인구감소지역에 거주 및 취업하는 우수 외국인을 위한 맞춤 비자 제도입니다.<br>
+              신청 대상, 사업 지역, 필수 요건 및 체류 기간을 탭별로 세부 확인해보세요.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Visa Tab Buttons -->
+        <div class="score-tabs-bar">
+          <button type="button" id="tab-btn-f2r" class="tab-btn-pill active" onclick="switchRegionalTab('f2r')">
+            <i data-lucide="award"></i>
+            <span>(지역특화 우수인재) F-2-R</span>
+          </button>
+          <button type="button" id="tab-btn-f4r" class="tab-btn-pill" onclick="switchRegionalTab('f4r')">
+            <i data-lucide="users"></i>
+            <span>(지역특화 재외동포) F-4-R</span>
+          </button>
+          <button type="button" id="tab-btn-e74r" class="tab-btn-pill" onclick="switchRegionalTab('e74r')">
+            <i data-lucide="wrench"></i>
+            <span>(지역특화 숙련기능인력) E-7-4R</span>
+          </button>
+        </div>
+
+        <!-- 3. Tab 1: F-2-R Container -->
+        <div class="regional-content-pane active" id="tab-content-f2r">
+          <div class="regional-summary-card blue">
+            <div class="space-y-4">
+              <span class="badge-tag bg-blue">F-2-R 자격 체류 안내</span>
+              <h2>지역특화 우수인재 비자 (F-2-R)</h2>
+              <p>인구감소지역에 거주 및 취업(창업) 조건을 충족하는 외국인 우수인재에게 부여되는 거주 자격</p>
+            </div>
+            <div class="stay-period-badges">
+              <div class="period-box">
+                <span class="lbl">최초 체류기간</span>
+                <strong class="val">최초 1년</strong>
+              </div>
+              <div class="period-box">
+                <span class="lbl">연장 단위</span>
+                <strong class="val">2년씩 연장 가능</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card-block">
+            <div class="block-head-row">
+              <h3><i data-lucide="map-pin" class="ico-blue"></i> 사업지역 (11개 인구감소지역)</h3>
+              <span class="count-pill">도내 11개 시·군</span>
+            </div>
+            <p class="block-desc">아래 강원특별자치도 지정 인구감소지역 내에서 실거주 및 취업(창업)을 이행해야 합니다.</p>
+            <div class="region-chips-wrap">
+              <span class="region-chip highlight"><i data-lucide="check"></i> 태백시</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 삼척시</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 홍천군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 횡성군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 영월군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 평창군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 정선군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 철원군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 양구군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 고성군</span>
+              <span class="region-chip highlight"><i data-lucide="check"></i> 양양군</span>
+            </div>
+          </div>
+
+          <div class="info-card-block">
+            <div class="block-head-row">
+              <h3><i data-lucide="file-check-2" class="ico-blue"></i> F-2-R 필수 신청 요건 (5개 요건)</h3>
+            </div>
+            <div class="req-grid-2">
+              <div class="req-item-box">
+                <div class="req-tit"><span class="num">①</span> 학력 / 소득 요건 (택 1 충족)</div>
+                <ul>
+                  <li>국내 전문학사 이상 학위 취득(예정)자</li>
+                  <li>당해 연도 강원특별자치도 생활임금 이상 충족자</li>
+                </ul>
+              </div>
+              <div class="req-item-box">
+                <div class="req-tit"><span class="num">②</span> 거주지 요건</div>
+                <p>지정된 사업지역(11개 시·군) 내 <strong>5년 이상 실거주</strong> 확약</p>
+              </div>
+              <div class="req-item-box">
+                <div class="req-tit"><span class="num">③</span> 취업 / 창업 요건 (택 1 충족)</div>
+                <ul>
+                  <li><strong>취업:</strong> 업종 제한 없음 (사행성/풍속위반 제외)</li>
+                  <li><strong>창업:</strong> 투자 금액 2억 원 이상 실투자</li>
+                </ul>
+              </div>
+              <div class="req-item-box">
+                <div class="req-tit"><span class="num">④</span> 품행 단정 요건</div>
+                <p>대한민국 및 국외 법령 위반 사례가 없을 것</p>
+              </div>
+              <div class="req-item-box col-span-2">
+                <div class="req-tit"><span class="num">⑤</span> 기본소양 요건 (택 1 충족)</div>
+                <div class="req-three-cols">
+                  <div>✔ 사회통합프로그램 3단계 이상 이수</div>
+                  <div>✔ 사전평가 4단계 이상 배정</div>
+                  <div>✔ 한국어능력시험(TOPIK) 3급 이상</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Tab 2: F-4-R Container -->
+        <div class="regional-content-pane" id="tab-content-f4r">
+          <div class="regional-summary-card indigo">
+            <div class="space-y-4">
+              <span class="badge-tag bg-indigo">F-4-R 체류 자격 안내</span>
+              <h2>지역특화 재외동포 비자 (F-4-R)</h2>
+              <p>인구감소지역으로 가족 동반 이주 및 거주하는 외국국적동포를 위한 특화 비자</p>
+            </div>
+            <div class="stay-period-badges">
+              <div class="period-box">
+                <span class="lbl">최초 체류기간</span>
+                <strong class="val text-indigo">최초 1년</strong>
+              </div>
+              <div class="period-box">
+                <span class="lbl">연장 단위</span>
+                <strong class="val text-indigo">3년씩 연장 가능</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card-block">
+            <div class="block-head-row">
+              <h3><i data-lucide="map-pin" class="ico-indigo"></i> 사업지역 (12개 도내 인구감소지역)</h3>
+              <span class="count-pill indigo">도내 12개 시·군</span>
+            </div>
+            <div class="region-chips-wrap">
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 태백시</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 삼척시</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 홍천군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 횡성군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 영월군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 평창군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 정선군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 철원군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 화천군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 양구군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 고성군</span>
+              <span class="region-chip highlight indigo"><i data-lucide="check"></i> 양양군</span>
+            </div>
+          </div>
+
+          <div class="info-card-block">
+            <div class="block-head-row">
+              <h3><i data-lucide="users" class="ico-indigo"></i> 신청 대상 및 요건 (3가지 대상 중 하나 해당)</h3>
+            </div>
+            <div class="req-vertical-list">
+              <div class="vert-item">
+                <strong>① 기존 거주자: 사업지역 2년 이상 기존 거주 동포</strong>
+                <p>지역특화 사업 시행 이전에 사업지역(12개 시·군)으로 이주하여 2년 이상 계속 거주하고 있는 외국국적동포</p>
+              </div>
+              <div class="vert-item">
+                <strong>② 국내 전입자: 비인구감소지역에서 동반 이주하는 동포 (60세 미만)</strong>
+                <p>비인구감소지역에 거주하다가 사업지역으로 가족(배우자, 자녀)과 동반 이주하려는 60세 미만 외국국적동포</p>
+              </div>
+              <div class="vert-item">
+                <strong>③ 해외 전입자: 해외에서 가족 동반 입국/이주하는 동포 (60세 미만)</strong>
+                <p>해외에 거주하다가 사업지역으로 가족과 동반 이주하려는 60세 미만 외국국적동포</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tab 3: E-7-4R Container -->
+        <div class="regional-content-pane" id="tab-content-e74r">
+          <div class="regional-summary-card emerald">
+            <div class="space-y-4">
+              <span class="badge-tag bg-emerald">E-7-4R 체류 자격 안내</span>
+              <h2>지역특화 숙련기능인력 비자 (E-7-4R)</h2>
+              <p>합법 근로 중인 숙련 외국인 근로자 대상 도내 우대 체류 자격</p>
+            </div>
+            <div class="stay-period-badges">
+              <div class="period-box">
+                <span class="lbl">최초 체류기간</span>
+                <strong class="val text-emerald">최초 2년</strong>
+              </div>
+              <div class="period-box">
+                <span class="lbl">연장 단위</span>
+                <strong class="val text-emerald">근로계약 기간까지</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card-block">
+            <div class="block-head-row">
+              <h3><i data-lucide="map-pin" class="ico-green"></i> 사업지역 (도내 16개 시·군)</h3>
+              <span class="count-pill green">인구감소(12) + 관심지역(4)</span>
+            </div>
+            <div class="space-y-3">
+              <span class="sec-mini-lbl">■ 12개 도내 인구감소지역</span>
+              <div class="region-chips-wrap">
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 태백시</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 삼척시</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 홍천군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 횡성군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 영월군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 평창군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 정선군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 철원군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 화천군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 양구군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 고성군</span>
+                <span class="region-chip highlight green"><i data-lucide="check"></i> 양양군</span>
+              </div>
+              <span class="sec-mini-lbl text-amber mt-12">■ 4개 도내 인구감소관심지역 (추가)</span>
+              <div class="region-chips-wrap">
+                <span class="region-chip interest"><i data-lucide="star"></i> 강릉시</span>
+                <span class="region-chip interest"><i data-lucide="star"></i> 동해시</span>
+                <span class="region-chip interest"><i data-lucide="star"></i> 속초시</span>
+                <span class="region-chip interest"><i data-lucide="star"></i> 인제군</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card-block">
+            <div class="block-head-row">
+              <h3><i data-lucide="check-square" class="ico-green"></i> 필수 신청 요건 (아래 3가지 요건 모두 충족)</h3>
+              <span class="badge-tag bg-rose">모두 충족 필수</span>
+            </div>
+            <div class="req-grid-3">
+              <div class="req-item-box green">
+                <div class="req-tit text-emerald">① K-Point 점수</div>
+                <p>총점 300점 만점 중 <strong>200점 이상 득점자</strong></p>
+              </div>
+              <div class="req-item-box green">
+                <div class="req-tit text-emerald">② 연간 평균소득</div>
+                <p>최근 2년 연간 평균소득 <strong>2,500만 원 이상</strong> 충족자</p>
+              </div>
+              <div class="req-item-box green">
+                <div class="req-tit text-emerald">③ 한국어 능력</div>
+                <p>TOPIK 2급 이상, 사회통합 2단계 이수 또는 사전평가 3단계 배정</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <script>
+    function switchRegionalTab(tabType) {
+      document.querySelectorAll('.score-tabs-bar .tab-btn-pill').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.regional-content-pane').forEach(c => c.classList.remove('active'));
+
+      const activeBtn = document.getElementById('tab-btn-' + tabType);
+      const activeContent = document.getElementById('tab-content-' + tabType);
+
+      if (activeBtn) activeBtn.classList.add('active');
+      if (activeContent) activeContent.classList.add('active');
+
+      if (window.lucide) lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

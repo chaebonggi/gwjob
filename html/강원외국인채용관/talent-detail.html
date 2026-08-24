@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인재정보 상세 - 강원일자리정보망 외국인 채용관</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="css/강원외국인채용관.css">
+  <script src="js/강원외국인채용관.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item active">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-score.html" class="nav-item">
+              <span>비자 가이드</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자 로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자 점수 진단</a>
+              <a href="visa-regional.html" class="sub-menu-item">지역특화 비자 가이드</a>
+            </div>
+          </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle">
+            <span>한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu hidden">
+            <button type="button">한국어</button>
+            <button type="button">English</button>
+            <button type="button">日本語</button>
+            <button type="button">Tiếng Việt</button>
+            <button type="button">中文</button>
+            <button type="button">Mongolian</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item active">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 가이드</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item">비자 로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자 점수 진단</a>
+          <a href="visa-regional.html" class="m-sub-item">지역특화 비자 가이드</a>
+        </div>
+      </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <main class="site-main talent-detail-container">
+    <div class="inner-section">
+
+      <div class="talent-warn-box">
+        <div class="talent-warn-icon">
+          <i data-lucide="clipboard-check"></i>
+        </div>
+        <div class="talent-warn-txt">
+          <p>• 개인이 작성, 강원도 및 강원도일자리재단에 제공한 구직정보로 채용의 목적 외로 사용하실 수 없습니다.</p>
+          <p>• 입사제안시 임금, 근로조건 등 법령상 위배되는 부분이 있으면 고발 조치될 수 있으니 주의하시기 바랍니다.</p>
+          <p>• ※ 궁금한 인재에게 <strong>[입사제안하기]</strong> 버튼을 통해 기업에 입사제안을 요청하실 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="talent-profile-card">
+        <div class="talent-profile-photo-box">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="인재 증명사진">
+        </div>
+
+        <div class="talent-profile-info">
+          <div class="talent-profile-title-row">
+            <h1 class="talent-profile-name">아웅**</h1>
+            <span class="talent-badge talent-badge--career">구직 등록 인재</span>
+          </div>
+
+          <div class="talent-info-grid-list">
+            <span class="talent-grid-lbl">성별</span>
+            <span class="talent-grid-val">남자</span>
+
+            <span class="talent-grid-lbl">연령</span>
+            <span class="talent-grid-val">20세</span>
+
+            <span class="talent-grid-lbl">주소</span>
+            <span class="talent-grid-val">강원도 춘천시</span>
+
+            <span class="talent-grid-lbl">휴대전화번호</span>
+            <span class="talent-grid-val">010-6252-****</span>
+
+            <span class="talent-grid-lbl">이메일</span>
+            <span class="talent-grid-val text-blue-link">leeje88@inkium.com</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">국적</h2>
+        <div class="talent-sec-content">
+          <span class="badge-detail-nation">
+            <i data-lucide="globe"></i> 우즈베키스탄 (Uzbekistan)
+          </span>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">체류비자</h2>
+        <div class="talent-sec-content">
+          <span class="badge-detail-visa">
+            <i data-lucide="shield-check"></i> F-2-R (강원 지역특화 우수인재)
+          </span>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">이력정보</h2>
+        <div class="talent-sec-content">
+          <div class="talent-info-grid-list">
+            <span class="talent-grid-lbl">총 경력</span>
+            <span class="talent-grid-val">신입</span>
+
+            <span class="talent-grid-lbl">최종학력</span>
+            <span class="talent-grid-val">대졸(4년) 대학교</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">희망직종</h2>
+        <div class="talent-sec-content">
+          <p>• 경영·사무·금융·보험 &gt; 정부·공공행정 사무 &gt; <strong>공공행정 사무원</strong></p>
+          <p>• 경영·사무·금융·보험 &gt; 행정·경영·금융·보험 관리직 &gt; 의회의원·고위공무원 및 공공단체임원</p>
+          <p>• 설치·정비·생산·기계·금속·재료 &gt; 판금·제관·단조·주조 &gt; 판금기 보조원(견습공)</p>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">희망조건</h2>
+        <div class="talent-sec-content">
+          <div class="talent-info-grid-list">
+            <span class="talent-grid-lbl">희망임금</span>
+            <span class="talent-grid-val text-blue-link">[연봉] 40,000,000원 ~ 50,000,000원</span>
+
+            <span class="talent-grid-lbl">희망고용</span>
+            <span class="talent-grid-val">정규직, 계약직</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">희망지역</h2>
+        <div class="talent-sec-content">
+          <p>춘천, 원주, 강릉, 홍천, 횡성, 영월</p>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">장애여부</h2>
+        <div class="talent-sec-content">
+          <p>비장애</p>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">자격사항</h2>
+        <div class="talent-sec-content">
+          <p>자격증 없음</p>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">한국어 능력</h2>
+        <div class="talent-sec-content">
+          <p><strong>상</strong></p>
+        </div>
+      </section>
+
+      <section class="talent-spec-sec">
+        <h2 class="talent-sec-tit">외국어</h2>
+        <div class="talent-sec-content">
+          <p>영어 - 상, 기타 -</p>
+        </div>
+      </section>
+
+      <div class="talent-reg-date-row">
+        등록일시 2026-08-13 13:49:46
+      </div>
+
+      <div class="talent-bottom-floating-bar">
+        <a href="talent.html" class="btn-detail-list">
+          <i data-lucide="arrow-left"></i>
+          <span>인재 목록으로</span>
+        </a>
+
+        <div class="detail-action-group">
+          <button type="button" class="btn-detail-scrap" id="btnDetailScrap">
+            <i data-lucide="heart"></i>
+            <span>스크랩</span>
+          </button>
+          
+          <button type="button" class="btn-detail-proposal" onclick="openProposalModal()">
+            <i data-lucide="send"></i>
+            <span>입사제안하기</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="talent-modal-overlay hidden" id="proposalModal">
+    <div class="talent-modal">
+      <div class="talent-modal__header">
+        <h3 class="talent-modal__title">내 채용정보 선택하기</h3>
+        <button type="button" class="talent-modal__close" onclick="closeProposalModal()" aria-label="팝업 닫기">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="talent-modal__body">
+        <div class="talent-warn-box mb-16">
+          <div class="talent-warn-txt">
+            <p>※ 원하시는 채용공고 제목을 클릭하시면 해당 구직자에게 입사제안이 즉시 전송됩니다.</p>
+          </div>
+        </div>
+
+        <div class="talent-job-table-wrap">
+          <table class="talent-job-table">
+            <thead>
+              <tr>
+                <th style="width: 6rem;">번호</th>
+                <th style="text-align: left;">채용공고 제목</th>
+                <th style="width: 14rem;">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="triggerProposalToast('스마트팩토리 설비제어 인력 채용')">
+                <td>1</td>
+                <td class="tit-cell">스마트팩토리 설비제어 인력 채용</td>
+                <td>2026-08-10</td>
+              </tr>
+              <tr onclick="triggerProposalToast('글로벌 무역사무 및 바이어 지원')">
+                <td>2</td>
+                <td class="tit-cell">글로벌 무역사무 및 바이어 지원</td>
+                <td>2026-08-05</td>
+              </tr>
+              <tr onclick="triggerProposalToast('제조공정 품질검사 및 조립 엔지니어')">
+                <td>3</td>
+                <td class="tit-cell">제조공정 품질검사 및 조립 엔지니어</td>
+                <td>2026-07-28</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="talent-modal__footer">
+        <button type="button" class="talent-modal__btn talent-modal__btn--cancel" onclick="closeProposalModal()">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="talent-toast" id="talentToast">
+    <i data-lucide="check-circle-2"></i>
+    <span id="toastMessage">입사제안이 완료되었습니다.</span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+
+      const scrapBtn = document.getElementById('btnDetailScrap');
+      if (scrapBtn) {
+        scrapBtn.addEventListener('click', () => {
+          scrapBtn.classList.toggle('on');
+        });
+      }
+    });
+
+    function openProposalModal() {
+      const modal = document.getElementById('proposalModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeProposalModal() {
+      const modal = document.getElementById('proposalModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function triggerProposalToast(jobTitle) {
+      showToast(`[${jobTitle}] 공고로 입사제안을 전송했습니다.`);
+      closeProposalModal();
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('talentToast');
+      const msg = document.getElementById('toastMessage');
+      if (toast && msg) {
+        msg.textContent = message;
+        toast.classList.add('active');
+        setTimeout(() => {
+          toast.classList.remove('active');
+        }, 2400);
+      }
+    }
+  </script>
+</body>
+</html>
