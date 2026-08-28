@@ -4730,8 +4730,8 @@ button {
   font-size: 1.5rem;
   color: #cbd5e1;
   line-height: 1.6;
-  max-width: 80rem;
   margin-bottom: 2.8rem;
+  word-break: keep-all;
 }
 
 .labor-hero-btns {
