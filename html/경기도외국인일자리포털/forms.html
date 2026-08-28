@@ -140,9 +140,9 @@
   <!-- MAIN CONTENT -->
   <main class="site-main">
     <section class="sub-hero indigo">
-      <div class="inner-section">
-        <h1>자료실</h1>
-        <p>외국인 취업 및 체류와 관련된 유용한 자료를 제공합니다.</p>
+      <div class="inner-section tct">
+        <h1>양식함</h1>
+        <p>외국인 취업 및 체류와 관련된 각종 신청서 양식을 제공합니다.</p>
       </div>
     </section>
 
@@ -290,7 +290,7 @@
           html += `
             <tr>
               <td class="td-num">${displayNo}</td>
-              <td class="td-title"><a href="#" class="forms-row-link" onclick="event.preventDefault();">${item.title}</a></td>
+              <td class="td-title"><a href="./forms-detail.html" class="forms-row-link" >${item.title}</a></td>
               <td class="td-file">${getFileIcon(item.type)}</td>
               <td class="td-date">${item.date}</td>
               <td class="td-views">${item.views.toLocaleString()}</td>

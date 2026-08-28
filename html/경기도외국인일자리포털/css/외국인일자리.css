@@ -99,6 +99,7 @@ ul, ol {
 .btn-primary:hover {
   background-color: #4050e0;
 }
+.tct {text-align: center;}
 
 @media (max-width: 1100px) {
   html {
@@ -4405,3 +4406,22 @@ ul, ol {
   }
 }
 /* //footer */
+
+/* forms-info-detail */
+.board-detail-container { background: #ffffff; padding: 4rem; border-radius: 1.6rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); position: relative; z-index: 10; border: 1px solid #e2e8f0; }
+.board-detail-header { border-bottom: 2px solid #111827; padding-bottom: 2rem; margin-bottom: 3rem; }
+.board-detail-title { font-size: 2.4rem; font-weight: 800; color: #111827; margin-bottom: 1.5rem; word-break: keep-all; }
+.board-meta { display: flex; gap: 2rem; color: #64748b; font-size: 1.45rem; }
+.board-meta .meta-item { display: inline-flex; align-items: center; gap: 0.6rem; }
+.board-meta .meta-item svg { width: 1.6rem; height: 1.6rem; }
+.board-detail-content { min-height: 24rem; font-size: 1.55rem; line-height: 1.8; color: #334155; margin-bottom: 3.6rem; word-break: keep-all; }
+.board-detail-attachment { background: #f8fafc; padding: 2rem; border-radius: 1rem; margin-bottom: 3.6rem; border: 1px solid #e2e8f0; }
+.attachment-title { font-size: 1.55rem; font-weight: 700; margin-bottom: 1rem; color: #111827; display: flex; align-items: center; gap: 0.6rem; }
+.attachment-title svg { width: 1.8rem; height: 1.8rem; }
+.attachment-link { display: inline-flex; align-items: center; gap: 0.8rem; color: #5263FF; font-weight: 600; font-size: 1.45rem; text-decoration: none; word-break: break-all; }
+.attachment-link:hover { text-decoration: underline; }
+.attachment-icon .icon-pdf { color: #e11d48; font-size: 1.8rem; }
+.attachment-icon .icon-doc { color: #2563eb; font-size: 1.8rem; }
+.board-detail-actions { text-align: center; border-top: 1px solid #e2e8f0; padding-top: 3rem; }
+.board-detail-actions .btn { padding: 1.2rem 4rem; font-size: 1.5rem; }
+@media (max-width: 768px) { .board-detail-container { padding: 2.4rem 1.6rem; margin-top: -2rem; border-radius: 1.2rem; } .board-detail-title { font-size: 2rem; } .board-meta { gap: 1.2rem; font-size: 1.3rem; } .board-detail-actions .btn { width: 100%; padding: 1.2rem 0; } }
