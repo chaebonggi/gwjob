@@ -231,7 +231,28 @@
       </div>
     </section>
 
-    <!-- 3. Quick Links (ProcessAndLinks.tsx) -->
+    <!-- 배너 -->
+    <style>
+      .dark-info-banner { position: relative; width: 100%; height: 26rem; display: flex; align-items: center; overflow: hidden; color: #ffffff; background-color: #1e293b; }
+      .dib-bg { position: absolute; inset: 0; z-index: 1; }
+      .dib-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; filter: grayscale(100%) contrast(1.1) brightness(0.9); }
+      .dib-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #1e293b 35%, rgba(30, 41, 59, 0.85) 55%, transparent 100%); }
+      .dib-container { position: relative; z-index: 2; width: 100%; }
+      .dib-left { max-width: 65rem; }
+      .dib-subtitle { display: block; font-size: 1.8rem; font-weight: 600; color: #94a3b8; margin-bottom: 1.2rem; letter-spacing: 0.05em; }
+      .dib-divider { width: 6.5rem; height: 2px; background-color: #475569; margin-bottom: 2rem; }
+      .dib-title { font-size: 4rem; font-weight: 900; line-height: 1.2; margin: 0; letter-spacing: -0.02em; color: #ffffff; }
+      .dib-desc { font-size: 1.6rem; font-weight: 400; color: #cbd5e1; margin-top: 1.6rem; margin-bottom: 0; line-height: 1.6; word-break: keep-all; }
+      @media (max-width: 768px) {
+        .dark-info-banner { height: auto; min-height: 20rem; padding: 3.6rem 0; }
+        .dib-left { max-width: 100%; }
+        .dib-title { font-size: 2.4rem; line-height: 1.25; word-break: keep-all; overflow-wrap: break-word; }
+        .dib-desc { font-size: 1.35rem; margin-top: 1rem; line-height: 1.55; word-break: keep-all; overflow-wrap: break-word; }
+        .dib-subtitle { font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .dib-divider { margin-bottom: 1.2rem; }
+        .dib-overlay { background: linear-gradient(90deg, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 0.88) 70%, rgba(30, 41, 59, 0.75) 100%); }
+      }
+    </style>
     <section class="quick-links">
       <div class="inner-section">
         <div class="quick-grid">
@@ -260,6 +281,23 @@
             <h3 class="q-tit">노동법/생활정보</h3>
             <i data-lucide="scale" class="q-ico"></i>
           </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="site-intro-section dark-info-banner">
+      <div class="dib-bg">
+        <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="포털 배경">
+        <div class="dib-overlay"></div>
+      </div>
+      <div class="inner-section dib-container">
+        <div class="dib-left">
+          <span class="dib-subtitle">Gyeonggi Foreigner Job Portal</span>
+          <div class="dib-divider"></div>
+          <h2 class="dib-title">경기도 외국인 일자리 포털</h2>
+          <p class="dib-desc">경기도 내 취업을 희망하는 외국인 및 외국인 인력을 채용하려는<br>기업을 대상으로 맞춤형 일자리 알선 및 채용 프로그램을 제공합니다.</p>
         </div>
       </div>
     </section>
@@ -408,6 +446,127 @@
             <div class="svc-ico bg-purple"><i data-lucide="home"></i></div>
             <div class="svc-txt"><h3 class="svc-tit">생활정착지원</h3><p class="svc-desc">의료, 주거, 자녀 교육 등 안내</p></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .support-services-section { padding: 6.4rem 0 8rem; background-color: #ffffff; }
+      .support-nv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4rem; }
+      .support-nv-card { display: block; position: relative; height: 38rem; border-radius: 20px; overflow: hidden; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .support-nv-card:hover { transform: translateY(-0.6rem); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
+      .snv-img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+      .snv-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+      .support-nv-card:hover .snv-img img { transform: scale(1.05); }
+      .snv-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.65) 45%, rgba(17, 24, 39, 0.15) 80%, transparent 100%); z-index: 2; }
+      .snv-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.8rem 2.4rem 2.4rem; z-index: 3; display: flex; flex-direction: column; }
+      .snv-accent { width: 4.4rem; height: 0.4rem; border-radius: 9999px; margin-bottom: 1.4rem; }
+      .snv-accent.accent-green { background-color: #059669; }
+      .snv-accent.accent-yellow { background-color: #f59e0b; }
+      .snv-accent.accent-emerald { background-color: #10b981; }
+      .snv-accent.accent-blue { background-color: #3b82f6; }
+      .snv-text h4 { font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.8rem; letter-spacing: -0.02em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+      .snv-text p { font-size: 1.4rem; color: #e2e8f0; font-weight: 400; line-height: 1.55; margin-bottom: 2rem; word-break: keep-all; }
+      .snv-link { font-size: 1.3rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(4px); padding: 0.8rem 1.8rem; border-radius: 9999px; color: #ffffff; width: fit-content; border: 1px solid rgba(255, 255, 255, 0.25); transition: background-color 0.2s ease, color 0.2s ease; }
+      .support-nv-card:hover .snv-link { background: #ffffff; color: #111827; }
+      @media (max-width: 1024px) {
+        .support-nv-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+        .support-nv-card { height: 32rem; border-radius: 16px; }
+        .snv-img img { object-position: center 15%; }
+        .snv-text { padding: 2.2rem 1.8rem 1.8rem; }
+        .snv-text h4 { font-size: 2rem; margin-bottom: 0.6rem; }
+        .snv-text p { font-size: 1.35rem; margin-bottom: 1.6rem; }
+      }
+
+      @media (max-width: 640px) {
+      .support-services-section { padding: 4.8rem 0 5.6rem; }
+      .support-nv-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+      .support-nv-card { height: 24rem; border-radius: 14px; }
+      .support-nv-card:hover { transform: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); }
+      .support-nv-card:hover .snv-img img { transform: none; }
+      .support-nv-card:hover .snv-link { background: rgba(255, 255, 255, 0.18); color: #ffffff; }
+      .support-nv-card:hover .snv-link i { transform: none; }
+      .snv-img img { object-position: center 15%; }
+      .snv-text { padding: 1.6rem 1.4rem 1.4rem; }
+      .snv-accent { width: 3.2rem; height: 0.3rem; margin-bottom: 0.8rem; }
+      .snv-text h4 { font-size: 1.65rem; margin-bottom: 0.4rem; }
+      .snv-text p { font-size: 1.2rem; line-height: 1.4; margin-bottom: 1.2rem; word-break: keep-all; }
+      .snv-link { font-size: 1.15rem; padding: 0.6rem 1.2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .support-services-section { padding: 3.6rem 0 4.2rem; }
+      .support-nv-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+      .support-nv-card { height: 14rem; border-radius: 14px; background-color: #1e293b; }
+      .snv-img { left: auto; right: 0; width: 44%; }
+      .snv-img img { object-position: center top; }
+      .snv-img::after { background: linear-gradient(to right, #1e293b 0%, rgba(30, 41, 59, 0.4) 60%, transparent 100%); }
+      .snv-text { width: 62%; right: auto; padding: 1.6rem; justify-content: center; }
+      .snv-accent { width: 2.8rem; height: 0.3rem; margin-bottom: 0.6rem; }
+      .snv-text h4 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+      .snv-text p { font-size: 1.2rem; line-height: 1.35; margin-bottom: 1rem; color: #cbd5e1; }
+      .snv-link { font-size: 1.1rem; padding: 0.45rem 1.2rem; }
+    }
+    </style>
+    <!-- 외국인 지원서비스 -->
+    <section class="support-services-section">
+      <div class="inner-section">
+        <div class="sec-head">
+          <h2 class="sec-tit">경기도 외국인 지원서비스 소개</h2>
+          <p class="sec-desc">외국인 주민의 안정적인 정착을 위한 다양한 지원 서비스를 만나보세요.</p>
+        </div>
+        <div class="support-nv-grid">
+          <!-- 1. 취업 상담 -->
+          <a href="https://www.gmhr.or.kr/" target="_blank" rel="noopener noreferrer" class="support-nv-card">
+            <div class="snv-img">
+              <img referrerpolicy="no-referrer" src="./images/support_img01.jpg" alt="취업 상담">
+            </div>
+            <div class="snv-text">
+              <div class="snv-accent accent-green"></div>
+              <h4>취업 상담</h4>
+              <p>구인·구직 상담 및<br>취업 연계 지원</p>
+              <span class="snv-link">자세히 보기 &nbsp;&rarr;</span>
+            </div>
+          </a>
+          
+          <!-- 2. 노무·법률 상담 -->
+          <a href="https://www.gg.go.kr/gmigrant/hmpg/info/help/boardSosMain.do" target="_blank" rel="noopener noreferrer" class="support-nv-card">
+            <div class="snv-img">
+              <img referrerpolicy="no-referrer" src="./images/support_img02.jpg" alt="노무·법률 상담">
+            </div>
+            <div class="snv-text">
+              <div class="snv-accent accent-yellow"></div>
+              <h4>노무·법률 상담</h4>
+              <p>비자부터 근로 계약까지<br>전문가 상담 지원</p>
+              <span class="snv-link">자세히 보기 &nbsp;&rarr;</span>
+            </div>
+          </a>
+          
+          <!-- 3. 통역 지원 -->
+          <a href="https://www.socinet.go.kr/" target="_blank" rel="noopener noreferrer" class="support-nv-card">
+            <div class="snv-img">
+              <img referrerpolicy="no-referrer" src="./images/support_img03.jpg" alt="통역 지원">
+            </div>
+            <div class="snv-text">
+              <div class="snv-accent accent-emerald"></div>
+              <h4>통역 지원</h4>
+              <p>다국어 전화상담으로<br>언어 장벽 해소</p>
+              <span class="snv-link">자세히 보기 &nbsp;&rarr;</span>
+            </div>
+          </a>
+          
+          <!-- 4. 서식 자료실 -->
+          <a href="forms.html" class="support-nv-card">
+            <div class="snv-img">
+              <img referrerpolicy="no-referrer" src="./images/support_img04.jpg" alt="서식 자료실">
+            </div>
+            <div class="snv-text">
+              <div class="snv-accent accent-blue"></div>
+              <h4>서식 자료실</h4>
+              <p>각종 신청 서식 및<br>안내 자료 제공</p>
+              <span class="snv-link">자세히 보기 &nbsp;&rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>

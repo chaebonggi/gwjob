@@ -2183,13 +2183,13 @@ ul, ol {
   stroke-width: 2.2px;
 }
 
-.jobs-tab-bar {
+/* .jobs-tab-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
   justify-content: center;
   margin-bottom: 4rem;
-}
+} 
 
 .tab-pill {
   padding: 1rem 2.4rem;
@@ -2212,6 +2212,7 @@ ul, ol {
   border-color: #5263FF;
   box-shadow: 0 4px 12px rgba(82, 99, 255, 0.25);
 }
+  */
 
 .job-grid-4 {
   display: grid;

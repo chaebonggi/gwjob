@@ -140,7 +140,7 @@
   <main class="site-main">
     
     <!-- 1. 서브 히어로 배너 (패턴 및 반투명 모서리 박스) -->
-    <section class="sub-hero about-hero">
+    <!-- <section class="sub-hero about-hero">
       <div class="hero-bg-pattern"></div>
       <div class="inner-section relative-z">
         <div class="hero-tag">
@@ -158,6 +158,95 @@
           <p class="desc-eng">
             Looking for a job in Gyeonggi-do? We offer customized job matching and career services for foreign residents.
           </p>
+        </div>
+      </div>
+    </section> -->
+    <style>
+      .subpage-header { position: relative; background-color: #1e293b; padding: 8rem 0 8.5rem; overflow: hidden; }
+      .sph-bg { position: absolute; inset: 0; background: url("./images/about_bg.jpg") no-repeat center center / cover; z-index: 1; }
+      .sph-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.6) 50%, rgba(15, 23, 42, 0.4) 100%); }
+      .sph-container { position: relative; z-index: 2; }
+      .sph-subtitle { display: block; font-size: 1.8rem; font-weight: 700; color: #60a5fa; margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+      .sph-title { font-size: 4.2rem; font-weight: 900; color: #ffffff; margin: 0 0 1.8rem; letter-spacing: -0.03em; }
+      .sph-desc { font-size: 1.6rem; color: #e2e8f0; font-weight: 400; line-height: 1.65; margin: 0; max-width: 68rem; word-break: keep-all; }
+      .about-features-section { padding: 0; margin-top: 3.2rem; position: relative; z-index: 10; }
+      .ah-features-bar { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); padding: 2.4rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+      .ah-feature { flex: 1; display: flex; align-items: center; gap: 1.6rem; padding: 0.8rem 2.4rem; border-right: 1px solid #f1f5f9; transition: transform 0.2s ease; }
+      .ah-feature:last-child { border-right: none; }
+      .ah-feature:hover { transform: translateY(-0.2rem); }
+      .ah-f-icon { width: 5rem; height: 5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0; }
+      .ah-f-icon.ic-blue { background: #eff6ff; color: #2563eb; }
+      .ah-f-icon.ic-green { background: #ecfdf5; color: #059669; }
+      .ah-f-icon.ic-purple { background: #f5f3ff; color: #7c3aed; }
+      .ah-f-text h4 { font-size: 1.65rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem; letter-spacing: -0.02em; }
+      .ah-f-text p { font-size: 1.3rem; color: #64748b; line-height: 1.45; margin: 0; word-break: keep-all; }
+      @media (max-width: 1024px) {
+        .ah-features-bar { flex-wrap: wrap; gap: 1.6rem 0; padding: 2rem; }
+        .ah-feature { flex: 0 0 50%; border-right: none; padding: 1.2rem 1.6rem; }
+        .ah-feature:nth-child(odd) { border-right: 1px solid #f1f5f9; }
+      }
+      @media (max-width: 768px) {       
+        .subpage-header { padding: 5rem 0 5.5rem; }
+        .sph-title { font-size: 2.8rem; margin-bottom: 1.2rem; }
+        .sph-subtitle { font-size: 1.5rem; margin-bottom: 0.8rem; }
+        .sph-desc { font-size: 1.4rem; line-height: 1.55; }        
+        .about-features-section { margin-top: 2rem; }
+        .ah-features-bar { padding: 1.6rem 1.2rem; }
+        .ah-feature { flex: 0 0 50%; flex-direction: column; text-align: center; gap: 1rem; padding: 1.4rem 0.8rem; }
+        .ah-feature:nth-child(odd) { border-right: 1px solid #f1f5f9; }
+        .ah-feature:nth-child(1), .ah-feature:nth-child(2) { border-bottom: 1px solid #f1f5f9; }
+        .ah-f-icon { width: 4.4rem; height: 4.4rem; font-size: 1.8rem; margin: 0 auto; }
+        .ah-f-text h4 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .ah-f-text p { font-size: 1.2rem; line-height: 1.35; }
+      }
+      @media (max-width: 480px) {
+        .sph-container {text-align: center;}
+        .sph-desc br {display: none;}
+      }
+    </style>
+    <!-- 1. 서브페이지 헤더 배너 (어두운 오버레이 배경) -->
+    <section class="subpage-header">
+      <div class="sph-bg"></div>
+      <div class="inner-section sph-container">
+        <span class="sph-subtitle">외국인 인재와 우수 기업을 잇다</span>
+        <h1 class="sph-title">외국인 고용지원 서비스</h1>
+        <p class="sph-desc">
+          경기도 내 취업을 희망하는 외국인 및 외국인 인력을 채용하려는 기업을 대상으로<br>
+          맞춤형 일자리 알선 및 채용 프로그램을 제공합니다.
+        </p>
+      </div>
+    </section>
+    <section class="about-features-section">
+      <div class="inner-section">
+        <div class="ah-features-bar">
+          <div class="ah-feature">
+            <div class="ah-f-icon ic-blue"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="ah-f-text">
+              <h4>채용정보 검색</h4>
+              <p>맞춤형 채용정보를<br>쉽게 검색하세요</p>
+            </div>
+          </div>
+          <div class="ah-feature">
+            <div class="ah-f-icon ic-blue"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="ah-f-text">
+              <h4>비자정보 안내</h4>
+              <p>비자 종류 및 절차를<br>한눈에 확인하세요</p>
+            </div>
+          </div>
+          <div class="ah-feature">
+            <div class="ah-f-icon ic-green"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="ah-f-text">
+              <h4>역량강화 교육</h4>
+              <p>취업에 필요한 교육과<br>역량을 강화하세요</p>
+            </div>
+          </div>
+          <div class="ah-feature">
+            <div class="ah-f-icon ic-purple"><i class="fa-solid fa-users"></i></div>
+            <div class="ah-f-text">
+              <h4>상담 및 지원</h4>
+              <p>전문 상담을 통해<br>취업을 지원합니다</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

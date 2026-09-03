@@ -25,9 +25,11 @@
         <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
+      <!-- PC 메뉴 -->
       <nav class="header-nav">
+        <a href="intro.html" class="nav-item">INTRO</a>
         <a href="about.html" class="nav-item">사업소개</a>
-        <a href="jobs.html" class="nav-item active">채용정보</a>
+        <a href="jobs.html" class="nav-item">채용정보</a>
         
         <div class="nav-dropdown">
           <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
@@ -38,8 +40,6 @@
           </div>
         </div>
 
-        <a href="visa-info.html" class="nav-item">비자안내</a>
-
         <div class="nav-dropdown">
           <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
           <div class="dropdown-menu">
@@ -49,6 +49,7 @@
         </div>
       </nav>
 
+      <!-- PC 버튼 그룹 -->
       <div class="header-actions">
         <div class="btn-group">
           <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
@@ -70,14 +71,18 @@
         </div>
       </div>
 
+      <!-- 모바일 햄버거 버튼 -->
       <button type="button" class="btn-mobile-menu" id="btn-hamburger" aria-label="메뉴 열기">
         <i data-lucide="menu"></i>
       </button>
+
     </div>
   </header>
 
+  <!-- 모바일 사이드 메뉴 오버레이 -->
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
+  <!-- 모바일 슬라이드 드로어 메뉴 -->
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
       <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
@@ -86,12 +91,15 @@
       </button>
     </div>
 
+    <!-- 모바일 구인/구직 버튼 -->
     <div class="drawer-actions">
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
       <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
     </div>
 
+    <!-- 모바일 네비게이션 리스트 -->
     <nav class="drawer-nav">
+      <a href="intro.html" class="drawer-nav-item">INTRO</a>
       <a href="about.html" class="drawer-nav-item">사업소개</a>
       <a href="jobs.html" class="drawer-nav-item">채용정보</a>
       
@@ -106,8 +114,6 @@
           <a href="visa-score.html">내 비자점수 알아보기</a>
         </div>
       </div>
-
-      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
 
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
@@ -138,14 +144,13 @@
       </div>
     </div>
   </aside>
-  <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
   <main class="site-main">
     
     <!-- 상단 서브 히어로 배너 -->
     <section class="sub-hero indigo">
-      <div class="inner-section tct">
+      <div class="inner-section">
         <h1>채용정보</h1>
         <p>나에게 꼭 맞는 맞춤형 일자리를 찾아보세요.</p>
       </div>
@@ -154,6 +159,49 @@
     <!-- 본문 컨텐츠 -->
     <section class="jobs-main">
       <div class="inner-section">
+        
+        <!-- 1. 메인 검색 필터 박스 -->
+        <div class="jobs-search-card">
+          <div class="search-fields-grid">
+            <div class="field-input-wrap">
+              <i data-lucide="search" class="field-ico"></i>
+              <input type="text" placeholder="검색어를 입력하세요" class="field-input">
+            </div>
+            <div class="field-select-wrap">
+              <select class="field-select">
+                <option value="seongnam">성남시</option>
+                <option value="suwon">수원시</option>
+                <option value="hwaseong">화성시</option>
+                <option value="pyeongtaek">평택시</option>
+              </select>
+              <i data-lucide="chevron-down" class="select-arrow"></i>
+            </div>
+            <div class="field-select-wrap">
+              <select class="field-select">
+                <option value="E-7">E-7 (특정활동)</option>
+                <option value="E-9">E-9 (비전문취업)</option>
+                <option value="F-2">F-2 (거주)</option>
+                <option value="F-4">F-4 (재외동포)</option>
+              </select>
+              <i data-lucide="chevron-down" class="select-arrow"></i>
+            </div>
+            <div class="field-select-wrap">
+              <select class="field-select">
+                <option value="contract">계약직</option>
+                <option value="full">정규직</option>
+                <option value="part">알바</option>
+              </select>
+              <i data-lucide="chevron-down" class="select-arrow"></i>
+            </div>
+          </div>
+
+          <div class="search-btn-center">
+            <button class="btn-dark-search">
+              <i data-lucide="search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+        </div>
 
         <!-- 2. 플랫폼 구분 탭 필터 (data-target 지정) -->
         <div class="jobs-tab-bar">
@@ -163,121 +211,6 @@
           <button class="tab-pill" data-target="visajob">비잡</button>
           <button class="tab-pill" data-target="jobaba">잡아바</button>
           <button class="tab-pill" data-target="self">자체등록</button>
-        </div>
-
-        <style>
-          .platform-tabs-container { display: flex; gap: 3.2rem; border-bottom: 1px solid #e2e8f0; margin-top: 1rem; margin-bottom: 2.4rem; }
-          .platform-tab { padding: 1.2rem 0.4rem; font-size: 1.6rem; font-weight: 600; color: #64748b; border: none; background: transparent; border-bottom: 3px solid transparent; cursor: pointer; transition: all 0.2s ease; }
-          .platform-tab:hover { color: #0f172a; }
-          .platform-tab.active { font-weight: 700; color: #3b82f6; border-bottom: 3px solid #3b82f6; }
-          .jobs-filter-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3.2rem; padding: 0.6rem 0; flex-wrap: wrap; gap: 1.6rem; }
-          .jobs-filter-left { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-          .jobs-search-box { position: relative; width: 28rem; }
-          .jobs-search-box svg { position: absolute; left: 1.6rem; top: 50%; transform: translateY(-50%); color: #64748b; width: 1.6rem; height: 1.6rem; }
-          .jobs-search-box input { width: 100%; padding: 1.1rem 1.6rem 1.1rem 4.2rem; font-size: 1.5rem; border: 1px solid #cbd5e1; border-radius: 9999px; outline: none; box-sizing: border-box; transition: border-color 0.2s ease; }
-          .jobs-search-box input:focus { border-color: #3b82f6; }
-          .filter-dropdown-wrap { position: relative; display: inline-block; }
-          .filter-pill-btn { padding: 1rem 1.8rem; border-radius: 9999px; border: 1px solid #e2e8f0; background: #ffffff; color: #475569; font-size: 1.45rem; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 0.8rem; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
-          .filter-pill-btn:hover { background-color: #f8fafc; }
-          .filter-pill-btn svg { width: 1.4rem; height: 1.4rem; color: #94a3b8; transition: transform 0.2s ease; }
-          .filter-dropdown-wrap.open .filter-pill-btn { border-color: #3b82f6; color: #2563eb; background: #eff6ff; }
-          .filter-dropdown-wrap.open .filter-pill-btn svg { transform: rotate(180deg); color: #2563eb; }
-          .filter-dropdown-menu { position: absolute; top: calc(100% + 0.6rem); left: 0; min-width: 14rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); padding: 0.6rem 0; z-index: 50; display: none; max-height: 22rem; overflow-y: auto; }
-          .filter-dropdown-wrap.open .filter-dropdown-menu { display: block; animation: dropFade 0.2s ease; }
-          .filter-opt-item { width: 100%; text-align: left; padding: 0.8rem 1.4rem; font-size: 1.35rem; color: #334155; background: none; border: none; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
-          .filter-opt-item:hover { background-color: #f1f5f9; color: #0f172a; }
-          .filter-opt-item.active { font-weight: 700; color: #2563eb; background-color: #f0f7ff; }
-          .jobs-sort-right { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
-          .sort-btn { border: none; background: transparent; color: #94a3b8; font-size: 1.5rem; font-weight: 500; cursor: pointer; padding: 0.4rem; }
-          .sort-btn.active { color: #0f172a; font-weight: 700; }
-          @keyframes dropFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-          @media (max-width: 768px) {
-            .platform-tabs-container { gap: 2rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
-            .jobs-filter-row { flex-direction: column; align-items: stretch; gap: 1.4rem; }
-            .jobs-filter-left { width: 100%; }
-            .jobs-search-box { width: 100%; }
-            .jobs-sort-right { margin-left: 0; justify-content: flex-end; }
-          }
-          @media (max-width: 640px) {
-            .jobs-filter-row { margin-bottom: 2rem; gap: 1rem; }
-            .jobs-filter-left { gap: 0.8rem; }
-            .jobs-search-box { width: 100%; }
-            .jobs-search-box svg { left: 1.4rem; width: 1.4rem; height: 1.4rem; }
-            .jobs-search-box input { padding: 0.85rem 1.4rem 0.85rem 3.6rem; font-size: 1.35rem; border-radius: 9999px; }
-            .filter-pill-btn { padding: 0.65rem 1.2rem; font-size: 1.25rem; gap: 0.5rem; }
-            .filter-pill-btn svg { width: 1.1rem; height: 1.1rem; }
-            .filter-dropdown-menu { min-width: 12rem; border-radius: 10px; }
-            .filter-opt-item { padding: 0.7rem 1.2rem; font-size: 1.2rem; }
-            .jobs-sort-right { margin-top: 0.2rem; gap: 1.2rem; }
-            .sort-btn { font-size: 1.25rem; padding: 0.2rem; }
-          }
-        </style>
-
-        <!-- 1. 플랫폼 탭 메뉴 바 (참고 사이트 언더라인 스타일) -->
-        <div class="platform-tabs-container">
-          <button type="button" class="platform-tab active" onclick="handleTabClick('jobaba', this);">잡아바</button>
-          <button type="button" class="platform-tab" onclick="handleTabClick('exhb', this);">자체등록</button>
-          <button type="button" class="platform-tab" onclick="handleTabClick('bjob', this);">비잡(Vijob)</button>
-        </div>
-
-        <!-- 2. 잡아바 전용 검색 및 필터 영역 (초기 노출) -->
-        <div class="jobs-filter-row" id="jobaba-filter-area">
-          <div class="jobs-filter-left">
-          <!-- 검색창 -->
-          <div class="jobs-search-box">
-            <i data-lucide="search"></i>
-            <input type="text" id="jobs-search-keyword" placeholder="검색어 입력">
-          </div>
-
-          <!-- [1] 지역 필터 -->
-          <div class="filter-dropdown-wrap">
-            <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)">
-              지역 <i data-lucide="chevron-down"></i>
-            </button>
-            <div class="filter-dropdown-menu">
-              <button type="button" class="filter-opt-item active">전체 지역</button>
-              <button type="button" class="filter-opt-item">수원시</button>
-              <button type="button" class="filter-opt-item">화성시</button>
-              <button type="button" class="filter-opt-item">평택시</button>
-              <button type="button" class="filter-opt-item">안산시</button>
-              <button type="button" class="filter-opt-item">성남시</button>
-              <button type="button" class="filter-opt-item">시흥시</button>
-            </div>
-          </div>
-
-          <!-- [2] 고용 형태 필터 -->
-          <div class="filter-dropdown-wrap">
-            <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)">
-              고용 형태 <i data-lucide="chevron-down"></i>
-            </button>
-            <div class="filter-dropdown-menu">
-              <button type="button" class="filter-opt-item active">전체 형태</button>
-              <button type="button" class="filter-opt-item">정규직</button>
-              <button type="button" class="filter-opt-item">계약직</button>
-              <button type="button" class="filter-opt-item">아르바이트</button>
-              <button type="button" class="filter-opt-item">인턴</button>
-            </div>
-          </div>
-
-          <!-- [3] 직종 필터 -->
-          <div class="filter-dropdown-wrap">
-            <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)">
-              직종 <i data-lucide="chevron-down"></i>
-            </button>
-            <div class="filter-dropdown-menu">
-              <button type="button" class="filter-opt-item active">전체 직종</button>
-              <button type="button" class="filter-opt-item">제조·생산</button>
-              <button type="button" class="filter-opt-item">물류·운송</button>
-              <button type="button" class="filter-opt-item">IT·개발</button>
-              <button type="button" class="filter-opt-item">서비스·숙박·외식</button>
-              <button type="button" class="filter-opt-item">통번역·사무</button>
-            </div>
-          </div>
-        </div>
-          <div class="jobs-sort-right">
-            <button type="button" class="sort-btn">마감 임박순</button>
-            <button type="button" class="sort-btn active">최신순</button>
-          </div>
         </div>
 
         <!-- 3. 채용 공고 카드 그리드 (메뉴별 카드 최소 1개 이상 추가) -->
@@ -447,59 +380,32 @@
 
   <script src="./js/외국인일자리.js"></script>
   <script>
-    function handleTabClick(type, element) {
-      if (typeof fn_SearchType === 'function') {
-        fn_SearchType(type, element);
-      }
+    /* jobs.html 탭 필터 제어 */
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabPills = document.querySelectorAll('.jobs-tab-bar .tab-pill');
+      const jobCards = document.querySelectorAll('.job-card-item');
 
-      const tabs = document.querySelectorAll('.platform-tabs-container .platform-tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      element.classList.add('active');
+      if (tabPills.length > 0 && jobCards.length > 0) {
+        tabPills.forEach(pill => {
+          pill.addEventListener('click', () => {
+            // 1. 활성화 탭 활성화/비활성화 처리
+            tabPills.forEach(btn => btn.classList.remove('active'));
+            pill.classList.add('active');
 
-      const filterArea = document.getElementById('jobaba-filter-area');
-      if (filterArea) {
-        filterArea.style.display = (type === 'jobaba') ? 'flex' : 'none';
-      }
-    }
+            // 2. 카테고리값 필터링 처리
+            const targetCategory = pill.getAttribute('data-target');
 
-    function toggleFilterMenu(btn) {
-      const currentWrap = btn.closest('.filter-dropdown-wrap');
-      const isOpen = currentWrap.classList.contains('open');
+            jobCards.forEach(card => {
+              const cardCategory = card.getAttribute('data-category');
 
-      document.querySelectorAll('.filter-dropdown-wrap').forEach(wrap => wrap.classList.remove('open'));
-
-      if (!isOpen) {
-        currentWrap.classList.add('open');
-      }
-    }
-
-    document.addEventListener('click', (e) => {
-      const item = e.target.closest('.filter-opt-item');
-      if (item) {
-        const wrap = item.closest('.filter-dropdown-wrap');
-        const btn = wrap.querySelector('.filter-pill-btn');
-
-        // 1. 활성화 클래스 전환
-        wrap.querySelectorAll('.filter-opt-item').forEach(el => el.classList.remove('active'));
-        item.classList.add('active');
-
-        // 2. 버튼 내 아이콘(svg/i)은 유지하고 텍스트만 선택값으로 교체
-        const selectedText = item.textContent.trim();
-        for (let node of btn.childNodes) {
-          if (node.nodeType === Node.TEXT_NODE) {
-            node.nodeValue = selectedText + ' ';
-            break;
-          }
-        }
-
-        // 3. 드롭다운 닫기
-        wrap.classList.remove('open');
-        return;
-      }
-
-      // 바깥 영역 클릭 시 드롭다운 닫기
-      if (!e.target.closest('.filter-dropdown-wrap')) {
-        document.querySelectorAll('.filter-dropdown-wrap').forEach(wrap => wrap.classList.remove('open'));
+              if (targetCategory === 'all' || cardCategory === targetCategory) {
+                card.style.display = 'flex'; // 노출
+              } else {
+                card.style.display = 'none'; // 숨김
+              }
+            });
+          });
+        });
       }
     });
   </script>
