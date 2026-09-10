@@ -2,7 +2,7 @@
 @font-face { font-family: 'KerisKedyuche'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2') format('woff2'); font-weight: 700; font-display: swap; } 
 html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400; } 
 .not_scr { overflow: hidden; } 
-.event15 { width: 100%; margin: 0 auto; overflow: hidden; } 
+.event15 { width: 100%; max-width: 1920px; margin: 0 auto; overflow: hidden; } 
 .event15 .innerSection { position: relative; max-width: 1200px; margin: 0 auto; padding: 0 24px; } 
 .event15 .ev-top { position: relative; z-index: 10; background-color: #2c4179; width: 100%; } 
 .event15 .ev-top__title { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; } 
@@ -89,9 +89,7 @@ html { font-size: 8px; }
     .event15 .ev-deco-leaf { display: none; }
     .event15 .period-title { font-size: 2rem; }
     .event15 .period-sub { font-size: 1.4rem; }
-    .event15 .ev-sec-title { font-size: 2.2rem; margin-bottom: 2.2rem; }
     .event15 .ev-step__list { gap: 0.8rem; }
-    .event15 .ev-step__item { width: 110px; }
     .event15 .card-box { height: 105px; border-radius: 1.4rem; }
     .event15 .icon-wrap { width: 45px; height: 45px; }
     .event15 .ev-step__arrow { width: 18px; margin-bottom: 3rem; }
@@ -103,7 +101,7 @@ html { font-size: 8px; }
 @media (max-width: 480px) {
     .event15 .ev-step__list { flex-direction: column; gap: 1.5rem; }
     .event15 .ev-step__item { width: 100%; max-width: 240px; }
-    .event15 .ev-step__arrow { transform: rotate(90deg); margin: 1.5rem; width: 22px; }
+    .event15 .ev-step__arrow { transform: rotate(90deg); margin-bottom: 1.5rem; width: 22px; }
     .event15 .ev-gift__list { flex-wrap: wrap; justify-content: center; gap: 2.5rem 1rem; }
     .event15 .ev-gift__item { width: 45%; }
 }
