@@ -93,7 +93,6 @@ html { font-size: 8px; }
     .event15 .ev-step__list { gap: 0.8rem; }
     .event15 .ev-step__item { width: 110px; }
     .event15 .card-box { height: 105px; border-radius: 1.4rem; }
-    .event15 .step-badge { width: 24px; height: 24px; font-size: 1.1rem; top: -10px; }
     .event15 .icon-wrap { width: 45px; height: 45px; }
     .event15 .ev-step__arrow { width: 18px; margin-bottom: 3rem; }
     .event15 .ev-gift__board { padding: 3rem 1rem 2.5rem; }
@@ -104,7 +103,7 @@ html { font-size: 8px; }
 @media (max-width: 480px) {
     .event15 .ev-step__list { flex-direction: column; gap: 1.5rem; }
     .event15 .ev-step__item { width: 100%; max-width: 240px; }
-    .event15 .ev-step__arrow { transform: rotate(90deg); margin: 0; width: 22px; }
+    .event15 .ev-step__arrow { transform: rotate(90deg); margin: 1.5rem; width: 22px; }
     .event15 .ev-gift__list { flex-wrap: wrap; justify-content: center; gap: 2.5rem 1rem; }
     .event15 .ev-gift__item { width: 45%; }
 }
