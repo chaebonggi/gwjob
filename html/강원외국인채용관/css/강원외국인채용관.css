@@ -280,7 +280,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .job-post-card:hover .post-title{color:#2563eb;}
 .post-location{font-size:1.25rem;color:#64748b;display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;}
 .post-location svg{width:1.4rem;height:1.4rem;color:#94a3b8;}
-.post-salary{font-size:1.35rem;font-weight:700;color:#0f172a;margin-bottom:1.6rem;}
+.post-salary{font-size:1.2rem;font-weight:500;color:#8f9092;margin-bottom:1.6rem;}
 .card-bottom-row{display:flex;align-items:center;justify-content:space-between;gap:0.6rem;padding-top:1.2rem;border-top:1px solid #f1f5f9;margin-top:auto;width:100%;}
 .badge-visa-pill{font-size:1.1rem;font-weight:700;padding:0.3rem 0.6rem;background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;border-radius:0.6rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .link-detail{display:inline-flex;align-items:center;gap:0.2rem;font-size:1.2rem;font-weight:700;color:#2563eb;white-space:nowrap;flex-shrink:0;}
