@@ -23,7 +23,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 2.4rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
 .header-left { display: flex; align-items: center; gap: 40px; }
 .site-header .header-logo-img-wrap, .site-header a.header-logo-img-wrap:link, .site-header a.header-logo-img-wrap:visited { display: flex; align-items: center; height: 100%; }
-.site-header .site-logo-img { height: 23px; width: auto; object-fit: contain; vertical-align: middle; }
+.site-header .site-logo-img { height: 40px; width: auto; object-fit: contain; vertical-align: middle; }
 .header-nav { display: flex; align-items: center; gap: 32px; }
 .site-header .nav-item, .site-header a.nav-item:link, .site-header a.nav-item:visited { font-size: 1.5rem; font-weight: 500; color: #e2e8f0; transition: color 0.2s ease; white-space: nowrap; }
 .site-header .nav-item:hover, .site-header a.nav-item:link:hover, .site-header a.nav-item:visited:hover, .site-header a.nav-item.active, .site-header a.nav-item.active:link, .site-header a.nav-item.active:visited { color: #60a5fa !important; font-weight: 700; }
@@ -89,7 +89,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .m-lang-options li { padding: 10px 16px; font-size: 1.4rem; color: #475569; cursor: pointer; transition: background-color 0.15s ease, color 0.15s ease; }
 .m-lang-options li:hover, .m-lang-options li.active { background-color: #eff6ff; color: #2563eb; font-weight: 700; }
 @media (max-width: 1200px) { .header-nav, .site-header .btn-login, .site-header .btn-signup, .site-header .lang-selector { display: none !important; } .btn-mobile-menu { display: block !important; } }
-@media (max-width: 640px) {.header-inner{height: 54px; padding: 0 1rem;} .site-header .site-logo-img {height: 18px;}}
+@media (max-width: 640px) {.header-inner{height: 54px; padding: 0 1rem;} .site-header .site-logo-img {height: 30px;}}
 /* //header */
 
 /* main */

@@ -1,0 +1,194 @@
+html { font-size: 10px; margin: 0 auto; max-width: 1440px;}
+.mg80 { margin: 8rem 0; }
+.pd80 { padding: 8rem 0; }
+.module-wrap.com_navi { display: none; }
+.mod_salary01, .mod_finance05 { display: none; }
+#svisual > img {left: initial; margin-left: 0 !important;}
+
+
+/* 공통 타이틀 */
+h3.mod_tit { font-size: 4rem; margin-bottom: 3rem; font-weight: 600; text-align: center; color: #222; }
+h3.mod_tit span {font-size: 2rem; font-weight: 500; text-align: center; color: #cccccc; }
+@media all and (max-width:1024px){
+ }
+ @media all and (max-width:768px) {
+ }
+ @media all and (max-width:640px){
+ }
+
+
+/* 메인 */
+.mod_visual { width: 100%; height: 600px; position: relative; background: url(../images/corp21/visual.jpg) no-repeat; background-size: cover; }
+.mod_visual .container { display: flex; height: inherit; padding: 60px 10px; position: initial; }
+.mod_visual .cert_wrap { position: absolute; top: 0; right: 80px; padding: 18px 10px; background-color: rgba(24, 30, 95, 0.5); border-radius: 0 0 10px 10px; }
+.mod_visual .cert_wrap .cert_img { margin-bottom: 10px; text-align: center; }
+.mod_visual .cert_wrap p { color: #fff; font-size: 1.4rem; font-weight: 500; text-align: center; }
+.mod_visual .txt_wrap { margin-top: 10rem; text-align: left; }
+.mod_visual .entReptCmmt { margin-bottom: 2rem; font-size: 2.8rem; color: #fff; font-weight: 500; }
+.mod_visual .entReptCmmt b { display: block; font-size: 2.8rem; color: #fff; font-weight: 700; }
+.mod_visual .logo_wrap { display: flex; align-items: flex-end; gap: 20px; }
+.mod_visual .comName { color: #fff; font-size: 5rem; font-weight: 700; }
+.sns_mod_info.sty01 { padding: 10rem 0; background: url(../images/corp21/info.jpg) no-repeat !important; background-size: cover !important; }
+.sns_mod_info.sty01 .info_wrap { display: flex; gap: 3rem; }
+.sns_mod_info.sty01 .info_wrap > li { flex: 1; text-align: center; font-size: 1.8rem; color: #fff; }
+.sns_mod_info.sty01 .info_wrap .cnt span { font-size: 2rem; color: #fff; }
+.sns_mod_info.sty01 .ico { margin: 0 auto 2.0rem auto; }
+.sns_mod_info.sty01 ul li:last-child { margin-right: 0; }
+.sns_mod_info.sty01 ul li .ico { width: 64px; height: 84px; background-size: contain !important; }
+.sns_mod_info.sty01 ul li:nth-child(1) .ico { background: url(../images/corp21/ico_finance01.png) no-repeat center; }
+.sns_mod_info.sty01 ul li:nth-child(2) .ico { background: url(../images/corp21/ico_finance02.png) no-repeat center; }
+.sns_mod_info.sty01 ul li:nth-child(3) .ico { background: url(../images/corp21/ico_finance03.png) no-repeat center; }
+.sns_mod_info.sty01 ul li:nth-child(4) .ico { background: url(../images/corp21/ico_finance04.png) no-repeat center; }
+
+@media all and (max-width: 768px) {
+html { font-size: 8px; }
+.mg80 { margin: 4rem 0; }
+.pd80 { padding: 4rem 0; }
+h3.mod_tit { font-size: 3rem; }
+.mod_visual { height: 250px; }
+.mod_visual .container { align-items: center; padding: 40px 0; }
+.mod_visual .txt_wrap { width: 100%; margin-top: initial; text-align: center; }
+.mod_visual .logo_wrap { flex-direction: column; align-items: center; }
+.mod_visual .entReptCmmt { font-size: 1.6rem; }
+.mod_visual .imgCi img { max-width: 200px; }
+.mod_visual .cert_wrap { right: 1rem; padding: 1rem; }
+.mod_visual .cert_wrap .cert_img img { max-width: 3rem; }
+.mod_visual .cert_wrap p { font-size: 0.5rem; }
+.sns_mod_info.sty01 { padding: 5rem 0; }
+.sns_mod_info.sty01 .info_wrap { flex-wrap: wrap; }
+.sns_mod_info.sty01 .info_wrap > li { flex-basis: 40%; }
+.sns_mod_info.sty01 .info_wrap > li > div.ico { height: 40px; }
+}
+
+/* 연혁 */
+.mod_history01 .history { padding: 4rem 0; }
+.mod_history01 .history > div { min-height: auto; margin-bottom: 0; position: relative; display: flex; align-items: flex-start; }
+.mod_history01 .history > div:last-child { margin-bottom: 0; }
+.mod_history01 .history > div::after { content: ""; display: block; position: absolute; width: 0.4rem; background-color: #dcdcdc; left: 50%; transform: translateX(-50%); top: 0; height: 100%; border-radius: 0; z-index: 0; }
+.mod_history01 .history > div:last-child::after { height: 2.5rem; }
+.mod_history01 .history > div > span { background: #0f6fb8; color: #fff; border-radius: 3rem; height: 4.6rem; line-height: 4.6rem; padding: 0 4.5rem 0 2rem; font-size: 2rem; font-weight: 700; letter-spacing: 0; position: absolute; left: 50%; right: auto; transform: translateX(-100%); margin: 0 0 0 1.7rem; top: 0; z-index: 2; box-shadow: none; }
+.mod_history01 .history > div > span::after { content: ""; display: block; width: 1.8rem; height: 1.8rem; background-color: #fff; border-radius: 50%; position: absolute; right: 1.4rem; left: auto; top: 50%; transform: translateY(-50%); box-shadow: none; }
+.mod_history01 .history > div:nth-child(even) > span { left: 50%; right: auto; transform: none; margin: 0 0 0 -2.3rem; padding: 0 2rem 0 4.5rem; }
+.mod_history01 .history > div:nth-child(even) > span::after { left: 1.4rem; right: auto; }
+.mod_history01 .history > div > ul { width: calc(50% - 6rem); margin-left: auto; margin-right: 0; padding: 1rem 0 3.5rem 0; box-sizing: border-box; }
+.mod_history01 .history > div:nth-child(even) > ul { margin-left: 0; margin-right: auto; }
+.mod_history01 .history > div:last-child > ul { padding-bottom: 0; }
+.mod_history01 .history > div > ul > li { display: block; margin: 0 0 0.8rem 0; padding: 0; text-align: left; }
+.mod_history01 .history > div:nth-child(even) > ul > li { text-align: left; }
+.mod_history01 .history > div > ul > li .month { display: none; }
+.mod_history01 .history > div ul > li .event span { display: block; position: relative; font-size: 1.6rem; color: #333; line-height: 1.6; margin: 0 0 0.6rem 0; word-break: keep-all; padding-left: 1.6rem; padding-right: 0; text-align: left; }
+.mod_history01 .history > div ul > li .event span::before { content: "•"; position: absolute; left: 0; right: auto; top: 0; color: #0f6fb8; font-size: 1.6rem; line-height: 1.6; }
+@media all and (max-width: 768px) {
+.mod_history01 .history { max-height: 48rem; overflow-y: auto; padding: 1.5rem 1rem 1.5rem 0; -webkit-overflow-scrolling: touch; }
+.mod_history01 .history::-webkit-scrollbar { width: 0.4rem; }
+.mod_history01 .history::-webkit-scrollbar-thumb { background: #0f6fb8; border-radius: 0.4rem; }
+.mod_history01 .history::-webkit-scrollbar-track { background: #f1f1f1; }
+.mod_history01 .history > div { display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 2.4rem; }
+.mod_history01 .history > div:last-child { margin-bottom: 0; }
+.mod_history01 .history > div::after { display: none; }
+.mod_history01 .history > div > span, .mod_history01 .history > div:nth-child(even) > span { position: static; transform: none; margin: 0 0 1rem 0; height: 3.2rem; line-height: 3.2rem; padding: 0 1.4rem; font-size: 1.4rem; border-radius: 1.6rem; }
+.mod_history01 .history > div > span::after, .mod_history01 .history > div:nth-child(even) > span::after { display: none; }
+.mod_history01 .history > div > ul, .mod_history01 .history > div:nth-child(even) > ul { width: 100%; margin: 0; padding: 0; }
+.mod_history01 .history > div ul > li .event span { font-size: 1.35rem; line-height: 1.5; margin-bottom: 0.4rem; padding-left: 1.4rem; }
+}
+
+/* Company overview */
+.mod_overview { width: 100%; margin: 2rem 0; padding: 0; background: transparent; }
+.mod_overview .overview_wrap { display: flex; gap: 2rem; align-items: stretch; width: 100%; }
+.mod_overview .intro_card { flex: 0 0 calc(50% - 1rem); position: relative; border-radius: 2rem; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 76rem; height: 100%; box-sizing: border-box; }
+.mod_overview .intro_card .bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.mod_overview .intro_card .bg img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.mod_overview .intro_card .bg::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); }
+.mod_overview .intro_card .txt_wrap { position: relative; z-index: 2; padding: 4rem 3rem; text-align: center; color: #fff; width: 100%; box-sizing: border-box; }
+.mod_overview .intro_card .logo { width: 15rem; margin: 0 auto 2.4rem auto; }
+.mod_overview .intro_card .logo img { width: 100%; height: auto; display: block; margin: 0 auto; }
+.mod_overview .intro_card .desc { font-size: 2rem; font-weight: 500; line-height: 1.65; margin: 0 0 2rem 0; word-break: keep-all; letter-spacing: -0.03rem; }
+.mod_overview .intro_card .sub_desc { font-size: 2rem; font-weight: 300; line-height: 1.6; color: rgba(255, 255, 255, 0.85); margin: 0; word-break: keep-all; letter-spacing: -0.03rem; }
+.mod_overview .vm_wrap { flex: 0 0 calc(50% - 1rem); display: flex; flex-direction: column; gap: 2rem; }
+.mod_overview .vm_item { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; flex: 1; min-height: 36rem; }
+.mod_overview .vm_item .card_box { position: relative; border-radius: 2rem; overflow: hidden; height: 100%; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
+.mod_overview .vm_item .card_box .card_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.mod_overview .vm_item .card_box .card_bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mod_overview .vm_item .card_box .card_bg::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(30, 115, 190, 0.78); }
+.mod_overview .vm_item .card_box .card_txt { position: relative; z-index: 2; width: calc(100% - 3.2rem); height: calc(100% - 3.2rem); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 1.4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 2.5rem 1.5rem; box-sizing: border-box; }
+.mod_overview .vm_item .card_box .card_txt h4 { font-size: 2.2rem; font-weight: 700; margin: 0 0 1.2rem 0; position: relative; padding-bottom: 0.8rem; }
+.mod_overview .vm_item .card_box .card_txt h4::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 2.4rem; height: 0.2rem; background: #fff; }
+.mod_overview .vm_item .card_box .card_txt p { font-size: 1.8rem; line-height: 1.6; margin: 0; word-break: keep-all; letter-spacing: -0.03rem; font-weight: 400; color: rgba(255, 255, 255, 0.95); }
+.mod_overview .vm_item .photo_box { border-radius: 2rem; overflow: hidden; height: 100%; position: relative; box-sizing: border-box; }
+.mod_overview .vm_item .photo_box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+@media all and (max-width: 1024px) {
+.mod_overview .overview_wrap { flex-direction: column; gap: 2rem; }
+.mod_overview .intro_card { width: 100%; flex: auto; min-height: auto; height: auto; border-radius: 1.8rem; }
+.mod_overview .intro_card .txt_wrap { padding: 5rem 2.4rem; }
+.mod_overview .intro_card .logo { width: 14rem; margin-bottom: 2rem; }
+.mod_overview .intro_card .desc { font-size: 1.8rem; margin-bottom: 1.6rem; }
+.mod_overview .intro_card .sub_desc { font-size: 1.6rem; }
+.mod_overview .vm_wrap { width: 100%; flex: auto; gap: 2rem; }
+.mod_overview .vm_item { grid-template-columns: 1fr 1fr; height: auto; min-height: 28rem; gap: 2rem; }
+.mod_overview .vm_item .card_box, .mod_overview .vm_item .photo_box { border-radius: 1.8rem; height: 100%; min-height: 28rem; }
+.mod_overview .vm_item .card_box .card_txt { padding: 3rem 1.5rem; }
+.mod_overview .vm_item .card_box .card_txt h4 { font-size: 2.2rem; }
+.mod_overview .vm_item .card_box .card_txt p { font-size: 1.7rem; }
+}
+@media all and (max-width: 768px) {
+.mod_overview .intro_card .txt_wrap { padding: 4rem 2rem; }
+.mod_overview .intro_card .desc { font-size: 1.7rem; }
+.mod_overview .intro_card .sub_desc { font-size: 1.5rem; }
+.mod_overview .vm_item { min-height: 25rem; gap: 1.5rem; }
+.mod_overview .vm_item .card_box, .mod_overview .vm_item .photo_box { min-height: 25rem; }
+.mod_overview .vm_item .card_box .card_txt p { font-size: 1.55rem; }
+}
+@media all and (max-width: 480px) {
+.mod_overview { margin: 1.5rem 0; }
+.mod_overview .overview_wrap { gap: 1.2rem; }
+.mod_overview .intro_card { min-height: auto; border-radius: 1.4rem; }
+.mod_overview .intro_card .txt_wrap { padding: 2.8rem 1.6rem; }
+.mod_overview .intro_card .logo { width: 11rem; margin-bottom: 1.4rem; }
+.mod_overview .intro_card .desc { font-size: 1.45rem; line-height: 1.5; margin-bottom: 1.2rem; }
+.mod_overview .intro_card .desc br { display: none; }
+.mod_overview .intro_card .sub_desc { font-size: 1.3rem; line-height: 1.45; }
+.mod_overview .intro_card .sub_desc br { display: none; }
+.mod_overview .vm_wrap { gap: 1.2rem; }
+.mod_overview .vm_item { display: block; height: auto; min-height: auto; }
+.mod_overview .vm_item .photo_box { display: none; }
+.mod_overview .vm_item .card_box { width: 100%; height: auto; min-height: auto; border-radius: 1.4rem; padding: 1.2rem; }
+.mod_overview .vm_item .card_box .card_txt { width: 100%; height: auto; min-height: auto; border-radius: 1rem; padding: 2rem 1.4rem; }
+.mod_overview .vm_item .card_box .card_txt h4 { font-size: 1.8rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; }
+.mod_overview .vm_item .card_box .card_txt p { font-size: 1.35rem; line-height: 1.45; }
+.mod_overview .vm_item .card_box .card_txt p br { display: none; }
+}
+
+/* 핵심가치 */
+.mod_keyvalue { width: 100%; padding: 0; background: transparent; }
+.mod_keyvalue .keyvalue_wrap { position: relative; border-radius: 2rem; overflow: hidden; min-height: 28rem; display: flex; align-items: center; justify-content: center; }
+.mod_keyvalue .keyvalue_wrap .bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.mod_keyvalue .keyvalue_wrap .bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mod_keyvalue .keyvalue_wrap .bg::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(22, 42, 102, 0.88); }
+.mod_keyvalue .content_box { position: relative; z-index: 2; width: 100%; padding: 4.5rem 3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; }
+.mod_keyvalue .kv_title { font-size: 2.2rem; font-weight: 700; color: #fff; margin: 0 0 1.4rem 0; position: relative; padding-bottom: 1rem; letter-spacing: -0.03rem; text-align: center; }
+.mod_keyvalue .kv_title::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 2.6rem; height: 0.2rem; background: #fff; }
+.mod_keyvalue .keyValue { list-style: none; padding: 0; margin: 1.5rem 0 0 0; display: flex; flex-direction: column; gap: 2rem; width: auto; max-width: 100%; }
+.mod_keyvalue .keyValue .list { display: flex; align-items: center; gap: 2rem; }
+.mod_keyvalue .keyValue .list .tit { flex: 0 0 13rem; height: 3.8rem; line-height: 3.6rem; border: 1px solid rgba(255, 255, 255, 0.7); background: rgba(14, 28, 77, 0.45); border-radius: 2rem; color: #fff; font-size: 1.6rem; font-weight: 600; text-align: center; box-sizing: border-box; letter-spacing: -0.03rem; }
+.mod_keyvalue .keyValue .list .desc { font-size: 1.8rem; font-weight: 400; color: #fff; line-height: 1.5; word-break: keep-all; letter-spacing: -0.03rem; }
+@media all and (max-width: 1024px) {
+.mod_keyvalue .keyvalue_wrap { min-height: 25rem; border-radius: 1.6rem; }
+.mod_keyvalue .content_box { padding: 3.5rem 2rem; }
+.mod_keyvalue .kv_title { font-size: 2rem; margin-bottom: 1.2rem; padding-bottom: 0.8rem; }
+.mod_keyvalue .keyValue { margin-top: 1rem; gap: 1rem; }
+.mod_keyvalue .keyValue .list { gap: 1.5rem; }
+.mod_keyvalue .keyValue .list .tit { flex: 0 0 12rem; height: 3.4rem; line-height: 3.2rem; font-size: 1.5rem; }
+.mod_keyvalue .keyValue .list .desc { font-size: 1.65rem; }
+}
+@media all and (max-width: 768px) {
+.mod_keyvalue .keyvalue_wrap { min-height: auto; }
+.mod_keyvalue .content_box { padding: 3.5rem 2rem; }
+.mod_keyvalue .keyValue .list .tit { flex: 0 0 11rem; height: 3.2rem; line-height: 3rem; font-size: 1.4rem; }
+.mod_keyvalue .keyValue .list .desc { font-size: 1.5rem; }
+}
+@media all and (max-width: 480px) {
+.mod_keyvalue .content_box { padding: 3rem 1.6rem; }
+.mod_keyvalue .keyValue .list { flex-direction: column; align-items: center; }
+.mod_keyvalue .keyValue .list .tit { flex: auto; height: 2.8rem; line-height: 2.6rem; padding: 0 1.4rem; font-size: 1.35rem; }
+.mod_keyvalue .keyValue .list .desc { font-size: 1.45rem; line-height: 1.45; }
+}
