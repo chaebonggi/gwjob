@@ -1110,6 +1110,44 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 @media (max-width: 1200px) { .labor-tabs-nav { overflow-x: auto; } }
 @media (max-width: 1024px) { .labor-summary-grid { grid-template-columns: repeat(2, 1fr); } .calc-grid-layout { grid-template-columns: 1fr; } .hotline-grid-3 { grid-template-columns: 1fr; } }
 @media (max-width: 768px) { .labor-hero-banner { padding: 3.2rem 2rem; } .labor-hero-title { font-size: 2.6rem; } .two-card-grid, .three-card-grid, .rules-grid-4 { grid-template-columns: 1fr; } .labor-summary-grid { grid-template-columns: 1fr; } .download-banner-bar { flex-direction: column; align-items: flex-start; } .calc-header-row { flex-direction: column; } .labor-content-box { padding: 2.4rem 1.6rem; } }
+
+.contract-modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,0.65);backdrop-filter:blur(3px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:2.0rem;}
+.contract-modal-overlay.hidden{display:none !important;}
+.contract-modal-box{background:#ffffff;border-radius:2.0rem;width:100%;max-width:72.0rem;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,0.2);animation:modalFadeIn 0.2s ease;}
+@keyframes modalFadeIn{from{opacity:0;transform:scale(0.96);}to{opacity:1;transform:scale(1);}}
+.contract-modal-head{display:flex;align-items:center;justify-content:space-between;padding:2.2rem 2.8rem;border-bottom:1px solid #e2e8f0;}
+.head-tit-wrap{display:flex;align-items:center;gap:1.0rem;}
+.ico-modal-head{width:2.2rem;height:2.2rem;color:#2563eb;}
+.contract-modal-head h3{font-size:1.85rem;font-weight:800;color:#0f172a;margin:0;}
+.btn-modal-close{width:3.2rem;height:3.2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#64748b;transition:background 0.15s;}
+.btn-modal-close:hover{background:#f1f5f9;color:#0f172a;}
+.btn-modal-close svg{width:2.0rem;height:2.0rem;}
+.contract-modal-body{padding:2.4rem 2.8rem;overflow-y:auto;flex:1;}
+.modal-notice-txt{font-size:1.35rem;color:#64748b;line-height:1.55;margin:0 0 1.8rem;}
+.contract-table-wrap{border:1px solid #e2e8f0;border-radius:1.2rem;overflow:hidden;}
+.contract-table{width:100%;border-collapse:collapse;font-size:1.35rem;text-align:center;}
+.contract-table thead th{background:#f8fafc;padding:1.3rem 1.0rem;color:#475569;font-weight:700;border-bottom:1px solid #e2e8f0;white-space:nowrap;}
+.contract-table tbody td{padding:1.2rem 1.0rem;border-bottom:1px solid #f1f5f9;color:#334155;vertical-align:middle;}
+.contract-table tbody tr:last-child td{border-bottom:none;}
+.contract-table tbody tr:hover{background:#f8fafc;}
+.contract-table .col-num{color:#94a3b8;font-weight:600;}
+.contract-table .col-name{text-align:left;padding-left:2.0rem;color:#1e293b;}
+.contract-table .col-name strong{color:#2563eb;font-weight:700;}
+.btn-tbl-down{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.6rem 1.4rem;background:#2563eb;color:#ffffff !important;border-radius:0.6rem;font-size:1.25rem;font-weight:700;transition:background 0.15s;}
+.btn-tbl-down:hover{background:#1d4ed8;}
+.btn-tbl-down svg{width:1.4rem;height:1.4rem;}
+.contract-modal-foot{padding:1.6rem 2.8rem;border-top:1px solid #e2e8f0;display:flex;justify-content:flex-end;}
+.btn-modal-confirm{padding:1.0rem 2.4rem;background:#0f172a;color:#ffffff;border-radius:0.8rem;font-size:1.4rem;font-weight:700;cursor:pointer;}
+.btn-modal-confirm:hover{background:#1e293b;}
+@media (max-width:768px){
+.contract-modal-box{max-height:90vh;}
+.contract-modal-head,.contract-modal-body,.contract-modal-foot{padding:1.6rem 1.8rem;}
+.contract-table colgroup col:nth-child(1),.contract-table thead th:nth-child(1),.contract-table tbody td:nth-child(1){display:none;}
+.contract-table colgroup col:nth-child(3){width:4.8rem;}
+.contract-table .col-name{padding-left:1.2rem;}
+.btn-tbl-down span{display:none;}
+.btn-tbl-down{padding:0.6rem 0.8rem;}
+}
 /* //labor-law */
 
 /* notices */

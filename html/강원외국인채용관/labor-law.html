@@ -264,12 +264,12 @@
               <div class="download-banner-bar">
                 <div class="banner-txt">
                   <h4>고용노동부 표준근로계약서 양식 다운로드</h4>
-                  <p>한국어-영어-중국어-베트남어 다국어 표준 서식을 제공합니다.</p>
+                  <p>국가별 다국어 번역본 표준 서식을 다운로드할 수 있습니다.</p>
                 </div>
-                <a href="https://www.moel.go.kr" target="_blank" rel="noopener noreferrer" class="btn-down-white">
+                <button type="button" class="btn-down-white" onclick="openContractModal()">
                   <i data-lucide="download"></i>
-                  <span>표준 양식 다운로드 (고용노동부)</span>
-                </a>
+                  <span>표준근로계약서 다운로드</span>
+                </button>
               </div>
             </div>
           </div>
@@ -691,7 +691,119 @@
     </div>
   </footer>
   <!-- //footer -->
+  <!-- 다국어 표준근로계약서 다운로드 모달 팝업 -->
+  <div class="contract-modal-overlay hidden" id="modalContractDownload">
+    <div class="contract-modal-box">
+      <div class="contract-modal-head">
+        <div class="head-tit-wrap">
+          <i data-lucide="file-text" class="ico-modal-head"></i>
+          <h3>표준근로계약서 (다국어 버전) 다운로드</h3>
+        </div>
+        <button type="button" class="btn-modal-close" onclick="closeContractModal()" aria-label="닫기">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
 
+      <div class="contract-modal-body">
+        <p class="modal-notice-txt">
+          고용노동부에서 제공하는 국가별 다국어 표준근로계약서 서식입니다. 필요하신 언어의 양식을 다운로드하여 사용하세요.
+        </p>
+
+        <div class="contract-table-wrap">
+          <table class="contract-table">
+            <colgroup>
+              <col style="width: 70px;">
+              <col style="width: auto;">
+              <col style="width: 140px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>파일명 / 구분</th>
+                <th>다운로드</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-num">1</td>
+                <td class="col-name"><strong>표준근로계약서 (한국어)</strong></td>
+                <td><a href="./download/표준근로계약서.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">2</td>
+                <td class="col-name"><strong>네팔</strong> 근로계약서</td>
+                <td><a href="./download/네팔.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">3</td>
+                <td class="col-name"><strong>동티모르</strong> 근로계약서</td>
+                <td><a href="./download/동티모르.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">4</td>
+                <td class="col-name"><strong>몽골</strong> 근로계약서</td>
+                <td><a href="./download/몽골.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">5</td>
+                <td class="col-name"><strong>미얀마</strong> 근로계약서</td>
+                <td><a href="./download/미얀마.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">6</td>
+                <td class="col-name"><strong>방글라데시</strong> 근로계약서</td>
+                <td><a href="./download/방글라데시.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">7</td>
+                <td class="col-name"><strong>베트남</strong> 근로계약서</td>
+                <td><a href="./download/베트남.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">8</td>
+                <td class="col-name"><strong>우즈베키스탄</strong> 근로계약서</td>
+                <td><a href="./download/우즈베키스탄.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">9</td>
+                <td class="col-name"><strong>인도네시아</strong> 근로계약서</td>
+                <td><a href="./download/인도네시아.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">10</td>
+                <td class="col-name"><strong>중국</strong> 근로계약서</td>
+                <td><a href="./download/중국.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">11</td>
+                <td class="col-name"><strong>캄보디아</strong> 근로계약서</td>
+                <td><a href="./download/캄보디아.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">12</td>
+                <td class="col-name"><strong>키르기스스탄</strong> 근로계약서</td>
+                <td><a href="./download/키르기스스탄.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">13</td>
+                <td class="col-name"><strong>태국</strong> 근로계약서</td>
+                <td><a href="./download/태국.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+              <tr>
+                <td class="col-num">14</td>
+                <td class="col-name"><strong>파키스탄, 필리핀, 스리랑카, 카자흐스탄 등</strong> 근로계약서</td>
+                <td><a href="./download/파키스탄,필리핀,스리랑카,카자흐스탄,한국어.hwp" download class="btn-tbl-down"><i data-lucide="download"></i><span>다운로드</span></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="contract-modal-foot">
+        <button type="button" class="btn-modal-confirm" onclick="closeContractModal()">닫기</button>
+      </div>
+    </div>
+  </div>
   <!-- 기초노동법 탭 & 실시간 계산기 스크립트 -->
   <script>
     function switchLaborTab(tabId) {
@@ -795,6 +907,30 @@
       });
 
       runLaborCalculator();
+    });
+    // 팝업
+    function openContractModal() {
+      const modal = document.getElementById('modalContractDownload');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    function closeContractModal() {
+      const modal = document.getElementById('modalContractDownload');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('click', (e) => {
+      const modal = document.getElementById('modalContractDownload');
+      if (modal && e.target === modal) {
+        closeContractModal();
+      }
     });
   </script>
 </body>
