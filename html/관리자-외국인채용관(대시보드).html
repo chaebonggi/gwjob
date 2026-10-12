@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외국인채용관 관리자 대시보드 - 강원일자리정보망</title>
+    <link rel="stylesheet" href="https://job.gwd.go.kr/jobadm/css/com/idq/gcms/common.css?v200429">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+.dash-foreign{background-color:#f4f7fb;padding:25px;font-family:'NanumGothic','나눔고딕',sans-serif;color:#334155;}
+.dash-foreign .dash-header{margin-bottom:20px;}
+.dash-foreign .dash-tit{font-size:20px;font-weight:700;color:#1e293b;letter-spacing:-0.5px;}
+.dash-foreign .dash-summary-row{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-bottom:20px;}
+.dash-foreign .summary-card{background:#ffffff;border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:16px;border:1px solid #eef2f7;box-shadow:0 4px 12px rgba(15,34,58,0.03);}
+.dash-foreign .summary-card__ico{width:48px;height:48px;border-radius:50%;display:flex;justify-content:center;align-items:center;flex-shrink:0;}
+.dash-foreign .summary-card__ico i{width:22px;height:22px;stroke-width:2;}
+.dash-foreign .summary-card__ico.ico-blue{background-color:#e8f1ff;color:#0066ff;}
+.dash-foreign .summary-card__ico.ico-green{background-color:#e6f9f0;color:#00c73c;}
+.dash-foreign .summary-card__ico.ico-cyan{background-color:#e6f7fa;color:#00b4d8;}
+.dash-foreign .summary-card__ico.ico-purple{background-color:#f2efff;color:#7367f0;}
+.dash-foreign .summary-card__ico.ico-orange{background-color:#fff4e8;color:#ff9f43;}
+.dash-foreign .summary-card__info{flex-grow:1;}
+.dash-foreign .summary-card__info .label{display:block;font-size:13px;color:#64748b;font-weight:600;margin-bottom:4px;}
+.dash-foreign .summary-card__info .count{display:block;font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;margin-bottom:6px;}
+.dash-foreign .summary-card__info .count small{font-size:15px;font-weight:600;margin-left:2px;}
+.dash-foreign .summary-card__trend{display:flex;flex-direction:column;gap:2px;margin-top:4px;}
+.dash-foreign .summary-card__trend .trend-rate{font-size:12px;font-weight:700;line-height:1.2;margin:0;}
+.dash-foreign .summary-card__trend .trend-rate.up{color:#00c73c;}
+.dash-foreign .summary-card__trend .trend-rate.down{color:#ea5455;}
+.dash-foreign .summary-card__trend .trend-desc{font-size:11px;font-weight:400;color:#94a3b8;line-height:1.2;margin:0;}
+.dash-foreign .summary-card__trend .trend-desc span{font-weight:500;}
+.dash-foreign .dash-chart-row{display:grid;grid-template-columns:1.18fr 1fr 1.05fr;gap:15px;margin-bottom:20px;}
+.dash-foreign .dash-panel{background:#ffffff;border-radius:12px;padding:20px 22px;border:1px solid #eef2f7;box-shadow:0 4px 12px rgba(15,34,58,0.03);display:flex;flex-direction:column;min-height:240px;}
+.dash-foreign .dash-panel__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;}
+.dash-foreign .dash-panel__head .tit{font-size:15px;font-weight:700;color:#1e293b;display:flex;align-items:center;gap:8px;margin:0;}
+.dash-foreign .tit-ico{display:inline-block;width:19px;height:19px;background-color:#0066ff;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-position:center;mask-position:center;vertical-align:middle;flex-shrink:0;}
+.dash-foreign .tit-ico.ico-globe{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z'/%3E%3C/svg%3E");}
+.dash-foreign .tit-ico.ico-shield{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z'/%3E%3C/svg%3E");}
+.dash-foreign .tit-ico.ico-users{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'/%3E%3C/svg%3E");}
+.dash-foreign .tit-ico.ico-briefcase{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z'/%3E%3C/svg%3E");}
+.dash-foreign .tit-ico.ico-chat{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z'/%3E%3C/svg%3E");}
+.dash-foreign .dash-panel__head .period{font-size:12px;color:#94a3b8;}
+.dash-foreign .dash-panel__head .btn-more{font-size:12px;color:#94a3b8;text-decoration:none;}
+.dash-foreign .dash-panel__head .btn-more:hover{color:#0066ff;text-decoration:underline;}
+.dash-foreign .dash-panel__body{flex-grow:1;position:relative;}
+.dash-foreign .dash-panel__body--split{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.dash-foreign .chart-box{position:relative;width:160px;height:160px;flex-shrink:0;}
+.dash-foreign .chart-box canvas{width:160px !important;height:160px !important;}
+.dash-foreign .chart-box--bar{width:100%;height:170px;}
+.dash-foreign .chart-box--bar canvas{width:100% !important;height:170px !important;}
+.dash-foreign .chart-center-txt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;}
+.dash-foreign .chart-center-txt strong{display:block;font-size:16px;font-weight:800;color:#0f172a;line-height:1.1;}
+.dash-foreign .chart-center-txt span{display:block;font-size:11px;color:#94a3b8;margin-top:2px;}
+.dash-foreign .chart-nodata{width:100%;min-height:160px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;color:#94a3b8;}
+.dash-foreign .chart-nodata i{width:32px;height:32px;stroke:#cbd5e1;stroke-width:1.8;}
+.dash-foreign .chart-nodata p{font-size:13px;color:#889bb5;margin:0;}
+.dash-foreign .legend-list{list-style:none;padding:0;margin:0;flex-grow:1;display:flex;flex-direction:column;gap:6px;}
+.dash-foreign .legend-list li{display:flex;align-items:center;font-size:12.5px;}
+.dash-foreign .legend-list .dot{width:7px;height:7px;border-radius:50%;margin-right:6px;flex-shrink:0;}
+.dash-foreign .legend-list .txt{color:#64748b;flex-grow:1;}
+.dash-foreign .legend-list .num{font-weight:700;color:#1e293b;margin-right:8px;}
+.dash-foreign .legend-list .pct{color:#94a3b8;font-size:11.5px;min-width:36px;text-align:right;}
+.dash-foreign .dot-blue{background-color:#0066ff;}
+.dash-foreign .dot-green{background-color:#00c73c;}
+.dash-foreign .dot-orange{background-color:#ff9f43;}
+.dash-foreign .dot-purple{background-color:#7367f0;}
+.dash-foreign .dot-pink{background-color:#e83e8c;}
+.dash-foreign .dot-gray{background-color:#a5b4c7;}
+.dash-foreign .dot-cyan{background-color:#00b4d8;}
+.dash-foreign .dot-yellow{background-color:#ffb703;}
+.dash-foreign .dash-table-row{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+.dash-foreign .dash-tbl{width:100%;border-collapse:collapse;font-size:13px;text-align:center;}
+.dash-foreign .dash-tbl thead th{background:#f8fafc;color:#64748b;font-weight:600;padding:9px 8px;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;}
+.dash-foreign .dash-tbl tbody td{padding:9px 8px;border-bottom:1px solid #f1f5f9;color:#475569;}
+.dash-foreign .dash-tbl tbody td.bold{font-weight:700;color:#1e293b;text-align:left;padding-left:12px;}
+.dash-foreign .dash-tbl tbody td.date{color:#94a3b8;font-size:12px;}
+.dash-foreign .dash-tbl tbody td.no-data{padding:50px 0;color:#889bb5;font-size:13px;background-color:#ffffff;}
+.dash-foreign .dash-tbl tbody td.no-data i{width:26px;height:26px;stroke:#cbd5e1;stroke-width:1.8;display:block;margin:0 auto 6px;}
+.dash-foreign .badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11.5px;font-weight:700;}
+.dash-foreign .badge-sky{background-color:#e0f2fe;color:#0284c7;}
+.dash-foreign .badge-purple{background-color:#f3e8ff;color:#9333ea;}
+.dash-foreign .badge-green{background-color:#dcfce7;color:#16a34a;}
+.dash-foreign .status{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;}
+.dash-foreign .status-ing{background-color:#e0f2fe;color:#0284c7;}
+.dash-foreign .status-wait{background-color:#fef9c3;color:#ca8a04;}
+.dash-foreign .status-complete{background-color:#dcfce7;color:#16a34a;}
+@media (max-width:1400px){
+.dash-foreign .dash-summary-row{grid-template-columns:repeat(3,1fr);}
+.dash-foreign .dash-chart-row{grid-template-columns:1fr;}
+.dash-foreign .dash-table-row{grid-template-columns:1fr;}
+}
+    </style>
+</head>
+<body class="dashboard">
+
+<div class="dash-foreign">
+    <div class="dash-header">
+        <h3 class="dash-tit">외국인채용관 관리자 대시보드</h3>
+    </div>
+
+    <!-- 1. 상단 통계 요약 카드 (5열) -->
+    <div class="dash-summary-row">
+        <!-- 전체 회원 -->
+        <div class="summary-card">
+            <div class="summary-card__ico ico-blue"><i data-lucide="users-round"></i></div>
+            <div class="summary-card__info">
+                <span class="label">전체 회원</span>
+                <strong class="count"><span id="totalMemberCnt">12,482</span><small>명</small></strong>
+                <div class="summary-card__trend">
+                    <p class="trend-rate up">▲ <span id="totalMemberRate">1.2</span>%</p>
+                    <p class="trend-desc">전월 대비 <span id="totalMemberDiff">1,338</span>명 증가</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 신규 가입 -->
+        <div class="summary-card">
+            <div class="summary-card__ico ico-green"><i data-lucide="user-round-plus"></i></div>
+            <div class="summary-card__info">
+                <span class="label">신규 가입</span>
+                <strong class="count"><span id="newMemberCnt">1,024</span><small>명</small></strong>
+                <div class="summary-card__trend">
+                    <p class="trend-rate up">▲ <span id="newMemberRate">1.8</span>%</p>
+                    <p class="trend-desc">전월 대비 <span id="newMemberDiff">156</span>명 증가</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 채용 공고 -->
+        <div class="summary-card">
+            <div class="summary-card__ico ico-cyan"><i data-lucide="file-text"></i></div>
+            <div class="summary-card__info">
+                <span class="label">채용 공고</span>
+                <strong class="count"><span id="jobNoticeCnt">386</span><small>건</small></strong>
+                <div class="summary-card__trend">
+                    <p class="trend-rate down">▼ <span id="jobNoticeRate">6</span>%</p>
+                    <p class="trend-desc">전월 대비 <span id="jobNoticeDiff">24</span>건 감소</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 인재 프로필 -->
+        <div class="summary-card">
+            <div class="summary-card__ico ico-purple"><i data-lucide="id-card"></i></div>
+            <div class="summary-card__info">
+                <span class="label">인재 프로필</span>
+                <strong class="count"><span id="profileCnt">8,921</span><small>건</small></strong>
+                <div class="summary-card__trend">
+                    <p class="trend-rate up">▲ <span id="profileRate">14</span>%</p>
+                    <p class="trend-desc">전월 대비 <span id="profileDiff">1,093</span>건 증가</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 상담 요청 -->
+        <div class="summary-card">
+            <div class="summary-card__ico ico-orange"><i data-lucide="message-circle"></i></div>
+            <div class="summary-card__info">
+                <span class="label">상담 요청</span>
+                <strong class="count"><span id="counselCnt">642</span><small>건</small></strong>
+                <div class="summary-card__trend">
+                    <p class="trend-rate up">▲ <span id="counselRate">27</span>%</p>
+                    <p class="trend-desc">전월 대비 <span id="counselDiff">136</span>건 증가</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 중단 차트 통계 그리드 (3열) -->
+    <div class="dash-chart-row">
+        <!-- 국적별 회원 현황 -->
+        <div class="dash-panel">
+            <div class="dash-panel__head">
+                <h4 class="tit">
+                    <i class="tit-ico ico-globe"></i>
+                    국적별 회원 현황
+                </h4>
+                <span class="period">최근 1년 이내</span>
+            </div>
+            <div class="dash-panel__body dash-panel__body--split" id="countryChartArea">
+                <div class="chart-box">
+                    <canvas id="countryChart"></canvas>
+                    <div class="chart-center-txt">
+                        <strong>12,482</strong>
+                        <span>명</span>
+                    </div>
+                </div>
+                <ul class="legend-list">
+                    <li><span class="dot dot-blue"></span><span class="txt">베트남</span><strong class="num">4,321</strong><span class="pct">34.6%</span></li>
+                    <li><span class="dot dot-green"></span><span class="txt">태국</span><strong class="num">2,118</strong><span class="pct">17.0%</span></li>
+                    <li><span class="dot dot-orange"></span><span class="txt">중국</span><strong class="num">1,982</strong><span class="pct">15.9%</span></li>
+                    <li><span class="dot dot-purple"></span><span class="txt">우즈베키스탄</span><strong class="num">1,254</strong><span class="pct">10.0%</span></li>
+                    <li><span class="dot dot-pink"></span><span class="txt">몽골</span><strong class="num">826</strong><span class="pct">6.6%</span></li>
+                    <li><span class="dot dot-gray"></span><span class="txt">기타</span><strong class="num">1,981</strong><span class="pct">15.9%</span></li>
+                </ul>
+
+                <div class="chart-nodata" style="display:none;">
+                    <i data-lucide="bar-chart-3"></i>
+                    <p>조회된 국적별 회원 데이터가 없습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 비자 유형 현황 -->
+        <div class="dash-panel">
+            <div class="dash-panel__head">
+                <h4 class="tit">
+                    <i class="tit-ico ico-shield"></i>
+                    비자 유형 현황
+                </h4>
+                <span class="period">최근 1년 이내</span>
+            </div>
+            <div class="dash-panel__body" id="visaChartArea">
+                <div class="chart-box chart-box--bar">
+                    <canvas id="visaChart"></canvas>
+                </div>
+
+                <div class="chart-nodata" style="display:none;">
+                    <i data-lucide="bar-chart-3"></i>
+                    <p>조회된 비자 유형 데이터가 없습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 한국어 능력 분포 -->
+        <div class="dash-panel">
+            <div class="dash-panel__head">
+                <h4 class="tit">
+                    <i class="tit-ico ico-users"></i>
+                    한국어 능력 분포
+                </h4>
+                <span class="period">최근 1년 이내</span>
+            </div>
+            <div class="dash-panel__body dash-panel__body--split" id="langChartArea">
+                <div class="chart-box">
+                    <canvas id="langChart"></canvas>
+                    <div class="chart-center-txt">
+                        <strong>8,921</strong>
+                        <span>명</span>
+                    </div>
+                </div>
+                <ul class="legend-list">
+                    <li><span class="dot dot-cyan"></span><span class="txt">초급</span><strong class="num">4,102</strong><span class="pct">46.0%</span></li>
+                    <li><span class="dot dot-green"></span><span class="txt">중급</span><strong class="num">3,215</strong><span class="pct">36.0%</span></li>
+                    <li><span class="dot dot-yellow"></span><span class="txt">고급</span><strong class="num">1,604</strong><span class="pct">18.0%</span></li>
+                </ul>
+
+                <div class="chart-nodata" style="display:none;">
+                    <i data-lucide="bar-chart-3"></i>
+                    <p>조회된 한국어 능력 데이터가 없습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 하단 실시간 테이블 리스트 (2열) -->
+    <div class="dash-table-row">
+        <!-- 최근 등록 채용정보 -->
+        <div class="dash-panel">
+            <div class="dash-panel__head">
+                <h4 class="tit">
+                    <i class="tit-ico ico-briefcase"></i>
+                    최근 등록 채용정보
+                </h4>
+                <a href="#none" class="btn-more">더보기 &gt;</a>
+            </div>
+            <div class="dash-panel__body">
+                <table class="dash-tbl">
+                    <colgroup>
+                        <col style="width: 28%;">
+                        <col style="width: 32%;">
+                        <col style="width: 18%;">
+                        <col style="width: 22%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>회사명</th>
+                            <th>직무</th>
+                            <th>비자</th>
+                            <th>등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bold">(주)동원식품</td>
+                            <td>식품생산직</td>
+                            <td><span class="badge badge-sky">E-9</span></td>
+                            <td class="date">2024.10.30</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">대성테크(주)</td>
+                            <td>제조·조립</td>
+                            <td><span class="badge badge-sky">E-9</span></td>
+                            <td class="date">2024.10.30</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">(주)이앤산업</td>
+                            <td>품질관리</td>
+                            <td><span class="badge badge-purple">E-7</span></td>
+                            <td class="date">2024.10.29</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">한울건설(주)</td>
+                            <td>건설 현장직</td>
+                            <td><span class="badge badge-green">H-2</span></td>
+                            <td class="date">2024.10.29</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">(주)그린농장</td>
+                            <td>농업 생산직</td>
+                            <td><span class="badge badge-sky">E-9</span></td>
+                            <td class="date">2024.10.28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 최근 구직상담 -->
+        <div class="dash-panel">
+            <div class="dash-panel__head">
+                <h4 class="tit">
+                    <i class="tit-ico ico-chat"></i>
+                    최근 구직상담
+                </h4>
+                <a href="#none" class="btn-more">더보기 &gt;</a>
+            </div>
+            <div class="dash-panel__body">
+                <table class="dash-tbl">
+                    <colgroup>
+                        <col style="width: 26%;">
+                        <col style="width: 24%;">
+                        <col style="width: 26%;">
+                        <col style="width: 24%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>국적</th>
+                            <th>상태</th>
+                            <th>접수일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bold">NGUYEN VAN A</td>
+                            <td>베트남</td>
+                            <td><span class="status status-ing">상담진행중</span></td>
+                            <td class="date">2024.10.30</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">SOMCHAI</td>
+                            <td>태국</td>
+                            <td><span class="status status-wait">답변대기</span></td>
+                            <td class="date">2024.10.30</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">ZHANG WEI</td>
+                            <td>중국</td>
+                            <td><span class="status status-complete">상담완료</span></td>
+                            <td class="date">2024.10.29</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">ABDULLAEV</td>
+                            <td>우즈베키스탄</td>
+                            <td><span class="status status-ing">상담진행중</span></td>
+                            <td class="date">2024.10.28</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">BAT-ERDENE</td>
+                            <td>몽골</td>
+                            <td><span class="status status-wait">답변대기</span></td>
+                            <td class="date">2024.10.28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function initDashboard() {
+        // Lucide Icons 초기화
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+
+        // [1] 국적별 회원 현황
+        var cEl = document.getElementById('countryChart');
+        if (cEl) {
+            new Chart(cEl, {
+                type: 'doughnut',
+                data: {
+                    labels: ['베트남', '태국', '중국', '우즈베키스탄', '몽골', '기타'],
+                    datasets: [{
+                        data: [4321, 2118, 1982, 1254, 826, 1981],
+                        backgroundColor: ['#0066ff', '#00c73c', '#ff9f43', '#7367f0', '#e83e8c', '#a5b4c7'],
+                        borderWidth: 0,
+                        cutout: '72%'
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    animation: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true }
+                    }
+                }
+            });
+        }
+
+        // [2] 비자 유형 현황
+        var vEl = document.getElementById('visaChart');
+        if (vEl) {
+            new Chart(vEl, {
+                type: 'bar',
+                data: {
+                    labels: ['E-9', 'H-2', 'D-2', 'F-6'],
+                    datasets: [{
+                        data: [4125, 2842, 1921, 1036],
+                        backgroundColor: ['#0075ff', '#00b4d8', '#2ec4b6', '#7367f0'],
+                        borderRadius: { topLeft: 5, topRight: 5 },
+                        borderSkipped: false,
+                        barThickness: 28
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: false,
+                    layout: { padding: { top: 22 } },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { size: 12, weight: 'bold' }, color: '#64748b' }
+                        },
+                        y: { display: false }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true }
+                    }
+                },
+                plugins: [{
+                    id: 'customBarValues',
+                    afterDatasetDraw: function(chart) {
+                        var ctx = chart.ctx;
+                        chart.data.datasets.forEach(function(dataset, i) {
+                            var meta = chart.getDatasetMeta(i);
+                            meta.data.forEach(function(bar, index) {
+                                var val = dataset.data[index].toLocaleString();
+                                ctx.save();
+                                ctx.font = 'bold 11px sans-serif';
+                                ctx.fillStyle = '#1e293b';
+                                ctx.textAlign = 'center';
+                                ctx.fillText(val, bar.x, bar.y - 7);
+                                ctx.restore();
+                            });
+                        });
+                    }
+                }]
+            });
+        }
+
+        // [3] 한국어 능력 분포
+        var lEl = document.getElementById('langChart');
+        if (lEl) {
+            new Chart(lEl, {
+                type: 'doughnut',
+                data: {
+                    labels: ['초급', '중급', '고급'],
+                    datasets: [{
+                        data: [4102, 3215, 1604],
+                        backgroundColor: ['#00b4d8', '#00c73c', '#ffb703'],
+                        borderWidth: 0,
+                        cutout: '72%'
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    animation: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true }
+                    }
+                }
+            });
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDashboard);
+    } else {
+        initDashboard();
+    }
+</script>
+</body>
+</html>
