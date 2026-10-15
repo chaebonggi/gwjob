@@ -1232,3 +1232,186 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .footer-info p { line-height: 1.6; color: #64748b; font-size: 1.2rem; }
 @media (max-width: 640px) {.site-footer .site-logo-img {height: 26px;}}
 /* //footer */
+
+/* 추가css */
+.score-result-card.border-amber { border-color: #d97706; }
+.res-card-top-navy.bg-amber { background-color: #d97706 !important; }
+.big-score-num.text-amber { color: #d97706 !important; }
+
+/* visa-roadmap_ver02 전용 스타일 */
+.roadmap-v2-container { padding: 4rem 0 8rem; }
+.roadmap-v2-hero { background: linear-gradient(135deg, #0c1e36 0%, #102d53 50%, #1a365d 100%); border-radius: 2.4rem; padding: 4rem 3.2rem; color: #ffffff; position: relative; overflow: hidden; margin-bottom: 3.2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid rgba(30,58,138,0.5); }
+.roadmap-v2-badge { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1.2rem; border-radius: 9999px; background: rgba(59,130,246,0.2); border: 1px solid rgba(96,165,250,0.3); color: #93c5fd; font-size: 1.2rem; font-weight: 700; margin-bottom: 1.4rem; }
+.roadmap-v2-badge svg { width: 1.4rem; height: 1.4rem; }
+.roadmap-v2-title { font-size: 3.2rem; font-weight: 900; line-height: 1.25; margin-bottom: 1rem; color: #ffffff; }
+.roadmap-v2-title span { color: #60a5fa; font-size: 2.2rem; font-weight: 800; margin-left: 0.8rem; }
+.roadmap-v2-desc { font-size: 1.45rem; color: #cbd5e1; line-height: 1.6; max-width: 78rem; word-break: keep-all; }
+.roadmap-v2-hero-btn { margin-top: 1.6rem; display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2rem; background: #2563eb; color: #ffffff !important; border-radius: 1.2rem; font-size: 1.35rem; font-weight: 700; transition: background 0.2s; }
+.roadmap-v2-hero-btn:hover { background: #1d4ed8; }
+.roadmap-v2-hero-btn svg { width: 1.6rem; height: 1.6rem; color: #fde047; }
+
+/* 네비게이션 탭 바 */
+.roadmap-v2-nav-tabs { display: flex; gap: 0.8rem; border-bottom: 2px solid #e2e8f0; margin-bottom: 3.2rem; overflow-x: auto; padding-bottom: 0.2rem; }
+.roadmap-v2-tab-btn { padding: 1.2rem 2rem; font-size: 1.4rem; font-weight: 700; color: #64748b; border-bottom: 3px solid transparent; display: inline-flex; align-items: center; gap: 0.8rem; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.roadmap-v2-tab-btn:hover { color: #0f172a; background-color: #f8fafc; }
+.roadmap-v2-tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; background-color: #eff6ff; font-weight: 800; }
+.roadmap-v2-tab-btn svg { width: 1.8rem; height: 1.8rem; }
+.roadmap-v2-pane { display: none; }
+.roadmap-v2-pane.active { display: block; animation: fadeIn 0.25s ease-in-out; }
+
+/* 패스파인더 선택기 */
+.pathway-selector-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.4rem; }
+.selector-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 2rem; padding: 2.4rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+.selector-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
+.selector-step-pill { font-size: 1.1rem; font-weight: 800; padding: 0.2rem 0.8rem; border-radius: 9999px; }
+.selector-step-pill.blue { background: #eff6ff; color: #2563eb; }
+.selector-step-pill.indigo { background: #eef2ff; color: #4338ca; }
+.selector-sub-txt { font-size: 1.2rem; color: #94a3b8; font-weight: 500; }
+.selector-tit { font-size: 1.6rem; font-weight: 900; color: #0f172a; margin-bottom: 1.4rem; }
+.btn-grid-sources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.btn-grid-targets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.btn-select-chip { padding: 1.2rem; border-radius: 1.2rem; border: 1px solid #e2e8f0; background: #ffffff; text-align: left; cursor: pointer; transition: all 0.15s ease; display: flex; flex-direction: column; justify-content: space-between; min-height: 7.2rem; }
+.btn-select-chip:hover { border-color: #cbd5e1; background: #f8fafc; }
+.btn-select-chip .chip-name { font-size: 1.3rem; font-weight: 800; color: #0f172a; }
+.btn-select-chip .chip-tag { font-size: 1.1rem; color: #64748b; margin-top: 0.4rem; }
+.btn-select-chip.active-source { border-color: #2563eb; background: #eff6ff; box-shadow: 0 0 0 1px #2563eb; }
+.btn-select-chip.active-source .chip-name { color: #1d4ed8; }
+.btn-select-chip.active-target { border-color: #4338ca; background: #eef2ff; box-shadow: 0 0 0 1px #4338ca; }
+.btn-select-chip.active-target .chip-name { color: #3730a3; }
+.chip-badge-mini { display: inline-block; font-size: 1rem; font-weight: 800; padding: 0.2rem 0.6rem; background: #f1f5f9; color: #475569; border-radius: 0.4rem; margin-top: 0.4rem; align-self: flex-start; }
+
+/* 패스파인더 결과 카드 */
+.pathway-result-card { background: #ffffff; border: 2px solid rgba(59,130,246,0.3); border-radius: 2.4rem; padding: 3.2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+.pathway-result-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.6rem; padding-bottom: 2rem; border-bottom: 1px solid #f1f5f9; margin-bottom: 2.4rem; }
+.diff-pill { font-size: 1.2rem; font-weight: 800; padding: 0.3rem 1rem; border-radius: 9999px; border: 1px solid; margin-right: 0.8rem; }
+.diff-pill.emerald { background: #dcfce7; color: #166534; border-color: #86efac; }
+.diff-pill.blue { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+.diff-pill.purple { background: #f3e8ff; color: #6b21a8; border-color: #d8b4fe; }
+.diff-pill.amber { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+.est-time-txt { font-size: 1.25rem; color: #64748b; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; }
+.est-time-txt svg { width: 1.4rem; height: 1.4rem; }
+.pathway-flow-title { font-size: 1.9rem; font-weight: 900; color: #0f172a; margin-top: 0.8rem; line-height: 1.35; }
+.btn-jobs-link { padding: 0.8rem 1.6rem; background: #2563eb; color: #ffffff !important; border-radius: 0.8rem; font-size: 1.25rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.6rem; }
+.btn-jobs-link:hover { background: #1d4ed8; }
+.btn-jobs-link svg { width: 1.4rem; height: 1.4rem; }
+
+.pathway-pillars-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; margin-bottom: 2.4rem; }
+.pillar-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 1.4rem; padding: 1.8rem; }
+.pillar-lbl { font-size: 1.25rem; font-weight: 800; color: #2563eb; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; }
+.pillar-lbl svg { width: 1.6rem; height: 1.6rem; }
+.pillar-val { font-size: 1.25rem; font-weight: 600; color: #334155; line-height: 1.5; margin: 0; }
+
+.pathway-benefits-banner { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 1.6rem; padding: 2rem; margin-bottom: 2.8rem; }
+.benefits-tit { font-size: 1.45rem; font-weight: 800; color: #1e3a8a; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
+.benefits-tit svg { width: 1.6rem; height: 1.6rem; }
+.benefits-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.benefit-row { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 1.25rem; font-weight: 600; color: #1e293b; }
+.benefit-row svg { width: 1.6rem; height: 1.6rem; color: #2563eb; flex-shrink: 0; margin-top: 0.1rem; }
+
+/* 체크리스트 영역 */
+.checklist-head-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.4rem; }
+.checklist-head-row h5 { font-size: 1.5rem; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 0.6rem; margin: 0; }
+.checklist-head-row h5 svg { width: 1.8rem; height: 1.8rem; }
+.checklist-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.check-doc-item { padding: 1.4rem 1.6rem; border-radius: 1.2rem; border: 1px solid #e2e8f0; background: #ffffff; display: flex; align-items: flex-start; gap: 1.2rem; cursor: pointer; transition: all 0.15s ease; user-select: none; }
+.check-doc-item:hover { border-color: #cbd5e1; }
+.check-doc-item.checked { background: #f0fdf4; border-color: #86efac; }
+.doc-check-box { width: 2rem; height: 2rem; border-radius: 0.6rem; border: 1px solid #cbd5e1; background: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
+.check-doc-item.checked .doc-check-box { background: #16a34a; border-color: #16a34a; color: #ffffff; }
+.doc-check-box svg { width: 1.4rem; height: 1.4rem; }
+.doc-txt-wrap strong { display: block; font-size: 1.3rem; font-weight: 700; color: #1e293b; line-height: 1.35; }
+.check-doc-item.checked .doc-txt-wrap strong { color: #14532d; text-decoration: line-through; opacity: 0.8; }
+.doc-txt-wrap p { font-size: 1.15rem; color: #64748b; margin-top: 0.2rem; line-height: 1.4; }
+
+/* 2.0 개편 요약 & 도지사 가점 */
+.reforms-4grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.8rem; }
+.reform-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.6rem; padding: 2.4rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+.reform-badge { display: inline-block; font-size: 1.1rem; font-weight: 800; padding: 0.3rem 0.8rem; border-radius: 9999px; margin-bottom: 1.2rem; }
+.reform-badge.blue { background: #dbeafe; color: #1e40af; }
+.reform-badge.green { background: #dcfce7; color: #166534; }
+.reform-badge.purple { background: #f3e8ff; color: #7e22ce; }
+.reform-badge.amber { background: #fef3c7; color: #92400e; }
+.reform-card h4 { font-size: 1.7rem; font-weight: 900; color: #0f172a; margin-bottom: 0.8rem; }
+.reform-card p { font-size: 1.3rem; color: #475569; line-height: 1.6; margin: 0; }
+
+.gov-bonus-dark-banner { background: linear-gradient(135deg, #091e3a 0%, #0f172a 100%); border: 1px solid rgba(99,102,241,0.3); border-radius: 2rem; padding: 3.2rem; color: #ffffff; margin-bottom: 2.8rem; }
+.gov-bonus-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.4rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.15); margin-bottom: 2.4rem; }
+.gov-bonus-head h3 { font-size: 2.2rem; font-weight: 900; color: #ffffff; display: flex; align-items: center; gap: 0.8rem; margin: 0.6rem 0; }
+.gov-bonus-head h3 svg { width: 2.4rem; height: 2.4rem; color: #fbbf24; }
+.gov-bonus-head p { font-size: 1.35rem; color: #cbd5e1; margin: 0; }
+.gov-bonus-cards-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-bottom: 2.4rem; }
+.bonus-detail-box { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 1.6rem; padding: 2rem; position: relative; }
+.bonus-detail-box.highlight { border-color: rgba(52,211,153,0.5); background: rgba(16,185,129,0.1); }
+.bonus-box-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.bonus-tag { font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 0.6rem; background: rgba(59,130,246,0.3); color: #bfdbfe; }
+.bonus-tag.green { background: rgba(16,185,129,0.3); color: #a7f3d0; }
+.bonus-pts { font-size: 2.4rem; font-weight: 900; color: #fde047; }
+.bonus-detail-box h4 { font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem; }
+.bonus-detail-box ul { padding-left: 1.6rem; font-size: 1.25rem; color: #e2e8f0; line-height: 1.6; }
+.gov-steps-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; background: rgba(255,255,255,0.05); padding: 1.8rem; border-radius: 1.4rem; border: 1px solid rgba(255,255,255,0.1); }
+.gov-step-col { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.4rem; }
+.gov-step-col strong { display: block; font-size: 1.25rem; color: #fde047; margin-bottom: 0.4rem; }
+.gov-step-col p { font-size: 1.15rem; color: #cbd5e1; line-height: 1.45; margin: 0; }
+
+.compare-matrix-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 2rem; overflow: hidden; }
+.compare-matrix-head { padding: 1.8rem 2.4rem; background: #f8fafc; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+.compare-matrix-head h4 { font-size: 1.6rem; font-weight: 900; color: #0f172a; margin: 0; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 1.35rem; }
+.compare-table th { background: #f1f5f9; padding: 1.4rem 2rem; font-weight: 800; color: #334155; border-bottom: 1px solid #e2e8f0; text-align: left; }
+.compare-table td { padding: 1.4rem 2rem; border-bottom: 1px solid #f1f5f9; color: #334155; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table td.strong-blue { font-weight: 800; color: #1d4ed8; background: #eff6ff; }
+
+/* 18개 시군 탭 및 카드 */
+.region-chips-filter { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
+.btn-reg-filter { padding: 0.8rem 1.6rem; border-radius: 1rem; font-size: 1.3rem; font-weight: 700; border: 1px solid #cbd5e1; background: #ffffff; color: #475569; cursor: pointer; transition: all 0.15s; }
+.btn-reg-filter:hover { background: #f8fafc; color: #0f172a; }
+.btn-reg-filter.active { background: #2563eb; color: #ffffff; border-color: #2563eb; }
+.region-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.reg-detail-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.6rem; padding: 2.2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+.reg-detail-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+.reg-detail-head strong { font-size: 1.6rem; font-weight: 800; color: #0f172a; }
+.reg-cat-tag { font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 0.6rem; }
+.reg-cat-tag.blue { background: #eff6ff; color: #1e40af; }
+.reg-cat-tag.green { background: #f0fdf4; color: #166534; }
+.reg-cat-tag.indigo { background: #eef2ff; color: #3730a3; }
+.reg-cat-tag.purple { background: #faf5ff; color: #6b21a8; }
+.reg-cat-tag.amber { background: #fffbeb; color: #92400e; }
+.reg-cat-tag.slate { background: #f1f5f9; color: #334155; }
+.reg-detail-card ul { padding-left: 1.6rem; font-size: 1.25rem; color: #475569; line-height: 1.6; }
+
+/* 타임라인 영역 */
+.timeline-stepper-wrap { position: relative; padding-left: 3.2rem; border-left: 3px solid #bfdbfe; display: flex; flex-direction: column; gap: 2.8rem; margin-bottom: 3.2rem; }
+.timeline-step-row { position: relative; }
+.timeline-dot-dday { position: absolute; left: -4.8rem; top: 0; width: 3.6rem; height: 3.6rem; border-radius: 50%; color: #ffffff; font-size: 1.2rem; font-weight: 900; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px #ffffff; }
+.timeline-dot-dday.d90 { background: #2563eb; }
+.timeline-dot-dday.d60 { background: #4338ca; }
+.timeline-dot-dday.d30 { background: #9333ea; }
+.timeline-dot-dday.d0 { background: #16a34a; }
+.timeline-card-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.6rem; padding: 2rem 2.4rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+.timeline-card-box h4 { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 0.6rem; }
+.timeline-card-box p { font-size: 1.3rem; color: #475569; line-height: 1.6; margin: 0; }
+
+.offices-directory-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 1.8rem; padding: 2.4rem; }
+.offices-tit { font-size: 1.55rem; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.6rem; }
+.offices-tit svg { width: 1.8rem; height: 1.8rem; color: #2563eb; }
+.offices-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.office-item-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.2rem; padding: 1.6rem; }
+.office-item-box strong { font-size: 1.35rem; color: #0f172a; display: block; margin-bottom: 0.4rem; }
+.office-item-box p { font-size: 1.2rem; color: #64748b; line-height: 1.4; margin-bottom: 0.6rem; }
+.office-item-box .tel { font-size: 1.3rem; font-weight: 800; color: #2563eb; }
+
+@media (max-width: 1024px) {
+  .pathway-selector-grid, .reforms-4grid, .gov-bonus-cards-2, .region-cards-grid { grid-template-columns: 1fr; }
+  .pathway-pillars-4 { grid-template-columns: repeat(2, 1fr); }
+  .gov-steps-grid-4, .offices-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .roadmap-v2-title { font-size: 2.4rem; }
+  .roadmap-v2-title span { font-size: 1.6rem; display: block; margin-left: 0; margin-top: 0.4rem; }
+  .pathway-result-card { padding: 2rem 1.6rem; }
+  .pathway-pillars-4, .benefits-grid-2, .checklist-grid-2, .gov-steps-grid-4, .offices-grid-4 { grid-template-columns: 1fr; }
+  .btn-grid-sources { grid-template-columns: repeat(2, 1fr); }
+  .timeline-stepper-wrap { padding-left: 2.4rem; }
+  .timeline-dot-dday { left: -3.8rem; width: 3rem; height: 3rem; font-size: 1rem; }
+}
