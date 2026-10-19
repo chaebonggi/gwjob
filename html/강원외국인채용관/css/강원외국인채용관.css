@@ -274,27 +274,33 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .quick-menu-card { min-height: 22.5rem; height: 22.5rem; }
 }
 @media (max-width: 640px) {
-.quick-menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
-.quick-menu-card { min-height: 20rem; height: 20rem; padding: 1.8rem 1.4rem 1.6rem; border-radius: 2rem; }
-.qm-icon-circle { width: 4rem; height: 4rem; margin-bottom: 1.2rem; }
-.qm-icon-circle svg { width: 1.8rem; height: 1.8rem; }
-.qm-card-tit { font-size: 1.8rem; }
-.qm-card-desc { font-size: 1.15rem; margin-bottom: 1.2rem; }
-.qm-btn-circle { width: 3rem; height: 3rem; }
-.qm-img-1 { right: -1.2rem; bottom: -2.8rem; width: 10.8rem; }
-.qm-img-2 { width: 9.5rem; }
-.qm-img-3 { right: -0.6rem; bottom: -0.6rem; width: 11rem; }
-.qm-img-4 { right: -0.8rem; bottom: -1rem; width: 10rem; }
-.qm-img-5 { width: 9.5rem; }
+.quick-menu-sec { margin: 2rem 0; }
+.quick-menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.quick-menu-card { min-height: 16.5rem; height: 16.5rem; padding: 1.4rem 1.2rem 1.2rem; border-radius: 1.6rem; }
+.quick-menu-card.qm-card-5 { grid-column: span 2; min-height: 13rem; height: 13rem; }
+.qm-card-top { max-width: 62%; }
+.quick-menu-card.qm-card-5 .qm-card-top { max-width: 65%; }
+.qm-icon-circle { width: 3.4rem; height: 3.4rem; margin-bottom: 0.8rem; }
+.qm-icon-circle svg { width: 1.6rem; height: 1.6rem; }
+.qm-card-tit { font-size: 1.6rem; margin-bottom: 0.3rem; letter-spacing: -0.5px; }
+.qm-card-desc { font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.8rem; }
+.quick-menu-card.qm-card-5 .qm-card-desc br { display: none; }
+.qm-btn-circle { width: 2.6rem; height: 2.6rem; }
+.qm-btn-circle svg { width: 1.3rem; height: 1.3rem; }
+.qm-img-1 { right: -1rem; bottom: -2rem; width: 8.8rem; }
+.qm-img-2 { right: -0.4rem; bottom: 0; width: 7.8rem; }
+.qm-img-3 { right: -0.6rem; bottom: -0.4rem; width: 9rem; }
+.qm-img-4 { right: -0.6rem; bottom: -0.8rem; width: 7.8rem; }
+.qm-img-5 { right: 0.8rem; bottom: 0; width: 9.8rem; }
 }
-@media (max-width: 420px) {
-.quick-menu-grid { grid-template-columns: 1fr; }
-.quick-menu-card { min-height: 21rem; height: 21rem; }
-.qm-img-1 { right: -1.5rem; bottom: -3.5rem; width: 13rem; }
-.qm-img-2 { width: 12rem; }
-.qm-img-3 { right: -0.8rem; bottom: -0.8rem; width: 13.5rem; }
-.qm-img-4 { right: -1rem; bottom: -1.2rem; width: 12.5rem; }
-.qm-img-5 { width: 12rem; }
+@media (max-width: 360px) {
+.quick-menu-card { min-height: 15.5rem; height: 15.5rem; padding: 1.2rem 1rem 1rem; }
+.qm-card-tit { font-size: 1.45rem; }
+.qm-card-desc { font-size: 1.05rem; }
+.qm-img-1 { width: 7.8rem; bottom: -1.8rem; }
+.qm-img-2 { width: 6.8rem; }
+.qm-img-3 { width: 7.8rem; }
+.qm-img-4 { width: 6.8rem; }
 }
 
 /* 추천 채용공고 */
