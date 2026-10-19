@@ -164,7 +164,7 @@
             <div class="swiper-slide">
               <div class="hero-slide-box slide-theme-custom-banner">
                 <div class="hero-banner-inner-1200">
-                  <img src="./images/main_slide04.jpg" alt="강원 배경" class="hero-banner-bg-img">
+                  <img src="./images/main_slide05.jpg" alt="강원 배경" class="hero-banner-bg-img">
                   <div class="hero-banner-txt-overlay">
                     <span class="banner-badge-mint">외국인 맞춤 채용 정보</span>
                     <h2 class="banner-tit-wrap">
@@ -948,25 +948,25 @@
       totalPageEl.textContent = String(originSlidesCount > 0 ? originSlidesCount : 3).padStart(2, '0');
     }
 
-    new Swiper('.hero-swiper', {
-      loop: true,
-      autoplay: { delay: 5000, disableOnInteraction: false },
-      pagination: {
-        el: '.hero-pagination-bars',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '#heroBtnNext',
-        prevEl: '#heroBtnPrev'
-      },
-      on: {
-        slideChange: function () {
-          if (curPageEl) {
-            curPageEl.textContent = String(this.realIndex + 1).padStart(2, '0');
-          }
-        }
-      }
-    });
+    // new Swiper('.hero-swiper', {
+    //   loop: true,
+    //   autoplay: { delay: 5000, disableOnInteraction: false },
+    //   pagination: {
+    //     el: '.hero-pagination-bars',
+    //     clickable: true
+    //   },
+    //   navigation: {
+    //     nextEl: '#heroBtnNext',
+    //     prevEl: '#heroBtnPrev'
+    //   },
+    //   on: {
+    //     slideChange: function () {
+    //       if (curPageEl) {
+    //         curPageEl.textContent = String(this.realIndex + 1).padStart(2, '0');
+    //       }
+    //     }
+    //   }
+    // });
 
     // 2. 메인 팝업 모달 이벤트
     const modal = document.getElementById('mainNoticeModal');

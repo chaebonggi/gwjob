@@ -123,7 +123,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 }
 .site-main { flex: 1; }
 /*  */
-.hero-slide-box.slide-theme-custom-banner { background-color: #e5f3fd !important; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.hero-slide-box.slide-theme-custom-banner { background-color: #e4f3fd !important; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 .hero-banner-inner-1200 { position: relative; width: 100%; max-width: 1200px; height: 100%; margin: 0 auto; display: flex; align-items: center; }
 .hero-banner-bg-img { width: 100%; height: 100%; object-fit: cover; object-position: right center; display: block; }
 .hero-banner-txt-overlay { position: absolute; left: 2.4rem; top: 50%; transform: translateY(-50%); z-index: 5; display: flex; flex-direction: column; align-items: flex-start; }
