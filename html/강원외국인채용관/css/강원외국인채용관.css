@@ -291,8 +291,6 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 }
 @media (max-width: 480px) {
 .quick-menu-card { min-height: 15.5rem; height: 15.5rem; padding: 1.2rem 1rem 1rem; }
-.qm-card-tit { font-size: 1.45rem; }
-.qm-card-desc { font-size: 1.05rem; }
 .qm-img-1 { width: 7.8rem; bottom: -1.8rem; }
 .qm-img-2 { width: 10rem; }
 .qm-img-3 { width: 10rem; }
