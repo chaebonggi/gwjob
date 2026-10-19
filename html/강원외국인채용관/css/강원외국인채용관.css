@@ -253,7 +253,7 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .qm-icon-circle.rose { background-color: #e11d48; }
 .qm-card-tit { font-size: 2.2rem; font-weight: 900; color: #0f172a; margin-bottom: 0.6rem; letter-spacing: -0.5px; white-space: nowrap; }
 .qm-card-desc { font-size: 1.35rem; font-weight: 500; color: #64748b; line-height: 1.45; word-break: keep-all; margin: 0 0 1.6rem; }
-.qm-btn-circle { margin-top: auto; width: 3.4rem; height: 3.4rem; border-radius: 50%; background-color: #ffffff; display: flex; align-items: center; justify-content: center; color: #0066cc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s ease; }
+.qm-btn-circle {flex-shrink: 0; margin-top: auto; width: 3.4rem; height: 3.4rem; border-radius: 50%; background-color: #ffffff; display: flex; align-items: center; justify-content: center; color: #0066cc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s ease; }
 .qm-btn-circle svg { width: 1.6rem; height: 1.6rem; stroke-width: 2.5; }
 .quick-menu-card:hover .qm-btn-circle { background-color: #0066cc; color: #ffffff; transform: translateX(3px); }
 .qm-card-img-wrap { position: absolute; right: 0; bottom: 0; z-index: 1; pointer-events: none; line-height: 0; }
@@ -277,9 +277,9 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .quick-menu-sec { margin: 2rem 0; }
 .quick-menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .quick-menu-card { min-height: 16.5rem; height: 16.5rem; padding: 1.4rem 1.2rem 1.2rem; border-radius: 1.6rem; }
-.quick-menu-card.qm-card-5 { grid-column: span 2; min-height: 13rem; height: 13rem; }
-.qm-card-top { max-width: 62%; }
-.quick-menu-card.qm-card-5 .qm-card-top { max-width: 65%; }
+.quick-menu-card.qm-card-5 { grid-column: span 2; min-height: 13rem; height: auto; }
+.qm-card-top { max-width: 100%; }
+.quick-menu-card.qm-card-5 .qm-card-top { max-width: 100%; }
 .qm-icon-circle { width: 3.4rem; height: 3.4rem; margin-bottom: 0.8rem; }
 .qm-icon-circle svg { width: 1.6rem; height: 1.6rem; }
 .qm-card-tit { font-size: 1.6rem; margin-bottom: 0.3rem; letter-spacing: -0.5px; }
@@ -287,20 +287,17 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .quick-menu-card.qm-card-5 .qm-card-desc br { display: none; }
 .qm-btn-circle { width: 2.6rem; height: 2.6rem; }
 .qm-btn-circle svg { width: 1.3rem; height: 1.3rem; }
-.qm-img-1 { right: -1rem; bottom: -2rem; width: 8.8rem; }
-.qm-img-2 { right: -0.4rem; bottom: 0; width: 7.8rem; }
-.qm-img-3 { right: -0.6rem; bottom: -0.4rem; width: 9rem; }
-.qm-img-4 { right: -0.6rem; bottom: -0.8rem; width: 7.8rem; }
-.qm-img-5 { right: 0.8rem; bottom: 0; width: 9.8rem; }
+
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 .quick-menu-card { min-height: 15.5rem; height: 15.5rem; padding: 1.2rem 1rem 1rem; }
 .qm-card-tit { font-size: 1.45rem; }
 .qm-card-desc { font-size: 1.05rem; }
 .qm-img-1 { width: 7.8rem; bottom: -1.8rem; }
-.qm-img-2 { width: 6.8rem; }
-.qm-img-3 { width: 7.8rem; }
-.qm-img-4 { width: 6.8rem; }
+.qm-img-2 { width: 10rem; }
+.qm-img-3 { width: 10rem; }
+.qm-img-4 { width: 8rem; }
+.qm-img-5 { width: 11rem; }
 }
 
 /* 추천 채용공고 */
