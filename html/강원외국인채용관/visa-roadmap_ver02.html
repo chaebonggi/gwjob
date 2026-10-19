@@ -224,7 +224,7 @@
           <div class="pathway-result-card">
             <div class="pathway-result-head">
               <div>
-                <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.4rem;">
+                <div class="flow-status-meta-row">
                   <span class="diff-pill emerald" id="resDiffPill">매우 유리 (최우선 트랙)</span>
                   <span class="est-time-txt"><i data-lucide="clock"></i> <span id="resEstTime">취업 확정 후 약 2~4주 심사</span></span>
                 </div>
@@ -254,7 +254,7 @@
               </div>
               <div class="pillar-box">
                 <span class="pillar-lbl"><i data-lucide="check-circle-2"></i> 도지사 추천 가점</span>
-                <p class="pillar-val" id="resPillarRec">강원특별자치도지사 추천서 필수 (도내 지자체 추천 쿼터 선착순 배정)</p>
+                <p class="pillar-val" id="resPillarRec">강원특별자치도지사 추천서 발급 확인서</p>
               </div>
             </div>
 
@@ -272,8 +272,12 @@
             <!-- Interactive Checklist -->
             <div>
               <div class="checklist-head-row">
-                <h5><i data-lucide="file-check"></i> 비자 변경 필수 제출 서류 체크리스트 (<span id="chkCount">2</span>/8)</h5>
-                <span style="font-size: 1.2rem; color: #94a3b8;">클릭하여 준비 여부를 체크하세요</span>
+                <h5>
+                  <i data-lucide="file-check"></i>
+                  <span>비자 변경 필수 제출 서류 체크리스트</span>
+                  <span class="chk-count-badge">(<span id="chkCount">2</span>/8)</span>
+                </h5>
+                <span class="checklist-sub-txt">클릭하여 준비 여부를 체크하세요</span>
               </div>
               <div class="checklist-grid-2">
                 <div class="check-doc-item checked" onclick="toggleCheckDoc(this)">
@@ -378,11 +382,11 @@
           <div class="gov-bonus-dark-banner">
             <div class="gov-bonus-head">
               <div>
-                <span class="bonus-tag" style="background: rgba(59,130,246,0.3); color: #bfdbfe; font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 0.6rem;">2025-2026 최신 기준 반영</span>
+                <span class="bonus-tag-light">2025-2026 최신 기준 반영</span>
                 <h3><i data-lucide="award"></i> 강원특별자치도 도지사 추천 가점 최신 기준</h3>
                 <p>K-point 숙련기능인력 합격 커트라인(200점) 조기 확보를 위한 비자별 추천 가점 및 단계별 신청 절차</p>
               </div>
-              <span style="padding: 0.6rem 1.4rem; background: rgba(16,185,129,0.2); border: 1px solid rgba(52,211,153,0.4); color: #6ee7b7; border-radius: 9999px; font-size: 1.25rem; font-weight: 800;">
+              <span class="gov-bonus-quota-pill">
                 도내 선발 쿼터 우선 연계
               </span>
             </div>
@@ -395,22 +399,23 @@
                 </div>
                 <h4>K-point E-7-4 도지사 추천</h4>
                 <ul>
-                  <li><strong>추천 가점:</strong> 강원특별자치도지사 추천서 발급 시 <strong>30점 일괄 부여</strong></li>
-                  <li><strong>적용 대상:</strong> 도내 제조업·뿌리산업 사업장에서 1년 이상 성실 재직 중인 E-9, E-10, H-2 근로자</li>
-                  <li><strong>합격 기여:</strong> 전국 35,000명 쿼터 심사 시 광역단체장 추천 점수로 자동 가산되어 커트라인 조기 통과</li>
+                  <li>• <strong>추천 가점:</strong> 강원특별자치도지사 추천서 발급 시 <span class="highlight-txt-gold">30점 일괄 부여</span></li>
+                  <li>• <strong>적용 대상:</strong> 도내 제조업·뿌리산업 사업장에서 1년 이상 성실 재직 중인 E-9, E-10, H-2 근로자</li>
+                  <li>• <strong>합격 기여:</strong> 전국 35,000명 쿼터 심사 시 광역단체장 추천 점수로 자동 가산되어 커트라인 선착순 통과</li>
                 </ul>
               </div>
 
               <div class="bonus-detail-box highlight">
+                <span class="badge-corner-max">단일 항목 최대</span>
                 <div class="bonus-box-top">
                   <span class="bonus-tag green">광역형·인구감소지역 트랙</span>
-                  <span class="bonus-pts" style="color: #6ee7b7;">+50점</span>
+                  <span class="bonus-pts text-emerald-color">+50점</span>
                 </div>
                 <h4>E-7-4R 강원 광역특화 도지사 추천</h4>
                 <ul>
-                  <li><strong>추천 가점:</strong> 인구감소지역 또는 전략산업 특화 기업 추천 시 <strong>50점 파격 가점</strong></li>
-                  <li><strong>적용 대상:</strong> 도내 12개 인구감소지역(태백, 삼척, 평창 등) 소재 기업 또는 도 지정 뿌리산업 재직자</li>
-                  <li><strong>합격 기여:</strong> 필수 기본항목(소득 50점 + 한국어 50점) 충족 시 합격선(200점)의 25%를 한 번에 해결</li>
+                  <li>• <strong>추천 가점:</strong> 인구감소지역 또는 전략산업 특화 기업 추천 시 <span class="highlight-txt-green">50점 파격 가점</span></li>
+                  <li>• <strong>적용 대상:</strong> 도내 12개 인구감소지역(태백, 삼척, 평창 등) 소재 기업 또는 도 지정 뿌리산업 재직자</li>
+                  <li>• <strong>합격 기여:</strong> 필수 기본항목(소득 50점 + 한국어 50점) 충족 시 합격선(200점)의 25%를 한 번에 해결</li>
                 </ul>
               </div>
             </div>
@@ -437,47 +442,49 @@
           </div>
 
           <!-- 1.0 vs 2.0 매트릭스 -->
-          <div class="compare-matrix-card">
-            <div class="compare-matrix-head">
-              <h4>기존 비자 제도(1.0) vs 2025-2026 비자 제도(2.0) 한눈에 비교</h4>
-              <span style="font-size: 1.25rem; font-weight: 800; color: #2563eb;">강원 맞춤 특례</span>
+          <div class="compare-table-responsive">
+            <div class="compare-matrix-card">
+              <div class="compare-matrix-head">
+                <h4>기존 비자 제도(1.0) vs 2025-2026 비자 제도(2.0) 한눈에 비교</h4>
+                <span class="matrix-badge">강원 맞춤 특례</span>
+              </div>
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th class="col-matrix-head-1">구분 항목</th>
+                    <th class="col-matrix-head-2">기존 1.0 제도</th>
+                    <th class="col-matrix-head-3 th-reform">개편 2.0 제도 (강원특별자치도)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>F-2-R 소득 기준</strong></td>
+                    <td class="td-old">전년도 1인당 GNI 100%</td>
+                    <td class="td-new">전년도 1인당 GNI 70% 수준으로 완화</td>
+                  </tr>
+                  <tr>
+                    <td><strong>E-7-4 / E-7-4R 연간 선발 쿼터 및 가점</strong></td>
+                    <td class="td-old">약 2,000 ~ 5,000명</td>
+                    <td class="td-new">연간 35,000명 + 도지사 추천 E-7-4 30점, E-7-4R 50점 가점</td>
+                  </tr>
+                  <tr>
+                    <td><strong>배우자 경제활동</strong></td>
+                    <td class="td-old">취업 불가 (F-3 동반)</td>
+                    <td class="td-new">F-1 자격으로 단순노무 포함 취업 전면 허용</td>
+                  </tr>
+                  <tr>
+                    <td><strong>유학생 취업 전환</strong></td>
+                    <td class="td-old">E-7-1 까다로운 전공 매칭</td>
+                    <td class="td-new">F-2-R 직행 및 제조업·서비스업 등 폭넓은 취업 인정</td>
+                  </tr>
+                  <tr>
+                    <td><strong>영주권(F-5) 연계</strong></td>
+                    <td class="td-old">GNI 2배 소득 등 까다로운 심사</td>
+                    <td class="td-new">도내 5년 거주 후 F-5-16 지역특화 영주권 패스트트랙</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <table class="compare-table">
-              <thead>
-                <tr>
-                  <th style="width: 25%;">구분 항목</th>
-                  <th style="width: 35%;">기존 1.0 제도</th>
-                  <th style="width: 40%; color: #1d4ed8; background: #eff6ff;">개편 2.0 제도 (강원특별자치도)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>F-2-R 소득 기준</strong></td>
-                  <td style="color: #64748b;">전년도 1인당 GNI 100%</td>
-                  <td class="strong-blue">전년도 1인당 GNI 70% 수준으로 대폭 완화</td>
-                </tr>
-                <tr>
-                  <td><strong>E-7-4 / E-7-4R 쿼터 & 가점</strong></td>
-                  <td style="color: #64748b;">약 2,000 ~ 5,000명</td>
-                  <td class="strong-blue">연간 35,000명 + 도지사 추천 E-7-4 30점, E-7-4R 50점 가점</td>
-                </tr>
-                <tr>
-                  <td><strong>배우자 경제활동</strong></td>
-                  <td style="color: #64748b;">취업 불가 (F-3 동반)</td>
-                  <td class="strong-blue">F-1 자격으로 단순노무 포함 취업 전면 허용</td>
-                </tr>
-                <tr>
-                  <td><strong>유학생 취업 전환</strong></td>
-                  <td style="color: #64748b;">E-7-1 까다로운 전공 매칭</td>
-                  <td class="strong-blue">F-2-R 직행 및 제조업·서비스업 등 폭넓은 취업 인정</td>
-                </tr>
-                <tr>
-                  <td><strong>영주권(F-5) 연계</strong></td>
-                  <td style="color: #64748b;">GNI 2배 소득 등 까다로운 심사</td>
-                  <td class="strong-blue">도내 5년 거주 후 F-5-16 지역특화 영주권 패스트트랙</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
 
@@ -498,9 +505,9 @@
                 <span class="reg-cat-tag blue">바이오·의약 특화</span>
               </div>
               <ul>
-                <li><strong>핵심 지정 산업:</strong> 바이오신약, 천연물 추출, 체외진단, K-식품가공</li>
-                <li><strong>우대 자격:</strong> 바이오·화학 관련 전공자, 품질관리(QC/QA) 인력</li>
-                <li><strong>정착 인센티브:</strong> 기업 기숙사 입주 지원, 한국어 능력 향상 장려금</li>
+                <li>• <strong>핵심 지정 산업:</strong> 바이오신약, 천연물 추출, 체외진단, K-식품가공</li>
+                <li>• <strong>우대 자격:</strong> 바이오·화학 관련 전공자, 품질관리(QC/QA) 인력</li>
+                <li>• <strong>정착 인센티브:</strong> 기업 기숙사 입주 지원, 한국어 능력 향상 장려금</li>
               </ul>
             </div>
 
@@ -510,9 +517,9 @@
                 <span class="reg-cat-tag green">첨단의료·모빌리티</span>
               </div>
               <ul>
-                <li><strong>핵심 지정 산업:</strong> 디지털 헬스케어, 의료기기 제조, e-모빌리티 배터리</li>
-                <li><strong>우대 자격:</strong> 기계가공, 전자제어 엔지니어, 생산공정 관리원</li>
-                <li><strong>정착 인센티브:</strong> 원주시 청년·외국인 월세 지원 연계 (월 최대 20만원)</li>
+                <li>• <strong>핵심 지정 산업:</strong> 디지털 헬스케어, 의료기기 제조, e-모빌리티 배터리</li>
+                <li>• <strong>우대 자격:</strong> 기계가공, 전자제어 엔지니어, 생산공정 관리원</li>
+                <li>• <strong>정착 인센티브:</strong> 원주시 청년·외국인 월세 지원 연계 (월 최대 20만원)</li>
               </ul>
             </div>
 
@@ -522,9 +529,9 @@
                 <span class="reg-cat-tag indigo">신소재·항만물류</span>
               </div>
               <ul>
-                <li><strong>핵심 지정 산업:</strong> 신소재 세라믹, 국제무역·항만물류, 호텔관광 서비스</li>
-                <li><strong>우대 자격:</strong> 다국어 소통 가능자, 정밀가공 기술인력, 물류운영원</li>
-                <li><strong>정착 인센티브:</strong> 동해자유무역지역 입주기업 취업 시 인센티브 제공</li>
+                <li>• <strong>핵심 지정 산업:</strong> 신소재 세라믹, 국제무역·항만물류, 호텔관광 서비스</li>
+                <li>• <strong>우대 자격:</strong> 다국어 소통 가능자, 정밀가공 기술인력, 물류운영원</li>
+                <li>• <strong>정착 인센티브:</strong> 동해자유무역지역 입주기업 취업 시 인센티브 제공</li>
               </ul>
             </div>
 
@@ -534,9 +541,9 @@
                 <span class="reg-cat-tag purple">스마트농업·관광</span>
               </div>
               <ul>
-                <li><strong>핵심 지정 산업:</strong> 고랭지 스마트팜, 사계절 리조트(강원랜드 등), 농식품가공</li>
-                <li><strong>우대 자격:</strong> 농업전문인력, 호텔외식서비스, 통역 안내원</li>
-                <li><strong>정착 인센티브:</strong> 귀농·귀촌 정착 패키지 및 자녀 보육료 전액 지원</li>
+                <li>• <strong>핵심 지정 산업:</strong> 고랭지 스마트팜, 사계절 리조트(강원랜드 등), 농식품가공</li>
+                <li>• <strong>우대 자격:</strong> 농업전문인력, 호텔외식서비스, 통역 안내원</li>
+                <li>• <strong>정착 인센티브:</strong> 귀농·귀촌 정착 패키지 및 자녀 보육료 전액 지원</li>
               </ul>
             </div>
 
@@ -546,9 +553,9 @@
                 <span class="reg-cat-tag amber">수산가공·해양관광</span>
               </div>
               <ul>
-                <li><strong>핵심 지정 산업:</strong> 붉은대게·명태 가공, 해양레저, 서핑관광 및 숙박업</li>
-                <li><strong>우대 자격:</strong> 식품가공 숙련공, 조리·제과, 관광안내 요원</li>
-                <li><strong>정착 인센티브:</strong> 수산가공업 근속 장려금 및 지자체 임대주택 우선 입주</li>
+                <li>• <strong>핵심 지정 산업:</strong> 붉은대게·명태 가공, 해양레저, 서핑관광 및 숙박업</li>
+                <li>• <strong>우대 자격:</strong> 식품가공 숙련공, 조리·제과, 관광안내 요원</li>
+                <li>• <strong>정착 인센티브:</strong> 수산가공업 근속 장려금 및 지자체 임대주택 우선 입주</li>
               </ul>
             </div>
 
@@ -558,9 +565,9 @@
                 <span class="reg-cat-tag slate">청정농축산·평화</span>
               </div>
               <ul>
-                <li><strong>핵심 지정 산업:</strong> 스마트 축산, 시설채소 원예, 친환경 대체에너지</li>
-                <li><strong>우대 자격:</strong> 시설원예 재배사, 기계설비 운용원, 성실근로자</li>
-                <li><strong>정착 인센티브:</strong> 도지사 추천서 최우선 배정 쿼터 및 정착지원금 지원</li>
+                <li>• <strong>핵심 지정 산업:</strong> 스마트 축산, 시설채소 원예, 친환경 대체에너지</li>
+                <li>• <strong>우대 자격:</strong> 시설원예 재배사, 기계설비 운용원, 성실근로자</li>
+                <li>• <strong>정착 인센티브:</strong> 도지사 추천서 최우선 배정 쿼터 및 정착지원금 지원</li>
               </ul>
             </div>
           </div>
@@ -679,7 +686,6 @@
   </footer>
   <!-- //footer -->
 
-  <!-- 로드맵 2.0 인터랙션 스크립트 -->
   <script>
     let currentSource = 'D-2';
     let currentTarget = 'F-2-R';
@@ -740,7 +746,7 @@
             edu: '국내 전문학사 이상 학위 취득(예정)자 (강원권 대학 졸업자 가점 부여)',
             kr: 'TOPIK 3급 이상 또는 사회통합프로그램(KIIP) 3단계 이수 이상',
             inc: '강원도 지정 인구감소지역 기업 취업 계약 체결 (전년도 1인당 GNI 70% 이상 완화 특례)',
-            rec: '강원특별자치도지사 추천서 필수 (도내 지자체 추천 쿼터 선착순 배정)',
+            rec: '강원특별자치도지사 추천서 발급 확인서',
             benefits: [
               '배우자(F-1) 취업 허용 (단순 노무직 포함 취업 제한 없음)',
               '강원도 지정 시군 5년 이상 거주·취업 시 F-5-16(지역특화 영주권) 신청 자격 부여',
@@ -757,7 +763,7 @@
             edu: '고졸 이상 학력 + 강원 도내 사업장 성실 근무 이력',
             kr: 'TOPIK 3급 또는 사회통합프로그램 3단계 이상 필수',
             inc: '전년도 연간 소득 2,600만원 이상 또는 최저임금 충족 정규 근로계약',
-            rec: '도지사 추천 E-7-4 30점, E-7-4R 50점 가점 (우선 심사 혜택)',
+            rec: '강원특별자치도지사 추천서 발급 확인서',
             benefits: [
               '단순노무(E-9)에서 거주(F-2-R) 체류자격으로 파격적 전환 가능',
               '가족 동반(배우자 및 미성년 자녀) 초청 및 배우자 전면 취업 허용',
@@ -792,7 +798,7 @@
           edu: '학력 무관 (고졸, 전문학사 이상 가점 부여)',
           kr: 'TOPIK 2급 이상 또는 KIIP 2단계 이상 (3급 이상 고득점)',
           inc: '최근 2년간 연평균 소득 2,600만원 이상 (소득금액증명원 기준)',
-          rec: '도지사 추천 E-7-4 30점, E-7-4R 50점 가점 (합격선 200점 대비 결정적 기여)',
+          rec: '강원특별자치도지사 추천서 발급 확인서',
           benefits: [
             '도지사 추천 E-7-4 30점, E-7-4R 50점 가점으로 합격률 극대화',
             'E-9/E-10 체류 한도(최대 9년 8개월) 제한 폐지 및 반영구적 체류 연장 가능',
@@ -809,7 +815,7 @@
           edu: '국내외 학사 이상 또는 전문학사(우수 성적)',
           kr: 'TOPIK 4~5급 or KIIP 4~5단계 (점수 고배점 영역)',
           inc: '전년도 1인당 GNI 1배 이상 (약 4,400만원 수준 이상 권장)',
-          rec: '우수 인재 추천 및 사회공헌/국내 학위 가점 활용',
+          rec: '강원특별자치도지사 추천서 발급 확인서',
           benefits: [
             '자유로운 취업 및 창업 활동 가능 (취업 분야 제한 최소화)',
             '체류 기간 최대 5년 일괄 부여',
@@ -826,7 +832,7 @@
           edu: '체류기간 중 출입국관리법 및 국내 법령 준수 (품행 단정 요건)',
           kr: '사회통합프로그램(KIIP) 5단계 종합평가 합격 필수',
           inc: '신청 전년도 1인당 GNI 100% 이상 (동반 가구 합산 시 일부 완화)',
-          rec: '지정 인구감소지역 계속 거주 확인서 및 도지사 인증',
+          rec: '강원특별자치도지사 추천서 발급 확인서',
           benefits: [
             '대한민국 영구 체류권 획득 (비자 갱신 부담 해소, 10년 주기 등록증 갱신)',
             '지방선거 투표권 부여 (영주권 취득 후 3년 경과 시)',

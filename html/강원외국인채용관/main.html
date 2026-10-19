@@ -20,7 +20,7 @@
     <div class="header-inner">
       <div class="header-left">
         <a href="main.html" class="header-logo-img-wrap">
-          <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          <img src="images/logo_w.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
         </a>
 
         <nav class="header-nav">
@@ -51,17 +51,42 @@
         <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
         
         <div class="lang-selector">
-          <button type="button" class="lang-btn btn-lang-toggle">
-            <span>한국어</span>
+          <button type="button" class="lang-btn btn-lang-toggle" aria-haspopup="true" aria-expanded="false">
+            <span id="foreigner-lang-current" class="notranslate" translate="no">한국어</span>
             <i data-lucide="chevron-down" class="ico-arrow"></i>
           </button>
-          <div class="lang-dropdown lang-menu hidden">
-            <button type="button">한국어</button>
-            <button type="button">English</button>
-            <button type="button">日本語</button>
-            <button type="button">Tiếng Việt</button>
-            <button type="button">中文</button>
-            <button type="button">Mongolian</button>
+          <div class="lang-dropdown lang-menu notranslate hidden" translate="no">
+            <div class="lang-dropdown-header">
+              <span class="tit-kr"><i data-lucide="globe"></i> 언어 선택</span>
+              <span class="tit-en">Select Language</span>
+            </div>
+            <div class="lang-options-scroll">
+              <button type="button" data-lang="ko" data-label="한국어"><span class="lang-native">한국어</span><span class="lang-sub">한국어</span></button>
+              <button type="button" data-lang="vi" data-label="Tiếng Việt"><span class="lang-native">Tiếng Việt</span><span class="lang-sub">베트남어</span></button>
+              <button type="button" data-lang="zh-CN" data-label="中文"><span class="lang-native">中文</span><span class="lang-sub">중국어</span></button>
+              <button type="button" data-lang="en" data-label="English"><span class="lang-native">English</span><span class="lang-sub">영어</span></button>
+              <button type="button" data-lang="ne" data-label="नेपाली"><span class="lang-native">नेपाली</span><span class="lang-sub">네팔어</span></button>
+              <button type="button" data-lang="lo" data-label="ພາສາລາວ"><span class="lang-native">ພາສາລາວ</span><span class="lang-sub">라오스어</span></button>
+              <button type="button" data-lang="km" data-label="ភាសាខ្មែរ"><span class="lang-native">ភាសាខ្មែរ</span><span class="lang-sub">캄보디아어</span></button>
+              <button type="button" data-lang="uz" data-label="Oʻzbekcha"><span class="lang-native">Oʻzbekcha</span><span class="lang-sub">우즈베키스탄어</span></button>
+              <button type="button" data-lang="th" data-label="ไทย"><span class="lang-native">ไทย</span><span class="lang-sub">태국어</span></button>
+              <button type="button" data-lang="id" data-label="Indonesia"><span class="lang-native">Bahasa Indonesia</span><span class="lang-sub">인도네시아어</span></button>
+              <button type="button" data-lang="bn" data-label="বাংলা"><span class="lang-native">বাংলা</span><span class="lang-sub">방글라데시어</span></button>
+              <button type="button" data-lang="ru" data-label="Русский"><span class="lang-native">Русский</span><span class="lang-sub">러시아어</span></button>
+              <button type="button" data-lang="my" data-label="မြန်မာဘာသာ"><span class="lang-native">မြန်မာဘာသာ</span><span class="lang-sub">미얀마어</span></button>
+              <button type="button" data-lang="ja" data-label="日本語"><span class="lang-native">日本語</span><span class="lang-sub">일본어</span></button>
+              <button type="button" data-lang="mn" data-label="Монгол"><span class="lang-native">Монгол</span><span class="lang-sub">몽골어</span></button>
+              <button type="button" data-lang="hi" data-label="हिन्दी"><span class="lang-native">हिन्दी</span><span class="lang-sub">인도어</span></button>
+              <button type="button" data-lang="kk" data-label="Қазақша"><span class="lang-native">Қазақша</span><span class="lang-sub">카자흐스탄어</span></button>
+              <button type="button" data-lang="de" data-label="Deutsch"><span class="lang-native">Deutsch</span><span class="lang-sub">독일어</span></button>
+              <button type="button" data-lang="mi" data-label="Māori"><span class="lang-native">Māori</span><span class="lang-sub">뉴질랜드어</span></button>
+              <button type="button" data-lang="tr" data-label="Türkçe"><span class="lang-native">Türkçe</span><span class="lang-sub">튀르키예어</span></button>
+              <button type="button" data-lang="fr" data-label="Français"><span class="lang-native">Français</span><span class="lang-sub">프랑스어</span></button>
+              <button type="button" data-lang="ar" data-label="العربية"><span class="lang-native">العربية</span><span class="lang-sub">아랍어</span></button>
+              <button type="button" data-lang="pt" data-label="Português"><span class="lang-native">Português</span><span class="lang-sub">포르투갈어</span></button>
+              <button type="button" data-lang="es" data-label="Español"><span class="lang-native">Español</span><span class="lang-sub">스페인어</span></button>
+              <button type="button" data-lang="ms" data-label="Bahasa Melayu"><span class="lang-native">Bahasa Melayu</span><span class="lang-sub">말레이시아어</span></button>
+            </div>
           </div>
         </div>
 
@@ -135,7 +160,29 @@
       <section class="hero-slider-section">
         <div class="swiper hero-swiper">
           <div class="swiper-wrapper">
-
+            <!-- 슬라이드 4 (시안 텍스트 + 1200px 중앙 배경 그래픽) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-box slide-theme-custom-banner">
+                <div class="hero-banner-inner-1200">
+                  <img src="./images/main_slide04.jpg" alt="강원 배경" class="hero-banner-bg-img">
+                  <div class="hero-banner-txt-overlay">
+                    <span class="banner-badge-mint">외국인 맞춤 채용 정보</span>
+                    <h2 class="banner-tit-wrap">
+                      <span class="sub-line">강원에서 찾는</span>
+                      <span class="main-line">당신의 일자리</span>
+                    </h2>
+                    <p class="banner-desc-line">
+                      강원도의 우수 기업과 다양한 채용공고를<br>
+                      한눈에 확인하세요.
+                    </p>
+                    <a href="jobs.html" class="btn-banner-link-blue">
+                      <span>채용공고 보기</span>
+                      <i data-lucide="chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- 슬라이드 1 (main_slide01.jpg) -->
             <div class="swiper-slide">
               <div class="hero-slide-box slide-theme-1">
@@ -240,64 +287,89 @@
       <section class="quick-menu-sec">
         <div class="inner-section">
           <div class="quick-menu-grid">
-            <a href="jobs.html" class="quick-menu-card">
-              <div class="quick-menu-icon">
-                <i data-lucide="briefcase"></i>
+            <!-- 1. 채용공고 -->
+            <a href="jobs.html" class="quick-menu-card qm-card-1">
+              <div class="qm-card-top">
+                <div class="qm-icon-circle blue">
+                  <i data-lucide="briefcase"></i>
+                </div>
+                <h3 class="qm-card-tit">채용공고</h3>
+                <p class="qm-card-desc">강원도 내 외국인<br>채용 정보</p>
+                <span class="qm-btn-circle">
+                  <i data-lucide="arrow-right"></i>
+                </span>
               </div>
-              <h3 class="quick-menu-tit">채용공고</h3>
-              <p class="quick-menu-desc">강원도 내 외국인 채용 정보</p>
-              <span class="quick-menu-link-txt">
-                <span>바로가기</span>
-                <i data-lucide="chevron-right"></i>
-              </span>
+              <div class="qm-card-img-wrap qm-img-1">
+                <img src="./images/quick_img01.png" alt="채용공고">
+              </div>
             </a>
 
-            <a href="companies.html" class="quick-menu-card">
-              <div class="quick-menu-icon">
-                <i data-lucide="building-2"></i>
+            <!-- 2. 기업정보 -->
+            <a href="companies.html" class="quick-menu-card qm-card-2">
+              <div class="qm-card-top">
+                <div class="qm-icon-circle mint">
+                  <i data-lucide="building-2"></i>
+                </div>
+                <h3 class="qm-card-tit">기업정보</h3>
+                <p class="qm-card-desc">외국인 채용 참여 기업</p>
+                <span class="qm-btn-circle">
+                  <i data-lucide="arrow-right"></i>
+                </span>
               </div>
-              <h3 class="quick-menu-tit">기업정보</h3>
-              <p class="quick-menu-desc">외국인 채용 참여 기업</p>
-              <span class="quick-menu-link-txt">
-                <span>바로가기</span>
-                <i data-lucide="chevron-right"></i>
-              </span>
+              <div class="qm-card-img-wrap qm-img-2">
+                <img src="./images/quick_img02.png" alt="기업정보">
+              </div>
             </a>
 
-            <a href="talent.html" class="quick-menu-card">
-              <div class="quick-menu-icon">
-                <i data-lucide="users"></i>
+            <!-- 3. 인재검색 -->
+            <a href="talent.html" class="quick-menu-card qm-card-3">
+              <div class="qm-card-top">
+                <div class="qm-icon-circle orange">
+                  <i data-lucide="users"></i>
+                </div>
+                <h3 class="qm-card-tit">인재검색</h3>
+                <p class="qm-card-desc">외국인 인재 프로필 검색</p>
+                <span class="qm-btn-circle">
+                  <i data-lucide="arrow-right"></i>
+                </span>
               </div>
-              <h3 class="quick-menu-tit">인재검색</h3>
-              <p class="quick-menu-desc">외국인 인재 프로필</p>
-              <span class="quick-menu-link-txt">
-                <span>바로가기</span>
-                <i data-lucide="chevron-right"></i>
-              </span>
+              <div class="qm-card-img-wrap qm-img-3">
+                <img src="./images/quick_img03.png" alt="인재검색">
+              </div>
             </a>
 
-            <a href="visa-roadmap.html" class="quick-menu-card">
-              <div class="quick-menu-icon">
-                <i data-lucide="milestone"></i>
+            <!-- 4. 비자 안내 -->
+            <a href="visa-roadmap.html" class="quick-menu-card qm-card-4">
+              <div class="qm-card-top">
+                <div class="qm-icon-circle purple">
+                  <i data-lucide="file-text"></i>
+                </div>
+                <h3 class="qm-card-tit">비자 안내</h3>
+                <p class="qm-card-desc">E-7, F-2-R 등<br> 비자 정보</p>
+                <span class="qm-btn-circle">
+                  <i data-lucide="arrow-right"></i>
+                </span>
               </div>
-              <h3 class="quick-menu-tit">비자 가이드</h3>
-              <p class="quick-menu-desc">E-7, F-2-R 등 비자 정보</p>
-              <span class="quick-menu-link-txt">
-                <span>바로가기</span>
-                <i data-lucide="chevron-right"></i>
-              </span>
+              <div class="qm-card-img-wrap qm-img-4">
+                <img src="./images/quick_img04.png" alt="비자 안내">
+              </div>
             </a>
 
-            <a href="labor-law.html" class="quick-menu-card">
-              <div class="quick-menu-icon">
-                <i data-lucide="shield-check"></i>
+            <!-- 5. 노동법 -->
+            <a href="labor-law.html" class="quick-menu-card qm-card-5">
+              <div class="qm-card-top">
+                <div class="qm-icon-circle rose">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="qm-card-tit">노동법</h3>
+                <p class="qm-card-desc">외국인 근로자 필수<br>권익 정보</p>
+                <span class="qm-btn-circle">
+                  <i data-lucide="arrow-right"></i>
+                </span>
               </div>
-              <h3 class="quick-menu-tit">기초 노동법</h3>
-              <p class="quick-menu-desc">외국인 근로자 필수 권익</p>
-              <span class="quick-menu-link-txt">
-                <span>바로가기</span>
-                <i data-lucide="chevron-right"></i>
-              </span>
+              <div class="qm-card-img-wrap qm-img-5">
+                <img src="./images/quick_img05.png" alt="노동법">
+              </div>
             </a>
           </div>
         </div>
@@ -812,8 +884,26 @@
           </div>
         </div>
       </section>
+
+      <!-- 메인 레이어 팝업 -->
+      <div class="main-notice-popup-overlay" id="mainNoticeModal">
+        <div class="main-notice-popup-box">
+          <button type="button" class="btn-popup-x-close" id="btnPopupXClose" aria-label="팝업 닫기">
+            <i data-lucide="x"></i>
+          </button>
+          <div class="main-notice-popup-body">
+            <a href="javascript:void(0);" class="main-notice-popup-link">
+              <img src="./images/pop_img.png" alt="2026 강원특별자치도 외국인 취업 박람회">
+            </a>
+          </div>
+          <div class="main-notice-popup-foot">
+            <button type="button" class="btn-popup-bottom-close" id="btnPopupClose">닫기</button>
+          </div>
+        </div>
+      </div>
   </main>
   <!-- //main -->
+
 
   <!-- footer -->
   <footer class="site-footer">
@@ -848,38 +938,59 @@
   <!-- //footer -->
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof lucide !== 'undefined') lucide.createIcons();
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. 슬라이더 카운터 및 Swiper 초기화
+    const curPageEl = document.getElementById('heroCurPage');
+    const totalPageEl = document.getElementById('heroTotalPage');
+    const originSlidesCount = document.querySelectorAll('.hero-swiper .swiper-wrapper > .swiper-slide:not(.swiper-slide-duplicate)').length;
 
-      const curPageEl = document.getElementById('heroCurPage');
-      const totalPageEl = document.getElementById('heroTotalPage');
-      const originSlidesCount = document.querySelectorAll('.hero-swiper .swiper-wrapper > .swiper-slide:not(.swiper-slide-duplicate)').length;
+    if (totalPageEl) {
+      totalPageEl.textContent = String(originSlidesCount > 0 ? originSlidesCount : 3).padStart(2, '0');
+    }
 
-      if (totalPageEl) {
-        totalPageEl.textContent = String(originSlidesCount > 0 ? originSlidesCount : 3).padStart(2, '0');
-      }
-
-      new Swiper('.hero-swiper', {
-        loop: true,
-        autoplay: { delay: 5000, disableOnInteraction: false },
-        pagination: {
-          el: '.hero-pagination-bars',
-          clickable: true
-        },
-        navigation: {
-          nextEl: '#heroBtnNext',
-          prevEl: '#heroBtnPrev'
-        },
-        on: {
-          slideChange: function () {
-            if (curPageEl) {
-              curPageEl.textContent = String(this.realIndex + 1).padStart(2, '0');
-            }
+    new Swiper('.hero-swiper', {
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: {
+        el: '.hero-pagination-bars',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '#heroBtnNext',
+        prevEl: '#heroBtnPrev'
+      },
+      on: {
+        slideChange: function () {
+          if (curPageEl) {
+            curPageEl.textContent = String(this.realIndex + 1).padStart(2, '0');
           }
         }
-      });
-
+      }
     });
-  </script>
+
+    // 2. 메인 팝업 모달 이벤트
+    const modal = document.getElementById('mainNoticeModal');
+    const btnClose = document.getElementById('btnPopupClose');
+    const btnXClose = document.getElementById('btnPopupXClose');
+
+    if (modal) {
+      const closePopup = () => {
+        modal.classList.add('hidden');
+      };
+
+      if (btnClose) btnClose.addEventListener('click', closePopup);
+      if (btnXClose) btnXClose.addEventListener('click', closePopup);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closePopup();
+        }
+      });
+    }
+
+    // 3. Lucide 아이콘 일괄 생성 (팝업 포함)
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  });
+</script>
 </body>
 </html>
