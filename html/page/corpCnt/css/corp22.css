@@ -1,0 +1,97 @@
+html { font-size: 10px; margin: 0 auto; max-width: 1440px;}
+.mg80 { margin: 8rem 0; }
+.pd80 { padding: 8rem 0; }
+.module-wrap.com_navi { display: none; }
+.mod_salary01, .mod_finance05 { display: none; }
+#svisual > img {left: initial; margin-left: 0 !important;}
+
+
+/* 공통 타이틀 */
+h3.mod_tit { font-size: 4rem; margin-bottom: 3rem; font-weight: 600; text-align: center; color: #222; }
+h3.mod_tit span {font-size: 2rem; font-weight: 500; text-align: center; color: #cccccc; }
+@media all and (max-width:1024px){
+ }
+ @media all and (max-width:768px) {
+ }
+ @media all and (max-width:640px){
+ }
+
+
+/* 메인 */
+.mod_visual { width: 100%; height: 600px; position: relative; background: url(../images/corp22/visual.jpg) no-repeat; background-size: cover; }
+.mod_visual .container { display: flex; height: inherit; padding: 60px 10px; position: initial; }
+.mod_visual .cert_wrap { position: absolute; top: 0; right: 80px; padding: 18px 10px; background-color: rgba(1, 64, 153, 0.5); border-radius: 0 0 10px 10px; }
+.mod_visual .cert_wrap .cert_img { margin-bottom: 10px; text-align: center; }
+.mod_visual .cert_wrap p { color: #fff; font-size: 1.4rem; font-weight: 600; text-align: center; }
+.mod_visual .txt_wrap { margin-top: 10rem; text-align: left; }
+.mod_visual .entReptCmmt { margin-bottom: 2rem; font-size: 2.8rem; color: #fff; font-weight: 500; }
+.mod_visual .entReptCmmt b { display: block; font-size: 2.8rem; color: #fff; font-weight: 700; }
+.mod_visual .logo_wrap { display: flex; align-items: flex-end; gap: 20px; }
+.mod_visual .comName { color: #fff; font-size: 5rem; font-weight: 700; }
+.sns_mod_info.sty01 { padding: 10rem 0; background: url(../images/corp22/info.jpg) no-repeat !important; background-size: cover !important; }
+.sns_mod_info.sty01 .info_wrap { display: flex; gap: 3rem; }
+.sns_mod_info.sty01 .info_wrap > li { flex: 1; text-align: center; font-size: 1.8rem; color: #fff; }
+.sns_mod_info.sty01 .info_wrap .cnt span { font-size: 2rem; color: #fff; }
+.sns_mod_info.sty01 .ico { margin: 0 auto 2.0rem auto; }
+.sns_mod_info.sty01 ul li:last-child { margin-right: 0; }
+.sns_mod_info.sty01 ul li .ico { width: 64px; height: 84px; background-size: contain !important; }
+.sns_mod_info.sty01 ul li:nth-child(1) .ico { background: url(../images/corp22/ico_finance01.png) no-repeat center; }
+.sns_mod_info.sty01 ul li:nth-child(2) .ico { background: url(../images/corp22/ico_finance02.png) no-repeat center; }
+.sns_mod_info.sty01 ul li:nth-child(3) .ico { background: url(../images/corp22/ico_finance03.png) no-repeat center; }
+.sns_mod_info.sty01 ul li:nth-child(4) .ico { background: url(../images/corp22/ico_finance04.png) no-repeat center; }
+
+@media all and (max-width: 768px) {
+html { font-size: 8px; }
+.mg80 { margin: 4rem 0; }
+.pd80 { padding: 4rem 0; }
+h3.mod_tit { font-size: 3rem; }
+.mod_visual { height: 250px; }
+.mod_visual .container { align-items: center; padding: 40px 0; }
+.mod_visual .txt_wrap { width: 100%; margin-top: initial; text-align: center; }
+.mod_visual .logo_wrap { flex-direction: column; align-items: center; }
+.mod_visual .entReptCmmt { font-size: 1.6rem; }
+.mod_visual .imgCi img { max-width: 200px; }
+.mod_visual .cert_wrap { right: 1rem; padding: 1rem; }
+.mod_visual .cert_wrap .cert_img img { max-width: 3rem; }
+.mod_visual .cert_wrap p { font-size: 0.5rem; }
+.sns_mod_info.sty01 { padding: 5rem 0; }
+.sns_mod_info.sty01 .info_wrap { flex-wrap: wrap; }
+.sns_mod_info.sty01 .info_wrap > li { flex-basis: 40%; }
+.sns_mod_info.sty01 .info_wrap > li > div.ico { height: 40px; }
+}
+
+/* Company overview */
+.overview .container {width: 100%;}
+.overview .overview_wrap{display:flex;flex-direction:column;width:100%;}
+.overview .overview_item{display:flex;align-items:center;justify-content:space-between;gap:50px;width:100%;}
+.overview .text_box{max-width: 700px; flex:1;display:flex;flex-direction:column;gap:2rem;}
+.overview .text_box p{font-size:1.6rem;line-height:1.8;color:#333;word-break:keep-all;margin:0;letter-spacing:-0.3px;}
+.overview .img_box{flex:1;max-width:560px;height:380px;overflow:hidden;}
+.overview .img_box.round_top_left{border-top-left-radius:140px;}
+.overview .img_box img{width:100%;height:100%;object-fit:cover;display:block;}
+@media all and (max-width:1024px){
+.overview .overview_item{gap:30px;}
+.overview .img_box{max-width:480px;height:320px;}
+.overview .img_box.round_top_left{border-top-left-radius:100px;}
+}
+@media all and (max-width:768px){
+.overview .overview_item{flex-direction:column-reverse;gap:2.5rem;}
+.overview .img_box{max-width:100%;width:100%;height:260px;}
+.overview .img_box.round_top_left{border-top-left-radius:70px;}
+.overview .text_box p{font-size:1.45rem;line-height:1.65;}
+}
+
+/* 연혁 */
+.mod_history04 .history_wrap { display: flex; gap: 6rem; width: 100%; } 
+.mod_history04 .history_wrap .thumb { max-width: 560px; width: 100%; margin: 0 auto; float: initial; } 
+.mod_history04 .history_wrap .history { width: 100%; height: 750px; float: initial; overflow-y: scroll; } 
+.mod_history04 .history_wrap .history::-webkit-scrollbar { width: 6px; } 
+.mod_history04 .history_wrap .history::-webkit-scrollbar-thumb { background: #016f39; border-radius: 10px; } 
+.mod_history04 .history_wrap .history::-webkit-scrollbar-track { background: #dddddd; } 
+.mod_history04 .history > div > ul > li .month { display: none; } 
+.mod_history04 .history > div > ul > li .event span::before { content: "ㆍ"; display: inline-block; color: #222; } 
+.mod_history04 .history::after {content: none;}
+.mod_history04 .history > div { position: relative; padding-left: 30px; border-left: 2px solid #dddddd; margin-left: 10px;}
+.mod_history04 .history > div > span { position: relative; display: block; color: #016f39;}
+.mod_history04 .history > div > span::before { content: ''; position: absolute; left: -37px; top: 0; width: 14px; height: 14px; border-radius: 50%; background-color: #fff; border: 4px solid #016f39; box-sizing: border-box;}
+.mod_history04 .history > div+div {margin-top: 0; padding-top: 3rem;}
