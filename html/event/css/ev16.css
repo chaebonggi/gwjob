@@ -9,7 +9,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
 .event16 .ev-top__tit { color: #ffffff; font-size: 1.8rem; font-weight: 500; }
 .event16 .ev-top__tit span { display: inline-block; margin-left: 0.6rem; padding: 0.2rem 0.6rem; font-weight: 700; background-color: #0075ff; color: #ffffff; border-radius: 0.4rem; font-size: 1.4rem; }
 .event16 .ev-top__date { color: #fff; font-size: 1.6rem; font-weight: 500; }
-.event16 .ev-visual { position: relative; width: 100%; background: #eaf3fb url('../images/ev16/bg_visual.png') no-repeat right center / cover; padding: 6rem 0 0; overflow: hidden; }
+.event16 .ev-visual { position: relative; width: 100%; background: #eaf3fb url('../images/ev16/bg_visual.jpg') no-repeat right center / cover; padding: 6rem 0 0; overflow: hidden; }
 .event16 .ev-visual__inner { display: flex; justify-content: space-between; align-items: flex-end; min-height: 580px; }
 .event16 .ev-visual__txt-box { padding-bottom: 8rem; z-index: 2; }
 .event16 .ev-visual__txt-box .sub-tit { display: block; padding-left: 1rem; font-size: 3rem; font-weight: 800; color: #000f38; margin-bottom: 1.5rem; letter-spacing: -0.05rem; }
@@ -60,7 +60,7 @@ html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400
     .event16 .ev-visual__phone-box { width: 320px; }
 }
 
-.event16 .ev-content-sec { position: relative; background: #ebf5fd url('../images/ev16/ev_review_bg.png') no-repeat center top / cover; padding: 6rem 0 10rem; }
+.event16 .ev-content-sec { position: relative; background: #ebf5fd url('../images/ev16/ev_review_bg.jpg') no-repeat center top / cover; padding: 6rem 0 10rem; }
 .event16 .ev-card { max-width: 1200px; width: 100%; margin: 0 auto; background: #f2f9ff; border: 4px solid #fff; border-radius: 3rem; box-shadow: 0 10px 30px rgba(18, 55, 105, 0.06); }
 .event16 .ev-card--gift { padding: 5rem 6rem; margin-bottom: 3rem; }
 .event16 .gift-top { display: flex; justify-content: space-between; align-items: center; }
