@@ -1,72 +1,92 @@
 <!DOCTYPE html>
-<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>경기도외국인일자리포털 - 채용정보</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.min.js"></script>
   
-  <!-- Noto Sans KR 폰트 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- 커스텀 스타일시트 -->
-  <link rel="stylesheet" href="css/외국인일자리.css">
+	<!-- Noto Sans KR 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<script type="text/javascript" charset="utf-8" src="https://job.gg.go.kr/resource/js/jquery-3.7.1.js"></script>
+
+	<!-- 커스텀 스타일시트 -->
+	<link rel="stylesheet" href="./css/global.css">
+	<link type="text/css" rel="stylesheet" href="https://job.gg.go.kr/resource/css/main/layout.css" />
 </head>
-<body class="bg-gray-page">
+<body>
 
   <!-- HEADER -->
+  
+  <!-- 구글 번역 기본 UI 숨김 컨테이너 -->
+  <!-- 국기 CSS 라이브러리 CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+  <!-- 구글 번역 기본 UI 숨김 컨테이너 -->
+  <div id="google_translate_element" style="display: none;"></div>
+  
   <header class="site-header">
     <div class="inner-section">
-      <a href="main.html" class="header-logo">
-        <img src="images/logo.png" alt="경기도외국인일자리포털" class="logo-img">
+      <a href="./main.html" class="header-logo">
+        <img src="./images/logo_ver02.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
       <nav class="header-nav">
-        <a href="about.html" class="nav-item">사업소개</a>
-        <a href="jobs.html" class="nav-item active">채용정보</a>
+      <a href="./jobs.html" class="nav-item ">채용정보</a>
         
-        <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
-          <div class="dropdown-menu">
-            <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
-            <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
-            <a href="visa-score.html">내 비자점수 알아보기</a>
-          </div>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 코칭</a>
+          <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
         </div>
-
-        <a href="visa-info.html" class="nav-item">비자안내</a>
-
-        <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
-          <div class="dropdown-menu">
-            <a href="forms.html">양식함</a>
-            <a href="forms-info.html">도움이 되는 정보</a>
-          </div>
+      </div>     
+	  
+      <div class="nav-dropdown">
+        <button type="button" class="nav-item has-depth ">비자안내 <i data-lucide="chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="/global/intro/visaInfo.do" class="nav-item tlt ">비자안내</a>
+          <a href="/global/intro/visaScore.do" class="nav-item tlt ">내 비자점수 알아보기</a>
         </div>
+      </div>
+      <a href="/global/board/faq/list.do" class="nav-item ">FAQ</a>
+      <a href="/global/intro/business.do" class="nav-item ">서비스 안내</a>
+      <!--  
+      <div class="nav-dropdown">
+        <button type="button" class="nav-item has-depth ">자료실 <i data-lucide="chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="/global/board/form/list.do">양식함</a>
+          <a href="/global/board/help/list.do">도움이 되는 정보</a>
+        </div>
+      </div>
+      -->
       </nav>
 
       <div class="header-actions">
         <div class="btn-group">
-          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
-          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn-action btn-emp">구인신청</a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn-action btn-job">구직신청</a>
         </div>
-        
-        <div class="lang-selector">
-          <button type="button" class="lang-btn">
-            <span id="current-lang-text">한국어</span>
-            <i data-lucide="chevron-down"></i>
+
+        <div class="vflag-wrap" id="vflagBox">
+          <button type="button" class="vflag-btn" id="vflagBtn">
+            <span id="vflag-icon" class="fi fi-kr vflag-flag"></span>
+            <span id="vflag-code" class="vflag-txt notranslate" translate="no">KOR</span>
+            <i data-lucide="chevron-down" class="vflag-arrow"></i>
           </button>
-          <div id="lang-menu" class="lang-dropdown hidden">
-            <button type="button">한국어</button>
-            <button type="button">English</button>
-            <button type="button">中文</button>
-            <button type="button">Tiếng Việt</button>
-            <button type="button">日本語</button>
-          </div>
+
+          <ul class="vflag-dropdown notranslate" id="vflagDropdown" translate="no">
+            <li><button type="button" onclick="changeLanguage('ko');"><span class="fi fi-kr"></span> KOR</button></li>
+            <li><button type="button" onclick="changeLanguage('en');"><span class="fi fi-us"></span> ENG</button></li>
+            <li><button type="button" onclick="changeLanguage('zh-CN');"><span class="fi fi-cn"></span> CHN</button></li>
+            <li><button type="button" onclick="changeLanguage('vi');"><span class="fi fi-vn"></span> VIE</button></li>
+            <li><button type="button" onclick="changeLanguage('ja');"><span class="fi fi-jp"></span> JPN</button></li>
+          </ul>
         </div>
       </div>
 
@@ -75,12 +95,11 @@
       </button>
     </div>
   </header>
-
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
-      <img src="images/logo.png" alt="경기도외국인일자리포털" class="drawer-logo">
+      <img src="/resource/images/global/logo_b.png" alt="경기도외국인일자리포털" class="drawer-logo">
       <button type="button" class="btn-close-drawer" id="btn-close-drawer" aria-label="메뉴 닫기">
         <i data-lucide="x"></i>
       </button>
@@ -92,8 +111,7 @@
     </div>
 
     <nav class="drawer-nav">
-      <a href="about.html" class="drawer-nav-item">사업소개</a>
-      <a href="jobs.html" class="drawer-nav-item">채용정보</a>
+      <a href="/global/empmn/list.do" class="drawer-nav-item">채용정보</a>
       
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
@@ -101,43 +119,79 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="accordion-content">
-          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
+          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 코칭</a>
           <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
-          <a href="visa-score.html">내 비자점수 알아보기</a>
         </div>
       </div>
+      
+      <div class="drawer-accordion">
+        <button type="button" class="drawer-nav-item accordion-btn">
+          <span>비자안내</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <a href="/global/intro/visaInfo.do">비자안내</a>
+          <a href="/global/intro/visaScore.do">내 비자점수 알아보기</a>
+        </div>
+      </div>
+      <a href="/global/board/faq/list.do" class="drawer-nav-item">FAQ</a>
+      <a href="/global/intro/business.do" class="drawer-nav-item">서비스 안내</a>
 
-      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
-
+      <!-- 
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
           <span>자료실</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="accordion-content">
-          <a href="forms.html">양식함</a>
-          <a href="forms-info.html">도움이 되는 정보</a>
+          <a href="/global/board/form.do">양식함</a>
+          <a href="/global/board/help.do">도움이 되는 정보</a>
         </div>
       </div>
     </nav>
+    -->
 
     <div class="drawer-lang">
       <span class="lang-title">언어선택 (Language)</span>
       <div class="lang-selector m-lang-selector">
-        <button type="button" class="lang-btn">
-          <span>한국어</span>
+        <button type="button" class="lang-btn" id="drawer-lang-btn">
+          <span class="m-current-lang-text">한국어</span>
           <i data-lucide="chevron-up"></i>
         </button>
-        <div class="lang-dropdown hidden">
-          <button type="button">한국어</button>
-          <button type="button">English</button>
-          <button type="button">中文</button>
-          <button type="button">Tiếng Việt</button>
-          <button type="button">日本語</button>
+        <div id="drawer-lang-menu" class="lang-dropdown hidden notranslate" translate="no">
+          <button type="button" onclick="changeLanguage('ko');">KOR</button>
+          <button type="button" onclick="changeLanguage('en');">ENG</button>
+          <button type="button" onclick="changeLanguage('zh-CN');">CHN</button>
+          <button type="button" onclick="changeLanguage('vi');">VIE</button>
+          <button type="button" onclick="changeLanguage('ja');">JPN</button>
         </div>
       </div>
     </div>
   </aside>
+  <!-- [PC 전용] 드롭다운 클릭 제어 스크립트 -->
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    var vBox = document.getElementById('vflagBox');
+    var vBtn = document.getElementById('vflagBtn');
+
+    if (vBtn && vBox) {
+      // 버튼 클릭 시 레이어 토글
+      vBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        vBox.classList.toggle('open');
+      });
+
+      // 바깥 영역 클릭 시 레이어 닫기
+      document.addEventListener('click', function (e) {
+        if (!vBox.contains(e.target)) {
+          vBox.classList.remove('open');
+        }
+      });
+    }
+  });
+</script>
+<script type="text/javascript" src="/resource/js/global/translate.js"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
@@ -145,7 +199,7 @@
     
     <!-- 상단 서브 히어로 배너 -->
     <section class="sub-hero indigo">
-      <div class="inner-section tct">
+      <div class="inner-section">
         <h1>채용정보</h1>
         <p>나에게 꼭 맞는 맞춤형 일자리를 찾아보세요.</p>
       </div>
@@ -154,345 +208,251 @@
     <!-- 본문 컨텐츠 -->
     <section class="jobs-main">
       <div class="inner-section">
-        <!-- 플랫폼 탭 상단 섹션 제목 -->
-        <h2 class="sec-tit">외국인 채용 정보 기관</h2>
-
-        <style>
-          .platform-tabs-container { display: flex; gap: 3.2rem; border-bottom: 1px solid #e2e8f0; margin-top: 1rem; margin-bottom: 2.4rem; }
-          .platform-tab { padding: 1.2rem 0.4rem; font-size: 1.6rem; font-weight: 600; color: #64748b; border: none; background: transparent; border-bottom: 3px solid transparent; cursor: pointer; transition: all 0.2s ease; }
-          .platform-tab:hover { color: #0f172a; }
-          .platform-tab.active { font-weight: 700; color: #3b82f6; border-bottom: 3px solid #3b82f6; }
-          .jobs-filter-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3.2rem; padding: 0.6rem 0; flex-wrap: wrap; gap: 1.6rem; }
-          .jobs-filter-left { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-          .jobs-search-box { position: relative; width: 28rem; }
-          .jobs-search-box svg { position: absolute; left: 1.6rem; top: 50%; transform: translateY(-50%); color: #64748b; width: 1.6rem; height: 1.6rem; }
-          .jobs-search-box input { width: 100%; padding: 1.1rem 1.6rem 1.1rem 4.2rem; font-size: 1.5rem; border: 1px solid #cbd5e1; border-radius: 9999px; outline: none; box-sizing: border-box; transition: border-color 0.2s ease; }
-          .jobs-search-box input:focus { border-color: #3b82f6; }
-          .filter-dropdown-wrap { position: relative; display: inline-block; }
-          .filter-pill-btn { padding: 1rem 1.8rem; border-radius: 9999px; border: 1px solid #e2e8f0; background: #ffffff; color: #475569; font-size: 1.45rem; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 0.8rem; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
-          .filter-pill-btn:hover { background-color: #f8fafc; }
-          .filter-pill-btn svg { width: 1.4rem; height: 1.4rem; color: #94a3b8; transition: transform 0.2s ease; }
-          .filter-dropdown-wrap.open .filter-pill-btn { border-color: #3b82f6; color: #2563eb; background: #eff6ff; }
-          .filter-dropdown-wrap.open .filter-pill-btn svg { transform: rotate(180deg); color: #2563eb; }
-          .filter-dropdown-menu { position: absolute; top: calc(100% + 0.6rem); left: 0; min-width: 14rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); padding: 0.6rem 0; z-index: 50; display: none; max-height: 22rem; overflow-y: auto; }
-          .filter-dropdown-wrap.open .filter-dropdown-menu { display: block; animation: dropFade 0.2s ease; }
-          .filter-opt-item { width: 100%; text-align: left; padding: 0.8rem 1.4rem; font-size: 1.35rem; color: #334155; background: none; border: none; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
-          .filter-opt-item:hover { background-color: #f1f5f9; color: #0f172a; }
-          .filter-opt-item.active { font-weight: 700; color: #2563eb; background-color: #f0f7ff; }
-          .jobs-sort-right { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
-          .sort-btn { border: none; background: transparent; color: #94a3b8; font-size: 1.5rem; font-weight: 500; cursor: pointer; padding: 0.4rem; }
-          .sort-btn.active { color: #0f172a; font-weight: 700; }
-          @keyframes dropFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-          @media (max-width: 768px) {
-            .platform-tabs-container { gap: 2rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
-            .jobs-filter-row { flex-direction: column; align-items: stretch; gap: 1.4rem; }
-            .jobs-filter-left { width: 100%; }
-            .jobs-search-box { width: 100%; }
-            .jobs-sort-right { margin-left: 0; justify-content: flex-end; }
-          }
-          @media (max-width: 640px) {
-            .jobs-filter-row { margin-bottom: 2rem; gap: 1rem; }
-            .jobs-filter-left { gap: 0.8rem; }
-            .jobs-search-box { width: 100%; }
-            .jobs-search-box svg { left: 1.4rem; width: 1.4rem; height: 1.4rem; }
-            .jobs-search-box input { padding: 0.85rem 1.4rem 0.85rem 3.6rem; font-size: 1.35rem; border-radius: 9999px; }
-            .filter-pill-btn { padding: 0.65rem 1.2rem; font-size: 1.25rem; gap: 0.5rem; }
-            .filter-pill-btn svg { width: 1.1rem; height: 1.1rem; }
-            .filter-dropdown-menu { min-width: 12rem; border-radius: 10px; }
-            .filter-opt-item { padding: 0.7rem 1.2rem; font-size: 1.2rem; }
-            .jobs-sort-right { margin-top: 0.2rem; gap: 1.2rem; }
-            .sort-btn { font-size: 1.25rem; padding: 0.2rem; }
-          }
-        </style>
-
-        <!-- 1. 플랫폼 탭 메뉴 바 (참고 사이트 언더라인 스타일) -->
+		<h3 class="sec-block-title">외국인 채용 정보 기관</h3>
+        <!-- 2. 플랫폼 구분 탭 필터 (data-target 지정) -->
         <div class="platform-tabs-container">
-          <button type="button" class="platform-tab active" onclick="handleTabClick('jobaba', this);">잡아바</button>
-          <button type="button" class="platform-tab" onclick="handleTabClick('exhb', this);">자체등록</button>
-          <button type="button" class="platform-tab" onclick="handleTabClick('bjob', this);">비잡(Vijob)</button>
+          <button class="platform-tab active" onclick="fn_SearchType('bjob', this);">비잡(Vijob)</button>
+          <button class="platform-tab" onclick="fn_SearchType('wanted', this);">원티드랩</button>
+          <button class="platform-tab" onclick="fn_SearchType('kowork', this);">KOWORK</button>
+          <button class="platform-tab" onclick="fn_SearchType('jobaba', this);">잡아바</button>
         </div>
-
-        <!-- 2. 잡아바 전용 검색 및 필터 영역 (초기 노출) -->
+        
+        <!-- 검색 및 필터 영역 --> 
         <div class="jobs-filter-row" id="jobaba-filter-area">
           <div class="jobs-filter-left">
-          <!-- 검색창 -->
-          <div class="jobs-search-box">
-            <i data-lucide="search"></i>
-            <input type="text" id="jobs-search-keyword" placeholder="검색어 입력">
-          </div>
-
-          <!-- [1] 지역 필터 -->
-          <div class="filter-dropdown-wrap">
-            <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)">
-              지역 <i data-lucide="chevron-down"></i>
-            </button>
-            <div class="filter-dropdown-menu">
-              <button type="button" class="filter-opt-item active">전체 지역</button>
-              <button type="button" class="filter-opt-item">수원시</button>
-              <button type="button" class="filter-opt-item">화성시</button>
-              <button type="button" class="filter-opt-item">평택시</button>
-              <button type="button" class="filter-opt-item">안산시</button>
-              <button type="button" class="filter-opt-item">성남시</button>
-              <button type="button" class="filter-opt-item">시흥시</button>
+            <div class="jobs-search-box">
+              <form onsubmit="fn_HandleSubmit(event);" style="display: flex; align-items: center; width: 100%; height: 100%; margin: 0;">
+                <i data-lucide="search" onclick="fn_Search(1);" style="cursor: pointer;"></i>
+                <input type="text" id="jobs-search-keyword" placeholder="검색어 입력" value="" autocomplete="off">
+              </form>
+            </div>
+            
+            <!-- 지역 필터 -->
+            <div class="filter-dropdown-wrap search-option">
+              <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)"><span class="btn-label">지역</span><i data-lucide="chevron-down"></i></button>
+              <div class="filter-dropdown-menu" id="filter-region-menu">
+                <!-- JS 동적 렌더링 -->
+              </div>
+            </div>
+            
+            <!-- 고용 형태 필터 -->
+            <div class="filter-dropdown-wrap search-option">
+              <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)"><span class="btn-label">고용 형태</span><i data-lucide="chevron-down"></i></button>
+              <div class="filter-dropdown-menu" id="filter-emptype-menu">
+                <!-- JS 동적 렌더링 -->
+              </div>
+            </div>
+            
+            <!-- 직종 필터 -->
+            <div class="filter-dropdown-wrap search-option">
+              <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)"><span class="btn-label">직종</span><i data-lucide="chevron-down"></i></button>
+              <div class="filter-dropdown-menu" id="filter-jobtype-menu">
+                <!-- JS 동적 렌더링 -->
+              </div>
             </div>
           </div>
+          <style>
+          .jobs-sort-right { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
+          .jobs-sort-btns { display: flex; align-items: center; gap: 1.2rem; }
+          .job-view-switcher { display: inline-flex; align-items: center; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 3px; gap: 2px; }
+          .job-view-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 1.3rem; font-weight: 600; color: #64748b; border: none; background: transparent; border-radius: 7px; cursor: pointer; transition: all 0.2s ease; }
+          .job-view-btn i { font-size: 1.25rem; }
+          .job-view-btn:hover { color: #0f172a; }
+          .job-view-btn.active { background-color: #ffffff; color: #2563eb; font-weight: 700; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
+          .job-grid-4.view-list { display: flex; flex-direction: column; gap: 1.4rem; }
+          .job-grid-4.view-list .job-card-item { height: auto; min-height: unset; flex-direction: row; align-items: center; justify-content: space-between; padding: 2rem 2.6rem; gap: 2.4rem; border-radius: 16px; }
+          .job-grid-4.view-list .card-top-head { order: 1; flex-shrink: 0; min-width: 14rem; justify-content: flex-start; }
+          .job-grid-4.view-list .card-mid-body { order: 2; flex: 1; min-width: 0; margin: 0; }
+          .job-grid-4.view-list .job-title-txt { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-bottom: 0.6rem; -webkit-line-clamp: 1; }
+          .job-grid-4.view-list .card-bot-foot { order: 3; flex-shrink: 0; border-top: none; padding-top: 0; gap: 2.4rem; }
+          .job-grid-4.view-list .btn-apply-outline { padding: 0.8rem 2rem; font-size: 1.35rem; font-weight: 800; border-radius: 8px; background-color: #2563eb; color: #ffffff; border: 1px solid #2563eb; }
+          .job-grid-4.view-list .btn-apply-outline:hover { background-color: #1d4ed8; border-color: #1d4ed8; }
+          @media (max-width: 1024px) {
+          .job-grid-4.view-list .job-card-item { flex-direction: column; align-items: flex-start; gap: 1.4rem; padding: 2rem; }
+          .job-grid-4.view-list .card-top-head { width: 100%; min-width: unset; }
+          .job-grid-4.view-list .card-mid-body { width: 100%; }
+          .job-grid-4.view-list .card-bot-foot { width: 100%; border-top: 1px solid #f1f5f9; padding-top: 1.2rem; justify-content: space-between; }
+          }
+          @media (max-width: 640px) {
+            .job-card-item {height: auto; gap: 1.4rem;}
+          .job-view-switcher span { display: none; }
+          .job-view-btn { padding: 6px 8px; }
+          }
+          </style>
+          <!-- 정렬 및 뷰 스위처 영역 -->
+          <div class="jobs-sort-right search-option">
+            <div class="jobs-sort-btns">
+              <button type="button" class="sort-btn active" data-sort="01" onclick="fn_ChangeSort('01', this);">마감 임박순</button>
+              <button type="button" class="sort-btn" data-sort="02" onclick="fn_ChangeSort('02', this);">최신순</button>
+            </div>
 
-          <!-- [2] 고용 형태 필터 -->
-          <div class="filter-dropdown-wrap">
-            <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)">
-              고용 형태 <i data-lucide="chevron-down"></i>
-            </button>
-            <div class="filter-dropdown-menu">
-              <button type="button" class="filter-opt-item active">전체 형태</button>
-              <button type="button" class="filter-opt-item">정규직</button>
-              <button type="button" class="filter-opt-item">계약직</button>
-              <button type="button" class="filter-opt-item">아르바이트</button>
-              <button type="button" class="filter-opt-item">인턴</button>
+            <div class="job-view-switcher" role="radiogroup" aria-label="채용정보 보기 방식 선택">
+              <button type="button" class="job-view-btn active" id="btn-view-grid" data-view="grid" title="바둑판형 (카드) 보기" role="radio" aria-checked="true">
+                <i class="fa-solid fa-table-cells-large"></i>
+                <span>바둑판형</span>
+              </button>
+              <button type="button" class="job-view-btn" id="btn-view-list" data-view="list" title="리스트형 보기" role="radio" aria-checked="false">
+                <i class="fa-solid fa-list-ul"></i>
+                <span>리스트형</span>
+              </button>
             </div>
           </div>
-
-          <!-- [3] 직종 필터 -->
-          <div class="filter-dropdown-wrap">
-            <button type="button" class="filter-pill-btn" onclick="toggleFilterMenu(this)">
-              직종 <i data-lucide="chevron-down"></i>
-            </button>
-            <div class="filter-dropdown-menu">
-              <button type="button" class="filter-opt-item active">전체 직종</button>
-              <button type="button" class="filter-opt-item">제조·생산</button>
-              <button type="button" class="filter-opt-item">물류·운송</button>
-              <button type="button" class="filter-opt-item">IT·개발</button>
-              <button type="button" class="filter-opt-item">서비스·숙박·외식</button>
-              <button type="button" class="filter-opt-item">통번역·사무</button>
-            </div>
-          </div>
-        </div>
-          <div class="jobs-sort-right">
-            <button type="button" class="sort-btn">마감 임박순</button>
-            <button type="button" class="sort-btn active">최신순</button>
-          </div>
-        </div>
-
-        <!-- 3. 채용 공고 카드 그리드 (메뉴별 카드 최소 1개 이상 추가) -->
-        <div class="job-grid-4">
           
-          <!-- [1] 자체등록 카드 -->
-          <div class="job-card-item" data-category="self">
-            <div class="card-top-head">
-              <div class="badge-left-group">
-                <span class="v-badge red">D-9</span>
-                <span class="v-badge blue">자체등록</span>
-              </div>
-              <button class="btn-share"><i data-lucide="share-2"></i></button>
-            </div>
-
-            <div class="card-mid-body">
-              <div class="info-pill-group">
-                <span class="info-pill">정규직</span>
-                <span class="info-pill">E-9, F-2</span>
-              </div>
-              <h3 class="job-title-txt">생산직 외국인 근로자 모집</h3>
-              <p class="job-comp-txt">(주)경기테크</p>
-            </div>
-
-            <div class="card-bot-foot">
-              <span class="loc-txt"><i data-lucide="map-pin"></i> 화성시</span>
-              <button class="btn-apply-outline">지원하기</button>
-            </div>
-          </div>
-
-          <!-- [2] 원티드랩 카드 -->
-          <div class="job-card-item" data-category="wanted">
-            <div class="card-top-head">
-              <div class="badge-left-group">
-                <span class="v-badge red">D-8</span>
-                <span class="v-badge gray">원티드랩</span>
-              </div>
-              <button class="btn-share"><i data-lucide="share-2"></i></button>
-            </div>
-
-            <div class="card-mid-body">
-              <div class="info-pill-group">
-                <span class="info-pill">계약직</span>
-                <span class="info-pill">F-4, F-5</span>
-              </div>
-              <h3 class="job-title-txt">식품 가공 및 포장 업무</h3>
-              <p class="job-comp-txt">글로벌푸드</p>
-            </div>
-
-            <div class="card-bot-foot">
-              <span class="loc-txt"><i data-lucide="map-pin"></i> 평택시</span>
-              <button class="btn-apply-outline">지원하기</button>
-            </div>
-          </div>
-
-          <!-- [3] 코워크 카드 -->
-          <div class="job-card-item" data-category="cowork">
-            <div class="card-top-head">
-              <div class="badge-left-group">
-                <span class="v-badge red">D-7</span>
-                <span class="v-badge green">코워크</span>
-              </div>
-              <button class="btn-share"><i data-lucide="share-2"></i></button>
-            </div>
-
-            <div class="card-mid-body">
-              <div class="info-pill-group">
-                <span class="info-pill">정규직</span>
-                <span class="info-pill">F-2, F-5</span>
-              </div>
-              <h3 class="job-title-txt">프론트 데스크 다국어 가능자</h3>
-              <p class="job-comp-txt">인터내셔널호텔</p>
-            </div>
-
-            <div class="card-bot-foot">
-              <span class="loc-txt"><i data-lucide="map-pin"></i> 수원시</span>
-              <button class="btn-apply-outline">지원하기</button>
-            </div>
-          </div>
-
-          <!-- [4] 비잡 카드 -->
-          <div class="job-card-item" data-category="visajob">
-            <div class="card-top-head">
-              <div class="badge-left-group">
-                <span class="v-badge red">D-10</span>
-                <span class="v-badge yellow">비잡</span>
-              </div>
-              <button class="btn-share"><i data-lucide="share-2"></i></button>
-            </div>
-
-            <div class="card-mid-body">
-              <div class="info-pill-group">
-                <span class="info-pill">정규직</span>
-                <span class="info-pill">E-7, F-2</span>
-              </div>
-              <h3 class="job-title-txt">IT 솔루션 개발자 (해외인재)</h3>
-              <p class="job-comp-txt">(주)에이치알</p>
-            </div>
-
-            <div class="card-bot-foot">
-              <span class="loc-txt"><i data-lucide="map-pin"></i> 성남시</span>
-              <button class="btn-apply-outline">지원하기</button>
-            </div>
-          </div>
-
-          <!-- [5] 잡아바 카드 -->
-          <div class="job-card-item" data-category="jobaba">
-            <div class="card-top-head">
-              <div class="badge-left-group">
-                <span class="v-badge red">D-5</span>
-                <span class="v-badge magenta">잡아바</span>
-              </div>
-              <button class="btn-share"><i data-lucide="share-2"></i></button>
-            </div>
-
-            <div class="card-mid-body">
-              <div class="info-pill-group">
-                <span class="info-pill">아르바이트</span>
-                <span class="info-pill">D-2, F-2</span>
-              </div>
-              <h3 class="job-title-txt">물류센터 입출고 담당</h3>
-              <p class="job-comp-txt">경기물류</p>
-            </div>
-
-            <div class="card-bot-foot">
-              <span class="loc-txt"><i data-lucide="map-pin"></i> 안산시</span>
-              <button class="btn-apply-outline">지원하기</button>
-            </div>
-          </div>
-
         </div>
 
+        <div class="job-grid-4" id="ul_JobList">
+          <div class="job-card-item">  <div class="card-top-head">    <div class="badge-left-group"><span class="v-badge red">D-day</span><span class="v-badge yellow">비잡</span></div>  </div>  <div class="card-mid-body">    <div class="info-pill-group">      <span class="info-pill" title="정규직">정규직</span>      <span class="info-pill" title="면접 후 결정">면접 후 결정</span>    </div>    <h3 class="job-title-txt" title="[피제이전자] 인사총무 담당자 모집 (과장~차장급)">[피제이전자] 인사총무 담당자 모집 (과장~차장급)</h3>    <p class="job-comp-txt">(주)피제이전자</p>  </div>  <div class="card-bot-foot">    <span class="loc-txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> 삼정동</span><button class="btn-apply-outline" data-url="https://app.vijob.net/job/118134" onclick="fn_GoExternalDetail(this.dataset.url);">지원하기</button>  </div></div>
+          <div class="job-card-item">  <div class="card-top-head">    <div class="badge-left-group"><span class="v-badge red">D-day</span><span class="v-badge yellow">비잡</span></div>  </div>  <div class="card-mid-body">    <div class="info-pill-group">      <span class="info-pill" title="정규직">정규직</span>      <span class="info-pill" title="면접 후 결정">면접 후 결정</span>    </div>    <h3 class="job-title-txt" title="[피제이전자] 인사총무 담당자 모집 (과장~차장급)">[피제이전자] 인사총무 담당자 모집 (과장~차장급)</h3>    <p class="job-comp-txt">(주)피제이전자</p>  </div>  <div class="card-bot-foot">    <span class="loc-txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> 삼정동</span><button class="btn-apply-outline" data-url="https://app.vijob.net/job/118134" onclick="fn_GoExternalDetail(this.dataset.url);">지원하기</button>  </div></div>
+          <div class="job-card-item">  <div class="card-top-head">    <div class="badge-left-group"><span class="v-badge red">D-day</span><span class="v-badge yellow">비잡</span></div>  </div>  <div class="card-mid-body">    <div class="info-pill-group">      <span class="info-pill" title="정규직">정규직</span>      <span class="info-pill" title="면접 후 결정">면접 후 결정</span>    </div>    <h3 class="job-title-txt" title="[피제이전자] 인사총무 담당자 모집 (과장~차장급)">[피제이전자] 인사총무 담당자 모집 (과장~차장급)</h3>    <p class="job-comp-txt">(주)피제이전자</p>  </div>  <div class="card-bot-foot">    <span class="loc-txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> 삼정동</span><button class="btn-apply-outline" data-url="https://app.vijob.net/job/118134" onclick="fn_GoExternalDetail(this.dataset.url);">지원하기</button>  </div></div>
+          <div class="job-card-item">  <div class="card-top-head">    <div class="badge-left-group"><span class="v-badge red">D-day</span><span class="v-badge yellow">비잡</span></div>  </div>  <div class="card-mid-body">    <div class="info-pill-group">      <span class="info-pill" title="정규직">정규직</span>      <span class="info-pill" title="면접 후 결정">면접 후 결정</span>    </div>    <h3 class="job-title-txt" title="[피제이전자] 인사총무 담당자 모집 (과장~차장급)">[피제이전자] 인사총무 담당자 모집 (과장~차장급)</h3>    <p class="job-comp-txt">(주)피제이전자</p>  </div>  <div class="card-bot-foot">    <span class="loc-txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> 삼정동</span><button class="btn-apply-outline" data-url="https://app.vijob.net/job/118134" onclick="fn_GoExternalDetail(this.dataset.url);">지원하기</button>  </div></div>
+          <div class="job-card-item">  <div class="card-top-head">    <div class="badge-left-group"><span class="v-badge red">D-day</span><span class="v-badge yellow">비잡</span></div>  </div>  <div class="card-mid-body">    <div class="info-pill-group">      <span class="info-pill" title="정규직">정규직</span>      <span class="info-pill" title="면접 후 결정">면접 후 결정</span>    </div>    <h3 class="job-title-txt" title="[피제이전자] 인사총무 담당자 모집 (과장~차장급)">[피제이전자] 인사총무 담당자 모집 (과장~차장급)</h3>    <p class="job-comp-txt">(주)피제이전자</p>  </div>  <div class="card-bot-foot">    <span class="loc-txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> 삼정동</span><button class="btn-apply-outline" data-url="https://app.vijob.net/job/118134" onclick="fn_GoExternalDetail(this.dataset.url);">지원하기</button>  </div></div>
+		</div>
+		<div id="div_Pagination"></div>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  
+<footer class="site-footer">
     <div class="inner-section">
       <div class="footer-top">
         <div class="footer-lbl">
           <span class="bar"></span>
           <span>유관기관 바로가기</span>
         </div>
-        <div class="footer-links">
-          <a href="https://www.gg.go.kr/" target="_blank" rel="noopener noreferrer">경기도청</a>
-          <a href="https://www.gjf.or.kr/" target="_blank" rel="noopener noreferrer">경기도일자리재단</a>
-          <a href="https://www.jobaba.net/" target="_blank" rel="noopener noreferrer">잡아바 (Jobaba)</a>
-          <a href="https://www.immigration.go.kr/" target="_blank" rel="noopener noreferrer">출입국·외국인정책본부</a>
-          <a href="https://www.moel.go.kr/" target="_blank" rel="noopener noreferrer">고용노동부</a>
+        <div class="footer-wrap">
+        	<div class="footer-links">
+	          <a href="https://www.gg.go.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+		          <img src="/resource/images/global/f_logo01.png" alt="경기도청">
+		          <span>경기도청<span>
+	          </a>
+	          <a href="https://www.gjf.or.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo02.png" alt="경기도일자리재단">
+	          	<span>경기도일자리재단<span>
+	          </a>
+	          <a href="https://www.jobaba.net/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo03.png" alt="잡아바 (Jobaba)">
+	          	<span>잡아바 (Jobaba)<span>
+	          </a>
+	          <a href="https://www.immigration.go.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo04.png" alt="출입국·외국인정책본부">
+	          	<span>출입국·외국인정책본부<span>
+	          </a>
+	          <a href="https://www.moel.go.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo05.png" alt="고용노동부">
+	          	<span>고용노동부<span>
+	          </a>
+	          <a href="https://www.hikorea.go.kr/Main.pt" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo06.png" alt="하이코리아">
+	          	<span>하이코리아<span>
+	          </a>
+	          <a href="https://www.gg.go.kr/gmigrant/hmpg/main.do" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo07.png" alt="경기도이주민포털">
+	          	<span>경기도이주민포털<span>
+	          </a>
+	          <a href="https://www.gg.go.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+		          <img src="/resource/images/global/f_logo01.png" alt="경기도청">
+		          <span>경기도청<span>
+	          </a>
+	          <a href="https://www.gjf.or.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo02.png" alt="경기도일자리재단">
+	          	<span>경기도일자리재단<span>
+	          </a>
+	          <a href="https://www.jobaba.net/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo03.png" alt="잡아바 (Jobaba)">
+	          	<span>잡아바 (Jobaba)<span>
+	          </a>
+	          <a href="https://www.immigration.go.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo04.png" alt="출입국·외국인정책본부">
+	          	<span>출입국·외국인정책본부<span>
+	          </a>
+	          <a href="https://www.moel.go.kr/" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo05.png" alt="고용노동부">
+	          	<span>고용노동부<span>
+	          </a>
+	          <a href="https://www.hikorea.go.kr/Main.pt" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo06.png" alt="하이코리아">
+	          	<span>하이코리아<span>
+	          </a>
+	          <a href="https://www.gg.go.kr/gmigrant/hmpg/main.do" target="_blank" rel="noopener noreferrer" class="agency-card">
+	          	<img src="/resource/images/global/f_logo07.png" alt="경기도이주민포털">
+	          	<span>경기도이주민포털<span>
+	          </a>
+	        </div>
+        </div>        
+      </div>
+    </div>
+   	<!-- 2. 재단 정보, CI 로고 및 인라인 카피라이트 통합 영역 -->
+    <div class="footer-mid">
+      <div class="inner-section">
+        <div class="footer-terms-row">
+        <a href="https://gjf.or.kr/main/guide/privacy_policy_main/view.do" target="_blank" rel="noopener noreferrer" class="link-privacy">개인정보처리방침</a>
+      </div>
+      <div class="footer-corp-box">
+        <div class="corp-info-list">
+          <p class="corp-name">재단법인 경기도일자리재단</p>
+          <p class="corp-meta">
+            <span>대표자 : 윤덕룡</span>
+            <span class="slash">|</span>
+            <span>사업자등록번호 : 688-82-00072</span>
+          </p>
+          <p class="corp-meta">
+            <span>주소 : 경기도 수원시 권선구 권중로 46, 6층</span>
+          </p>
+          <p class="corp-meta">
+            <span>전화 : 031-270-6628, 9934</span>
+          </p>
+          <p class="corp-copy">
+            Copyright ⓒ 2026 GYEONGGIDO JOB FOUNDATION. All Rights Reserved.
+          </p>
+        </div>
+        <div class="corp-logo-wrap">
+          <img src="/resource/images/global/footer_logo.png" alt="경기도일자리재단" class="footer-ci-img">
         </div>
       </div>
-      <div class="footer-bot">
-        Copyright © 2026 Gyeonggi-do. All Rights Reserved.
       </div>
     </div>
   </footer>
+  
 
   <!-- Floating Kakao Button -->
   <div class="kakao-floating">
-    <button class="btn-kakao">
-      <i data-lucide="message-circle"></i>
-      카카오톡 상담
-    </button>
+    <a href="https://pf.kakao.com/_hqsqX/chat" target="_blank" rel="noopener noreferrer" class="floating-kakao">
+      <div class="kakao-avatar-wrap">
+        <img src="/resource/images/global/kakao_icon.png" alt="상담원" class="kakao-counselor-img">
+      </div>
+      <div class="kakao-txt-group">
+        <strong class="kakao-title">카카오톡 상담</strong>
+        <span class="kakao-desc">상담사가 상담할 수 있도록 기다리고 있어요</span>
+      </div>
+    </a>
   </div>
+ <!--
+  <div class="kakao-floating">
+    <a href="https://pf.kakao.com/_hqsqX/chat" target="_blank" rel="noopener noreferrer" class="floating-kakao">
+      <div class="kakao-icon"><i class="fa-solid fa-comment"></i></div>
+      <span>카카오톡 상담</span>
+    </a>
+  </div>
+  -->
 
   <script src="./js/외국인일자리.js"></script>
+  
   <script>
-    function handleTabClick(type, element) {
-      if (typeof fn_SearchType === 'function') {
-        fn_SearchType(type, element);
-      }
+   $(document).ready(function() {
+      $('.job-view-btn').on('click', function() {
+        var view = $(this).attr('data-view');
+        $('.job-view-btn').removeClass('active').attr('aria-checked', 'false');
+        $(this).addClass('active').attr('aria-checked', 'true');
 
-      const tabs = document.querySelectorAll('.platform-tabs-container .platform-tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      element.classList.add('active');
-
-      const filterArea = document.getElementById('jobaba-filter-area');
-      if (filterArea) {
-        filterArea.style.display = (type === 'jobaba') ? 'flex' : 'none';
-      }
-    }
-
-    function toggleFilterMenu(btn) {
-      const currentWrap = btn.closest('.filter-dropdown-wrap');
-      const isOpen = currentWrap.classList.contains('open');
-
-      document.querySelectorAll('.filter-dropdown-wrap').forEach(wrap => wrap.classList.remove('open'));
-
-      if (!isOpen) {
-        currentWrap.classList.add('open');
-      }
-    }
-
-    document.addEventListener('click', (e) => {
-      const item = e.target.closest('.filter-opt-item');
-      if (item) {
-        const wrap = item.closest('.filter-dropdown-wrap');
-        const btn = wrap.querySelector('.filter-pill-btn');
-
-        // 1. 활성화 클래스 전환
-        wrap.querySelectorAll('.filter-opt-item').forEach(el => el.classList.remove('active'));
-        item.classList.add('active');
-
-        // 2. 버튼 내 아이콘(svg/i)은 유지하고 텍스트만 선택값으로 교체
-        const selectedText = item.textContent.trim();
-        for (let node of btn.childNodes) {
-          if (node.nodeType === Node.TEXT_NODE) {
-            node.nodeValue = selectedText + ' ';
-            break;
-          }
+        if (view === 'list') {
+          $('#ul_JobList').addClass('view-list');
+        } else {
+          $('#ul_JobList').removeClass('view-list');
         }
-
-        // 3. 드롭다운 닫기
-        wrap.classList.remove('open');
-        return;
-      }
-
-      // 바깥 영역 클릭 시 드롭다운 닫기
-      if (!e.target.closest('.filter-dropdown-wrap')) {
-        document.querySelectorAll('.filter-dropdown-wrap').forEach(wrap => wrap.classList.remove('open'));
-      }
+      });
     });
   </script>
 </body>

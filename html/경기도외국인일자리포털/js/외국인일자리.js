@@ -61,3 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// 로딩바 추가
+function loadBar(flag){
+	if(flag == "S"){
+		if($("#loadingDiv02").length == 0){
+			$("body").prepend('<div id="loadingDiv02" class="loadBar"><div class="loading_img"><img src="/resource/images/img_loading.gif" /><span>loading</span></div></div>');
+		}
+	}else{
+		$("#loadingDiv02").remove();
+	}
+}

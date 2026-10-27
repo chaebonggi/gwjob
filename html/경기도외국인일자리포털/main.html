@@ -1,75 +1,102 @@
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>경기도외국인일자리포털 - 메인</title>
-  
-  <!-- Noto Sans KR 폰트 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.min.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   
-  <!-- 커스텀 스타일시트 -->
-  <link rel="stylesheet" href="css/global.css">
+
+	<!-- Noto Sans KR 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<script type="text/javascript" charset="utf-8" src="https://job.gg.go.kr/resource/js/jquery-3.7.1.js"></script>
+
+	<!-- 커스텀 스타일시트 -->
+	<link rel="stylesheet" href="./css/global.css">
+	<link type="text/css" rel="stylesheet" href="https://job.gg.go.kr/resource/css/main/layout.css" />
 </head>
 <body>
 
-  <!-- 구글 번역 연동용 숨김 엘리먼트 -->
-  <div id="google_translate_element" class="hidden-translate"></div>
-
   <!-- HEADER -->
+  
+  <!-- 구글 번역 기본 UI 숨김 컨테이너 -->
+  <!-- 국기 CSS 라이브러리 CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+  <!-- 구글 번역 기본 UI 숨김 컨테이너 -->
+  <div id="google_translate_element" style="display: none;"></div>
+  
   <header class="site-header">
     <div class="inner-section">
-      <a href="main.html" class="header-logo">
-        <img src="images/logo_b.png" alt="경기도외국인일자리포털" class="logo-img">
+      <a href="./main.html" class="header-logo">
+        <img src="./images/logo_ver02.png" alt="경기도외국인일자리포털" class="logo-img">
       </a>
 
       <nav class="header-nav">
-        <a href="about.html" class="nav-item">사업소개</a>
-        <a href="jobs.html" class="nav-item">채용정보</a>
+      <a href="./jobs.html" class="nav-item ">채용정보</a>
         
-        <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
-          <div class="dropdown-menu">
-            <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
-            <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
-            <a href="visa-score.html">내 비자점수 알아보기</a>
-          </div>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-item has-depth">역량강화 <i data-lucide="chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 코칭</a>
+          <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
         </div>
-
-        <a href="visa-info.html" class="nav-item">비자안내</a>
-
-        <div class="nav-dropdown">
-          <button type="button" class="nav-item has-depth">자료실 <i data-lucide="chevron-down"></i></button>
-          <div class="dropdown-menu">
-            <a href="forms.html">양식함</a>
-            <a href="forms-info.html">도움이 되는 정보</a>
-          </div>
+      </div>     
+	  
+      <div class="nav-dropdown">
+        <button type="button" class="nav-item has-depth ">비자안내 <i data-lucide="chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="/global/intro/visaInfo.do" class="nav-item tlt ">비자안내</a>
+          <a href="/global/intro/visaScore.do" class="nav-item tlt ">내 비자점수 알아보기</a>
         </div>
+      </div>
+      <a href="/global/board/faq/list.do" class="nav-item ">FAQ</a>
+      <a href="/global/intro/business.do" class="nav-item ">서비스 안내</a>
+      <!--  
+      <div class="nav-dropdown">
+        <button type="button" class="nav-item has-depth ">자료실 <i data-lucide="chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="/global/board/form/list.do">양식함</a>
+          <a href="/global/board/help/list.do">도움이 되는 정보</a>
+        </div>
+      </div>
+      -->
       </nav>
 
       <div class="header-actions">
         <div class="btn-group">
-          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn btn-outline">구인신청</a>
-          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn btn-primary">구직신청</a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer" class="btn-action btn-emp">구인신청</a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" target="_blank" rel="noopener noreferrer" class="btn-action btn-job">구직신청</a>
         </div>
-        
-        <div class="lang-selector">
-          <button type="button" class="lang-btn">
-            <span id="current-lang-text">한국어</span>
-            <i data-lucide="chevron-down"></i>
+
+        <div class="vflag-wrap" id="vflagBox">
+          <button type="button" class="vflag-btn" id="vflagBtn">
+            <span id="vflag-icon" class="fi fi-kr vflag-flag"></span>
+            <span id="vflag-code" class="vflag-txt notranslate" translate="no">KOR</span>
+            <i data-lucide="chevron-down" class="vflag-arrow"></i>
           </button>
-          <div id="lang-menu" class="lang-dropdown hidden">
-            <button type="button">한국어</button>
-            <button type="button">English</button>
-            <button type="button">中文</button>
-            <button type="button">Tiếng Việt</button>
-            <button type="button">日本語</button>
-          </div>
+
+          <ul class="vflag-dropdown notranslate" id="vflagDropdown" translate="no">
+            <li><button type="button" onclick="changeLanguage('ko');"><span class="fi fi-kr"></span> KOR</button></li>
+            <li><button type="button" onclick="changeLanguage('en');"><span class="fi fi-us"></span> ENG</button></li>
+            <li><button type="button" onclick="changeLanguage('zh-CN');"><span class="fi fi-cn"></span> CHN</button></li>
+            <li><button type="button" onclick="changeLanguage('vi');"><span class="fi fi-vn"></span> VIE</button></li>
+            <li><button type="button" onclick="changeLanguage('ja');"><span class="fi fi-jp"></span> JPN</button></li>
+          </ul>
         </div>
       </div>
 
@@ -78,12 +105,11 @@
       </button>
     </div>
   </header>
-
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
 
   <aside class="mobile-menu-drawer" id="mobile-drawer">
     <div class="drawer-header">
-      <img src="images/logo_b.png" alt="경기도외국인일자리포털" class="drawer-logo">
+      <img src="./images/logo_ver02.png" alt="경기도외국인일자리포털" class="drawer-logo">
       <button type="button" class="btn-close-drawer" id="btn-close-drawer" aria-label="메뉴 닫기">
         <i data-lucide="x"></i>
       </button>
@@ -95,8 +121,7 @@
     </div>
 
     <nav class="drawer-nav">
-      <a href="about.html" class="drawer-nav-item">사업소개</a>
-      <a href="jobs.html" class="drawer-nav-item">채용정보</a>
+      <a href="./jobs.html" class="drawer-nav-item">채용정보</a>
       
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
@@ -104,43 +129,79 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="accordion-content">
-          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 첨삭</a>
+          <a href="https://job.gg.go.kr/introduction/mainList.do" target="_blank" rel="noopener noreferrer">이력서 코칭</a>
           <a href="https://resulingo.lab.wanted.co.kr/main" target="_blank" rel="noopener noreferrer">AI 이력서 변환</a>
-          <a href="visa-score.html">내 비자점수 알아보기</a>
         </div>
       </div>
+      
+      <div class="drawer-accordion">
+        <button type="button" class="drawer-nav-item accordion-btn">
+          <span>비자안내</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <a href="/global/intro/visaInfo.do">비자안내</a>
+          <a href="/global/intro/visaScore.do">내 비자점수 알아보기</a>
+        </div>
+      </div>
+      <a href="/global/board/faq/list.do" class="drawer-nav-item">FAQ</a>
+      <a href="/global/intro/business.do" class="drawer-nav-item">서비스 안내</a>
 
-      <a href="visa-info.html" class="drawer-nav-item">비자안내</a>
-
+      <!-- 
       <div class="drawer-accordion">
         <button type="button" class="drawer-nav-item accordion-btn">
           <span>자료실</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="accordion-content">
-          <a href="forms.html">양식함</a>
-          <a href="forms-info.html">도움이 되는 정보</a>
+          <a href="/global/board/form.do">양식함</a>
+          <a href="/global/board/help.do">도움이 되는 정보</a>
         </div>
       </div>
     </nav>
+    -->
 
     <div class="drawer-lang">
       <span class="lang-title">언어선택 (Language)</span>
       <div class="lang-selector m-lang-selector">
-        <button type="button" class="lang-btn">
-          <span>한국어</span>
+        <button type="button" class="lang-btn" id="drawer-lang-btn">
+          <span class="m-current-lang-text">한국어</span>
           <i data-lucide="chevron-up"></i>
         </button>
-        <div class="lang-dropdown hidden">
-          <button type="button">한국어</button>
-          <button type="button">English</button>
-          <button type="button">中文</button>
-          <button type="button">Tiếng Việt</button>
-          <button type="button">日本語</button>
+        <div id="drawer-lang-menu" class="lang-dropdown hidden notranslate" translate="no">
+          <button type="button" onclick="changeLanguage('ko');">KOR</button>
+          <button type="button" onclick="changeLanguage('en');">ENG</button>
+          <button type="button" onclick="changeLanguage('zh-CN');">CHN</button>
+          <button type="button" onclick="changeLanguage('vi');">VIE</button>
+          <button type="button" onclick="changeLanguage('ja');">JPN</button>
         </div>
       </div>
     </div>
   </aside>
+  <!-- [PC 전용] 드롭다운 클릭 제어 스크립트 -->
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    var vBox = document.getElementById('vflagBox');
+    var vBtn = document.getElementById('vflagBtn');
+
+    if (vBtn && vBox) {
+      // 버튼 클릭 시 레이어 토글
+      vBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        vBox.classList.toggle('open');
+      });
+
+      // 바깥 영역 클릭 시 레이어 닫기
+      document.addEventListener('click', function (e) {
+        if (!vBox.contains(e.target)) {
+          vBox.classList.remove('open');
+        }
+      });
+    }
+  });
+</script>
+<script type="text/javascript" src="https://job.gg.go.kr/resource/js/global/translate.js"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!-- //HEADER -->
 
   <!-- MAIN CONTENT -->
@@ -152,28 +213,29 @@
         <div class="swiper hero-swiper">
           <div class="swiper-wrapper">
             
-            <!-- Slide 1 -->
+            
             <div class="swiper-slide">
-              <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" target="_blank" rel="noopener noreferrer">
+              <a href="https://job.gg.go.kr/global/main.do" target="_blank" rel="noopener noreferrer">
                 <picture>
                   <!-- 480px 이하일 때만 모바일 1:1 이미지로 전환 -->
-                  <source media="(max-width: 480px)" srcset="https://placehold.co/1200x1200/5263ff/ffffff?text=MO+HERO+01+(1200x1200)">
-                  <img src="https://placehold.co/2400x800/5263ff/ffffff?text=PC+HERO+01+(2400x800)" alt="테스트 메인 슬라이드 1" class="hero-img">
+                  <source media="(max-width: 480px)" srcset="/file/image.do?filePath=QQR4Faj4NbIvV2tx3n1d9H0SNCi/LQxTIb9fAPanxbybDhsqMmOsQ31Ob7poiGxinklAWUW8lehYDxZTQh38Hg==">
+                  <img src="./images/banner01.png" alt="오픈" class="hero-img">
                 </picture>
               </a>
             </div>
-
-            <!-- Slide 2 -->
+			
             <div class="swiper-slide">
-              <a href="#">
+              <a href="https://job.gg.go.kr/global/intro/visaScore.do" target="_blank" rel="noopener noreferrer">
                 <picture>
                   <!-- 480px 이하일 때만 모바일 1:1 이미지로 전환 -->
-                  <source media="(max-width: 480px)" srcset="https://placehold.co/1200x1200/334155/ffffff?text=MO+HERO+02+(1200x1200)">
-                  <img src="https://placehold.co/2400x800/334155/ffffff?text=PC+HERO+02+(2400x800)" alt="테스트 메인 슬라이드 2" class="hero-img">
+                  <source media="(max-width: 480px)" srcset="/file/image.do?filePath=QQR4Faj4NbIvV2tx3n1d9GDWwuV/XDIW3O40fcTSZ6TLE/0wvnsnL+Sxd8GcYKuinklAWUW8lehYDxZTQh38Hg==">
+                  <img src="./images/banner02.png" alt="오픈" class="hero-img">
                 </picture>
               </a>
             </div>
-
+			
+       
+			
           </div>
 
           <!-- 하단 중앙 알약형 통합 컨트롤 박스 -->
@@ -200,96 +262,102 @@
           <p class="sec-desc">성공적인 취업과 정착을 위한 4단계를 확인하세요.</p>
         </div>
 
-        <div class="step-grid">
-          <div class="step-card">
-            <div class="main-step-num">1</div>
-            <span class="step-lbl">STEP 1</span>
-            <h3 class="step-tit">체류자격 확인</h3>
-            <p class="step-desc">본인의 비자에 맞는 취업 가능 직종과 조건을 확인합니다.</p>
-          </div>
-          <div class="step-card">
-            <div class="main-step-num">2</div>
-            <span class="step-lbl">STEP 2</span>
-            <h3 class="step-tit">일자리 정보 확인</h3>
-            <p class="step-desc">외국인 채용을 희망하는 경기도 내 우수 기업 공고를 탐색합니다.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num-wrap">
-              <div class="main-step-num">3</div>
-            </div>
-            <span class="step-lbl">STEP 3</span>
-            <h3 class="step-tit">취업 준비</h3>
-            <p class="step-desc">이력서 작성, 면접 준비 등 실전 역량을 키웁니다.</p>
-          </div>
-          <div class="step-card">
-            <div class="main-step-num">4</div>
-            <span class="step-lbl">STEP 4</span>
-            <h3 class="step-tit">교육 및 상담</h3>
-            <p class="step-desc">직무 및 한국어 교육, 노무 상담 지원을 받습니다.</p>
-          </div>
-        </div>
+        <div class="nv-step-container">
+              
+	        <!-- STEP 1 -->
+	        <div class="nv-step-card">
+	          <div class="nv-step-badge">01</div>
+	          <div class="nv-step-icon-wrap">
+	            <i class="fa-solid fa-clipboard-check"></i>
+	          </div>
+	          <div class="nv-step-label">STEP 1</div>
+	          <h4>체류자격 확인</h4>
+	          <p>본인의 비자에 맞는 취업 가능<br>직종과 조건을 가장 먼저<br>확인합니다.</p>
+	        </div>
+        
+	        <!-- Arrow -->
+	        <div class="nv-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        
+	        <!-- STEP 2 -->
+	        <div class="nv-step-card">
+	          <div class="nv-step-badge">02</div>
+	          <div class="nv-step-icon-wrap">
+	            <i class="fa-regular fa-id-badge"></i>
+	          </div>
+	          <div class="nv-step-label">STEP 2</div>
+	          <h4>일자리 정보 확인</h4>
+	          <p>외국인 채용을 희망하는 경기도 내<br>우수 기업의 구인 공고를<br>탐색합니다.</p>
+	        </div>
+	        
+	        <!-- Arrow -->
+	        <div class="nv-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+	        
+	        <!-- STEP 3 -->
+	        <div class="nv-step-card">
+	          <div class="nv-step-badge">03</div>
+	          <div class="nv-step-icon-wrap">
+	            <i class="fa-solid fa-file-contract"></i>
+	          </div>
+	          <div class="nv-step-label">STEP 3</div>
+	          <h4>취업 준비</h4>
+	          <p>이력서 작성, 면접 준비 등 성공적인<br>취업을 위한 실전 역량을 키웁니다.</p>
+	        </div>
+	        
+	        <!-- Arrow -->
+	        <div class="nv-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+	        
+	        <!-- STEP 4 -->
+	        <div class="nv-step-card">
+	          <div class="nv-step-badge">04</div>
+	          <div class="nv-step-icon-wrap">
+	            <i class="fa-solid fa-briefcase"></i>
+	          </div>
+	          <div class="nv-step-label">STEP 4</div>
+	          <h4>교육 및 상담 이용</h4>
+	          <p>직무 및 한국어 교육, 노무 상담 등<br>취업과 정착에 필요한 지원을<br>받습니다.</p>
+	        </div>
+      	</div>
       </div>
     </section>
 
-    <!-- 배너 -->
-    <style>
-      .dark-info-banner { position: relative; width: 100%; height: 26rem; display: flex; align-items: center; overflow: hidden; color: #ffffff; background-color: #1e293b; }
-      .dib-bg { position: absolute; inset: 0; z-index: 1; }
-      .dib-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; filter: grayscale(100%) contrast(1.1) brightness(0.9); }
-      .dib-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #1e293b 35%, rgba(30, 41, 59, 0.85) 55%, transparent 100%); }
-      .dib-container { position: relative; z-index: 2; width: 100%; }
-      .dib-left { max-width: 65rem; }
-      .dib-subtitle { display: block; font-size: 1.8rem; font-weight: 600; color: #94a3b8; margin-bottom: 1.2rem; letter-spacing: 0.05em; }
-      .dib-divider { width: 6.5rem; height: 2px; background-color: #475569; margin-bottom: 2rem; }
-      .dib-title { font-size: 4rem; font-weight: 900; line-height: 1.2; margin: 0; letter-spacing: -0.02em; color: #ffffff; }
-      .dib-desc { font-size: 1.6rem; font-weight: 400; color: #cbd5e1; margin-top: 1.6rem; margin-bottom: 0; line-height: 1.6; word-break: keep-all; }
-      @media (max-width: 768px) {
-        .dark-info-banner { height: auto; min-height: 20rem; padding: 3.6rem 0; }
-        .dib-left { max-width: 100%; }
-        .dib-title { font-size: 2.4rem; line-height: 1.25; word-break: keep-all; overflow-wrap: break-word; }
-        .dib-desc { font-size: 1.35rem; margin-top: 1rem; line-height: 1.55; word-break: keep-all; overflow-wrap: break-word; }
-        .dib-subtitle { font-size: 1.3rem; margin-bottom: 0.8rem; }
-        .dib-divider { margin-bottom: 1.2rem; }
-        .dib-overlay { background: linear-gradient(90deg, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 0.88) 70%, rgba(30, 41, 59, 0.75) 100%); }
-      }
-    </style>
+    <!-- 3. Quick Links (ProcessAndLinks.tsx) -->
     <section class="quick-links">
       <div class="inner-section">
         <div class="quick-grid">
-          <div class="quick-card pink">
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4459" class="quick-card pink" target="_blank">
             <span class="q-cate">일자리 찾기</span>
             <h3 class="q-tit">외국인 구직자</h3>
             <i data-lucide="user" class="q-ico"></i>
-          </div>
-          <div class="quick-card blue">
+          </a>
+          <a href="https://apply.jobaba.net/bsns/bsnsDetailView.do?bsnsSeq=4458" class="quick-card blue" target="_blank">
             <span class="q-cate">인재 찾기</span>
             <h3 class="q-tit">구인기업</h3>
             <i data-lucide="building-2" class="q-ico"></i>
-          </div>
-          <div class="quick-card orange">
+          </a>
+          <a href="/jobDiagnose/diagnoseView.do" class="quick-card orange" target="_blank">
             <span class="q-cate">역량 키우기</span>
             <h3 class="q-tit">취업지원 프로그램</h3>
             <i data-lucide="monitor-play" class="q-ico"></i>
-          </div>
-          <div class="quick-card sky">
+          </a>
+          <a href="/global/intro/visaInfo.do" class="quick-card sky">
             <span class="q-cate">안정적 체류</span>
             <h3 class="q-tit">비자/행정가이드</h3>
             <i data-lucide="globe" class="q-ico"></i>
-          </div>
-          <div class="quick-card purple">
+          </a>
+          <!-- 
+          <a href="/global/board/help/list.do" class="quick-card purple">
             <span class="q-cate">권익 지키기</span>
             <h3 class="q-tit">노동법/생활정보</h3>
             <i data-lucide="scale" class="q-ico"></i>
-          </div>
+          </a>
+          -->
         </div>
       </div>
     </section>
-
     
-
     <section class="site-intro-section dark-info-banner">
       <div class="dib-bg">
-        <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="포털 배경">
+        <img referrerpolicy="no-referrer" src="/resource/images/global/banner_bg.jpg" alt="경기도 외국인 일자리 포털">
         <div class="dib-overlay"></div>
       </div>
       <div class="inner-section dib-container">
@@ -310,40 +378,40 @@
             <h2 class="sec-tit">체류자격별 취업 안내</h2>
             <p class="sec-desc">많이 찾는 체류자격별 취업 가능 범위와 주의사항을 확인하세요.</p>
           </div>
-          <button class="btn-more">전체보기 <i data-lucide="arrow-right"></i></button>
+          <button class="btn-more" onclick="javascript:location.href='/global/intro/visaInfo.do'">전체보기 <i data-lucide="arrow-right"></i></button>
         </div>
 
         <div class="visa-grid">
-          <div class="visa-card">
+          <a href="/global/intro/visaInfo.do?visa=e9" class="visa-card">
             <span class="v-tag">비전문취업</span>
             <h3 class="v-code">E-9 비자</h3>
             <div class="v-link"><span>자세히 보기</span><i data-lucide="arrow-right"></i></div>
-          </div>
-          <div class="visa-card">
+          </a>
+          <a href="/global/intro/visaInfo.do?visa=e7" class="visa-card">
             <span class="v-tag">특정활동</span>
             <h3 class="v-code">E-7 비자</h3>
             <div class="v-link"><span>자세히 보기</span><i data-lucide="arrow-right"></i></div>
-          </div>
-          <div class="visa-card">
+          </a>
+          <a href="/global/intro/visaInfo.do?visa=f2" class="visa-card">
             <span class="v-tag">거주</span>
             <h3 class="v-code">F-2 비자</h3>
             <div class="v-link"><span>자세히 보기</span><i data-lucide="arrow-right"></i></div>
-          </div>
-          <div class="visa-card">
+          </a>
+          <a href="/global/intro/visaInfo.do?visa=f4" class="visa-card">
             <span class="v-tag">재외동포</span>
             <h3 class="v-code">F-4 비자</h3>
             <div class="v-link"><span>자세히 보기</span><i data-lucide="arrow-right"></i></div>
-          </div>
-          <div class="visa-card">
+          </a>
+          <a href="/global/intro/visaInfo.do?visa=f6" class="visa-card">
             <span class="v-tag">결혼이민</span>
             <h3 class="v-code">F-6 비자</h3>
             <div class="v-link"><span>자세히 보기</span><i data-lucide="arrow-right"></i></div>
-          </div>
-          <div class="visa-card">
+          </a>
+          <a href="/global/intro/visaInfo.do?visa=f10" class="visa-card">
             <span class="v-tag gray">기타(F-10)</span>
             <h3 class="v-code">F-10 비자</h3>
             <div class="v-link"><span>자세히 보기</span><i data-lucide="arrow-right"></i></div>
-          </div>
+          </a>
         </div>
 
         <div class="notice-box">
@@ -353,7 +421,7 @@
       </div>
     </section>
 
-    <!-- 5. Industry Section (VisaAndIndustry.tsx) -->
+    <!-- 5. Industry Section 
     <section class="industry-sec">
       <div class="inner-section">
         <div class="sec-head center">
@@ -412,103 +480,9 @@
         </div>
       </div>
     </section>
-
+	-->
+	
     <!-- 6. Support Services (JobsAndServices.tsx) -->
-    <section class="svc-sec">
-      <div class="inner-section">
-        <div class="sec-head center">
-          <h2 class="sec-tit">경기도 외국인 지원서비스 소개</h2>
-          <p class="sec-desc">외국인 주민의 안정적인 정착을 위한 다양한 지원 서비스를 만나보세요.</p>
-        </div>
-
-        <div class="svc-grid">
-          <div class="svc-card">
-            <div class="svc-ico bg-blue"><i data-lucide="briefcase"></i></div>
-            <div class="svc-txt"><h3 class="svc-tit">취업상담</h3><p class="svc-desc">구직·구인 정보 및 취업 연계</p></div>
-          </div>
-          <div class="svc-card">
-            <div class="svc-ico bg-yellow"><i data-lucide="scale"></i></div>
-            <div class="svc-txt"><h3 class="svc-tit">노무상담</h3><p class="svc-desc">임금체불, 산업재해, 근로계약</p></div>
-          </div>
-          <div class="svc-card">
-            <div class="svc-ico bg-red"><i data-lucide="gavel"></i></div>
-            <div class="svc-txt"><h3 class="svc-tit">법률상담</h3><p class="svc-desc">체류자격, 민·형사 생활 법률</p></div>
-          </div>
-          <div class="svc-card">
-            <div class="svc-ico bg-indigo"><i data-lucide="languages"></i></div>
-            <div class="svc-txt"><h3 class="svc-tit">통역지원</h3><p class="svc-desc">병원, 은행 등 동행 및 전화 통역</p></div>
-          </div>
-          <div class="svc-card">
-            <div class="svc-ico bg-green"><i data-lucide="book-open"></i></div>
-            <div class="svc-txt"><h3 class="svc-tit">한국어교육</h3><p class="svc-desc">수준별 한국어 및 한국문화 교육</p></div>
-          </div>
-          <div class="svc-card">
-            <div class="svc-ico bg-purple"><i data-lucide="home"></i></div>
-            <div class="svc-txt"><h3 class="svc-tit">생활정착지원</h3><p class="svc-desc">의료, 주거, 자녀 교육 등 안내</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <style>
-      .support-services-section { padding: 6.4rem 0 8rem; background-color: #ffffff; }
-      .support-nv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4rem; }
-      .support-nv-card { display: block; position: relative; height: 38rem; border-radius: 20px; overflow: hidden; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-      .support-nv-card:hover { transform: translateY(-0.6rem); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); }
-      .snv-img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
-      .snv-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-      .support-nv-card:hover .snv-img img { transform: scale(1.05); }
-      .snv-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.65) 45%, rgba(17, 24, 39, 0.15) 80%, transparent 100%); z-index: 2; }
-      .snv-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.8rem 2.4rem 2.4rem; z-index: 3; display: flex; flex-direction: column; }
-      .snv-accent { width: 4.4rem; height: 0.4rem; border-radius: 9999px; margin-bottom: 1.4rem; }
-      .snv-accent.accent-green { background-color: #059669; }
-      .snv-accent.accent-yellow { background-color: #f59e0b; }
-      .snv-accent.accent-emerald { background-color: #10b981; }
-      .snv-accent.accent-blue { background-color: #3b82f6; }
-      .snv-text h4 { font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.8rem; letter-spacing: -0.02em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
-      .snv-text p { font-size: 1.4rem; color: #e2e8f0; font-weight: 400; line-height: 1.55; margin-bottom: 2rem; word-break: keep-all; }
-      .snv-link { font-size: 1.3rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(4px); padding: 0.8rem 1.8rem; border-radius: 9999px; color: #ffffff; width: fit-content; border: 1px solid rgba(255, 255, 255, 0.25); transition: background-color 0.2s ease, color 0.2s ease; }
-      .support-nv-card:hover .snv-link { background: #ffffff; color: #111827; }
-      @media (max-width: 1024px) {
-        .support-nv-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
-        .support-nv-card { height: 32rem; border-radius: 16px; }
-        .snv-img img { object-position: center 15%; }
-        .snv-text { padding: 2.2rem 1.8rem 1.8rem; }
-        .snv-text h4 { font-size: 2rem; margin-bottom: 0.6rem; }
-        .snv-text p { font-size: 1.35rem; margin-bottom: 1.6rem; }
-      }
-
-      @media (max-width: 640px) {
-      .support-services-section { padding: 4.8rem 0 5.6rem; }
-      .support-nv-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
-      .support-nv-card { height: 24rem; border-radius: 14px; }
-      .support-nv-card:hover { transform: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); }
-      .support-nv-card:hover .snv-img img { transform: none; }
-      .support-nv-card:hover .snv-link { background: rgba(255, 255, 255, 0.18); color: #ffffff; }
-      .support-nv-card:hover .snv-link i { transform: none; }
-      .snv-img img { object-position: center 15%; }
-      .snv-text { padding: 1.6rem 1.4rem 1.4rem; }
-      .snv-accent { width: 3.2rem; height: 0.3rem; margin-bottom: 0.8rem; }
-      .snv-text h4 { font-size: 1.65rem; margin-bottom: 0.4rem; }
-      .snv-text p { font-size: 1.2rem; line-height: 1.4; margin-bottom: 1.2rem; word-break: keep-all; }
-      .snv-link { font-size: 1.15rem; padding: 0.6rem 1.2rem; }
-    }
-
-    @media (max-width: 480px) {
-      .support-services-section { padding: 3.6rem 0 4.2rem; }
-      .support-nv-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-      .support-nv-card { height: 14rem; border-radius: 14px; background-color: #1e293b; }
-      .snv-img { left: auto; right: 0; width: 44%; }
-      .snv-img img { object-position: center top; }
-      .snv-img::after { background: linear-gradient(to right, #1e293b 0%, rgba(30, 41, 59, 0.4) 60%, transparent 100%); }
-      .snv-text { width: 62%; right: auto; padding: 1.6rem; justify-content: center; }
-      .snv-accent { width: 2.8rem; height: 0.3rem; margin-bottom: 0.6rem; }
-      .snv-text h4 { font-size: 1.6rem; margin-bottom: 0.3rem; }
-      .snv-text p { font-size: 1.2rem; line-height: 1.35; margin-bottom: 1rem; color: #cbd5e1; }
-      .snv-link { font-size: 1.1rem; padding: 0.45rem 1.2rem; }
-    }
-    </style>
-    <!-- 외국인 지원서비스 -->
     <section class="support-services-section">
       <div class="inner-section">
         <div class="sec-head">
@@ -517,9 +491,9 @@
         </div>
         <div class="support-nv-grid">
           <!-- 1. 취업 상담 -->
-          <a href="https://www.gmhr.or.kr/" target="_blank" rel="noopener noreferrer" class="support-nv-card">
+          <a href="https://pf.kakao.com/_hqsqX/chat" target="_blank" rel="noopener noreferrer" class="support-nv-card">
             <div class="snv-img">
-              <img referrerpolicy="no-referrer" src="./images/support_img01.jpg" alt="취업 상담">
+              <img referrerpolicy="no-referrer" src="/resource/images/global/support_img01.jpg" alt="취업 상담">
             </div>
             <div class="snv-text">
               <div class="snv-accent accent-green"></div>
@@ -530,9 +504,9 @@
           </a>
           
           <!-- 2. 노무·법률 상담 -->
-          <a href="https://www.gg.go.kr/gmigrant/hmpg/info/help/boardSosMain.do" target="_blank" rel="noopener noreferrer" class="support-nv-card">
+          <a href="https://www.gg.go.kr/gmigrant/hmpg/info/help/bordSosMain.do" target="_blank" rel="noopener noreferrer" class="support-nv-card">
             <div class="snv-img">
-              <img referrerpolicy="no-referrer" src="./images/support_img02.jpg" alt="노무·법률 상담">
+              <img referrerpolicy="no-referrer" src="/resource/images/global/support_img02.jpg" alt="노무·법률 상담">
             </div>
             <div class="snv-text">
               <div class="snv-accent accent-yellow"></div>
@@ -543,9 +517,9 @@
           </a>
           
           <!-- 3. 통역 지원 -->
-          <a href="https://www.socinet.go.kr/" target="_blank" rel="noopener noreferrer" class="support-nv-card">
+          <a href="https://gmis.or.kr/sub/sub0402.php" target="_blank" rel="noopener noreferrer" class="support-nv-card">
             <div class="snv-img">
-              <img referrerpolicy="no-referrer" src="./images/support_img03.jpg" alt="통역 지원">
+              <img referrerpolicy="no-referrer" src="/resource/images/global/support_img03.jpg" alt="통역 지원">
             </div>
             <div class="snv-text">
               <div class="snv-accent accent-emerald"></div>
@@ -556,9 +530,9 @@
           </a>
           
           <!-- 4. 서식 자료실 -->
-          <a href="forms.html" class="support-nv-card">
+          <a href="https://www.gg.go.kr/gmigrant/hmpg/bord/bordContListPage.do?bbs_no=3" class="support-nv-card">
             <div class="snv-img">
-              <img referrerpolicy="no-referrer" src="./images/support_img04.jpg" alt="서식 자료실">
+              <img referrerpolicy="no-referrer" src="/resource/images/global/support_img04.jpg" alt="서식 자료실">
             </div>
             <div class="snv-text">
               <div class="snv-accent accent-blue"></div>
@@ -570,11 +544,38 @@
         </div>
       </div>
     </section>
+    <!-- <section class="svc-sec">
+      <div class="inner-section">
+        <div class="sec-head center">
+          <h2 class="sec-tit">경기도 외국인 지원서비스 소개</h2>
+          <p class="sec-desc">외국인 주민의 안정적인 정착을 위한 다양한 지원 서비스를 만나보세요.</p>
+        </div>
+
+        <div class="svc-grid">
+          <a href="https://pf.kakao.com/_hqsqX/chat" class="svc-card" target="_blank">
+            <div class="svc-ico bg-blue"><i data-lucide="briefcase"></i></div>
+            <div class="svc-txt"><h3 class="svc-tit">취업 상담</h3><p class="svc-desc">구인·구직상담 및 취업 연계</p></div>
+          </a>
+          <a href="https://www.gg.go.kr/gmigrant/hmpg/info/help/bordSosMain.do" class="svc-card" target="_blank">
+            <div class="svc-ico bg-yellow"><i data-lucide="scale"></i></div>
+            <div class="svc-txt"><h3 class="svc-tit">노무·법률 상담</h3><p class="svc-desc">비자부터 근로 계약까지 전문가 상담</p></div>
+          </a>
+          <a href="https://gmis.or.kr/sub/sub0402.php" class="svc-card" target="_blank">
+            <div class="svc-ico bg-indigo"><i data-lucide="languages"></i></div>
+            <div class="svc-txt"><h3 class="svc-tit">통역 지원</h3><p class="svc-desc">다국어 전화상담</p></div>
+          </a>
+          <a href="https://www.gg.go.kr/gmigrant/hmpg/bord/bordContListPage.do?bbs_no=3" class="svc-card" target="_blank">
+            <div class="svc-ico bg-green"><i data-lucide="book-open"></i></div>
+            <div class="svc-txt"><h3 class="svc-tit">서식자료실</h3><p class="svc-desc">외국인 필수 표준 서식 모음</p></div>
+          </a>
+        </div>
+      </div>
+    </section> -->
 
   </main>
 
-  <!-- FOOTER (Footer.tsx) -->
-  <footer class="site-footer">
+  
+<footer class="site-footer">
     <div class="inner-section">
       <div class="footer-top">
         <div class="footer-lbl">
@@ -641,51 +642,45 @@
 	          </a>
 	        </div>
         </div>        
-      </div>      
+      </div>
     </div>
-    <!-- 2. 재단 정보, CI 로고 및 인라인 카피라이트 통합 영역 -->
-      <div class="footer-mid">
-        <div class="inner-section">
-          <div class="footer-terms-row">
-          <a href="https://gjf.or.kr/main/guide/privacy_policy_main/view.do" target="_blank" rel="noopener noreferrer" class="link-privacy">개인정보처리방침</a>
+   	<!-- 2. 재단 정보, CI 로고 및 인라인 카피라이트 통합 영역 -->
+    <div class="footer-mid">
+      <div class="inner-section">
+        <div class="footer-terms-row">
+        <a href="https://gjf.or.kr/main/guide/privacy_policy_main/view.do" target="_blank" rel="noopener noreferrer" class="link-privacy">개인정보처리방침</a>
+      </div>
+      <div class="footer-corp-box">
+        <div class="corp-info-list">
+          <p class="corp-name">재단법인 경기도일자리재단</p>
+          <p class="corp-meta">
+            <span>대표자 : 윤덕룡</span>
+            <span class="slash">|</span>
+            <span>사업자등록번호 : 688-82-00072</span>
+          </p>
+          <p class="corp-meta">
+            <span>주소 : 경기도 수원시 권선구 권중로 46, 6층</span>
+          </p>
+          <p class="corp-meta">
+            <span>전화 : 031-270-6628, 9934</span>
+          </p>
+          <p class="corp-copy">
+            Copyright ⓒ 2026 GYEONGGIDO JOB FOUNDATION. All Rights Reserved.
+          </p>
         </div>
-        <div class="footer-corp-box">
-          <div class="corp-info-list">
-            <p class="corp-name">재단법인 경기도일자리재단</p>
-            <p class="corp-meta">
-              <span>대표자 : 윤덕룡</span>
-              <span class="slash">|</span>
-              <span>사업자등록번호 : 688-82-00072</span>
-            </p>
-            <p class="corp-meta">
-              <span>주소 : 경기도 수원시 권선구 권중로 46, 6층</span>
-            </p>
-            <p class="corp-meta">
-              <span>전화 : 031-270-6628, 9934</span>
-            </p>
-            <p class="corp-copy">
-              Copyright ⓒ 2026 GYEONGGIDO JOB FOUNDATION. All Rights Reserved.
-            </p>
-          </div>
-          <div class="corp-logo-wrap">
-            <img src="./images/footer_logo.png" alt="경기도일자리재단" class="footer-ci-img">
-          </div>
-        </div>
+        <div class="corp-logo-wrap">
+          <img src="/resource/images/global/footer_logo.png" alt="경기도일자리재단" class="footer-ci-img">
         </div>
       </div>
+      </div>
+    </div>
   </footer>
 
-
-  <!-- <div class="kakao-floating">
-    <a href="https://pf.kakao.com/_hqsqX/chat" target="_blank" rel="noopener noreferrer" class="floating-kakao">
-      <div class="kakao-icon"><i class="fa-solid fa-comment"></i></div>
-      <span>카카오톡 상담</span>
-    </a>
-  </div> -->
+  <!-- Floating Kakao Button -->
   <div class="kakao-floating">
     <a href="https://pf.kakao.com/_hqsqX/chat" target="_blank" rel="noopener noreferrer" class="floating-kakao">
       <div class="kakao-avatar-wrap">
-        <img src="./images/kakao_icon.png" alt="상담원" class="kakao-counselor-img">
+        <img src="/resource/images/global/kakao_icon.png" alt="상담원" class="kakao-counselor-img">
       </div>
       <div class="kakao-txt-group">
         <strong class="kakao-title">카카오톡 상담</strong>
@@ -694,19 +689,178 @@
     </a>
   </div>
 
-  <!-- Google Translate -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'ko', 
-        includedLanguages: 'ko,en,zh-CN,vi,th,ja,mn,id,fr,ru,ne,km,my,de,es,tl,ar,si,bn,uz',
-        autoDisplay: false
-      }, 'google_translate_element');
+  <style>
+    .lang-modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+.lang-modal-overlay.hidden { display: none !important; }
+.lang-modal-box { background: #ffffff; border-radius: 2.8rem; width: 100%; max-width: 54rem; padding: 3.2rem 3rem 2.8rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); display: flex; flex-direction: column; animation: modalPopupFade 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+@keyframes modalPopupFade { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+.lang-modal-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2.4rem; }
+.lang-modal-tit { font-size: 2.4rem; font-weight: 800; color: #0f172a; margin: 0 0 0.6rem; letter-spacing: -0.5px; }
+.lang-modal-sub { font-size: 1.45rem; color: #64748b; font-weight: 500; margin: 0; }
+.btn-lang-modal-close { background: none; border: none; color: #64748b; cursor: pointer; padding: 0.4rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: color 0.15s ease; }
+.btn-lang-modal-close:hover { color: #0f172a; }
+.btn-lang-modal-close svg { width: 2.2rem; height: 2.2rem; }
+.lang-btn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 2.8rem; }
+.lang-select-card { background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 1.6rem; padding: 1.6rem 1.4rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02); }
+.lang-select-card:hover { border-color: #93c5fd; background-color: #f8fafc; }
+.lang-select-card.active { border-color: #2563eb; background-color: #eff6ff; box-shadow: 0 0 0 1px #2563eb; }
+.flag-circle { width: 2.8rem !important; height: 2.8rem !important; border-radius: 50% !important; flex-shrink: 0; border: 1px solid rgba(0, 0, 0, 0.08); background-size: cover !important; background-position: center !important; }
+.lang-name { font-size: 1.5rem; font-weight: 700; color: #1e293b; letter-spacing: -0.3px; }
+.lang-select-card.active .lang-name { color: #1d4ed8; font-weight: 800; }
+.lang-modal-foot { width: 100%; }
+.btn-lang-submit { width: 100%; padding: 1.6rem; background-color: #2563eb; color: #ffffff; font-size: 1.7rem; font-weight: 800; border: none; border-radius: 1.6rem; cursor: pointer; transition: background-color 0.2s ease; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25); }
+.btn-lang-submit:hover { background-color: #1d4ed8; }
+@media (max-width: 640px) {
+.lang-modal-box { max-width: calc(100% - 2.4rem); padding: 2.4rem 2rem 2rem; border-radius: 2.2rem; }
+.lang-modal-tit { font-size: 2rem; }
+.lang-modal-sub { font-size: 1.3rem; }
+.lang-btn-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2.2rem; }
+.lang-select-card { padding: 1.3rem 1.2rem; }
+.lang-name { font-size: 1.4rem; }
+.btn-lang-submit { padding: 1.4rem; font-size: 1.55rem; }
+}
+  </style>
+  <!-- 언어 선택 레이어 팝업 (기본 hidden 추가) -->
+<div class="lang-modal-overlay hidden" id="langSelectModal">
+  <div class="lang-modal-box">
+    <div class="lang-modal-head">
+      <div class="lang-modal-tit-wrap">
+        <h3 class="lang-modal-tit">언어를 선택해 주세요</h3>
+        <p class="lang-modal-sub">Please select your language.</p>
+      </div>
+      <button type="button" class="btn-lang-modal-close" id="btnLangModalClose" aria-label="닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="lang-modal-body">
+      <div class="lang-btn-grid notranslate" translate="no">
+        <!-- 1. 한국어 -->
+        <button type="button" class="lang-select-card active" data-lang="ko">
+          <span class="fi fi-kr flag-circle"></span>
+          <span class="lang-name">한국어</span>
+        </button>
+
+        <!-- 2. English -->
+        <button type="button" class="lang-select-card" data-lang="en">
+          <span class="fi fi-us flag-circle"></span>
+          <span class="lang-name">English</span>
+        </button>
+
+        <!-- 3. 中文 (중국어) -->
+        <button type="button" class="lang-select-card" data-lang="zh-CN">
+          <span class="fi fi-cn flag-circle"></span>
+          <span class="lang-name">中文</span>
+        </button>
+
+        <!-- 4. Tiếng Việt (베트남어) -->
+        <button type="button" class="lang-select-card" data-lang="vi">
+          <span class="fi fi-vn flag-circle"></span>
+          <span class="lang-name">Tiếng Việt</span>
+        </button>
+
+        <!-- 5. ภาษาไทย (태국어) -->
+        <button type="button" class="lang-select-card" data-lang="th">
+          <span class="fi fi-th flag-circle"></span>
+          <span class="lang-name">ภาษาไทย</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="lang-modal-foot">
+      <button type="button" class="btn-lang-submit" id="btnLangSubmit">선택 완료</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById('langSelectModal');
+    var btnClose = document.getElementById('btnLangModalClose');
+    var btnSubmit = document.getElementById('btnLangSubmit');
+    var langCards = document.querySelectorAll('.lang-select-card');
+    var selectedLang = 'ko';
+    
+    var SUBMIT_FLAG = 'gg_lang_submitted';
+    var RELOAD_FLAG = 'gg_user_reloaded';
+
+    if (!modal) return;
+
+    // 1. [선택 완료] 클릭에 의한 리로드인지, 사용자가 직접 F5를 눌렀는지 판별
+    var isJustSubmitted = sessionStorage.getItem(SUBMIT_FLAG) === 'true';
+    var isUserReload = sessionStorage.getItem(RELOAD_FLAG) === 'true';
+
+    // 사용 직후 일회성 플래그는 즉시 정리
+    sessionStorage.removeItem(SUBMIT_FLAG);
+    sessionStorage.removeItem(RELOAD_FLAG);
+
+    if (isJustSubmitted) {
+      // 선택 완료 버튼을 눌러 번역되는 중이므로 무조건 숨김 유지!
+      modal.classList.add('hidden');
+    } else {
+      // 첫 접속이거나, 사용자가 직접 F5(새로고침)를 눌렀을 때는 팝업 노출
+      modal.classList.remove('hidden');
     }
-  </script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  
+
+    // 2. 사용자가 직접 F5/새로고침을 누를 때 감지하여 플래그 생성
+    window.addEventListener('beforeunload', function () {
+      // 선택 완료에 의한 이동이 아닐 때만 F5 플래그 세팅
+      if (sessionStorage.getItem(SUBMIT_FLAG) !== 'true') {
+        sessionStorage.setItem(RELOAD_FLAG, 'true');
+      }
+    });
+
+    // 3. 언어 카드 클릭 선택
+    langCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        langCards.forEach(function (c) { c.classList.remove('active'); });
+        this.classList.add('active');
+        selectedLang = this.getAttribute('data-lang');
+      });
+    });
+
+    // 4. 선택 완료 버튼 클릭
+    if (btnSubmit) {
+      btnSubmit.addEventListener('click', function () {
+        // [선택 완료 리로드] 플래그를 세팅하여 이번 새로고침은 팝업을 철저히 차단
+        sessionStorage.setItem(SUBMIT_FLAG, 'true');
+        sessionStorage.removeItem(RELOAD_FLAG);
+        modal.classList.add('hidden');
+
+        if (typeof changeLanguage === 'function') {
+          changeLanguage(selectedLang);
+        } else {
+          var target = '/ko/' + selectedLang;
+          document.cookie = 'googtrans=' + target + '; path=/;';
+          document.cookie = 'googtrans=' + target + '; path=/; domain=' + location.hostname + ';';
+          location.reload();
+        }
+      });
+    }
+
+    // 5. 닫기 버튼 및 배경 클릭
+    var closeModal = function () {
+      modal.classList.add('hidden');
+    };
+
+    if (btnClose) btnClose.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  });
+</script>
+
+
   <script src="./js/외국인일자리.js"></script>
+
+  
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const heroSwiper = new Swiper('.hero-swiper', {

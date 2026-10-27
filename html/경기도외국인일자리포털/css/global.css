@@ -46,7 +46,7 @@ ul, ol {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
+.tlt {text-align: left !important;}
 .sec-head {
   text-align: left;
   margin-bottom: 4rem;
@@ -124,7 +124,7 @@ ul, ol {
 }
 
 .header-logo .logo-img {
-  height: 2.2rem;
+  height: 3.4rem;
   width: auto;
   display: block;
   object-fit: contain;
@@ -407,7 +407,7 @@ ul, ol {
 }
 
 .drawer-logo {
-  height: 2.2rem;
+  height: 3.4rem;
   width: auto;
 }
 
@@ -526,10 +526,6 @@ ul, ol {
     height: 6.4rem;
   }
 
-  .header-logo .logo-img {
-    height: 2.2rem;
-  }
-
   .header-nav,
   .header-actions {
     display: none;
@@ -553,7 +549,7 @@ ul, ol {
 
   .header-logo .logo-img,
   .drawer-logo {
-    height: 1.7rem;
+    height: 2.8rem;
   }
 }
 /* //header */
@@ -2936,7 +2932,10 @@ ul, ol {
 }
 
 .mb-14 {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.4rem !important;
+}
+.mb-2 {
+  margin-bottom: 2rem !important;
 }
 
 /* 레이아웃 (폼 + 우측 결과창) */
@@ -3747,8 +3746,7 @@ ul, ol {
 }
 
 /* 비교표 & FAQ 공통 타이틀 */
-.compare-table-sec,
-.faq-sec {
+.compare-table-sec {
   margin-top: 6rem;
 }
 
@@ -4623,7 +4621,7 @@ ul, ol {
 .site-footer {
   background-color: #f8fafc;
   border-top: 1px solid #e5e7eb;
-  padding: 3.2rem 0 0;
+  padding: 3.2rem 0 4.8rem;
 }
 
 .footer-top {
@@ -4715,7 +4713,23 @@ ul, ol {
   padding-top: 3.2rem;
   border-top: 1px solid #f3f4f6;
 }
-.footer-mid{padding-top:2.4rem;border-top:1px solid #ededed;}
+
+
+
+/* 반응형 max-width 데스크톱 퍼스트 기준 */
+@media (max-width: 767px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-lbl {
+    margin-bottom: 1.6rem;
+  }
+}
+@media (max-width: 640px) { 
+	.footer-links .agency-card {gap: 1rem; width: 160px; padding: 1rem;}
+}
+.footer-mid{padding-top:2.4rem;border-top:1px solid #f7f7f7;}
 .footer-terms-row{margin-bottom:1.6rem;}
 .link-privacy{display:inline-block;font-size:1.4rem;font-weight:700;color:#2563eb;text-decoration:underline;text-underline-offset:0.3rem;transition:color 0.2s;}
 .link-privacy:hover{color:#1d4ed8;}
@@ -4734,21 +4748,7 @@ ul, ol {
 .footer-mid{padding-top:2.0rem;}
 }
 
-
-/* 반응형 max-width 데스크톱 퍼스트 기준 */
-@media (max-width: 767px) {
-  .footer-top {
-    flex-direction: column;
-  }
-
-  .footer-lbl {
-    margin-bottom: 1.6rem;
-  }
-}
-@media (max-width: 640px) { 
-	.footer-links .agency-card {gap: 1rem; width: 160px; padding: 1rem;}
-}
-
+/* kakao */
 .kakao-floating{position:fixed;bottom:4rem;right:4rem;z-index:90;}
 .floating-kakao{display:flex;align-items:center;gap:1rem;background-color:#fee500;padding:0.4rem 1.6rem 0.4rem 0.6rem;border-radius:9999px;box-shadow:0 4px 14px rgba(0,0,0,0.15);text-decoration:none;height:5.4rem;box-sizing:border-box;transition:transform 0.2s ease,box-shadow 0.2s ease;}
 .floating-kakao:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.2);background-color:#fedc00;}
@@ -4767,8 +4767,11 @@ ul, ol {
 }
 /* //footer */
 
-/* 다국어 번역관련 추가 */
-/* 1. 상단에 생성되는 모든 구글 번역 iframe을 화면 밖으로 숨김 */
+/* ===================================================
+   다국어 번역관련 UI 및 로딩 스피너 완전 숨김 처리
+   =================================================== */
+
+/* 1. 상단에 생성되는 모든 구글 번역 iframe 및 컨테이너 화면 밖으로 숨김 */
 iframe.goog-te-banner-frame,
 iframe.skiptranslate,
 iframe[id*=":1.container"],
@@ -4794,8 +4797,9 @@ body {
   transform: none !important;
 }
 
-/* 3. 텍스트 마우스 호버 시 뜨는 팝업 말풍선 숨김 */
+/* 3. 텍스트 마우스 호버 시 뜨는 팝업 말풍선 및 하이라이트 숨김 */
 #goog-gt-tt,
+#goog-gt-vt,
 .goog-te-balloon-frame {
   display: none !important;
   visibility: hidden !important;
@@ -4806,6 +4810,25 @@ body {
   box-shadow: none !important;
 }
 
+/* 4. 좌측 상단 번역 로딩바, 스피너, 최신 구글 UI 팝업 깜빡임 없이 즉시 숨김 */
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc,
+.VIpgJd-ZVi9od-xl07Ob-OEVmcd,
+.goog-te-spinner-pos,
+.goog-te-spinner,
+.goog-te-spinner-animation,
+div[id*="goog-gt-"],
+body > .skiptranslate,
+body > div[class*="skiptranslate"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 /* 더보기 */
 /* jobs - 더보기 버튼 */
