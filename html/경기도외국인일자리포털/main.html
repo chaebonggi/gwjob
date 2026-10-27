@@ -773,89 +773,6 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var modal = document.getElementById('langSelectModal');
-    var btnClose = document.getElementById('btnLangModalClose');
-    var btnSubmit = document.getElementById('btnLangSubmit');
-    var langCards = document.querySelectorAll('.lang-select-card');
-    var selectedLang = 'ko';
-    
-    var SUBMIT_FLAG = 'gg_lang_submitted';
-    var RELOAD_FLAG = 'gg_user_reloaded';
-
-    if (!modal) return;
-
-    // 1. [선택 완료] 클릭에 의한 리로드인지, 사용자가 직접 F5를 눌렀는지 판별
-    var isJustSubmitted = sessionStorage.getItem(SUBMIT_FLAG) === 'true';
-    var isUserReload = sessionStorage.getItem(RELOAD_FLAG) === 'true';
-
-    // 사용 직후 일회성 플래그는 즉시 정리
-    sessionStorage.removeItem(SUBMIT_FLAG);
-    sessionStorage.removeItem(RELOAD_FLAG);
-
-    if (isJustSubmitted) {
-      // 선택 완료 버튼을 눌러 번역되는 중이므로 무조건 숨김 유지!
-      modal.classList.add('hidden');
-    } else {
-      // 첫 접속이거나, 사용자가 직접 F5(새로고침)를 눌렀을 때는 팝업 노출
-      modal.classList.remove('hidden');
-    }
-
-    // 2. 사용자가 직접 F5/새로고침을 누를 때 감지하여 플래그 생성
-    window.addEventListener('beforeunload', function () {
-      // 선택 완료에 의한 이동이 아닐 때만 F5 플래그 세팅
-      if (sessionStorage.getItem(SUBMIT_FLAG) !== 'true') {
-        sessionStorage.setItem(RELOAD_FLAG, 'true');
-      }
-    });
-
-    // 3. 언어 카드 클릭 선택
-    langCards.forEach(function (card) {
-      card.addEventListener('click', function () {
-        langCards.forEach(function (c) { c.classList.remove('active'); });
-        this.classList.add('active');
-        selectedLang = this.getAttribute('data-lang');
-      });
-    });
-
-    // 4. 선택 완료 버튼 클릭
-    if (btnSubmit) {
-      btnSubmit.addEventListener('click', function () {
-        // [선택 완료 리로드] 플래그를 세팅하여 이번 새로고침은 팝업을 철저히 차단
-        sessionStorage.setItem(SUBMIT_FLAG, 'true');
-        sessionStorage.removeItem(RELOAD_FLAG);
-        modal.classList.add('hidden');
-
-        if (typeof changeLanguage === 'function') {
-          changeLanguage(selectedLang);
-        } else {
-          var target = '/ko/' + selectedLang;
-          document.cookie = 'googtrans=' + target + '; path=/;';
-          document.cookie = 'googtrans=' + target + '; path=/; domain=' + location.hostname + ';';
-          location.reload();
-        }
-      });
-    }
-
-    // 5. 닫기 버튼 및 배경 클릭
-    var closeModal = function () {
-      modal.classList.add('hidden');
-    };
-
-    if (btnClose) btnClose.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', function (e) {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    if (window.lucide) {
-      lucide.createIcons();
-    }
-  });
-</script>
 
 
   <script src="./js/외국인일자리.js"></script>
@@ -879,6 +796,92 @@
           prevEl: '.btn-hero-prev',
         },
       });
+
+      var modal = document.getElementById('langSelectModal');
+    var btnClose = document.getElementById('btnLangModalClose');
+    var btnSubmit = document.getElementById('btnLangSubmit');
+    var langCards = document.querySelectorAll('.lang-select-card');
+    var selectedLang = 'ko';
+    
+    var SUBMIT_FLAG = 'gg_lang_submitted';
+    var RELOAD_FLAG = 'gg_user_reloaded';
+
+    if (!modal) return;
+
+    // 1. [팝업 선택 완료] 또는 [상단 헤더 셀렉트박스 클릭]에 의한 리로드인지 확인
+    var isJustSubmitted = sessionStorage.getItem(SUBMIT_FLAG) === 'true';
+
+    // 일회성 플래그 즉시 정리
+    sessionStorage.removeItem(SUBMIT_FLAG);
+    sessionStorage.removeItem(RELOAD_FLAG);
+
+    if (isJustSubmitted) {
+      // 언어 변경으로 인한 리로드이므로 무조건 팝업 숨김
+      modal.classList.add('hidden');
+    } else {
+      // 첫 진입이거나 사용자가 직접 F5(새로고침)를 눌렀을 때만 팝업 표시
+      modal.classList.remove('hidden');
+    }
+
+    // 2. 사용자가 직접 F5/새로고침을 누를 때 감지
+    window.addEventListener('beforeunload', function () {
+      if (sessionStorage.getItem(SUBMIT_FLAG) !== 'true') {
+        sessionStorage.setItem(RELOAD_FLAG, 'true');
+      }
+    });
+
+    // 3. [추가] 상단 헤더 PC/모바일 드롭다운 언어 버튼 클릭 시에도 팝업 차단 플래그 세팅
+    var headerLangBtns = document.querySelectorAll('#vflagDropdown button, #drawer-lang-menu button');
+    headerLangBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        sessionStorage.setItem(SUBMIT_FLAG, 'true');
+        sessionStorage.removeItem(RELOAD_FLAG);
+      });
+    });
+
+    // 4. 팝업 내 언어 카드 클릭 선택
+    langCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        langCards.forEach(function (c) { c.classList.remove('active'); });
+        this.classList.add('active');
+        selectedLang = this.getAttribute('data-lang');
+      });
+    });
+
+    // 5. 팝업 [선택 완료] 버튼 클릭
+    if (btnSubmit) {
+      btnSubmit.addEventListener('click', function () {
+        sessionStorage.setItem(SUBMIT_FLAG, 'true');
+        sessionStorage.removeItem(RELOAD_FLAG);
+        modal.classList.add('hidden');
+
+        if (typeof changeLanguage === 'function') {
+          changeLanguage(selectedLang);
+        } else {
+          var target = '/ko/' + selectedLang;
+          document.cookie = 'googtrans=' + target + '; path=/;';
+          document.cookie = 'googtrans=' + target + '; path=/; domain=' + location.hostname + ';';
+          location.reload();
+        }
+      });
+    }
+
+    // 6. 닫기 버튼 및 배경 클릭
+    var closeModal = function () {
+      modal.classList.add('hidden');
+    };
+
+    if (btnClose) btnClose.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
     });
   </script>
 </body>
