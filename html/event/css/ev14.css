@@ -1,6 +1,4 @@
-@font-face { font-family: 'KerisKedyuche'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_R.woff2') format('woff2'); font-weight: 400; font-display: swap; } 
-@font-face { font-family: 'KerisKedyuche'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2') format('woff2'); font-weight: 700; font-display: swap; } 
-html { font-size: 10px; font-family: 'S-CoreDream', sans-serif; font-weight: 400; } 
+html { font-size: 10px; font-family: 'Pretendard', sans-serif; font-weight: 400; } 
 .not_scr { overflow: hidden; } 
 .event14 { max-width: 1920px; background-color: #007bed; } 
 .event14 .innerSection { max-width: 1200px; margin: 0 auto; padding: 0 24px; } 
