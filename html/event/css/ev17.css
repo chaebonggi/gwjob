@@ -65,7 +65,7 @@ html { font-size: 8px; }
 .event17 .prize-tit { font-size: 5.2rem; font-weight: 900; color: #00113e; line-height: 1.2; }
 .event17 .prize-list { position: relative; z-index: 2; display: flex; justify-content: center; align-items: stretch; gap: 1.8rem; list-style: none; padding: 0; margin: 0 auto; max-width: 1120px; }
 .event17 .prize-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 2rem; padding: 3rem 1.6rem 2.2rem; box-shadow: 0 0.8rem 2.4rem rgba(59, 130, 246, 0.08); }
-.event17 .prize-item .thumb { display: flex; align-items: center; justify-content: center; width: 100%; height: 110px; margin-bottom: 2rem; }
+.event17 .prize-item .thumb { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 120px; height: 110px; margin-bottom: 2rem; }
 .event17 .prize-item .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
 .event17 .prize-item .info { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 100%; }
 .event17 .prize-item .name { font-size: 1.8rem; font-weight: 700; color: #00113e; line-height: 1.35; margin-bottom: 1.4rem; height: 4rem; display: flex; align-items: center; justify-content: center; text-align: center; word-break: keep-all; }
@@ -264,7 +264,7 @@ html { font-size: 8px; }
 .event17 .ticket-count { font-size: 3.6rem; }
 }
 @media (max-width: 768px) {
-.event17 .ev-roulette { padding: 5rem 0 14rem; }
+.event17 .ev-roulette { padding: 5rem 0 10rem; }
 .event17 .roulette-tit { font-size: 2.8rem; }
 .event17 .status-board { flex-direction: column; max-width: 480px; padding: 2.8rem 2.2rem; gap: 2.8rem; margin-bottom: 3.5rem; }
 .event17 .gauge-area { width: 100%; gap: 2.4rem; }
@@ -273,7 +273,7 @@ html { font-size: 8px; }
 .event17 #gameContainer { zoom: 0.78; }
 }
 @media (max-width: 480px) {
-.event17 .ev-roulette { padding: 4rem 0 12rem; }
+.event17 .ev-roulette { padding: 4rem 0; }
 .event17 .roulette-head { margin-bottom: 2.5rem; }
 .event17 .roulette-sub { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .event17 .roulette-tit { font-size: 2.2rem; margin-bottom: 1.2rem; }
