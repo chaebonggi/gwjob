@@ -47,7 +47,7 @@ html { font-size: 10px; font-family: 'Pretendard', 'NanumGothic', sans-serif; fo
 .event17 .char-wave { height: 120px; }
 }
 @media (max-width: 480px) {
-html { font-size: 8px; }
+html { font-size: 9px; }
 .event17 .ev-visual { height: auto; padding: 3rem 0 0; background-size: 850px auto; }
 .event17 .visual-head {padding-bottom: 15rem;}
 .event17 .visual-tit { max-width: 90%; margin-bottom: 2rem; }
@@ -93,10 +93,10 @@ html { font-size: 8px; }
 .event17 .prize-notice { margin-top: 2.5rem; font-size: 1.5rem; }
 }
 @media (max-width: 480px) {
-.event17 .ev-prize { padding: 3rem 0 8rem; }
+.event17 .ev-prize { padding: 4rem 0; }
 .event17 .prize-head { margin-bottom: 2.2rem; }
-.event17 .prize-sub { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.event17 .prize-tit { font-size: 2rem; }
+.event17 .prize-sub { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.event17 .prize-tit { font-size: 2.8rem; }
 .event17 .prize-list { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .event17 .prize-item { padding: 1.8rem 0.8rem 1.4rem; }
 .event17 .prize-item .thumb { height: 70px; margin-bottom: 1rem; }
@@ -176,10 +176,10 @@ html { font-size: 8px; }
 .event17 .card-item { padding: 2.8rem 2.2rem 2.4rem; }
 }
 @media (max-width: 480px) {
-.event17 .ev-mission { padding: 4rem 0; }
+.event17 .ev-mission { padding: 2rem 0; }
 .event17 .card-top {flex-direction: column; align-items: center; gap: 1rem;}
-.event17 .mission-sub { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.event17 .mission-tit { font-size: 2.2rem; }
+.event17 .mission-sub { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.event17 .mission-tit { font-size: 2.8rem; }
 .event17 .mission-desc { font-size: 1.5rem; }
 .event17 .mission-notice { font-size: 1.5rem; }
 .event17 .proc-step { padding: 1.4rem 1.6rem; }
@@ -273,10 +273,10 @@ html { font-size: 8px; }
 .event17 #gameContainer { zoom: 0.78; }
 }
 @media (max-width: 480px) {
-.event17 .ev-roulette { padding: 4rem 0; }
+.event17 .ev-roulette { padding: 2rem 0; }
 .event17 .roulette-head { margin-bottom: 2.5rem; }
-.event17 .roulette-sub { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.event17 .roulette-tit { font-size: 2.2rem; margin-bottom: 1.2rem; }
+.event17 .roulette-sub { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.event17 .roulette-tit { font-size: 2.8rem; margin-bottom: 1.2rem; }
 .event17 .roulette-desc { font-size: 1.5rem; }
 .event17 .status-board { max-width: 340px; padding: 2.2rem 1.6rem; }
 .event17 .gauge-info { gap: 1rem; }
@@ -345,10 +345,10 @@ html { font-size: 8px; }
 .event17 .notice-list li { font-size: 1.5rem; }
 }
 @media (max-width: 480px) {
-.event17 .ev-history { padding: 2rem 0 8rem; }
+.event17 .ev-history { padding: 2rem 0; }
 .event17 .history-head { margin-bottom: 2.5rem; }
-.event17 .history-sub { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.event17 .history-tit { font-size: 2.2rem; margin-bottom: 1.2rem; }
+.event17 .history-sub { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.event17 .history-tit { font-size: 2.8rem; margin-bottom: 1.2rem; }
 .event17 .history-desc { font-size: 1.5rem; }
 .event17 .history-box { max-width: 100%; }
 .event17 .history-list { padding: 0.8rem 1.6rem; }
