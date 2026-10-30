@@ -341,7 +341,6 @@
 
                 <div class="history-box">
                     <ul class="history-list">
-                        <!-- 1. 당첨 내역이 없을 때 (개발 조건문 분기) -->
                         <li class="history-empty">
                             <span class="ico-gift">
                                 <img src="./images/ev17/history_ico.png" alt="선물상자 아이콘">
@@ -378,7 +377,6 @@
                 </div>
             </div>
         </div>
-
         <!-- 유의사항 섹션 -->
         <div class="ev-notice">
             <div class="inner-section">
@@ -450,7 +448,6 @@
                     // 꽝 (다음 기회에) 팝업 호출
                     openPopup("popup_fail");
                 } else {
-                    // 당첨 팝업: 이미지 및 상품명 동적 변경
                     $("#popup_gift .result_img_box").empty().append('<img src="' + copImg + '" alt="' + present[gift] + '" />');
                     $("#popup_gift .pop_tit").text(present[gift]);
                     openPopup("popup_gift");
