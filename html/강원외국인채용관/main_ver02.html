@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강원일자리정보망 - 외국인 채용관</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+  <link rel="stylesheet" href="https://job.gwd.go.kr/page/foreigner/css/foreigner.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://job.gwd.go.kr/page/foreigner/js/foreigner.js" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="main.html" class="header-logo-img-wrap">
+          <img src="images/logo_w.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="about.html" class="nav-item">소개</a>
+          <a href="jobs.html" class="nav-item">채용공고</a>
+          <a href="companies.html" class="nav-item">기업정보</a>
+          <a href="talent.html" class="nav-item">인재검색</a>
+          
+          <div class="nav-item-dropdown">
+            <a href="visa-score.html" class="nav-item">
+              <span>비자 가이드</span>
+              <i data-lucide="chevron-down" class="ico-menu-arrow"></i>
+            </a>
+            <div class="sub-menu-box">
+              <a href="visa-roadmap.html" class="sub-menu-item">비자 로드맵</a>
+              <a href="visa-score.html" class="sub-menu-item">비자 점수 진단</a>
+              <a href="visa-regional.html" class="sub-menu-item">지역특화 비자 가이드</a>
+            </div>
+          </div>
+
+          <a href="labor-law.html" class="nav-item">기초 노동법</a>
+          <a href="notices.html" class="nav-item">공지게시판</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-login">로그인</a>
+        <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-signup">회원가입</a>
+        
+        <div class="lang-selector">
+          <button type="button" class="lang-btn btn-lang-toggle" aria-haspopup="true" aria-expanded="false">
+            <span id="foreigner-lang-current" class="notranslate" translate="no">한국어</span>
+            <i data-lucide="chevron-down" class="ico-arrow"></i>
+          </button>
+          <div class="lang-dropdown lang-menu notranslate hidden" translate="no">
+            <div class="lang-dropdown-header">
+              <span class="tit-kr"><i data-lucide="globe"></i> 언어 선택</span>
+              <span class="tit-en">Select Language</span>
+            </div>
+            <div class="lang-options-scroll">
+              <button type="button" data-lang="ko" data-label="한국어"><span class="lang-native">한국어</span><span class="lang-sub">한국어</span></button>
+              <button type="button" data-lang="vi" data-label="Tiếng Việt"><span class="lang-native">Tiếng Việt</span><span class="lang-sub">베트남어</span></button>
+              <button type="button" data-lang="zh-CN" data-label="中文"><span class="lang-native">中文</span><span class="lang-sub">중국어</span></button>
+              <button type="button" data-lang="en" data-label="English"><span class="lang-native">English</span><span class="lang-sub">영어</span></button>
+              <button type="button" data-lang="ne" data-label="नेपाली"><span class="lang-native">नेपाली</span><span class="lang-sub">네팔어</span></button>
+              <button type="button" data-lang="lo" data-label="ພາສາລາວ"><span class="lang-native">ພາສາລາວ</span><span class="lang-sub">라오스어</span></button>
+              <button type="button" data-lang="km" data-label="ភាសាខ្មែរ"><span class="lang-native">ភាសាខ្មែរ</span><span class="lang-sub">캄보디아어</span></button>
+              <button type="button" data-lang="uz" data-label="Oʻzbekcha"><span class="lang-native">Oʻzbekcha</span><span class="lang-sub">우즈베키스탄어</span></button>
+              <button type="button" data-lang="th" data-label="ไทย"><span class="lang-native">ไทย</span><span class="lang-sub">태국어</span></button>
+              <button type="button" data-lang="id" data-label="Indonesia"><span class="lang-native">Bahasa Indonesia</span><span class="lang-sub">인도네시아어</span></button>
+              <button type="button" data-lang="bn" data-label="বাংলা"><span class="lang-native">বাংলা</span><span class="lang-sub">방글라데시어</span></button>
+              <button type="button" data-lang="ru" data-label="Русский"><span class="lang-native">Русский</span><span class="lang-sub">러시아어</span></button>
+              <button type="button" data-lang="my" data-label="မြန်မာဘာသာ"><span class="lang-native">မြန်မာဘာသာ</span><span class="lang-sub">미얀마어</span></button>
+              <button type="button" data-lang="ja" data-label="日本語"><span class="lang-native">日本語</span><span class="lang-sub">일본어</span></button>
+              <button type="button" data-lang="mn" data-label="Монгол"><span class="lang-native">Монгол</span><span class="lang-sub">몽골어</span></button>
+              <button type="button" data-lang="hi" data-label="हिन्दी"><span class="lang-native">हिन्दी</span><span class="lang-sub">인도어</span></button>
+              <button type="button" data-lang="kk" data-label="Қазақша"><span class="lang-native">Қазақша</span><span class="lang-sub">카자흐스탄어</span></button>
+              <button type="button" data-lang="de" data-label="Deutsch"><span class="lang-native">Deutsch</span><span class="lang-sub">독일어</span></button>
+              <button type="button" data-lang="mi" data-label="Māori"><span class="lang-native">Māori</span><span class="lang-sub">뉴질랜드어</span></button>
+              <button type="button" data-lang="tr" data-label="Türkçe"><span class="lang-native">Türkçe</span><span class="lang-sub">튀르키예어</span></button>
+              <button type="button" data-lang="fr" data-label="Français"><span class="lang-native">Français</span><span class="lang-sub">프랑스어</span></button>
+              <button type="button" data-lang="ar" data-label="العربية"><span class="lang-native">العربية</span><span class="lang-sub">아랍어</span></button>
+              <button type="button" data-lang="pt" data-label="Português"><span class="lang-native">Português</span><span class="lang-sub">포르투갈어</span></button>
+              <button type="button" data-lang="es" data-label="Español"><span class="lang-native">Español</span><span class="lang-sub">스페인어</span></button>
+              <button type="button" data-lang="ms" data-label="Bahasa Melayu"><span class="lang-native">Bahasa Melayu</span><span class="lang-sub">말레이시아어</span></button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-mobile-menu" id="btn-m-open" aria-label="메뉴 열기">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu-overlay" id="m-overlay"></div>
+  <aside class="mobile-menu-drawer" id="m-drawer">
+    <div class="m-drawer-head">
+      <a href="main.html" class="header-logo-img-wrap">
+        <img src="images/logo-black.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+      </a>
+      <button type="button" class="btn-m-close" id="btn-m-close" aria-label="메뉴 닫기">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="m-drawer-auth">
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/loginForm" target="_blank" rel="noopener noreferrer" class="btn-m-login">로그인</a>
+      <a href="https://job.gwd.go.kr/gwjob/additional_service/membership/join_step1" target="_blank" rel="noopener noreferrer" class="btn-m-signup">회원가입</a>
+    </div>
+
+    <nav class="m-drawer-nav">
+      <a href="about.html" class="m-nav-item">소개</a>
+      <a href="jobs.html" class="m-nav-item">채용공고</a>
+      <a href="companies.html" class="m-nav-item">기업정보</a>
+      <a href="talent.html" class="m-nav-item">인재검색</a>
+      
+      <div class="m-nav-group">
+        <button type="button" class="m-nav-group-tit btn-m-acc">
+          <span>비자 가이드</span>
+          <i data-lucide="chevron-down" class="m-acc-arrow"></i>
+        </button>
+        <div class="m-sub-nav">
+          <a href="visa-roadmap.html" class="m-sub-item">비자 로드맵</a>
+          <a href="visa-score.html" class="m-sub-item">비자 점수 진단</a>
+          <a href="visa-regional.html" class="m-sub-item">지역특화 비자 가이드</a>
+        </div>
+      </div>
+
+      <a href="labor-law.html" class="m-nav-item">기초 노동법</a>
+      <a href="notices.html" class="m-nav-item">공지게시판</a>
+    </nav>
+
+    <div class="m-drawer-lang">
+      <div class="m-lang-title">언어선택 (Language)</div>
+      <div class="m-lang-select-wrap" id="m-lang-select">
+        <button type="button" class="m-lang-select-btn">
+          <span id="m-lang-label">한국어</span>
+          <i data-lucide="chevron-up" class="m-lang-arrow"></i>
+        </button>
+        <ul class="m-lang-options hidden">
+          <li data-lang="ko" class="active">한국어</li>
+          <li data-lang="en">English</li>
+          <li data-lang="ja">日本語</li>
+          <li data-lang="vi">Tiếng Việt</li>
+          <li data-lang="zh">中文</li>
+          <li data-lang="mn">Mongolian</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- main -->
+  <main class="site-main">
+      <!-- 메인 슬라이더 -->
+      <section class="hero-slider-section">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <!-- 슬라이드 4 (시안 텍스트 + 1200px 중앙 배경 그래픽) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-box slide-theme-custom-banner">
+                <div class="hero-banner-inner-1200">
+                  <img src="./images/main_slide05.jpg" alt="강원 배경" class="hero-banner-bg-img">
+                  <div class="hero-banner-txt-overlay">
+                    <span class="banner-badge-mint">외국인 맞춤 채용 정보</span>
+                    <h2 class="banner-tit-wrap">
+                      <span class="sub-line">강원에서 찾는</span>
+                      <span class="main-line">당신의 일자리</span>
+                    </h2>
+                    <p class="banner-desc-line">
+                      강원도의 우수 기업과 다양한 채용공고를<br>
+                      한눈에 확인하세요.
+                    </p>
+                    <a href="jobs.html" class="btn-banner-link-blue">
+                      <span>채용공고 보기</span>
+                      <i data-lucide="chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 슬라이드 1 (main_slide01.jpg) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-box slide-theme-1">
+                <div class="hero-bg-img-wrap">
+                  <img src="images/main_slide01.jpg" alt="글로벌 인재와 강원 기업">
+                  <div class="hero-bg-gradient-mask"></div>
+                </div>
+                <div class="inner-section">
+                  <div class="hero-content-wrap">
+                    <div class="hero-badge-tag blue">
+                      <span>강원특별자치도 외국인 취업·정착 지원 공식 플랫폼</span>
+                    </div>
+                    <p class="hero-sub-txt">강원에서 꿈을 펼치는</p>
+                    <h2 class="hero-main-tit">“외국인 인재를 환영합니다”</h2>
+                    <p class="hero-desc-txt">“강원 기업과 글로벌 인재를 연결하는 외국인 취업 플랫폼”</p>
+                    <div class="hero-btn-group">
+                      <a href="jobs.html" class="btn-hero-primary">
+                        <span>외국인 채용정보 보기</span>
+                        <i data-lucide="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 2 (main_slide02.jpg) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-box slide-theme-2">
+                <div class="hero-bg-img-wrap">
+                  <img src="images/main_slide02.jpg" alt="비자 전환 및 장기정착 지원">
+                  <div class="hero-bg-gradient-mask"></div>
+                </div>
+                <div class="inner-section">
+                  <div class="hero-content-wrap">
+                    <div class="hero-badge-tag indigo">
+                      <span>E-7-4 & F-2-R 지역특화형 비자 연계 특화 지원</span>
+                    </div>
+                    <p class="hero-sub-txt">안정적인 취업부터 장기 정착까지</p>
+                    <h2 class="hero-main-tit">“비자 전환 및 정착 원스톱 지원”</h2>
+                    <p class="hero-desc-txt">“도지사 추천 가점 연계와 체류자격 진단으로 안정적인 강원 생활을 지원합니다”</p>
+                    <div class="hero-btn-group">
+                      <a href="visa-roadmap.html" class="btn-hero-primary">
+                        <span>비자 로드맵 확인하기</span>
+                        <i data-lucide="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 3 (main_slide03.jpg) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-box slide-theme-3">
+                <div class="hero-bg-img-wrap">
+                  <img src="images/main_slide03.jpg" alt="강원 대표기업 매칭">
+                  <div class="hero-bg-gradient-mask"></div>
+                </div>
+                <div class="inner-section">
+                  <div class="hero-content-wrap">
+                    <div class="hero-badge-tag teal">
+                      <span>바이오 · 반도체 · 첨단 모빌리티 미래산업 클러스터</span>
+                    </div>
+                    <p class="hero-sub-txt">글로벌 혁신 기업과 함께 성장하는</p>
+                    <h2 class="hero-main-tit">“강원 대표기업 맞춤 일자리 매칭”</h2>
+                    <p class="hero-desc-txt">“춘천 바이오, 원주 의료기기, 동해 모빌리티 등 강원 핵심 전략산업 기업 채용”</p>
+                    <div class="hero-btn-group">
+                      <a href="companies.html" class="btn-hero-primary">
+                        <span>대표 채용기업 보기</span>
+                        <i data-lucide="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 우측 숫자 카운터 & 네비게이션 (.inner-section 안에서 기준 정렬) -->
+          <div class="inner-section" style="position: absolute; inset: 0; pointer-events: none; z-index: 25;">
+            <div class="hero-nav-counter-box" style="pointer-events: auto;">
+              <div class="fraction">
+                <span class="cur-num" id="heroCurPage">01</span>
+                <span class="sep">/</span>
+                <span class="total-num" id="heroTotalPage">03</span>
+              </div>
+              <div class="nav-arrow-btns">
+                <button type="button" class="btn-slide-prev" id="heroBtnPrev" aria-label="이전 슬라이드"><i data-lucide="chevron-left"></i></button>
+                <button type="button" class="btn-slide-next" id="heroBtnNext" aria-label="다음 슬라이드"><i data-lucide="chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 하단 슬라이드 바 인디케이터 -->
+          <div class="hero-pagination-bars swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- 퀵메뉴 -->
+      <section class="quick-menu-sec">
+        <div class="inner-section">
+          <div class="quick-menu-grid">
+            <a href="/global/jobs" class="quick-menu-card">
+              <div class="quick-menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" aria-hidden="true" class="lucide lucide-briefcase"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+              </div>
+              <h3 class="quick-menu-tit">채용공고</h3>
+              <p class="quick-menu-desc">강원도 내 외국인 채용 정보</p>
+              <span class="quick-menu-link-txt">
+                <span>바로가기</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg>
+              </span>
+            </a>
+
+            <a href="/global/companies" class="quick-menu-card">
+              <div class="quick-menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
+              </div>
+              <h3 class="quick-menu-tit">기업정보</h3>
+              <p class="quick-menu-desc">외국인 채용 참여 기업</p>
+              <span class="quick-menu-link-txt">
+                <span>바로가기</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg>
+              </span>
+            </a>
+
+            <a href="/global/talent" class="quick-menu-card">
+              <div class="quick-menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+              </div>
+              <h3 class="quick-menu-tit">인재검색</h3>
+              <p class="quick-menu-desc">외국인 인재 프로필</p>
+              <span class="quick-menu-link-txt">
+                <span>바로가기</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg>
+              </span>
+            </a>
+
+            <a href="/global/visa/roadmap" class="quick-menu-card">
+              <div class="quick-menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="milestone" aria-hidden="true" class="lucide lucide-milestone"><path d="M12 13v8"></path><path d="M12 3v3"></path><path d="M18.172 6a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"></path></svg>
+              </div>
+              <h3 class="quick-menu-tit">비자 가이드</h3>
+              <p class="quick-menu-desc">E-7, F-2-R 등 비자 정보</p>
+              <span class="quick-menu-link-txt">
+                <span>바로가기</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg>
+              </span>
+            </a>
+
+            <a href="/global/labor_law" class="quick-menu-card">
+              <div class="quick-menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <h3 class="quick-menu-tit">기초 노동법</h3>
+              <p class="quick-menu-desc">외국인 근로자 필수 권익</p>
+              <span class="quick-menu-link-txt">
+                <span>바로가기</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 추천 채용공고 -->
+      <section class="marquee-rolling-section">
+        <div class="inner-section">
+          <div class="sec-header-area">
+            <div class="sec-header-left">
+              <div class="sec-header-badge">
+                <i data-lucide="award"></i>
+                <span>추천 채용관</span>
+              </div>
+              <h2 class="sec-header-tit">추천 채용공고</h2>
+              <p class="sec-header-desc">강원특별자치도 내 외국인 우수인재를 위한 추천 채용공고입니다.</p>
+            </div>
+            <a href="jobs.html" class="btn-sec-more">
+              <span>추천공고 전체보기</span>
+              <i data-lucide="chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="marquee-viewport">
+            <div class="marquee-track">
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 춘천시</span>
+                  </div>
+                  <h3 class="m-card-co-name">(주)강원바이오랩</h3>
+                  <p class="m-card-job-tit">천연물 바이오 연구개발 및 품질분석 전용관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7 / F-2-R</span>
+                  <span class="m-card-dday-txt">D-5</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 원주시</span>
+                  </div>
+                  <h3 class="m-card-co-name">네패스(주) 원주캠퍼스</h3>
+                  <p class="m-card-job-tit">반도체 정밀 패키징 및 설비보전 엔지니어 채용관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7-4</span>
+                  <span class="m-card-dday-txt">D-12</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 횡성군</span>
+                  </div>
+                  <h3 class="m-card-co-name">동원산업(주) 횡성공장</h3>
+                  <p class="m-card-job-tit">식품 가공생산 및 자동화 물류공정 관리관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7-4 / H-2</span>
+                  <span class="m-card-dday-txt">D-7</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 정선군</span>
+                  </div>
+                  <h3 class="m-card-co-name">강원랜드(주) 하이원리조트</h3>
+                  <p class="m-card-job-tit">호텔 리조트 다국어 글로벌 고객서비스 전용관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">D-2 / D-10 / F-4</span>
+                  <span class="m-card-dday-txt">상시</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 춘천시</span>
+                  </div>
+                  <h3 class="m-card-co-name">현대해상화재보험(주) 춘천</h3>
+                  <p class="m-card-job-tit">외국인 고객 다국어 금융상담 & IT시스템 지원관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7 / F-4</span>
+                  <span class="m-card-dday-txt">D-18</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 동해시</span>
+                  </div>
+                  <h3 class="m-card-co-name">동해포텐(주)</h3>
+                  <p class="m-card-job-tit">친환경 전기차 모터 정밀가공 머시닝센터 조작원관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7 / D-10</span>
+                  <span class="m-card-dday-txt">D-9</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 원주시</span>
+                  </div>
+                  <h3 class="m-card-co-name">현대메디칼(주)</h3>
+                  <p class="m-card-job-tit">첨단 의료기기 조립생산 및 정밀 품질검사원관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7-4</span>
+                  <span class="m-card-dday-txt">D-3</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 원주시</span>
+                  </div>
+                  <h3 class="m-card-co-name">삼양식품(주) 원주공장</h3>
+                  <p class="m-card-job-tit">글로벌 K-라면 제조라인 및 위생품질 오퍼레이터관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7-4 / H-2</span>
+                  <span class="m-card-dday-txt">D-15</span>
+                </div>
+              </a>
+
+              <!-- 무한 롤링 루프용 복제 슬라이드 -->
+              <a href="jobs.html" class="marquee-card" aria-hidden="true">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 춘천시</span>
+                  </div>
+                  <h3 class="m-card-co-name">(주)강원바이오랩</h3>
+                  <p class="m-card-job-tit">천연물 바이오 연구개발 및 품질분석 전용관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7 / F-2-R</span>
+                  <span class="m-card-dday-txt">D-5</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card" aria-hidden="true">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 원주시</span>
+                  </div>
+                  <h3 class="m-card-co-name">네패스(주) 원주캠퍼스</h3>
+                  <p class="m-card-job-tit">반도체 정밀 패키징 및 설비보전 엔지니어 채용관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7-4</span>
+                  <span class="m-card-dday-txt">D-12</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card" aria-hidden="true">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 횡성군</span>
+                  </div>
+                  <h3 class="m-card-co-name">동원산업(주) 횡성공장</h3>
+                  <p class="m-card-job-tit">식품 가공생산 및 자동화 물류공정 관리관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">E-7-4 / H-2</span>
+                  <span class="m-card-dday-txt">D-7</span>
+                </div>
+              </a>
+
+              <a href="jobs.html" class="marquee-card" aria-hidden="true">
+                <div>
+                  <div class="m-card-top-row">
+                    <span class="m-card-loc-badge">강원 정선군</span>
+                  </div>
+                  <h3 class="m-card-co-name">강원랜드(주) 하이원리조트</h3>
+                  <p class="m-card-job-tit">호텔 리조트 다국어 글로벌 고객서비스 전용관</p>
+                </div>
+                <div class="m-card-bottom-row">
+                  <span class="m-card-visa-badge">D-2 / D-10 / F-4</span>
+                  <span class="m-card-dday-txt">상시</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 강원 대표 채용기업 -->
+      <section class="rep-companies-wide-wrap">
+        <div class="inner-section">
+          <div class="sec-header-area">
+            <div class="sec-header-left">
+              <div class="sec-header-badge">
+                <i data-lucide="building-2"></i>
+                <span>검증된 도내 우수 기업</span>
+              </div>
+              <h2 class="sec-header-tit">강원 대표 채용기업</h2>
+              <p class="sec-header-desc">외국인 인재를 적극 채용하고 정착을 지원하는 도내 대표 기업입니다.</p>
+            </div>
+            <a href="companies.html" class="btn-sec-more">
+              <span>기업 전체보기</span>
+              <i data-lucide="chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="rep-co-grid">
+            <a href="companies.html" class="rep-co-card">
+              <div class="rep-co-top-content">
+                <span class="rep-co-cat-badge">강원 춘천시</span>
+                <h3 class="rep-co-name">(주)강원바이오랩</h3>
+                <p class="rep-co-job">품질관리 연구</p>
+              </div>
+              <div class="rep-co-bot-row">
+                <span class="rep-co-detail-link"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="companies.html" class="rep-co-card">
+              <div class="rep-co-top-content">
+                <span class="rep-co-cat-badge">강원 원주시</span>
+                <h3 class="rep-co-name">네패스(주)</h3>
+                <p class="rep-co-job">설비 엔지니어</p>
+              </div>
+              <div class="rep-co-bot-row">
+                <span class="rep-co-detail-link"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="companies.html" class="rep-co-card">
+              <div class="rep-co-top-content">
+                <span class="rep-co-cat-badge">강원 횡성군</span>
+                <h3 class="rep-co-name">동원산업(주)</h3>
+                <p class="rep-co-job">생산·공정관리</p>
+              </div>
+              <div class="rep-co-bot-row">
+                <span class="rep-co-detail-link"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="companies.html" class="rep-co-card">
+              <div class="rep-co-top-content">
+                <span class="rep-co-cat-badge">강원 동해시</span>
+                <h3 class="rep-co-name">동해포텐(주)</h3>
+                <p class="rep-co-job">정밀가공 기계</p>
+              </div>
+              <div class="rep-co-bot-row">
+                <span class="rep-co-detail-link"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="companies.html" class="rep-co-card">
+              <div class="rep-co-top-content">
+                <span class="rep-co-cat-badge">강원 정선군</span>
+                <h3 class="rep-co-name">강원랜드</h3>
+                <p class="rep-co-job">호텔 다국어 안내</p>
+              </div>
+              <div class="rep-co-bot-row">
+                <span class="rep-co-detail-link"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 최신 채용공고 -->
+      <section class="job-grid-section">
+        <div class="inner-section">
+          <div class="sec-header-area">
+            <div class="sec-header-left">
+              <div class="sec-header-badge">
+                <i data-lucide="briefcase"></i>
+                <span>실시간 채용정보</span>
+              </div>
+              <h2 class="sec-header-tit">최신 채용공고</h2>
+              <p class="sec-header-desc">강원도 내 기업의 최신 외국인 채용 소식을 실시간으로 확인하세요.</p>
+            </div>
+            <a href="jobs.html" class="btn-sec-more">
+              <span>채용공고 전체보기</span>
+              <i data-lucide="chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="job-card-grid col-3">
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">(주)강원바이오랩</span>
+                <span class="tag-dday status-soon">D-10</span>
+              </div>
+              <h3 class="post-title">바이오 분석 및 미생물 배양 연구원 모집</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 춘천시</p>
+              <p class="post-salary">연봉 3,600만 ~ 4,200만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7 / F-2-R</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">현대메디칼(주)</span>
+                <span class="tag-dday status-soon">D-14</span>
+              </div>
+              <h3 class="post-title">의료기기 생산라인 조립 및 품질검사원</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 원주시</p>
+              <p class="post-salary">월 290만원 (기숙사 지원)</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7-4</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">동원산업(주)</span>
+                <span class="tag-dday status-normal">D-28</span>
+              </div>
+              <h3 class="post-title">식품가공 자동화 설비 조작 및 위생관리</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 횡성군</p>
+              <p class="post-salary">월 280만원 이상</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7-4 / H-2</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">네패스(주)</span>
+                <span class="tag-dday status-soon">D-9</span>
+              </div>
+              <h3 class="post-title">반도체 패키징 오퍼레이터 및 설비보전</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 원주시</p>
+              <p class="post-salary">연봉 3,500만 ~ 4,000만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">강원랜드(주)</span>
+                <span class="tag-dday status-always">상시채용</span>
+              </div>
+              <h3 class="post-title">호텔 리조트 외국인 고객 응대 서비스</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 정선군</p>
+              <p class="post-salary">연봉 3,200만원 (사택)</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">D-2 / D-10 / F-4</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">동해포텐(주)</span>
+                <span class="tag-dday status-soon">D-9</span>
+              </div>
+              <h3 class="post-title">전기차 모터 정밀 가공 머시닝센터 조작원</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 동해시</p>
+              <p class="post-salary">월 300만 ~ 340만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7 / D-10</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 마감 임박 채용공고 -->
+      <section class="job-grid-section job-grid-section--urgent">
+        <div class="inner-section">
+          <div class="sec-header-area">
+            <div class="sec-header-left">
+              <div class="sec-header-badge text-rose">
+                <i data-lucide="clock"></i>
+                <span>마감 주의 공고</span>
+              </div>
+              <h2 class="sec-header-tit">마감 임박 채용공고</h2>
+              <p class="sec-header-desc">마감일이 얼마 남지 않은 외국인 채용공고입니다. 일정을 확인하고 빠르게 지원하세요.</p>
+            </div>
+            <a href="jobs.html" class="btn-sec-more">
+              <span>채용공고 전체보기</span>
+              <i data-lucide="chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="job-card-grid col-4">
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">(주)강원바이오랩</span>
+                <span class="tag-dday status-urgent">D-1</span>
+              </div>
+              <h3 class="post-title">바이오 분석 및 미생물 배양 연구원 모집</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 춘천시</p>
+              <p class="post-salary">연봉 3,600만 ~ 4,200만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7 / F-2-R</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">현대메디칼(주)</span>
+                <span class="tag-dday status-urgent">D-1</span>
+              </div>
+              <h3 class="post-title">의료기기 생산라인 조립 및 품질검사원</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 원주시</p>
+              <p class="post-salary">월 290만원 (기숙사 지원)</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7-4</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">동원산업(주)</span>
+                <span class="tag-dday status-urgent">D-2</span>
+              </div>
+              <h3 class="post-title">식품가공 자동화 설비 조작 및 위생관리</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 횡성군</p>
+              <p class="post-salary">월 280만원 이상</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7-4 / H-2</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">네패스(주)</span>
+                <span class="tag-dday status-urgent">D-2</span>
+              </div>
+              <h3 class="post-title">반도체 패키징 오퍼레이터 및 설비보전</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 원주시</p>
+              <p class="post-salary">연봉 3,500만 ~ 4,000만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">동해포텐(주)</span>
+                <span class="tag-dday status-urgent">D-3</span>
+              </div>
+              <h3 class="post-title">전기차 모터 정밀 가공 머시닝센터 조작원</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 동해시</p>
+              <p class="post-salary">월 300만 ~ 340만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7 / D-10</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">(주)강원수산</span>
+                <span class="tag-dday status-urgent">D-3</span>
+              </div>
+              <h3 class="post-title">수산물 냉동 가공 및 위생관리 담당자</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 속초시</p>
+              <p class="post-salary">월 270만 ~ 310만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7-4 / F-2-R</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">삼양식품(주)</span>
+                <span class="tag-dday status-urgent">D-4</span>
+              </div>
+              <h3 class="post-title">식품 제조라인 품질검사 및 포장 설비원</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 원주시</p>
+              <p class="post-salary">연봉 3,300만 ~ 3,700만원</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">E-7-4</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+
+            <a href="jobs.html" class="job-post-card">
+              <div class="card-head-row">
+                <span class="corp-name">대명소노호텔앤리조트</span>
+                <span class="tag-dday status-urgent">D-5</span>
+              </div>
+              <h3 class="post-title">외국인 고객 맞춤 케어 및 식음료 서비스</h3>
+              <p class="post-location"><i data-lucide="map-pin"></i>강원 홍천군</p>
+              <p class="post-salary">연봉 3,200만원 (사택)</p>
+              <div class="card-bottom-row">
+                <span class="badge-visa-pill">D-2 / D-10 / F-4</span>
+                <span class="link-detail"><span>상세보기</span><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .official-portal-section { width: 100%; margin: 4rem 0 6.4rem; }
+        .portal-sec-inner { padding-top: 3.6rem; border-top: 1px solid #e2e8f0; }
+        .official-portal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .portal-banner-card { position: relative; overflow: hidden; border-radius: 2rem; padding: 2.8rem; color: #ffffff !important; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
+        .portal-banner-card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.25); }
+        .portal-banner-card.theme-blue { background: linear-gradient(135deg, #0f172a 0%, #172554 50%, #1e1b4b 100%); border: 1px solid rgba(30, 64, 175, 0.45); }
+        .portal-banner-card.theme-blue:hover { border-color: rgba(59, 130, 246, 0.7); }
+        .portal-banner-card.theme-emerald { background: linear-gradient(135deg, #0f172a 0%, #042f2e 50%, #064e3b 100%); border: 1px solid rgba(17, 94, 89, 0.45); }
+        .portal-banner-card.theme-emerald:hover { border-color: rgba(16, 185, 129, 0.7); }
+        .portal-glow-bg { position: absolute; right: -3.2rem; bottom: -3.2rem; width: 16rem; height: 16rem; border-radius: 50%; filter: blur(32px); pointer-events: none; transition: background-color 0.3s ease; }
+        .theme-blue .portal-glow-bg { background-color: rgba(59, 130, 246, 0.12); }
+        .theme-blue:hover .portal-glow-bg { background-color: rgba(59, 130, 246, 0.24); }
+        .theme-emerald .portal-glow-bg { background-color: rgba(16, 185, 129, 0.12); }
+        .theme-emerald:hover .portal-glow-bg { background-color: rgba(16, 185, 129, 0.24); }
+        .portal-card-top { position: relative; z-index: 2; }
+        .portal-badge-row { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; margin-bottom: 1.6rem; }
+        .portal-org-pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.45rem 1.2rem; border-radius: 9999px; font-size: 1.15rem; font-weight: 700; }
+        .portal-org-pill svg { width: 1.3rem; height: 1.3rem; flex-shrink: 0; }
+        .theme-blue .portal-org-pill { background-color: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(96, 165, 250, 0.3); }
+        .theme-emerald .portal-org-pill { background-color: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(52, 211, 153, 0.3); }
+        .portal-ext-ico { width: 3.4rem; height: 3.4rem; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.75); transition: all 0.25s ease; flex-shrink: 0; }
+        .portal-ext-ico svg { width: 1.6rem; height: 1.6rem; }
+        .theme-blue:hover .portal-ext-ico { background-color: #2563eb; color: #ffffff; }
+        .theme-emerald:hover .portal-ext-ico { background-color: #059669; color: #ffffff; }
+        .portal-title-wrap { display: flex; align-items: center; gap: 1.4rem; margin-bottom: 1.4rem; }
+        .portal-ico-box { width: 5rem; height: 5rem; border-radius: 1.4rem; display: flex; align-items: center; justify-content: center; color: #ffffff; flex-shrink: 0; transition: transform 0.25s ease; }
+        .portal-ico-box svg { width: 2.5rem; height: 2.5rem; }
+        .portal-banner-card:hover .portal-ico-box { transform: scale(1.06); }
+        .theme-blue .portal-ico-box { background: linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%); box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25); }
+        .theme-emerald .portal-ico-box { background: linear-gradient(135deg, #10b981 0%, #0d9488 100%); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25); }
+        .portal-name { font-size: 2.1rem; font-weight: 900; color: #ffffff; letter-spacing: -0.02em; margin: 0 0 0.2rem; transition: color 0.2s ease; }
+        .theme-blue:hover .portal-name { color: #bfdbfe; }
+        .theme-emerald:hover .portal-name { color: #a7f3d0; }
+        .portal-sub { font-size: 1.25rem; font-weight: 500; margin: 0; }
+        .theme-blue .portal-sub { color: rgba(191, 219, 254, 0.85); }
+        .theme-emerald .portal-sub { color: rgba(167, 243, 208, 0.85); }
+        .portal-desc { font-size: 1.35rem; color: #cbd5e1; line-height: 1.65; font-weight: 500; word-break: keep-all; margin: 0 0 1.8rem; }
+        .portal-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+        .portal-tags span { padding: 0.35rem 0.9rem; border-radius: 0.6rem; font-size: 1.15rem; font-weight: 600; background-color: rgba(255, 255, 255, 0.1); color: #e2e8f0; }
+        .portal-card-foot { position: relative; z-index: 2; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: space-between; }
+        .portal-url { font-size: 1.2rem; color: #94a3b8; font-weight: 400; }
+        .portal-go-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 1.3rem; font-weight: 700; transition: all 0.2s ease; }
+        .portal-go-link svg { width: 1.6rem; height: 1.6rem; }
+        .theme-blue .portal-go-link { color: #93c5fd; }
+        .theme-emerald .portal-go-link { color: #6ee7b7; }
+        .portal-banner-card:hover .portal-go-link { color: #ffffff; transform: translateX(4px); }
+        @media (max-width: 1024px) {
+        .official-portal-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+        }
+        @media (max-width: 640px) {
+        .official-portal-section { margin: 3.2rem 0 4.8rem; }
+        .portal-sec-inner { padding-top: 2.8rem; }
+        .portal-banner-card { padding: 2.2rem 1.8rem; border-radius: 1.6rem; }
+        .portal-title-wrap { gap: 1.2rem; }
+        .portal-ico-box { width: 4.4rem; height: 4.4rem; border-radius: 1.2rem; }
+        .portal-ico-box svg { width: 2.2rem; height: 2.2rem; }
+        .portal-name { font-size: 1.85rem; }
+        .portal-desc { font-size: 1.3rem; margin-bottom: 1.4rem; }
+        }
+      </style>
+      <!-- 공식 포털 바로가기 (하이코리아 / K-work) -->
+      <section class="official-portal-section">
+        <div class="inner-section">
+          <div class="portal-sec-inner">
+            <div class="sec-header-area">
+              <div class="sec-header-left">
+                <div class="sec-header-badge">
+                  <i data-lucide="shield-check"></i>
+                  <span>정부 · 공공기관 공식 연계 서비스</span>
+                </div>
+                <h2 class="sec-header-tit">외국인 취업 &amp; 비자 행정 공식 포털 바로가기</h2>
+              </div>
+            </div>
+
+            <div class="official-portal-grid">
+              <!-- 1. 하이코리아 (Hi Korea) -->
+              <a href="https://www.hikorea.go.kr" target="_blank" rel="noopener noreferrer" class="portal-banner-card theme-blue">
+                <div class="portal-glow-bg"></div>
+                <div class="portal-card-top">
+                  <div class="portal-badge-row">
+                    <span class="portal-org-pill">
+                      <i data-lucide="shield-check"></i>
+                      <span>법무부 출입국·외국인 종합민원</span>
+                    </span>
+                    <span class="portal-ext-ico">
+                      <i data-lucide="external-link"></i>
+                    </span>
+                  </div>
+
+                  <div class="portal-title-wrap">
+                    <div class="portal-ico-box">
+                      <i data-lucide="globe"></i>
+                    </div>
+                    <div class="portal-name-group">
+                      <h3 class="portal-name">하이코리아 (Hi Korea)</h3>
+                      <p class="portal-sub">대한민국 정부 외국인을 위한 전자정부 포털</p>
+                    </div>
+                  </div>
+
+                  <p class="portal-desc">
+                    체류자격 변경(비자 전환), 체류기간 연장 허가, 온라인 방문예약, 근무처 변경·추가 신고 등 출입국 전자민원을 간편하게 처리하세요.
+                  </p>
+
+                  <div class="portal-tags">
+                    <span>#체류자격변경</span>
+                    <span>#체류기간연장</span>
+                    <span>#방문예약</span>
+                    <span>#1345콜센터</span>
+                  </div>
+                </div>
+
+                <div class="portal-card-foot">
+                  <span class="portal-url">www.hikorea.go.kr</span>
+                  <span class="portal-go-link">
+                    <span>하이코리아 바로가기</span>
+                    <i data-lucide="chevron-right"></i>
+                  </span>
+                </div>
+              </a>
+
+              <!-- 2. K-work (케이워크) -->
+              <a href="https://www.k-work.or.kr" target="_blank" rel="noopener noreferrer" class="portal-banner-card theme-emerald">
+                <div class="portal-glow-bg"></div>
+                <div class="portal-card-top">
+                  <div class="portal-badge-row">
+                    <span class="portal-org-pill">
+                      <i data-lucide="building-2"></i>
+                      <span>중소벤처기업부 · 중진공(KOSME)</span>
+                    </span>
+                    <span class="portal-ext-ico">
+                      <i data-lucide="external-link"></i>
+                    </span>
+                  </div>
+
+                  <div class="portal-title-wrap">
+                    <div class="portal-ico-box">
+                      <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="portal-name-group">
+                      <h3 class="portal-name">K-work (케이워크)</h3>
+                      <p class="portal-sub">중소기업 외국전문인력 활용 지원 플랫폼</p>
+                    </div>
+                  </div>
+
+                  <p class="portal-desc">
+                    국내 우수 중소기업과 외국인 인재 맞춤형 매칭, E-7-1 전문인력 및 E-7-4 숙련기능인력 고용추천서 발급 연계를 원스톱으로 지원합니다.
+                  </p>
+
+                  <div class="portal-tags">
+                    <span>#외국인구인구직</span>
+                    <span>#E-7-4전환추천</span>
+                    <span>#전문인력채용</span>
+                    <span>#AI매칭</span>
+                  </div>
+                </div>
+
+                <div class="portal-card-foot">
+                  <span class="portal-url">www.k-work.or.kr</span>
+                  <span class="portal-go-link">
+                    <span>K-work 바로가기</span>
+                    <i data-lucide="chevron-right"></i>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 메인 레이어 팝업 -->
+      <!-- <div class="main-notice-popup-overlay" id="mainNoticeModal">
+        <div class="main-notice-popup-box">
+          <button type="button" class="btn-popup-x-close" id="btnPopupXClose" aria-label="팝업 닫기">
+            <i data-lucide="x"></i>
+          </button>
+          <div class="main-notice-popup-body">
+            <a href="javascript:void(0);" class="main-notice-popup-link">
+              <img src="./images/pop_img.png" alt="2026 강원특별자치도 외국인 취업 박람회">
+            </a>
+          </div>
+          <div class="main-notice-popup-foot">
+            <button type="button" class="btn-popup-bottom-close" id="btnPopupClose">닫기</button>
+          </div>
+        </div>
+      </div> -->
+  </main>
+  <!-- //main -->
+
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="inner-section">
+        <div class="footer-nav">
+          <a href="#" class="privacy">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+          <a href="#">사이트 맵</a>
+        </div>
+        <button type="button" id="btn-top" class="btn-top">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="inner-section footer-bot-inner">
+        <div>
+          <a href="main.html" class="footer-logo-wrap">
+            <img src="images/logo.png" alt="강원일자리정보망 - 외국인 채용관" class="site-logo-img">
+          </a>
+          <div class="footer-info">
+            <p>주소 : 강원특별자치도 춘천시 중앙로 1 (봉의동) 강원도청</p>
+            <p>운영시간 : 평일 09:00~18:00 | 점심시간 12:00~13:00</p>
+            <p>문의 전화 : 033-250-1234~9 | 이메일 : job@gw.go.kr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. 슬라이더 카운터 및 Swiper 초기화
+    const curPageEl = document.getElementById('heroCurPage');
+    const totalPageEl = document.getElementById('heroTotalPage');
+    const originSlidesCount = document.querySelectorAll('.hero-swiper .swiper-wrapper > .swiper-slide:not(.swiper-slide-duplicate)').length;
+
+    if (totalPageEl) {
+      totalPageEl.textContent = String(originSlidesCount > 0 ? originSlidesCount : 3).padStart(2, '0');
+    }
+
+    // new Swiper('.hero-swiper', {
+    //   loop: true,
+    //   autoplay: { delay: 5000, disableOnInteraction: false },
+    //   pagination: {
+    //     el: '.hero-pagination-bars',
+    //     clickable: true
+    //   },
+    //   navigation: {
+    //     nextEl: '#heroBtnNext',
+    //     prevEl: '#heroBtnPrev'
+    //   },
+    //   on: {
+    //     slideChange: function () {
+    //       if (curPageEl) {
+    //         curPageEl.textContent = String(this.realIndex + 1).padStart(2, '0');
+    //       }
+    //     }
+    //   }
+    // });
+
+    // 2. 메인 팝업 모달 이벤트
+    const modal = document.getElementById('mainNoticeModal');
+    const btnClose = document.getElementById('btnPopupClose');
+    const btnXClose = document.getElementById('btnPopupXClose');
+
+    if (modal) {
+      const closePopup = () => {
+        modal.classList.add('hidden');
+      };
+
+      if (btnClose) btnClose.addEventListener('click', closePopup);
+      if (btnXClose) btnXClose.addEventListener('click', closePopup);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closePopup();
+        }
+      });
+    }
+
+    // 3. Lucide 아이콘 일괄 생성 (팝업 포함)
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  });
+</script>
+</body>
+</html>
