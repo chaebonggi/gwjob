@@ -14,13 +14,14 @@ h3.mod_tit span {font-size: 2rem; font-weight: 500; text-align: center; color: #
  @media all and (max-width:768px) {
  }
  @media all and (max-width:640px){
+    .mod_visual .comName {font-size: 3rem;}
  }
 
 
 /* 메인 */
-.mod_visual { width: 100%; height: 600px; position: relative; background: url(../images/corp23/visual.jpg) no-repeat; background-size: cover; }
+.mod_visual { width: 100%; height: 600px; position: relative; background: url(../images/corp24/visual.jpg) no-repeat; background-size: cover; }
 .mod_visual .container { display: flex; height: inherit; padding: 60px 10px; position: initial; }
-.mod_visual .cert_wrap { position: absolute; top: 0; right: 80px; padding: 18px 10px; background-color: rgba(1, 64, 153, 0.5); border-radius: 0 0 10px 10px; }
+.mod_visual .cert_wrap { position: absolute; top: 0; right: 80px; padding: 18px 10px; background-color: rgba(182, 0, 5, 0.5); border-radius: 0 0 10px 10px; }
 .mod_visual .cert_wrap .cert_img { margin-bottom: 10px; text-align: center; }
 .mod_visual .cert_wrap p { color: #fff; font-size: 1.4rem; font-weight: 600; text-align: center; }
 .mod_visual .txt_wrap { margin-top: 10rem; text-align: left; }
@@ -28,7 +29,7 @@ h3.mod_tit span {font-size: 2rem; font-weight: 500; text-align: center; color: #
 .mod_visual .entReptCmmt b { display: block; font-size: 2.8rem; color: #fff; font-weight: 700; }
 .mod_visual .logo_wrap { display: flex; align-items: flex-end; gap: 20px; }
 .mod_visual .comName { color: #fff; font-size: 5rem; font-weight: 700; }
-.sns_mod_info.sty01 { padding: 10rem 0; background: url(../images/corp23/info.jpg) no-repeat !important; background-size: cover !important; }
+.sns_mod_info.sty01 { padding: 10rem 0; background: url(../images/corp24/info.jpg) no-repeat !important; background-size: cover !important; }
 .sns_mod_info.sty01 .info_wrap { display: flex; gap: 3rem; }
 .sns_mod_info.sty01 .info_wrap > li { flex: 1; text-align: center; font-size: 1.8rem; color: #fff; }
 .sns_mod_info.sty01 .info_wrap .cnt span { font-size: 2rem; color: #fff; }
@@ -59,6 +60,113 @@ h3.mod_tit { font-size: 3rem; }
 .sns_mod_info.sty01 .info_wrap > li { flex-basis: 40%; }
 .sns_mod_info.sty01 .info_wrap > li > div.ico { height: 40px; }
 }
-@media all and (max-width: 640px) {    
-.mod_visual .comName {font-size: 3rem;}
+
+/* Company overview */
+.overview .container {width: 100%;}
+.overview .overview_wrap{display:flex;flex-direction:column;width:100%;}
+.overview .overview_item{display:flex;align-items:center;justify-content:space-between;gap:50px;width:100%;}
+.overview .text_box{max-width: 700px; flex:1;display:flex;flex-direction:column;gap:2rem;}
+.overview .text_box p b{font-size: 2rem;}
+.overview .text_box p{font-size:1.6rem;line-height:1.6;color:#333;word-break:keep-all;margin:0;letter-spacing:-0.3px;}
+.overview .img_box{flex:1;max-width:560px;height:380px;overflow:hidden;}
+.overview .img_box.round_top_left{border-top-left-radius:140px;}
+.overview .img_box img{width:100%;height:100%;object-fit:cover;display:block;}
+@media all and (max-width:1024px){
+.overview .overview_item{gap:30px;}
+.overview .img_box{max-width:480px;height:320px;}
+.overview .img_box.round_top_left{border-top-left-radius:100px;}
+}
+@media all and (max-width:768px){
+.overview .overview_item{flex-direction:column-reverse;gap:2.5rem;}
+.overview .img_box{max-width:100%;width:100%;height:260px;}
+.overview .img_box.round_top_left{border-top-left-radius:70px;}
+.overview .text_box p{font-size:1.45rem;line-height:1.65;}
+}
+
+/* 연혁 */
+.mod_history04 .history_wrap { display: flex; gap: 6rem; width: 100%; } 
+.mod_history04 .history_wrap .thumb { max-width: 560px; width: 100%; margin: 0 auto; float: initial; } 
+.mod_history04 .history_wrap .history { width: 100%; height: 750px; float: initial; overflow-y: scroll; } 
+.mod_history04 .history_wrap .history::-webkit-scrollbar { width: 6px; } 
+.mod_history04 .history_wrap .history::-webkit-scrollbar-thumb { background: #c4102f; border-radius: 10px; } 
+.mod_history04 .history_wrap .history::-webkit-scrollbar-track { background: #dddddd; } 
+.mod_history04 .history > div > ul > li .month { display: none; } 
+.mod_history04 .history > div > ul > li .event span::before { content: "ㆍ"; display: inline-block; color: #222; } 
+.mod_history04 .history::after {content: none;}
+.mod_history04 .history > div { position: relative; padding-left: 30px; border-left: 2px solid #dddddd; margin-left: 10px;}
+.mod_history04 .history > div > span { position: relative; display: block; color: #c4102f;}
+.mod_history04 .history > div > span::before { content: ''; position: absolute; left: -37px; top: 0; width: 14px; height: 14px; border-radius: 50%; background-color: #fff; border: 4px solid #c4102f; box-sizing: border-box;}
+.mod_history04 .history > div+div {margin-top: 0; padding-top: 3rem;}
+
+@media all and (max-width:768px) { html { font-size: 8px; } 
+.mod_history04 .history_wrap { flex-direction: column; } 
+.mod_history04 .history_wrap .history { height: 350px; } 
+}
+@media all and (max-width:640px){
+.mod_history04 .history_wrap .history {padding-left: 0; } 
+.mod_history04 .history > div ul > li .event span { font-size: 1.6rem; } 
+}
+
+/* 기업정보 */
+.mod_info03 .info_wrap { display: flex; justify-content: space-between; gap: 3rem; padding: 80px 40px 10px; background: url(../images/corp24/info_bg.jpg) top center no-repeat; background-size: 100%;} 
+.mod_info03 .info_item:nth-child(2) { margin-top: -40px; } 
+.mod_info03 .info_item { max-width: 400px; } 
+.mod_info03 .tit { margin-top: 1rem; color: #b60005; font-size: 2.8rem; font-weight: 600; } 
+.mod_info03 .txt { margin-top: 1rem; color: #333333; font-size: 1.8rem; word-break: keep-all; } 
+
+@media all and (max-width:768px) {
+.mod_info03 .info_wrap { flex-direction: column; padding: 0 10px; } 
+.mod_info03 .info_item { margin: 0 auto; text-align: center; } 
+.mod_info03 .info_item:nth-child(2) { margin-top: 0; } 
+ }
+
+ /* 핵심전략 및 가치 */
+.mod_keyvalue { width: 100%; background: #f4f4f4; padding: 8rem 0; }
+.mod_keyvalue .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box; }
+.mod_keyvalue .mod_tit { font-size: 3.6rem; font-weight: 700; color: #222; text-align: center; margin: 0 0 5rem 0; letter-spacing: -0.04rem; }
+.mod_keyvalue .keyValue { display: flex; gap: 2.4rem; width: 100%; margin-bottom: 2.4rem; }
+.mod_keyvalue .keyValue dl { flex: 1; min-height: 40rem; border-radius: 1.6rem; overflow: hidden; margin: 0; padding: 3.6rem 2.8rem; position: relative; display: flex; flex-direction: column; justify-content: flex-end; text-align: center; color: #fff; box-sizing: border-box; box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.08); background-size: cover; background-position: center; background-repeat: no-repeat; }
+.mod_keyvalue .keyValue dl:nth-child(1) { background-image: url(../images/corp24/value_img01.jpg); }
+.mod_keyvalue .keyValue dl:nth-child(2) { background-image: url(../images/corp24/value_img02.jpg); }
+.mod_keyvalue .keyValue dl:nth-child(3) { background-image: url(../images/corp24/value_img03.jpg); }
+.mod_keyvalue .keyValue dl::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.mod_keyvalue .keyValue dl:nth-child(1)::before { background: linear-gradient(180deg, rgba(22, 92, 58, 0) 35%, rgba(22, 92, 58, 0.92) 70%, #165c3a 100%); }
+.mod_keyvalue .keyValue dl:nth-child(2)::before { background: linear-gradient(180deg, rgba(164, 58, 22, 0) 35%, rgba(164, 58, 22, 0.92) 70%, #a43a16 100%); }
+.mod_keyvalue .keyValue dl:nth-child(3)::before { background: linear-gradient(180deg, rgba(22, 72, 128, 0) 35%, rgba(22, 72, 128, 0.92) 70%, #164880 100%); }
+.mod_keyvalue .keyValue dt { position: relative; z-index: 2; font-size: 2.4rem; font-weight: 700; color: #fff; margin: 0 0 1.4rem 0; letter-spacing: -0.03rem; }
+.mod_keyvalue .keyValue dd { position: relative; z-index: 2; font-size: 1.55rem; line-height: 1.65; color: rgba(255, 255, 255, 0.95); margin: 0; word-break: keep-all; letter-spacing: -0.03rem; font-weight: 400; }
+.mod_keyvalue .key_task { width: 100%; min-height: 25rem; border-radius: 1.6rem; position: relative; display: flex; align-items: center; background: #fff url(../images/corp24/task_bg.png) no-repeat left center; background-size: auto 100%; box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.06); box-sizing: border-box; }
+.mod_keyvalue .key_task::before { content: ""; position: absolute; top: 0; left: 0; width: 45%; height: 100%; border-radius: 1.6rem 0 0 1.6rem; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.95) 85%, #fff 100%); z-index: 1; pointer-events: none; }
+.mod_keyvalue .key_task::after { content: ""; position: absolute; bottom: 0; right: 3rem; width: 28rem; height: 27rem; background: url(../images/corp24/task_img.png) no-repeat right bottom; background-size: contain; z-index: 2; pointer-events: none; }
+.mod_keyvalue .key_task .text_box { position: relative; z-index: 3; width: 100%; padding: 4rem 32rem 4rem 34rem; box-sizing: border-box; }
+.mod_keyvalue .key_task .card_tit { font-size: 2.6rem; font-weight: 700; color: #222; margin: 0 0 2rem 0; padding-bottom: 1rem; letter-spacing: -0.04rem; position: relative; display: inline-block; }
+.mod_keyvalue .key_task .card_tit::after { content: ""; position: absolute; bottom: 0; left: 0; width: 4rem; height: 0.25rem; background: #222; }
+.mod_keyvalue .keyTask { display: flex; flex-direction: column; gap: 1.2rem; }
+.mod_keyvalue .keyTask dl { display: flex; align-items: center; gap: 1.2rem; margin: 0; }
+.mod_keyvalue .keyTask dt { flex-shrink: 0; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: #c4102f; color: #fff; font-size: 1.35rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.mod_keyvalue .keyTask dd { flex: 1; font-size: 1.65rem; line-height: 1.5; color: #333; font-weight: 500; margin: 0; word-break: keep-all; letter-spacing: -0.03rem; }
+@media all and (max-width: 1024px) {
+.mod_keyvalue { padding: 6rem 0; }
+.mod_keyvalue .mod_tit { font-size: 3rem; margin-bottom: 4rem; }
+.mod_keyvalue .keyValue { gap: 1.6rem; }
+.mod_keyvalue .keyValue dl { min-height: 34rem; padding: 2.8rem 2rem; }
+.mod_keyvalue .keyValue dt { font-size: 2.1rem; }
+.mod_keyvalue .keyValue dd { font-size: 1.45rem; }
+.mod_keyvalue .key_task { background-size: 30rem auto; min-height: 22rem; }
+.mod_keyvalue .key_task::after { width: 22rem; height: 22rem; right: 2rem; }
+.mod_keyvalue .key_task .text_box { padding: 3.5rem 24rem 3.5rem 26rem; }
+.mod_keyvalue .key_task .card_tit { font-size: 2.2rem; }
+.mod_keyvalue .keyTask dd { font-size: 1.5rem; }
+}
+@media all and (max-width: 768px) {
+.mod_keyvalue { padding: 5rem 0; }
+.mod_keyvalue .mod_tit { font-size: 2.6rem; margin-bottom: 3rem; }
+.mod_keyvalue .keyValue { flex-direction: column; gap: 1.6rem; }
+.mod_keyvalue .keyValue dl { min-height: 26rem; border-radius: 1.4rem; }
+.mod_keyvalue .key_task { background: #fff; min-height: auto; border-radius: 1.4rem; overflow: hidden; }
+.mod_keyvalue .key_task::before, .mod_keyvalue .key_task::after { display: none; }
+.mod_keyvalue .key_task .text_box { padding: 3rem 2.4rem; }
+.mod_keyvalue .key_task .card_tit { font-size: 2rem; margin-bottom: 1.6rem; }
+.mod_keyvalue .keyTask dt { width: 2.2rem; height: 2.2rem; font-size: 1.25rem; }
+.mod_keyvalue .keyTask dd { font-size: 1.45rem; }
 }
