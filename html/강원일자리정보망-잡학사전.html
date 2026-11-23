@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원일자리정보망-잡학사전</title>
+    <script src="https://job.gwd.go.kr/page/common/js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://job.gwd.go.kr/page/common/css/common.css" />
+    <link rel="stylesheet" href="https://job.gwd.go.kr/page/ijcp/css/swiper-bundle.min.css">
+    <script src="https://job.gwd.go.kr/page/gwjob/js/swiper-bundle.min.js"></script>    
+    <script src="https://job.gwd.go.kr/page/foreigner/js/lucide.min.js"></script>
+    <link rel="stylesheet" href="./css/job_dict.css">
+</head>
+
+<body>
+    <main class="jd-main">
+        <!-- 1구간: 상단 히어로 배너 -->
+        <article class="jd-hero-sec">
+            <div class="jd-hero-bg" aria-hidden="true">
+                <span class="jd-glow-left"></span>
+                <span class="jd-glow-right"></span>
+                <span class="jd-dot-pattern"></span>
+            </div>
+
+            <div class="inner-wrap jd-hero-inner">
+                <div class="jd-hero-content">
+                    <div class="jd-live-pill">
+                        <span class="jd-ping-dot"><span></span></span>
+                        <span>실시간 공식 피드 라이브 동기화 중</span>
+                    </div>
+
+                    <p class="jd-hero-kicker">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+                        <span>GANGWON YOUTH &amp; POLICY WAREHOUSE</span>
+                    </p>
+
+                    <h1 class="jd-hero-title">
+                        강원일자리정보망 <span class="jd-title-accent"><span class="jd-title-grad">정책창고</span></span> 블로그
+                    </h1>
+
+                    <p class="jd-hero-desc">
+                        복지로(보건복지부)와 대한민국 청년정책(국무조정실)의 공식 블로그 원문을 <strong>100% 무변형 수집</strong>하여 최신 카드뉴스와 맞춤형 정책 가이드를 매일 실시간으로 전해드립니다.
+                    </p>
+
+                    <div class="jd-hero-metrics">
+                        <div class="jd-metric-item">
+                            <div class="jd-metric-icon icon-blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                            </div>
+                            <div class="jd-metric-info">
+                                <span class="jd-metric-label">수집 정책</span>
+                                <strong class="jd-metric-val" id="jdTotalHeroCount">60건 연동</strong>
+                            </div>
+                        </div>
+
+                        <span class="jd-metric-divider" aria-hidden="true"></span>
+
+                        <div class="jd-metric-item">
+                            <div class="jd-metric-icon icon-emerald">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <div class="jd-metric-info">
+                                <span class="jd-metric-label">원문 신뢰도</span>
+                                <strong class="jd-metric-val">100% 공식 원문</strong>
+                            </div>
+                        </div>
+
+                        <span class="jd-metric-divider" aria-hidden="true"></span>
+
+                        <div class="jd-metric-item">
+                            <div class="jd-metric-icon icon-indigo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                            </div>
+                            <div class="jd-metric-info">
+                                <span class="jd-metric-label">업데이트</span>
+                                <strong class="jd-metric-val">실시간 자동 갱신</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2구간: 주요 추천 스포트라이트 배너 -->
+        <article class="jd-spotlight-sec">
+            <div class="inner-wrap">
+                <div class="jd-spotlight-card" data-post-id="post-1">
+                    <!-- 좌측 썸네일 -->
+                    <div class="c-thumb-box jd-spot-thumb">
+                        <img src="./images/job_dict/thumb.jpg" alt="청년미래콘서트 현장 체험·이벤트 프로그램">
+                        <span class="c-thumb-badge">주요 추천 포스트</span>
+                    </div>
+
+                    <!-- 우측 정보 영역 -->
+                    <div class="jd-spot-body">
+                        <!-- 상단: 라벨 + 독립된 스크랩 버튼 -->
+                        <div class="jd-spot-top">
+                            <div class="c-label-group">
+                                <span class="c-label-source">청년포털</span>
+                                <span class="c-label-cate">청년정책 소식</span>
+                            </div>
+                            <button type="button" class="c-btn-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                        </div>
+
+                        <!-- 중단: 제목(전체 클릭 트리거) 및 요약 -->
+                        <div class="jd-spot-main">
+                            <h2 class="jd-spot-title">
+                                <a href="#post-1" class="c-card-link">청년미래콘서트 현장 체험·이벤트 프로그램</a>
+                            </h2>
+                            <p class="jd-spot-desc">청년미래콘서트 현장 체험·이벤트 프로그램 사전등록 시 특별 이벤트 및 수험생 특별 이벤트 안내! 취·창업 특강부터 1:1 멘토링 부스까지 다채로운 현장 프로그램을 확인해 보세요.</p>
+                        </div>
+
+                        <!-- 하단: 메타정보 + 읽기 안내 텍스트 -->
+                        <div class="jd-spot-foot">
+                            <div class="c-post-meta">
+                                <span>작성: <strong>we_are_youth</strong></span>
+                                <span class="c-meta-dot" aria-hidden="true">·</span>
+                                <time datetime="2026-11-20">2026.11.20</time>
+                            </div>
+                            <span class="jd-spot-read-txt">
+                                <span>포스트 전문 읽기</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3구간: 검색 및 필터 영역 -->
+        <article class="jd-filter-sec">
+            <div class="inner-wrap">
+                <!-- 검색 및 상세 필터 박스 -->
+                <div class="jd-filter-box">
+                    <div class="jd-filter-top">
+                        <div class="jd-filter-status">
+                            <h2 class="jd-filter-title">포스트 목록</h2>
+                            <span class="c-badge-count" id="jdFilteredCount">총 60건</span>
+                        </div>
+
+                        <form class="jd-search-form" id="jdSearchForm">
+                            <div class="jd-search-input-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                                <input type="text" class="jd-search-input" id="jdSearchInput" placeholder="정책 및 상식 검색..." aria-label="정책 및 상식 검색">
+                            </div>
+                            <button type="submit" class="jd-btn-search">검색</button>
+                        </form>
+                    </div>
+
+                    <!-- 1단 필터: 채널 -->
+                    <div class="jd-filter-row" data-filter-group="source">
+                        <span class="jd-row-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                            <span>채널</span>
+                        </span>
+                        <div class="jd-chip-list">
+                            <button type="button" class="c-chip-pill active" data-value="all">전체 채널</button>
+                            <button type="button" class="c-chip-pill" data-value="bokjiro">복지로</button>
+                            <button type="button" class="c-chip-pill" data-value="youth">대한민국 청년정책</button>
+                            <button type="button" class="c-chip-pill" data-value="direct">직접 등록</button>
+                        </div>
+                    </div>
+
+                    <!-- 2단 필터: 분야 -->
+                    <div class="jd-filter-row" data-filter-group="category">
+                        <span class="jd-row-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                            <span>분야</span>
+                        </span>
+                        <div class="jd-chip-list">
+                            <button type="button" class="c-chip-pill is-dark active" data-value="all">전체 분야</button>
+                            <button type="button" class="c-chip-pill is-dark" data-value="job">일자리·취업</button>
+                            <button type="button" class="c-chip-pill is-dark" data-value="housing">주거·정주</button>
+                            <button type="button" class="c-chip-pill is-dark" data-value="finance">금융·자산</button>
+                            <button type="button" class="c-chip-pill is-dark" data-value="welfare">복지·돌봄</button>
+                            <button type="button" class="c-chip-pill is-dark" data-value="education">교육·역량</button>
+                            <button type="button" class="c-chip-pill is-dark" data-value="startup">창업·경영</button>
+                        </div>
+                    </div>
+
+                    <!-- 3단 필터: 대상 -->
+                    <div class="jd-filter-row is-audience" data-filter-group="audience">
+                        <span class="jd-row-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <span>대상</span>
+                        </span>
+                        <div class="jd-chip-list">
+                            <button type="button" class="c-chip-box active" data-value="all">전체 대상</button>
+                            <button type="button" class="c-chip-box" data-value="youth">청년 (19~34세)</button>
+                            <button type="button" class="c-chip-box" data-value="jobseeker">구직·취준생</button>
+                            <button type="button" class="c-chip-box" data-value="family">신혼·출산·육아</button>
+                            <button type="button" class="c-chip-box" data-value="worker">재직자·소상공인</button>
+                            <button type="button" class="c-chip-box" data-value="senior">중장년</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 목록 바깥 우측 상단 컨트롤 바 (정렬 / 갤러리·리스트 전환) -->
+                <div class="jd-feed-ctrl-bar">
+                    <div class="jd-feed-ctrls">
+                        <select class="jd-sort-select" id="jdSortSelect" aria-label="정렬 기준">
+                            <option value="latest">최신 등록순</option>
+                            <option value="popular">조회·공감순</option>
+                            <option value="title">가나다순</option>
+                        </select>
+
+                        <div class="jd-view-toggle" role="group" aria-label="목록 보기 방식">
+                            <button type="button" class="jd-view-btn active" data-view="gallery" title="갤러리형 보기" aria-label="갤러리형 보기" aria-pressed="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                            </button>
+                            <button type="button" class="jd-view-btn" data-view="list" title="리스트형 보기" aria-label="리스트형 보기" aria-pressed="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" x2="21" y1="6" y2="6"/><line x1="8" x2="21" y1="12" y2="12"/><line x1="8" x2="21" y1="18" y2="18"/><line x1="3" x2="3.01" y1="6" y2="6"/><line x1="3" x2="3.01" y1="12" y2="12"/><line x1="3" x2="3.01" y1="18" y2="18"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4구간: 포스트 목록 영역 -->
+        <article class="jd-feed-sec">
+            <div class="inner-wrap">
+                <!-- 포스트 그리드 (기본 갤러리형 / .is-list 추가 시 리스트형 전환) -->
+                <div class="jd-feed-grid" id="jdFeedGrid">
+                    <!-- 카드 1 (청년포털) -->
+                    <div class="jd-post-card" data-post-id="post-1">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb01.jpg" alt="청년미래콘서트 현장 체험·이벤트 프로그램">
+                            <span class="jd-card-source-badge is-youth">청년포털</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">청년정책 소식</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-1" class="c-card-link">청년미래콘서트 현장 체험·이벤트 프로그램</a>
+                                </h3>
+                                <p class="jd-card-desc">청년미래콘서트 현장 체험·이벤트 프로그램 사전등록 시 특별 이벤트 및 수험생 특별 이벤트 안내</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>청년포털</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-20">2026.11.20</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>68</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>12</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.naver.com/we_are_youth" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 2 (청년포털) -->
+                    <div class="jd-post-card" data-post-id="post-2">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb02.jpg" alt="청년미래콘서트 1:1 멘토링 부스 기업·기관 라인업 공개">
+                            <span class="jd-card-source-badge is-youth">청년포털</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">일자리·취업</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-2" class="c-card-link">청년미래콘서트 1:1 멘토링 부스 기업·기관 라인업 공개</a>
+                                </h3>
+                                <p class="jd-card-desc">현직자에게 직접 질문하고 대화 나눌 수 있는 기회! 주요 대기업 및 공공기관 멘토링 라인업을 확인하세요.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>청년포털</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-19">2026.11.19</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>42</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>8</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.naver.com/we_are_youth" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 3 (복지로) -->
+                    <div class="jd-post-card" data-post-id="post-3">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb03.jpg" alt="의약외품, 장애인 안전정보 접근성을 높입니다">
+                            <span class="jd-card-source-badge is-bokjiro">복지로</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">복지·돌봄</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-3" class="c-card-link">의약외품, 장애인 안전정보 접근성을 높입니다</a>
+                                </h3>
+                                <p class="jd-card-desc">의약외품 점자 표시 등에 대한 가이드라인 개정 주요 내용과 음성·수어영상변환용 코드 세부 규격을 안내합니다.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>복지로</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-17">2026.11.17</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>31</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>5</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.bokjiro.go.kr/m" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 4 (복지로) -->
+                    <div class="jd-post-card" data-post-id="post-4">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb04.jpg" alt="불법사금융 원스톱 지원, 이제 센터 방문 없이 신청할 수 있어요!">
+                            <span class="jd-card-source-badge is-bokjiro">복지로</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">금융·자산</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-4" class="c-card-link">불법사금융 원스톱 지원, 이제 센터 방문 없이 신청할 수 있어요!</a>
+                                </h3>
+                                <p class="jd-card-desc">야간·주말에도 간편하게! 신용회복위원회 홈페이지 또는 모바일 앱 접속을 통한 비대면 원스톱 지원 안내입니다.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>복지로</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-16">2026.11.16</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>54</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>9</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.bokjiro.go.kr/m" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 5 (청년포털) -->
+                    <div class="jd-post-card" data-post-id="post-5">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb05.jpg" alt="유류비 부담은 덜고, 인하 혜택은 더 길게! 유류세 인하 2027년 1월까지 연장">
+                            <span class="jd-card-source-badge is-youth">청년포털</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">금융·자산</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-5" class="c-card-link">유류비 부담은 덜고, 인하 혜택은 더 길게! 유류세 인하 연장 안내</a>
+                                </h3>
+                                <p class="jd-card-desc">휘발유 15%, 경유·부탄 25% 인하 혜택 2개월 연장! 출퇴근 직장인과 소상공인을 위한 유류세 가격표를 확인하세요.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>청년포털</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-15">2026.11.15</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>79</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>14</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.naver.com/we_are_youth" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 6 (복지로) -->
+                    <div class="jd-post-card" data-post-id="post-6">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb03.jpg" alt="생애주기별 맞춤형 사회복지 급여 신청 가이드">
+                            <span class="jd-card-source-badge is-bokjiro">복지로</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">복지·돌봄</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-6" class="c-card-link">생애주기별 맞춤형 사회복지 급여 온라인 신청 가이드</a>
+                                </h3>
+                                <p class="jd-card-desc">복지로 온라인 신청으로 간편하게! 내가 받을 수 있는 복지 서비스 모의계산부터 신청 절차까지 한눈에 정리했습니다.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>복지로</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-14">2026.11.14</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>27</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>4</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.bokjiro.go.kr/m" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 7 (청년포털) -->
+                    <div class="jd-post-card" data-post-id="post-7">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb01.jpg" alt="[청춘프로FEEL] 첫 출근 성공! 신입사원 필수 직장 상식">
+                            <span class="jd-card-source-badge is-youth">청년포털</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">교육·역량</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-7" class="c-card-link">[청춘프로FEEL] 첫 출근 성공! 그런데 취업이 끝이 아니라고..?</a>
+                                </h3>
+                                <p class="jd-card-desc">사회초년생이 꼭 알아야 할 근로계약서 확인 포인트와 청년내일채움·재직자 역량강화 지원 제도를 소개합니다.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>청년포털</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-12">2026.11.12</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>63</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>11</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.naver.com/we_are_youth" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 8 (복지로) -->
+                    <div class="jd-post-card" data-post-id="post-8">
+                        <div class="c-thumb-box jd-card-thumb">
+                            <img src="./images/job_dict/thumb04.jpg" alt="청년 주거안정 월세 지원 및 전세보증금 반환보증 안내">
+                            <span class="jd-card-source-badge is-bokjiro">복지로</span>
+                            <button type="button" class="c-btn-scrap jd-card-scrap" aria-label="관심 포스트 스크랩" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                            </button>
+                            <span class="jd-card-cate-badge">주거·정주</span>
+                        </div>
+
+                        <div class="jd-card-body">
+                            <div class="jd-card-main">
+                                <h3 class="jd-card-title">
+                                    <a href="#post-8" class="c-card-link">청년 주거안정 월세 지원 및 전세보증금 반환보증료 지원</a>
+                                </h3>
+                                <p class="jd-card-desc">무주택 청년의 주거비 부담을 덜어주는 월세 한시 특별지원 신청 조건과 제출 서류를 알기 쉽게 정리했습니다.</p>
+                                <div class="c-post-meta jd-card-meta">
+                                    <strong>복지로</strong>
+                                    <span class="c-meta-dot" aria-hidden="true">·</span>
+                                    <time datetime="2026-11-11">2026.11.11</time>
+                                </div>
+                            </div>
+
+                            <div class="jd-card-foot">
+                                <div class="jd-card-stats">
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                        <span>49</span>
+                                    </span>
+                                    <span class="jd-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                                        <span>7</span>
+                                    </span>
+                                </div>
+                                <a href="https://blog.bokjiro.go.kr/m" target="_blank" rel="noopener noreferrer" class="jd-btn-ext" title="원문 새창으로 열기" aria-label="원문 새창으로 열기">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 조건에 맞는 포스트가 없을 때 빈 결과 박스 (개발 연동 시 노출 제어) -->
+                <div class="jd-empty-box" id="jdEmptyBox" style="display: none;">
+                    <div class="jd-empty-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </div>
+                    <h3 class="jd-empty-title">조건에 맞는 포스트가 없습니다.</h3>
+                    <p class="jd-empty-desc">다른 검색어를 입력하거나 필터 조건을 초기화해 보세요.</p>
+                </div>
+
+                <!-- 하단 더보기 버튼 -->
+                <div class="jd-more-wrap">
+                    <button type="button" class="jd-btn-more" id="btnFeedMore">
+                        <span>포스트 더보기 (8 / 60)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 상세 보기 팝업 모달 -->
+        <div class="jd-modal" id="jdPostModal" role="dialog" aria-modal="true" aria-labelledby="jdModalTitle">
+            <div class="jd-modal-dim"></div>
+            <div class="jd-modal-box">
+                <!-- 상단 고정 헤더 (공통) -->
+                <div class="jd-modal-head">
+                    <div class="jd-modal-head-info">
+                        <span class="jd-modal-dot" aria-hidden="true"></span>
+                        <strong class="jd-modal-site">강원일자리정보망 정책창고</strong>
+                        <span class="jd-modal-sep" aria-hidden="true">·</span>
+                        <span class="jd-modal-ch" id="jdModalChannel">청년포털</span>
+                    </div>
+                    <button type="button" class="jd-modal-close-x" data-modal-close aria-label="팝업 닫기">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+
+                <!-- 중앙 스크롤 본문 -->
+                <div class="jd-modal-body">
+                    <div class="jd-modal-content-wrap">
+                        <!-- 1줄: 버튼 전용 라인 (우측 정렬) -->
+                        <div class="jd-modal-action-row">
+                            <button type="button" class="c-btn-scrap is-labeled" aria-pressed="false" title="스크랩">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                                <span>스크랩</span>
+                            </button>
+                            <a href="https://blog.naver.com/we_are_youth" target="_blank" rel="noopener noreferrer" class="jd-btn-origin" id="jdModalOriginTop">
+                                <span>공식 원문 바로가기</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- 2줄: 라벨 및 작성일 -->
+                        <div class="jd-modal-meta-row">
+                            <div class="c-label-group">
+                                <span class="c-label-source" id="jdModalSourceLabel">청년포털</span>
+                                <span class="c-label-cate" id="jdModalCateLabel">청년정책 소식</span>
+                            </div>
+                            <span class="c-meta-dot" aria-hidden="true">·</span>
+                            <time class="jd-modal-date" id="jdModalDate" datetime="2026-11-20">2026.11.20</time>
+                        </div>
+
+                        <!-- 3줄: 포스트 타이틀 -->
+                        <h2 class="jd-modal-title" id="jdModalTitle">청년미래콘서트 현장 체험·이벤트 프로그램</h2>
+
+                        <!-- 에디터 본문 영역 -->
+                        <div class="jd-modal-editor-body" id="jdModalEditorBody">
+                            <p><img src="./images/job_dict/blog_img01.jpg" alt="청년미래콘서트 현장 체험·이벤트 프로그램"></p>
+                            <p><img src="./images/job_dict/blog_img02.jpg" alt="AI 로봇 포토존 및 수험생 이벤트"></p>
+                            <p><img src="./images/job_dict/blog_img03.jpg" alt="체험 프로그램 개인 멘토 MBTI 및 퍼스널컬러 진단"></p>
+                            <p><img src="./images/job_dict/blog_img04.jpg" alt="사전등록 이벤트 진행 중 안내"></p>
+                        </div>
+
+                        <!-- 하단 공통: 해시태그 영역 -->
+                        <div class="jd-modal-tags-wrap">
+                            <span class="jd-tag-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                            </span>
+                            <div class="c-tag-list" id="jdModalTagList">
+                                <span class="c-tag-item">#청년정책</span>
+                                <span class="c-tag-item">#청년정책설명서</span>
+                                <span class="c-tag-item">#청년미래콘서트</span>
+                                <span class="c-tag-item">#취업</span>
+                                <span class="c-tag-item">#창업</span>
+                                <span class="c-tag-item">#체험</span>
+                                <span class="c-tag-item">#이벤트</span>
+                                <span class="c-tag-item">#사전신청</span>
+                                <span class="c-tag-item">#멘토링</span>
+                            </div>
+                        </div>
+
+                        <!-- 하단 공통: 함께 볼 만한 최신 정책 소식 -->
+                        <div class="jd-modal-related">
+                            <h3 class="jd-related-tit">함께 볼 만한 최신 정책 소식</h3>
+                            <div class="jd-related-grid" id="jdModalRelatedList">
+                                <div class="c-related-card" data-post-id="post-2">
+                                    <span class="c-related-source">청년포털</span>
+                                    <h4 class="c-related-title">
+                                        <a href="#post-2" class="c-card-link">2027년 달라지는 혼인·출산·양육 지원정책</a>
+                                    </h4>
+                                    <time class="c-related-date" datetime="2026-11-20">2026.11.20</time>
+                                </div>
+                                <div class="c-related-card" data-post-id="post-3">
+                                    <span class="c-related-source">청년포털</span>
+                                    <h4 class="c-related-title">
+                                        <a href="#post-3" class="c-card-link">청년미래콘서트 1:1 멘토링 부스 기업·기관 라인업 공개</a>
+                                    </h4>
+                                    <time class="c-related-date" datetime="2026-11-18">2026.11.18</time>
+                                </div>
+                                <div class="c-related-card" data-post-id="post-4">
+                                    <span class="c-related-source">청년포털</span>
+                                    <h4 class="c-related-title">
+                                        <a href="#post-4" class="c-card-link">[청춘프로FEEL] 첫 출근 성공! 그런데 취업이 끝이 아니라고..?</a>
+                                    </h4>
+                                    <time class="c-related-date" datetime="2026-11-18">2026.11.18</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 하단 고정 푸터 (공통) -->
+                <div class="jd-modal-foot">
+                    <div class="jd-modal-origin-info">
+                        <span class="jd-origin-dot" aria-hidden="true"></span>
+                        <span id="jdModalOriginText">출처: 국무조정실 청년정책조정실 (청년포털)</span>
+                    </div>
+                    <div class="jd-modal-foot-actions">
+                        <a href="https://blog.naver.com/we_are_youth" target="_blank" rel="noopener noreferrer" class="jd-modal-foot-link" id="jdModalOriginFoot">
+                            <span>공식 블로그 방문</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        </a>
+                        <button type="button" class="jd-modal-close-btn" data-modal-close>닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            // 스크랩 버튼 단순 색상 토글
+            $(document).on('click', '.c-btn-scrap', function() {
+                var $btn = $(this);
+                var isActive = $btn.toggleClass('active').hasClass('active');
+                $btn.attr('aria-pressed', isActive);
+            });
+
+            // 필터 칩 그룹별 active 토글
+            $(document).on('click', '.jd-filter-row .c-chip-pill, .jd-filter-row .c-chip-box', function() {
+                var $chip = $(this);
+                $chip.siblings().removeClass('active');
+                $chip.addClass('active');
+            });
+
+            // 갤러리형 / 리스트형 뷰 전환
+            $(document).on('click', '.jd-view-btn', function() {
+                var $btn = $(this);
+                var viewType = $btn.attr('data-view');
+                $btn.siblings().removeClass('active').attr('aria-pressed', 'false');
+                $btn.addClass('active').attr('aria-pressed', 'true');
+                $('#jdFeedGrid').toggleClass('is-list', viewType === 'list');
+            });
+
+            // 검색 폼 기본 제출 방지
+            $(document).on('submit', '#jdSearchForm', function(e) {
+                e.preventDefault();
+            });
+
+            // 포스트 카드 클릭 -> 상세 팝업 열기
+            $(document).on('click', '.c-card-link', function(e) {
+                e.preventDefault();
+                var $modal = $('#jdPostModal');
+                $modal.addClass('active');
+                $modal.find('.jd-modal-body').scrollTop(0);
+                $('body').css('overflow', 'hidden');
+            });
+
+            // 상세 팝업 닫기
+            function closePostModal() {
+                $('#jdPostModal').removeClass('active');
+                $('body').css('overflow', '');
+            }
+
+            $(document).on('click', '[data-modal-close], .jd-modal-dim', function() {
+                closePostModal();
+            });
+
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape' && $('#jdPostModal').hasClass('active')) {
+                    closePostModal();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
