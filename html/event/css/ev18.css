@@ -72,7 +72,7 @@ html { font-size: 8px; }
 .event18 .info-box::after { border-radius: 1.7rem; background-size: 22rem auto; background-position: center bottom; }
 .event18 .info-tit { top: -2.2rem; min-width: 19rem; height: 4.4rem; font-size: 2.2rem; padding: 0 2.5rem; }
 .event18 .info-list { max-width: 100%; gap: 1.4rem; }
-.event18 .info-list li {flex-direction: column; align-items: center; gap: 1.2rem; text-align: center;}
+.event18 .info-list li { align-items: flex-start; gap: 1.2rem; }
 .event18 .info-list .badge { width: 9.2rem; height: 3.2rem; font-size: 1.5rem; }
 .event18 .info-list .txt { font-size: 1.6rem; padding-top: 0.3rem; }
 .event18 .btn-survey { width: 28rem; height: 5.6rem; }
@@ -108,7 +108,7 @@ html { font-size: 8px; }
 .event18 .step-list li {flex-direction: column; padding: 2rem 1.8rem; text-align: center;}
 .event18 .step-list .tit { font-size: 1.8rem; }
 .event18 .step-list .desc br { display: none; }
-.event18 .step-list .img-area { width: 10.5rem; height: 9rem; }
+.event18 .step-list .img-area { width: 10.5rem; height: auto; }
 }
 
 .event18 .ev-notice { width: 100%; background-color: #002a6d; padding: 6rem 0; text-align: left; }
