@@ -177,7 +177,7 @@ body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSy
 .jd-btn-more:hover { background-color: #f8fafc; border-color: #94a3b8; }
 .jd-btn-more svg { width: 1.6rem; height: 1.6rem; color: #64748b; }
 @media (max-width: 1024px) { .jd-feed-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .jd-feed-grid.is-list .jd-card-thumb { width: 20rem; } }
-@media (max-width: 640px) { .jd-feed-sec { padding: 1.4rem 0 4.4rem; } .jd-feed-grid { grid-template-columns: 1fr; gap: 1.4rem; } .jd-feed-grid.is-list .jd-post-card { flex-direction: column; } .jd-feed-grid.is-list .jd-card-thumb { width: 100%; height: 19rem; border-right: none; border-bottom: 1px solid #f1f5f9; } .jd-feed-grid.is-list .jd-card-body { padding: 1.8rem; } }
+@media (max-width: 640px) { .jd-feed-sec { padding: 1.4rem 0 4.4rem; } .jd-feed-grid { grid-template-columns: 1fr; gap: 1.4rem; } .jd-feed-grid.is-list .jd-post-card { flex-direction: column; } .jd-feed-grid.is-list .jd-card-thumb { display: none; border-right: none; } .jd-feed-grid.is-list .jd-card-body { padding: 1.8rem; } }
 /* //feed */
 
 /* modal */
